@@ -126,7 +126,7 @@ gulp.task("watch", ['html'], function() {
 gulp.task('styles', ['styles:proto', 'styles:theme']);
 
 gulp.task('styles:proto', function() {
-  return gulp.src(paths.proto.sassSrc + '/styles.scss')
+  return gulp.src(paths.proto.sassSrc + '/*.scss')
     .pipe(sass(options.sass).on('error', sass.logError))
     .pipe($.autoprefixer(options.autoprefixer))
     .pipe(gulp.dest(paths.proto.cssDist))

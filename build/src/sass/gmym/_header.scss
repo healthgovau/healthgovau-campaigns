@@ -1,0 +1,48 @@
+// SVG crest
+// .page-header__logo .logo {
+//     display: inline-block;
+//     position: relative;
+//     border-bottom: none;
+//     svg {
+//       width: 4rem;
+//         position: absolute;
+//         top: 0;
+//         height: auto;
+//   }
+// }
+
+// UI-kit overrides
+.page-header {
+  padding-bottom: $base-spacing;
+  box-shadow: none;
+  background-color: $white;
+}
+
+.page-header__logo {
+  padding: 0;
+  .logo {
+    background-image: image-url("health_crest.png");
+    background-size: contain;
+    display: inline-block;
+    width: 227px; //Revisit
+    height: 55px; //Revisit
+
+    @include media($tablet) {
+      width: 227px; //Revisit
+      height: 55px; //Revisit
+    }
+
+    @include media($desktop) {
+      width: 227px;
+      height: 55px;
+    }
+  }
+}
+
+header[role='banner'] a.logo {
+  border-bottom: none;
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,14 @@
+// Reset width to container for wide-forced layouts
+
+  .site-nav {
+    @include clearfix;
+    @include wrapper-padding;
+    @include outer-container;
+  }
+
+.site-nav__wrapper li a {
+  &:hover,
+  &:focus {
+    border-color: $cyan;
+  }
+}
