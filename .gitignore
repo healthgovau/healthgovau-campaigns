@@ -1,4 +1,5 @@
 .sass-cache/*
+build/dist
 ui-kit
 build/src/ui-kit
 # node_modules folder
