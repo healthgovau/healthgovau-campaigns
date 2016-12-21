@@ -46,10 +46,6 @@
   background-repeat: no-repeat;
 }
 
-.band--gradient {
-  @extend %band;
-  @include linear-gradient(90deg, #DDDDDD, #FFFFFF, $fallback: #EEEEEE);
-}
 
 // List override
 .list-vertical > li,
