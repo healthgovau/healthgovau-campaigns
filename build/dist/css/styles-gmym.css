@@ -6001,33 +6001,33 @@ header[role='banner'] a.logo {
     .hero--gmym {
       min-height: 385px; } }
 
-.band, .band--primary, .band--small, .band--pad, .band--secondary, .band--texture {
+.band, .band--primary, .band--small, .band--pad, .band--secondary, .band--texture, .band--gradient {
   padding: 0.8em 0 3.2em;
   float: left;
   display: block;
   margin-right: 8.71718%;
   width: 100%; }
-  .band::after, .band--primary::after, .band--small::after, .band--pad::after, .band--secondary::after, .band--texture::after {
+  .band::after, .band--primary::after, .band--small::after, .band--pad::after, .band--secondary::after, .band--texture::after, .band--gradient::after {
     clear: both;
     content: "";
     display: table; }
-  .band:last-child, .band--primary:last-child, .band--small:last-child, .band--pad:last-child, .band--secondary:last-child, .band--texture:last-child {
+  .band:last-child, .band--primary:last-child, .band--small:last-child, .band--pad:last-child, .band--secondary:last-child, .band--texture:last-child, .band--gradient:last-child {
     margin-right: 0; }
   @media screen and (min-width: 768px) {
-    .band, .band--primary, .band--small, .band--pad, .band--secondary, .band--texture {
+    .band, .band--primary, .band--small, .band--pad, .band--secondary, .band--texture, .band--gradient {
       float: left;
       display: block;
       margin-right: 2.74614%;
       width: 100%; }
-      .band:last-child, .band--primary:last-child, .band--small:last-child, .band--pad:last-child, .band--secondary:last-child, .band--texture:last-child {
+      .band:last-child, .band--primary:last-child, .band--small:last-child, .band--pad:last-child, .band--secondary:last-child, .band--texture:last-child, .band--gradient:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 75em) {
-    .band, .band--primary, .band--small, .band--pad, .band--secondary, .band--texture {
+    .band, .band--primary, .band--small, .band--pad, .band--secondary, .band--texture, .band--gradient {
       float: left;
       display: block;
       margin-right: 2.04556%;
       width: 100%; }
-      .band:last-child, .band--primary:last-child, .band--small:last-child, .band--pad:last-child, .band--secondary:last-child, .band--texture:last-child {
+      .band:last-child, .band--primary:last-child, .band--small:last-child, .band--pad:last-child, .band--secondary:last-child, .band--texture:last-child, .band--gradient:last-child {
         margin-right: 0; } }
 
 .band--small {
@@ -6046,6 +6046,13 @@ header[role='banner'] a.logo {
   background-image: url("../img/bg-textures/bg-header-test.svg");
   background-position: 100% 0;
   background-repeat: no-repeat; }
+
+.band--gradient {
+  background-color: #EEEEEE;
+  background-image: -webkit-linear-gradient(-360deg, #DDDDDD, #FFFFFF);
+  background-image: -webkit-gradient(linear,left top, right top,from(#DDDDDD), to(#FFFFFF));
+  background-image: -webkit-linear-gradient(left,#DDDDDD, #FFFFFF);
+  background-image: linear-gradient(90deg,#DDDDDD, #FFFFFF); }
 
 .list-vertical > li,
 .list-vertical--thirds > li,
