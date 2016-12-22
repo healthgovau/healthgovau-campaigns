@@ -29,7 +29,7 @@ $sidebar  = render($page['sidebar']);
 
     </div>
   </section>
-  
+
   <?php if ($hero || $node->type == 'campaign'): ?>
     <section class="hero">
       <div class="wrapper">
