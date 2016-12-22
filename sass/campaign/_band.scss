@@ -1,0 +1,52 @@
+// Bands
+
+// Default for a landing page band
+%band {
+  @include clearfix;
+  padding: $small-spacing 0 $large-spacing;
+
+  @include span-columns(4 of 4);
+
+  @include media($tablet) {
+    @include span-columns(12 of 12);
+  }
+
+  @include media($desktop) {
+    @include span-columns(16 of 16);
+  }
+}
+
+// Extend these classes
+// Add modifiers for light/dark to permit childen to adapy for contrast
+.band {
+  @extend %band;
+}
+.band--small {
+  @extend %band;
+  padding: 0;
+}
+.band--pad {
+  @extend %band;
+  padding: $large-spacing 0;
+}
+.band--primary {
+  @extend .band;
+  background-color: $background-colour-primary;
+}
+
+.band--secondary {
+  @extend %band;
+  background-color: $background-colour-secondary;
+}
+
+.band--texture {
+  background-image: url(../images/bg-textures/bg-header-test.svg);
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  padding: 0.8em 0 3.2em;
+}
+
+.band--gradient {
+  @extend %band;
+  @include linear-gradient(90deg, #DDDDDD, #FFFFFF, $fallback: #EEEEEE);
+}

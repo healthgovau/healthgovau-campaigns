@@ -1,0 +1,12 @@
+.node-type-campaign {
+  section.highlight {
+    @include span-columns(12 of 12);
+    color: #ffffff;
+    position: relative;
+    padding: 1.2em 0 4.8em;
+    padding-bottom: 1.2em;
+    margin-bottom: 0;
+    background-color: #278288;
+    color: #ffffff;
+  }
+}

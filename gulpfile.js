@@ -14,6 +14,8 @@ var importOnce = require('node-sass-import-once'),
   sourcemaps   = require('gulp-sourcemaps'),
   webpack      = require('webpack-stream'),
   svg2png      = require('gulp-svg2png');
+  sassGlob     = require('gulp-sass-glob');
+
   // Add later
   //del         = require('del'),
   //kss         = require('kss');
@@ -135,6 +137,7 @@ gulp.task('styles:proto', function() {
 
 gulp.task('styles:theme', function() {
   return gulp.src(paths.theme.sass + '/styles.scss')
+    .pipe(sassGlob())
     .pipe(sass(options.sass).on('error', sass.logError))
     .pipe($.autoprefixer(options.autoprefixer))
     .pipe(gulp.dest(paths.theme.css));

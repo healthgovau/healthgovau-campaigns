@@ -6,3 +6,13 @@
 
 // Sub-theme prototype customisation
 @import "sub-theme";
+
+// Custom layout
+@import "layout/*";
+
+// Custom components
+@import "components/*";
+
+// Campaign specific styles
+@import "campaign/vars";
+@import "campaign/*";
