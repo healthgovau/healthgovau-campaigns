@@ -12,8 +12,19 @@
  */
 function healthgovau_preprocess_page(&$variables) {
   // Add hero indicator.
-  if (arg(0) == 'campaign' && is_numeric(arg(1))) {
+  if (arg(0) == 'campaign') {
+    // This is a view or panel page.
     $variables['hero'] = TRUE;
+  }
+  else if (arg(0) == 'node' && is_numeric(arg(1))) {
+    // This is a node page.
+    $node = node_load(arg(1));
+    if ($node->type == 'campaign' || isset($node->field_campaign[LANGUAGE_NONE])) {
+      $variables['hero'] = TRUE;
+    } 
+    else {
+      $variables['hero'] = FALSE;
+    }
   }
   else {
     $variables['hero'] = FALSE;
