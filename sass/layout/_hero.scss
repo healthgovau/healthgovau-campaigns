@@ -1,12 +1,11 @@
-.node-type-campaign {
-  section.hero {
-    background-position: center center;
-    min-height: 100px;
-    @include media($tablet) {
-      min-height: 250px;
-    }
-    @include media($desktop) {
-      min-height: 385px;
-    }
+section.hero {
+  background-position: center center;
+  min-height: 100px;
+  @include media($tablet) {
+    min-height: 250px;
+  }
+  @include media($desktop) {
+    min-height: 385px;
   }
 }
+

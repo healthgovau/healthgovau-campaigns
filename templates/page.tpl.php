@@ -9,7 +9,7 @@
 
 // Render region if there's content in theme.
 $navigation  = render($page['navigation']);
-$hero  = render($page['hero']);
+$page_hero  = render($page['hero']);
 $sidebar  = render($page['sidebar']);
 ?>
 
@@ -30,7 +30,7 @@ $sidebar  = render($page['sidebar']);
     </div>
   </section>
 
-  <?php if ($hero || $node->type == 'campaign'): ?>
+  <?php if ($page_hero || $hero ): ?>
     <section class="hero">
       <div class="wrapper">
         <?php print render($page['hero']); ?>

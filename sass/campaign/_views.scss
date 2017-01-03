@@ -1,0 +1,20 @@
+.page-campaign-videos,
+.node-type-video {
+  .region-content {
+    .wrapper {
+      min-width: 0px;
+      .group-left {
+        @extend .video__container;
+      }
+      .group-right {
+        @extend .video__info;
+      }
+      .group-left {
+        @extend .video__container;
+      }
+      .group-right {
+        @extend .video__info;
+      }
+    }
+  }
+}
