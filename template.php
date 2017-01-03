@@ -13,7 +13,10 @@
 function healthgovau_preprocess_page(&$variables) {
   // Add hero indicator.
   if (arg(0) == 'campaign' && is_numeric(arg(1))) {
-    $variables['hero'] =  TRUE;
+    $variables['hero'] = TRUE;
+  }
+  else {
+    $variables['hero'] = FALSE;
   }
 }
 

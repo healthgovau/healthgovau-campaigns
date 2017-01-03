@@ -14,10 +14,25 @@
 
 
 // To understand behaviors, see https://drupal.org/node/756722#behaviors
-Drupal.behaviors.my_custom_behavior = {
+Drupal.behaviors.videoTranscript = {
   attach: function(context, settings) {
 
-    // Place your code here.
+    // Add modal effect. Check http://refills.bourbon.io/components
+    $("#modal-1").on("change", function() {
+      if ($(this).is(":checked")) {
+        $("body").addClass("modal-open");
+      } else {
+        $("body").removeClass("modal-open");
+      }
+    });
+
+    $(".modal-fade-screen, .modal-close").on("click", function() {
+      $(".modal-state:checked").prop("checked", false).change();
+    });
+
+    $(".modal-inner").on("click", function(e) {
+      e.stopPropagation();
+    });
 
   }
 };
