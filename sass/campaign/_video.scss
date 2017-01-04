@@ -11,10 +11,6 @@
   }
 }
 
-.video__transcript {
-
-}
-
 .video__info {
   @include span-columns(4 of 4);
 
@@ -24,5 +20,26 @@
 
   @include media($desktop) {
     @include span-columns(6 of 16);
+  }
+}
+
+// Page view.
+.page-campaign-videos {
+  .view-campaign-videos {
+    .views-row-even {
+      .group-left {
+        float: right;
+        margin-right: 0px;
+      }
+    }
+  }
+}
+
+// Block view.
+.view-campaign-videos {
+  .field-name-field-video-thumbnail {
+    img {
+      height: auto;
+    }
   }
 }

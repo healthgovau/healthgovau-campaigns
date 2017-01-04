@@ -1,0 +1,7 @@
+.page-campaign-videos {
+  main .content-main {
+    @include media($mobile) {
+      @include span-columns(8 of 8);
+    }
+  }
+}

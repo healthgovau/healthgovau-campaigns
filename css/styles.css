@@ -604,7 +604,7 @@ samp {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
-button,
+button, .modal .modal-trigger,
 input,
 optgroup,
 select,
@@ -619,7 +619,7 @@ textarea {
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
-button {
+button, .modal .modal-trigger {
   overflow: visible; }
 
 /**
@@ -628,7 +628,7 @@ button {
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
-button,
+button, .modal .modal-trigger,
 select {
   text-transform: none; }
 
@@ -639,7 +639,7 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-button,
+button, .modal .modal-trigger,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -651,14 +651,14 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-button[disabled],
+button[disabled], .modal [disabled].modal-trigger,
 html input[disabled] {
   cursor: default; }
 
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-button::-moz-focus-inner,
+button::-moz-focus-inner, .modal .modal-trigger::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0; }
@@ -1077,7 +1077,7 @@ Markup: templates/buttons-examples.html
 
 Style guide: Buttons.1 Creating buttons
 */
-button,
+button, .modal .modal-trigger,
 .button,
 [role='button'],
 [type='submit'],
@@ -1098,7 +1098,7 @@ button,
   text-decoration: none;
   font-weight: 700; }
   @media screen and (min-width: 768px) {
-    button,
+    button, .modal .modal-trigger,
     .button,
     [role='button'],
     [type='submit'],
@@ -1107,7 +1107,7 @@ button,
       height: 2.8em;
       padding: 0.5em 1.2em; } }
 
-button[disabled], button[disabled]:hover, button[disabled]:active, button[disabled]:focus, button.disabled, button.disabled:hover, button.disabled:active, button.disabled:focus,
+button[disabled], .modal [disabled].modal-trigger, button[disabled]:hover, .modal [disabled].modal-trigger:hover, button[disabled]:active, .modal [disabled].modal-trigger:active, button[disabled]:focus, .modal [disabled].modal-trigger:focus, button.disabled, .modal .disabled.modal-trigger, button.disabled:hover, .modal .disabled.modal-trigger:hover, button.disabled:active, .modal .disabled.modal-trigger:active, button.disabled:focus, .modal .disabled.modal-trigger:focus,
 .button[disabled],
 .button[disabled]:hover,
 .button[disabled]:active,
@@ -1153,7 +1153,7 @@ button[disabled], button[disabled]:hover, button[disabled]:active, button[disabl
   background-color: #bbbbbb;
   color: #313131; }
 
-button.inverted, button.button--feedback,
+button.inverted, button.button--feedback, .modal .button--feedback.modal-trigger, .modal .inverted.modal-trigger,
 .button.inverted,
 .button.button--feedback,
 [role='button'].inverted,
@@ -1166,7 +1166,7 @@ button.inverted, button.button--feedback,
 [type='button'].button--feedback {
   border-color: #fff;
   background-color: transparent; }
-  button.inverted:hover, button.button--feedback:hover, button.inverted:active, button.button--feedback:active, button.inverted:focus, button.button--feedback:focus,
+  button.inverted:hover, button.button--feedback:hover, .modal .button--feedback.modal-trigger:hover, .modal .inverted.modal-trigger:hover, button.inverted:active, button.button--feedback:active, .modal .button--feedback.modal-trigger:active, .modal .inverted.modal-trigger:active, button.inverted:focus, button.button--feedback:focus, .modal .button--feedback.modal-trigger:focus, .modal .inverted.modal-trigger:focus,
   .button.inverted:hover,
   .button.button--feedback:hover,
   .button.inverted:active,
@@ -2048,7 +2048,7 @@ body > main {
     cursor: not-allowed; }
     body > main span.placeholder-link:hover {
       cursor: not-allowed; }
-  body > main button,
+  body > main button, body > main .modal .modal-trigger, .modal body > main .modal-trigger,
   body > main .button,
   body > main [role='button'],
   body > main [type='submit'],
@@ -2057,7 +2057,7 @@ body > main {
     background-color: #18788d;
     color: #fff;
     border-color: #115361; }
-    body > main button:hover, body > main button:focus,
+    body > main button:hover, body > main .modal .modal-trigger:hover, .modal body > main .modal-trigger:hover, body > main button:focus, body > main .modal .modal-trigger:focus, .modal body > main .modal-trigger:focus,
     body > main .button:hover,
     body > main .button:focus,
     body > main [role='button']:hover,
@@ -2070,7 +2070,7 @@ body > main {
     body > main [type='button']:focus {
       background-color: #115361;
       color: #fff; }
-    body > main button:active,
+    body > main button:active, body > main .modal .modal-trigger:active, .modal body > main .modal-trigger:active,
     body > main .button:active,
     body > main [role='button']:active,
     body > main [type='submit']:active,
@@ -2182,7 +2182,7 @@ footer[role='contentinfo'] {
     cursor: not-allowed; }
     footer[role='contentinfo'] span.placeholder-link:hover {
       cursor: not-allowed; }
-  footer[role='contentinfo'] button,
+  footer[role='contentinfo'] button, footer[role='contentinfo'] .modal .modal-trigger, .modal footer[role='contentinfo'] .modal-trigger,
   footer[role='contentinfo'] .button,
   footer[role='contentinfo'] [role='button'],
   footer[role='contentinfo'] [type='submit'],
@@ -2191,7 +2191,7 @@ footer[role='contentinfo'] {
     background-color: transparent;
     color: #115361;
     border-color: #115361; }
-    footer[role='contentinfo'] button:hover, footer[role='contentinfo'] button:focus,
+    footer[role='contentinfo'] button:hover, footer[role='contentinfo'] .modal .modal-trigger:hover, .modal footer[role='contentinfo'] .modal-trigger:hover, footer[role='contentinfo'] button:focus, footer[role='contentinfo'] .modal .modal-trigger:focus, .modal footer[role='contentinfo'] .modal-trigger:focus,
     footer[role='contentinfo'] .button:hover,
     footer[role='contentinfo'] .button:focus,
     footer[role='contentinfo'] [role='button']:hover,
@@ -2204,7 +2204,7 @@ footer[role='contentinfo'] {
     footer[role='contentinfo'] [type='button']:focus {
       background-color: #115361;
       color: #fff; }
-    footer[role='contentinfo'] button:active,
+    footer[role='contentinfo'] button:active, footer[role='contentinfo'] .modal .modal-trigger:active, .modal footer[role='contentinfo'] .modal-trigger:active,
     footer[role='contentinfo'] .button:active,
     footer[role='contentinfo'] [role='button']:active,
     footer[role='contentinfo'] [type='submit']:active,
@@ -4024,7 +4024,7 @@ footer[role='contentinfo'] {
     cursor: not-allowed; }
     [class^='controls'] span.placeholder-link:hover {
       cursor: not-allowed; }
-  [class^='controls'] button,
+  [class^='controls'] button, [class^='controls'] .modal .modal-trigger, .modal [class^='controls'] .modal-trigger,
   [class^='controls'] .button,
   [class^='controls'] [role='button'],
   [class^='controls'] [type='submit'],
@@ -4033,7 +4033,7 @@ footer[role='contentinfo'] {
     background-color: transparent;
     color: #021620;
     border-color: #fff; }
-    [class^='controls'] button:hover, [class^='controls'] button:focus,
+    [class^='controls'] button:hover, [class^='controls'] .modal .modal-trigger:hover, .modal [class^='controls'] .modal-trigger:hover, [class^='controls'] button:focus, [class^='controls'] .modal .modal-trigger:focus, .modal [class^='controls'] .modal-trigger:focus,
     [class^='controls'] .button:hover,
     [class^='controls'] .button:focus,
     [class^='controls'] [role='button']:hover,
@@ -4046,7 +4046,7 @@ footer[role='contentinfo'] {
     [class^='controls'] [type='button']:focus {
       background-color: #fff;
       color: #021620; }
-    [class^='controls'] button:active,
+    [class^='controls'] button:active, [class^='controls'] .modal .modal-trigger:active, .modal [class^='controls'] .modal-trigger:active,
     [class^='controls'] .button:active,
     [class^='controls'] [role='button']:active,
     [class^='controls'] [type='submit']:active,
@@ -4110,7 +4110,7 @@ footer[role='contentinfo'] {
     margin: 0; }
   [class^='controls'][class$='--contrast'] {
     background-color: #880e48; }
-    [class^='controls'][class$='--contrast'] button,
+    [class^='controls'][class$='--contrast'] button, [class^='controls'][class$='--contrast'] .modal .modal-trigger, .modal [class^='controls'][class$='--contrast'] .modal-trigger,
     [class^='controls'][class$='--contrast'] .button,
     [class^='controls'][class$='--contrast'] [role='button'],
     [class^='controls'][class$='--contrast'] [type='submit'],
@@ -4119,7 +4119,7 @@ footer[role='contentinfo'] {
       background-color: #880e48;
       color: #fff;
       border-color: #fff; }
-      [class^='controls'][class$='--contrast'] button:hover, [class^='controls'][class$='--contrast'] button:focus,
+      [class^='controls'][class$='--contrast'] button:hover, [class^='controls'][class$='--contrast'] .modal .modal-trigger:hover, .modal [class^='controls'][class$='--contrast'] .modal-trigger:hover, [class^='controls'][class$='--contrast'] button:focus, [class^='controls'][class$='--contrast'] .modal .modal-trigger:focus, .modal [class^='controls'][class$='--contrast'] .modal-trigger:focus,
       [class^='controls'][class$='--contrast'] .button:hover,
       [class^='controls'][class$='--contrast'] .button:focus,
       [class^='controls'][class$='--contrast'] [role='button']:hover,
@@ -4132,7 +4132,7 @@ footer[role='contentinfo'] {
       [class^='controls'][class$='--contrast'] [type='button']:focus {
         background-color: #fff;
         color: #880e48; }
-      [class^='controls'][class$='--contrast'] button:active,
+      [class^='controls'][class$='--contrast'] button:active, [class^='controls'][class$='--contrast'] .modal .modal-trigger:active, .modal [class^='controls'][class$='--contrast'] .modal-trigger:active,
       [class^='controls'][class$='--contrast'] .button:active,
       [class^='controls'][class$='--contrast'] [role='button']:active,
       [class^='controls'][class$='--contrast'] [type='submit']:active,
@@ -4308,7 +4308,7 @@ Style guide: Page header.01 Header
     cursor: not-allowed; }
     .govau--header span.placeholder-link:hover {
       cursor: not-allowed; }
-  .govau--header button,
+  .govau--header button, .govau--header .modal .modal-trigger, .modal .govau--header .modal-trigger,
   .govau--header .button,
   .govau--header [role='button'],
   .govau--header [type='submit'],
@@ -4317,7 +4317,7 @@ Style guide: Page header.01 Header
     background-color: #043751;
     color: #fff;
     border-color: #fff; }
-    .govau--header button:hover, .govau--header button:focus,
+    .govau--header button:hover, .govau--header .modal .modal-trigger:hover, .modal .govau--header .modal-trigger:hover, .govau--header button:focus, .govau--header .modal .modal-trigger:focus, .modal .govau--header .modal-trigger:focus,
     .govau--header .button:hover,
     .govau--header .button:focus,
     .govau--header [role='button']:hover,
@@ -4330,7 +4330,7 @@ Style guide: Page header.01 Header
     .govau--header [type='button']:focus {
       background-color: #fff;
       color: #043751; }
-    .govau--header button:active,
+    .govau--header button:active, .govau--header .modal .modal-trigger:active, .modal .govau--header .modal-trigger:active,
     .govau--header .button:active,
     .govau--header [role='button']:active,
     .govau--header [type='submit']:active,
@@ -4469,7 +4469,7 @@ Style guide: Page header.01 Header
     cursor: not-allowed; }
     .prerelease-govau--header span.placeholder-link:hover {
       cursor: not-allowed; }
-  .prerelease-govau--header button,
+  .prerelease-govau--header button, .prerelease-govau--header .modal .modal-trigger, .modal .prerelease-govau--header .modal-trigger,
   .prerelease-govau--header .button,
   .prerelease-govau--header [role='button'],
   .prerelease-govau--header [type='submit'],
@@ -4478,7 +4478,7 @@ Style guide: Page header.01 Header
     background-color: transparent;
     color: #fff;
     border-color: #fff; }
-    .prerelease-govau--header button:hover, .prerelease-govau--header button:focus,
+    .prerelease-govau--header button:hover, .prerelease-govau--header .modal .modal-trigger:hover, .modal .prerelease-govau--header .modal-trigger:hover, .prerelease-govau--header button:focus, .prerelease-govau--header .modal .modal-trigger:focus, .modal .prerelease-govau--header .modal-trigger:focus,
     .prerelease-govau--header .button:hover,
     .prerelease-govau--header .button:focus,
     .prerelease-govau--header [role='button']:hover,
@@ -4491,7 +4491,7 @@ Style guide: Page header.01 Header
     .prerelease-govau--header [type='button']:focus {
       background-color: #fff;
       color: #043751; }
-    .prerelease-govau--header button:active,
+    .prerelease-govau--header button:active, .prerelease-govau--header .modal .modal-trigger:active, .modal .prerelease-govau--header .modal-trigger:active,
     .prerelease-govau--header .button:active,
     .prerelease-govau--header [role='button']:active,
     .prerelease-govau--header [type='submit']:active,
@@ -5822,40 +5822,6 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
     background-color: #5bcbe3;
     color: #313131; }
 
-footer .page-bottom .wrapper {
-  border-top: solid 1px black;
-  padding-top: 20px; }
-
-@media screen and (min-width: 420px) {
-  footer .page-bottom #block-block-6 {
-    float: left;
-    display: block;
-    margin-right: 4.17655%;
-    width: 100%;
-    text-align: center; }
-    footer .page-bottom #block-block-6:last-child {
-      margin-right: 0; } }
-
-@media screen and (min-width: 768px) {
-  footer .page-bottom #block-block-6 {
-    float: left;
-    display: block;
-    margin-right: 2.74614%;
-    width: 31.50258%;
-    text-align: left; }
-    footer .page-bottom #block-block-6:last-child {
-      margin-right: 0; } }
-
-@media screen and (min-width: 75em) {
-  footer .page-bottom #block-block-6 {
-    float: left;
-    display: block;
-    margin-right: 2.04556%;
-    width: 36.22153%;
-    text-align: left; }
-    footer .page-bottom #block-block-6:last-child {
-      margin-right: 0; } }
-
 @media screen and (min-width: 420px) {
   footer .page-bottom #block-menu-menu-page-bottom-menu {
     float: left;
@@ -6014,7 +5980,7 @@ footer[role="contentinfo"] {
           margin-right: 0; } }
 
 section.hero {
-  background-position: center center;
+  background-position: top center;
   min-height: 100px; }
   @media screen and (min-width: 768px) {
     section.hero {
@@ -6056,6 +6022,17 @@ section.hero {
     margin-right: 4.17655%;
     width: 100%; }
     .node-type-campaign main .content-main:last-child {
+      margin-right: 0; } }
+
+@media screen and (min-width: 420px) {
+  .node-type-video main .content-main,
+  .node-type-campaign-standard-page main .content-main {
+    float: left;
+    display: block;
+    margin-right: 4.17655%;
+    width: 100%; }
+    .node-type-video main .content-main:last-child,
+    .node-type-campaign-standard-page main .content-main:last-child {
       margin-right: 0; } }
 
 section.site-nav {
@@ -6104,9 +6081,6 @@ header .page-header__logo img {
 
 .modal .modal-state {
   display: none; }
-
-.modal .modal-trigger {
-  padding: 0.8em 1em; }
 
 .modal .modal-fade-screen {
   position: fixed;
@@ -6413,6 +6387,22 @@ header .page-header__logo img {
       .node-type-video .region-content .wrapper .group-right:last-child {
         margin-right: 0; } }
 
+.page-campaign-videos .view-campaign-videos .views-row-even .group-left {
+  float: right;
+  margin-right: 0px; }
+
+.view-campaign-videos .field-name-field-video-thumbnail img {
+  height: auto; }
+
 .page-campaign-videos .region-content .wrapper,
 .node-type-video .region-content .wrapper {
   min-width: 0px; }
+
+@media screen and (min-width: 420px) {
+  .page-campaign-videos main .content-main {
+    float: left;
+    display: block;
+    margin-right: 4.17655%;
+    width: 100%; }
+    .page-campaign-videos main .content-main:last-child {
+      margin-right: 0; } }

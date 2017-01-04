@@ -13,3 +13,12 @@
     }
   }
 }
+
+.node-type-video,
+.node-type-campaign-standard-page {
+  main .content-main {
+    @include media($mobile) {
+      @include span-columns(8 of 8);
+    }
+  }
+}

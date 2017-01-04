@@ -1,5 +1,5 @@
 section.hero {
-  background-position: center center;
+  background-position: top center;
   min-height: 100px;
   @include media($tablet) {
     min-height: 250px;

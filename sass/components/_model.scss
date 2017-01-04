@@ -33,7 +33,7 @@
   }
 
   .modal-trigger {
-    padding: 0.8em 1em;
+    @extend button;
   }
 
   .modal-fade-screen { // overlay
