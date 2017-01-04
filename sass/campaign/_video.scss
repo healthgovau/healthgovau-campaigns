@@ -43,4 +43,10 @@
       height: auto;
     }
   }
+  .group-left {
+    @extend .video__container;
+  }
+  .group-right {
+    @extend .video__info;
+  }
 }
