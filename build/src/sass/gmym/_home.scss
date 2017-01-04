@@ -1,55 +1,4 @@
-// Bands
 
-// Default for a landing page band
-%band {
-  @include clearfix;
-  padding: $small-spacing 0 $large-spacing;
-
-  @include span-columns(4 of 4);
-
-  @include media($tablet) {
-    @include span-columns(12 of 12);
-  }
-
-  @include media($desktop) {
-    @include span-columns(16 of 16);
-  }
-}
-
-// Extend these classes
-// Add modifiers for light/dark to permit childen to adapy for contrast
-.band {
-  @extend %band;
-}
-.band--small {
-  @extend %band;
-  padding: 0;
-}
-.band--pad {
-  @extend %band;
-  padding: $large-spacing 0;
-}
-.band--primary {
-  @extend .band;
-  background-color: $background-colour-primary;
-}
-
-.band--secondary {
-  @extend %band;
-  background-color: $background-colour-secondary;
-}
-
-.band--texture {
-  @extend %band;
-  background-image: image-url("bg-textures/bg-header-test.svg");
-  background-position: 100% 0;
-  background-repeat: no-repeat;
-}
-
-.band--gradient {
-  @extend %band;
-  @include linear-gradient(90deg, #DDDDDD, #FFFFFF, $fallback: #EEEEEE);
-}
 
 // List override
 .list-vertical > li,
@@ -71,35 +20,6 @@ footer[role='contentinfo'] .footer-top nav > li {
   .list-vertical--thirds > li article,
   .list-vertical--fourths > li article {
     margin-top: $small-spacing;
-  }
-}
-
-// Video block
-.video__container {
-  @include span-columns(4 of 4);
-
-  @include media($tablet) {
-    @include span-columns(6 of 12);
-  }
-
-  @include media($desktop) {
-    @include span-columns(10 of 16);
-  }
-}
-
-.video__transcript {
-
-}
-
-.video__info {
-  @include span-columns(4 of 4);
-
-  @include media($tablet) {
-    @include span-columns(6 of 12);
-  }
-
-  @include media($desktop) {
-    @include span-columns(6 of 16);
   }
 }
 

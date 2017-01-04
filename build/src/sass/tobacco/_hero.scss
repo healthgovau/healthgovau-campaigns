@@ -1,0 +1,15 @@
+.hero {
+    background-image: image-url("hero-tobacco.jpg");
+    background-color: $cyan;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100px;
+
+    @include media($tablet) {
+      min-height: 250px;
+    }
+
+    @include media($desktop) {
+      min-height: 385px;
+    }
+}
