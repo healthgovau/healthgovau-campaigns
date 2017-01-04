@@ -258,7 +258,7 @@ Usage:
 header[role='banner'] .see-more::after, body > main .see-more::after, footer[role='contentinfo'] .see-more::after, .list-horizontal .tags .see-more::after, .list-vertical .tags .see-more::after, .list-vertical--thirds .tags .see-more::after, .list-vertical--fourths .tags .see-more::after, footer[role='contentinfo'] .footer-top nav .tags .see-more::after, .list-small .tags .see-more::after, .list-highlighted .tags .see-more::after, .primary-nav ul .see-more::after,
 .local-nav ul .see-more::after, [class^='breadcrumbs'] .see-more::after, [class^='breadcrumbs'][class$='--inverted'] .see-more::after, .skip-to .see-more::after, [class^='controls'] .see-more::after, .govau--header .see-more::after, .prerelease-govau--header .see-more::after, .hero .see-more::after,
 .hero-sml .see-more::after,
-.hero-med .see-more::after, .tags .see-more::after {
+.hero-med .see-more::after {
   background-image: url("../img/icons/arrow-right--aqua.svg"); }
 
 .govau--header .nav-toggle::before {
@@ -274,7 +274,7 @@ summary::before, .accordion--controls summary::before, .nav-toggle::before {
 header[role='banner'] a[rel~='external']::after, body > main a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .list-horizontal .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, footer[role='contentinfo'] .footer-top nav .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
 .local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after,
 .hero-sml a[rel~='external']::after,
-.hero-med a[rel~='external']::after, .tags a[rel~='external']::after {
+.hero-med a[rel~='external']::after {
   background-image: url("../img/icons/external-link--aqua.svg"); }
 
 .icon-chevron::before {
@@ -1818,7 +1818,7 @@ Style guide: Link styles.1 Hover links
 header[role='banner'] a[rel~='external']::after, body > main a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .list-horizontal .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, footer[role='contentinfo'] .footer-top nav .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
 .local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after,
 .hero-sml a[rel~='external']::after,
-.hero-med a[rel~='external']::after, .tags a[rel~='external']::after {
+.hero-med a[rel~='external']::after {
   content: '';
   position: absolute;
   display: inline;
@@ -5963,134 +5963,11 @@ header[role='banner'] a.logo {
       .video__info:last-child {
         margin-right: 0; } }
 
-.tags {
-  color: #18788d;
-  /*
-  See more link
-
-  Use see more links at the end of [lists](section-list-styles.html),
-  to take the user to a index page of all items.
-
-  Markup: templates/see-more-link.html
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-  /*
-  Placeholder links (prototyping)
-
-  Use placeholder links (greyed out links) to show actions that users can't currently take.
-
-  Your content should explain why the action isn't available and when it will be.
-
-  <p class="callout">Placeholders only work in `<span>` tags; not `<a>`.</p>
-
-  Markup: templates/placeholder-link.html
-
-  <details open data-label="placeholder-links-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.3 Placeholder links
-  */ }
-  .tags a {
-    color: #18788d;
-    text-decoration: none;
-    outline: none;
-    border-bottom: solid 1px #5bcbe3;
-    -webkit-transition-timing-function: ease-in-out;
-            transition-timing-function: ease-in-out;
-    -webkit-transition-duration: 0.1s;
-            transition-duration: 0.1s;
-    -webkit-transition-property: background-color, border-color, color;
-    transition-property: background-color, border-color, color; }
-    .tags a:hover, .tags a:focus {
-      background-color: #5bcbe3;
-      color: #313131; }
-    .tags a[rel~='external'] {
-      display: inline;
-      position: relative;
-      margin-right: 1.6em; }
-      .tags a[rel~='external']:hover {
-        border-color: transparent; }
-      .tags a[rel~='external']::after {
-        background-size: 0.9em auto; }
-  .tags .see-more {
-    display: inline-block;
-    position: relative;
-    margin-right: 1.6em;
-    font-weight: 700;
-    color: #18788d; }
-    .tags .see-more::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: -1.2em;
-      display: block;
-      width: 1.2em;
-      height: 1.2em;
-      background-repeat: no-repeat;
-      background-position: right 0.4em;
-      background-size: 0.64em auto; }
-    .tags .see-more:hover, .tags .see-more:focus {
-      color: #313131; }
-  .tags span.placeholder-link {
-    color: rgba(24, 120, 141, 0.7);
-    border-bottom: none;
-    cursor: not-allowed; }
-    .tags span.placeholder-link:hover {
-      cursor: not-allowed; }
-  .tags dl,
-  .tags dt,
-  .tags dd {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    line-height: 2.1; }
-  .tags dt,
-  .tags dd {
-    margin-right: 0.4em;
-    margin-bottom: 0.4em; }
-  .tags a {
-    padding: 4px 0.8em;
-    border: 1px solid #18788d;
-    border-radius: 2px;
-    background-color: #FFFFFF; }
-    .tags a:hover, .tags a:focus {
-      border-color: #5bcbe3; }
-
 .site-nav__wrapper li a:hover, .site-nav__wrapper li a:focus {
-  border-color: #278288; }
+  border-color: #000000; }
 
 .hero {
-  background-image: url("../img/hero-gmym.jpg");
+  background-image: url("../img/hero-tobacco.jpg");
   background-color: #278288;
   background-size: cover;
   background-position: center center;
@@ -6106,7 +5983,7 @@ header[role='banner'] a.logo {
 .list-vertical--thirds > li,
 .list-vertical--fourths > li,
 footer[role='contentinfo'] .footer-top nav > li {
-  border-color: #278288; }
+  border-color: #000000; }
 
 .features .list-vertical > li,
 .features .list-vertical--thirds > li,
@@ -6117,254 +5994,3 @@ footer[role='contentinfo'] .footer-top nav > li {
 .features .list-vertical--thirds > li article,
 .features .list-vertical--fourths > li article {
   margin-top: 0.8em; }
-
-.social__feed {
-  float: left;
-  display: block;
-  margin-right: 8.71718%;
-  width: 100%; }
-  .social__feed:last-child {
-    margin-right: 0; }
-  @media screen and (min-width: 768px) {
-    .social__feed {
-      float: left;
-      display: block;
-      margin-right: 2.74614%;
-      width: 74.31347%; }
-      .social__feed:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 75em) {
-    .social__feed {
-      float: left;
-      display: block;
-      margin-right: 2.04556%;
-      width: 80.86646%; }
-      .social__feed:last-child {
-        margin-right: 0; } }
-  .social__feed h3 {
-    font-weight: 400;
-    margin-top: 0; }
-
-.social__links {
-  float: left;
-  display: block;
-  margin-right: 8.71718%;
-  width: 100%; }
-  .social__links:last-child {
-    margin-right: 0; }
-  @media screen and (min-width: 768px) {
-    .social__links {
-      float: left;
-      display: block;
-      margin-right: 2.74614%;
-      width: 22.9404%; }
-      .social__links:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 75em) {
-    .social__links {
-      float: left;
-      display: block;
-      margin-right: 2.04556%;
-      width: 17.08798%; }
-      .social__links:last-child {
-        margin-right: 0; } }
-  .social__links ul {
-    padding-left: 0; }
-  .social__links .social__links-item {
-    list-style-type: none; }
-    .social__links .social__links-item a:before {
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: 100% auto;
-      content: ' ';
-      display: inline-block;
-      height: 1.2em;
-      margin-right: 0.4em;
-      width: 1.2em; }
-    .social__links .social__links-item a.youtube:before {
-      background-image: url("../img/icons/youtube.svg"); }
-    .social__links .social__links-item a.twitter:before {
-      background-image: url("../img/icons/twitter.svg"); }
-    .social__links .social__links-item a.facebook:before {
-      background-image: url("../img/icons/facebook.svg"); }
-  .social__links h3 {
-    margin-top: 0; }
-
-.activity__hero {
-  float: left;
-  display: block;
-  margin-right: 8.71718%;
-  width: 100%; }
-  .activity__hero:last-child {
-    margin-right: 0; }
-  @media screen and (min-width: 768px) {
-    .activity__hero {
-      float: left;
-      display: block;
-      margin-right: 2.74614%;
-      width: 48.62693%; }
-      .activity__hero:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 75em) {
-    .activity__hero {
-      float: left;
-      display: block;
-      margin-right: 2.04556%;
-      width: 48.97722%; }
-      .activity__hero:last-child {
-        margin-right: 0; } }
-  .activity__hero h3 {
-    font-weight: 400;
-    margin-top: 0; }
-
-.activity__hero-image {
-  float: left;
-  display: block;
-  margin-right: 8.71718%;
-  width: 100%; }
-  .activity__hero-image:last-child {
-    margin-right: 0; }
-  @media screen and (min-width: 768px) {
-    .activity__hero-image {
-      float: left;
-      display: block;
-      margin-right: 5.64736%;
-      width: 47.17632%; }
-      .activity__hero-image:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 75em) {
-    .activity__hero-image {
-      float: left;
-      display: block;
-      margin-right: 4.17655%;
-      width: 47.91172%; }
-      .activity__hero-image:last-child {
-        margin-right: 0; } }
-
-.activity__hero-desc {
-  float: left;
-  display: block;
-  margin-right: 8.71718%;
-  width: 100%; }
-  .activity__hero-desc:last-child {
-    margin-right: 0; }
-  @media screen and (min-width: 768px) {
-    .activity__hero-desc {
-      float: left;
-      display: block;
-      margin-right: 5.64736%;
-      width: 47.17632%; }
-      .activity__hero-desc:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 75em) {
-    .activity__hero-desc {
-      float: left;
-      display: block;
-      margin-right: 4.17655%;
-      width: 47.91172%; }
-      .activity__hero-desc:last-child {
-        margin-right: 0; } }
-
-.activity__selector {
-  background: #EEE;
-  padding: 1.2em;
-  float: left;
-  display: block;
-  margin-right: 8.71718%;
-  width: 100%; }
-  .activity__selector:last-child {
-    margin-right: 0; }
-  @media screen and (min-width: 768px) {
-    .activity__selector {
-      float: left;
-      display: block;
-      margin-right: 2.74614%;
-      width: 48.62693%; }
-      .activity__selector:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 75em) {
-    .activity__selector {
-      float: left;
-      display: block;
-      margin-right: 2.04556%;
-      width: 48.97722%; }
-      .activity__selector:last-child {
-        margin-right: 0; } }
-  .activity__selector h3 {
-    font-weight: 400;
-    margin-top: 0; }
-
-.partner {
-  float: left;
-  display: block;
-  margin-right: 8.71718%;
-  width: 100%; }
-  .partner:last-child {
-    margin-right: 0; }
-  @media screen and (min-width: 768px) {
-    .partner {
-      float: left;
-      display: block;
-      margin-right: 2.74614%;
-      width: 48.62693%; }
-      .partner:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 75em) {
-    .partner {
-      float: left;
-      display: block;
-      margin-right: 2.04556%;
-      width: 48.97722%; }
-      .partner:last-child {
-        margin-right: 0; } }
-  .partner h3 {
-    font-weight: 400;
-    margin-top: 0; }
-
-.partner__image {
-  float: left;
-  display: block;
-  margin-right: 8.71718%;
-  width: 100%; }
-  .partner__image:last-child {
-    margin-right: 0; }
-  @media screen and (min-width: 768px) {
-    .partner__image {
-      float: left;
-      display: block;
-      margin-right: 5.64736%;
-      width: 29.56843%; }
-      .partner__image:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 75em) {
-    .partner__image {
-      float: left;
-      display: block;
-      margin-right: 4.17655%;
-      width: 34.88966%; }
-      .partner__image:last-child {
-        margin-right: 0; } }
-
-.partner__desc {
-  float: left;
-  display: block;
-  margin-right: 8.71718%;
-  width: 100%; }
-  .partner__desc:last-child {
-    margin-right: 0; }
-  @media screen and (min-width: 768px) {
-    .partner__desc {
-      float: left;
-      display: block;
-      margin-right: 5.64736%;
-      width: 64.78421%; }
-      .partner__desc:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 75em) {
-    .partner__desc {
-      float: left;
-      display: block;
-      margin-right: 4.17655%;
-      width: 60.93379%; }
-      .partner__desc:last-child {
-        margin-right: 0; } }

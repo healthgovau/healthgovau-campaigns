@@ -1,8 +1,8 @@
 // Inherit core health styles
 @import "styles";
 
-// GMYM
-@import "gmym/vars";
+// tobacco
+@import "tobacco/vars";
 
 @import "campaign/functions";
 @import "campaign/nav";
@@ -11,10 +11,10 @@
 @import "campaign/nav";
 @import "campaign/video";
 
-@import "gmym/functions";
-@import "gmym/nav";
-@import "gmym/hero";
-@import "gmym/home";
+@import "tobacco/functions";
+@import "tobacco/nav";
+@import "tobacco/hero";
+@import "tobacco/home";
 
 // Prototype only
 @import "campaign/prototype-only";

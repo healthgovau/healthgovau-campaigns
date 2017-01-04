@@ -1,0 +1,28 @@
+// Video block
+.video__container {
+  @include span-columns(4 of 4);
+
+  @include media($tablet) {
+    @include span-columns(6 of 12);
+  }
+
+  @include media($desktop) {
+    @include span-columns(10 of 16);
+  }
+}
+
+.video__transcript {
+
+}
+
+.video__info {
+  @include span-columns(4 of 4);
+
+  @include media($tablet) {
+    @include span-columns(6 of 12);
+  }
+
+  @include media($desktop) {
+    @include span-columns(6 of 16);
+  }
+}

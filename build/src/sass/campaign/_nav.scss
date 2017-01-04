@@ -1,0 +1,6 @@
+// Reset width to container for wide-forced layouts
+.site-nav {
+  @include clearfix;
+  @include wrapper-padding;
+  @include outer-container;
+}
