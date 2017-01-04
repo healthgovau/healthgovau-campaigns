@@ -5,3 +5,15 @@
     }
   }
 }
+
+// Navigation menu
+section.site-nav {
+  #block-menu-menu-quitnow-menu {
+    a:hover {
+      border-color: black;
+    }
+    a.is-current {
+      border-color: black;
+    }
+  }
+}

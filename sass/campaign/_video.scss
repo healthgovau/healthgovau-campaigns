@@ -25,12 +25,13 @@
 
 // Page view.
 .page-campaign-videos {
-  .view-campaign-videos {
-    .views-row-even {
-      .group-left {
-        float: right;
-        margin-right: 0px;
-      }
+  .content-main li {
+    max-width: 100%;
+    .group-left {
+      @extend .video__container;
+    }
+    .group-right {
+      @extend .video__info;
     }
   }
 }

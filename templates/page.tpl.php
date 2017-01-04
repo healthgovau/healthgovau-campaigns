@@ -39,13 +39,13 @@ $sidebar  = render($page['sidebar']);
   <?php endif; ?>
 
   <?php if ($navigation): ?>
-    <div class="site-nav">
+    <section class="site-nav">
       <div class="wrapper">
         <nav class="site-nav__wrapper">
           <?php print render($page['navigation']); ?>
         </nav>
       </div>
-    </div>
+    </section>
   <?php endif; ?>
 
 </header>
