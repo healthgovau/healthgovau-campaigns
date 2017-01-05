@@ -38,11 +38,18 @@
 
 // Block view.
 .view-campaign-videos {
+
   .field-name-field-video-thumbnail {
+    @extend .card-image;
     img {
       height: auto;
     }
   }
+
+  .field-name-title {
+    @extend .card-header;
+  }
+
   .group-left {
     @extend .video__container;
   }

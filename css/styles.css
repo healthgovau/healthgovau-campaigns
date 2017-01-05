@@ -6046,6 +6046,76 @@ section.hero {
 .node-type-campaign nav.breadcrumbs {
   display: none; }
 
+.cards, .view-campaign-videos.view-display-id-block_1 .view-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.card {
+  background-color: #f6f6f6;
+  border: 1px solid gainsboro;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 2px 4px #e6e6e6;
+          box-shadow: 0 2px 4px #e6e6e6;
+  cursor: pointer;
+  -webkit-flex-basis: 15em;
+      -ms-flex-preferred-size: 15em;
+          flex-basis: 15em;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0 1em 1.6em 1em;
+  position: relative;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+  .card .card-image, .card .view-campaign-videos .field-name-field-video-thumbnail, .view-campaign-videos .card .field-name-field-video-thumbnail {
+    background-color: #F8F2B4;
+    height: 150px;
+    max-height: 150px;
+    overflow: hidden; }
+    .card .card-image img, .card .view-campaign-videos .field-name-field-video-thumbnail img, .view-campaign-videos .card .field-name-field-video-thumbnail img {
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      opacity: 1;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      width: 100%; }
+  .card .card-header, .card .view-campaign-videos .field-name-title, .view-campaign-videos .card .field-name-title {
+    background-color: #f6f6f6;
+    border-bottom: 1px solid gainsboro;
+    border-radius: 3px 3px 0 0;
+    font-weight: bold;
+    line-height: 1.5em;
+    padding: 0.53333em 0.8em;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+  .card .card-copy {
+    font-size: 0.9em;
+    line-height: 1.5em;
+    padding: 0.8em 0.8em; }
+    .card .card-copy p {
+      margin: 0 0 0.8em; }
+  .card:focus, .card:hover {
+    cursor: pointer; }
+    .card:focus img, .card:hover img {
+      opacity: 0; }
+  .card:active {
+    background-color: #f6f6f6; }
+    .card:active .card-header, .card:active .view-campaign-videos .field-name-title, .view-campaign-videos .card:active .field-name-title {
+      background-color: #f6f6f6; }
+
+.card:hover img {
+  opacity: 0.5; }
+
 header .page-header__logo a {
   border-bottom: none; }
 
@@ -6399,3 +6469,6 @@ section.site-nav #block-menu-menu-quitnow-menu a:hover {
 
 section.site-nav #block-menu-menu-quitnow-menu a.is-current {
   border-color: black; }
+
+.view-campaign-videos.view-display-id-block_1 .view-content .list-horizontal {
+  margin-top: 0px; }
