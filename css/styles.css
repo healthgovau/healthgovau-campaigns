@@ -6224,6 +6224,7 @@ header .page-header__logo img {
   background-color: #DDD; }
 
 .band--texture, .node-type-campaign #block-views-campaign-videos-block {
+  background-color: #eee;
   background-image: url(../images/bg-textures/bg-header-test.svg);
   background-position: 100% 0;
   background-repeat: no-repeat;
