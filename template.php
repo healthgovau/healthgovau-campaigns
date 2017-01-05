@@ -8,6 +8,17 @@
  */
 
 /**
+ * Implements THEME_preprocess_field().
+ */
+function healthgovau_preprocess_field(&$variables) {
+  if ($variables['element']['#field_name'] == 'field_video_thumbnail') {
+    // Add link to content variable for video thumbnail field. 
+    $nid = $variables['element']['#object']->nid;
+    $variables['link'] = drupal_get_path_alias('node/' . $nid);
+  }
+}
+
+/**
  * Implements THEME_preprocess_page().
  */
 function healthgovau_preprocess_page(&$variables) {

@@ -6104,10 +6104,6 @@ section.hero {
     padding: 0.8em 0.8em; }
     .card .card-copy p {
       margin: 0 0 0.8em; }
-  .card:focus, .card:hover {
-    cursor: pointer; }
-    .card:focus img, .card:hover img {
-      opacity: 0; }
   .card:active {
     background-color: #f6f6f6; }
     .card:active .card-header, .card:active .view-campaign-videos .field-name-title, .view-campaign-videos .card:active .field-name-title {
@@ -6252,6 +6248,92 @@ header .page-header__logo img {
 .modal-open {
   overflow: hidden; }
 
+.video__container, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .group-left, .page-campaign-videos .content-main li .group-left, .view-campaign-videos .group-left, .page-campaign-videos .region-content .wrapper .group-left,
+.node-type-video .region-content .wrapper .group-left {
+  float: left;
+  display: block;
+  margin-right: 8.71718%;
+  width: 100%; }
+  .video__container:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .group-left:last-child, .page-campaign-videos .content-main li .group-left:last-child, .view-campaign-videos .group-left:last-child, .page-campaign-videos .region-content .wrapper .group-left:last-child,
+  .node-type-video .region-content .wrapper .group-left:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 768px) {
+    .video__container, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .group-left, .page-campaign-videos .content-main li .group-left, .view-campaign-videos .group-left, .page-campaign-videos .region-content .wrapper .group-left,
+    .node-type-video .region-content .wrapper .group-left {
+      float: left;
+      display: block;
+      margin-right: 2.74614%;
+      width: 48.62693%; }
+      .video__container:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .group-left:last-child, .page-campaign-videos .content-main li .group-left:last-child, .view-campaign-videos .group-left:last-child, .page-campaign-videos .region-content .wrapper .group-left:last-child,
+      .node-type-video .region-content .wrapper .group-left:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 75em) {
+    .video__container, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .group-left, .page-campaign-videos .content-main li .group-left, .view-campaign-videos .group-left, .page-campaign-videos .region-content .wrapper .group-left,
+    .node-type-video .region-content .wrapper .group-left {
+      float: left;
+      display: block;
+      margin-right: 2.04556%;
+      width: 61.73292%; }
+      .video__container:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .group-left:last-child, .page-campaign-videos .content-main li .group-left:last-child, .view-campaign-videos .group-left:last-child, .page-campaign-videos .region-content .wrapper .group-left:last-child,
+      .node-type-video .region-content .wrapper .group-left:last-child {
+        margin-right: 0; } }
+
+.video__info, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .group-right, .page-campaign-videos .content-main li .group-right, .view-campaign-videos .group-right, .page-campaign-videos .region-content .wrapper .group-right,
+.node-type-video .region-content .wrapper .group-right {
+  float: left;
+  display: block;
+  margin-right: 8.71718%;
+  width: 100%; }
+  .video__info:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .group-right:last-child, .page-campaign-videos .content-main li .group-right:last-child, .view-campaign-videos .group-right:last-child, .page-campaign-videos .region-content .wrapper .group-right:last-child,
+  .node-type-video .region-content .wrapper .group-right:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 768px) {
+    .video__info, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .group-right, .page-campaign-videos .content-main li .group-right, .view-campaign-videos .group-right, .page-campaign-videos .region-content .wrapper .group-right,
+    .node-type-video .region-content .wrapper .group-right {
+      float: left;
+      display: block;
+      margin-right: 2.74614%;
+      width: 48.62693%; }
+      .video__info:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .group-right:last-child, .page-campaign-videos .content-main li .group-right:last-child, .view-campaign-videos .group-right:last-child, .page-campaign-videos .region-content .wrapper .group-right:last-child,
+      .node-type-video .region-content .wrapper .group-right:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 75em) {
+    .video__info, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .group-right, .page-campaign-videos .content-main li .group-right, .view-campaign-videos .group-right, .page-campaign-videos .region-content .wrapper .group-right,
+    .node-type-video .region-content .wrapper .group-right {
+      float: left;
+      display: block;
+      margin-right: 2.04556%;
+      width: 36.22153%; }
+      .video__info:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .group-right:last-child, .page-campaign-videos .content-main li .group-right:last-child, .view-campaign-videos .group-right:last-child, .page-campaign-videos .region-content .wrapper .group-right:last-child,
+      .node-type-video .region-content .wrapper .group-right:last-child {
+        margin-right: 0; } }
+
+.video__list li {
+  max-width: 100%; }
+
+.video__thumb, .card {
+  position: relative; }
+  .video__thumb:hover .video__overlay, .card:hover .video__overlay, .video__thumb:active .video__overlay, .card:active .video__overlay, .video__thumb:focus .video__overlay, .card:focus .video__overlay {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  .video__thumb:hover .video__overlay--light, .card:hover .video__overlay--light, .video__thumb:active .video__overlay--light, .card:active .video__overlay--light, .video__thumb:focus .video__overlay--light, .card:focus .video__overlay--light {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+
+.video__time, .view-campaign-videos .field-name-field-video-length {
+  margin-top: 0;
+  margin-right: 0;
+  padding: 0 0.8em;
+  background-color: #000;
+  color: #fff;
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+  vertical-align: top;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  bottom: 0; }
+
 .band, .band--primary, .node-type-campaign #block-block-2, .band--small, .band--pad, .band--secondary, .band--gradient {
   padding: 0.8em 0 3.2em;
   float: left;
@@ -6385,65 +6467,23 @@ header .page-header__logo img {
       .node-type-campaign #block-block-7 .partner__desc:last-child {
         margin-right: 0; } }
 
-.video__container, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .group-left, .page-campaign-videos .content-main li .group-left, .view-campaign-videos .group-left, .page-campaign-videos .region-content .wrapper .group-left,
-.node-type-video .region-content .wrapper .group-left {
-  float: left;
-  display: block;
-  margin-right: 8.71718%;
-  width: 100%; }
-  .video__container:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .group-left:last-child, .page-campaign-videos .content-main li .group-left:last-child, .view-campaign-videos .group-left:last-child, .page-campaign-videos .region-content .wrapper .group-left:last-child,
-  .node-type-video .region-content .wrapper .group-left:last-child {
-    margin-right: 0; }
-  @media screen and (min-width: 768px) {
-    .video__container, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .group-left, .page-campaign-videos .content-main li .group-left, .view-campaign-videos .group-left, .page-campaign-videos .region-content .wrapper .group-left,
-    .node-type-video .region-content .wrapper .group-left {
-      float: left;
-      display: block;
-      margin-right: 2.74614%;
-      width: 48.62693%; }
-      .video__container:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .group-left:last-child, .page-campaign-videos .content-main li .group-left:last-child, .view-campaign-videos .group-left:last-child, .page-campaign-videos .region-content .wrapper .group-left:last-child,
-      .node-type-video .region-content .wrapper .group-left:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 75em) {
-    .video__container, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .group-left, .page-campaign-videos .content-main li .group-left, .view-campaign-videos .group-left, .page-campaign-videos .region-content .wrapper .group-left,
-    .node-type-video .region-content .wrapper .group-left {
-      float: left;
-      display: block;
-      margin-right: 2.04556%;
-      width: 61.73292%; }
-      .video__container:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .group-left:last-child, .page-campaign-videos .content-main li .group-left:last-child, .view-campaign-videos .group-left:last-child, .page-campaign-videos .region-content .wrapper .group-left:last-child,
-      .node-type-video .region-content .wrapper .group-left:last-child {
-        margin-right: 0; } }
+.video__thumb:hover .video__overlay, .card:hover .video__overlay, .video__thumb:active .video__overlay, .card:active .video__overlay, .video__thumb:focus .video__overlay, .card:focus .video__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: block; }
 
-.video__info, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .group-right, .page-campaign-videos .content-main li .group-right, .view-campaign-videos .group-right, .page-campaign-videos .region-content .wrapper .group-right,
-.node-type-video .region-content .wrapper .group-right {
-  float: left;
-  display: block;
-  margin-right: 8.71718%;
-  width: 100%; }
-  .video__info:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .group-right:last-child, .page-campaign-videos .content-main li .group-right:last-child, .view-campaign-videos .group-right:last-child, .page-campaign-videos .region-content .wrapper .group-right:last-child,
-  .node-type-video .region-content .wrapper .group-right:last-child {
-    margin-right: 0; }
-  @media screen and (min-width: 768px) {
-    .video__info, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .group-right, .page-campaign-videos .content-main li .group-right, .view-campaign-videos .group-right, .page-campaign-videos .region-content .wrapper .group-right,
-    .node-type-video .region-content .wrapper .group-right {
-      float: left;
-      display: block;
-      margin-right: 2.74614%;
-      width: 48.62693%; }
-      .video__info:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .group-right:last-child, .page-campaign-videos .content-main li .group-right:last-child, .view-campaign-videos .group-right:last-child, .page-campaign-videos .region-content .wrapper .group-right:last-child,
-      .node-type-video .region-content .wrapper .group-right:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 75em) {
-    .video__info, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .group-right, .page-campaign-videos .content-main li .group-right, .view-campaign-videos .group-right, .page-campaign-videos .region-content .wrapper .group-right,
-    .node-type-video .region-content .wrapper .group-right {
-      float: left;
-      display: block;
-      margin-right: 2.04556%;
-      width: 36.22153%; }
-      .video__info:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .group-right:last-child, .page-campaign-videos .content-main li .group-right:last-child, .view-campaign-videos .group-right:last-child, .page-campaign-videos .region-content .wrapper .group-right:last-child,
-      .node-type-video .region-content .wrapper .group-right:last-child {
-        margin-right: 0; } }
+.video__thumb:hover .video__overlay--light, .card:hover .video__overlay--light, .video__thumb:active .video__overlay--light, .card:active .video__overlay--light, .video__thumb:focus .video__overlay--light, .card:focus .video__overlay--light {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: block; }
 
 .page-campaign-videos .content-main li {
   max-width: 100%; }

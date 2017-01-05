@@ -10,7 +10,7 @@
   <?php print render($title_suffix['contextual_links']); ?>
 <?php endif; ?>
 
-<figure>
+<figure class="video__thumb">
   <?php print $left; ?>
 </figure>
 

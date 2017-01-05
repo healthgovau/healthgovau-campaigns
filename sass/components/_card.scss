@@ -5,6 +5,7 @@
 }
 
 .card {
+  @extend .video__thumb;
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
@@ -62,16 +63,6 @@
 
     p {
       margin: 0 0 ($base-spacing / 2);
-    }
-  }
-
-  &:focus,
-  &:hover {
-    cursor: pointer;
-
-    img {
-      //opacity: $card-image-hover-opacity;
-      opacity: 0;
     }
   }
 

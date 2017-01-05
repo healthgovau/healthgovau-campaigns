@@ -1,0 +1,11 @@
+// Image overlays
+%overlay--dark {
+  @include position(absolute, 0);
+  background-color: transparentize(#000,0.8);
+  display: block;
+}
+%overlay--light {
+  @include position(absolute, 0);
+  background-color: transparentize(#FFF,0.8);
+  display: block;
+}
