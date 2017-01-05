@@ -27,6 +27,17 @@
   }
 }
 
+.video__play-button {
+    background-image: image-url("icons/video-play.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include position(absolute, 0);
+    @include opacity(0.75);
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
 // Single video (not-featured - use YT embed)
 
 
@@ -47,6 +58,10 @@
     .video__overlay--light {
       @include transition(all 0.3s ease-in-out);
       @extend %overlay--light;
+    }
+    .video__play-button {
+      @include transition(all 0.3s ease-in-out);
+      @include opacity(1);
     }
   }
 }

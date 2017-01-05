@@ -78,7 +78,7 @@ options = {
   },
   webpack: {
     output: {
-      filename: 'scripts.js'
+      filename: 'ui-kit.js'
     }
   }
 }
@@ -146,16 +146,21 @@ gulp.task('styles:theme', function() {
 
 
 // JS
-gulp.task('js', ['js:proto','js:theme']);
+gulp.task('js', ['js:proto']);
 
-gulp.task('js:proto', function () {
-  return gulp.src([paths.uikit.jsSrc + '/ui-kit.js', paths.proto.jsSrc + '/scripts.js'])
+gulp.task('js:ui-kit', function () {
+  return gulp.src(paths.uikit.jsSrc + '/ui-kit.js')
     .pipe(webpack(options.webpack))
-    //.pipe(uglify())
+    .pipe(uglify())
     //.pipe(rename({
     //    suffix: '.min'
     //}))
     .pipe(gulp.dest(paths.proto.jsDist));
+});
+
+gulp.task('js:proto', function () {
+  return gulp.src(paths.proto.jsSrc + '/scripts.js')
+      .pipe(gulp.dest(paths.proto.jsDist));
 });
 
 //gulp.task('js:theme', function () {
