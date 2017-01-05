@@ -1,4 +1,4 @@
-// Video block
+// Single video (featured - play in-situ)
 .video__container {
   @include span-columns(4 of 4);
 
@@ -25,4 +25,42 @@
   @include media($desktop) {
     @include span-columns(6 of 16);
   }
+}
+
+// Single video (not-featured - use YT embed)
+
+
+// Video listing
+// Override reading width if inside .content_main
+.video__list li {
+  max-width: 100%;
+}
+.video__thumb {
+  position: relative;
+  &:hover,
+  &:active,
+  &:focus {
+    .video__overlay {
+      @include transition(all 0.3s ease-in-out);
+      @extend %overlay--dark; // default
+    }
+    .video__overlay--light {
+      @include transition(all 0.3s ease-in-out);
+      @extend %overlay--light;
+    }
+  }
+}
+
+.video__time {
+  margin-top: 0;
+  margin-right: 0;
+  padding: 0 $small-spacing;
+  background-color: #000;
+  color: #fff;
+  @include opacity(0.75);
+  vertical-align: top;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
