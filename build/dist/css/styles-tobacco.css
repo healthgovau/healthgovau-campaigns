@@ -5981,6 +5981,21 @@ header[role='banner'] a.logo {
       .video__info:last-child {
         margin-right: 0; } }
 
+.video__play-button {
+  background-image: url("../img/icons/video-play.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+  display: block;
+  height: 100%;
+  width: 100%; }
+
 .video__list li {
   max-width: 100%; }
 
@@ -5992,6 +6007,11 @@ header[role='banner'] a.logo {
   .video__thumb:hover .video__overlay--light, .video__thumb:active .video__overlay--light, .video__thumb:focus .video__overlay--light {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
+  .video__thumb:hover .video__play-button, .video__thumb:active .video__play-button, .video__thumb:focus .video__play-button {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    filter: alpha(opacity=100); }
 
 .video__time {
   margin-top: 0;

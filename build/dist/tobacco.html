@@ -21,6 +21,7 @@
 
 	<!--<script type="text/javascript" src="/js/ui-kit.min.js"></script>-->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="/js/ui-kit.js"></script>
   <script src="/js/scripts.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
 	<script>
@@ -80,19 +81,19 @@
           <a href="tobacco.html">Home</a>
         </li>
         <li>
-          <a href="tobacco-content-content.html">About</a>
+          <a href="tobacco.html">About</a>
         </li>
         <li>
-          <a href="tobacco-content.html">Health benefits to quitting</a>
+          <a href="tobacco.html">Health benefits to quitting</a>
         </li>
         <li>
-          <a href="tobacco-content.html">Get ready to quit</a>
+          <a href="tobacco.html">Get ready to quit</a>
         </li>
         <li>
           <a href="tobacco-video-list.html">Your quitting stories</a>
         </li>
         <li>
-          <a href="tobacco-content.html">Visit QuitNow</a>
+          <a href="tobacco.html">Visit QuitNow</a>
         </li>
       </ul>
     </nav>
@@ -104,10 +105,15 @@
   <section class="band--primary band--texture">
     <div class="wrapper">
       <h2>Don't make smokes your story</h2>
+  
       <div class="video__container">
         <div class="video">
-          <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/zG8vlSIPgXQ" frameborder="0" allowfullscreen></iframe>
+          <div class="video-wrapper video__thumb">
+            <a class="js-video-play" href="#" title="Play video" data-youtubeid="zG8vlSIPgXQ">
+              <img src="img/feature-thumbnail.jpg" alt="YouTube video thumbnail">
+              <div class="video__play-button"></div>
+              <span class="video__time" aria-hidden="true">0:48</span>
+            </a>
           </div>
         </div>
         <p><a href="#" class="video__transcript">Read transcript</a></p>
@@ -120,6 +126,8 @@
         <p>So don't beat yourself up. take one step at a time. The longer you stay quit, the easier it gets.</p>
         <p><a href="#" class="see-more">More stories</a></p>
       </div>
+  
+  
     </div>
   </section>
   <section class="band features">
@@ -164,6 +172,7 @@
           </article>
         </li>
       </ul>
+      <p><a href="tobacco-video-list.html" class="see-more">More stories</a></p>
     </div>
   </section>
   <section class="band--small">
