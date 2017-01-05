@@ -2452,10 +2452,10 @@ Style guide: List styles.4 Highlighted word style
       border-radius: 2px; }
       .list-horizontal .tags a:hover, .list-vertical .tags a:hover, .list-vertical--thirds .tags a:hover, .list-vertical--fourths .tags a:hover, footer[role='contentinfo'] .footer-top nav .tags a:hover, .list-small .tags a:hover, .list-highlighted .tags a:hover, .list-horizontal .tags a:focus, .list-vertical .tags a:focus, .list-vertical--thirds .tags a:focus, .list-vertical--fourths .tags a:focus, footer[role='contentinfo'] .footer-top nav .tags a:focus, .list-small .tags a:focus, .list-highlighted .tags a:focus {
         border-color: #5bcbe3; }
-  .list-horizontal .meta, .list-vertical .meta, .list-vertical--thirds .meta, .list-vertical--fourths .meta, footer[role='contentinfo'] .footer-top nav .meta, .list-small .meta, .list-highlighted .meta {
+  .list-horizontal .meta, .list-vertical .meta, .list-vertical--thirds .meta, .list-vertical--fourths .meta, footer[role='contentinfo'] .footer-top nav .meta, .list-small .meta, .list-highlighted .meta, .list-horizontal .field-name-post-date, .list-vertical .field-name-post-date, .list-vertical--thirds .field-name-post-date, .list-vertical--fourths .field-name-post-date, footer[role='contentinfo'] .footer-top nav .field-name-post-date, .list-small .field-name-post-date, .list-highlighted .field-name-post-date {
     font-size: 87.5%;
     margin-bottom: 0.8em; }
-    .list-horizontal .meta time, .list-vertical .meta time, .list-vertical--thirds .meta time, .list-vertical--fourths .meta time, footer[role='contentinfo'] .footer-top nav .meta time, .list-small .meta time, .list-highlighted .meta time {
+    .list-horizontal .meta time, .list-vertical .meta time, .list-vertical--thirds .meta time, .list-vertical--fourths .meta time, footer[role='contentinfo'] .footer-top nav .meta time, .list-small .meta time, .list-highlighted .meta time, .list-horizontal .field-name-post-date time, .list-vertical .field-name-post-date time, .list-vertical--thirds .field-name-post-date time, .list-vertical--fourths .field-name-post-date time, footer[role='contentinfo'] .footer-top nav .field-name-post-date time, .list-small .field-name-post-date time, .list-highlighted .field-name-post-date time {
       color: #6e6e6e; }
   .list-horizontal > li, .list-vertical > li, .list-vertical--thirds > li, .list-vertical--fourths > li, footer[role='contentinfo'] .footer-top nav > li, .list-small > li, .list-highlighted > li {
     padding: 2.74614% 0;
@@ -2489,7 +2489,7 @@ Style guide: List styles.4 Highlighted word style
           -ms-flex: 0 0 35%;
               flex: 0 0 35%;
       margin-right: 1.6em; } }
-  .list-horizontal > li .meta time {
+  .list-horizontal > li .meta time, .list-horizontal > li .field-name-post-date time {
     display: inline-block;
     margin-right: 0.8em; }
   .list-horizontal > li:last-child {
@@ -2531,12 +2531,12 @@ Style guide: List styles.4 Highlighted word style
                 flex: 0 0 100%; }
     .list-vertical > li p, .list-vertical--thirds > li p, .list-vertical--fourths > li p, footer[role='contentinfo'] .footer-top nav > li p {
       min-height: auto; }
-    .list-vertical > li .meta, .list-vertical--thirds > li .meta, .list-vertical--fourths > li .meta, footer[role='contentinfo'] .footer-top nav > li .meta {
+    .list-vertical > li .meta, .list-vertical--thirds > li .meta, .list-vertical--fourths > li .meta, footer[role='contentinfo'] .footer-top nav > li .meta, .list-vertical > li .field-name-post-date, .list-vertical--thirds > li .field-name-post-date, .list-vertical--fourths > li .field-name-post-date, footer[role='contentinfo'] .footer-top nav > li .field-name-post-date {
       -webkit-box-ordinal-group: 0;
       -webkit-order: -1;
           -ms-flex-order: -1;
               order: -1; }
-      .list-vertical > li .meta time, .list-vertical--thirds > li .meta time, .list-vertical--fourths > li .meta time, footer[role='contentinfo'] .footer-top nav > li .meta time {
+      .list-vertical > li .meta time, .list-vertical--thirds > li .meta time, .list-vertical--fourths > li .meta time, footer[role='contentinfo'] .footer-top nav > li .meta time, .list-vertical > li .field-name-post-date time, .list-vertical--thirds > li .field-name-post-date time, .list-vertical--fourths > li .field-name-post-date time, footer[role='contentinfo'] .footer-top nav > li .field-name-post-date time {
         display: block; }
 
 .list-vertical.no-border li:nth-child(-n+2) {
@@ -2647,7 +2647,7 @@ Style guide: List styles.4 Highlighted word style
     border-bottom: 1px solid; }
   .list-small li {
     padding: 0; }
-  .list-small .meta {
+  .list-small .meta, .list-small .field-name-post-date {
     display: block;
     margin: 0; }
 

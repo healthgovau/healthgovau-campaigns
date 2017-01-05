@@ -52,7 +52,7 @@ HTML comment.
 -->
 <div class="<?php print $classes; ?> modal"<?php print $attributes; ?>>
   <label for="modal-1">
-    <div class="modal-trigger">Transcript</div>
+    <a class="modal-trigger">Read Transcript</a>
   </label>
   <input class="modal-state" id="modal-1" type="checkbox" />
   <div class="modal-fade-screen">
