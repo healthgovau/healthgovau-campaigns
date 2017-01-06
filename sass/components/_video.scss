@@ -41,6 +41,10 @@
       @include transition(all 0.3s ease-in-out);
       @extend %overlay--light;
     }
+    .video__play-button {
+      @include transition(all 0.3s ease-in-out);
+      @include opacity(1);
+    }
   }
 }
 
@@ -56,4 +60,27 @@
   position: absolute;
   right: 0;
   bottom: 0;
+}
+
+.video__play-button {
+  background-image: url(../images/icons/video-play.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.video .video-wrapper {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
 }

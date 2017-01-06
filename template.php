@@ -12,9 +12,17 @@
  */
 function healthgovau_preprocess_field(&$variables) {
   if ($variables['element']['#field_name'] == 'field_video_thumbnail') {
-    // Add link to content variable for video thumbnail field. 
+    // Add link to content variable for video thumbnail field.
     $nid = $variables['element']['#object']->nid;
     $variables['link'] = '/' . drupal_get_path_alias('node/' . $nid);
+  }
+  else if ($variables['element']['#field_name'] == 'field_video_promoted_thumbnail') {
+    $nid = $variables['element']['#object']->nid;
+    $video_node = node_load($nid);
+    $youtube_code = $video_node->field_youtube_video_id[LANGUAGE_NONE][0]['value'];
+    $variables['youtube_code'] = $youtube_code;
+    // Add JS to embed video.
+    drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/healthgovau.video.js');
   }
 }
 

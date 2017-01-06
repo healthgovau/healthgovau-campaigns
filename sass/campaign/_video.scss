@@ -2,7 +2,7 @@
 .page-campaign-videos {
   .content-main li {
     max-width: 100%;
-    .group-left {
+    div.group-left {
       @extend .video__container;
     }
     .group-right {
@@ -21,6 +21,12 @@
     }
   }
 
+  .field-name-field-video-promoted-thumbnail {
+    img {
+      height: auto;
+    }
+  }
+
   .field-name-title {
     @extend .card-header;
   }
@@ -29,10 +35,10 @@
     @extend .video__time;
   }
 
-  .group-left {
+  div.group-left {
     @extend .video__container;
   }
-  .group-right {
+  div.group-right {
     @extend .video__info;
   }
 }
