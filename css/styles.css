@@ -6255,63 +6255,63 @@ header .page-header__logo img {
 .modal-open {
   overflow: hidden; }
 
-.video__container, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left, .page-campaign-videos .content-main li div.group-left, .view-campaign-videos div.group-left, .page-campaign-videos .region-content .wrapper div.group-left,
+.video__container, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left, .node-type-video .view-mode-full div.group-left, .page-campaign-videos .content-main li div.group-left, .view-campaign-videos div.group-left, .page-campaign-videos .region-content .wrapper div.group-left,
 .node-type-video .region-content .wrapper div.group-left {
   float: left;
   display: block;
   margin-right: 8.71718%;
   width: 100%; }
-  .video__container:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left:last-child, .page-campaign-videos .content-main li div.group-left:last-child, .view-campaign-videos div.group-left:last-child, .page-campaign-videos .region-content .wrapper div.group-left:last-child,
+  .video__container:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left:last-child, .node-type-video .view-mode-full div.group-left:last-child, .page-campaign-videos .content-main li div.group-left:last-child, .view-campaign-videos div.group-left:last-child, .page-campaign-videos .region-content .wrapper div.group-left:last-child,
   .node-type-video .region-content .wrapper div.group-left:last-child {
     margin-right: 0; }
   @media screen and (min-width: 768px) {
-    .video__container, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left, .page-campaign-videos .content-main li div.group-left, .view-campaign-videos div.group-left, .page-campaign-videos .region-content .wrapper div.group-left,
+    .video__container, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left, .node-type-video .view-mode-full div.group-left, .page-campaign-videos .content-main li div.group-left, .view-campaign-videos div.group-left, .page-campaign-videos .region-content .wrapper div.group-left,
     .node-type-video .region-content .wrapper div.group-left {
       float: left;
       display: block;
       margin-right: 2.74614%;
       width: 48.62693%; }
-      .video__container:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left:last-child, .page-campaign-videos .content-main li div.group-left:last-child, .view-campaign-videos div.group-left:last-child, .page-campaign-videos .region-content .wrapper div.group-left:last-child,
+      .video__container:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left:last-child, .node-type-video .view-mode-full div.group-left:last-child, .page-campaign-videos .content-main li div.group-left:last-child, .view-campaign-videos div.group-left:last-child, .page-campaign-videos .region-content .wrapper div.group-left:last-child,
       .node-type-video .region-content .wrapper div.group-left:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 75em) {
-    .video__container, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left, .page-campaign-videos .content-main li div.group-left, .view-campaign-videos div.group-left, .page-campaign-videos .region-content .wrapper div.group-left,
+    .video__container, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left, .node-type-video .view-mode-full div.group-left, .page-campaign-videos .content-main li div.group-left, .view-campaign-videos div.group-left, .page-campaign-videos .region-content .wrapper div.group-left,
     .node-type-video .region-content .wrapper div.group-left {
       float: left;
       display: block;
       margin-right: 2.04556%;
       width: 61.73292%; }
-      .video__container:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left:last-child, .page-campaign-videos .content-main li div.group-left:last-child, .view-campaign-videos div.group-left:last-child, .page-campaign-videos .region-content .wrapper div.group-left:last-child,
+      .video__container:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left:last-child, .node-type-video .view-mode-full div.group-left:last-child, .page-campaign-videos .content-main li div.group-left:last-child, .view-campaign-videos div.group-left:last-child, .page-campaign-videos .region-content .wrapper div.group-left:last-child,
       .node-type-video .region-content .wrapper div.group-left:last-child {
         margin-right: 0; } }
 
-.video__info, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .page-campaign-videos .content-main li div.group-right, .view-campaign-videos div.group-right, .page-campaign-videos .region-content .wrapper div.group-right,
+.video__info, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .node-type-video .view-mode-full div.group-right, .page-campaign-videos .content-main li div.group-right, .view-campaign-videos div.group-right, .page-campaign-videos .region-content .wrapper div.group-right,
 .node-type-video .region-content .wrapper div.group-right {
   float: left;
   display: block;
   margin-right: 8.71718%;
   width: 100%; }
-  .video__info:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right:last-child, .page-campaign-videos .content-main li div.group-right:last-child, .view-campaign-videos div.group-right:last-child, .page-campaign-videos .region-content .wrapper div.group-right:last-child,
+  .video__info:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right:last-child, .node-type-video .view-mode-full div.group-right:last-child, .page-campaign-videos .content-main li div.group-right:last-child, .view-campaign-videos div.group-right:last-child, .page-campaign-videos .region-content .wrapper div.group-right:last-child,
   .node-type-video .region-content .wrapper div.group-right:last-child {
     margin-right: 0; }
   @media screen and (min-width: 768px) {
-    .video__info, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .page-campaign-videos .content-main li div.group-right, .view-campaign-videos div.group-right, .page-campaign-videos .region-content .wrapper div.group-right,
+    .video__info, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .node-type-video .view-mode-full div.group-right, .page-campaign-videos .content-main li div.group-right, .view-campaign-videos div.group-right, .page-campaign-videos .region-content .wrapper div.group-right,
     .node-type-video .region-content .wrapper div.group-right {
       float: left;
       display: block;
       margin-right: 2.74614%;
       width: 48.62693%; }
-      .video__info:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right:last-child, .page-campaign-videos .content-main li div.group-right:last-child, .view-campaign-videos div.group-right:last-child, .page-campaign-videos .region-content .wrapper div.group-right:last-child,
+      .video__info:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right:last-child, .node-type-video .view-mode-full div.group-right:last-child, .page-campaign-videos .content-main li div.group-right:last-child, .view-campaign-videos div.group-right:last-child, .page-campaign-videos .region-content .wrapper div.group-right:last-child,
       .node-type-video .region-content .wrapper div.group-right:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 75em) {
-    .video__info, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .page-campaign-videos .content-main li div.group-right, .view-campaign-videos div.group-right, .page-campaign-videos .region-content .wrapper div.group-right,
+    .video__info, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .node-type-video .view-mode-full div.group-right, .page-campaign-videos .content-main li div.group-right, .view-campaign-videos div.group-right, .page-campaign-videos .region-content .wrapper div.group-right,
     .node-type-video .region-content .wrapper div.group-right {
       float: left;
       display: block;
       margin-right: 2.04556%;
       width: 36.22153%; }
-      .video__info:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right:last-child, .page-campaign-videos .content-main li div.group-right:last-child, .view-campaign-videos div.group-right:last-child, .page-campaign-videos .region-content .wrapper div.group-right:last-child,
+      .video__info:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right:last-child, .node-type-video .view-mode-full div.group-right:last-child, .page-campaign-videos .content-main li div.group-right:last-child, .view-campaign-videos div.group-right:last-child, .page-campaign-videos .region-content .wrapper div.group-right:last-child,
       .node-type-video .region-content .wrapper div.group-right:last-child {
         margin-right: 0; } }
 
@@ -6367,33 +6367,33 @@ header .page-header__logo img {
   padding-bottom: 56.25%;
   position: relative; }
 
-.band, .band--primary, .node-type-campaign #block-block-2, .band--small, .band--pad, .band--secondary, .band--gradient {
+.band, .band--primary, .band--small, .band--pad, .band--secondary, .band--gradient {
   padding: 0.8em 0 3.2em;
   float: left;
   display: block;
   margin-right: 8.71718%;
   width: 100%; }
-  .band::after, .band--primary::after, .node-type-campaign #block-block-2::after, .band--small::after, .band--pad::after, .band--secondary::after, .band--gradient::after {
+  .band::after, .band--primary::after, .band--small::after, .band--pad::after, .band--secondary::after, .band--gradient::after {
     clear: both;
     content: "";
     display: table; }
-  .band:last-child, .band--primary:last-child, .node-type-campaign #block-block-2:last-child, .band--small:last-child, .band--pad:last-child, .band--secondary:last-child, .band--gradient:last-child {
+  .band:last-child, .band--primary:last-child, .band--small:last-child, .band--pad:last-child, .band--secondary:last-child, .band--gradient:last-child {
     margin-right: 0; }
   @media screen and (min-width: 768px) {
-    .band, .band--primary, .node-type-campaign #block-block-2, .band--small, .band--pad, .band--secondary, .band--gradient {
+    .band, .band--primary, .band--small, .band--pad, .band--secondary, .band--gradient {
       float: left;
       display: block;
       margin-right: 2.74614%;
       width: 100%; }
-      .band:last-child, .band--primary:last-child, .node-type-campaign #block-block-2:last-child, .band--small:last-child, .band--pad:last-child, .band--secondary:last-child, .band--gradient:last-child {
+      .band:last-child, .band--primary:last-child, .band--small:last-child, .band--pad:last-child, .band--secondary:last-child, .band--gradient:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 75em) {
-    .band, .band--primary, .node-type-campaign #block-block-2, .band--small, .band--pad, .band--secondary, .band--gradient {
+    .band, .band--primary, .band--small, .band--pad, .band--secondary, .band--gradient {
       float: left;
       display: block;
       margin-right: 2.04556%;
       width: 100%; }
-      .band:last-child, .band--primary:last-child, .node-type-campaign #block-block-2:last-child, .band--small:last-child, .band--pad:last-child, .band--secondary:last-child, .band--gradient:last-child {
+      .band:last-child, .band--primary:last-child, .band--small:last-child, .band--pad:last-child, .band--secondary:last-child, .band--gradient:last-child {
         margin-right: 0; } }
 
 .band--small {
@@ -6402,7 +6402,7 @@ header .page-header__logo img {
 .band--pad {
   padding: 3.2em 0; }
 
-.band--primary, .node-type-campaign #block-block-2 {
+.band--primary {
   background-color: #EEE; }
 
 .band--secondary {
@@ -6421,84 +6421,6 @@ header .page-header__logo img {
   background-image: -webkit-gradient(linear,left top, right top,from(#DDDDDD), to(#FFFFFF));
   background-image: -webkit-linear-gradient(left,#DDDDDD, #FFFFFF);
   background-image: linear-gradient(90deg,#DDDDDD, #FFFFFF); }
-
-.node-type-campaign #block-block-2 {
-  float: none; }
-
-.node-type-campaign #block-block-7 .partner {
-  float: left;
-  display: block;
-  margin-right: 8.71718%;
-  width: 100%; }
-  .node-type-campaign #block-block-7 .partner:last-child {
-    margin-right: 0; }
-  @media screen and (min-width: 768px) {
-    .node-type-campaign #block-block-7 .partner {
-      float: left;
-      display: block;
-      margin-right: 2.74614%;
-      width: 48.62693%; }
-      .node-type-campaign #block-block-7 .partner:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 75em) {
-    .node-type-campaign #block-block-7 .partner {
-      float: left;
-      display: block;
-      margin-right: 2.04556%;
-      width: 48.97722%; }
-      .node-type-campaign #block-block-7 .partner:last-child {
-        margin-right: 0; } }
-  .node-type-campaign #block-block-7 .partner h3 {
-    font-weight: 400;
-    margin-top: 0; }
-
-.node-type-campaign #block-block-7 .partner__image {
-  float: left;
-  display: block;
-  margin-right: 8.71718%;
-  width: 100%; }
-  .node-type-campaign #block-block-7 .partner__image:last-child {
-    margin-right: 0; }
-  @media screen and (min-width: 768px) {
-    .node-type-campaign #block-block-7 .partner__image {
-      float: left;
-      display: block;
-      margin-right: 5.64736%;
-      width: 29.56843%; }
-      .node-type-campaign #block-block-7 .partner__image:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 75em) {
-    .node-type-campaign #block-block-7 .partner__image {
-      float: left;
-      display: block;
-      margin-right: 4.17655%;
-      width: 34.88966%; }
-      .node-type-campaign #block-block-7 .partner__image:last-child {
-        margin-right: 0; } }
-
-.node-type-campaign #block-block-7 .partner__desc {
-  float: left;
-  display: block;
-  margin-right: 8.71718%;
-  width: 100%; }
-  .node-type-campaign #block-block-7 .partner__desc:last-child {
-    margin-right: 0; }
-  @media screen and (min-width: 768px) {
-    .node-type-campaign #block-block-7 .partner__desc {
-      float: left;
-      display: block;
-      margin-right: 5.64736%;
-      width: 64.78421%; }
-      .node-type-campaign #block-block-7 .partner__desc:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 75em) {
-    .node-type-campaign #block-block-7 .partner__desc {
-      float: left;
-      display: block;
-      margin-right: 4.17655%;
-      width: 60.93379%; }
-      .node-type-campaign #block-block-7 .partner__desc:last-child {
-        margin-right: 0; } }
 
 .video__thumb:hover .video__overlay, .card:hover .video__overlay, .video__thumb:active .video__overlay, .card:active .video__overlay, .video__thumb:focus .video__overlay, .card:focus .video__overlay {
   position: absolute;
