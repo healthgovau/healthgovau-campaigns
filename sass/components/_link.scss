@@ -1,0 +1,18 @@
+body a {
+  color: #313131;
+  text-decoration: none;
+  outline: none;
+  border-bottom: solid 1px #5bcbe3;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-property: background-color, border-color, color;
+  transition-property: background-color, border-color, color;
+
+  &:hover,
+  &:focus {
+    background-color: #5bcbe3;
+    color: #313131;
+  }
+}
