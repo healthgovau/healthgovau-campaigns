@@ -6285,33 +6285,33 @@ header .page-header__logo img {
       .node-type-video .region-content .wrapper div.group-left:last-child {
         margin-right: 0; } }
 
-.video__info, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .page-campaign-videos .content-main li .group-right, .view-campaign-videos div.group-right, .page-campaign-videos .region-content .wrapper div.group-right,
+.video__info, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .page-campaign-videos .content-main li div.group-right, .view-campaign-videos div.group-right, .page-campaign-videos .region-content .wrapper div.group-right,
 .node-type-video .region-content .wrapper div.group-right {
   float: left;
   display: block;
   margin-right: 8.71718%;
   width: 100%; }
-  .video__info:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right:last-child, .page-campaign-videos .content-main li .group-right:last-child, .view-campaign-videos div.group-right:last-child, .page-campaign-videos .region-content .wrapper div.group-right:last-child,
+  .video__info:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right:last-child, .page-campaign-videos .content-main li div.group-right:last-child, .view-campaign-videos div.group-right:last-child, .page-campaign-videos .region-content .wrapper div.group-right:last-child,
   .node-type-video .region-content .wrapper div.group-right:last-child {
     margin-right: 0; }
   @media screen and (min-width: 768px) {
-    .video__info, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .page-campaign-videos .content-main li .group-right, .view-campaign-videos div.group-right, .page-campaign-videos .region-content .wrapper div.group-right,
+    .video__info, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .page-campaign-videos .content-main li div.group-right, .view-campaign-videos div.group-right, .page-campaign-videos .region-content .wrapper div.group-right,
     .node-type-video .region-content .wrapper div.group-right {
       float: left;
       display: block;
       margin-right: 2.74614%;
       width: 48.62693%; }
-      .video__info:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right:last-child, .page-campaign-videos .content-main li .group-right:last-child, .view-campaign-videos div.group-right:last-child, .page-campaign-videos .region-content .wrapper div.group-right:last-child,
+      .video__info:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right:last-child, .page-campaign-videos .content-main li div.group-right:last-child, .view-campaign-videos div.group-right:last-child, .page-campaign-videos .region-content .wrapper div.group-right:last-child,
       .node-type-video .region-content .wrapper div.group-right:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 75em) {
-    .video__info, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .page-campaign-videos .content-main li .group-right, .view-campaign-videos div.group-right, .page-campaign-videos .region-content .wrapper div.group-right,
+    .video__info, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .page-campaign-videos .content-main li div.group-right, .view-campaign-videos div.group-right, .page-campaign-videos .region-content .wrapper div.group-right,
     .node-type-video .region-content .wrapper div.group-right {
       float: left;
       display: block;
       margin-right: 2.04556%;
       width: 36.22153%; }
-      .video__info:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right:last-child, .page-campaign-videos .content-main li .group-right:last-child, .view-campaign-videos div.group-right:last-child, .page-campaign-videos .region-content .wrapper div.group-right:last-child,
+      .video__info:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right:last-child, .page-campaign-videos .content-main li div.group-right:last-child, .view-campaign-videos div.group-right:last-child, .page-campaign-videos .region-content .wrapper div.group-right:last-child,
       .node-type-video .region-content .wrapper div.group-right:last-child {
         margin-right: 0; } }
 
