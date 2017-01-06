@@ -20,6 +20,7 @@ regions[hero]           = Hero
 regions[help]           = Help
 regions[content]        = Content
 regions[sidebar]        = Sidebar
+regions[beforefooter]   = Before footer
 regions[footer]         = Footer
 regions[bottom]         = Page bottom
 

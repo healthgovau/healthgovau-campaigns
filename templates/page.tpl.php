@@ -11,6 +11,7 @@
 $navigation  = render($page['navigation']);
 $page_hero  = render($page['hero']);
 $sidebar  = render($page['sidebar']);
+$beforefooter = render($page['beforefooter']);
 ?>
 
 <header class="header" id="header" role="banner">
@@ -87,6 +88,14 @@ $sidebar  = render($page['sidebar']);
   </article>
 
 </main>
+
+<?php if ($beforefooter): ?>
+  <section class="before-footer">
+    <div class="wrapper">
+      <?php print $beforefooter; ?>
+    </div>
+  </section>
+<?php endif; ?>
 
 <footer role="contentinfo">
   <section class="page-footer">
