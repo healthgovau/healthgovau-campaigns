@@ -12,6 +12,8 @@ $navigation  = render($page['navigation']);
 $page_hero  = render($page['hero']);
 $sidebar  = render($page['sidebar']);
 $beforefooter = render($page['beforefooter']);
+$footer = render($page['footer']);
+$bottom = render($page['bottom']);
 ?>
 
 <header class="header" id="header" role="banner">
@@ -98,18 +100,22 @@ $beforefooter = render($page['beforefooter']);
 <?php endif; ?>
 
 <footer role="contentinfo">
-  <section class="page-footer">
-    <div class="wrapper">
-      <section class="footer-top">
-        <nav>
-          <?php print render($page['footer']); ?>
-        </nav>
-      </section>
-    </div>
-  </section>
-  <section class="page-bottom">
-    <div class="wrapper">
-      <?php print render($page['bottom']); ?>
-    </div>
-  </section>
+  <?php if ($footer): ?>
+    <section class="page-footer">
+      <div class="wrapper">
+        <section class="footer-top">
+          <nav>
+            <?php print $footer; ?>
+          </nav>
+        </section>
+      </div>
+    </section>
+  <?php endif; ?>
+  <?php if ($bottom): ?>
+    <section class="page-bottom">
+      <div class="wrapper">
+        <?php print $bottom; ?>
+      </div>
+    </section>
+  <?php endif; ?>
 </footer>
