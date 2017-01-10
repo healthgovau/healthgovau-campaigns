@@ -156,6 +156,27 @@ function healthgovau_breadcrumb($variables) {
         return _healthgovau_campaign_breadcrumb($node);
     }
   }
+  else {
+    // This is not a node page.
+    if (arg(0) == 'campaign' && is_numeric(arg(1))) {
+      // This is a campaign related view page.
+      $campaign = node_load(arg(1));
+
+      $breadcrumb = array(
+        '<a href="/' . drupal_get_path_alias('node/' . $campaign->nid) . '">' . $campaign->title . '</a>',
+        $variables['breadcrumb'][1],
+      );
+      $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
+      // Process breadcrumb for UI KIT format.
+      $breadcrumb_list = '<ul>';
+      foreach($breadcrumb as $link) {
+        $breadcrumb_list .= '<li>' . $link . '</li>';
+      }
+      $breadcrumb_list .= '</ul>';
+      $output .= '<nav class="breadcrumbs" aria-label="breadcrumb"><div class="wrapper">' . $breadcrumb_list . '</div></nav>';
+      return $output;
+    }
+  }
 
   // Default breadcrumb from uikit theme.
   $breadcrumb = $variables['breadcrumb'];
