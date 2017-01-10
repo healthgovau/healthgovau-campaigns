@@ -19,6 +19,21 @@ function parallax(){
   }
 }
 
+function debounce(func, wait, immediate) {
+  var timeout;
+  return function() {
+    var context = this, args = arguments;
+    var later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+};
+
 $(function() {
 
     console.log("Loaded scripts.js");
@@ -37,15 +52,24 @@ $(function() {
         $(this).replaceWith(iframe);
       });
 
-    // Hero parallax
-    if ($(".js-parallax-window").length) {
-      parallax();
+    // Sticky nav
+    var stickyNavTop = $('.sticky-nav').offset().top;
+    var stickyNav = function(){
+      var scrollTop = $(window).scrollTop();
+      if (scrollTop > stickyNavTop) {
+        $('.sticky-nav').addClass('on');
+      } else {
+        $('.sticky-nav').removeClass('on');
+      }
     }
 
-    $(window).scroll(function(e) {
+    // Currently this is inefficient as it is called repeatedly
+    // Consider debouncing or setting a flag
+    $(document).bind('ready scroll', function() {
       if ($(".js-parallax-window").length) {
         parallax();
       }
+      stickyNav();
     });
 
 });

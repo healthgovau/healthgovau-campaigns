@@ -5827,6 +5827,17 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
     content: "";
     display: table; }
 
+.sticky-nav.on {
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  display: block;
+  z-index: 9999;
+  -webkit-box-shadow: 0 2px 6px #999;
+          box-shadow: 0 2px 6px #999; }
+
 main.wide {
   max-width: 100%;
   padding: 0; }
