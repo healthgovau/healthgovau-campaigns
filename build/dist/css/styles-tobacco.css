@@ -5933,6 +5933,54 @@ header[role='banner'] a.logo {
   header[role='banner'] a.logo:hover, header[role='banner'] a.logo:focus {
     background-color: transparent; }
 
+.hero {
+  overflow: hidden;
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 225px; }
+  @media screen and (min-width: 768px) {
+    .hero {
+      height: 250px; } }
+  @media screen and (min-width: 75em) {
+    .hero {
+      height: 385px; } }
+  .hero .hero-bg {
+    background-size: cover;
+    background-position: top center;
+    height: 450px;
+    top: -75px;
+    position: absolute;
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      .hero .hero-bg {
+        height: 500px;
+        top: -83.33333px; } }
+    @media screen and (min-width: 75em) {
+      .hero .hero-bg {
+        height: 770px;
+        top: -128.33333px; } }
+  .hero .wrapper {
+    position: relative; }
+  .hero .campaign-logo {
+    padding: 0 2em;
+    min-width: 0;
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    max-height: 168.75px;
+    margin-top: 28.125px; }
+    @media screen and (min-width: 768px) {
+      .hero .campaign-logo {
+        max-height: 187.5px;
+        margin-top: 31.25px; } }
+    @media screen and (min-width: 75em) {
+      .hero .campaign-logo {
+        max-height: 288.75px;
+        margin-top: 48.125px; } }
+
 .video__container {
   float: left;
   display: block;
@@ -6030,18 +6078,8 @@ header[role='banner'] a.logo {
 .site-nav__wrapper li a:hover, .site-nav__wrapper li a:focus {
   border-color: #000000; }
 
-.hero {
-  background-image: url("../img/hero-tobacco.jpg");
-  background-color: #278288;
-  background-size: cover;
-  background-position: center center;
-  min-height: 100px; }
-  @media screen and (min-width: 768px) {
-    .hero {
-      min-height: 250px; } }
-  @media screen and (min-width: 75em) {
-    .hero {
-      min-height: 385px; } }
+.hero-bg {
+  background-image: url("../img/hero-tobacco.jpg"); }
 
 .list-vertical > li,
 .list-vertical--thirds > li,
