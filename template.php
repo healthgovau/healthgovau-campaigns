@@ -7,6 +7,8 @@
  * @see https://drupal.org/node/1728096
  */
 
+CONST SOCIAL_MEDIA = 'http://assets.juicer.io';
+
 /**
  * Implements THEME_preprocess_field().
  */
@@ -65,12 +67,12 @@ function healthgovau_preprocess_node(&$variables) {
       _healthgovau_set_hero_bg($campaign_nid, TRUE);
     }
   }
-  
+
   // Create variables for social media page.
   if ($variables['type'] == 'social_media') {
     // Add juicer js and css.
-    drupal_add_js('http://assets.juicer.io/embed.js', 'external');
-    drupal_add_css('http://assets.juicer.io/embed.css', 'external');
+    drupal_add_js(SOCIAL_MEDIA . '/embed.js', 'external');
+    drupal_add_css(SOCIAL_MEDIA . '/embed.css', 'external');
 
     // Find the field values.
     $sm_id = $variables['field_social_media_id'][0]['value'];
@@ -79,7 +81,7 @@ function healthgovau_preprocess_node(&$variables) {
     $variables['sm_id'] = $sm_id;
     $variables['sm_col'] = $sm_col;
     $variables['sm_perpage'] = $sm_perpage;
-    
+
   }
 }
 
@@ -112,8 +114,8 @@ function healthgovau_preprocess_entity(&$variables) {
     // For social media bean blocks.
     if ($bean->type == 'social_media') {
       // Add juicer js and css.
-      drupal_add_js('http://assets.juicer.io/embed.js', 'external');
-      drupal_add_css('http://assets.juicer.io/embed.css', 'external');
+      drupal_add_js(SOCIAL_MEDIA . '/embed.js', 'external');
+      drupal_add_css(SOCIAL_MEDIA . '/embed.css', 'external');
 
       // Find the field values.
       $sm_id = $bean->field_social_media_id[LANGUAGE_NONE][0]['value'];
@@ -139,19 +141,18 @@ function healthgovau_breadcrumb($variables) {
   // Hide breadcrumb for campaign content type.
   if (arg(0) == 'node' && is_numeric(arg(1))) {
     // This is a node page.
-    $keys = array_keys($variables['crumbs_trail']);
-    if ($keys[0] == 'node' && substr($keys[1], 0, 5) == 'node/') {
-      $page_argument = $variables['crumbs_trail'][$keys[1]]['page_arguments'][0];
-      $type = $page_argument->type;
-      switch ($type) {
-        case 'campaign':
-          return '';
-        // @todo: add other related content types in.
-        case 'video':
-          return _healthgovau_campaign_breadcrumb($page_argument);
-        case 'campaign_standard_page':
-          return _healthgovau_campaign_breadcrumb($page_argument);
-      }
+    $node = node_load(arg(1));
+    $type = $node->type;
+    switch ($type) {
+      case 'campaign':
+        return '';
+      // @todo: add other related content types in.
+      case 'video':
+        return _healthgovau_campaign_breadcrumb($node);
+      case 'campaign_standard_page':
+        return _healthgovau_campaign_breadcrumb($node);
+      case 'social_media':
+        return _healthgovau_campaign_breadcrumb($node);
     }
   }
 
