@@ -65,6 +65,22 @@ function healthgovau_preprocess_node(&$variables) {
       _healthgovau_set_hero_bg($campaign_nid, TRUE);
     }
   }
+  
+  // Create variables for social media page.
+  if ($variables['type'] == 'social_media') {
+    // Add juicer js and css.
+    drupal_add_js('http://assets.juicer.io/embed.js', 'external');
+    drupal_add_css('http://assets.juicer.io/embed.css', 'external');
+
+    // Find the field values.
+    $sm_id = $variables['field_social_media_id'][0]['value'];
+    $sm_col = $variables['field_social_media_column'][0]['value'];
+    $sm_perpage = $variables['field_social_media_per_page'][0]['value'];
+    $variables['sm_id'] = $sm_id;
+    $variables['sm_col'] = $sm_col;
+    $variables['sm_perpage'] = $sm_perpage;
+    
+  }
 }
 
 /**
@@ -84,6 +100,35 @@ function healthgovau_preprocess_views_view(&$vars) {
 function healthgovau_preprocess_block(&$variables) {
   if ($variables['block_id'] == 1) {
     $variables['classes_array'][] = 'footer-links';
+  }
+}
+
+/**
+ * Implements THEME_preprocess_entity().
+ */
+function healthgovau_preprocess_entity(&$variables) {
+  if ($variables['entity_type'] == 'bean') {
+    $bean = $variables['bean'];
+    // For social media bean blocks.
+    if ($bean->type == 'social_media') {
+      // Add juicer js and css.
+      drupal_add_js('http://assets.juicer.io/embed.js', 'external');
+      drupal_add_css('http://assets.juicer.io/embed.css', 'external');
+
+      // Find the field values.
+      $sm_id = $bean->field_social_media_id[LANGUAGE_NONE][0]['value'];
+      $sm_col = $bean->field_social_media_column[LANGUAGE_NONE][0]['value'];
+      $facebook = isset($bean->field_facebook_id[LANGUAGE_NONE]) ? '#' : $bean->field_facebook_id[LANGUAGE_NONE][0]['value'];
+      $youtube = isset($bean->field_youtube_channel_id[LANGUAGE_NONE]) ? '#' : $bean->field_youtube_channel_id[LANGUAGE_NONE][0]['value'];
+      $twitter = isset($bean->field_twitter_id[LANGUAGE_NONE]) ? '#' : $bean->field_twitter_id[LANGUAGE_NONE][0]['value'];
+      $sm_page = isset($bean->field_social_meida_page_link[LANGUAGE_NONE]) ? '#' : $bean->field_social_media_page_link[LANGUAGE_NONE][0]['value'];
+      $variables['sm_id'] = $sm_id;
+      $variables['sm_col'] = $sm_col;
+      $variables['facebook_link'] = $facebook;
+      $variables['youtube_link'] = $youtube;
+      $variables['twitter_link'] = $twitter;
+      $variables['sm_page'] = $sm_page;
+    }
   }
 }
 

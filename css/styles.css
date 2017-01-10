@@ -5182,6 +5182,78 @@ header .page-header__logo img {
 .modal-open {
   overflow: hidden; }
 
+.social__feed {
+  float: left;
+  display: block;
+  margin-right: 8.71718%;
+  width: 100%; }
+  .social__feed:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 768px) {
+    .social__feed {
+      float: left;
+      display: block;
+      margin-right: 2.74614%;
+      width: 74.31347%; }
+      .social__feed:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 75em) {
+    .social__feed {
+      float: left;
+      display: block;
+      margin-right: 2.04556%;
+      width: 80.86646%; }
+      .social__feed:last-child {
+        margin-right: 0; } }
+  .social__feed h3 {
+    font-weight: 400;
+    margin-top: 0; }
+
+.social__links {
+  float: left;
+  display: block;
+  margin-right: 8.71718%;
+  width: 100%; }
+  .social__links:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 768px) {
+    .social__links {
+      float: left;
+      display: block;
+      margin-right: 2.74614%;
+      width: 22.9404%; }
+      .social__links:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 75em) {
+    .social__links {
+      float: left;
+      display: block;
+      margin-right: 2.04556%;
+      width: 17.08798%; }
+      .social__links:last-child {
+        margin-right: 0; } }
+  .social__links ul {
+    padding-left: 0; }
+  .social__links .social__links-item {
+    list-style-type: none; }
+    .social__links .social__links-item a:before {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      content: ' ';
+      display: inline-block;
+      height: 1.2em;
+      margin-right: 0.4em;
+      width: 1.2em; }
+    .social__links .social__links-item a.youtube:before {
+      background-image: url("../images/icons/youtube.svg"); }
+    .social__links .social__links-item a.twitter:before {
+      background-image: url("../images/icons/twitter.svg"); }
+    .social__links .social__links-item a.facebook:before {
+      background-image: url("../images/icons/facebook.svg"); }
+  .social__links h3 {
+    margin-top: 0; }
+
 .video__container, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left, .node-type-video .view-mode-full div.group-left, .page-campaign-videos .content-main li div.group-left, .view-campaign-videos div.group-left, .page-campaign-videos .region-content .wrapper div.group-left,
 .node-type-video .region-content .wrapper div.group-left {
   float: left;

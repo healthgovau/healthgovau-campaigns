@@ -1,0 +1,55 @@
+// Social
+.social__feed {
+  @include span-columns(4 of 4);
+
+  @include media($tablet) {
+    @include span-columns(9 of 12);
+  }
+
+  @include media($desktop) {
+    @include span-columns(13 of 16);
+  }
+  h3 {
+    font-weight: $base-font-weight;
+    margin-top: 0;
+  }
+}
+.social__links {
+  @include span-columns(4 of 4);
+
+  @include media($tablet) {
+    @include span-columns(3 of 12);
+  }
+
+  @include media($desktop) {
+    @include span-columns(3 of 16);
+  }
+  ul {
+    padding-left: 0;
+  }
+  .social__links-item {
+    list-style-type: none;
+    a:before {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      content: ' ';
+      display: inline-block;
+      height: 1.2em;
+      margin-right: 0.4em;
+      width: 1.2em;
+    }
+    a.youtube:before {
+      background-image: image-url("icons/youtube.svg");
+    }
+    a.twitter:before {
+      background-image: image-url("icons/twitter.svg");
+    }
+    a.facebook:before {
+      background-image: image-url("icons/facebook.svg");
+    }
+  }
+  h3 {
+    margin-top: 0;
+  }
+}
