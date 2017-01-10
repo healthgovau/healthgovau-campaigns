@@ -1,0 +1,11 @@
+.node-type-social-media {
+  .main {
+    @extend .band--gradient;
+    article {
+      @include span-columns(6 of 6);
+      .title {
+        display: none;
+      }
+    }
+  }
+}
