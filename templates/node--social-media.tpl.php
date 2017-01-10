@@ -84,7 +84,7 @@
 
   <div class="wrapper">
     <h1>Social media</h1>
-    <ul class="juicer-feed" data-feed-id="<?php print $sm_id; ?>" data-per="<?php print $sm_perpage; ?>"></ul>
+    <ul class="juicer-feed" data-feed-id="<?php print $sm_id; ?>" data-per="<?php print $sm_perpage; ?>" feed-type="<?php print $sm_type; ?>"></ul>
   </div>
 
 </section>
