@@ -46,3 +46,73 @@ header[role='banner'] a.logo {
     background-color: transparent;
   }
 }
+
+// Campaign hero
+$hero-height-mobile:  225px;
+$hero-height-tablet:  250px;
+$hero-height-desktop:  385px;
+
+$hero-background-height-mobile: $hero-height-mobile * 2;
+$hero-background-height-tablet: $hero-height-tablet * 2;
+$hero-background-height-desktop: $hero-height-desktop * 2;
+
+.hero {
+    overflow: hidden;
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: $hero-height-mobile;
+
+    @include media($tablet) {
+      height: $hero-height-tablet;
+    }
+
+    @include media($desktop) {
+      height: $hero-height-desktop;
+    }
+
+    .hero-bg {
+      background-size: cover;
+      //background-position: center center;
+      background-position: top center;
+      height: $hero-background-height-mobile;
+      top: - $hero-height-mobile / 3;
+      position: absolute;
+      width: 100%;
+
+      @include media($tablet) {
+        height: $hero-background-height-tablet;
+        top: - $hero-height-tablet / 3;
+      }
+
+      @include media($desktop) {
+        height: $hero-background-height-desktop;
+        top: - $hero-height-desktop / 3;
+      }
+    }
+
+    .wrapper {
+      position: relative;
+    }
+
+    .campaign-logo {
+      @include pad(0 $gutter);
+      min-width: 0;
+      width: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      max-height: $hero-height-mobile * 0.75;
+      margin-top: $hero-height-mobile * 0.125;
+
+      @include media($tablet) {
+        max-height: $hero-height-tablet * 0.75;
+        margin-top: $hero-height-tablet * 0.125;
+      }
+      @include media($desktop) {
+        max-height: $hero-height-desktop * 0.75;
+        margin-top: $hero-height-desktop * 0.125;
+      }
+    }
+}
