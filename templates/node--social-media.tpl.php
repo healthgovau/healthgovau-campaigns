@@ -80,7 +80,7 @@
  * @ingroup themeable
  */
 ?>
-<section id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> band--gradient clearfix"<?php print $attributes; ?>>
+<section id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <div class="wrapper">
     <h1>Social media</h1>
