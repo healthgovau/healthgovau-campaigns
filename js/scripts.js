@@ -14,9 +14,28 @@
 
 
 // To understand behaviors, see https://drupal.org/node/756722#behaviors
-Drupal.behaviors.videoTranscript = {
+Drupal.behaviors.healthgovauCampaign = {
   attach: function(context, settings) {
 
+    function parallax(){
+      if( $(".js-parallax-window").length > 0 ) {
+        var plxBackground = $(".js-parallax-background");
+        var plxWindow = $(".js-parallax-window");
+
+        var plxWindowTopToPageTop = $(plxWindow).offset().top;
+        var windowTopToPageTop = $(window).scrollTop();
+        var plxWindowTopToWindowTop = plxWindowTopToPageTop - windowTopToPageTop;
+
+        var plxBackgroundTopToPageTop = $(plxBackground).offset().top;
+        var windowInnerHeight = window.innerHeight;
+        var plxBackgroundTopToWindowTop = plxBackgroundTopToPageTop - windowTopToPageTop;
+        var plxBackgroundTopToWindowBottom = windowInnerHeight - plxBackgroundTopToWindowTop;
+        var plxSpeed = 0.35;
+
+        plxBackground.css('top', - (plxWindowTopToWindowTop * plxSpeed) + 'px');
+      }
+    }
+    
     // Add modal effect. Check http://refills.bourbon.io/components
     $("#modal-1").on("change", function() {
       if ($(this).is(":checked")) {
@@ -34,6 +53,16 @@ Drupal.behaviors.videoTranscript = {
       e.stopPropagation();
     });
 
+    // Hero parallax
+    if ($(".js-parallax-window").length) {
+      parallax();
+    }
+
+    $(window).scroll(function(e) {
+      if ($(".js-parallax-window").length) {
+        parallax();
+      }
+    });
   }
 };
 

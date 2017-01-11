@@ -56,6 +56,9 @@ function healthgovau_preprocess_page(&$variables) {
  * Implements THEME_preprocess_node().
  */
 function healthgovau_preprocess_node(&$variables) {
+  // Apply the UI KIT list horizontal style to single node display by default.
+  $variables['classes_array'][] = 'list-horizontal';
+
   // Change background color and image for campaign and related content type.
   if ($variables['type'] == 'campaign') {
     $campaign_nid = $variables['nid'];
@@ -131,6 +134,49 @@ function healthgovau_preprocess_entity(&$variables) {
       $variables['youtube_link'] = $youtube;
       $variables['twitter_link'] = $twitter;
       $variables['sm_page'] = $sm_page;
+    }
+
+    if ($bean->delta == 'campaign-hero-logo') {
+      // Get the logo image for hero.
+      if (arg(0) == 'node' && is_numeric(arg(1))) {
+        // It is a node page.
+        $node = node_load(arg(1));
+        if (isset($node->field_campaign_hero_logo[LANGUAGE_NONE])) {
+          // This is a campaign node.
+          _healthgovau_campaign_hero_logo($node, $variables);
+        }
+        else if (isset($node->field_campaign[LANGUAGE_NONE])) {
+          // This is a campaign related node.
+          $campaign_node = node_load($node->field_campaign[LANGUAGE_NONE][0]['target_id']);
+          if (isset($campaign_node->field_campaign_hero_logo[LANGUAGE_NONE])) {
+            // Find out the logo.
+            _healthgovau_campaign_hero_logo($campaign_node, $variables);
+          }
+          else {
+            $variables['logo_img'] = '';
+            $variables['logo_url'] = '';
+          }
+        }
+        else {
+          $variables['logo_img'] = '';
+          $variables['logo_url'] = '';
+        }
+      }
+      else {
+        // This is not a node page.
+        if (arg(0) == 'campaign' && is_numeric(arg(1))) {
+          // This is a campaign related view page.
+          $campaign_node = node_load(arg(1));
+          if (isset($campaign_node->field_campaign_hero_logo[LANGUAGE_NONE])) {
+            // Find out the logo.
+            _healthgovau_campaign_hero_logo($campaign_node, $variables);
+          }
+          else {
+            $variables['logo_img'] = '';
+            $variables['logo_url'] = '';
+          }
+        }
+      }
     }
   }
 }
@@ -209,7 +255,7 @@ function _healthgovau_set_hero_bg($campaign_nid, $random) {
   if (isset($campaign->field_campaign_hero_bg_color[LANGUAGE_NONE]) && isset($campaign->field_campaign_hero_bg_image[LANGUAGE_NONE])) {
     // Get the background color for hero.
     $color = $campaign->field_campaign_hero_bg_color[LANGUAGE_NONE][0]['value'];
-    drupal_add_css('section.hero {background-color:' . $color . ';}', 'inline');
+    drupal_add_css('section.hero .hero-bg {background-color:' . $color . ';}', 'inline');
 
     // Get the background image for hero.
     if (isset($campaign->field_campaign_hero_bg_image[LANGUAGE_NONE]) && !empty($campaign->field_campaign_hero_bg_image[LANGUAGE_NONE][0])) {
@@ -219,7 +265,7 @@ function _healthgovau_set_hero_bg($campaign_nid, $random) {
         $image_num = array_rand($campaign->field_campaign_hero_bg_image[LANGUAGE_NONE]);
       }
       $image_url = file_create_url($campaign->field_campaign_hero_bg_image[LANGUAGE_NONE][$image_num]['uri']);
-      drupal_add_css('section.hero {background-image: url(' . $image_url . '); background-size: cover;}', 'inline');
+      drupal_add_css('section.hero .hero-bg {background-image: url(' . $image_url . '); background-size: cover;}', 'inline');
     }
   }
 }
@@ -250,4 +296,18 @@ function _healthgovau_campaign_breadcrumb($node) {
   $breadcrumb_list .= '</ul>';
   $output .= '<nav class="breadcrumbs" aria-label="breadcrumb"><div class="wrapper">' . $breadcrumb_list . '</div></nav>';
   return $output;
+}
+
+/**
+ * Helper function to get hero logo link and url.
+ *
+ * @param $node
+ *   The campaign node.
+ * @param $variables
+ *   The bean variables.
+ */
+function _healthgovau_campaign_hero_logo($node, &$variables) {
+  $image_url = file_create_url($node->field_campaign_hero_logo[LANGUAGE_NONE][0]['uri']);
+  $variables['logo_img'] = $image_url;
+  $variables['logo_url'] = drupal_get_path_alias('node/' . $node->nid);
 }
