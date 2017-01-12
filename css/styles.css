@@ -5069,6 +5069,14 @@ iframe {
   top: 0;
   left: 0; }
 
+.publish-date {
+  font-size: 11px;
+  font-size: 1.1rem;
+  line-height: 1.27272727272727;
+  color: #707070;
+  margin-bottom: 24px;
+  text-align: center; }
+
 body a {
   color: #313131;
   text-decoration: none;
