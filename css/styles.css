@@ -4927,7 +4927,7 @@ section.hero {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 9999;
+    z-index: 1;
     max-height: 168.75px;
     margin-top: 0px; }
     @media screen and (min-width: 768px) {
@@ -5219,6 +5219,10 @@ header .page-header__logo img {
 
 .modal-open {
   overflow: hidden; }
+
+.view ul.inline-links {
+  text-align: center;
+  width: 100%; }
 
 .social__feed {
   float: left;
