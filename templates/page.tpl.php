@@ -35,8 +35,11 @@ $bottom = render($page['bottom']);
 
   <?php if ($page_hero || $hero ): ?>
     <section class="hero">
-      <div class="wrapper">
-        <?php print render($page['hero']); ?>
+      <div class="hero js-parallax-window">
+        <div class="wrapper">
+          <?php print render($page['hero']); ?>
+        </div>
+        <div class="js-parallax-background hero-bg"></div>
       </div>
     </section>
   <?php endif; ?>
@@ -100,22 +103,16 @@ $bottom = render($page['bottom']);
 <?php endif; ?>
 
 <footer role="contentinfo">
-  <?php if ($footer): ?>
-    <section class="page-footer">
-      <div class="wrapper">
-        <section class="footer-top">
-          <nav>
-            <?php print $footer; ?>
-          </nav>
-        </section>
-      </div>
+  <div class="wrapper">
+    <section class="footer-top">
+      <?php print render($page['footer_top']); ?>
     </section>
-  <?php endif; ?>
-  <?php if ($bottom): ?>
+    <section class="footer-bottom">
+      <?php print render($page['footer_bottom']); ?>
+    </section>
     <section class="page-bottom">
-      <div class="wrapper">
-        <?php print $bottom; ?>
-      </div>
+      <?php print render($page['bottom']); ?>
     </section>
-  <?php endif; ?>
+  </div>
 </footer>
+

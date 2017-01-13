@@ -56,6 +56,9 @@ function healthgovau_preprocess_page(&$variables) {
  * Implements THEME_preprocess_node().
  */
 function healthgovau_preprocess_node(&$variables) {
+  // Apply the UI KIT list horizontal style to single node display by default.
+  $variables['classes_array'][] = 'list-horizontal';
+
   // Change background color and image for campaign and related content type.
   if ($variables['type'] == 'campaign') {
     $campaign_nid = $variables['nid'];
@@ -101,7 +104,8 @@ function healthgovau_preprocess_views_view(&$vars) {
  * Implements THEME_preprocess_block();
  */
 function healthgovau_preprocess_block(&$variables) {
-  if ($variables['block_id'] == 1) {
+  $block = $variables['elements']['#block'];
+  if ($block->delta == 'menu-tobacco-footer') {
     $variables['classes_array'][] = 'footer-links';
   }
 }
@@ -132,6 +136,49 @@ function healthgovau_preprocess_entity(&$variables) {
       $variables['twitter_link'] = $twitter;
       $variables['sm_page'] = $sm_page;
     }
+
+    if ($bean->delta == 'campaign-hero-logo') {
+      // Get the logo image for hero.
+      if (arg(0) == 'node' && is_numeric(arg(1))) {
+        // It is a node page.
+        $node = node_load(arg(1));
+        if (isset($node->field_campaign_hero_logo[LANGUAGE_NONE])) {
+          // This is a campaign node.
+          _healthgovau_campaign_hero_logo($node, $variables);
+        }
+        else if (isset($node->field_campaign[LANGUAGE_NONE])) {
+          // This is a campaign related node.
+          $campaign_node = node_load($node->field_campaign[LANGUAGE_NONE][0]['target_id']);
+          if (isset($campaign_node->field_campaign_hero_logo[LANGUAGE_NONE])) {
+            // Find out the logo.
+            _healthgovau_campaign_hero_logo($campaign_node, $variables);
+          }
+          else {
+            $variables['logo_img'] = '';
+            $variables['logo_url'] = '';
+          }
+        }
+        else {
+          $variables['logo_img'] = '';
+          $variables['logo_url'] = '';
+        }
+      }
+      else {
+        // This is not a node page.
+        if (arg(0) == 'campaign' && is_numeric(arg(1))) {
+          // This is a campaign related view page.
+          $campaign_node = node_load(arg(1));
+          if (isset($campaign_node->field_campaign_hero_logo[LANGUAGE_NONE])) {
+            // Find out the logo.
+            _healthgovau_campaign_hero_logo($campaign_node, $variables);
+          }
+          else {
+            $variables['logo_img'] = '';
+            $variables['logo_url'] = '';
+          }
+        }
+      }
+    }
   }
 }
 
@@ -154,6 +201,27 @@ function healthgovau_breadcrumb($variables) {
         return _healthgovau_campaign_breadcrumb($node);
       case 'social_media':
         return _healthgovau_campaign_breadcrumb($node);
+    }
+  }
+  else {
+    // This is not a node page.
+    if (arg(0) == 'campaign' && is_numeric(arg(1))) {
+      // This is a campaign related view page.
+      $campaign = node_load(arg(1));
+
+      $breadcrumb = array(
+        '<a href="/' . drupal_get_path_alias('node/' . $campaign->nid) . '">' . $campaign->title . '</a>',
+        $variables['breadcrumb'][1],
+      );
+      $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
+      // Process breadcrumb for UI KIT format.
+      $breadcrumb_list = '<ul>';
+      foreach($breadcrumb as $link) {
+        $breadcrumb_list .= '<li>' . $link . '</li>';
+      }
+      $breadcrumb_list .= '</ul>';
+      $output .= '<nav class="breadcrumbs" aria-label="breadcrumb"><div class="wrapper">' . $breadcrumb_list . '</div></nav>';
+      return $output;
     }
   }
 
@@ -179,6 +247,26 @@ function healthgovau_breadcrumb($variables) {
 }
 
 /**
+ * Implements hook_form_alter().
+ */
+function healthgovau_form_alter(&$form, &$form_state, $form_id) {
+  // Get the referrer page for feedback webform. 
+  if ($form_id == 'webform_client_form_1') {
+    $referrer_url = $_SERVER['HTTP_REFERER'];
+    $form['submitted']['is_this_a_feedback_for']['#type'] = 'select';
+    $form['submitted']['is_this_a_feedback_for']['#options'] = array(
+      'The whole website' => t('The whole website'),
+      $referrer_url => t('The page you were just on'),
+    );
+    // Remove the default validate for the new option in the select list.
+    // @todo Use another approach to add the option dynamically. 
+    $form['#validate'] = array();
+    // Attach character countdown JS.
+    $form['#attached']['js'][] = drupal_get_path('theme', 'healthgovau') . '/js/healthgovau.feedback.js';
+  }
+}
+
+/**
  * Helper function to set background image and color for campaign and campaign related content type.
  *
  * @param $campaign_nid
@@ -188,7 +276,7 @@ function _healthgovau_set_hero_bg($campaign_nid, $random) {
   if (isset($campaign->field_campaign_hero_bg_color[LANGUAGE_NONE]) && isset($campaign->field_campaign_hero_bg_image[LANGUAGE_NONE])) {
     // Get the background color for hero.
     $color = $campaign->field_campaign_hero_bg_color[LANGUAGE_NONE][0]['value'];
-    drupal_add_css('section.hero {background-color:' . $color . ';}', 'inline');
+    drupal_add_css('section.hero .hero-bg {background-color:' . $color . ';}', 'inline');
 
     // Get the background image for hero.
     if (isset($campaign->field_campaign_hero_bg_image[LANGUAGE_NONE]) && !empty($campaign->field_campaign_hero_bg_image[LANGUAGE_NONE][0])) {
@@ -198,7 +286,7 @@ function _healthgovau_set_hero_bg($campaign_nid, $random) {
         $image_num = array_rand($campaign->field_campaign_hero_bg_image[LANGUAGE_NONE]);
       }
       $image_url = file_create_url($campaign->field_campaign_hero_bg_image[LANGUAGE_NONE][$image_num]['uri']);
-      drupal_add_css('section.hero {background-image: url(' . $image_url . '); background-size: cover;}', 'inline');
+      drupal_add_css('section.hero .hero-bg {background-image: url(' . $image_url . '); background-size: cover;}', 'inline');
     }
   }
 }
@@ -229,4 +317,18 @@ function _healthgovau_campaign_breadcrumb($node) {
   $breadcrumb_list .= '</ul>';
   $output .= '<nav class="breadcrumbs" aria-label="breadcrumb"><div class="wrapper">' . $breadcrumb_list . '</div></nav>';
   return $output;
+}
+
+/**
+ * Helper function to get hero logo link and url.
+ *
+ * @param $node
+ *   The campaign node.
+ * @param $variables
+ *   The bean variables.
+ */
+function _healthgovau_campaign_hero_logo($node, &$variables) {
+  $image_url = file_create_url($node->field_campaign_hero_logo[LANGUAGE_NONE][0]['uri']);
+  $variables['logo_img'] = $image_url;
+  $variables['logo_url'] = drupal_get_path_alias('node/' . $node->nid);
 }
