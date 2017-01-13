@@ -81,3 +81,18 @@ main.wide {
   background-color: transparentize(#FFF,0.8);
   display: block;
 }
+
+// Cards
+.list--cards {
+  > li {
+    background-color: #fff;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+    margin-bottom: $medium-spacing;
+    @include box-shadow();
+    article {
+      margin: $medium-spacing;
+    }
+  }
+}

@@ -24,8 +24,8 @@
     background-image: image-url("health_crest.png");
     background-size: contain;
     display: inline-block;
-    width: 227px; //Revisit
-    height: 55px; //Revisit
+    width: 200px; //Revisit
+    height: 48px; //Revisit
 
     @include media($tablet) {
       width: 227px; //Revisit
@@ -33,8 +33,8 @@
     }
 
     @include media($desktop) {
-      width: 227px;
-      height: 55px;
+      width: 300px;
+      height: 72px;
     }
   }
 }
@@ -48,13 +48,13 @@ header[role='banner'] a.logo {
 }
 
 // Campaign hero
-$hero-height-mobile:  225px;
-$hero-height-tablet:  250px;
-$hero-height-desktop:  385px;
+$hero-height-mobile:  180px; // min 180px due to parallax
+$hero-height-tablet:  300px;
+$hero-height-desktop:  400px;
 
-$hero-background-height-mobile: $hero-height-mobile * 2;
-$hero-background-height-tablet: $hero-height-tablet * 2;
-$hero-background-height-desktop: $hero-height-desktop * 2;
+$hero-background-height-mobile: $hero-height-mobile * 1.2;
+$hero-background-height-tablet: $hero-height-tablet * 1.2;
+$hero-background-height-desktop: $hero-height-desktop * 1.2;
 
 .hero {
     overflow: hidden;
@@ -73,21 +73,20 @@ $hero-background-height-desktop: $hero-height-desktop * 2;
 
     .hero-bg {
       background-size: cover;
-      //background-position: center center;
-      background-position: top center;
+      background-position: center top;
       height: $hero-background-height-mobile;
-      top: - $hero-height-mobile / 3;
+      top: - $hero-height-mobile / 4;
       position: absolute;
       width: 100%;
 
       @include media($tablet) {
         height: $hero-background-height-tablet;
-        top: - $hero-height-tablet / 3;
+        top: - $hero-height-tablet / 4;
       }
 
       @include media($desktop) {
         height: $hero-background-height-desktop;
-        top: - $hero-height-desktop / 3;
+        top: - $hero-height-desktop / 4;
       }
     }
 
@@ -115,4 +114,63 @@ $hero-background-height-desktop: $hero-height-desktop * 2;
         margin-top: $hero-height-desktop * 0.125;
       }
     }
+}
+
+$hero-content-shrink-factor: 0.4; // Height proportion compared to main hero
+$hero-content-y-shift: 0.5; // How far up to move the image for the slice (range 0 - 0.9)
+
+.hero--content {
+  @extend .hero;
+  height: $hero-height-mobile * $hero-content-shrink-factor;
+
+  @include media($tablet) {
+    height: $hero-height-tablet * $hero-content-shrink-factor;
+  }
+
+  @include media($desktop) {
+    height: $hero-height-desktop * $hero-content-shrink-factor;
+  }
+
+  .hero-bg {
+    height: $hero-height-mobile;
+    top: 0;
+    background-position-y: - $hero-height-mobile * $hero-content-y-shift;
+
+    @include media($tablet) {
+      height: $hero-height-tablet;
+      background-position-y: - $hero-height-tablet * $hero-content-y-shift;
+    }
+
+    @include media($desktop) {
+      height: $hero-height-desktop;
+      background-position-y: - $hero-height-desktop * $hero-content-y-shift;
+    }
+  }
+
+  .campaign-logo {
+    max-height: $hero-height-mobile * $hero-content-shrink-factor * 0.75;
+    margin-top: $hero-height-mobile * $hero-content-shrink-factor * 0.125;
+
+    @include media($tablet) {
+      max-height: $hero-height-tablet * $hero-content-shrink-factor * 0.75;
+      margin-top: $hero-height-tablet * $hero-content-shrink-factor * 0.125;
+    }
+    @include media($desktop) {
+      max-height: $hero-height-desktop * $hero-content-shrink-factor * 0.75;
+      margin-top: $hero-height-desktop * $hero-content-shrink-factor * 0.125;
+    }
+  }
+}
+
+.hero--content-blur {
+  @extend .hero--content;
+  .hero-bg {
+    @include blur(3);
+  }
+}
+
+.hero--content-colour {
+  @extend .hero--content;
+  background: $background-colour-hero;
+  color: $hero-font-color;
 }
