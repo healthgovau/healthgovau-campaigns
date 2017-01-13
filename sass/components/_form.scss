@@ -1,0 +1,42 @@
+.form-required {
+  color: red;
+}
+
+form {
+  label:not(.option) {
+    font-weight: bold;
+  }
+
+  input[type='radio']:invalid + label, input[type='checkbox']:invalid + label {
+    color: inherit;
+  }
+
+  input[type='radio']:invalid + label::before, form input[type='checkbox']:invalid + label::before {
+    border-color: inherit;
+  }
+
+  textarea:invalid {
+    outline: none;
+  }
+
+  input[type=text]:invalid {
+    outline: none;
+  }
+
+  button, .button, [role='button'], [type='submit'], [type='reset'], [type='button'], .nav-toggle {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    height: 3.2em;
+    margin: 1em 1.6em 0.8em 0;
+    padding: 0.8em 1.6em;
+    border-radius: 1px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: inherit;
+    outline: 0;
+    text-decoration: none;
+    font-weight: 700;
+  }
+}

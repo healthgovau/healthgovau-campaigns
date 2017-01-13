@@ -104,7 +104,8 @@ function healthgovau_preprocess_views_view(&$vars) {
  * Implements THEME_preprocess_block();
  */
 function healthgovau_preprocess_block(&$variables) {
-  if ($variables['block_id'] == 1) {
+  $block = $variables['elements']['#block'];
+  if ($block->delta == 'menu-tobacco-footer') {
     $variables['classes_array'][] = 'footer-links';
   }
 }

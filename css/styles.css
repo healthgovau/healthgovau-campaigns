@@ -4795,46 +4795,6 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
 footer .page-bottom #block-menu-menu-page-bottom-menu ul > li.last {
   border-right: solid 0px black; }
 
-footer[role="contentinfo"] {
-  margin-top: 0px; }
-
-@media screen and (min-width: 420px) {
-  .page-footer .block {
-    float: left;
-    display: block;
-    margin-right: 4.17655%;
-    width: 100%;
-    text-align: center; }
-    .page-footer .block:last-child {
-      margin-right: 0; } }
-
-@media screen and (min-width: 768px) {
-  .page-footer .block {
-    float: left;
-    display: block;
-    margin-right: 2.74614%;
-    width: 40.06475%;
-    text-align: center; }
-    .page-footer .block:last-child {
-      margin-right: 0; } }
-
-@media screen and (min-width: 75em) {
-  .page-footer .block {
-    float: left;
-    display: block;
-    margin-right: 2.04556%;
-    width: 23.46583%;
-    text-align: left; }
-    .page-footer .block:last-child {
-      margin-right: 0; } }
-
-.page-footer .block h2, .page-footer .block .display {
-  font-size: 1.5em;
-  margin-top: 0px; }
-
-.page-footer .block img {
-  max-height: 7em; }
-
 .page-header {
   padding-top: 0px; }
   @media screen and (min-width: 420px) {
@@ -5061,6 +5021,40 @@ section.hero {
 
 .card:hover img {
   opacity: 0.5; }
+
+.form-required {
+  color: red; }
+
+form label:not(.option) {
+  font-weight: bold; }
+
+form input[type='radio']:invalid + label, form input[type='checkbox']:invalid + label {
+  color: inherit; }
+
+form input[type='radio']:invalid + label::before, form form input[type='checkbox']:invalid + label::before {
+  border-color: inherit; }
+
+form textarea:invalid {
+  outline: none; }
+
+form input[type=text]:invalid {
+  outline: none; }
+
+form button, form .modal .modal-trigger, .modal form .modal-trigger, form .button, form [role='button'], form [type='submit'], form [type='reset'], form [type='button'], form .nav-toggle {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  height: 3.2em;
+  margin: 1em 1.6em 0.8em 0;
+  padding: 0.8em 1.6em;
+  border-radius: 1px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: inherit;
+  outline: 0;
+  text-decoration: none;
+  font-weight: 700; }
 
 iframe {
   position: absolute;
