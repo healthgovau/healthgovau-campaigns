@@ -26,6 +26,15 @@ function healthgovau_preprocess_field(&$variables) {
     // Add JS to embed video.
     drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/healthgovau.video.js');
   }
+
+  // Add modal js to transcript field.
+  if ($variables['element']['#field_name'] == 'field_transcript') {
+    $object = $variables['element']['#object'];
+    $variables['nid'] = $object->nid;
+    
+    // Add modal JS.
+    drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/healthgovau.modal.js');
+  }
 }
 
 /**
@@ -250,7 +259,7 @@ function healthgovau_breadcrumb($variables) {
  * Implements hook_form_alter().
  */
 function healthgovau_form_alter(&$form, &$form_state, $form_id) {
-  // Get the referrer page for feedback webform. 
+  // Get the referrer page for feedback webform.
   if ($form_id == 'webform_client_form_1') {
     $referrer_url = $_SERVER['HTTP_REFERER'];
     $form['submitted']['is_this_a_feedback_for']['#type'] = 'select';
@@ -259,7 +268,7 @@ function healthgovau_form_alter(&$form, &$form_state, $form_id) {
       $referrer_url => t('The page you were just on'),
     );
     // Remove the default validate for the new option in the select list.
-    // @todo Use another approach to add the option dynamically. 
+    // @todo Use another approach to add the option dynamically.
     $form['#validate'] = array();
     // Attach character countdown JS.
     $form['#attached']['js'][] = drupal_get_path('theme', 'healthgovau') . '/js/healthgovau.feedback.js';
