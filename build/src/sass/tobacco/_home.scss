@@ -7,17 +7,15 @@ footer[role='contentinfo'] .footer-top nav > li {
   border-color: $black;
 }
 
-// Mean feature band
-.features {
-  .list-vertical > li,
-  .list-vertical--thirds > li,
-  .list-vertical--fourths > li {
-    border-top: 0;
-  }
+// Lists
+.list-vertical > li,
+.list-vertical--thirds > li,
+.list-vertical--fourths > li {
+  border-top: 0;
+}
 
-  .list-vertical > li article,
-  .list-vertical--thirds > li article,
-  .list-vertical--fourths > li article {
-    margin-top: $small-spacing;
-  }
+.list-vertical > li article,
+.list-vertical--thirds > li article,
+.list-vertical--fourths > li article {
+  margin-top: $small-spacing;
 }

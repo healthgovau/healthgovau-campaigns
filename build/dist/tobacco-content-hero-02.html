@@ -38,24 +38,6 @@
   <a href="#content">Skip to main content</a>
   <a href="#nav">Skip to section navigation</a>
 </nav>
-<!--<section class="govau--header">
-  <div class="wrapper">
-    <div class="govau--logo">
-      <a href="/" class="logo">Global navigation</a>
-      <span class="badge--default">draft</span>
-    </div>
-    <nav class="global-nav" aria-label="global navigation">
-      <ul>
-        <li><a href="#">Global nav</a></li>
-        <li><a href="#">Global nav</a></li>
-        <li><a href="#">Global nav</a></li>
-        <li><a href="#">Global nav</a></li>
-        <li><a href="#">Global nav</a></li>
-        <li><a href="#">Global nav</a></li>
-      </ul>
-    </nav>
-  </div>
-</section>-->
 <header role="banner">
   <section class="page-header">
     <div class="wrapper">
@@ -70,12 +52,12 @@
       </div>
     </div>
   </section>
-  <div class="hero js-parallax-window">
+  <div class="hero--content-blur">
     <div class="wrapper">
       <h1 class="visuallyhidden">Don't Make Smokes Your Story</h1>
       <img src="img/dont-make-smokes-your-story.png" class="campaign-logo" alt="Don't make smokes your story"/>
     </div>
-    <div class="js-parallax-background hero-bg">
+    <div class="hero-bg">
     </div>
   </div>
   <div class="sticky-nav">
@@ -106,75 +88,39 @@
   </div>
 </header>
 
+
+<nav class="breadcrumbs" aria-label="breadcrumb">
+  <div class="wrapper">
+    <ul>
+      <li><a href="/" title="Home">Home</a></li>
+      <li>Breadcrumb 1</li>
+    </ul>
+  </div>
+</nav>
 <!-- Main -->
 <main>
-
   <aside class="sidebar">
-    <h2>Related videos</h2>
-    <div class="video__list">
-      <ul class="list-horizontal">
+    <nav class="local-nav" aria-label="main navigation">
+      <h1 class="is-visuallyhidden">Menu</h1>
+      <ul>
         <li>
-          <figure>
-            <a href="tobacco-video.html">
-              <img src="img/tobacco-video-thumb-01.jpg" alt="example image" />
-            </a>
-          </figure>
-          <article>
-            <h2>
-              <a href="tobacco-video.html">Tom Calma</a>
-            </h2>
-            <div class="meta">
-              <time datetime="2017-01-05 00:00">05 Jan 2017</time>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor blanditiis modi cupiditate architecto reprehenderit eum hic voluptatum, dignissimos, neque earum saepe, amet itaque. Repudiandae minus, asperiores architecto delectus aperiam veritatis.
-            </p>
-          </article>
+          <a href="#" class="is-active">
+            Local navigation
+          </a>
+          <ul>
+            <li><a href="#">Nav item</a></li>
+            <li><a href="#">Nav item</a></li>
+            <li><a href="#">Nav item</a></li>
+            <li><a href="#">Nav item</a></li>
+            <li><a href="#">Nav item</a></li>
+          </ul>
         </li>
-  
-        <li>
-          <figure>
-            <a href="tobacco-video.html">
-              <img src="img/tobacco-video-thumb-02.jpg" alt="example image" />
-            </a>
-          </figure>
-          <article>
-            <h2>
-              <a href="tobacco-video.html">Ted's work</a>
-            </h2>
-            <div class="meta">
-              <time datetime="2017-01-05 00:00">05 Jan 2017</time>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, quod provident. Officiis odio nihil hic suscipit doloribus! Rem rerum iste, expedita porro est atque officiis qui natus, delectus illum in!
-            </p>
-          </article>
-        </li>
-  
-  
-        <li>
-          <figure>
-            <a href="tobacco-video.html">
-              <img src="img/tobacco-video-thumb-03.jpg" alt="example image" />
-            </a>
-          </figure>
-          <article>
-            <h2>
-              <a href="tobacco-video.html">Ted's band</a>
-            </h2>
-            <div class="meta">
-              <time datetime="2017-01-05 00:00">05 Jan 2017</time>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis mollitia rerum accusamus iusto esse vero repellat veniam, quod, quas doloribus aut quam enim commodi hic similique eaque, sit consequatur, debitis.
-            </p>
-          </article>
-        </li>
-  
-  
       </ul>
-    </div>
-  
+    </nav>
   </aside>
+
   <!-- Content -->
-  <article role="main" id="content">
+  <article role="main" class="content-main" id="content">
     <!--<nav class="breadcrumbs" aria-label="breadcrumb">
   <div class="wrapper">
     <ul>
@@ -184,9 +130,13 @@
   </div>
 </nav>
 -->
-    <h1>Tom Calma</h1>
-    <p>Video to be added here.</p>
-    <p>Need to consider aside 'related' videos because the horizontal list layout is horrendous!</p>
+    <h1>Content page (hero slice blur)</h1>
+    <div class="abstract">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur tenetur architecto, fuga veniam modi ipsa, earum nesciunt cupiditate autem aliquid, ratione corporis, mollitia vero obcaecati consectetur! Velit molestiae enim non.</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, pariatur quibusdam saepe nisi neque expedita mollitia exercitationem magnam odit voluptate placeat quam veniam laboriosam omnis, tenetur enim recusandae ratione iusto.</p>
+    <p>Quas eos, aliquam? Blanditiis ducimus doloribus, similique obcaecati consequuntur beatae eum rem exercitationem delectus saepe! Blanditiis, consequatur, quae. Nemo nesciunt quam sunt quos quaerat, eum voluptatem amet ducimus iusto autem.</p>
+    <p>Omnis eaque porro explicabo, magni asperiores accusamus! Itaque, minus? Dolor illo ex voluptate eligendi dolore nam saepe magni rem impedit. Libero cupiditate ducimus dolor earum ad? Velit accusamus, voluptatum animi.</p>
   </article>
 </main>
 

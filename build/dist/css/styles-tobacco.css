@@ -256,7 +256,7 @@ Usage:
   background-image: url("../img/icons/arrow-right--white.svg"); }
 
 header[role='banner'] .see-more::after, body > main .see-more::after, footer[role='contentinfo'] .see-more::after, .list-horizontal .tags .see-more::after, .list-vertical .tags .see-more::after, .list-vertical--thirds .tags .see-more::after, .list-vertical--fourths .tags .see-more::after, footer[role='contentinfo'] .footer-top nav .tags .see-more::after, .list-small .tags .see-more::after, .list-highlighted .tags .see-more::after, .primary-nav ul .see-more::after,
-.local-nav ul .see-more::after, [class^='breadcrumbs'] .see-more::after, [class^='breadcrumbs'][class$='--inverted'] .see-more::after, .skip-to .see-more::after, [class^='controls'] .see-more::after, .govau--header .see-more::after, .prerelease-govau--header .see-more::after, .hero .see-more::after,
+.local-nav ul .see-more::after, [class^='breadcrumbs'] .see-more::after, [class^='breadcrumbs'][class$='--inverted'] .see-more::after, .skip-to .see-more::after, [class^='controls'] .see-more::after, .govau--header .see-more::after, .prerelease-govau--header .see-more::after, .hero .see-more::after, .hero--content .see-more::after, .hero--content-blur .see-more::after, .hero--content-colour .see-more::after,
 .hero-sml .see-more::after,
 .hero-med .see-more::after {
   background-image: url("../img/icons/arrow-right--aqua.svg"); }
@@ -272,7 +272,7 @@ summary::before, .accordion--controls summary::before, .nav-toggle::before {
   background-image: url("../img/icons/chevron-down--navy.svg"); }
 
 header[role='banner'] a[rel~='external']::after, body > main a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .list-horizontal .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, footer[role='contentinfo'] .footer-top nav .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
-.local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after,
+.local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after, .hero--content a[rel~='external']::after, .hero--content-blur a[rel~='external']::after, .hero--content-colour a[rel~='external']::after,
 .hero-sml a[rel~='external']::after,
 .hero-med a[rel~='external']::after {
   background-image: url("../img/icons/external-link--aqua.svg"); }
@@ -511,7 +511,7 @@ dfn {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari, and Chrome.
  */
-h1, .hero .site-title,
+h1, .hero .site-title, .hero--content .site-title, .hero--content-blur .site-title, .hero--content-colour .site-title,
 .hero-sml .site-title,
 .hero-med .site-title {
   font-size: 2em;
@@ -1816,7 +1816,7 @@ Markup: templates/basic-links.html
 Style guide: Link styles.1 Hover links
 */
 header[role='banner'] a[rel~='external']::after, body > main a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .list-horizontal .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, footer[role='contentinfo'] .footer-top nav .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
-.local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after,
+.local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after, .hero--content a[rel~='external']::after, .hero--content-blur a[rel~='external']::after, .hero--content-colour a[rel~='external']::after,
 .hero-sml a[rel~='external']::after,
 .hero-med a[rel~='external']::after {
   content: '';
@@ -3727,7 +3727,7 @@ Style guide: Navigation.06 Tab navigation
 .inline-tab-nav {
   border-bottom: solid 1px #6e6e6e;
   margin: 3.2em 0; }
-  .inline-tab-nav h1, .inline-tab-nav .hero .site-title, .hero .inline-tab-nav .site-title, .inline-tab-nav
+  .inline-tab-nav h1, .inline-tab-nav .hero .site-title, .hero .inline-tab-nav .site-title, .inline-tab-nav .hero--content .site-title, .hero--content .inline-tab-nav .site-title, .inline-tab-nav .hero--content-blur .site-title, .hero--content-blur .inline-tab-nav .site-title, .inline-tab-nav .hero--content-colour .site-title, .hero--content-colour .inline-tab-nav .site-title, .inline-tab-nav
   .hero-sml .site-title,
   .hero-sml .inline-tab-nav .site-title, .inline-tab-nav
   .hero-med .site-title,
@@ -3747,7 +3747,7 @@ Style guide: Navigation.06 Tab navigation
     white-space: nowrap;
     border-bottom: solid 4px transparent; }
     @media screen and (min-width: 768px) {
-      .inline-tab-nav h1, .inline-tab-nav .hero .site-title, .hero .inline-tab-nav .site-title, .inline-tab-nav
+      .inline-tab-nav h1, .inline-tab-nav .hero .site-title, .hero .inline-tab-nav .site-title, .inline-tab-nav .hero--content .site-title, .hero--content .inline-tab-nav .site-title, .inline-tab-nav .hero--content-blur .site-title, .hero--content-blur .inline-tab-nav .site-title, .inline-tab-nav .hero--content-colour .site-title, .hero--content-colour .inline-tab-nav .site-title, .inline-tab-nav
       .hero-sml .site-title,
       .hero-sml .inline-tab-nav .site-title, .inline-tab-nav
       .hero-med .site-title,
@@ -3905,7 +3905,7 @@ footer[role='contentinfo'] {
     footer[role='contentinfo'] .footer-top nav li {
       line-height: 1.5em;
       list-style: none; }
-      footer[role='contentinfo'] .footer-top nav li h1, footer[role='contentinfo'] .footer-top nav li .hero .site-title, .hero footer[role='contentinfo'] .footer-top nav li .site-title, footer[role='contentinfo'] .footer-top nav li
+      footer[role='contentinfo'] .footer-top nav li h1, footer[role='contentinfo'] .footer-top nav li .hero .site-title, .hero footer[role='contentinfo'] .footer-top nav li .site-title, footer[role='contentinfo'] .footer-top nav li .hero--content .site-title, .hero--content footer[role='contentinfo'] .footer-top nav li .site-title, footer[role='contentinfo'] .footer-top nav li .hero--content-blur .site-title, .hero--content-blur footer[role='contentinfo'] .footer-top nav li .site-title, footer[role='contentinfo'] .footer-top nav li .hero--content-colour .site-title, .hero--content-colour footer[role='contentinfo'] .footer-top nav li .site-title, footer[role='contentinfo'] .footer-top nav li
       .hero-sml .site-title,
       .hero-sml footer[role='contentinfo'] .footer-top nav li .site-title, footer[role='contentinfo'] .footer-top nav li
       .hero-med .site-title,
@@ -4561,7 +4561,7 @@ Style guide: Page header.01 Header
       width: auto;
       text-align: initial; } }
 
-.hero,
+.hero, .hero--content, .hero--content-blur, .hero--content-colour,
 .hero-sml,
 .hero-med {
   color: #313131;
@@ -4624,7 +4624,7 @@ Style guide: Page header.01 Header
   margin-bottom: 0;
   background-color: #f0f3f5;
   color: #043751; }
-  .hero a,
+  .hero a, .hero--content a, .hero--content-blur a, .hero--content-colour a,
   .hero-sml a,
   .hero-med a {
     color: #313131;
@@ -4637,28 +4637,28 @@ Style guide: Page header.01 Header
             transition-duration: 0.1s;
     -webkit-transition-property: background-color, border-color, color;
     transition-property: background-color, border-color, color; }
-    .hero a:hover, .hero a:focus,
+    .hero a:hover, .hero--content a:hover, .hero--content-blur a:hover, .hero--content-colour a:hover, .hero a:focus, .hero--content a:focus, .hero--content-blur a:focus, .hero--content-colour a:focus,
     .hero-sml a:hover,
     .hero-sml a:focus,
     .hero-med a:hover,
     .hero-med a:focus {
       background-color: #5bcbe3;
       color: #313131; }
-    .hero a[rel~='external'],
+    .hero a[rel~='external'], .hero--content a[rel~='external'], .hero--content-blur a[rel~='external'], .hero--content-colour a[rel~='external'],
     .hero-sml a[rel~='external'],
     .hero-med a[rel~='external'] {
       display: inline;
       position: relative;
       margin-right: 1.6em; }
-      .hero a[rel~='external']:hover,
+      .hero a[rel~='external']:hover, .hero--content a[rel~='external']:hover, .hero--content-blur a[rel~='external']:hover, .hero--content-colour a[rel~='external']:hover,
       .hero-sml a[rel~='external']:hover,
       .hero-med a[rel~='external']:hover {
         border-color: transparent; }
-      .hero a[rel~='external']::after,
+      .hero a[rel~='external']::after, .hero--content a[rel~='external']::after, .hero--content-blur a[rel~='external']::after, .hero--content-colour a[rel~='external']::after,
       .hero-sml a[rel~='external']::after,
       .hero-med a[rel~='external']::after {
         background-size: 0.9em auto; }
-  .hero .see-more,
+  .hero .see-more, .hero--content .see-more, .hero--content-blur .see-more, .hero--content-colour .see-more,
   .hero-sml .see-more,
   .hero-med .see-more {
     display: inline-block;
@@ -4666,7 +4666,7 @@ Style guide: Page header.01 Header
     margin-right: 1.6em;
     font-weight: 700;
     color: #18788d; }
-    .hero .see-more::after,
+    .hero .see-more::after, .hero--content .see-more::after, .hero--content-blur .see-more::after, .hero--content-colour .see-more::after,
     .hero-sml .see-more::after,
     .hero-med .see-more::after {
       content: '';
@@ -4679,59 +4679,59 @@ Style guide: Page header.01 Header
       background-repeat: no-repeat;
       background-position: right 0.4em;
       background-size: 0.64em auto; }
-    .hero .see-more:hover, .hero .see-more:focus,
+    .hero .see-more:hover, .hero--content .see-more:hover, .hero--content-blur .see-more:hover, .hero--content-colour .see-more:hover, .hero .see-more:focus, .hero--content .see-more:focus, .hero--content-blur .see-more:focus, .hero--content-colour .see-more:focus,
     .hero-sml .see-more:hover,
     .hero-sml .see-more:focus,
     .hero-med .see-more:hover,
     .hero-med .see-more:focus {
       color: #313131; }
-  .hero span.placeholder-link,
+  .hero span.placeholder-link, .hero--content span.placeholder-link, .hero--content-blur span.placeholder-link, .hero--content-colour span.placeholder-link,
   .hero-sml span.placeholder-link,
   .hero-med span.placeholder-link {
     color: rgba(49, 49, 49, 0.7);
     border-bottom: none;
     cursor: not-allowed; }
-    .hero span.placeholder-link:hover,
+    .hero span.placeholder-link:hover, .hero--content span.placeholder-link:hover, .hero--content-blur span.placeholder-link:hover, .hero--content-colour span.placeholder-link:hover,
     .hero-sml span.placeholder-link:hover,
     .hero-med span.placeholder-link:hover {
       cursor: not-allowed; }
-  .hero.corporate,
+  .hero.corporate, .corporate.hero--content, .corporate.hero--content-blur, .corporate.hero--content-colour,
   .hero-sml.corporate,
   .hero-med.corporate {
     background-color: #0098b0;
     color: #fff; }
-  .hero h1, .hero .site-title,
+  .hero h1, .hero--content h1, .hero--content-blur h1, .hero--content-colour h1, .hero .site-title, .hero--content .site-title, .hero--content-blur .site-title, .hero--content-colour .site-title,
   .hero-sml h1, .hero-sml .site-title,
   .hero-med h1, .hero-med .site-title {
     font-size: 1.75rem;
     margin-top: 0;
     max-width: 20em; }
     @media screen and (min-width: 768px) {
-      .hero h1, .hero .site-title,
+      .hero h1, .hero--content h1, .hero--content-blur h1, .hero--content-colour h1, .hero .site-title, .hero--content .site-title, .hero--content-blur .site-title, .hero--content-colour .site-title,
       .hero-sml h1, .hero-sml .site-title,
       .hero-med h1, .hero-med .site-title {
         font-size: 2.375rem; } }
-  .hero p,
+  .hero p, .hero--content p, .hero--content-blur p, .hero--content-colour p,
   .hero-sml p,
   .hero-med p {
     font-size: 1.5rem;
     max-width: 30em;
     margin-bottom: 0.8em; }
-  .hero .site-title,
+  .hero .site-title, .hero--content .site-title, .hero--content-blur .site-title, .hero--content-colour .site-title,
   .hero-sml .site-title,
   .hero-med .site-title {
     display: block;
     margin-top: 0;
     margin-bottom: 0.4em; }
-  .hero .tagline,
+  .hero .tagline, .hero--content .tagline, .hero--content-blur .tagline, .hero--content-colour .tagline,
   .hero-sml .tagline,
   .hero-med .tagline {
     font-size: 150%; }
-  .hero .wrapper > :first-child,
+  .hero .wrapper > :first-child, .hero--content .wrapper > :first-child, .hero--content-blur .wrapper > :first-child, .hero--content-colour .wrapper > :first-child,
   .hero-sml .wrapper > :first-child,
   .hero-med .wrapper > :first-child {
     margin-top: 0; }
-  .hero .wrapper > :last-child,
+  .hero .wrapper > :last-child, .hero--content .wrapper > :last-child, .hero--content-blur .wrapper > :last-child, .hero--content-colour .wrapper > :last-child,
   .hero-sml .wrapper > :last-child,
   .hero-med .wrapper > :last-child {
     margin-bottom: 0; }
@@ -5237,7 +5237,7 @@ Markup: templates/heading-body-styles.html
 
 Style guide: Typography.4 Headings & body copy
 */
-h1, .hero .site-title,
+h1, .hero .site-title, .hero--content .site-title, .hero--content-blur .site-title, .hero--content-colour .site-title,
 .hero-sml .site-title,
 .hero-med .site-title,
 h2,
@@ -5249,23 +5249,23 @@ h4 {
   margin-bottom: 0.4em;
   margin-top: 1.6em; }
 
-h1, .hero .site-title,
+h1, .hero .site-title, .hero--content .site-title, .hero--content-blur .site-title, .hero--content-colour .site-title,
 .hero-sml .site-title,
 .hero-med .site-title {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.8em; }
   @media screen and (min-width: 768px) {
-    h1, .hero .site-title,
+    h1, .hero .site-title, .hero--content .site-title, .hero--content-blur .site-title, .hero--content-colour .site-title,
     .hero-sml .site-title,
     .hero-med .site-title {
       font-size: 1.75rem; } }
   @media screen and (min-width: 75em) {
-    h1, .hero .site-title,
+    h1, .hero .site-title, .hero--content .site-title, .hero--content-blur .site-title, .hero--content-colour .site-title,
     .hero-sml .site-title,
     .hero-med .site-title {
       font-size: 2.5rem; } }
-  h1:first-of-type, .hero .site-title:first-of-type,
+  h1:first-of-type, .hero .site-title:first-of-type, .hero--content .site-title:first-of-type, .hero--content-blur .site-title:first-of-type, .hero--content-colour .site-title:first-of-type,
   .hero-sml .site-title:first-of-type,
   .hero-med .site-title:first-of-type {
     margin-top: 0.4em; }
@@ -5294,7 +5294,7 @@ h6 {
   font-size: 1.125rem;
   font-weight: 700; }
 
-.gov-speak h1, .gov-speak .hero .site-title, .hero .gov-speak .site-title, .gov-speak
+.gov-speak h1, .gov-speak .hero .site-title, .hero .gov-speak .site-title, .gov-speak .hero--content .site-title, .hero--content .gov-speak .site-title, .gov-speak .hero--content-blur .site-title, .hero--content-blur .gov-speak .site-title, .gov-speak .hero--content-colour .site-title, .hero--content-colour .gov-speak .site-title, .gov-speak
 .hero-sml .site-title,
 .hero-sml .gov-speak .site-title, .gov-speak
 .hero-med .site-title,
@@ -5310,7 +5310,7 @@ h6 {
   margin-bottom: 0.4em;
   margin-top: 1.6em; }
 
-.gov-speak h1, .gov-speak .hero .site-title, .hero .gov-speak .site-title, .gov-speak
+.gov-speak h1, .gov-speak .hero .site-title, .hero .gov-speak .site-title, .gov-speak .hero--content .site-title, .hero--content .gov-speak .site-title, .gov-speak .hero--content-blur .site-title, .hero--content-blur .gov-speak .site-title, .gov-speak .hero--content-colour .site-title, .hero--content-colour .gov-speak .site-title, .gov-speak
 .hero-sml .site-title,
 .hero-sml .gov-speak .site-title, .gov-speak
 .hero-med .site-title,
@@ -5318,20 +5318,20 @@ h6 {
   font-size: 2rem;
   line-height: 1.2; }
   @media screen and (min-width: 768px) {
-    .gov-speak h1, .gov-speak .hero .site-title, .hero .gov-speak .site-title, .gov-speak
+    .gov-speak h1, .gov-speak .hero .site-title, .hero .gov-speak .site-title, .gov-speak .hero--content .site-title, .hero--content .gov-speak .site-title, .gov-speak .hero--content-blur .site-title, .hero--content-blur .gov-speak .site-title, .gov-speak .hero--content-colour .site-title, .hero--content-colour .gov-speak .site-title, .gov-speak
     .hero-sml .site-title,
     .hero-sml .gov-speak .site-title, .gov-speak
     .hero-med .site-title,
     .hero-med .gov-speak .site-title {
       font-size: 2.75rem; } }
   @media screen and (min-width: 75em) {
-    .gov-speak h1, .gov-speak .hero .site-title, .hero .gov-speak .site-title, .gov-speak
+    .gov-speak h1, .gov-speak .hero .site-title, .hero .gov-speak .site-title, .gov-speak .hero--content .site-title, .hero--content .gov-speak .site-title, .gov-speak .hero--content-blur .site-title, .hero--content-blur .gov-speak .site-title, .gov-speak .hero--content-colour .site-title, .hero--content-colour .gov-speak .site-title, .gov-speak
     .hero-sml .site-title,
     .hero-sml .gov-speak .site-title, .gov-speak
     .hero-med .site-title,
     .hero-med .gov-speak .site-title {
       font-size: 2.5rem; } }
-  .gov-speak h1:first-of-type, .gov-speak .hero .site-title:first-of-type, .hero .gov-speak .site-title:first-of-type, .gov-speak
+  .gov-speak h1:first-of-type, .gov-speak .hero .site-title:first-of-type, .hero .gov-speak .site-title:first-of-type, .gov-speak .hero--content .site-title:first-of-type, .hero--content .gov-speak .site-title:first-of-type, .gov-speak .hero--content-blur .site-title:first-of-type, .hero--content-blur .gov-speak .site-title:first-of-type, .gov-speak .hero--content-colour .site-title:first-of-type, .hero--content-colour .gov-speak .site-title:first-of-type, .gov-speak
   .hero-sml .site-title:first-of-type,
   .hero-sml .gov-speak .site-title:first-of-type, .gov-speak
   .hero-med .site-title:first-of-type,
@@ -5393,7 +5393,7 @@ Markup: templates/content-full-width.html
 Style guide: Typography.4 Line length
 */
 @media screen and (min-width: 75em) {
-  .content-main h1, .content-main .hero .site-title, .hero .content-main .site-title, .content-main
+  .content-main h1, .content-main .hero .site-title, .hero .content-main .site-title, .content-main .hero--content .site-title, .hero--content .content-main .site-title, .content-main .hero--content-blur .site-title, .hero--content-blur .content-main .site-title, .content-main .hero--content-colour .site-title, .hero--content-colour .content-main .site-title, .content-main
   .hero-sml .site-title,
   .hero-sml .content-main .site-title, .content-main
   .hero-med .site-title,
@@ -5779,7 +5779,7 @@ q {
 cite {
   font-style: normal; }
 
-article h1:first-of-type, article .hero .site-title:first-of-type, .hero article .site-title:first-of-type, article
+article h1:first-of-type, article .hero .site-title:first-of-type, .hero article .site-title:first-of-type, article .hero--content .site-title:first-of-type, .hero--content article .site-title:first-of-type, article .hero--content-blur .site-title:first-of-type, .hero--content-blur article .site-title:first-of-type, article .hero--content-colour .site-title:first-of-type, .hero--content-colour article .site-title:first-of-type, article
 .hero-sml .site-title:first-of-type,
 .hero-sml article .site-title:first-of-type, article
 .hero-med .site-title:first-of-type,
@@ -5835,8 +5835,11 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
   background: #fff;
   display: block;
   z-index: 9999;
-  -webkit-box-shadow: 0 2px 6px #999;
-          box-shadow: 0 2px 6px #999; }
+  -webkit-box-shadow: 0 2px 6px #CCC;
+  box-shadow: 0 2px 6px #CCC; }
+
+.nav-toggle {
+  margin-top: 0; }
 
 main.wide {
   max-width: 100%;
@@ -5916,6 +5919,17 @@ main.wide {
   background-color: rgba(255, 255, 255, 0.2);
   display: block; }
 
+.list--cards > li {
+  background-color: #fff;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+  margin-bottom: 1.2em;
+  -webkit-box-shadow: 0 3px 20px #CCC;
+  box-shadow: 0 3px 20px #CCC; }
+  .list--cards > li article {
+    margin: 1.2em; }
+
 .page-header {
   padding-bottom: 1.6em;
   -webkit-box-shadow: none;
@@ -5928,52 +5942,52 @@ main.wide {
     background-image: url("../img/health_crest.png");
     background-size: contain;
     display: inline-block;
-    width: 227px;
-    height: 55px; }
+    width: 200px;
+    height: 48px; }
     @media screen and (min-width: 768px) {
       .page-header__logo .logo {
         width: 227px;
         height: 55px; } }
     @media screen and (min-width: 75em) {
       .page-header__logo .logo {
-        width: 227px;
-        height: 55px; } }
+        width: 300px;
+        height: 72px; } }
 
 header[role='banner'] a.logo {
   border-bottom: none; }
   header[role='banner'] a.logo:hover, header[role='banner'] a.logo:focus {
     background-color: transparent; }
 
-.hero {
+.hero, .hero--content, .hero--content-blur, .hero--content-colour {
   overflow: hidden;
   position: relative;
   padding-top: 0;
   padding-bottom: 0;
-  height: 225px; }
+  height: 180px; }
   @media screen and (min-width: 768px) {
-    .hero {
-      height: 250px; } }
+    .hero, .hero--content, .hero--content-blur, .hero--content-colour {
+      height: 300px; } }
   @media screen and (min-width: 75em) {
-    .hero {
-      height: 385px; } }
-  .hero .hero-bg {
+    .hero, .hero--content, .hero--content-blur, .hero--content-colour {
+      height: 400px; } }
+  .hero .hero-bg, .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
     background-size: cover;
-    background-position: top center;
-    height: 450px;
-    top: -75px;
+    background-position: center top;
+    height: 216px;
+    top: -45px;
     position: absolute;
     width: 100%; }
     @media screen and (min-width: 768px) {
-      .hero .hero-bg {
-        height: 500px;
-        top: -83.33333px; } }
+      .hero .hero-bg, .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+        height: 360px;
+        top: -75px; } }
     @media screen and (min-width: 75em) {
-      .hero .hero-bg {
-        height: 770px;
-        top: -128.33333px; } }
-  .hero .wrapper {
+      .hero .hero-bg, .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+        height: 480px;
+        top: -100px; } }
+  .hero .wrapper, .hero--content .wrapper, .hero--content-blur .wrapper, .hero--content-colour .wrapper {
     position: relative; }
-  .hero .campaign-logo {
+  .hero .campaign-logo, .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
     padding: 0 2em;
     min-width: 0;
     width: auto;
@@ -5981,16 +5995,59 @@ header[role='banner'] a.logo {
     top: 0;
     left: 0;
     z-index: 9999;
-    max-height: 168.75px;
-    margin-top: 28.125px; }
+    max-height: 135px;
+    margin-top: 22.5px; }
     @media screen and (min-width: 768px) {
-      .hero .campaign-logo {
-        max-height: 187.5px;
-        margin-top: 31.25px; } }
+      .hero .campaign-logo, .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
+        max-height: 225px;
+        margin-top: 37.5px; } }
     @media screen and (min-width: 75em) {
-      .hero .campaign-logo {
-        max-height: 288.75px;
-        margin-top: 48.125px; } }
+      .hero .campaign-logo, .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
+        max-height: 300px;
+        margin-top: 50px; } }
+
+.hero--content, .hero--content-blur, .hero--content-colour {
+  height: 72px; }
+  @media screen and (min-width: 768px) {
+    .hero--content, .hero--content-blur, .hero--content-colour {
+      height: 120px; } }
+  @media screen and (min-width: 75em) {
+    .hero--content, .hero--content-blur, .hero--content-colour {
+      height: 160px; } }
+  .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+    height: 180px;
+    top: 0;
+    background-position-y: -90px; }
+    @media screen and (min-width: 768px) {
+      .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+        height: 300px;
+        background-position-y: -150px; } }
+    @media screen and (min-width: 75em) {
+      .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+        height: 400px;
+        background-position-y: -200px; } }
+  .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
+    max-height: 54px;
+    margin-top: 9px; }
+    @media screen and (min-width: 768px) {
+      .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
+        max-height: 90px;
+        margin-top: 15px; } }
+    @media screen and (min-width: 75em) {
+      .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
+        max-height: 120px;
+        margin-top: 20px; } }
+
+.hero--content-blur .hero-bg {
+  -webkit-filter: blur(3px) !important;
+  -ms-filter: blur(3px) !important;
+  -moz-filter: blur(3px) !important;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='blur'><feGaussianBlur stdDeviation='3' /></filter></svg>#blur");
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3'); }
+
+.hero--content-colour {
+  background: #000000;
+  color: #FFFFFF; }
 
 .video__container {
   float: left;
@@ -6098,12 +6155,12 @@ header[role='banner'] a.logo {
 footer[role='contentinfo'] .footer-top nav > li {
   border-color: #000000; }
 
-.features .list-vertical > li,
-.features .list-vertical--thirds > li,
-.features .list-vertical--fourths > li {
+.list-vertical > li,
+.list-vertical--thirds > li,
+.list-vertical--fourths > li {
   border-top: 0; }
 
-.features .list-vertical > li article,
-.features .list-vertical--thirds > li article,
-.features .list-vertical--fourths > li article {
+.list-vertical > li article,
+.list-vertical--thirds > li article,
+.list-vertical--fourths > li article {
   margin-top: 0.8em; }
