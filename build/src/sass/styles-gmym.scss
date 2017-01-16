@@ -5,16 +5,15 @@
 @import "gmym/vars";
 
 @import "campaign/functions";
-@import "campaign/nav";
 @import "campaign/global";
-@import "campaign/header";
 @import "campaign/nav";
+@import "campaign/header";
 @import "campaign/video";
 
 @import "gmym/functions";
+@import "gmym/global";
 @import "gmym/nav";
 @import "gmym/hero";
-@import "gmym/home";
 
 // Prototype only
 @import "campaign/prototype-only";

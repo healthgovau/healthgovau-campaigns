@@ -172,5 +172,5 @@ $hero-content-y-shift: 0.5; // How far up to move the image for the slice (range
 .hero--content-colour {
   @extend .hero--content;
   background: $background-colour-hero;
-  color: $hero-font-color;
+  color: $hero-font-colour;
 }

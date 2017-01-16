@@ -36,13 +36,10 @@ function debounce(func, wait, immediate) {
 
 $(function() {
 
-    console.log("Loaded scripts.js");
-
     //YouTube embed on click
       $(document).on("click", ".js-video-play", function(e) {
         e.preventDefault();
         var videoid = $(this).attr("data-youtubeid");
-        console.log(videoid + ' clicked');
         // Create an iFrame with autoplay set to true
         var iframe_url = "https://www.youtube.com/embed/" + videoid + "?autoplay=1&autohide=2&border=0&wmode=opaque&rel=0&html5=1&fs=1";
         if ($(this).data('params')) iframe_url += '&' + $(this).data('params');
@@ -54,12 +51,18 @@ $(function() {
 
     // Sticky nav
     var stickyNavTop = $('.sticky-nav').offset().top;
+    //var navHeight;
     var stickyNav = function(){
       var scrollTop = $(window).scrollTop();
       if (scrollTop > stickyNavTop) {
         $('.sticky-nav').addClass('on');
+        //if($('.sticky-nav').hasClass('on')){
+        //  navHeight = $('.sticky-nav').height();
+        //  $('html').css('margin-top', navHeight + 'px');
+        //}
       } else {
         $('.sticky-nav').removeClass('on');
+        //$('html').css('margin-top', '0');
       }
     }
 
@@ -71,11 +74,5 @@ $(function() {
       }
       stickyNav();
     });
-
-    // Transcript
-    $(".video__transcript-link").click(function(e){
-      e.preventDefault();
-        $(this).parent().next(".video__transcript-content").slideToggle('slow');
-    })
 
 });

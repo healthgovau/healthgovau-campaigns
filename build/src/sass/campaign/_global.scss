@@ -1,3 +1,13 @@
+// Heading utitlity classes to allow semantic markup with alternative visual hierarchy
+.h2 {
+  @extend h2;
+}
+.h3 {
+  @extend h3;
+}
+.h4 {
+  @extend h4;
+}
 // Override <main> width for banding
 main.wide {
   max-width: 100%;
@@ -10,38 +20,30 @@ main.wide {
 }
 
 
-// Feedback
-
-
 // Footer
+footer[role='contentinfo'] {
+  margin-top: 0;
+  border-top-color: $background-colour-dark;
+
+}
 
 
-// Bands
-
+// Bands =====================================
 // Default for a landing page band
 %band {
   @include clearfix;
-  padding: $small-spacing 0 $large-spacing;
-
-  @include span-columns(4 of 4);
-
-  @include media($tablet) {
-    @include span-columns(12 of 12);
-  }
-
-  @include media($desktop) {
-    @include span-columns(16 of 16);
-  }
+  @include fill-parent;
+  @include pad($small-spacing 0 $large-spacing);
 }
 
 // Extend these classes
-// Add modifiers for light/dark to permit childen to adapy for contrast
+// Add modifiers for light/dark to permit childen to adapt for contrast
 .band {
   @extend %band;
 }
 .band--small {
   @extend %band;
-  padding: 0;
+  padding: 0 0 $small-spacing;
 }
 .band--pad {
   @extend %band;
@@ -67,9 +69,22 @@ main.wide {
 
 .band--gradient {
   @extend %band;
-  @include linear-gradient(90deg, #DDDDDD, #FFFFFF, $fallback: #EEEEEE);
+  @include linear-gradient(90deg, $background-colour-secondary, $white, $fallback: $white);
 }
 
+// Feedback
+.page-feedback {
+  @extend .band--small;
+  background: $background-colour-dark;
+  color: #FFF;
+  @include button-colours(transparent, $white, $white, $white, $black);
+  [role='button'] {
+    margin: $medium-spacing 0 0;
+    @include media($tablet) {
+      margin: 0 0 0 $medium-spacing;
+    }
+  }
+}
 
 // Image overlays
 %overlay--dark {
@@ -95,5 +110,70 @@ main.wide {
     article {
       margin: $medium-spacing;
     }
+  }
+}
+
+// Social
+.social__feed {
+  @include span-columns(4 of 4);
+
+  @include media($tablet) {
+    @include span-columns(9 of 12);
+  }
+
+  @include media($desktop) {
+    @include span-columns(13 of 16);
+  }
+  h3 {
+    font-weight: $base-font-weight;
+    margin-top: 0;
+  }
+}
+.social__links {
+  padding-left: 0;
+  .social__links-item {
+    list-style-type: none;
+    display: block;
+    margin-right: 0;
+
+    @include media($tablet) {
+      display: inline;
+      margin-right: $medium-spacing;
+    }
+
+    a:before {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      content: ' ';
+      display: inline-block;
+      height: 1.2em;
+      margin-right: 0.4em;
+      width: 1.2em;
+    }
+    a.youtube:before {
+      background-image: image-url("icons/youtube.svg");
+    }
+    a.twitter:before {
+      background-image: image-url("icons/twitter.svg");
+    }
+    a.facebook:before {
+      background-image: image-url("icons/facebook.svg");
+    }
+    a.email:before {
+      background-image: image-url("icons/email.svg");
+    }
+  }
+  h3 {
+    margin-top: 0;
+  }
+}
+
+// Forces stacked across breakpoints
+.social__links--stacked {
+  @extend .social__links;
+  .social__links-item {
+    display: block;
+    margin-right: 0;
   }
 }

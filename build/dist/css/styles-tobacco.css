@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
 
-UI-Kit version: 1.10.3
+UI-Kit version: 1.11.0
 
 */
 /*! responsive-nav.js 1.0.39 by @viljamis */
@@ -620,11 +620,14 @@ header[role='banner'] a[rel~='external']::after, body > main a[rel~='external']:
   p,
   h2,
   .display,
-  h3 {
+  .h2,
+  h3,
+  .h3 {
     orphans: 3;
     widows: 3; }
-  h2, .display,
-  h3 {
+  h2, .display, .h2,
+  h3,
+  .h3 {
     page-break-after: avoid; } }
 
 /*
@@ -1733,7 +1736,7 @@ Style guide: List styles.4 Highlighted word style
     padding: 2.74614% 0;
     border-bottom: solid 1px #bbbbbb;
     margin-bottom: 0; }
-  .list-horizontal h2, .list-vertical h2, .list-vertical--thirds h2, .list-vertical--fourths h2, footer[role='contentinfo'] .footer-top nav h2, .list-small h2, .list-highlighted h2, .list-horizontal .display, .list-vertical .display, .list-vertical--thirds .display, .list-vertical--fourths .display, footer[role='contentinfo'] .footer-top nav .display, .list-small .display, .list-highlighted .display, .list-horizontal h3, .list-vertical h3, .list-vertical--thirds h3, .list-vertical--fourths h3, footer[role='contentinfo'] .footer-top nav h3, .list-small h3, .list-highlighted h3, .list-horizontal h4, .list-vertical h4, .list-vertical--thirds h4, .list-vertical--fourths h4, footer[role='contentinfo'] .footer-top nav h4, .list-small h4, .list-highlighted h4, .list-horizontal h5, .list-vertical h5, .list-vertical--thirds h5, .list-vertical--fourths h5, footer[role='contentinfo'] .footer-top nav h5, .list-small h5, .list-highlighted h5, .list-horizontal h6, .list-vertical h6, .list-vertical--thirds h6, .list-vertical--fourths h6, footer[role='contentinfo'] .footer-top nav h6, .list-small h6, .list-highlighted h6 {
+  .list-horizontal h2, .list-vertical h2, .list-vertical--thirds h2, .list-vertical--fourths h2, footer[role='contentinfo'] .footer-top nav h2, .list-small h2, .list-highlighted h2, .list-horizontal .display, .list-vertical .display, .list-vertical--thirds .display, .list-vertical--fourths .display, footer[role='contentinfo'] .footer-top nav .display, .list-small .display, .list-highlighted .display, .list-horizontal .h2, .list-vertical .h2, .list-vertical--thirds .h2, .list-vertical--fourths .h2, footer[role='contentinfo'] .footer-top nav .h2, .list-small .h2, .list-highlighted .h2, .list-horizontal h3, .list-vertical h3, .list-vertical--thirds h3, .list-vertical--fourths h3, footer[role='contentinfo'] .footer-top nav h3, .list-small h3, .list-highlighted h3, .list-horizontal .h3, .list-vertical .h3, .list-vertical--thirds .h3, .list-vertical--fourths .h3, footer[role='contentinfo'] .footer-top nav .h3, .list-small .h3, .list-highlighted .h3, .list-horizontal h4, .list-vertical h4, .list-vertical--thirds h4, .list-vertical--fourths h4, footer[role='contentinfo'] .footer-top nav h4, .list-small h4, .list-highlighted h4, .list-horizontal .h4, .list-vertical .h4, .list-vertical--thirds .h4, .list-vertical--fourths .h4, footer[role='contentinfo'] .footer-top nav .h4, .list-small .h4, .list-highlighted .h4, .list-horizontal h5, .list-vertical h5, .list-vertical--thirds h5, .list-vertical--fourths h5, footer[role='contentinfo'] .footer-top nav h5, .list-small h5, .list-highlighted h5, .list-horizontal h6, .list-vertical h6, .list-vertical--thirds h6, .list-vertical--fourths h6, footer[role='contentinfo'] .footer-top nav h6, .list-small h6, .list-highlighted h6 {
     margin-top: 0;
     margin-bottom: 0.4em;
     font-size: 1.125rem;
@@ -1796,7 +1799,7 @@ Style guide: List styles.4 Highlighted word style
       -webkit-flex-wrap: wrap;
           -ms-flex-wrap: wrap;
               flex-wrap: wrap; }
-      .list-vertical > li article h3, .list-vertical--thirds > li article h3, .list-vertical--fourths > li article h3, footer[role='contentinfo'] .footer-top nav > li article h3, .list-vertical > li article div, .list-vertical--thirds > li article div, .list-vertical--fourths > li article div, footer[role='contentinfo'] .footer-top nav > li article div, .list-vertical > li article p, .list-vertical--thirds > li article p, .list-vertical--fourths > li article p, footer[role='contentinfo'] .footer-top nav > li article p {
+      .list-vertical > li article h3, .list-vertical--thirds > li article h3, .list-vertical--fourths > li article h3, footer[role='contentinfo'] .footer-top nav > li article h3, .list-vertical > li article .h3, .list-vertical--thirds > li article .h3, .list-vertical--fourths > li article .h3, footer[role='contentinfo'] .footer-top nav > li article .h3, .list-vertical > li article div, .list-vertical--thirds > li article div, .list-vertical--fourths > li article div, footer[role='contentinfo'] .footer-top nav > li article div, .list-vertical > li article p, .list-vertical--thirds > li article p, .list-vertical--fourths > li article p, footer[role='contentinfo'] .footer-top nav > li article p {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 100%;
             -ms-flex: 0 0 100%;
@@ -2739,9 +2742,11 @@ Style guide: Navigation.7 Skip links
   margin: 3.2em 0 1.6em 0;
   border-left: 0.4em solid #f0f3f5;
   padding: 0 0 1.2em 1.2em; }
-  .index-links h2, .index-links .display,
+  .index-links h2, .index-links .display, .index-links .h2,
   .index-links h3,
+  .index-links .h3,
   .index-links h4,
+  .index-links .h4,
   .index-links h5,
   .index-links h6 {
     font-size: 1.0625rem;
@@ -2859,8 +2864,11 @@ Style guide: Navigation.07 Tab navigation
   .hero-med .inline-tab-nav .site-title,
   .inline-tab-nav h2,
   .inline-tab-nav .display,
+  .inline-tab-nav .h2,
   .inline-tab-nav h3,
+  .inline-tab-nav .h3,
   .inline-tab-nav h4,
+  .inline-tab-nav .h4,
   .inline-tab-nav h5,
   .inline-tab-nav h6 {
     font-size: 1em;
@@ -2879,8 +2887,11 @@ Style guide: Navigation.07 Tab navigation
       .hero-med .inline-tab-nav .site-title,
       .inline-tab-nav h2,
       .inline-tab-nav .display,
+      .inline-tab-nav .h2,
       .inline-tab-nav h3,
+      .inline-tab-nav .h3,
       .inline-tab-nav h4,
+      .inline-tab-nav .h4,
       .inline-tab-nav h5,
       .inline-tab-nav h6 {
         display: table-cell; } }
@@ -3034,8 +3045,11 @@ footer[role='contentinfo'] {
     .hero-med footer[role='contentinfo'] .footer-top nav .footer-menu .site-title,
     footer[role='contentinfo'] .footer-top nav .footer-menu h2,
     footer[role='contentinfo'] .footer-top nav .footer-menu .display,
+    footer[role='contentinfo'] .footer-top nav .footer-menu .h2,
     footer[role='contentinfo'] .footer-top nav .footer-menu h3,
-    footer[role='contentinfo'] .footer-top nav .footer-menu h4 {
+    footer[role='contentinfo'] .footer-top nav .footer-menu .h3,
+    footer[role='contentinfo'] .footer-top nav .footer-menu h4,
+    footer[role='contentinfo'] .footer-top nav .footer-menu .h4 {
       font-size: 1rem;
       font-weight: 700; }
     footer[role='contentinfo'] .footer-top nav .footer-menu li {
@@ -3287,9 +3301,10 @@ Style guide: Page header.01 Header
 .govau--header .links-group,
 .prerelease-govau--header .links-group {
   margin: 2.4em 0; }
-  .govau--header .links-group h2, .govau--header .links-group .display,
+  .govau--header .links-group h2, .govau--header .links-group .display, .govau--header .links-group .h2,
   .prerelease-govau--header .links-group h2,
-  .prerelease-govau--header .links-group .display {
+  .prerelease-govau--header .links-group .display,
+  .prerelease-govau--header .links-group .h2 {
     font-size: 1.0625rem;
     font-weight: 700;
     margin-top: 0;
@@ -4120,8 +4135,11 @@ h1, .hero .site-title, .hero--content .site-title, .hero--content-blur .site-tit
 .hero-med .site-title,
 h2,
 .display,
+.h2,
 h3,
-h4 {
+.h3,
+h4,
+.h4 {
   line-height: 1.4;
   font-weight: 400;
   margin-bottom: 0.4em;
@@ -4148,25 +4166,25 @@ h1, .hero .site-title, .hero--content .site-title, .hero--content-blur .site-tit
   .hero-med .site-title:first-of-type {
     margin-top: 0.4em; }
 
-h2, .display {
+h2, .display, .h2 {
   font-size: 2rem;
   line-height: 1.2;
   margin-top: 1.6em;
   margin-bottom: 1em; }
   @media screen and (min-width: 768px) {
-    h2, .display {
+    h2, .display, .h2 {
       font-size: 2.5rem; } }
 
-h3 {
+h3, .h3 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-top: 1.46667em;
   margin-bottom: 0.8em; }
   @media screen and (min-width: 768px) {
-    h3 {
+    h3, .h3 {
       font-size: 1.625rem; } }
 
-h4,
+h4, .h4,
 h5,
 h6 {
   font-size: 1.125rem;
@@ -4179,8 +4197,11 @@ h6 {
 .hero-med .gov-speak .site-title,
 .gov-speak h2,
 .gov-speak .display,
+.gov-speak .h2,
 .gov-speak h3,
+.gov-speak .h3,
 .gov-speak h4,
+.gov-speak .h4,
 .gov-speak h5,
 .gov-speak h6 {
   line-height: 1.4;
@@ -4216,25 +4237,25 @@ h6 {
   .hero-med .gov-speak .site-title:first-of-type {
     margin-top: 0.4em; }
 
-.gov-speak h2, .gov-speak .display {
+.gov-speak h2, .gov-speak .display, .gov-speak .h2 {
   font-size: 1.75rem;
   line-height: 1.2; }
   @media screen and (min-width: 768px) {
-    .gov-speak h2, .gov-speak .display {
+    .gov-speak h2, .gov-speak .display, .gov-speak .h2 {
       font-size: 2rem; } }
 
-.gov-speak h3 {
+.gov-speak h3, .gov-speak .h3 {
   font-size: 1.5rem;
   font-weight: 700; }
   @media screen and (min-width: 768px) {
-    .gov-speak h3 {
+    .gov-speak h3, .gov-speak .h3 {
       font-size: 1.625rem; } }
 
-.gov-speak h4 {
+.gov-speak h4, .gov-speak .h4 {
   font-size: 1.1875rem;
   font-weight: 700; }
   @media screen and (min-width: 768px) {
-    .gov-speak h4 {
+    .gov-speak h4, .gov-speak .h4 {
       font-size: 1.375rem; } }
 
 .gov-speak h5 {
@@ -4268,8 +4289,11 @@ If you'd like to include an element that spans across the maximum available spac
   .hero-med .content-main .site-title,
   .content-main h2,
   .content-main .display,
+  .content-main .h2,
   .content-main h3,
+  .content-main .h3,
   .content-main h4,
+  .content-main .h4,
   .content-main h5,
   .content-main p,
   .content-main li,
@@ -4717,6 +4741,178 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
 .light {
   font-weight: 400; }
 
+main.wide {
+  max-width: 100%;
+  padding: 0; }
+
+[class^='breadcrumbs'] {
+  margin-bottom: 3.2em; }
+
+footer[role='contentinfo'] {
+  margin-top: 0;
+  border-top-color: #2A2A2A; }
+
+.band, .band--primary, .band--small, .page-feedback, .band--pad, .band--secondary, .band--texture, .band--gradient {
+  width: 100%;
+  padding: 0.8em 0 3.2em; }
+  .band::after, .band--primary::after, .band--small::after, .page-feedback::after, .band--pad::after, .band--secondary::after, .band--texture::after, .band--gradient::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.band--small, .page-feedback {
+  padding: 0 0 0.8em; }
+
+.band--pad {
+  padding: 3.2em 0; }
+
+.band--primary {
+  background-color: #DDD; }
+
+.band--secondary {
+  background-color: #EEE; }
+
+.band--texture {
+  background-image: url("../img/bg-textures/bg-header-test.svg");
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.band--gradient {
+  background-color: #FFFFFF;
+  background-image: -webkit-linear-gradient(-360deg, #EEE, #FFFFFF);
+  background-image: -webkit-gradient(linear,left top, right top,from(#EEE), to(#FFFFFF));
+  background-image: -webkit-linear-gradient(left,#EEE, #FFFFFF);
+  background-image: linear-gradient(90deg,#EEE, #FFFFFF); }
+
+.page-feedback {
+  background: #2A2A2A;
+  color: #FFF; }
+  .page-feedback button,
+  .page-feedback .button,
+  .page-feedback [role='button'],
+  .page-feedback [type='submit'],
+  .page-feedback [type='reset'],
+  .page-feedback [type='button'] {
+    background-color: transparent;
+    color: #FFFFFF;
+    border-color: #FFFFFF; }
+    .page-feedback button:hover, .page-feedback button:focus,
+    .page-feedback .button:hover,
+    .page-feedback .button:focus,
+    .page-feedback [role='button']:hover,
+    .page-feedback [role='button']:focus,
+    .page-feedback [type='submit']:hover,
+    .page-feedback [type='submit']:focus,
+    .page-feedback [type='reset']:hover,
+    .page-feedback [type='reset']:focus,
+    .page-feedback [type='button']:hover,
+    .page-feedback [type='button']:focus {
+      background-color: #FFFFFF;
+      color: #000000; }
+    .page-feedback button:active,
+    .page-feedback .button:active,
+    .page-feedback [role='button']:active,
+    .page-feedback [type='submit']:active,
+    .page-feedback [type='reset']:active,
+    .page-feedback [type='button']:active {
+      background-color: #FFFFFF; }
+  .page-feedback [role='button'] {
+    margin: 1.2em 0 0; }
+    @media screen and (min-width: 768px) {
+      .page-feedback [role='button'] {
+        margin: 0 0 0 1.2em; } }
+
+.video__thumb:hover .video__overlay, .video__thumb:active .video__overlay, .video__thumb:focus .video__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: block; }
+
+.video__thumb:hover .video__overlay--light, .video__thumb:active .video__overlay--light, .video__thumb:focus .video__overlay--light {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: block; }
+
+.list--cards > li {
+  background-color: #fff;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+  margin-bottom: 1.2em;
+  -webkit-box-shadow: 0 3px 10px #CCC;
+  box-shadow: 0 3px 10px #CCC; }
+  .list--cards > li article {
+    margin: 1.2em; }
+
+.social__feed {
+  float: left;
+  display: block;
+  margin-right: 8.71718%;
+  width: 100%; }
+  .social__feed:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 768px) {
+    .social__feed {
+      float: left;
+      display: block;
+      margin-right: 2.74614%;
+      width: 74.31347%; }
+      .social__feed:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 75em) {
+    .social__feed {
+      float: left;
+      display: block;
+      margin-right: 2.04556%;
+      width: 80.86646%; }
+      .social__feed:last-child {
+        margin-right: 0; } }
+  .social__feed h3, .social__feed .h3 {
+    font-weight: 400;
+    margin-top: 0; }
+
+.social__links, .social__links--stacked {
+  padding-left: 0; }
+  .social__links .social__links-item, .social__links--stacked .social__links-item {
+    list-style-type: none;
+    display: block;
+    margin-right: 0; }
+    @media screen and (min-width: 768px) {
+      .social__links .social__links-item, .social__links--stacked .social__links-item {
+        display: inline;
+        margin-right: 1.2em; } }
+    .social__links .social__links-item a:before, .social__links--stacked .social__links-item a:before {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      content: ' ';
+      display: inline-block;
+      height: 1.2em;
+      margin-right: 0.4em;
+      width: 1.2em; }
+    .social__links .social__links-item a.youtube:before, .social__links--stacked .social__links-item a.youtube:before {
+      background-image: url("../img/icons/youtube.svg"); }
+    .social__links .social__links-item a.twitter:before, .social__links--stacked .social__links-item a.twitter:before {
+      background-image: url("../img/icons/twitter.svg"); }
+    .social__links .social__links-item a.facebook:before, .social__links--stacked .social__links-item a.facebook:before {
+      background-image: url("../img/icons/facebook.svg"); }
+    .social__links .social__links-item a.email:before, .social__links--stacked .social__links-item a.email:before {
+      background-image: url("../img/icons/email.svg"); }
+  .social__links h3, .social__links--stacked h3, .social__links .h3, .social__links--stacked .h3 {
+    margin-top: 0; }
+
+.social__links--stacked .social__links-item {
+  display: block;
+  margin-right: 0; }
+
 .site-nav {
   padding: 0 2em;
   width: 100%;
@@ -4751,96 +4947,6 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
 
 .nav-toggle {
   margin-top: 0; }
-
-main.wide {
-  max-width: 100%;
-  padding: 0; }
-
-[class^='breadcrumbs'] {
-  margin-bottom: 3.2em; }
-
-.band, .band--primary, .band--small, .band--pad, .band--secondary, .band--texture, .band--gradient {
-  padding: 0.8em 0 3.2em;
-  float: left;
-  display: block;
-  margin-right: 8.71718%;
-  width: 100%; }
-  .band::after, .band--primary::after, .band--small::after, .band--pad::after, .band--secondary::after, .band--texture::after, .band--gradient::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .band:last-child, .band--primary:last-child, .band--small:last-child, .band--pad:last-child, .band--secondary:last-child, .band--texture:last-child, .band--gradient:last-child {
-    margin-right: 0; }
-  @media screen and (min-width: 768px) {
-    .band, .band--primary, .band--small, .band--pad, .band--secondary, .band--texture, .band--gradient {
-      float: left;
-      display: block;
-      margin-right: 2.74614%;
-      width: 100%; }
-      .band:last-child, .band--primary:last-child, .band--small:last-child, .band--pad:last-child, .band--secondary:last-child, .band--texture:last-child, .band--gradient:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 75em) {
-    .band, .band--primary, .band--small, .band--pad, .band--secondary, .band--texture, .band--gradient {
-      float: left;
-      display: block;
-      margin-right: 2.04556%;
-      width: 100%; }
-      .band:last-child, .band--primary:last-child, .band--small:last-child, .band--pad:last-child, .band--secondary:last-child, .band--texture:last-child, .band--gradient:last-child {
-        margin-right: 0; } }
-
-.band--small {
-  padding: 0; }
-
-.band--pad {
-  padding: 3.2em 0; }
-
-.band--primary {
-  background-color: #EEE; }
-
-.band--secondary {
-  background-color: #DDD; }
-
-.band--texture {
-  background-image: url("../img/bg-textures/bg-header-test.svg");
-  background-position: 100% 0;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-.band--gradient {
-  background-color: #EEEEEE;
-  background-image: -webkit-linear-gradient(-360deg, #DDDDDD, #FFFFFF);
-  background-image: -webkit-gradient(linear,left top, right top,from(#DDDDDD), to(#FFFFFF));
-  background-image: -webkit-linear-gradient(left,#DDDDDD, #FFFFFF);
-  background-image: linear-gradient(90deg,#DDDDDD, #FFFFFF); }
-
-.video__thumb:hover .video__overlay, .video__thumb:active .video__overlay, .video__thumb:focus .video__overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  display: block; }
-
-.video__thumb:hover .video__overlay--light, .video__thumb:active .video__overlay--light, .video__thumb:focus .video__overlay--light {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.2);
-  display: block; }
-
-.list--cards > li {
-  background-color: #fff;
-  padding-top: 0;
-  padding-bottom: 0;
-  overflow: hidden;
-  margin-bottom: 1.2em;
-  -webkit-box-shadow: 0 3px 20px #CCC;
-  box-shadow: 0 3px 20px #CCC; }
-  .list--cards > li article {
-    margin: 1.2em; }
 
 .page-header {
   padding-bottom: 1.6em;
@@ -4958,8 +5064,8 @@ header[role='banner'] a.logo {
   filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='20'); }
 
 .hero--content-colour {
-  background: #000000;
-  color: #FFFFFF; }
+  background: #FFFFFF;
+  color: #000000; }
 
 .video__container {
   float: left;
@@ -4992,7 +5098,8 @@ header[role='banner'] a.logo {
   float: left;
   display: block;
   margin-right: 8.71718%;
-  width: 100%; }
+  width: 100%;
+  margin-top: 1.2em; }
   .video__info:last-child {
     margin-right: 0; }
   @media screen and (min-width: 768px) {
@@ -5000,7 +5107,8 @@ header[role='banner'] a.logo {
       float: left;
       display: block;
       margin-right: 2.74614%;
-      width: 48.62693%; }
+      width: 48.62693%;
+      margin-top: 0; }
       .video__info:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 75em) {
@@ -5058,12 +5166,6 @@ header[role='banner'] a.logo {
   right: 0;
   bottom: 0; }
 
-.site-nav__wrapper li a:hover, .site-nav__wrapper li a:focus {
-  border-color: #000000; }
-
-.hero-bg {
-  background-image: url("../img/hero-tobacco.jpg"); }
-
 .list-vertical > li,
 .list-vertical--thirds > li,
 .list-vertical--fourths > li,
@@ -5079,3 +5181,9 @@ footer[role='contentinfo'] .footer-top nav > li {
 .list-vertical--thirds > li article,
 .list-vertical--fourths > li article {
   margin-top: 0.8em; }
+
+.site-nav__wrapper li a:hover, .site-nav__wrapper li a:focus {
+  border-color: #DDD; }
+
+.hero-bg {
+  background-image: url("../img/hero-tobacco.jpg"); }
