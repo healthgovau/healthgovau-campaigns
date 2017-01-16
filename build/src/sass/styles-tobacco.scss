@@ -5,16 +5,16 @@
 @import "tobacco/vars";
 
 @import "campaign/functions";
-@import "campaign/nav";
 @import "campaign/global";
-@import "campaign/header";
 @import "campaign/nav";
+@import "campaign/header";
 @import "campaign/video";
 
 @import "tobacco/functions";
+@import "tobacco/global";
+@import "tobacco/bands";
 @import "tobacco/nav";
 @import "tobacco/hero";
-@import "tobacco/home";
 
 // Prototype only
 @import "campaign/prototype-only";

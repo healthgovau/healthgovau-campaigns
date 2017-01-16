@@ -1,25 +1,28 @@
 // Tobacco-specific vars
+// These vars will override UI-kit and Health default for this campaign
 
-// Colour constants
-$grey:              #DDD;
-$grey-light:        #EEE;
-$blue:              #445096;
-$blue-dark:         #333F85;
-$purple:            #AE27A6;
-$purple-dark:       #841A7E;
-$pink:              #C3274E;
-$pink-dark:         #E83965;
-$cyan:              #278288;
-$cyan-dark:         #216f74;
-$green:             #578235;
-$green-dark:        #7B9941;
-$orange:            #BF5730;
-$orange-dark:       darken($orange, 10%);
-$white:             #FFFFFF;
-$black:             #000000;
+// Standard colour constants
+$colour-primary:                  $grey;
+$colour-secondary:                $grey-light;
 
-// Per-campaign repeatable variables
-$background-colour-primary:       $grey-light;
-$background-colour-secondary:     $grey;
-$background-colour-hero:          $black;
-$hero-font-color:                 $white;
+// Custom colour constants
+$light-blue:                      #83ccf6;
+
+// Uncomment to override
+$background-colour-primary:       $colour-primary;
+$background-colour-secondary:     $colour-secondary;
+//$shadow-colour:
+//$background-colour-hero:        $white;
+//$background-colour-dark:        $grey-darkest;
+
+//$hero-font-colour:              $black;
+//$shadow-colour:                 $grey-dark;
+
+// Inverted colours for dark backgrounds
+$text-colour--inverted:           $light-blue;
+$hover-bg-colour--inverted:       $light-blue;
+$hover-text-colour--inverted:     $black;
+$shadow-colour--inverted:         $black;
+
+// Navigation
+$navigation-border-colour:        $black;

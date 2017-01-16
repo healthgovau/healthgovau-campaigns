@@ -1,24 +1,17 @@
-// GMYM-specific vars
+// Tobacco-specific vars
+// These vars will override UI-kit and Health default for this campaign
+$cyan:                            #278288;
 
 // Colour constants
-$grey:              #DDD;
-$grey-light:        #EEE;
-$blue:              #445096;
-$blue-dark:         #333F85;
-$purple:            #AE27A6;
-$purple-dark:       #841A7E;
-$pink:              #C3274E;
-$pink-dark:         #E83965;
-$cyan:              #278288;
-$cyan-dark:         #216f74;
-$green:             #578235;
-$green-dark:        #7B9941;
-$orange:            #BF5730;
-$orange-dark:       darken($orange, 10%);
-$white:             #FFFFFF;
+$colour-primary:                  $cyan;
+$colour-secondary:                $grey;
+$background-colour-hero:          $colour-primary;
 
-// Per-campaign repeatable variables
-$background-colour-primary:       $grey-light;
-$background-colour-secondary:     $grey;
+// Uncomment to override
+$background-colour-primary:       $colour-primary;
+$background-colour-secondary:     $colour-secondary;
 $background-colour-hero:          $cyan;
-$hero-font-color:                 $white;
+//$background-colour-dark:        $grey-darkest;
+
+//$hero-font-colour:              $black;
+//$shadow-colour:                 $grey-dark;

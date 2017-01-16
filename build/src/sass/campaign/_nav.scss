@@ -14,7 +14,7 @@
     background: #fff;
     display: block;
     z-index: 9999;
-    @include box-shadow(0, 2px, 6px, $shadow-color);
+    @include box-shadow(0, 2px, 6px, $shadow-colour);
   }
 }
 .nav-toggle {

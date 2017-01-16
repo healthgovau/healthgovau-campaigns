@@ -3,7 +3,7 @@
   font-weight: $base-font-weight;
 }
 
-@mixin box-shadow($top: 0, $left: 3px, $blur: 20px, $color: $shadow-color, $inset: false) {
+@mixin box-shadow($top: 0, $left: 3px, $blur: 10px, $color: $shadow-colour, $inset: false) {
   @if $inset {
     -webkit-box-shadow:inset $top $left $blur $color;
     -moz-box-shadow:inset $top $left $blur $color;
@@ -16,9 +16,25 @@
 }
 
 @mixin blur($px: 0) {
-    -webkit-filter: blur(#{$px}px) !important;
-    -ms-filter: blur(#{$px}px) !important;
-    -moz-filter: blur(#{$px}px) !important;
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'blur\'><feGaussianBlur stdDeviation=\'#{$px}\' /></filter></svg>#blur");
-    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='#{$px}');
+  -webkit-filter: blur(#{$px}px) !important;
+  -ms-filter: blur(#{$px}px) !important;
+  -moz-filter: blur(#{$px}px) !important;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'blur\'><feGaussianBlur stdDeviation=\'#{$px}\' /></filter></svg>#blur");
+  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='#{$px}');
+}
+
+// Switches elements to light for a dark background
+@mixin invert-colours(){
+  .see-more {
+    color: $text-colour--inverted !important;
+    &:hover,
+    &:focus {
+      color: $hover-text-colour--inverted !important;
+    }
+  }
+  @include link-colours($text-colour--inverted, $hover-bg-colour--inverted, $hover-text-colour--inverted);
+  .list--cards > li {
+    @include box-shadow($color: $shadow-colour--inverted);
+  }
+  color: $white;
 }

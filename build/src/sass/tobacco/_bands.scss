@@ -1,0 +1,18 @@
+// Campaign specific band overrides
+// If the background colour is dark add @include invert-colours(); switch the font colour of all child elements
+
+.band--primary {
+  //@include invert-colours();
+}
+
+.band--secondary {
+}
+
+.band--texture {
+  // Specify path to SVG or PNG
+  //background-image: image-url("PATH TO IMAGE");
+}
+
+.band--gradient {
+  //@include linear-gradient(90deg, $background-colour-secondary, $white, $fallback: $white);
+}

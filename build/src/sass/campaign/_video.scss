@@ -19,9 +19,11 @@
 
 .video__info {
   @include span-columns(4 of 4);
+  margin-top: $medium-spacing;
 
   @include media($tablet) {
     @include span-columns(6 of 12);
+    margin-top: 0;
   }
 
   @include media($desktop) {
