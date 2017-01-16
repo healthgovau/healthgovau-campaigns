@@ -165,7 +165,7 @@ $hero-content-y-shift: 0.5; // How far up to move the image for the slice (range
 .hero--content-blur {
   @extend .hero--content;
   .hero-bg {
-    @include blur(3);
+    @include blur(20);
   }
 }
 

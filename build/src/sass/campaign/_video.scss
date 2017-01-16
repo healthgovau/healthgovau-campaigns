@@ -12,7 +12,9 @@
 }
 
 .video__transcript {
-
+  summary {
+    background-color: transparent;
+  }
 }
 
 .video__info {

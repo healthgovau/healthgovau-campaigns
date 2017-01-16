@@ -72,4 +72,10 @@ $(function() {
       stickyNav();
     });
 
+    // Transcript
+    $(".video__transcript-link").click(function(e){
+      e.preventDefault();
+        $(this).parent().next(".video__transcript-content").slideToggle('slow');
+    })
+
 });
