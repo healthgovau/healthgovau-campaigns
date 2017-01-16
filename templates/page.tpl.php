@@ -54,13 +54,15 @@ $bottom = render($page['bottom']);
   <?php endif; ?>
 
   <?php if ($navigation): ?>
-    <section class="site-nav">
-      <div class="wrapper">
-        <nav class="site-nav__wrapper">
-          <?php print render($page['navigation']); ?>
-        </nav>
-      </div>
-    </section>
+    <div class="sticky-nav">
+      <section class="site-nav">
+        <div class="wrapper">
+          <nav class="site-nav__wrapper">
+            <?php print render($page['navigation']); ?>
+          </nav>
+        </div>
+      </section>
+    </div>
   <?php endif; ?>
 
 </header>
@@ -106,7 +108,7 @@ $bottom = render($page['bottom']);
       <?php print $sidebar_right; ?>
     </aside>
   <?php endif; ?>
-  
+
 </main>
 
 <?php if ($beforefooter): ?>

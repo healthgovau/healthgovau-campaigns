@@ -4990,6 +4990,41 @@ footer .page-bottom #block-menu-menu-page-bottom-menu ul > li.last {
     .node-type-campaign-standard-page main .content-main:last-child {
       margin-right: 0; } }
 
+.site-nav {
+  padding: 0 2em;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 75em;
+  margin-left: auto;
+  margin-right: auto; }
+  .site-nav::after {
+    clear: both;
+    content: "";
+    display: table; }
+  @media screen and (min-width: 75em) {
+    .site-nav {
+      width: 100%;
+      min-width: 75em; } }
+  .site-nav::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.sticky-nav.on {
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  display: block;
+  z-index: 9999;
+  -webkit-box-shadow: 0 2px 6px #CCC;
+  box-shadow: 0 2px 6px #CCC; }
+
+.nav-toggle {
+  margin-top: 0; }
+
 .node-type-campaign .pre-footer {
   background-color: #043751; }
   .node-type-campaign .pre-footer .feedback-block {

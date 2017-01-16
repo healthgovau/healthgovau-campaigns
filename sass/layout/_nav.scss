@@ -1,0 +1,22 @@
+// Reset width to container for wide-forced layouts
+.site-nav {
+  @include clearfix;
+  @include wrapper-padding;
+  @include outer-container;
+}
+
+.sticky-nav {
+  &.on {
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    background: #fff;
+    display: block;
+    z-index: 9999;
+    @include box-shadow(0, 2px, 6px, $shadow-color);
+  }
+}
+.nav-toggle {
+  margin-top: 0;
+}
