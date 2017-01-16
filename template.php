@@ -31,7 +31,7 @@ function healthgovau_preprocess_field(&$variables) {
   if ($variables['element']['#field_name'] == 'field_transcript') {
     $object = $variables['element']['#object'];
     $variables['nid'] = $object->nid;
-    
+
     // Add modal JS.
     drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/healthgovau.modal.js');
   }
@@ -42,22 +42,21 @@ function healthgovau_preprocess_field(&$variables) {
  */
 function healthgovau_preprocess_page(&$variables) {
   // Add hero indicator.
-  if (arg(0) == 'campaign') {
-    // This is a view or panel page.
-    $variables['hero'] = TRUE;
-  }
-  else if (arg(0) == 'node' && is_numeric(arg(1))) {
+  if (arg(0) == 'node' && is_numeric(arg(1))) {
     // This is a node page.
     $node = node_load(arg(1));
-    if ($node->type == 'campaign' || isset($node->field_campaign[LANGUAGE_NONE])) {
-      $variables['hero'] = TRUE;
+    if ($node->type == 'campaign') {
+      $variables['full_hero'] = 'js-parallax-window hero';
+      $variables['hero_bg'] = 'js-parallax-background hero-bg';
     }
     else {
-      $variables['hero'] = FALSE;
+      $variables['full_hero'] = 'hero--content';
+      $variables['hero_bg'] = 'hero-bg';
     }
   }
   else {
-    $variables['hero'] = FALSE;
+    $variables['full_hero'] = 'hero--content';
+    $variables['hero_bg'] = 'hero-bg';
   }
 }
 
@@ -285,7 +284,7 @@ function _healthgovau_set_hero_bg($campaign_nid, $random) {
   if (isset($campaign->field_campaign_hero_bg_color[LANGUAGE_NONE]) && isset($campaign->field_campaign_hero_bg_image[LANGUAGE_NONE])) {
     // Get the background color for hero.
     $color = $campaign->field_campaign_hero_bg_color[LANGUAGE_NONE][0]['value'];
-    drupal_add_css('section.hero .hero-bg {background-color:' . $color . ';}', 'inline');
+    drupal_add_css('.hero-bg {background-color:' . $color . ';}', 'inline');
 
     // Get the background image for hero.
     if (isset($campaign->field_campaign_hero_bg_image[LANGUAGE_NONE]) && !empty($campaign->field_campaign_hero_bg_image[LANGUAGE_NONE][0])) {
@@ -295,7 +294,7 @@ function _healthgovau_set_hero_bg($campaign_nid, $random) {
         $image_num = array_rand($campaign->field_campaign_hero_bg_image[LANGUAGE_NONE]);
       }
       $image_url = file_create_url($campaign->field_campaign_hero_bg_image[LANGUAGE_NONE][$image_num]['uri']);
-      drupal_add_css('section.hero .hero-bg {background-image: url(' . $image_url . '); background-size: cover;}', 'inline');
+      drupal_add_css('.hero-bg {background-image: url(' . $image_url . '); background-size: cover;}', 'inline');
     }
   }
 }

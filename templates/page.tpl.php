@@ -33,14 +33,12 @@ $bottom = render($page['bottom']);
     </div>
   </section>
 
-  <?php if ($page_hero || $hero ): ?>
-    <section class="hero">
-      <div class="hero js-parallax-window">
-        <div class="wrapper">
-          <?php print render($page['hero']); ?>
-        </div>
-        <div class="js-parallax-background hero-bg"></div>
+  <?php if ($page_hero): ?>
+    <section class="<?php print $full_hero; ?>">
+      <div class="wrapper">
+        <?php print render($page['hero']); ?>
       </div>
+      <div class="<?php print $hero_bg; ?>"></div>
     </section>
   <?php endif; ?>
 
