@@ -5,6 +5,7 @@
 @import "../../uikit_base/ui-kit/assets/sass/ui-kit.scss";
 @import "_functions";
 @import "_vars";
+@import "campaign/vars";
 
 // Sub-theme prototype customisation
 @import "sub-theme";
@@ -16,5 +17,4 @@
 @import "components/*";
 
 // Campaign specific styles
-@import "campaign/vars";
 @import "campaign/**/*";

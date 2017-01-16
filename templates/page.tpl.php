@@ -10,7 +10,18 @@
 // Render region if there's content in theme.
 $navigation  = render($page['navigation']);
 $page_hero  = render($page['hero']);
-$sidebar  = render($page['sidebar']);
+$sidebar_left  = render($page['sidebar_left']);
+$sidebar_right = render($page['sidebar_right']);
+
+if ($sidebar_left && $sidebar_right) {
+  $main_classes .= ' page--sidebar-left-right';
+}
+elseif ($sidebar_left) {
+  $main_classes .= ' page--sidebar-left';
+}
+elseif ($sidebar_right) {
+  $main_classes .= ' page--sidebar-right';
+}
 $beforefooter = render($page['beforefooter']);
 $footer = render($page['footer']);
 $bottom = render($page['bottom']);
@@ -33,14 +44,12 @@ $bottom = render($page['bottom']);
     </div>
   </section>
 
-  <?php if ($page_hero || $hero ): ?>
-    <section class="hero">
-      <div class="hero js-parallax-window">
-        <div class="wrapper">
-          <?php print render($page['hero']); ?>
-        </div>
-        <div class="js-parallax-background hero-bg"></div>
+  <?php if ($page_hero): ?>
+    <section class="<?php print $full_hero; ?>">
+      <div class="wrapper">
+        <?php print render($page['hero']); ?>
       </div>
+      <div class="<?php print $hero_bg; ?>"></div>
     </section>
   <?php endif; ?>
 
@@ -60,9 +69,9 @@ $bottom = render($page['bottom']);
 
 <main id="page" role="main" class="<?php print $main_classes; ?>">
 
-  <?php if ($sidebar): ?>
-    <aside class="sidebars sidebar" role="complementary">
-      <?php print $sidebar; ?>
+  <?php if ($sidebar_left): ?>
+    <aside class="sidebar__left" role="complementary">
+      <?php print $sidebar_left; ?>
     </aside>
   <?php endif; ?>
 
@@ -92,6 +101,12 @@ $bottom = render($page['bottom']);
     </div>
   </article>
 
+  <?php if ($sidebar_right): ?>
+    <aside class="sidebar__right" role="complementary">
+      <?php print $sidebar_right; ?>
+    </aside>
+  <?php endif; ?>
+  
 </main>
 
 <?php if ($beforefooter): ?>

@@ -1,13 +1,13 @@
-section.hero {
-  // Campaign hero
-  $hero-height-mobile:  225px;
-  $hero-height-tablet:  250px;
-  $hero-height-desktop:  385px;
+// Campaign hero
+$hero-height-mobile:  180px; // min 180px due to parallax
+$hero-height-tablet:  300px;
+$hero-height-desktop:  400px;
 
-  $hero-background-height-mobile: $hero-height-mobile * 2;
-  $hero-background-height-tablet: $hero-height-tablet * 2;
-  $hero-background-height-desktop: $hero-height-desktop * 2;
+$hero-background-height-mobile: $hero-height-mobile * 1.2;
+$hero-background-height-tablet: $hero-height-tablet * 1.2;
+$hero-background-height-desktop: $hero-height-desktop * 1.2;
 
+.hero {
   overflow: hidden;
   position: relative;
   padding-top: 0;
@@ -55,17 +55,73 @@ section.hero {
     left: 0;
     z-index: 1;
     max-height: $hero-height-mobile * 0.75;
-    margin-top: 0px;
+    margin-top: $hero-height-mobile * 0.125;
 
     @include media($tablet) {
       max-height: $hero-height-tablet * 0.75;
-      margin-top: 0px;
+      margin-top: $hero-height-tablet * 0.125;
     }
     @include media($desktop) {
       max-height: $hero-height-desktop * 0.75;
-      //margin-top: $hero-height-desktop * 0.125;
-      margin-top: 0px;
+      margin-top: $hero-height-desktop * 0.125;
     }
   }
 }
 
+$hero-content-shrink-factor: 0.4; // Height proportion compared to main hero
+$hero-content-y-shift: 0.5; // How far up to move the image for the slice (range 0 - 0.9)
+
+.hero--content {
+  @extend .hero;
+  height: $hero-height-mobile * $hero-content-shrink-factor;
+
+  @include media($tablet) {
+    height: $hero-height-tablet * $hero-content-shrink-factor;
+  }
+
+  @include media($desktop) {
+    height: $hero-height-desktop * $hero-content-shrink-factor;
+  }
+
+  .hero-bg {
+    height: $hero-height-mobile;
+    top: 0;
+    background-position-y: - $hero-height-mobile * $hero-content-y-shift;
+
+    @include media($tablet) {
+      height: $hero-height-tablet;
+      background-position-y: - $hero-height-tablet * $hero-content-y-shift;
+    }
+
+    @include media($desktop) {
+      height: $hero-height-desktop;
+      background-position-y: - $hero-height-desktop * $hero-content-y-shift;
+    }
+  }
+
+  .campaign-logo {
+    max-height: $hero-height-mobile * $hero-content-shrink-factor * 0.75;
+    margin-top: $hero-height-mobile * $hero-content-shrink-factor * 0.125;
+
+    @include media($tablet) {
+      max-height: $hero-height-tablet * $hero-content-shrink-factor * 0.75;
+      margin-top: $hero-height-tablet * $hero-content-shrink-factor * 0.125;
+    }
+    @include media($desktop) {
+      max-height: $hero-height-desktop * $hero-content-shrink-factor * 0.75;
+      margin-top: $hero-height-desktop * $hero-content-shrink-factor * 0.125;
+    }
+  }
+}
+
+.hero--content-blur {
+  @extend .hero--content;
+  .hero-bg {
+    @include blur(3);
+  }
+}
+
+.hero--content-colour {
+  @extend .hero--content;
+  color: $hero-font-color;
+}

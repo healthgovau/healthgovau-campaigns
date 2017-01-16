@@ -50,19 +50,13 @@ See http://api.drupal.org/api/function/theme_field/7 for details.
 After copying this file to your theme's folder and customizing it, remove this
 HTML comment.
 -->
-<div class="<?php print $classes; ?> modal"<?php print $attributes; ?>>
-  <label for="modal-<?php print $nid; ?>">
-    <a class="modal-trigger">Read Transcript</a>
-  </label>
-  <input class="modal-state" id="modal-<?php print $nid; ?>" type="checkbox" />
-  <div class="modal-fade-screen">
-    <div class="modal-inner">
-      <div class="modal-close" for="modal-<?php print $nid; ?>"></div>
-      <div class="field-items"<?php print $content_attributes; ?>>
-        <?php foreach ($items as $delta => $item): ?>
-          <div class="field-item <?php print $delta % 2 ? 'odd' : 'even'; ?>"<?php print $item_attributes[$delta]; ?>><?php print render($item); ?></div>
-        <?php endforeach; ?>
-      </div>
+<details open data-label="view-transcript" aria-expanded="false" class="video__transcript <?php print $classes; ?>"<?php print $attributes; ?>>
+  <summary>Read transcript</summary>
+  <div class="accordion-panel">
+    <div class="field-items"<?php print $content_attributes; ?>>
+      <?php foreach ($items as $delta => $item): ?>
+        <div class="field-item <?php print $delta % 2 ? 'odd' : 'even'; ?>"<?php print $item_attributes[$delta]; ?>><?php print render($item); ?></div>
+      <?php endforeach; ?>
     </div>
   </div>
-</div>
+</details>

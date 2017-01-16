@@ -22,6 +22,12 @@
   }
 
   .field-name-field-video-promoted-thumbnail {
+    a {
+      border: 0px;
+      &:hover {
+        background-color: inherit;
+      }
+    }
     img {
       height: auto;
     }
@@ -33,12 +39,19 @@
 
   .field-name-field-video-length {
     @extend .video__time;
+    bottom: 7px;
   }
 
-  div.group-left {
+  .video__transcript {
+    summary {
+      background-color: transparent;
+    }
+  }
+
+  div.group-top-left {
     @extend .video__container;
   }
-  div.group-right {
+  div.group-top-right {
     @extend .video__info;
   }
 }

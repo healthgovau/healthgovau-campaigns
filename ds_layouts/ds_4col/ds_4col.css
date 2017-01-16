@@ -1,0 +1,16 @@
+/**
+ * @file
+ * Styling for the ds_4col template.
+ */
+
+.ds-4col > .group-top-left,
+.ds-4col > .group-top-right {
+  float: left; /* LTR */
+  width: 50%;
+}
+
+.ds-4col > .group-bottom-right,
+.ds-4col > .group-bottom-left {
+  float: left; /* LTR */
+  width: 50%;
+}
