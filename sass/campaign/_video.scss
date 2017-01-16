@@ -35,10 +35,18 @@
     @extend .video__time;
   }
 
-  div.group-left {
+  .video__transcript {
+    summary {
+      background-color: transparent;
+    }
+  }
+
+  div.group-top-left,
+  div.group-bottom-left {
     @extend .video__container;
   }
-  div.group-right {
+  div.group-top-right,
+  div.group-bottom-bottom {
     @extend .video__info;
   }
 }
