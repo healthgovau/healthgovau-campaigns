@@ -36,23 +36,6 @@ Drupal.behaviors.healthgovauCampaign = {
       }
     }
     
-    // Add modal effect. Check http://refills.bourbon.io/components
-    $("#modal-1").on("change", function() {
-      if ($(this).is(":checked")) {
-        $("body").addClass("modal-open");
-      } else {
-        $("body").removeClass("modal-open");
-      }
-    });
-
-    $(".modal-fade-screen, .modal-close").on("click", function() {
-      $(".modal-state:checked").prop("checked", false).change();
-    });
-
-    $(".modal-inner").on("click", function(e) {
-      e.stopPropagation();
-    });
-
     // Hero parallax
     if ($(".js-parallax-window").length) {
       parallax();
