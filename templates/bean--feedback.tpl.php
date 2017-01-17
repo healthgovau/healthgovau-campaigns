@@ -29,7 +29,7 @@
 ?>
 <section class="page-feedback">
   <div class="wrapper">
-    <h2 class="h3">Give feedback</h2>
+    <h3>Give feedback</h3>
     <?php
       print render($content);
     ?>
