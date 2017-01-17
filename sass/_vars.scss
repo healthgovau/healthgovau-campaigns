@@ -2,3 +2,22 @@
 $health-image-base-url: '../images/' !default;
 
 $shadow-color: #CCC;
+// Health default colour vars
+$grey-light:                      #EEE;
+$grey:                            #DDD;
+$grey-dark:                       #CCC;
+$grey-darkest:                    #2A2A2A;
+$white:                           #FFFFFF;
+$black:                           #000000;
+
+// Apply default colours to elements
+$colour-primary:                  $grey-light;
+$colour-secondary:                $grey;
+
+$background-colour-primary:       $colour-primary;
+$background-colour-secondary:     $colour-secondary;
+$background-colour-hero:          $white;
+$background-colour-dark:          $grey-darkest;
+
+$hero-font-colour:                $black;
+$shadow-colour:                   $grey-dark;

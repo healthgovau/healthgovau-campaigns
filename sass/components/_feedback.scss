@@ -1,0 +1,13 @@
+// Feedback
+.page-feedback {
+  @extend .band--small;
+  background: $background-colour-dark;
+  color: #FFF;
+  @include button-colours(transparent, $white, $white, $white, $black);
+  [role='button'] {
+    margin: $medium-spacing 0 0;
+    @include media($tablet) {
+      margin: 0 0 0 $medium-spacing;
+    }
+  }
+}
