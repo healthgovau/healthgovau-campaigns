@@ -113,9 +113,7 @@ $bottom = render($page['bottom']);
 
 <?php if ($beforefooter): ?>
   <section class="before-footer">
-    <div class="wrapper">
-      <?php print $beforefooter; ?>
-    </div>
+    <?php print $beforefooter; ?>
   </section>
 <?php endif; ?>
 
