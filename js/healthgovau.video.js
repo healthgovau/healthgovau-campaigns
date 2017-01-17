@@ -17,7 +17,7 @@
         $('.field-name-field-video-length', context).hide();
         console.log(iframe);
         $(this).replaceWith(iframe);
-        $("iframe", context).wrap( '<div class="video"><div class="video-wrapper"></div></div>' ); 
+        $("iframe", context).wrap( '<div class="video"><div class="video-wrapper"></div></div>' );
       });
     }
   };
