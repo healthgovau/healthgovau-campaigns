@@ -82,4 +82,17 @@
   position: absolute;
   right: 0;
   bottom: 0;
+  &:before {
+    background-image: image-url("icons/video.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    content: ' ';
+    display: inline-block;
+    height: 1em;
+    margin-right: 4px;
+    width: 1em;
+    margin-left: -5px;
+    margin-bottom: -2px;
+  }
 }

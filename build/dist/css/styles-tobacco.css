@@ -4741,6 +4741,9 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
 .light {
   font-weight: 400; }
 
+main {
+  padding-bottom: 3.2em; }
+
 main.wide {
   max-width: 100%;
   padding: 0; }
@@ -4912,6 +4915,81 @@ footer[role='contentinfo'] {
 .social__links--stacked .social__links-item {
   display: block;
   margin-right: 0; }
+
+.partner {
+  float: left;
+  display: block;
+  margin-right: 8.71718%;
+  width: 100%; }
+  .partner:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 768px) {
+    .partner {
+      float: left;
+      display: block;
+      margin-right: 2.74614%;
+      width: 48.62693%; }
+      .partner:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 75em) {
+    .partner {
+      float: left;
+      display: block;
+      margin-right: 2.04556%;
+      width: 48.97722%; }
+      .partner:last-child {
+        margin-right: 0; } }
+  .partner h3, .partner .h3 {
+    font-weight: 400;
+    margin-top: 0; }
+
+.partner__image {
+  float: left;
+  display: block;
+  margin-right: 8.71718%;
+  width: 100%; }
+  .partner__image:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 768px) {
+    .partner__image {
+      float: left;
+      display: block;
+      margin-right: 5.64736%;
+      width: 29.56843%; }
+      .partner__image:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 75em) {
+    .partner__image {
+      float: left;
+      display: block;
+      margin-right: 4.17655%;
+      width: 34.88966%; }
+      .partner__image:last-child {
+        margin-right: 0; } }
+
+.partner__desc {
+  float: left;
+  display: block;
+  margin-right: 8.71718%;
+  width: 100%; }
+  .partner__desc:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 768px) {
+    .partner__desc {
+      float: left;
+      display: block;
+      margin-right: 5.64736%;
+      width: 64.78421%; }
+      .partner__desc:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 75em) {
+    .partner__desc {
+      float: left;
+      display: block;
+      margin-right: 4.17655%;
+      width: 60.93379%; }
+      .partner__desc:last-child {
+        margin-right: 0; } }
 
 .site-nav {
   padding: 0 2em;
@@ -5165,6 +5243,18 @@ header[role='banner'] a.logo {
   position: absolute;
   right: 0;
   bottom: 0; }
+  .video__time:before {
+    background-image: url("../img/icons/video.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    content: ' ';
+    display: inline-block;
+    height: 1em;
+    margin-right: 4px;
+    width: 1em;
+    margin-left: -5px;
+    margin-bottom: -2px; }
 
 .list-vertical > li,
 .list-vertical--thirds > li,
@@ -5183,7 +5273,7 @@ footer[role='contentinfo'] .footer-top nav > li {
   margin-top: 0.8em; }
 
 .site-nav__wrapper li a:hover, .site-nav__wrapper li a:focus {
-  border-color: #DDD; }
+  border-color: #000000; }
 
 .hero-bg {
   background-image: url("../img/hero-tobacco.jpg"); }

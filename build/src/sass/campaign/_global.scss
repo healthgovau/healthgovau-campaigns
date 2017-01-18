@@ -9,6 +9,10 @@
   @extend h4;
 }
 // Override <main> width for banding
+main {
+  padding-bottom: $large-spacing;
+}
+
 main.wide {
   max-width: 100%;
   padding: 0;
@@ -175,5 +179,44 @@ footer[role='contentinfo'] {
   .social__links-item {
     display: block;
     margin-right: 0;
+  }
+}
+
+// Partners
+.partner {
+  @include span-columns(4 of 4);
+
+  @include media($tablet) {
+    @include span-columns(6 of 12);
+  }
+
+  @include media($desktop) {
+    @include span-columns(8 of 16);
+  }
+  h3 {
+    font-weight: $base-font-weight;
+    margin-top: 0;
+  }
+}
+.partner__image {
+  @include span-columns(4 of 4);
+
+  @include media($tablet) {
+    @include span-columns(2 of 6);
+  }
+
+  @include media($desktop) {
+    @include span-columns(3 of 8);
+  }
+}
+.partner__desc {
+  @include span-columns(4 of 4);
+
+  @include media($tablet) {
+    @include span-columns(4 of 6);
+  }
+
+  @include media($desktop) {
+    @include span-columns(5 of 8);
   }
 }

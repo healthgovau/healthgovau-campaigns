@@ -3,8 +3,8 @@
 $cyan:                            #278288;
 
 // Colour constants
-$colour-primary:                  $cyan;
-$colour-secondary:                $grey;
+$colour-primary:                  $grey;
+$colour-secondary:                $grey-light;
 $background-colour-hero:          $colour-primary;
 
 // Uncomment to override
@@ -15,3 +15,6 @@ $background-colour-hero:          $cyan;
 
 //$hero-font-colour:              $black;
 //$shadow-colour:                 $grey-dark;
+
+// Navigation
+$navigation-border-colour:        $cyan;
