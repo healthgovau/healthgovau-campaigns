@@ -79,7 +79,7 @@ footer[role='contentinfo'] {
 // Feedback
 .page-feedback {
   @extend .band--small;
-  background: $background-colour-dark;
+  background: #1f1d1d;
   color: #FFF;
   @include button-colours(transparent, $white, $white, $white, $black);
   [role='button'] {
@@ -98,7 +98,7 @@ footer[role='contentinfo'] {
 }
 %overlay--light {
   @include position(absolute, 0);
-  background-color: transparentize(#FFF,0.8);
+  background-color: transparentize(#FFF,0.9);
   display: block;
 }
 
@@ -218,5 +218,15 @@ footer[role='contentinfo'] {
 
   @include media($desktop) {
     @include span-columns(5 of 8);
+  }
+}
+
+// Senstitivity band
+.band--sensitivity {
+  @include pad($small-spacing 0);
+  background: #4a4a4a;
+  color: $white;
+  p {
+    margin: $small-spacing 0;
   }
 }

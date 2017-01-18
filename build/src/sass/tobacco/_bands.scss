@@ -10,9 +10,32 @@
 
 .band--texture {
   // Specify path to SVG or PNG
-  //background-image: image-url("PATH TO IMAGE");
+  //background-image: image-url("bg-textures/dmsys.svg");
 }
 
 .band--gradient {
   //@include linear-gradient(90deg, $background-colour-secondary, $white, $fallback: $white);
+}
+
+.band--partners {
+  @extend .band--small;
+  padding-top: $small-spacing;
+  background: $black;
+  //color: #FFF;
+  img {
+    width: 50%;
+  }
+}
+
+.band--quitline {
+  @include pad($small-spacing 0 $tiny-spacing);
+  background: $black;
+  color: $white;
+  text-align: center;
+}
+.band--quitline__image {
+  max-width: 50%;
+  @include media($tablet) {
+    max-width: 100%;
+  }
 }

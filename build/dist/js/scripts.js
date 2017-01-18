@@ -13,7 +13,7 @@ function parallax(){
     var windowInnerHeight = window.innerHeight;
     var plxBackgroundTopToWindowTop = plxBackgroundTopToPageTop - windowTopToPageTop;
     var plxBackgroundTopToWindowBottom = windowInnerHeight - plxBackgroundTopToWindowTop;
-    var plxSpeed = 0.35;
+    var plxSpeed = 0.34;
 
     plxBackground.css('top', - (plxWindowTopToWindowTop * plxSpeed) + 'px');
   }

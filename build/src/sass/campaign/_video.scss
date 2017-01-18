@@ -47,6 +47,10 @@
 
 // Video listing
 // Override reading width if inside .content_main
+.video__list {
+  clear: both;
+}
+
 .video__list li {
   max-width: 100%;
 }
@@ -95,4 +99,11 @@
     margin-left: -5px;
     margin-bottom: -2px;
   }
+}
+
+// Related videos
+.video__list--related {
+  @extend .video__list;
+  margin-top: $large-spacing;
+  overflow: hidden;
 }

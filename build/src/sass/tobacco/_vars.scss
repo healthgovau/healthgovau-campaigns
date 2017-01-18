@@ -2,7 +2,7 @@
 // These vars will override UI-kit and Health default for this campaign
 
 // Standard colour constants
-$colour-primary:                  $grey;
+$colour-primary:                  lighten($grey, 5%);
 $colour-secondary:                $grey-light;
 
 // Custom colour constants

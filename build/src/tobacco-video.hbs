@@ -3,21 +3,58 @@
 {{> skip-to}}
 
 <!--{{> global-navigation}}-->
-{{> tobacco/header--campaign}}
+{{> tobacco/header--campaign-small}}
 
+{{> breadcrumbs}}
 <!-- Main -->
 <main>
-
-  {{> tobacco/aside-videos}}
-  <!-- Content -->
   <article role="main" id="content">
-    <!--{{> breadcrumbs}}-->
     <h1>Tom Calma</h1>
-    <p>Video to be added here.</p>
-    <p>Need to consider aside 'related' videos because the horizontal list layout is horrendous!</p>
+    <div class="video__container">
+      <div class="video">
+        <div class="video-wrapper video__thumb">
+          <a class="js-video-play" href="#" title="Play video" data-youtubeid="ZtMxM3XhGM4">
+            <img src="img/tobacco-video-thumb-01.jpg" alt="YouTube video thumbnail">
+            <div class="video__play-button"></div>
+            <span class="video__time" aria-hidden="true">0:48</span>
+          </a>
+        </div>
+      </div>
+      <details open data-label="view-transcript" aria-expanded="false" class="video__transcript">
+        <summary>Read transcript</summary>
+        <div class="accordion-panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus delectus provident hic perferendis alias quia assumenda cum beatae, quod quasi autem quisquam optio nostrum eaque! Ea ipsum consequuntur, aspernatur voluptate.</p>
+          <p>Nobis natus earum fuga sint assumenda quis provident consectetur voluptates quos aspernatur velit, repellendus aperiam excepturi corporis deleniti odio eum vitae magnam dolorum. Sequi esse, fugiat velit illum, architecto voluptas!</p>
+          <p>Provident vel odio aliquam hic, illo porro ratione, voluptates impedit repellendus asperiores dolorem corrupti ducimus praesentium adipisci officia natus, ad maiores doloribus suscipit aspernatur. Id explicabo aliquid eaque, debitis repudiandae.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="video__info">
+      <p>Well done! You've taken an important step on the road to becoming smoke-free.</p>
+      <p>Here you will be able to learn the many benefits of quitting and ways to help you do this.</p>
+      <p>Let's face it, quitting can be hard and most smokers try a number of times before they finally quit for good.</p>
+      <p>So don't beat yourself up. take one step at a time. The longer you stay quit, the easier it gets.</p>
+
+      <div class="meta video__date">
+        <time datetime="2017-01-05 00:00">05 Jan 2017</time>
+      </div>
+
+      <footer class="tags video__tags">
+        <dl>
+          <dt>Topics:</dt>
+            <dd><a href="#">Tag Name</a></dd>
+            <dd><a href="#">Tag Name</a></dd>
+            <dd><a href="#">Tag Name</a></dd>
+        </dl>
+      </footer>
+    </div>
   </article>
+
+  {{> tobacco/video-list-related}}
 </main>
 
 {{> footer-feedback}}
+{{> tobacco/sensitivity-band}}
 {{> campaign/footer--campaign}}
 {{> post-footer}}

@@ -70,12 +70,18 @@
       </div>
     </div>
   </section>
-  <div class="hero js-parallax-window">
+  <div class="hero--content">
     <div class="wrapper">
       <h1 class="visuallyhidden">Don't Make Smokes Your Story</h1>
       <img src="img/dont-make-smokes-your-story.png" class="campaign-logo" alt="Don't make smokes your story"/>
     </div>
-    <div class="js-parallax-background hero-bg">
+    <div class="hero-bg">
+    </div>
+  </div>
+  <div class="band--quitline">
+    <div class="wrapper">
+      <img class="band--quitline__image" src="img/quitline-inline.png" alt="Quitline">
+      <span class="visuallyhidden">Quitline 13 78 48</span>
     </div>
   </div>
   <div class="sticky-nav">
@@ -106,76 +112,7 @@
   </div>
 </header>
 
-<!-- Main -->
-<main>
-
-  <aside class="sidebar">
-    <h2>Related videos</h2>
-    <div class="video__list">
-      <ul class="list-horizontal">
-        <li>
-          <figure>
-            <a href="tobacco-video.html">
-              <img src="img/tobacco-video-thumb-01.jpg" alt="example image" />
-            </a>
-          </figure>
-          <article>
-            <h2>
-              <a href="tobacco-video.html">Tom Calma</a>
-            </h2>
-            <div class="meta">
-              <time datetime="2017-01-05 00:00">05 Jan 2017</time>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor blanditiis modi cupiditate architecto reprehenderit eum hic voluptatum, dignissimos, neque earum saepe, amet itaque. Repudiandae minus, asperiores architecto delectus aperiam veritatis.
-            </p>
-          </article>
-        </li>
-  
-        <li>
-          <figure>
-            <a href="tobacco-video.html">
-              <img src="img/tobacco-video-thumb-02.jpg" alt="example image" />
-            </a>
-          </figure>
-          <article>
-            <h2>
-              <a href="tobacco-video.html">Ted's work</a>
-            </h2>
-            <div class="meta">
-              <time datetime="2017-01-05 00:00">05 Jan 2017</time>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, quod provident. Officiis odio nihil hic suscipit doloribus! Rem rerum iste, expedita porro est atque officiis qui natus, delectus illum in!
-            </p>
-          </article>
-        </li>
-  
-  
-        <li>
-          <figure>
-            <a href="tobacco-video.html">
-              <img src="img/tobacco-video-thumb-03.jpg" alt="example image" />
-            </a>
-          </figure>
-          <article>
-            <h2>
-              <a href="tobacco-video.html">Ted's band</a>
-            </h2>
-            <div class="meta">
-              <time datetime="2017-01-05 00:00">05 Jan 2017</time>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis mollitia rerum accusamus iusto esse vero repellat veniam, quod, quas doloribus aut quam enim commodi hic similique eaque, sit consequatur, debitis.
-            </p>
-          </article>
-        </li>
-  
-  
-      </ul>
-    </div>
-  
-  </aside>
-  <!-- Content -->
-  <article role="main" id="content">
-    <!--<nav class="breadcrumbs" aria-label="breadcrumb">
+<nav class="breadcrumbs" aria-label="breadcrumb">
   <div class="wrapper">
     <ul>
       <li><a href="/" title="Home">Home</a></li>
@@ -183,17 +120,177 @@
     </ul>
   </div>
 </nav>
--->
+<!-- Main -->
+<main>
+  <article role="main" id="content">
     <h1>Tom Calma</h1>
-    <p>Video to be added here.</p>
-    <p>Need to consider aside 'related' videos because the horizontal list layout is horrendous!</p>
+    <div class="video__container">
+      <div class="video">
+        <div class="video-wrapper video__thumb">
+          <a class="js-video-play" href="#" title="Play video" data-youtubeid="ZtMxM3XhGM4">
+            <img src="img/tobacco-video-thumb-01.jpg" alt="YouTube video thumbnail">
+            <div class="video__play-button"></div>
+            <span class="video__time" aria-hidden="true">0:48</span>
+          </a>
+        </div>
+      </div>
+      <details open data-label="view-transcript" aria-expanded="false" class="video__transcript">
+        <summary>Read transcript</summary>
+        <div class="accordion-panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus delectus provident hic perferendis alias quia assumenda cum beatae, quod quasi autem quisquam optio nostrum eaque! Ea ipsum consequuntur, aspernatur voluptate.</p>
+          <p>Nobis natus earum fuga sint assumenda quis provident consectetur voluptates quos aspernatur velit, repellendus aperiam excepturi corporis deleniti odio eum vitae magnam dolorum. Sequi esse, fugiat velit illum, architecto voluptas!</p>
+          <p>Provident vel odio aliquam hic, illo porro ratione, voluptates impedit repellendus asperiores dolorem corrupti ducimus praesentium adipisci officia natus, ad maiores doloribus suscipit aspernatur. Id explicabo aliquid eaque, debitis repudiandae.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="video__info">
+      <p>Well done! You've taken an important step on the road to becoming smoke-free.</p>
+      <p>Here you will be able to learn the many benefits of quitting and ways to help you do this.</p>
+      <p>Let's face it, quitting can be hard and most smokers try a number of times before they finally quit for good.</p>
+      <p>So don't beat yourself up. take one step at a time. The longer you stay quit, the easier it gets.</p>
+
+      <div class="meta video__date">
+        <time datetime="2017-01-05 00:00">05 Jan 2017</time>
+      </div>
+
+      <footer class="tags video__tags">
+        <dl>
+          <dt>Topics:</dt>
+            <dd><a href="#">Tag Name</a></dd>
+            <dd><a href="#">Tag Name</a></dd>
+            <dd><a href="#">Tag Name</a></dd>
+        </dl>
+      </footer>
+    </div>
   </article>
+
+  <div class="video__list--related">
+    <h2>More quitting stories</h2>
+    <ul class="list-vertical--thirds">
+      <li>
+        <figure class="video__thumb">
+          <a href="tobacco-video.html">
+            <img src="img/tobacco-video-thumb-01.jpg" alt="example image" />
+            <div class="video__overlay"></div>
+            <span class="video__time" aria-hidden="true">1:02</span>
+          </a>
+        </figure>
+        <article>
+          <h2 class="video__title">
+            <a href="tobacco-video.html">Tom Calma</a>
+          </h2>
+          <div class="meta video__date">
+            <time datetime="2017-01-05 00:00">05 Jan 2017</time>
+          </div>
+        </article>
+      </li>
+  
+      <li>
+        <figure class="video__thumb">
+          <a href="tobacco-video.html">
+            <img src="img/tobacco-video-thumb-02.jpg" alt="example image" />
+            <div class="video__overlay"></div>
+            <span class="video__time" aria-hidden="true">0:45</span>
+          </a>
+        </figure>
+        <article>
+          <h2 class="video__title">
+            <a href="tobacco-video.html">Ted's work</a>
+          </h2>
+          <div class="meta video__date">
+            <time datetime="2017-01-05 00:00">05 Jan 2017</time>
+          </div>
+        </article>
+      </li>
+  
+  
+      <li>
+        <figure class="video__thumb">
+          <a href="tobacco-video.html">
+            <img src="img/tobacco-video-thumb-03.jpg" alt="example image" />
+            <div class="video__overlay"></div>
+            <span class="video__time" aria-hidden="true">0:42</span>
+          </a>
+        </figure>
+        <article>
+          <h2 class="video__title">
+            <a href="tobacco-video.html">Ted's band</a>
+          </h2>
+          <div class="meta video__date">
+            <time datetime="2017-01-05 00:00">05 Jan 2017</time>
+          </div>
+        </article>
+      </li>
+  
+      <li>
+        <figure class="video__thumb">
+          <a href="tobacco-video.html">
+            <img src="img/tobacco-video-thumb-01.jpg" alt="example image" />
+            <div class="video__overlay"></div>
+            <span class="video__time" aria-hidden="true">1:02</span>
+          </a>
+        </figure>
+        <article>
+          <h2 class="video__title">
+            <a href="tobacco-video.html">Tom Calma</a>
+          </h2>
+          <div class="meta video__date">
+            <time datetime="2017-01-05 00:00">05 Jan 2017</time>
+          </div>
+        </article>
+      </li>
+  
+      <li>
+        <figure class="video__thumb">
+          <a href="tobacco-video.html">
+            <img src="img/tobacco-video-thumb-02.jpg" alt="example image" />
+            <div class="video__overlay"></div>
+            <span class="video__time" aria-hidden="true">0:45</span>
+          </a>
+        </figure>
+        <article>
+          <h2 class="video__title">
+            <a href="tobacco-video.html">Ted's work</a>
+          </h2>
+          <div class="meta video__date">
+            <time datetime="2017-01-05 00:00">05 Jan 2017</time>
+          </div>
+        </article>
+      </li>
+  
+  
+      <li>
+        <figure class="video__thumb">
+          <a href="tobacco-video.html">
+            <img src="img/tobacco-video-thumb-03.jpg" alt="example image" />
+            <div class="video__overlay"></div>
+            <span class="video__time" aria-hidden="true">0:42</span>
+          </a>
+        </figure>
+        <article>
+          <h2 class="video__title">
+            <a href="tobacco-video.html">Ted's band</a>
+          </h2>
+          <div class="meta video__date">
+            <time datetime="2017-01-05 00:00">05 Jan 2017</time>
+          </div>
+        </article>
+      </li>
+  
+    </ul>
+  </div>
 </main>
 
 <section class="page-feedback">
   <div class="wrapper">
     <h2 class="h3">Give feedback</h2>
     <p>Tell us what you think about this page <a href="#" class="button--feedback" role="button">Provide feedback</a></p>
+  </div>
+</section>
+<section class="band--sensitivity">
+  <div class="wrapper">
+    <p>Aboriginal and Torres Strait Islander people are advised that this websites may contains names, images and voices of deceased people.</p>
   </div>
 </section>
 <footer role="contentinfo">
