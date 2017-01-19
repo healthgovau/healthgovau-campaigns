@@ -1,6 +1,6 @@
 // Feedback
 .page-feedback {
-  @extend .band--small;
+  @extend .band--partners;
   background: $background-colour-dark;
   color: #FFF;
   @include button-colours(transparent, $white, $white, $white, $black);
