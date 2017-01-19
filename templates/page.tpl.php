@@ -47,6 +47,7 @@ $bottom = render($page['bottom']);
 
   <?php if ($page_hero): ?>
     <section class="<?php print $full_hero; ?>">
+      <div class="hero__overlay"></div>
       <div class="wrapper">
         <?php print render($page['hero']); ?>
       </div>
