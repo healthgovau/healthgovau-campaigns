@@ -44,7 +44,7 @@
  * @ingroup themeable
  */
 ?>
-<section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> band--gradient"<?php print $attributes; ?>>
   <div class="wrapper">
   <?php print render($title_prefix); ?>
   <?php if ($block->subject): ?>
@@ -55,6 +55,6 @@
   <div class="content"<?php print $content_attributes; ?>>
     <?php print $content ?>
   </div>
-  
+
   </div>
 </section>

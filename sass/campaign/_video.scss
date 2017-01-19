@@ -14,13 +14,6 @@
 // Block view.
 .view-campaign-videos {
 
-  .field-name-field-video-thumbnail {
-    @extend .card-image;
-    img {
-      height: auto;
-    }
-  }
-
   .field-name-field-video-promoted-thumbnail {
     a {
       border: 0px;
@@ -31,10 +24,6 @@
     img {
       height: auto;
     }
-  }
-
-  .field-name-title {
-    @extend .card-header;
   }
 
   .field-name-field-video-length {
