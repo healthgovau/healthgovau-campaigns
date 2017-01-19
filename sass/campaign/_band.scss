@@ -65,3 +65,21 @@
     max-width: 100%;
   }
 }
+.band--partners {
+  @extend .band--small;
+  padding-top: $small-spacing;
+  background: $black;
+  //color: #FFF;
+  img {
+    width: 50%;
+  }
+}
+// Senstitivity band
+.band--sensitivity {
+  @include pad($small-spacing 0);
+  background: #4a4a4a;
+  color: $white;
+  p {
+    margin: $small-spacing 0;
+  }
+}
