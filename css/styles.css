@@ -5381,6 +5381,8 @@ header .page-header__logo img {
       background-image: url("../images/icons/facebook.svg"); }
     .social__links .social__links-item a.email:before, .social__links--stacked .social__links-item a.email:before {
       background-image: url("../images/icons/email.svg"); }
+    .social__links .social__links-item a.linkedin:before, .social__links--stacked .social__links-item a.linkedin:before {
+      background-image: url("../images/icons/linkedin.svg"); }
   .social__links h3, .social__links--stacked h3 {
     margin-top: 0; }
 
