@@ -5488,6 +5488,18 @@ header .page-header__logo img {
   position: absolute;
   right: 0;
   bottom: 0; }
+  .video__time .field-item:before, .view-campaign-videos .field-name-field-video-length .field-item:before {
+    background-image: url("../images/../images/icons/video.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    content: ' ';
+    display: inline-block;
+    height: 1em;
+    margin-right: 4px;
+    width: 1em;
+    margin-left: -5px;
+    margin-bottom: -2px; }
 
 .video__play-button {
   background-image: url(../images/icons/video-play.png);
@@ -5610,9 +5622,6 @@ header .page-header__logo img {
 
 .view-campaign-videos .field-name-field-video-promoted-thumbnail img {
   height: auto; }
-
-.view-campaign-videos .field-name-field-video-length {
-  bottom: 7px; }
 
 .view-campaign-videos .video__transcript summary {
   background-color: transparent; }
