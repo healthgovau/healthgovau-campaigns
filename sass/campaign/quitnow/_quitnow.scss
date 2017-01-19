@@ -6,6 +6,22 @@
   }
 }
 
+// Hotline bar
+section.pre-nav {
+  @extend .band--quitline;
+  a {
+    border: 0px;
+    &:hover {
+      background-color: inherit;
+    }
+  }
+}
+
+// sensitivities bar.
+#block-bean-quitnow-sensitivities {
+  @extend .band--sensitivity;
+}
+
 // Navigation menu
 section.site-nav {
   #block-menu-menu-quitnow-menu {

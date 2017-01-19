@@ -8,6 +8,7 @@
  */
 
 // Render region if there's content in theme.
+$prenav = render($page['prenav']);
 $navigation  = render($page['navigation']);
 $page_hero  = render($page['hero']);
 $sidebar_left  = render($page['sidebar_left']);
@@ -53,6 +54,14 @@ $bottom = render($page['bottom']);
     </section>
   <?php endif; ?>
 
+  <?php if ($prenav): ?>
+    <section class="pre-nav">
+      <div class="wrapper">
+        <?php print $prenav; ?>
+      </div>
+    </section>
+  <?php endif; ?>
+  
   <?php if ($navigation): ?>
     <div class="sticky-nav">
       <section class="site-nav">

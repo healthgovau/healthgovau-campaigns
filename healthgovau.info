@@ -15,6 +15,7 @@ stylesheets[all][] = css/styles.css
 scripts[] = js/scripts.js
 
 regions[header]         = Header
+regions[prenav]         = Pre navigation bar
 regions[navigation]     = Navigation bar
 regions[hero]           = Hero
 regions[help]           = Help
