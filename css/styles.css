@@ -5565,6 +5565,18 @@ header .page-header__logo img {
   background-image: -webkit-linear-gradient(left,#DDDDDD, #FFFFFF);
   background-image: linear-gradient(90deg,#DDDDDD, #FFFFFF); }
 
+.band--quitline, section.pre-nav {
+  padding: 0.8em 0 0.4em;
+  background: #000000;
+  color: #FFFFFF;
+  text-align: center; }
+
+.band--quitline__image {
+  max-width: 50%; }
+  @media screen and (min-width: 768px) {
+    .band--quitline__image {
+      max-width: 100%; } }
+
 .video__thumb:hover .video__overlay, .card:hover .video__overlay, .video__thumb:active .video__overlay, .card:active .video__overlay, .video__thumb:focus .video__overlay, .card:focus .video__overlay {
   position: absolute;
   top: 0;
@@ -5632,6 +5644,11 @@ header .page-header__logo img {
     width: 100%; }
     .page-campaign-videos main .content-main:last-child {
       margin-right: 0; } }
+
+section.pre-nav a {
+  border: 0px; }
+  section.pre-nav a:hover {
+    background-color: inherit; }
 
 section.site-nav #block-menu-menu-quitnow-menu a:hover {
   border-color: black; }

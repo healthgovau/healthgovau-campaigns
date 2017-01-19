@@ -51,3 +51,17 @@
   @extend %band;
   @include linear-gradient(90deg, #DDDDDD, #FFFFFF, $fallback: #EEEEEE);
 }
+
+.band--quitline {
+  @include pad($small-spacing 0 $tiny-spacing);
+  background: $black;
+  color: $white;
+  text-align: center;
+}
+
+.band--quitline__image {
+  max-width: 50%;
+  @include media($tablet) {
+    max-width: 100%;
+  }
+}
