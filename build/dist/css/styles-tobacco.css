@@ -5152,6 +5152,97 @@ header[role='banner'] a.logo {
   background: #FFFFFF;
   color: #000000; }
 
+.hero, .hero--content, .hero--content-blur, .hero--content-colour {
+  overflow: hidden;
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 180px; }
+  @media screen and (min-width: 768px) {
+    .hero, .hero--content, .hero--content-blur, .hero--content-colour {
+      height: 300px; } }
+  @media screen and (min-width: 75em) {
+    .hero, .hero--content, .hero--content-blur, .hero--content-colour {
+      height: 400px; } }
+  .hero .hero-bg, .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+    background-size: cover;
+    background-position: center top;
+    height: 216px;
+    top: -45px;
+    position: absolute;
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      .hero .hero-bg, .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+        height: 360px;
+        top: -75px; } }
+    @media screen and (min-width: 75em) {
+      .hero .hero-bg, .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+        height: 480px;
+        top: -100px; } }
+  .hero .wrapper, .hero--content .wrapper, .hero--content-blur .wrapper, .hero--content-colour .wrapper {
+    position: relative; }
+  .hero .campaign-logo, .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
+    padding: 0 2em;
+    min-width: 0;
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    max-height: 135px;
+    margin-top: 22.5px; }
+    @media screen and (min-width: 768px) {
+      .hero .campaign-logo, .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
+        max-height: 225px;
+        margin-top: 37.5px; } }
+    @media screen and (min-width: 75em) {
+      .hero .campaign-logo, .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
+        max-height: 300px;
+        margin-top: 50px; } }
+
+.hero--content, .hero--content-blur, .hero--content-colour {
+  height: 72px; }
+  @media screen and (min-width: 768px) {
+    .hero--content, .hero--content-blur, .hero--content-colour {
+      height: 120px; } }
+  @media screen and (min-width: 75em) {
+    .hero--content, .hero--content-blur, .hero--content-colour {
+      height: 160px; } }
+  .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+    height: 180px;
+    top: 0;
+    background-position-y: -90px; }
+    @media screen and (min-width: 768px) {
+      .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+        height: 300px;
+        background-position-y: -150px; } }
+    @media screen and (min-width: 75em) {
+      .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+        height: 400px;
+        background-position-y: -200px; } }
+  .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
+    max-height: 54px;
+    margin-top: 9px; }
+    @media screen and (min-width: 768px) {
+      .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
+        max-height: 90px;
+        margin-top: 15px; } }
+    @media screen and (min-width: 75em) {
+      .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
+        max-height: 120px;
+        margin-top: 20px; } }
+
+.hero--content-blur .hero-bg {
+  -webkit-filter: blur(20px) !important;
+  -ms-filter: blur(20px) !important;
+  -moz-filter: blur(20px) !important;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='blur'><feGaussianBlur stdDeviation='20' /></filter></svg>#blur");
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='20'); }
+
+.hero--content-colour {
+  background: #FFFFFF;
+  color: #000000; }
+
 .video__container {
   float: left;
   display: block;
