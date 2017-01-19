@@ -14,21 +14,19 @@
     margin-top: 0;
   }
 }
+
 .social__links {
-  @include span-columns(4 of 4);
-
-  @include media($tablet) {
-    @include span-columns(3 of 12);
-  }
-
-  @include media($desktop) {
-    @include span-columns(3 of 16);
-  }
-  ul {
-    padding-left: 0;
-  }
+  padding-left: 0;
   .social__links-item {
     list-style-type: none;
+    display: block;
+    margin-right: 0;
+
+    @include media($tablet) {
+      display: inline;
+      margin-right: $medium-spacing;
+    }
+
     a:before {
       background-position: center center;
       background-repeat: no-repeat;
@@ -48,8 +46,24 @@
     a.facebook:before {
       background-image: image-url("icons/facebook.svg");
     }
+    a.email:before {
+      background-image: image-url("icons/email.svg");
+    }
   }
   h3 {
     margin-top: 0;
   }
+}
+
+// Forces stacked across breakpoints
+.social__links--stacked {
+  @extend .social__links;
+  .social__links-item {
+    display: block;
+    margin-right: 0;
+  }
+}
+
+#block-bean-share-this {
+  @extend .band;
 }
