@@ -5583,11 +5583,11 @@ header .page-header__logo img {
   .band--partners img {
     width: 50%; }
 
-.band--sensitivity {
+.band--sensitivity, #block-bean-quitnow-sensitivities {
   padding: 0.8em 0;
   background: #4a4a4a;
   color: #FFFFFF; }
-  .band--sensitivity p {
+  .band--sensitivity p, #block-bean-quitnow-sensitivities p {
     margin: 0.8em 0; }
 
 .video__thumb:hover .video__overlay, .card:hover .video__overlay, .video__thumb:active .video__overlay, .card:active .video__overlay, .video__thumb:focus .video__overlay, .card:focus .video__overlay {

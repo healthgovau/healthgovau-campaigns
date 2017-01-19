@@ -17,6 +17,11 @@ section.pre-nav {
   }
 }
 
+// sensitivities bar.
+#block-bean-quitnow-sensitivities {
+  @extend .band--sensitivity;
+}
+
 // Navigation menu
 section.site-nav {
   #block-menu-menu-quitnow-menu {
