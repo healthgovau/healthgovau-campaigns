@@ -55,3 +55,21 @@
     @extend .video__info;
   }
 }
+
+// Node view.
+.node-type-video {
+  .view-mode-full {
+    div.group-left {
+      @extend .video__container;
+    }
+    div.group-right {
+      margin-right: 0px;
+      @extend .video__info;
+    }
+
+    div.group-footer {
+      padding-top: 20px;
+      font-size: 0.5em;
+    }
+  }
+}

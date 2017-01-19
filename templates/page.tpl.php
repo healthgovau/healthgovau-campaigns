@@ -33,7 +33,7 @@ $bottom = render($page['bottom']);
 
       <div class="page-header__logo">
         <?php if ($logo): ?>
-          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
+          <a href="https://health.gov.au" title="<?php print t('Home'); ?>" rel="home" class="header__logo logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
         <?php endif; ?>
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo logo" id="logo"><?php print $site_name; ?></a>
       </div>
@@ -54,13 +54,15 @@ $bottom = render($page['bottom']);
   <?php endif; ?>
 
   <?php if ($navigation): ?>
-    <section class="site-nav">
-      <div class="wrapper">
-        <nav class="site-nav__wrapper">
-          <?php print render($page['navigation']); ?>
-        </nav>
-      </div>
-    </section>
+    <div class="sticky-nav">
+      <section class="site-nav">
+        <div class="wrapper">
+          <nav class="site-nav__wrapper">
+            <?php print render($page['navigation']); ?>
+          </nav>
+        </div>
+      </section>
+    </div>
   <?php endif; ?>
 
 </header>
@@ -106,14 +108,12 @@ $bottom = render($page['bottom']);
       <?php print $sidebar_right; ?>
     </aside>
   <?php endif; ?>
-  
+
 </main>
 
 <?php if ($beforefooter): ?>
   <section class="before-footer">
-    <div class="wrapper">
-      <?php print $beforefooter; ?>
-    </div>
+    <?php print $beforefooter; ?>
   </section>
 <?php endif; ?>
 

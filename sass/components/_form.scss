@@ -15,6 +15,15 @@ form {
     border-color: inherit;
   }
 
+  input[type='radio']:checked + label::after {
+    left: 59px;
+    top: 13px;
+
+    @include media($tablet) {
+      top: 9px;
+    }
+  }
+
   textarea:invalid {
     outline: none;
   }
