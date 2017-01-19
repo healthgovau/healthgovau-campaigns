@@ -79,7 +79,7 @@ footer[role='contentinfo'] {
 // Feedback
 .page-feedback {
   @extend .band--small;
-  background: #1f1d1d;
+  background: #4a4a4a;
   color: #FFF;
   @include button-colours(transparent, $white, $white, $white, $black);
   [role='button'] {
@@ -167,6 +167,9 @@ footer[role='contentinfo'] {
     a.email:before {
       background-image: image-url("icons/email.svg");
     }
+    a.linkedin:before {
+      background-image: image-url("icons/linkedin.svg");
+    }
   }
   h3 {
     margin-top: 0;
@@ -224,7 +227,7 @@ footer[role='contentinfo'] {
 // Senstitivity band
 .band--sensitivity {
   @include pad($small-spacing 0);
-  background: #4a4a4a;
+  background: $black;
   color: $white;
   p {
     margin: $small-spacing 0;

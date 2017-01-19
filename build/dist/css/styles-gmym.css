@@ -4789,7 +4789,7 @@ footer[role='contentinfo'] {
   background-image: linear-gradient(90deg,#EEE, #FFFFFF); }
 
 .page-feedback {
-  background: #1f1d1d;
+  background: #4a4a4a;
   color: #FFF; }
   .page-feedback button,
   .page-feedback .button,
@@ -4909,6 +4909,8 @@ footer[role='contentinfo'] {
       background-image: url("../img/icons/facebook.svg"); }
     .social__links .social__links-item a.email:before, .social__links--stacked .social__links-item a.email:before {
       background-image: url("../img/icons/email.svg"); }
+    .social__links .social__links-item a.linkedin:before, .social__links--stacked .social__links-item a.linkedin:before {
+      background-image: url("../img/icons/linkedin.svg"); }
   .social__links h3, .social__links--stacked h3, .social__links .h3, .social__links--stacked .h3 {
     margin-top: 0; }
 
@@ -4993,7 +4995,7 @@ footer[role='contentinfo'] {
 
 .band--sensitivity {
   padding: 0.8em 0;
-  background: #4a4a4a;
+  background: #000000;
   color: #FFFFFF; }
   .band--sensitivity p {
     margin: 0.8em 0; }
