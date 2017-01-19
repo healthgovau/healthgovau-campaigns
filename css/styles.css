@@ -5545,6 +5545,8 @@ header .page-header__logo img {
 
 .page-campaign-videos .content-main li {
   max-width: 100%; }
+  .page-campaign-videos .content-main li .field-name-field-video-thumbnail img {
+    height: auto; }
 
 .view-campaign-videos .field-name-field-video-promoted-thumbnail a {
   border: 0px; }

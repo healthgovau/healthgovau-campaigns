@@ -8,6 +8,11 @@
     div.group-right {
       @extend .video__info;
     }
+    .field-name-field-video-thumbnail {
+      img {
+        height: auto;
+      }
+    }
   }
 }
 
