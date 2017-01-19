@@ -4748,9 +4748,6 @@ main.wide {
   max-width: 100%;
   padding: 0; }
 
-[class^='breadcrumbs'] {
-  margin-bottom: 3.2em; }
-
 footer[role='contentinfo'] {
   margin-top: 0;
   border-top-color: #2A2A2A; }
