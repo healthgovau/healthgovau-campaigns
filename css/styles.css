@@ -4965,13 +4965,17 @@ footer[role='contentinfo'] {
 
 @media screen and (min-width: 420px) {
   .node-type-video main .content-main,
-  .node-type-campaign-standard-page main .content-main {
+  .node-type-campaign-standard-page main .content-main,
+  .page-search404 main .content-main,
+  .page-node-1 main .content-main {
     float: left;
     display: block;
     margin-right: 4.17655%;
     width: 100%; }
     .node-type-video main .content-main:last-child,
-    .node-type-campaign-standard-page main .content-main:last-child {
+    .node-type-campaign-standard-page main .content-main:last-child,
+    .page-search404 main .content-main:last-child,
+    .page-node-1 main .content-main:last-child {
       margin-right: 0; } }
 
 .site-nav {

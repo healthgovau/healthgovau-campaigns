@@ -202,6 +202,11 @@ function healthgovau_breadcrumb($variables) {
     switch ($type) {
       case 'campaign':
         return '';
+      case 'webform':
+        // Hide breadcrumb in feedback page.
+        if ($node->title == 'User feedback') {
+          return '';
+        }
       // @todo: add other related content types in.
       case 'video':
         return _healthgovau_campaign_breadcrumb($node);
@@ -230,6 +235,12 @@ function healthgovau_breadcrumb($variables) {
       $breadcrumb_list .= '</ul>';
       $output .= '<nav class="breadcrumbs" aria-label="breadcrumb"><div class="wrapper">' . $breadcrumb_list . '</div></nav>';
       return $output;
+    }
+    else {
+      // Hide breadcrumb for 404 page.
+      if (in_array('search404', array_keys($variables['crumbs_trail']))) {
+        return '';
+      }
     }
   }
 
