@@ -186,11 +186,15 @@ header[role='banner'] a[rel~='external']::after, body > main a[rel~='external']:
   p,
   h2,
   .display,
-  h3 {
+  h3,
+  footer[role='contentinfo'] .footer-top h2,
+  footer[role='contentinfo'] .footer-top .display {
     orphans: 3;
     widows: 3; }
   h2, .display,
-  h3 {
+  h3,
+  footer[role='contentinfo'] .footer-top h2,
+  footer[role='contentinfo'] .footer-top .display {
     page-break-after: avoid; } }
 
 /*! responsive-nav.js 1.0.39 by @viljamis */
@@ -1832,7 +1836,7 @@ Style guide: List styles.4 Highlighted word style
     padding: 2.74614% 0;
     border-bottom: solid 1px #bbbbbb;
     margin-bottom: 0; }
-  .list-horizontal h2, .list-vertical h2, .list-vertical--thirds h2, .list-vertical--fourths h2, footer[role='contentinfo'] .footer-top nav h2, .list-small h2, .list-highlighted h2, .list-horizontal .display, .list-vertical .display, .list-vertical--thirds .display, .list-vertical--fourths .display, footer[role='contentinfo'] .footer-top nav .display, .list-small .display, .list-highlighted .display, .list-horizontal h3, .list-vertical h3, .list-vertical--thirds h3, .list-vertical--fourths h3, footer[role='contentinfo'] .footer-top nav h3, .list-small h3, .list-highlighted h3, .list-horizontal h4, .list-vertical h4, .list-vertical--thirds h4, .list-vertical--fourths h4, footer[role='contentinfo'] .footer-top nav h4, .list-small h4, .list-highlighted h4, .list-horizontal h5, .list-vertical h5, .list-vertical--thirds h5, .list-vertical--fourths h5, footer[role='contentinfo'] .footer-top nav h5, .list-small h5, .list-highlighted h5, .list-horizontal h6, .list-vertical h6, .list-vertical--thirds h6, .list-vertical--fourths h6, footer[role='contentinfo'] .footer-top nav h6, .list-small h6, .list-highlighted h6 {
+  .list-horizontal h2, .list-vertical h2, .list-vertical--thirds h2, .list-vertical--fourths h2, footer[role='contentinfo'] .footer-top nav h2, .list-small h2, .list-highlighted h2, .list-horizontal .display, .list-vertical .display, .list-vertical--thirds .display, .list-vertical--fourths .display, footer[role='contentinfo'] .footer-top nav .display, .list-small .display, .list-highlighted .display, .list-horizontal h3, .list-vertical h3, .list-vertical--thirds h3, .list-vertical--fourths h3, footer[role='contentinfo'] .footer-top nav h3, .list-small h3, .list-highlighted h3, .list-horizontal footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-horizontal h2, .list-vertical footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical h2, .list-vertical--thirds footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--thirds h2, .list-vertical--fourths footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--fourths h2, footer[role='contentinfo'] .footer-top nav h2, .list-small footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-small h2, .list-highlighted footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-highlighted h2, .list-horizontal footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-horizontal .display, .list-vertical footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical .display, .list-vertical--thirds footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--thirds .display, .list-vertical--fourths footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--fourths .display, footer[role='contentinfo'] .footer-top nav .display, .list-small footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-small .display, .list-highlighted footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-highlighted .display, .list-horizontal h4, .list-vertical h4, .list-vertical--thirds h4, .list-vertical--fourths h4, footer[role='contentinfo'] .footer-top nav h4, .list-small h4, .list-highlighted h4, .list-horizontal h5, .list-vertical h5, .list-vertical--thirds h5, .list-vertical--fourths h5, footer[role='contentinfo'] .footer-top nav h5, .list-small h5, .list-highlighted h5, .list-horizontal h6, .list-vertical h6, .list-vertical--thirds h6, .list-vertical--fourths h6, footer[role='contentinfo'] .footer-top nav h6, .list-small h6, .list-highlighted h6 {
     margin-top: 0;
     margin-bottom: 0.4em;
     font-size: 1.125rem;
@@ -1895,7 +1899,7 @@ Style guide: List styles.4 Highlighted word style
       -webkit-flex-wrap: wrap;
           -ms-flex-wrap: wrap;
               flex-wrap: wrap; }
-      .list-vertical > li article h3, .list-vertical--thirds > li article h3, .list-vertical--fourths > li article h3, footer[role='contentinfo'] .footer-top nav > li article h3, .list-vertical > li article div, .list-vertical--thirds > li article div, .list-vertical--fourths > li article div, footer[role='contentinfo'] .footer-top nav > li article div, .list-vertical > li article p, .list-vertical--thirds > li article p, .list-vertical--fourths > li article p, footer[role='contentinfo'] .footer-top nav > li article p {
+      .list-vertical > li article h3, .list-vertical--thirds > li article h3, .list-vertical--fourths > li article h3, footer[role='contentinfo'] .footer-top nav > li article h3, .list-vertical > li article footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical > li article h2, .list-vertical--thirds > li article footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--thirds > li article h2, .list-vertical--fourths > li article footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--fourths > li article h2, footer[role='contentinfo'] .footer-top nav > li article h2, .list-vertical > li article footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical > li article .display, .list-vertical--thirds > li article footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--thirds > li article .display, .list-vertical--fourths > li article footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--fourths > li article .display, footer[role='contentinfo'] .footer-top nav > li article .display, .list-vertical > li article div, .list-vertical--thirds > li article div, .list-vertical--fourths > li article div, footer[role='contentinfo'] .footer-top nav > li article div, .list-vertical > li article p, .list-vertical--thirds > li article p, .list-vertical--fourths > li article p, footer[role='contentinfo'] .footer-top nav > li article p {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 100%;
             -ms-flex: 0 0 100%;
@@ -2840,6 +2844,10 @@ Style guide: Navigation.7 Skip links
   padding: 0 0 1.2em 1.2em; }
   .index-links h2, .index-links .display,
   .index-links h3,
+  .index-links footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top
+  .index-links h2,
+  .index-links footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top
+  .index-links .display,
   .index-links h4,
   .index-links h5,
   .index-links h6 {
@@ -2959,6 +2967,10 @@ Style guide: Navigation.07 Tab navigation
   .inline-tab-nav h2,
   .inline-tab-nav .display,
   .inline-tab-nav h3,
+  .inline-tab-nav footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top
+  .inline-tab-nav h2,
+  .inline-tab-nav footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top
+  .inline-tab-nav .display,
   .inline-tab-nav h4,
   .inline-tab-nav h5,
   .inline-tab-nav h6 {
@@ -2979,6 +2991,10 @@ Style guide: Navigation.07 Tab navigation
       .inline-tab-nav h2,
       .inline-tab-nav .display,
       .inline-tab-nav h3,
+      .inline-tab-nav footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top
+      .inline-tab-nav h2,
+      .inline-tab-nav footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top
+      .inline-tab-nav .display,
       .inline-tab-nav h4,
       .inline-tab-nav h5,
       .inline-tab-nav h6 {
@@ -3133,7 +3149,7 @@ footer[role='contentinfo'] {
     .hero-med footer[role='contentinfo'] .footer-top nav .footer-menu .site-title,
     footer[role='contentinfo'] .footer-top nav .footer-menu h2,
     footer[role='contentinfo'] .footer-top nav .footer-menu .display,
-    footer[role='contentinfo'] .footer-top nav .footer-menu h3,
+    footer[role='contentinfo'] .footer-top nav .footer-menu h3, footer[role='contentinfo'] .footer-top nav .footer-menu h2, footer[role='contentinfo'] .footer-top nav .footer-menu .display,
     footer[role='contentinfo'] .footer-top nav .footer-menu h4 {
       font-size: 1rem;
       font-weight: 700; }
@@ -4220,6 +4236,8 @@ h1, .hero .site-title, .hero--content .site-title, .hero--content-blur .site-tit
 h2,
 .display,
 h3,
+footer[role='contentinfo'] .footer-top h2,
+footer[role='contentinfo'] .footer-top .display,
 h4 {
   line-height: 1.4;
   font-weight: 400;
@@ -4256,13 +4274,13 @@ h2, .display {
     h2, .display {
       font-size: 2.5rem; } }
 
-h3 {
+h3, footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .display {
   font-size: 1.5rem;
   font-weight: 700;
   margin-top: 1.46667em;
   margin-bottom: 0.8em; }
   @media screen and (min-width: 768px) {
-    h3 {
+    h3, footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .display {
       font-size: 1.625rem; } }
 
 h4,
@@ -4279,6 +4297,10 @@ h6 {
 .gov-speak h2,
 .gov-speak .display,
 .gov-speak h3,
+.gov-speak footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top
+.gov-speak h2,
+.gov-speak footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top
+.gov-speak .display,
 .gov-speak h4,
 .gov-speak h5,
 .gov-speak h6 {
@@ -4322,11 +4344,11 @@ h6 {
     .gov-speak h2, .gov-speak .display {
       font-size: 2rem; } }
 
-.gov-speak h3 {
+.gov-speak h3, .gov-speak footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .gov-speak h2, .gov-speak footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .gov-speak .display {
   font-size: 1.5rem;
   font-weight: 700; }
   @media screen and (min-width: 768px) {
-    .gov-speak h3 {
+    .gov-speak h3, .gov-speak footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .gov-speak h2, .gov-speak footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .gov-speak .display {
       font-size: 1.625rem; } }
 
 .gov-speak h4 {
@@ -4368,6 +4390,10 @@ If you'd like to include an element that spans across the maximum available spac
   .content-main h2,
   .content-main .display,
   .content-main h3,
+  .content-main footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top
+  .content-main h2,
+  .content-main footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top
+  .content-main .display,
   .content-main h4,
   .content-main h5,
   .content-main p,
@@ -4780,7 +4806,15 @@ footer .page-bottom #block-menu-menu-page-bottom-menu ul > li.last {
   border-right: solid 0px black; }
 
 footer[role='contentinfo'] {
-  margin-top: 0px; }
+  margin-top: 0;
+  border-top-color: #2A2A2A; }
+  footer[role='contentinfo'] .button--feedback {
+    margin: 1.2em 0 0;
+    display: block; }
+    @media screen and (min-width: 768px) {
+      footer[role='contentinfo'] .button--feedback {
+        display: inline;
+        margin: 0 0 0 1.2em; } }
 
 .page-header {
   padding-top: 0px; }
@@ -5302,7 +5336,7 @@ header .page-header__logo img {
       width: 80.86646%; }
       .social__feed:last-child {
         margin-right: 0; } }
-  .social__feed h3 {
+  .social__feed h3, .social__feed footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .social__feed h2, .social__feed footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .social__feed .display {
     font-weight: 400;
     margin-top: 0; }
 
@@ -5335,7 +5369,7 @@ header .page-header__logo img {
       background-image: url("../images/icons/email.svg"); }
     .social__links .social__links-item a.linkedin:before, .social__links--stacked .social__links-item a.linkedin:before {
       background-image: url("../images/icons/linkedin.svg"); }
-  .social__links h3, .social__links--stacked h3 {
+  .social__links h3, .social__links--stacked h3, .social__links footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .social__links h2, .social__links--stacked footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .social__links--stacked h2, .social__links footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .social__links .display, .social__links--stacked footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .social__links--stacked .display {
     margin-top: 0; }
 
 .social__links--stacked .social__links-item {

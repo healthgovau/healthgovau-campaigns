@@ -109,16 +109,6 @@ function healthgovau_preprocess_views_view(&$vars) {
 }
 
 /**
- * Implements THEME_preprocess_block();
- */
-function healthgovau_preprocess_block(&$variables) {
-  $block = $variables['elements']['#block'];
-  if ($block->delta == 'menu-tobacco-footer') {
-    $variables['classes_array'][] = 'footer-links';
-  }
-}
-
-/**
  * Implements THEME_preprocess_entity().
  */
 function healthgovau_preprocess_entity(&$variables) {

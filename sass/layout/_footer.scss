@@ -1,3 +1,20 @@
+// Footer
 footer[role='contentinfo'] {
-  margin-top: 0px;
+  .footer-top {
+    h2 {
+      @extend h3;
+    }
+  }
+  margin-top: 0;
+  border-top-color: $background-colour-dark;
+  // Feedback
+  .button--feedback {
+    margin: $medium-spacing 0 0;
+    display: block;
+    @include media($tablet) {
+      display: inline;
+      margin: 0 0 0 $medium-spacing;
+    }
+  }
 }
+
