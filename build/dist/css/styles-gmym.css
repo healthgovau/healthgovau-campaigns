@@ -4748,22 +4748,26 @@ main.wide {
   max-width: 100%;
   padding: 0; }
 
-[class^='breadcrumbs'] {
-  margin-bottom: 3.2em; }
-
 footer[role='contentinfo'] {
   margin-top: 0;
   border-top-color: #2A2A2A; }
+  footer[role='contentinfo'] .button--feedback {
+    margin: 1.2em 0 0;
+    display: block; }
+    @media screen and (min-width: 768px) {
+      footer[role='contentinfo'] .button--feedback {
+        display: inline;
+        margin: 0 0 0 1.2em; } }
 
-.band, .band--primary, .band--small, .page-feedback, .band--pad, .band--secondary, .band--texture, .band--gradient {
+.band, .band--primary, .band--small, .band--pad, .band--secondary, .band--texture, .band--gradient {
   width: 100%;
   padding: 0.8em 0 3.2em; }
-  .band::after, .band--primary::after, .band--small::after, .page-feedback::after, .band--pad::after, .band--secondary::after, .band--texture::after, .band--gradient::after {
+  .band::after, .band--primary::after, .band--small::after, .band--pad::after, .band--secondary::after, .band--texture::after, .band--gradient::after {
     clear: both;
     content: "";
     display: table; }
 
-.band--small, .page-feedback {
+.band--small {
   padding: 0 0 0.8em; }
 
 .band--pad {
@@ -4787,44 +4791,6 @@ footer[role='contentinfo'] {
   background-image: -webkit-gradient(linear,left top, right top,from(#EEE), to(#FFFFFF));
   background-image: -webkit-linear-gradient(left,#EEE, #FFFFFF);
   background-image: linear-gradient(90deg,#EEE, #FFFFFF); }
-
-.page-feedback {
-  background: #4a4a4a;
-  color: #FFF; }
-  .page-feedback button,
-  .page-feedback .button,
-  .page-feedback [role='button'],
-  .page-feedback [type='submit'],
-  .page-feedback [type='reset'],
-  .page-feedback [type='button'] {
-    background-color: transparent;
-    color: #FFFFFF;
-    border-color: #FFFFFF; }
-    .page-feedback button:hover, .page-feedback button:focus,
-    .page-feedback .button:hover,
-    .page-feedback .button:focus,
-    .page-feedback [role='button']:hover,
-    .page-feedback [role='button']:focus,
-    .page-feedback [type='submit']:hover,
-    .page-feedback [type='submit']:focus,
-    .page-feedback [type='reset']:hover,
-    .page-feedback [type='reset']:focus,
-    .page-feedback [type='button']:hover,
-    .page-feedback [type='button']:focus {
-      background-color: #FFFFFF;
-      color: #000000; }
-    .page-feedback button:active,
-    .page-feedback .button:active,
-    .page-feedback [role='button']:active,
-    .page-feedback [type='submit']:active,
-    .page-feedback [type='reset']:active,
-    .page-feedback [type='button']:active {
-      background-color: #FFFFFF; }
-  .page-feedback [role='button'] {
-    margin: 1.2em 0 0; }
-    @media screen and (min-width: 768px) {
-      .page-feedback [role='button'] {
-        margin: 0 0 0 1.2em; } }
 
 .video__thumb:hover .video__overlay, .video__thumb:active .video__overlay, .video__thumb:focus .video__overlay {
   position: absolute;
@@ -5154,97 +5120,6 @@ header[role='banner'] a.logo {
   background: #278288;
   color: #000000; }
 
-.hero, .hero--content, .hero--content-blur, .hero--content-colour {
-  overflow: hidden;
-  position: relative;
-  padding-top: 0;
-  padding-bottom: 0;
-  height: 180px; }
-  @media screen and (min-width: 768px) {
-    .hero, .hero--content, .hero--content-blur, .hero--content-colour {
-      height: 300px; } }
-  @media screen and (min-width: 75em) {
-    .hero, .hero--content, .hero--content-blur, .hero--content-colour {
-      height: 400px; } }
-  .hero .hero-bg, .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
-    background-size: cover;
-    background-position: center top;
-    height: 216px;
-    top: -45px;
-    position: absolute;
-    width: 100%; }
-    @media screen and (min-width: 768px) {
-      .hero .hero-bg, .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
-        height: 360px;
-        top: -75px; } }
-    @media screen and (min-width: 75em) {
-      .hero .hero-bg, .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
-        height: 480px;
-        top: -100px; } }
-  .hero .wrapper, .hero--content .wrapper, .hero--content-blur .wrapper, .hero--content-colour .wrapper {
-    position: relative; }
-  .hero .campaign-logo, .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
-    padding: 0 2em;
-    min-width: 0;
-    width: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    max-height: 135px;
-    margin-top: 22.5px; }
-    @media screen and (min-width: 768px) {
-      .hero .campaign-logo, .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
-        max-height: 225px;
-        margin-top: 37.5px; } }
-    @media screen and (min-width: 75em) {
-      .hero .campaign-logo, .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
-        max-height: 300px;
-        margin-top: 50px; } }
-
-.hero--content, .hero--content-blur, .hero--content-colour {
-  height: 72px; }
-  @media screen and (min-width: 768px) {
-    .hero--content, .hero--content-blur, .hero--content-colour {
-      height: 120px; } }
-  @media screen and (min-width: 75em) {
-    .hero--content, .hero--content-blur, .hero--content-colour {
-      height: 160px; } }
-  .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
-    height: 180px;
-    top: 0;
-    background-position-y: -90px; }
-    @media screen and (min-width: 768px) {
-      .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
-        height: 300px;
-        background-position-y: -150px; } }
-    @media screen and (min-width: 75em) {
-      .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
-        height: 400px;
-        background-position-y: -200px; } }
-  .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
-    max-height: 54px;
-    margin-top: 9px; }
-    @media screen and (min-width: 768px) {
-      .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
-        max-height: 90px;
-        margin-top: 15px; } }
-    @media screen and (min-width: 75em) {
-      .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
-        max-height: 120px;
-        margin-top: 20px; } }
-
-.hero--content-blur .hero-bg {
-  -webkit-filter: blur(20px) !important;
-  -ms-filter: blur(20px) !important;
-  -moz-filter: blur(20px) !important;
-  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='blur'><feGaussianBlur stdDeviation='20' /></filter></svg>#blur");
-  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='20'); }
-
-.hero--content-colour {
-  background: #278288;
-  color: #000000; }
-
 .video__container {
   float: left;
   display: block;
@@ -5315,9 +5190,8 @@ header[role='banner'] a.logo {
 
 .video__list, .video__list--related {
   clear: both; }
-
-.video__list li, .video__list--related li {
-  max-width: 100%; }
+  .video__list li, .video__list--related li {
+    max-width: 100%; }
 
 .video__thumb {
   position: relative; }
