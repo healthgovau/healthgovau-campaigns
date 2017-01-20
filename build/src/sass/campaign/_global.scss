@@ -19,17 +19,27 @@ main.wide {
 }
 
 // Breadcrumbs
-[class^='breadcrumbs'] {
-  margin-bottom: $large-spacing;
-}
+//[class^='breadcrumbs'] {
+//  margin-bottom: $large-spacing;
+//}
 
 
 // Footer
 footer[role='contentinfo'] {
   margin-top: 0;
   border-top-color: $background-colour-dark;
-
+  // Feedback
+  .button--feedback {
+    margin: $medium-spacing 0 0;
+    display: block;
+    @include media($tablet) {
+      display: inline;
+      margin: 0 0 0 $medium-spacing;
+    }
+  }
 }
+
+
 
 
 // Bands =====================================
@@ -74,20 +84,6 @@ footer[role='contentinfo'] {
 .band--gradient {
   @extend %band;
   @include linear-gradient(90deg, $background-colour-secondary, $white, $fallback: $white);
-}
-
-// Feedback
-.page-feedback {
-  @extend .band--small;
-  background: #4a4a4a;
-  color: #FFF;
-  @include button-colours(transparent, $white, $white, $white, $black);
-  [role='button'] {
-    margin: $medium-spacing 0 0;
-    @include media($tablet) {
-      margin: 0 0 0 $medium-spacing;
-    }
-  }
 }
 
 // Image overlays

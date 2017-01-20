@@ -49,11 +49,11 @@
 // Override reading width if inside .content_main
 .video__list {
   clear: both;
+  li {
+    max-width: 100%;
+  }
 }
 
-.video__list li {
-  max-width: 100%;
-}
 .video__thumb {
   position: relative;
   &:hover,
