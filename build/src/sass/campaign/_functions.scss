@@ -38,3 +38,7 @@
   }
   color: $white;
 }
+
+@mixin border-top($colour: $border-colour, $size: 1px){
+  border-top: $colour solid $size;
+}

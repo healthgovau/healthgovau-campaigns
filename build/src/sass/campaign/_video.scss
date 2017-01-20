@@ -1,6 +1,6 @@
 // Single video (featured - play in-situ)
 .video__container {
-  @include span-columns(4 of 4);
+  @include fill-parent;
 
   @include media($tablet) {
     @include span-columns(6 of 12);
@@ -18,7 +18,7 @@
 }
 
 .video__info {
-  @include span-columns(4 of 4);
+  @include fill-parent;
   margin-top: $medium-spacing;
 
   @include media($tablet) {
@@ -48,7 +48,12 @@
 // Video listing
 // Override reading width if inside .content_main
 .video__list {
-  clear: both;
+  @include clearfix;
+  .video__thumb {
+    @include media($tablet) {
+      margin-bottom: 0;
+    }
+  }
   li {
     max-width: 100%;
   }
@@ -56,6 +61,7 @@
 
 .video__thumb {
   position: relative;
+  margin-bottom: $medium-spacing;
   &:hover,
   &:active,
   &:focus {
@@ -101,9 +107,43 @@
   }
 }
 
+.video__date {
+  font-size: $small-font-size;
+  margin-bottom: $small-spacing;
+  time {
+    color: #6e6e6e;
+  }
+}
+
 // Related videos
 .video__list--related {
   @extend .video__list;
-  margin-top: $large-spacing;
+  @include clearfix;
+  @include fill-parent;
   overflow: hidden;
+  margin-top: $large-spacing;
+  @include border-top;
+  @include media($tablet) {
+    @include border-top(transparent, 0px);
+  }
+
+  .video__item {
+    @include clearfix;
+  }
+
+  .video__thumb {
+    margin-bottom: 0;
+    @include span-columns(2 of 4);
+    @include media($tablet) {
+      @include fill-parent;
+    }
+  }
+
+  .video__info {
+    @include span-columns(2 of 4);
+    @include media($tablet) {
+      @include fill-parent;
+    }
+  }
+
 }
