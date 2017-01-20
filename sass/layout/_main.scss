@@ -15,7 +15,9 @@
 }
 
 .node-type-video,
-.node-type-campaign-standard-page {
+.node-type-campaign-standard-page,
+.page-search404,
+.page-node-1 {
   main .content-main {
     @include media($mobile) {
       @include span-columns(8 of 8);
