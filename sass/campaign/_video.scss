@@ -8,18 +8,16 @@
     div.group-right {
       @extend .video__info;
     }
+    .field-name-field-video-thumbnail {
+      img {
+        height: auto;
+      }
+    }
   }
 }
 
 // Block view.
 .view-campaign-videos {
-
-  .field-name-field-video-thumbnail {
-    @extend .card-image;
-    img {
-      height: auto;
-    }
-  }
 
   .field-name-field-video-promoted-thumbnail {
     a {
@@ -31,10 +29,6 @@
     img {
       height: auto;
     }
-  }
-
-  .field-name-title {
-    @extend .card-header;
   }
 
   .field-name-field-video-length {

@@ -33,14 +33,3 @@ section.site-nav {
     }
   }
 }
-
-// Video block 3 view
-.view-campaign-videos.view-display-id-block_1 {
-  .view-content {
-    @extend .cards;
-
-    .list-horizontal {
-      margin-top: 0px;
-    }
-  }
-}
