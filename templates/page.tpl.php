@@ -133,7 +133,13 @@ $bottom = render($page['bottom']);
       <?php print render($page['footer_top']); ?>
     </section>
     <section class="footer-bottom">
-      <?php print render($page['footer_bottom']); ?>
+      <div class="footer-logo">
+        <img alt="Australian Government Coat of Arms" src="/sites/all/themes/healthgovau-theme/images/coat-of-arms.png">
+      </div> 
+      <div class="footer-links">
+        <?php print render($page['footer_bottom']); ?>
+        <p>© Commonwealth of Australia</p>
+      </div>
     </section>
     <section class="page-bottom">
       <?php print render($page['bottom']); ?>
