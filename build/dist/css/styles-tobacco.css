@@ -4741,6 +4741,18 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
 .light {
   font-weight: 400; }
 
+header[role='banner'] .link--no-decoration,
+body > main .link--no-decoration,
+footer[role='contentinfo'] .link--no-decoration {
+  border-bottom: 0; }
+  header[role='banner'] .link--no-decoration:hover, header[role='banner'] .link--no-decoration:focus,
+  body > main .link--no-decoration:hover,
+  body > main .link--no-decoration:focus,
+  footer[role='contentinfo'] .link--no-decoration:hover,
+  footer[role='contentinfo'] .link--no-decoration:focus {
+    background-color: transparent;
+    color: inherit; }
+
 main {
   padding-bottom: 3.2em; }
 

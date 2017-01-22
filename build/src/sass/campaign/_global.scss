@@ -8,6 +8,22 @@
 .h4 {
   @extend h4;
 }
+
+// Utility classes
+// Need descendency to override UI-kit <a> style
+header[role='banner'],
+body > main,
+footer[role='contentinfo']  {
+  .link--no-decoration {
+    border-bottom: 0;
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      color: inherit;
+    }
+  }
+}
+
 // Override <main> width for banding
 main {
   padding-bottom: $large-spacing;
