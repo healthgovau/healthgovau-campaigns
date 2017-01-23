@@ -67,9 +67,6 @@ $hero-background-height-desktop: $hero-height-desktop * 1.2;
     }
 }
 
-$hero-content-shrink-factor: 0.4; // Height proportion compared to main hero
-$hero-content-y-shift: 0.5; // How far up to move the image for the slice (range 0 - 0.9)
-
 .hero--content {
   @extend .hero;
   height: $hero-height-mobile * $hero-content-shrink-factor;
