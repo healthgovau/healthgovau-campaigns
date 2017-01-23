@@ -5730,3 +5730,27 @@ footer[role='contentinfo'] .footer-top nav > li {
 .page-node-16 .content-main li,
 .page-node-11 .content-main li {
   max-width: 100%; }
+
+.page-node-16 .content-main h1, .page-node-16 .content-main .hero .site-title, .hero .page-node-16 .content-main .site-title, .page-node-16 .content-main .hero--content .site-title, .hero--content .page-node-16 .content-main .site-title, .page-node-16 .content-main .hero--content-blur .site-title, .hero--content-blur .page-node-16 .content-main .site-title, .page-node-16 .content-main .hero--content-colour .site-title, .hero--content-colour .page-node-16 .content-main .site-title, .page-node-16 .content-main
+.hero-sml .site-title,
+.hero-sml .page-node-16 .content-main .site-title, .page-node-16 .content-main
+.hero-med .site-title,
+.hero-med .page-node-16 .content-main .site-title,
+.page-node-11 .content-main h1,
+.page-node-11 .content-main .hero .site-title, .hero
+.page-node-11 .content-main .site-title,
+.page-node-11 .content-main .hero--content .site-title, .hero--content
+.page-node-11 .content-main .site-title,
+.page-node-11 .content-main .hero--content-blur .site-title, .hero--content-blur
+.page-node-11 .content-main .site-title,
+.page-node-11 .content-main .hero--content-colour .site-title, .hero--content-colour
+.page-node-11 .content-main .site-title,
+.page-node-11 .content-main
+.hero-sml .site-title,
+.hero-sml
+.page-node-11 .content-main .site-title,
+.page-node-11 .content-main
+.hero-med .site-title,
+.hero-med
+.page-node-11 .content-main .site-title {
+  max-width: 100%; }
