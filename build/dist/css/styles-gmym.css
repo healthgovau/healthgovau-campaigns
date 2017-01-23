@@ -4897,12 +4897,7 @@ footer[role='contentinfo'] {
   margin-right: 0; }
 
 .partner {
-  float: left;
-  display: block;
-  margin-right: 8.71718%;
   width: 100%; }
-  .partner:last-child {
-    margin-right: 0; }
   @media screen and (min-width: 768px) {
     .partner {
       float: left;
@@ -4924,12 +4919,7 @@ footer[role='contentinfo'] {
     margin-top: 0; }
 
 .partner__image {
-  float: left;
-  display: block;
-  margin-right: 8.71718%;
   width: 100%; }
-  .partner__image:last-child {
-    margin-right: 0; }
   @media screen and (min-width: 768px) {
     .partner__image {
       float: left;
@@ -4948,12 +4938,7 @@ footer[role='contentinfo'] {
         margin-right: 0; } }
 
 .partner__desc {
-  float: left;
-  display: block;
-  margin-right: 8.71718%;
   width: 100%; }
-  .partner__desc:last-child {
-    margin-right: 0; }
   @media screen and (min-width: 768px) {
     .partner__desc {
       float: left;

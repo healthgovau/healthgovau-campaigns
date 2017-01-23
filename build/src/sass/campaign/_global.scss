@@ -199,7 +199,7 @@ footer[role='contentinfo'] {
 
 // Partners
 .partner {
-  @include span-columns(4 of 4);
+  @include fill-parent;
 
   @include media($tablet) {
     @include span-columns(6 of 12);
@@ -214,7 +214,7 @@ footer[role='contentinfo'] {
   }
 }
 .partner__image {
-  @include span-columns(4 of 4);
+  @include fill-parent;
 
   @include media($tablet) {
     @include span-columns(2 of 6);
@@ -225,7 +225,7 @@ footer[role='contentinfo'] {
   }
 }
 .partner__desc {
-  @include span-columns(4 of 4);
+  @include fill-parent;
 
   @include media($tablet) {
     @include span-columns(4 of 6);
