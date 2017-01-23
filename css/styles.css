@@ -90,7 +90,7 @@ Usage:
 [class^='breadcrumbs'][class$='--inverted'] ul li:not(:last-child) {
   background-image: url("../../uikit_base/images/icons/arrow-right--white.svg"); }
 
-header[role='banner'] .see-more::after, body > main .see-more::after, footer[role='contentinfo'] .see-more::after, .list-horizontal .tags .see-more::after, .list-horizontal--benefits .tags .see-more::after, .list-vertical .tags .see-more::after, .list-vertical--thirds .tags .see-more::after, .list-vertical--fourths .tags .see-more::after, footer[role='contentinfo'] .footer-top nav .tags .see-more::after, .list-small .tags .see-more::after, .list-highlighted .tags .see-more::after, .primary-nav ul .see-more::after,
+header[role='banner'] .see-more::after, body > main .see-more::after, footer[role='contentinfo'] .see-more::after, .list-horizontal .tags .see-more::after, .list-horizontal--benefits .tags .see-more::after, .list-vertical .tags .see-more::after, .list-vertical--thirds .tags .see-more::after, .list-vertical--fourths .tags .see-more::after, footer[role='contentinfo'] .footer-top nav .tags .see-more::after, .list-vertical--halves .tags .see-more::after, .list-small .tags .see-more::after, .list-highlighted .tags .see-more::after, .primary-nav ul .see-more::after,
 .local-nav ul .see-more::after, [class^='breadcrumbs'] .see-more::after, [class^='breadcrumbs'][class$='--inverted'] .see-more::after, .skip-to .see-more::after, [class^='controls'] .see-more::after, .govau--header .see-more::after, .prerelease-govau--header .see-more::after, .hero .see-more::after, .hero--content .see-more::after, .hero--content-blur .see-more::after, .hero--content-colour .see-more::after,
 .hero-sml .see-more::after,
 .hero-med .see-more::after {
@@ -106,7 +106,7 @@ header[role='banner'] .see-more::after, body > main .see-more::after, footer[rol
 summary::before, .accordion--controls summary::before, .nav-toggle::before {
   background-image: url("../../uikit_base/images/icons/chevron-down--navy.svg"); }
 
-header[role='banner'] a[rel~='external']::after, body > main a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .list-horizontal .tags a[rel~='external']::after, .list-horizontal--benefits .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, footer[role='contentinfo'] .footer-top nav .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
+header[role='banner'] a[rel~='external']::after, body > main a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .list-horizontal .tags a[rel~='external']::after, .list-horizontal--benefits .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, footer[role='contentinfo'] .footer-top nav .tags a[rel~='external']::after, .list-vertical--halves .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
 .local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after, .hero--content a[rel~='external']::after, .hero--content-blur a[rel~='external']::after, .hero--content-colour a[rel~='external']::after,
 .hero-sml a[rel~='external']::after,
 .hero-med a[rel~='external']::after {
@@ -1312,7 +1312,7 @@ Markup: templates/basic-links.html
 
 Style guide: Link styles.1 Hover links
 */
-header[role='banner'] a[rel~='external']::after, body > main a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .list-horizontal .tags a[rel~='external']::after, .list-horizontal--benefits .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, footer[role='contentinfo'] .footer-top nav .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
+header[role='banner'] a[rel~='external']::after, body > main a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .list-horizontal .tags a[rel~='external']::after, .list-horizontal--benefits .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, footer[role='contentinfo'] .footer-top nav .tags a[rel~='external']::after, .list-vertical--halves .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
 .local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after, .hero--content a[rel~='external']::after, .hero--content-blur a[rel~='external']::after, .hero--content-colour a[rel~='external']::after,
 .hero-sml a[rel~='external']::after,
 .hero-med a[rel~='external']::after {
@@ -1725,15 +1725,15 @@ Markup: templates/lists-highlighted.html
 
 Style guide: List styles.4 Highlighted word style
 */
-.list-horizontal, .list-horizontal--benefits, .list-vertical, .list-vertical--thirds, .list-vertical--fourths, footer[role='contentinfo'] .footer-top nav, .list-small, .list-highlighted {
+.list-horizontal, .list-horizontal--benefits, .list-vertical, .list-vertical--thirds, .list-vertical--fourths, footer[role='contentinfo'] .footer-top nav, .list-vertical--halves, .list-small, .list-highlighted {
   margin-top: 2.24em;
   padding: 0;
   list-style: none; }
-  .list-horizontal::after, .list-horizontal--benefits::after, .list-vertical::after, .list-vertical--thirds::after, .list-vertical--fourths::after, footer[role='contentinfo'] .footer-top nav::after, .list-small::after, .list-highlighted::after {
+  .list-horizontal::after, .list-horizontal--benefits::after, .list-vertical::after, .list-vertical--thirds::after, .list-vertical--fourths::after, footer[role='contentinfo'] .footer-top nav::after, .list-vertical--halves::after, .list-small::after, .list-highlighted::after {
     clear: both;
     content: "";
     display: table; }
-  .list-horizontal .tags, .list-horizontal--benefits .tags, .list-vertical .tags, .list-vertical--thirds .tags, .list-vertical--fourths .tags, footer[role='contentinfo'] .footer-top nav .tags, .list-small .tags, .list-highlighted .tags {
+  .list-horizontal .tags, .list-horizontal--benefits .tags, .list-vertical .tags, .list-vertical--thirds .tags, .list-vertical--fourths .tags, footer[role='contentinfo'] .footer-top nav .tags, .list-vertical--halves .tags, .list-small .tags, .list-highlighted .tags {
     color: #18788d;
     /*
   See more link
@@ -1766,7 +1766,7 @@ Style guide: List styles.4 Highlighted word style
   Style guide: Link styles.3 Placeholder links
   */
     color: #6e6e6e; }
-    .list-horizontal .tags a, .list-horizontal--benefits .tags a, .list-vertical .tags a, .list-vertical--thirds .tags a, .list-vertical--fourths .tags a, footer[role='contentinfo'] .footer-top nav .tags a, .list-small .tags a, .list-highlighted .tags a {
+    .list-horizontal .tags a, .list-horizontal--benefits .tags a, .list-vertical .tags a, .list-vertical--thirds .tags a, .list-vertical--fourths .tags a, footer[role='contentinfo'] .footer-top nav .tags a, .list-vertical--halves .tags a, .list-small .tags a, .list-highlighted .tags a {
       color: #18788d;
       text-decoration: none;
       outline: none;
@@ -1777,24 +1777,24 @@ Style guide: List styles.4 Highlighted word style
               transition-duration: 0.1s;
       -webkit-transition-property: background-color, border-color, color;
       transition-property: background-color, border-color, color; }
-      .list-horizontal .tags a:hover, .list-horizontal--benefits .tags a:hover, .list-vertical .tags a:hover, .list-vertical--thirds .tags a:hover, .list-vertical--fourths .tags a:hover, footer[role='contentinfo'] .footer-top nav .tags a:hover, .list-small .tags a:hover, .list-highlighted .tags a:hover, .list-horizontal .tags a:focus, .list-horizontal--benefits .tags a:focus, .list-vertical .tags a:focus, .list-vertical--thirds .tags a:focus, .list-vertical--fourths .tags a:focus, footer[role='contentinfo'] .footer-top nav .tags a:focus, .list-small .tags a:focus, .list-highlighted .tags a:focus {
+      .list-horizontal .tags a:hover, .list-horizontal--benefits .tags a:hover, .list-vertical .tags a:hover, .list-vertical--thirds .tags a:hover, .list-vertical--fourths .tags a:hover, footer[role='contentinfo'] .footer-top nav .tags a:hover, .list-vertical--halves .tags a:hover, .list-small .tags a:hover, .list-highlighted .tags a:hover, .list-horizontal .tags a:focus, .list-horizontal--benefits .tags a:focus, .list-vertical .tags a:focus, .list-vertical--thirds .tags a:focus, .list-vertical--fourths .tags a:focus, footer[role='contentinfo'] .footer-top nav .tags a:focus, .list-vertical--halves .tags a:focus, .list-small .tags a:focus, .list-highlighted .tags a:focus {
         background-color: #5bcbe3;
         color: #313131; }
-      .list-horizontal .tags a[rel~='external'], .list-horizontal--benefits .tags a[rel~='external'], .list-vertical .tags a[rel~='external'], .list-vertical--thirds .tags a[rel~='external'], .list-vertical--fourths .tags a[rel~='external'], footer[role='contentinfo'] .footer-top nav .tags a[rel~='external'], .list-small .tags a[rel~='external'], .list-highlighted .tags a[rel~='external'] {
+      .list-horizontal .tags a[rel~='external'], .list-horizontal--benefits .tags a[rel~='external'], .list-vertical .tags a[rel~='external'], .list-vertical--thirds .tags a[rel~='external'], .list-vertical--fourths .tags a[rel~='external'], footer[role='contentinfo'] .footer-top nav .tags a[rel~='external'], .list-vertical--halves .tags a[rel~='external'], .list-small .tags a[rel~='external'], .list-highlighted .tags a[rel~='external'] {
         display: inline;
         position: relative;
         margin-right: 1.6em; }
-        .list-horizontal .tags a[rel~='external']:hover, .list-horizontal--benefits .tags a[rel~='external']:hover, .list-vertical .tags a[rel~='external']:hover, .list-vertical--thirds .tags a[rel~='external']:hover, .list-vertical--fourths .tags a[rel~='external']:hover, footer[role='contentinfo'] .footer-top nav .tags a[rel~='external']:hover, .list-small .tags a[rel~='external']:hover, .list-highlighted .tags a[rel~='external']:hover {
+        .list-horizontal .tags a[rel~='external']:hover, .list-horizontal--benefits .tags a[rel~='external']:hover, .list-vertical .tags a[rel~='external']:hover, .list-vertical--thirds .tags a[rel~='external']:hover, .list-vertical--fourths .tags a[rel~='external']:hover, footer[role='contentinfo'] .footer-top nav .tags a[rel~='external']:hover, .list-vertical--halves .tags a[rel~='external']:hover, .list-small .tags a[rel~='external']:hover, .list-highlighted .tags a[rel~='external']:hover {
           border-color: transparent; }
-        .list-horizontal .tags a[rel~='external']::after, .list-horizontal--benefits .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, footer[role='contentinfo'] .footer-top nav .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after {
+        .list-horizontal .tags a[rel~='external']::after, .list-horizontal--benefits .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, footer[role='contentinfo'] .footer-top nav .tags a[rel~='external']::after, .list-vertical--halves .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after {
           background-size: 0.9em auto; }
-    .list-horizontal .tags .see-more, .list-horizontal--benefits .tags .see-more, .list-vertical .tags .see-more, .list-vertical--thirds .tags .see-more, .list-vertical--fourths .tags .see-more, footer[role='contentinfo'] .footer-top nav .tags .see-more, .list-small .tags .see-more, .list-highlighted .tags .see-more {
+    .list-horizontal .tags .see-more, .list-horizontal--benefits .tags .see-more, .list-vertical .tags .see-more, .list-vertical--thirds .tags .see-more, .list-vertical--fourths .tags .see-more, footer[role='contentinfo'] .footer-top nav .tags .see-more, .list-vertical--halves .tags .see-more, .list-small .tags .see-more, .list-highlighted .tags .see-more {
       display: inline-block;
       position: relative;
       margin-right: 1.6em;
       font-weight: 700;
       color: #18788d; }
-      .list-horizontal .tags .see-more::after, .list-horizontal--benefits .tags .see-more::after, .list-vertical .tags .see-more::after, .list-vertical--thirds .tags .see-more::after, .list-vertical--fourths .tags .see-more::after, footer[role='contentinfo'] .footer-top nav .tags .see-more::after, .list-small .tags .see-more::after, .list-highlighted .tags .see-more::after {
+      .list-horizontal .tags .see-more::after, .list-horizontal--benefits .tags .see-more::after, .list-vertical .tags .see-more::after, .list-vertical--thirds .tags .see-more::after, .list-vertical--fourths .tags .see-more::after, footer[role='contentinfo'] .footer-top nav .tags .see-more::after, .list-vertical--halves .tags .see-more::after, .list-small .tags .see-more::after, .list-highlighted .tags .see-more::after {
         content: '';
         position: absolute;
         top: 0;
@@ -1805,44 +1805,44 @@ Style guide: List styles.4 Highlighted word style
         background-repeat: no-repeat;
         background-position: right 0.4em;
         background-size: 0.64em auto; }
-      .list-horizontal .tags .see-more:hover, .list-horizontal--benefits .tags .see-more:hover, .list-vertical .tags .see-more:hover, .list-vertical--thirds .tags .see-more:hover, .list-vertical--fourths .tags .see-more:hover, footer[role='contentinfo'] .footer-top nav .tags .see-more:hover, .list-small .tags .see-more:hover, .list-highlighted .tags .see-more:hover, .list-horizontal .tags .see-more:focus, .list-horizontal--benefits .tags .see-more:focus, .list-vertical .tags .see-more:focus, .list-vertical--thirds .tags .see-more:focus, .list-vertical--fourths .tags .see-more:focus, footer[role='contentinfo'] .footer-top nav .tags .see-more:focus, .list-small .tags .see-more:focus, .list-highlighted .tags .see-more:focus {
+      .list-horizontal .tags .see-more:hover, .list-horizontal--benefits .tags .see-more:hover, .list-vertical .tags .see-more:hover, .list-vertical--thirds .tags .see-more:hover, .list-vertical--fourths .tags .see-more:hover, footer[role='contentinfo'] .footer-top nav .tags .see-more:hover, .list-vertical--halves .tags .see-more:hover, .list-small .tags .see-more:hover, .list-highlighted .tags .see-more:hover, .list-horizontal .tags .see-more:focus, .list-horizontal--benefits .tags .see-more:focus, .list-vertical .tags .see-more:focus, .list-vertical--thirds .tags .see-more:focus, .list-vertical--fourths .tags .see-more:focus, footer[role='contentinfo'] .footer-top nav .tags .see-more:focus, .list-vertical--halves .tags .see-more:focus, .list-small .tags .see-more:focus, .list-highlighted .tags .see-more:focus {
         color: #313131; }
-    .list-horizontal .tags span.placeholder-link, .list-horizontal--benefits .tags span.placeholder-link, .list-vertical .tags span.placeholder-link, .list-vertical--thirds .tags span.placeholder-link, .list-vertical--fourths .tags span.placeholder-link, footer[role='contentinfo'] .footer-top nav .tags span.placeholder-link, .list-small .tags span.placeholder-link, .list-highlighted .tags span.placeholder-link {
+    .list-horizontal .tags span.placeholder-link, .list-horizontal--benefits .tags span.placeholder-link, .list-vertical .tags span.placeholder-link, .list-vertical--thirds .tags span.placeholder-link, .list-vertical--fourths .tags span.placeholder-link, footer[role='contentinfo'] .footer-top nav .tags span.placeholder-link, .list-vertical--halves .tags span.placeholder-link, .list-small .tags span.placeholder-link, .list-highlighted .tags span.placeholder-link {
       color: rgba(24, 120, 141, 0.7);
       border-bottom: none;
       cursor: not-allowed; }
-      .list-horizontal .tags span.placeholder-link:hover, .list-horizontal--benefits .tags span.placeholder-link:hover, .list-vertical .tags span.placeholder-link:hover, .list-vertical--thirds .tags span.placeholder-link:hover, .list-vertical--fourths .tags span.placeholder-link:hover, footer[role='contentinfo'] .footer-top nav .tags span.placeholder-link:hover, .list-small .tags span.placeholder-link:hover, .list-highlighted .tags span.placeholder-link:hover {
+      .list-horizontal .tags span.placeholder-link:hover, .list-horizontal--benefits .tags span.placeholder-link:hover, .list-vertical .tags span.placeholder-link:hover, .list-vertical--thirds .tags span.placeholder-link:hover, .list-vertical--fourths .tags span.placeholder-link:hover, footer[role='contentinfo'] .footer-top nav .tags span.placeholder-link:hover, .list-vertical--halves .tags span.placeholder-link:hover, .list-small .tags span.placeholder-link:hover, .list-highlighted .tags span.placeholder-link:hover {
         cursor: not-allowed; }
-    .list-horizontal .tags dl, .list-horizontal--benefits .tags dl, .list-vertical .tags dl, .list-vertical--thirds .tags dl, .list-vertical--fourths .tags dl, footer[role='contentinfo'] .footer-top nav .tags dl, .list-small .tags dl, .list-highlighted .tags dl, .list-horizontal .tags dt, .list-horizontal--benefits .tags dt, .list-vertical .tags dt, .list-vertical--thirds .tags dt, .list-vertical--fourths .tags dt, footer[role='contentinfo'] .footer-top nav .tags dt, .list-small .tags dt, .list-highlighted .tags dt, .list-horizontal .tags dd, .list-horizontal--benefits .tags dd, .list-vertical .tags dd, .list-vertical--thirds .tags dd, .list-vertical--fourths .tags dd, footer[role='contentinfo'] .footer-top nav .tags dd, .list-small .tags dd, .list-highlighted .tags dd {
+    .list-horizontal .tags dl, .list-horizontal--benefits .tags dl, .list-vertical .tags dl, .list-vertical--thirds .tags dl, .list-vertical--fourths .tags dl, footer[role='contentinfo'] .footer-top nav .tags dl, .list-vertical--halves .tags dl, .list-small .tags dl, .list-highlighted .tags dl, .list-horizontal .tags dt, .list-horizontal--benefits .tags dt, .list-vertical .tags dt, .list-vertical--thirds .tags dt, .list-vertical--fourths .tags dt, footer[role='contentinfo'] .footer-top nav .tags dt, .list-vertical--halves .tags dt, .list-small .tags dt, .list-highlighted .tags dt, .list-horizontal .tags dd, .list-horizontal--benefits .tags dd, .list-vertical .tags dd, .list-vertical--thirds .tags dd, .list-vertical--fourths .tags dd, footer[role='contentinfo'] .footer-top nav .tags dd, .list-vertical--halves .tags dd, .list-small .tags dd, .list-highlighted .tags dd {
       display: inline-block;
       margin: 0;
       padding: 0;
       line-height: 2.1; }
-    .list-horizontal .tags dt, .list-horizontal--benefits .tags dt, .list-vertical .tags dt, .list-vertical--thirds .tags dt, .list-vertical--fourths .tags dt, footer[role='contentinfo'] .footer-top nav .tags dt, .list-small .tags dt, .list-highlighted .tags dt, .list-horizontal .tags dd, .list-horizontal--benefits .tags dd, .list-vertical .tags dd, .list-vertical--thirds .tags dd, .list-vertical--fourths .tags dd, footer[role='contentinfo'] .footer-top nav .tags dd, .list-small .tags dd, .list-highlighted .tags dd {
+    .list-horizontal .tags dt, .list-horizontal--benefits .tags dt, .list-vertical .tags dt, .list-vertical--thirds .tags dt, .list-vertical--fourths .tags dt, footer[role='contentinfo'] .footer-top nav .tags dt, .list-vertical--halves .tags dt, .list-small .tags dt, .list-highlighted .tags dt, .list-horizontal .tags dd, .list-horizontal--benefits .tags dd, .list-vertical .tags dd, .list-vertical--thirds .tags dd, .list-vertical--fourths .tags dd, footer[role='contentinfo'] .footer-top nav .tags dd, .list-vertical--halves .tags dd, .list-small .tags dd, .list-highlighted .tags dd {
       margin-right: 0.4em;
       font-size: 87.5%; }
-    .list-horizontal .tags a, .list-horizontal--benefits .tags a, .list-vertical .tags a, .list-vertical--thirds .tags a, .list-vertical--fourths .tags a, footer[role='contentinfo'] .footer-top nav .tags a, .list-small .tags a, .list-highlighted .tags a {
+    .list-horizontal .tags a, .list-horizontal--benefits .tags a, .list-vertical .tags a, .list-vertical--thirds .tags a, .list-vertical--fourths .tags a, footer[role='contentinfo'] .footer-top nav .tags a, .list-vertical--halves .tags a, .list-small .tags a, .list-highlighted .tags a {
       padding: 2px 0.4em;
       border: 1px solid #18788d;
       border-radius: 2px; }
-      .list-horizontal .tags a:hover, .list-horizontal--benefits .tags a:hover, .list-vertical .tags a:hover, .list-vertical--thirds .tags a:hover, .list-vertical--fourths .tags a:hover, footer[role='contentinfo'] .footer-top nav .tags a:hover, .list-small .tags a:hover, .list-highlighted .tags a:hover, .list-horizontal .tags a:focus, .list-horizontal--benefits .tags a:focus, .list-vertical .tags a:focus, .list-vertical--thirds .tags a:focus, .list-vertical--fourths .tags a:focus, footer[role='contentinfo'] .footer-top nav .tags a:focus, .list-small .tags a:focus, .list-highlighted .tags a:focus {
+      .list-horizontal .tags a:hover, .list-horizontal--benefits .tags a:hover, .list-vertical .tags a:hover, .list-vertical--thirds .tags a:hover, .list-vertical--fourths .tags a:hover, footer[role='contentinfo'] .footer-top nav .tags a:hover, .list-vertical--halves .tags a:hover, .list-small .tags a:hover, .list-highlighted .tags a:hover, .list-horizontal .tags a:focus, .list-horizontal--benefits .tags a:focus, .list-vertical .tags a:focus, .list-vertical--thirds .tags a:focus, .list-vertical--fourths .tags a:focus, footer[role='contentinfo'] .footer-top nav .tags a:focus, .list-vertical--halves .tags a:focus, .list-small .tags a:focus, .list-highlighted .tags a:focus {
         border-color: #5bcbe3; }
-  .list-horizontal .meta, .list-horizontal--benefits .meta, .list-vertical .meta, .list-vertical--thirds .meta, .list-vertical--fourths .meta, footer[role='contentinfo'] .footer-top nav .meta, .list-small .meta, .list-highlighted .meta {
+  .list-horizontal .meta, .list-horizontal--benefits .meta, .list-vertical .meta, .list-vertical--thirds .meta, .list-vertical--fourths .meta, footer[role='contentinfo'] .footer-top nav .meta, .list-vertical--halves .meta, .list-small .meta, .list-highlighted .meta {
     font-size: 87.5%;
     margin-bottom: 0.8em; }
-    .list-horizontal .meta time, .list-horizontal--benefits .meta time, .list-vertical .meta time, .list-vertical--thirds .meta time, .list-vertical--fourths .meta time, footer[role='contentinfo'] .footer-top nav .meta time, .list-small .meta time, .list-highlighted .meta time {
+    .list-horizontal .meta time, .list-horizontal--benefits .meta time, .list-vertical .meta time, .list-vertical--thirds .meta time, .list-vertical--fourths .meta time, footer[role='contentinfo'] .footer-top nav .meta time, .list-vertical--halves .meta time, .list-small .meta time, .list-highlighted .meta time {
       color: #6e6e6e; }
-  .list-horizontal > li, .list-horizontal--benefits > li, .list-vertical > li, .list-vertical--thirds > li, .list-vertical--fourths > li, footer[role='contentinfo'] .footer-top nav > li, .list-small > li, .list-highlighted > li {
+  .list-horizontal > li, .list-horizontal--benefits > li, .list-vertical > li, .list-vertical--thirds > li, .list-vertical--fourths > li, footer[role='contentinfo'] .footer-top nav > li, .list-vertical--halves > li, .list-small > li, .list-highlighted > li {
     padding: 2.74614% 0;
     border-bottom: solid 1px #bbbbbb;
     margin-bottom: 0; }
-  .list-horizontal h2, .list-horizontal--benefits h2, .list-vertical h2, .list-vertical--thirds h2, .list-vertical--fourths h2, footer[role='contentinfo'] .footer-top nav h2, .list-small h2, .list-highlighted h2, .list-horizontal .display, .list-horizontal--benefits .display, .list-vertical .display, .list-vertical--thirds .display, .list-vertical--fourths .display, footer[role='contentinfo'] .footer-top nav .display, .list-small .display, .list-highlighted .display, .list-horizontal h3, .list-horizontal--benefits h3, .list-vertical h3, .list-vertical--thirds h3, .list-vertical--fourths h3, footer[role='contentinfo'] .footer-top nav h3, .list-small h3, .list-highlighted h3, .list-horizontal footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-horizontal h2, .list-horizontal--benefits footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-horizontal--benefits h2, .list-vertical footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical h2, .list-vertical--thirds footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--thirds h2, .list-vertical--fourths footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--fourths h2, footer[role='contentinfo'] .footer-top nav h2, .list-small footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-small h2, .list-highlighted footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-highlighted h2, .list-horizontal footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-horizontal .display, .list-horizontal--benefits footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-horizontal--benefits .display, .list-vertical footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical .display, .list-vertical--thirds footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--thirds .display, .list-vertical--fourths footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--fourths .display, footer[role='contentinfo'] .footer-top nav .display, .list-small footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-small .display, .list-highlighted footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-highlighted .display, .list-horizontal h4, .list-horizontal--benefits h4, .list-vertical h4, .list-vertical--thirds h4, .list-vertical--fourths h4, footer[role='contentinfo'] .footer-top nav h4, .list-small h4, .list-highlighted h4, .list-horizontal h5, .list-horizontal--benefits h5, .list-vertical h5, .list-vertical--thirds h5, .list-vertical--fourths h5, footer[role='contentinfo'] .footer-top nav h5, .list-small h5, .list-highlighted h5, .list-horizontal h6, .list-horizontal--benefits h6, .list-vertical h6, .list-vertical--thirds h6, .list-vertical--fourths h6, footer[role='contentinfo'] .footer-top nav h6, .list-small h6, .list-highlighted h6 {
+  .list-horizontal h2, .list-horizontal--benefits h2, .list-vertical h2, .list-vertical--thirds h2, .list-vertical--fourths h2, footer[role='contentinfo'] .footer-top nav h2, .list-vertical--halves h2, .list-small h2, .list-highlighted h2, .list-horizontal .display, .list-horizontal--benefits .display, .list-vertical .display, .list-vertical--thirds .display, .list-vertical--fourths .display, footer[role='contentinfo'] .footer-top nav .display, .list-vertical--halves .display, .list-small .display, .list-highlighted .display, .list-horizontal h3, .list-horizontal--benefits h3, .list-vertical h3, .list-vertical--thirds h3, .list-vertical--fourths h3, footer[role='contentinfo'] .footer-top nav h3, .list-vertical--halves h3, .list-small h3, .list-highlighted h3, .list-horizontal footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-horizontal h2, .list-horizontal--benefits footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-horizontal--benefits h2, .list-vertical footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical h2, .list-vertical--thirds footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--thirds h2, .list-vertical--fourths footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--fourths h2, footer[role='contentinfo'] .footer-top nav h2, .list-vertical--halves footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--halves h2, .list-small footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-small h2, .list-highlighted footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-highlighted h2, .list-horizontal footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-horizontal .display, .list-horizontal--benefits footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-horizontal--benefits .display, .list-vertical footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical .display, .list-vertical--thirds footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--thirds .display, .list-vertical--fourths footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--fourths .display, footer[role='contentinfo'] .footer-top nav .display, .list-vertical--halves footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--halves .display, .list-small footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-small .display, .list-highlighted footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-highlighted .display, .list-horizontal h4, .list-horizontal--benefits h4, .list-vertical h4, .list-vertical--thirds h4, .list-vertical--fourths h4, footer[role='contentinfo'] .footer-top nav h4, .list-vertical--halves h4, .list-small h4, .list-highlighted h4, .list-horizontal h5, .list-horizontal--benefits h5, .list-vertical h5, .list-vertical--thirds h5, .list-vertical--fourths h5, footer[role='contentinfo'] .footer-top nav h5, .list-vertical--halves h5, .list-small h5, .list-highlighted h5, .list-horizontal h6, .list-horizontal--benefits h6, .list-vertical h6, .list-vertical--thirds h6, .list-vertical--fourths h6, footer[role='contentinfo'] .footer-top nav h6, .list-vertical--halves h6, .list-small h6, .list-highlighted h6 {
     margin-top: 0;
     margin-bottom: 0.4em;
     font-size: 1.125rem;
     font-weight: 700;
     line-height: 1.4; }
-  .list-horizontal img, .list-horizontal--benefits img, .list-vertical img, .list-vertical--thirds img, .list-vertical--fourths img, footer[role='contentinfo'] .footer-top nav img, .list-small img, .list-highlighted img {
+  .list-horizontal img, .list-horizontal--benefits img, .list-vertical img, .list-vertical--thirds img, .list-vertical--fourths img, footer[role='contentinfo'] .footer-top nav img, .list-vertical--halves img, .list-small img, .list-highlighted img {
     display: block; }
 
 .list-horizontal > li, .list-horizontal--benefits > li {
@@ -1877,7 +1877,7 @@ Style guide: List styles.4 Highlighted word style
             -ms-flex-preferred-size: 65%;
                 flex-basis: 65%; } }
 
-.list-vertical, .list-vertical--thirds, .list-vertical--fourths, footer[role='contentinfo'] .footer-top nav {
+.list-vertical, .list-vertical--thirds, .list-vertical--fourths, footer[role='contentinfo'] .footer-top nav, .list-vertical--halves {
   /*
   Consider how to create an equal height grid of list items.
   Could use this for overflow http://jsfiddle.net/barney/TPP8g/
@@ -1888,10 +1888,10 @@ Style guide: List styles.4 Highlighted word style
     }
   }
   */ }
-  .list-vertical > li, .list-vertical--thirds > li, .list-vertical--fourths > li, footer[role='contentinfo'] .footer-top nav > li {
+  .list-vertical > li, .list-vertical--thirds > li, .list-vertical--fourths > li, footer[role='contentinfo'] .footer-top nav > li, .list-vertical--halves > li {
     border-top: 6px solid #18788d;
     border-bottom: none; }
-    .list-vertical > li article, .list-vertical--thirds > li article, .list-vertical--fourths > li article, footer[role='contentinfo'] .footer-top nav > li article {
+    .list-vertical > li article, .list-vertical--thirds > li article, .list-vertical--fourths > li article, footer[role='contentinfo'] .footer-top nav > li article, .list-vertical--halves > li article {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -1899,19 +1899,19 @@ Style guide: List styles.4 Highlighted word style
       -webkit-flex-wrap: wrap;
           -ms-flex-wrap: wrap;
               flex-wrap: wrap; }
-      .list-vertical > li article h3, .list-vertical--thirds > li article h3, .list-vertical--fourths > li article h3, footer[role='contentinfo'] .footer-top nav > li article h3, .list-vertical > li article footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical > li article h2, .list-vertical--thirds > li article footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--thirds > li article h2, .list-vertical--fourths > li article footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--fourths > li article h2, footer[role='contentinfo'] .footer-top nav > li article h2, .list-vertical > li article footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical > li article .display, .list-vertical--thirds > li article footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--thirds > li article .display, .list-vertical--fourths > li article footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--fourths > li article .display, footer[role='contentinfo'] .footer-top nav > li article .display, .list-vertical > li article div, .list-vertical--thirds > li article div, .list-vertical--fourths > li article div, footer[role='contentinfo'] .footer-top nav > li article div, .list-vertical > li article p, .list-vertical--thirds > li article p, .list-vertical--fourths > li article p, footer[role='contentinfo'] .footer-top nav > li article p {
+      .list-vertical > li article h3, .list-vertical--thirds > li article h3, .list-vertical--fourths > li article h3, footer[role='contentinfo'] .footer-top nav > li article h3, .list-vertical--halves > li article h3, .list-vertical > li article footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical > li article h2, .list-vertical--thirds > li article footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--thirds > li article h2, .list-vertical--fourths > li article footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--fourths > li article h2, footer[role='contentinfo'] .footer-top nav > li article h2, .list-vertical--halves > li article footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--halves > li article h2, .list-vertical > li article footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical > li article .display, .list-vertical--thirds > li article footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--thirds > li article .display, .list-vertical--fourths > li article footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--fourths > li article .display, footer[role='contentinfo'] .footer-top nav > li article .display, .list-vertical--halves > li article footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--halves > li article .display, .list-vertical > li article div, .list-vertical--thirds > li article div, .list-vertical--fourths > li article div, footer[role='contentinfo'] .footer-top nav > li article div, .list-vertical--halves > li article div, .list-vertical > li article p, .list-vertical--thirds > li article p, .list-vertical--fourths > li article p, footer[role='contentinfo'] .footer-top nav > li article p, .list-vertical--halves > li article p {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 100%;
             -ms-flex: 0 0 100%;
                 flex: 0 0 100%; }
-    .list-vertical > li p, .list-vertical--thirds > li p, .list-vertical--fourths > li p, footer[role='contentinfo'] .footer-top nav > li p {
+    .list-vertical > li p, .list-vertical--thirds > li p, .list-vertical--fourths > li p, footer[role='contentinfo'] .footer-top nav > li p, .list-vertical--halves > li p {
       min-height: auto; }
-    .list-vertical > li .meta, .list-vertical--thirds > li .meta, .list-vertical--fourths > li .meta, footer[role='contentinfo'] .footer-top nav > li .meta {
+    .list-vertical > li .meta, .list-vertical--thirds > li .meta, .list-vertical--fourths > li .meta, footer[role='contentinfo'] .footer-top nav > li .meta, .list-vertical--halves > li .meta {
       -webkit-box-ordinal-group: 0;
       -webkit-order: -1;
           -ms-flex-order: -1;
               order: -1; }
-      .list-vertical > li .meta time, .list-vertical--thirds > li .meta time, .list-vertical--fourths > li .meta time, footer[role='contentinfo'] .footer-top nav > li .meta time {
+      .list-vertical > li .meta time, .list-vertical--thirds > li .meta time, .list-vertical--fourths > li .meta time, footer[role='contentinfo'] .footer-top nav > li .meta time, .list-vertical--halves > li .meta time {
         display: block; }
 
 .list-vertical.no-border li:nth-child(-n+2) {
@@ -5699,6 +5699,12 @@ footer[role='contentinfo'] .footer-top nav > li {
 .list-vertical--fourths > li article {
   margin-top: 0.8em; }
 
+.list-vertical > li,
+.list-vertical--thirds > li,
+.list-vertical--fourths > li,
+.list-vertical--halves > li {
+  border-color: #EEE; }
+
 .list-horizontal--benefits h2, .list-horizontal--benefits .display {
   font-size: 1.5rem;
   margin-top: 1.46667em;
@@ -5724,6 +5730,68 @@ footer[role='contentinfo'] .footer-top nav > li {
       -webkit-flex: 0 0 12%;
           -ms-flex: 0 0 12%;
               flex: 0 0 12%; } }
+
+.list-vertical--halves.no-border li {
+  border-top: none;
+  padding-top: 0; }
+
+@media screen and (min-width: 768px) {
+  .list-vertical--halves > li {
+    float: left;
+    display: block;
+    margin-right: 2.74614%;
+    width: 48.62693%; }
+    .list-vertical--halves > li:last-child {
+      margin-right: 0; }
+    .list-vertical--halves > li:nth-child(2n) {
+      margin-right: 0; }
+    .list-vertical--halves > li:nth-child(2n+1) {
+      clear: left; } }
+
+@media screen and (min-width: 75em) {
+  .list-vertical--halves > li {
+    float: left;
+    display: block;
+    margin-right: 2.74614%;
+    width: 48.62693%; }
+    .list-vertical--halves > li:nth-child(2n) {
+      margin-right: 2.74614%; }
+    .list-vertical--halves > li:nth-child(2n+1) {
+      clear: none; }
+    .list-vertical--halves > li:last-child {
+      margin-right: 0; }
+    .list-vertical--halves > li:nth-child(2n) {
+      margin-right: 0; }
+    .list-vertical--halves > li:nth-child(2n+1) {
+      clear: left; } }
+
+.list-count {
+  counter-reset: standard-counter; }
+  .list-count > li {
+    vertical-align: top;
+    position: relative;
+    padding-left: 5rem;
+    min-height: 5.625rem; }
+    .list-count > li:before {
+      content: counter(standard-counter, decimal);
+      counter-increment: standard-counter;
+      display: inline-block;
+      float: left;
+      line-height: 1.4;
+      text-align: center;
+      width: 4.375rem;
+      font-weight: 700;
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding-top: 0;
+      font-size: 3.125rem; }
+  @media screen and (min-width: 768px) {
+    .list-count > li:before {
+      padding-top: 0.625rem; } }
+  @media screen and (min-width: 75em) {
+    .list-count > li:before {
+      padding-top: 1.1875rem; } }
 
 .page-node-16 .content-main p,
 .page-node-11 .content-main p {

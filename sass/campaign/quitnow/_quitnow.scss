@@ -66,6 +66,16 @@ footer[role='contentinfo'] .footer-top nav > li {
   margin-top: $small-spacing;
 }
 
+// Reassign border colour
+.list-vertical,
+.list-vertical--thirds,
+.list-vertical--fourths,
+.list-vertical--halves {
+  > li {
+    border-color: $colour-primary;
+  }
+}
+
 // Custom content
 // Benefits list
 .list-horizontal--benefits {
@@ -84,6 +94,78 @@ footer[role='contentinfo'] .footer-top nav > li {
       @include media($tablet) {
         display: block;
         flex: 0 0 12%;
+      }
+    }
+  }
+}
+
+// List extensions
+.list-vertical--halves {
+  @extend %base-vertical-list;
+
+  &.no-border {
+    li {
+      border-top: none;
+      padding-top: 0;
+    }
+  }
+
+  > li {
+    @include media($tablet) {
+      @include span-columns(6 of 12);
+      @include omega(2n);
+
+      @include ie-lte(8) {
+        width: 45%;
+      }
+    }
+    @include media($desktop) {
+      @include omega-reset(2n);
+      @include span-columns(6 of 12);
+      @include omega(2n);
+
+      @include ie-lte(8) {
+        width: 23%;
+      }
+    }
+  }
+}
+
+// List count
+.list-count {
+  counter-reset: standard-counter;
+  > li {
+    vertical-align: top;
+    position: relative;
+    padding-left: rem(80);
+    min-height: rem(90);
+    &:before {
+      content: counter(standard-counter,decimal);
+      counter-increment: standard-counter;
+      display: inline-block;
+      float: left;
+      line-height: $base-heading-leading;
+      text-align: center;
+      width: rem(70);
+      font-weight: 700;
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding-top: 0;
+      font-size: rem(50);
+    }
+  }
+  @include media($tablet) {
+    > li {
+      &:before {
+        padding-top: rem(10);
+      }
+    }
+  }
+  @include media($desktop) {
+    > li {
+      &:before {
+        padding-top: rem(19);
       }
     }
   }
