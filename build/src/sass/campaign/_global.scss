@@ -9,6 +9,10 @@
   @extend h4;
 }
 
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  @include clearfix;
+}
+
 // Utility classes
 // Need descendency to override UI-kit <a> style
 header[role='banner'],
@@ -326,4 +330,13 @@ footer[role='contentinfo'] {
       }
     }
   }
+}
+
+
+// Page currency
+.page-currency {
+  font-size: $small-font-size;
+  margin-top: $medium-spacing;
+  margin-bottom: $small-spacing;
+  color: #6e6e6e;
 }

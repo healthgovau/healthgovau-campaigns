@@ -4741,6 +4741,11 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
 .light {
   font-weight: 400; }
 
+article::after, aside::after, details::after, figcaption::after, figure::after, footer::after, header::after, hgroup::after, main::after, menu::after, nav::after, section::after, summary::after {
+  clear: both;
+  content: "";
+  display: table; }
+
 header[role='banner'] .link--no-decoration,
 body > main .link--no-decoration,
 footer[role='contentinfo'] .link--no-decoration {
@@ -5030,6 +5035,12 @@ footer[role='contentinfo'] {
   @media screen and (min-width: 75em) {
     .list-count > li:before {
       padding-top: 1.1875rem; } }
+
+.page-currency {
+  font-size: 87.5%;
+  margin-top: 1.2em;
+  margin-bottom: 0.8em;
+  color: #6e6e6e; }
 
 .site-nav {
   padding: 0 2em;
