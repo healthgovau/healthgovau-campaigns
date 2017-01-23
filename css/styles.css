@@ -5674,6 +5674,8 @@ section.pre-nav a {
 
 #block-bean-quitenow-partner .list-vertical--fourths > li {
   border-top: 0px; }
+  #block-bean-quitenow-partner .list-vertical--fourths > li a:hover {
+    background-color: inherit; }
 
 section.site-nav #block-menu-menu-quitnow-menu a:hover {
   border-color: black; }
