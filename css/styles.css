@@ -5722,3 +5722,11 @@ footer[role='contentinfo'] .footer-top nav > li {
       -webkit-flex: 0 0 12%;
           -ms-flex: 0 0 12%;
               flex: 0 0 12%; } }
+
+.page-node-16 .content-main p,
+.page-node-11 .content-main p {
+  max-width: 100%; }
+
+.page-node-16 .content-main li,
+.page-node-11 .content-main li {
+  max-width: 100%; }
