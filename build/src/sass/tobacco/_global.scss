@@ -20,12 +20,25 @@ footer[role='contentinfo'] .footer-top nav > li {
   margin-top: $small-spacing;
 }
 
-// Feedback bar
-// .page-feedback {
-//   @extend .band--small;
-//   background: $background-color-dark;
-//   color: #FFF;
-//   button, .button, [role='button']{
-//     @include button-colours($bg-colour, $bg-colour--hover, $bg-colour--active, $text-colour, $text-colour--hover: $text-colour);
-//   }
-// }
+// Custom content
+// Benefits list
+.list-horizontal--benefits {
+  @extend .list-horizontal;
+  h2 {
+    @include h3;
+    margin-top: $small-spacing;
+  }
+  > li {
+    @include media($tablet) {
+      display: flex;
+    }
+
+    figure {
+      display: none;
+      @include media($tablet) {
+        display: block;
+        flex: 0 0 12%;
+      }
+    }
+  }
+}
