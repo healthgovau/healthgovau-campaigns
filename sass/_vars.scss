@@ -21,3 +21,8 @@ $background-colour-dark:          $grey-darkest;
 
 $hero-font-colour:                $black;
 $shadow-colour:                   $grey-dark;
+
+// Hero
+$hero-content-shrink-factor: 0.4; // Height proportion compared to main hero
+$hero-content-y-shift: 0.5; // How far up to move the image for the slice (range 0 - 0.9)
+

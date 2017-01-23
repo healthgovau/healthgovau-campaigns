@@ -4931,15 +4931,15 @@ footer[role='contentinfo'] {
   .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
     height: 180px;
     top: 0;
-    background-position-y: -90px; }
+    background-position-y: -45px; }
     @media screen and (min-width: 768px) {
       .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
         height: 300px;
-        background-position-y: -150px; } }
+        background-position-y: -75px; } }
     @media screen and (min-width: 75em) {
       .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
         height: 400px;
-        background-position-y: -200px; } }
+        background-position-y: -100px; } }
   .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
     max-height: 54px;
     margin-top: 9px; }
@@ -5588,7 +5588,8 @@ header .page-header__logo img {
   padding-top: 0.8em;
   background: #000000; }
   .band--partners img, #block-bean-quitenow-partner img {
-    width: 50%; }
+    width: auto;
+    margin: 0 auto; }
 
 .band--sensitivity, #block-bean-quitnow-sensitivities {
   padding: 0.8em 0;

@@ -57,13 +57,15 @@
     max-width: 100%;
   }
 }
+
 .band--partners {
   @extend .band--small;
   padding-top: $small-spacing;
   background: $black;
   //color: #FFF;
   img {
-    width: 50%;
+    width: auto;
+    margin: 0 auto;
   }
 }
 
