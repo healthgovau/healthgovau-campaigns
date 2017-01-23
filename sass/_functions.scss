@@ -32,3 +32,7 @@
   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'blur\'><feGaussianBlur stdDeviation=\'#{$px}\' /></filter></svg>#blur");
   filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='#{$px}');
 }
+
+@mixin border-top($colour: $border-colour, $size: 1px){
+  border-top: $colour solid $size;
+}

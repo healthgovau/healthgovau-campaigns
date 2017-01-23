@@ -90,3 +90,36 @@
   height: 100%;
   width: 100%;
 }
+
+// Related videos
+.video__list--related {
+  @extend .video__list;
+  @include clearfix;
+  @include fill-parent;
+  overflow: hidden;
+  margin-top: $large-spacing;
+  @include border-top;
+  @include media($tablet) {
+    @include border-top(transparent, 0px);
+  }
+
+  .video__item {
+    @include clearfix;
+  }
+
+  .video__thumb {
+    margin-bottom: 0;
+    @include span-columns(2 of 4);
+    @include media($tablet) {
+      @include fill-parent;
+    }
+  }
+
+  .video__info {
+    @include span-columns(2 of 4);
+    @include media($tablet) {
+      @include fill-parent;
+    }
+  }
+
+}

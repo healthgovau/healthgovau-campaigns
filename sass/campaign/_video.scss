@@ -31,6 +31,12 @@
     }
   }
 
+  .field-name-field-video-thumbnail {
+    img {
+      height: auto;
+    }
+  }
+
   .field-name-field-video-length {
     @extend .video__time;
   }
