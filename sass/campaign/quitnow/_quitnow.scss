@@ -17,6 +17,17 @@ section.pre-nav {
   }
 }
 
+// Partner bar.
+#block-bean-quitenow-partner {
+  @extend .band--partners;
+  .list-vertical--fourths > li {
+    border-top: 0px;
+    a:hover {
+      background-color: inherit;
+    }
+  }
+}
+
 // sensitivities bar.
 #block-bean-quitnow-sensitivities {
   @extend .band--sensitivity;
@@ -34,11 +45,62 @@ section.site-nav {
   }
 }
 
-// Related video block.
-.view-campaign-videos {
-  .list-vertical--thirds {
+// List override
+.list-vertical > li,
+.list-vertical--thirds > li,
+.list-vertical--fourths > li,
+footer[role='contentinfo'] .footer-top nav > li {
+  border-color: $black;
+}
+
+// Lists
+.list-vertical > li,
+.list-vertical--thirds > li,
+.list-vertical--fourths > li {
+  border-top: 0;
+}
+
+.list-vertical > li article,
+.list-vertical--thirds > li article,
+.list-vertical--fourths > li article {
+  margin-top: $small-spacing;
+}
+
+// Custom content
+// Benefits list
+.list-horizontal--benefits {
+  @extend .list-horizontal;
+  h2 {
+    @include h3;
+    margin-top: $small-spacing;
+  }
+  > li {
+    @include media($tablet) {
+      display: flex;
+    }
+
+    figure {
+      display: none;
+      @include media($tablet) {
+        display: block;
+        flex: 0 0 12%;
+      }
+    }
+  }
+}
+
+// Standard page.
+.page-node-16,
+.page-node-11 {
+  .content-main {
+    p {
+      max-width: 100%;
+    }
     li {
-      border-top: 0px;
+      max-width: 100%;
+    }
+    h1 {
+      max-width: 100%;
     }
   }
 }

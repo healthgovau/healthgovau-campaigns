@@ -19,6 +19,13 @@
 // Block view.
 .view-campaign-videos {
 
+  // Removed border-top for all list-vertical.
+  .list-vertical--thirds {
+    li {
+      border-top: 0px;
+    }
+  }
+
   .field-name-field-video-promoted-thumbnail {
     a {
       border: 0px;
