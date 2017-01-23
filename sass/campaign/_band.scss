@@ -70,7 +70,7 @@
 // Senstitivity band
 .band--sensitivity {
   @include pad($small-spacing 0);
-  background: #4a4a4a;
+  background: #000000;
   color: $white;
   p {
     margin: $small-spacing 0;

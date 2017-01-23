@@ -5538,15 +5538,15 @@ header .page-header__logo img {
       .node-type-video .region-content .wrapper .video__list--related div.group-right {
         width: 100%; } }
 
-.band, #block-bean-share-this, .band--primary, .band--small, .page-feedback, .band--partners, .band--pad, .band--secondary, .band--gradient, .node-type-social-media .main {
+.band, #block-bean-share-this, .band--primary, .band--small, .page-feedback, .band--partners, #block-bean-quitenow-partner, .band--pad, .band--secondary, .band--gradient, .node-type-social-media .main {
   padding: 0.8em 0 3.2em;
   width: 100%; }
-  .band::after, #block-bean-share-this::after, .band--primary::after, .band--small::after, .page-feedback::after, .band--partners::after, .band--pad::after, .band--secondary::after, .band--gradient::after, .node-type-social-media .main::after {
+  .band::after, #block-bean-share-this::after, .band--primary::after, .band--small::after, .page-feedback::after, .band--partners::after, #block-bean-quitenow-partner::after, .band--pad::after, .band--secondary::after, .band--gradient::after, .node-type-social-media .main::after {
     clear: both;
     content: "";
     display: table; }
 
-.band--small, .page-feedback, .band--partners {
+.band--small, .page-feedback, .band--partners, #block-bean-quitenow-partner {
   padding: 0; }
 
 .band--pad {
@@ -5584,15 +5584,15 @@ header .page-header__logo img {
     .band--quitline__image {
       max-width: 100%; } }
 
-.band--partners {
+.band--partners, #block-bean-quitenow-partner {
   padding-top: 0.8em;
   background: #000000; }
-  .band--partners img {
+  .band--partners img, #block-bean-quitenow-partner img {
     width: 50%; }
 
 .band--sensitivity, #block-bean-quitnow-sensitivities {
   padding: 0.8em 0;
-  background: #4a4a4a;
+  background: #000000;
   color: #FFFFFF; }
   .band--sensitivity p, #block-bean-quitnow-sensitivities p {
     margin: 0.8em 0; }
@@ -5629,6 +5629,9 @@ header .page-header__logo img {
   max-width: 100%; }
   .page-campaign-videos .content-main li .field-name-field-video-thumbnail img {
     height: auto; }
+
+.view-campaign-videos .list-vertical--thirds li {
+  border-top: 0px; }
 
 .view-campaign-videos .field-name-field-video-promoted-thumbnail a {
   border: 0px; }
@@ -5669,11 +5672,11 @@ section.pre-nav a {
   section.pre-nav a:hover {
     background-color: inherit; }
 
+#block-bean-quitenow-partner .list-vertical--fourths > li {
+  border-top: 0px; }
+
 section.site-nav #block-menu-menu-quitnow-menu a:hover {
   border-color: black; }
 
 section.site-nav #block-menu-menu-quitnow-menu a.is-current {
   border-color: black; }
-
-.view-campaign-videos .list-vertical--thirds li {
-  border-top: 0px; }

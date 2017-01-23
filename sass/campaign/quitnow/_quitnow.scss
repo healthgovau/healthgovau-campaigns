@@ -17,6 +17,14 @@ section.pre-nav {
   }
 }
 
+// Partner bar.
+#block-bean-quitenow-partner {
+  @extend .band--partners;
+  .list-vertical--fourths > li {
+    border-top: 0px;
+  }
+}
+
 // sensitivities bar.
 #block-bean-quitnow-sensitivities {
   @extend .band--sensitivity;
@@ -34,11 +42,3 @@ section.site-nav {
   }
 }
 
-// Related video block.
-.view-campaign-videos {
-  .list-vertical--thirds {
-    li {
-      border-top: 0px;
-    }
-  }
-}
