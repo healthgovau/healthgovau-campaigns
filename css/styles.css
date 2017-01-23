@@ -5588,7 +5588,8 @@ header .page-header__logo img {
   padding-top: 0.8em;
   background: #000000; }
   .band--partners img, #block-bean-quitenow-partner img {
-    width: 50%; }
+    width: auto;
+    margin: 0 auto; }
 
 .band--sensitivity, #block-bean-quitnow-sensitivities {
   padding: 0.8em 0;
