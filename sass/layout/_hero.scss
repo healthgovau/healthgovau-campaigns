@@ -7,6 +7,9 @@ $hero-background-height-mobile: $hero-height-mobile * 1.2;
 $hero-background-height-tablet: $hero-height-tablet * 1.2;
 $hero-background-height-desktop: $hero-height-desktop * 1.2;
 
+// Override hero default
+$hero-content-y-shift: 0.25;
+
 .hero {
   overflow: hidden;
   position: relative;
@@ -67,9 +70,6 @@ $hero-background-height-desktop: $hero-height-desktop * 1.2;
     }
   }
 }
-
-$hero-content-shrink-factor: 0.4; // Height proportion compared to main hero
-$hero-content-y-shift: 0.5; // How far up to move the image for the slice (range 0 - 0.9)
 
 .hero--content {
   @extend .hero;
