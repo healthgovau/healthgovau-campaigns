@@ -5460,9 +5460,9 @@ header .page-header__logo img {
   position: absolute;
   right: 0;
   bottom: 0; }
-  .video__time:before, .view-campaign-videos .field-name-field-video-length:before,
-  .node-type-video .field-name-field-video-length:before {
-    background-image: url("../images/icons/video.svg");
+  .video__time .field-item:before, .view-campaign-videos .field-name-field-video-length .field-item:before,
+  .node-type-video .field-name-field-video-length .field-item:before {
+    background-image: url("../images/../images/icons/video.svg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100% auto;

@@ -60,8 +60,8 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  &:before {
-    background-image: image-url("icons/video.svg");
+  .field-item:before {
+    background-image: image-url("../images/icons/video.svg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100% auto;
