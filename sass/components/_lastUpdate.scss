@@ -1,7 +1,8 @@
-.publish-date {
-  font-size: 0.7rem;
-  line-height: 1.27272727272727;
-  color: #707070;
-  margin-bottom: 24px;
-  text-align: center;
+// Page currency
+.page-currency {
+  font-size: $small-font-size;
+  padding-top: $medium-spacing;
+  margin-bottom: $small-spacing;
+  color: #6e6e6e;
 }
+

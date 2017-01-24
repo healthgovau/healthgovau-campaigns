@@ -64,8 +64,6 @@ function healthgovau_preprocess_page(&$variables) {
  * Implements THEME_preprocess_node().
  */
 function healthgovau_preprocess_node(&$variables) {
-  // Apply the UI KIT list horizontal style to single node display by default.
-  $variables['classes_array'][] = 'list-horizontal';
 
   // Change background color and image for campaign and related content type.
   if ($variables['type'] == 'campaign') {
@@ -273,6 +271,15 @@ function healthgovau_form_alter(&$form, &$form_state, $form_id) {
     // Attach character countdown JS.
     $form['#attached']['js'][] = drupal_get_path('theme', 'healthgovau') . '/js/healthgovau.feedback.js';
   }
+}
+
+/**
+ * Implements hook_js_alter().
+ */
+function healthgovau_js_alter(&$variables) {
+  // Swap out jQuery to use an updated version of the library.
+  $variables['misc/jquery.js']['data'] = drupal_get_path('theme', 'healthgovau') . '/js/jquery.js';
+  $variables['misc/jquery.js']['version'] = '3.1.1';
 }
 
 /**

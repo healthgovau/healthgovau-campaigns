@@ -5115,6 +5115,9 @@ form button, form .modal .modal-trigger, .modal form .modal-trigger, form .butto
   text-decoration: none;
   font-weight: 700; }
 
+html {
+  margin-bottom: 0px !important; }
+
 iframe {
   position: absolute;
   width: 100%;
@@ -5122,12 +5125,11 @@ iframe {
   top: 0;
   left: 0; }
 
-.publish-date {
-  font-size: 0.7rem;
-  line-height: 1.27272727272727;
-  color: #707070;
-  margin-bottom: 24px;
-  text-align: center; }
+.page-currency {
+  font-size: 87.5%;
+  padding-top: 1.2em;
+  margin-bottom: 0.8em;
+  color: #6e6e6e; }
 
 body a {
   color: #313131;
@@ -5622,10 +5624,6 @@ header .page-header__logo img {
 .node-type-video .view-mode-full div.group-right {
   margin-right: 0px; }
 
-.node-type-video .view-mode-full div.group-footer {
-  padding-top: 20px;
-  font-size: 0.5em; }
-
 .page-campaign-videos .region-content .wrapper,
 .node-type-video .region-content .wrapper {
   min-width: 0px; }
@@ -5796,3 +5794,6 @@ footer[role='contentinfo'] .footer-top nav > li {
 .hero-med
 .page-node-11 .content-main .site-title {
   max-width: 100%; }
+
+.field-name-field-campaign {
+  display: none; }

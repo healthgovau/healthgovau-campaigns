@@ -12,8 +12,10 @@
 <?php endif; ?>
 
 <?php if (!empty($figure)): ?>
-<figure class="video__thumb">
-  <?php print $figure; ?>
+<figure>
+  <div class="video__thumb">
+    <?php print $figure; ?>
+  </div>
 </figure>
 <?php endif; ?>
 
