@@ -4817,60 +4817,31 @@ footer[role='contentinfo'] {
         margin: 0 0 0 1.2em; } }
 
 .page-header {
-  padding-top: 0px; }
-  @media screen and (min-width: 420px) {
-    .page-header .page-header__logo {
-      float: left;
-      display: block;
-      margin-right: 4.17655%;
-      width: 100%; }
-      .page-header .page-header__logo:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 768px) {
-    .page-header .page-header__logo {
-      float: left;
-      display: block;
-      margin-right: 2.74614%;
-      width: 48.62693%; }
-      .page-header .page-header__logo:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 75em) {
-    .page-header .page-header__logo {
-      float: left;
-      display: block;
-      margin-right: 2.04556%;
-      width: 48.97722%; }
-      .page-header .page-header__logo:last-child {
-        margin-right: 0; } }
-  .page-header .page-header__logo a:hover {
-    background-color: inherit; }
-  .page-header .region-header {
-    padding-right: 3em;
-    margin-top: 20px; }
-    @media screen and (min-width: 420px) {
-      .page-header .region-header {
-        float: left;
-        display: block;
-        margin-right: 4.17655%;
-        width: 100%; }
-        .page-header .region-header:last-child {
-          margin-right: 0; } }
+  padding-bottom: 1.6em;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #FFFFFF; }
+
+.page-header__logo {
+  padding: 0; }
+  .page-header__logo .logo img {
+    background-size: contain;
+    display: inline-block;
+    width: 200px;
+    height: 48px; }
     @media screen and (min-width: 768px) {
-      .page-header .region-header {
-        float: left;
-        display: block;
-        margin-right: 2.74614%;
-        width: 48.62693%; }
-        .page-header .region-header:last-child {
-          margin-right: 0; } }
+      .page-header__logo .logo img {
+        width: 227px;
+        height: 55px; } }
     @media screen and (min-width: 75em) {
-      .page-header .region-header {
-        float: left;
-        display: block;
-        margin-right: 2.04556%;
-        width: 48.97722%; }
-        .page-header .region-header:last-child {
-          margin-right: 0; } }
+      .page-header__logo .logo img {
+        width: 300px;
+        height: 72px; } }
+
+header[role='banner'] a.logo {
+  border-bottom: none; }
+  header[role='banner'] a.logo:hover, header[role='banner'] a.logo:focus {
+    background-color: transparent; }
 
 .hero, .hero--content, .hero--content-blur, .hero--content-colour {
   overflow: hidden;

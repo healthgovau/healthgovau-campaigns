@@ -15,7 +15,6 @@
         var iframe = $('<iframe/>', { 'title': 'YouTube video player', 'id': 'youtube-iframe', 'allowfullscreen': 'allowfullscreen', 'frameborder': '0', 'aria-live': 'assertive', 'src': iframe_url });
         // Replace the YouTube thumbnail with YouTube HTML5 Player
         $('.field-name-field-video-length', context).hide();
-        console.log(iframe);
         $(this).replaceWith(iframe);
         $("iframe", context).wrap( '<div class="video"><div class="video-wrapper"></div></div>' );
       });

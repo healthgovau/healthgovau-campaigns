@@ -339,5 +339,5 @@ function _healthgovau_campaign_breadcrumb($node) {
 function _healthgovau_campaign_hero_logo($node, &$variables) {
   $image_url = file_create_url($node->field_campaign_hero_logo[LANGUAGE_NONE][0]['uri']);
   $variables['logo_img'] = $image_url;
-  $variables['logo_url'] = drupal_get_path_alias('node/' . $node->nid);
+  $variables['logo_url'] = '/' . drupal_get_path_alias('node/' . $node->nid);
 }
