@@ -5511,10 +5511,10 @@ header .page-header__logo img {
       .node-type-video .region-content .wrapper .video__list--related div.group-right {
         width: 100%; } }
 
-.band, #block-bean-share-this, .band--primary, .band--small, .page-feedback, .band--partners, #block-bean-quitenow-partner, .band--pad, .band--secondary, .band--gradient, .node-type-social-media .main {
+.band, #block-bean-share-this, .band--primary, .node-type-campaign #block-views-campaign-videos-block, .band--small, .page-feedback, .band--partners, #block-bean-quitenow-partner, .band--pad, .band--secondary, .band--gradient, .node-type-social-media .main {
   padding: 0.8em 0 3.2em;
   width: 100%; }
-  .band::after, #block-bean-share-this::after, .band--primary::after, .band--small::after, .page-feedback::after, .band--partners::after, #block-bean-quitenow-partner::after, .band--pad::after, .band--secondary::after, .band--gradient::after, .node-type-social-media .main::after {
+  .band::after, #block-bean-share-this::after, .band--primary::after, .node-type-campaign #block-views-campaign-videos-block::after, .band--small::after, .page-feedback::after, .band--partners::after, #block-bean-quitenow-partner::after, .band--pad::after, .band--secondary::after, .band--gradient::after, .node-type-social-media .main::after {
     clear: both;
     content: "";
     display: table; }
@@ -5525,13 +5525,13 @@ header .page-header__logo img {
 .band--pad {
   padding: 3.2em 0; }
 
-.band--primary {
+.band--primary, .node-type-campaign #block-views-campaign-videos-block {
   background-color: #EEE; }
 
 .band--secondary {
   background-color: #DDD; }
 
-.band--texture, .node-type-campaign #block-views-campaign-videos-block {
+.band--texture {
   background-color: #eee;
   background-image: url(../images/bg-textures/bg-header-test.svg);
   background-position: 100% 0;

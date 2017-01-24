@@ -1,6 +1,6 @@
 .node-type-campaign {
   #block-views-campaign-videos-block {
-    @extend .band--texture;
+    @extend .band--primary;
     .view-mode-compact {
       div.group-left {
         @extend .video__container;
