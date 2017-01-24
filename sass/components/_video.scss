@@ -60,8 +60,8 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  .field-item:before {
-    background-image: image-url("../images/icons/video.svg");
+  &:before {
+    background-image: image-url("icons/video.svg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -73,6 +73,12 @@
     margin-left: -5px;
     margin-bottom: -2px;
   }
+}
+
+.video__date {
+  font-size: $small-font-size;
+  margin-bottom: $small-spacing;
+  color: #6e6e6e;
 }
 
 .video__play-button {

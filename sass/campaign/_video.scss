@@ -17,9 +17,10 @@
 }
 
 // Block view.
-.view-campaign-videos {
+.view-campaign-videos,
+.node-type-video {
 
-  // Removed border-top for all list-vertical.
+  // Removed border-top
   .list-vertical--thirds {
     li {
       border-top: 0px;
@@ -54,23 +55,26 @@
     }
   }
 
+  .field-name-post-date {
+    @extend .video__date;
+  }
+
   div.group-top-left {
     @extend .video__container;
   }
   div.group-top-right {
     @extend .video__info;
   }
+
+  div.group-footer {
+    padding-top: 20px;
+    font-size: 0.5em;
+  }
 }
 
-// Node view.
 .node-type-video {
-  .view-mode-full {
-    div.group-left {
-      @extend .video__container;
-    }
-    div.group-right {
-      margin-right: 0px;
-      @extend .video__info;
-    }
+  .ds-wrapper {
+    @extend .wrapper;
+
   }
 }
