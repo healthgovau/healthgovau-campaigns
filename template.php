@@ -133,6 +133,17 @@ function healthgovau_preprocess_entity(&$variables) {
       $variables['sm_page'] = $sm_page;
     }
 
+    // For share this block.
+    if ($bean->delta == 'share-this') {
+      Global $base_url;
+      $current_url = $base_url . '/' . drupal_get_path_alias(current_path());
+      $current_title = drupal_get_title();
+      $variables['field_bean_body'][0]['value'] = str_replace('[current-page:title]', $current_title, $variables['field_bean_body'][0]['value']);
+      $variables['field_bean_body'][0]['value'] = str_replace('[current-page:url]', $current_url, $variables['field_bean_body'][0]['value']);
+      $variables['content']['field_bean_body'][0]['#markup'] = $variables['field_bean_body'][0]['value'];
+    }
+
+    // For hero logo block.
     if ($bean->delta == 'campaign-hero-logo') {
       // Get the logo image for hero.
       if (arg(0) == 'node' && is_numeric(arg(1))) {
