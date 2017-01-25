@@ -15,4 +15,30 @@ function healthgovau_form_system_theme_settings_alter(&$form, &$form_state, $for
     return;
   }
 
+  $form['ga'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Google analytics settings'),
+  );
+  $form['ga']['env'] = array(
+    '#type' => 'select',
+    '#title' => 'Environment',
+    '#options' => array(
+      'dev' => 'Development',
+      'stage' => 'Staging',
+      'prod' => 'Production',
+    ),
+    '#default_value' => theme_get_setting('env'),
+  );
+  $form['ga']['ga_auth'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Google analytics token'),
+    '#default_value' => theme_get_setting('ga_auth'),
+    '#size' => 255,
+  );
+  $form['ga']['ga_id'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Google analytics ID'),
+    '#default_value' => theme_get_setting('ga_id'),
+    '#size' => 255,
+  );
 }
