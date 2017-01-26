@@ -171,22 +171,6 @@ footer[role='contentinfo'] .footer-top nav > li {
   }
 }
 
-// Standard page.
-.page-node-16,
-.page-node-11 {
-  .content-main {
-    p {
-      max-width: 100%;
-    }
-    li {
-      max-width: 100%;
-    }
-    h1 {
-      max-width: 100%;
-    }
-  }
-}
-
 // Hide campaign field.
 .field-name-field-campaign {
   display: none;

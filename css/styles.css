@@ -4978,7 +4978,6 @@ header[role='banner'] a.logo {
 
 @media screen and (min-width: 420px) {
   .node-type-video main .content-main,
-  .node-type-campaign-standard-page main .content-main,
   .page-search404 main .content-main,
   .page-node-1 main .content-main {
     float: left;
@@ -4986,7 +4985,6 @@ header[role='banner'] a.logo {
     margin-right: 4.17655%;
     width: 100%; }
     .node-type-video main .content-main:last-child,
-    .node-type-campaign-standard-page main .content-main:last-child,
     .page-search404 main .content-main:last-child,
     .page-node-1 main .content-main:last-child {
       margin-right: 0; } }
@@ -5804,38 +5802,6 @@ footer[role='contentinfo'] .footer-top nav > li {
   @media screen and (min-width: 75em) {
     .list-count > li:before {
       padding-top: 1.1875rem; } }
-
-.page-node-16 .content-main p,
-.page-node-11 .content-main p {
-  max-width: 100%; }
-
-.page-node-16 .content-main li,
-.page-node-11 .content-main li {
-  max-width: 100%; }
-
-.page-node-16 .content-main h1, .page-node-16 .content-main .hero .site-title, .hero .page-node-16 .content-main .site-title, .page-node-16 .content-main .hero--content .site-title, .hero--content .page-node-16 .content-main .site-title, .page-node-16 .content-main .hero--content-blur .site-title, .hero--content-blur .page-node-16 .content-main .site-title, .page-node-16 .content-main .hero--content-colour .site-title, .hero--content-colour .page-node-16 .content-main .site-title, .page-node-16 .content-main
-.hero-sml .site-title,
-.hero-sml .page-node-16 .content-main .site-title, .page-node-16 .content-main
-.hero-med .site-title,
-.hero-med .page-node-16 .content-main .site-title,
-.page-node-11 .content-main h1,
-.page-node-11 .content-main .hero .site-title, .hero
-.page-node-11 .content-main .site-title,
-.page-node-11 .content-main .hero--content .site-title, .hero--content
-.page-node-11 .content-main .site-title,
-.page-node-11 .content-main .hero--content-blur .site-title, .hero--content-blur
-.page-node-11 .content-main .site-title,
-.page-node-11 .content-main .hero--content-colour .site-title, .hero--content-colour
-.page-node-11 .content-main .site-title,
-.page-node-11 .content-main
-.hero-sml .site-title,
-.hero-sml
-.page-node-11 .content-main .site-title,
-.page-node-11 .content-main
-.hero-med .site-title,
-.hero-med
-.page-node-11 .content-main .site-title {
-  max-width: 100%; }
 
 .field-name-field-campaign {
   display: none; }
