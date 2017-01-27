@@ -4956,6 +4956,9 @@ header[role='banner'] a.logo {
   .node-type-campaign section.highlight:last-child {
     margin-right: 0; }
 
+main {
+  -ms-flex: inherit; }
+
 .node-type-campaign main {
   padding: 0px;
   max-width: 100%; }
