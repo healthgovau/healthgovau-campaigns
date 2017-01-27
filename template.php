@@ -16,7 +16,7 @@ function healthgovau_preprocess_html(&$variables) {
   $env = theme_get_setting('env');
   $auth = theme_get_setting('ga_auth');
   $id = theme_get_setting('ga_id');
-  
+
   switch ($env) {
     case 'prod': {
       $js = '(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({\'gtm.start\':
@@ -240,17 +240,18 @@ function healthgovau_breadcrumb($variables) {
         }
       // @todo: add other related content types in.
       case 'video':
-        return _healthgovau_campaign_breadcrumb($node);
+        //return _healthgovau_campaign_breadcrumb($node);
       case 'campaign_standard_page':
-        return _healthgovau_campaign_breadcrumb($node);
+        //return _healthgovau_campaign_breadcrumb($node);
       case 'social_media':
-        return _healthgovau_campaign_breadcrumb($node);
+        //return _healthgovau_campaign_breadcrumb($node);
     }
   }
   else {
     // This is not a node page.
     if (arg(0) == 'campaign' && is_numeric(arg(1))) {
       // This is a campaign related view page.
+      /**
       $campaign = node_load(arg(1));
 
       $breadcrumb = array(
@@ -266,6 +267,7 @@ function healthgovau_breadcrumb($variables) {
       $breadcrumb_list .= '</ul>';
       $output .= '<nav class="breadcrumbs" aria-label="breadcrumb"><div class="wrapper">' . $breadcrumb_list . '</div></nav>';
       return $output;
+       **/
     }
     else {
       // Hide breadcrumb for 404 page.
