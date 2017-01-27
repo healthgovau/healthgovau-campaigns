@@ -109,13 +109,17 @@
     @include border-top(transparent, 0px);
   }
 
-  .video__item {
+  .video__item,
+  li.views-row {
     @include clearfix;
   }
 
   .video__thumb {
     margin-bottom: 0;
     @include span-columns(2 of 4);
+    // Temp fixed margin-right issue.
+    // todo: find our why the last-child is overriding.
+    margin-right: 50px !important;
     @include media($tablet) {
       @include fill-parent;
     }
@@ -126,6 +130,10 @@
     @include media($tablet) {
       @include fill-parent;
     }
+  }
+
+  article {
+    @extend .video__info;
   }
 
 }
