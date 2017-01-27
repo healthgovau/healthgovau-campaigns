@@ -119,7 +119,7 @@
     @include span-columns(2 of 4);
     // Temp fixed margin-right issue.
     // todo: find our why the last-child is overriding.
-    margin-right: 50px !important;
+    margin-right: 8.71718% !important;
     @include media($tablet) {
       @include fill-parent;
     }

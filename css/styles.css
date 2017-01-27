@@ -5519,7 +5519,7 @@ header .page-header__logo img {
     display: block;
     margin-right: 8.71718%;
     width: 45.64141%;
-    margin-right: 50px !important; }
+    margin-right: 8.71718% !important; }
     .video__list--related .video__thumb:last-child {
       margin-right: 0; }
     @media screen and (min-width: 768px) {
@@ -5692,7 +5692,7 @@ section.pre-nav a {
   #block-bean-quitenow-partner .list-vertical--fourths > li a:hover {
     background-color: inherit; }
   #block-bean-quitenow-partner .list-vertical--fourths > li img {
-    height: 144px; }
+    height: 130px; }
 
 #block-bean-quitenow-partner li.last-element {
   margin-top: 50px; }
