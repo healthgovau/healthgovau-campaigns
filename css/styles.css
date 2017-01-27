@@ -4957,7 +4957,7 @@ header[role='banner'] a.logo {
     margin-right: 0; }
 
 body main {
-  -ms-flex: inherit; }
+  -ms-flex: none; }
 
 .node-type-campaign main {
   padding: 0px;
