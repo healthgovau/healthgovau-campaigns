@@ -5686,6 +5686,11 @@ section.pre-nav a {
   border-top: 0px; }
   #block-bean-quitenow-partner .list-vertical--fourths > li a:hover {
     background-color: inherit; }
+  #block-bean-quitenow-partner .list-vertical--fourths > li img {
+    height: 144px; }
+
+#block-bean-quitenow-partner li.last-element {
+  margin-top: 50px; }
 
 section.site-nav #block-menu-menu-quitnow-menu a:hover {
   border-color: black; }

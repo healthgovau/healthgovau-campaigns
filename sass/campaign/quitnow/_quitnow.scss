@@ -25,6 +25,12 @@ section.pre-nav {
     a:hover {
       background-color: inherit;
     }
+    img {
+      height: 144px;
+    }
+  }
+  li.last-element {
+    margin-top: 50px;
   }
 }
 
