@@ -5669,6 +5669,9 @@ header .page-header__logo img {
   padding-top: 20px;
   font-size: 0.5em; }
 
+.node-type-video .ds-wrapper {
+  padding: 0px; }
+
 .page-campaign-videos .region-content .wrapper, .page-campaign-videos .region-content .node-type-video .ds-wrapper, .node-type-video .page-campaign-videos .region-content .ds-wrapper,
 .node-type-video .region-content .wrapper, .node-type-video .region-content .ds-wrapper {
   min-width: 0px; }
