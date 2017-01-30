@@ -39,6 +39,14 @@ j=d.createElement(s),dl=l!=\'dataLayer\'?\'&l=\'+l:\'\';j.async=true;j.src=
       $variables['tag_manager'] = '<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=' . $id . '&gtm_auth=' . $auth . '&gtm_preview=env-7&gtm_cookies_win=x"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>';
   }
+
+  // Add font scripts.
+  drupal_add_js('ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js', 'external');
+  drupal_add_js('WebFont.load({
+	  google: {
+	    families: [\'Open+Sans:400italic,700,400:latin,latin-ext\']
+	  }
+	});', 'inline');
 }
 
 /**
