@@ -5362,41 +5362,45 @@ header .page-header__logo img {
   display: block;
   margin-right: 0; }
 
-.video__container, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left, .node-type-video .view-mode-full div.group-left, .page-campaign-videos .content-main li div.group-left, .view-campaign-videos div.group-top-left,
-.node-type-video div.group-top-left, .page-campaign-videos .region-content .wrapper div.group-left, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-left,
-.node-type-video .region-content .wrapper div.group-left, .node-type-video .region-content .ds-wrapper div.group-left {
-  float: left;
-  display: block;
-  margin-right: 8.71718%;
-  width: 100%; }
-  .video__container:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left:last-child, .node-type-video .view-mode-full div.group-left:last-child, .page-campaign-videos .content-main li div.group-left:last-child, .view-campaign-videos div.group-top-left:last-child,
-  .node-type-video div.group-top-left:last-child, .page-campaign-videos .region-content .wrapper div.group-left:last-child, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-left:last-child,
-  .node-type-video .region-content .wrapper div.group-left:last-child, .node-type-video .region-content .ds-wrapper div.group-left:last-child {
-    margin-right: 0; }
-  @media screen and (min-width: 768px) {
-    .video__container, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left, .node-type-video .view-mode-full div.group-left, .page-campaign-videos .content-main li div.group-left, .view-campaign-videos div.group-top-left,
-    .node-type-video div.group-top-left, .page-campaign-videos .region-content .wrapper div.group-left, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-left,
-    .node-type-video .region-content .wrapper div.group-left, .node-type-video .region-content .ds-wrapper div.group-left {
-      float: left;
-      display: block;
-      margin-right: 2.74614%;
-      width: 48.62693%; }
-      .video__container:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left:last-child, .node-type-video .view-mode-full div.group-left:last-child, .page-campaign-videos .content-main li div.group-left:last-child, .view-campaign-videos div.group-top-left:last-child,
-      .node-type-video div.group-top-left:last-child, .page-campaign-videos .region-content .wrapper div.group-left:last-child, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-left:last-child,
-      .node-type-video .region-content .wrapper div.group-left:last-child, .node-type-video .region-content .ds-wrapper div.group-left:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 75em) {
-    .video__container, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left, .node-type-video .view-mode-full div.group-left, .page-campaign-videos .content-main li div.group-left, .view-campaign-videos div.group-top-left,
-    .node-type-video div.group-top-left, .page-campaign-videos .region-content .wrapper div.group-left, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-left,
-    .node-type-video .region-content .wrapper div.group-left, .node-type-video .region-content .ds-wrapper div.group-left {
-      float: left;
-      display: block;
-      margin-right: 2.04556%;
-      width: 61.73292%; }
-      .video__container:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left:last-child, .node-type-video .view-mode-full div.group-left:last-child, .page-campaign-videos .content-main li div.group-left:last-child, .view-campaign-videos div.group-top-left:last-child,
-      .node-type-video div.group-top-left:last-child, .page-campaign-videos .region-content .wrapper div.group-left:last-child, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-left:last-child,
-      .node-type-video .region-content .wrapper div.group-left:last-child, .node-type-video .region-content .ds-wrapper div.group-left:last-child {
-        margin-right: 0; } }
+@media screen and (min-width: 420px) {
+  .video__container, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left, .node-type-video .view-mode-full div.group-left, .page-campaign-videos .content-main li div.group-left, .view-campaign-videos div.group-top-left,
+  .node-type-video div.group-top-left, .page-campaign-videos .region-content .wrapper div.group-left, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-left,
+  .node-type-video .region-content .wrapper div.group-left, .node-type-video .region-content .ds-wrapper div.group-left {
+    float: left;
+    display: block;
+    margin-right: 8.71718%;
+    width: 100%;
+    float: none; }
+    .video__container:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left:last-child, .node-type-video .view-mode-full div.group-left:last-child, .page-campaign-videos .content-main li div.group-left:last-child, .view-campaign-videos div.group-top-left:last-child,
+    .node-type-video div.group-top-left:last-child, .page-campaign-videos .region-content .wrapper div.group-left:last-child, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-left:last-child,
+    .node-type-video .region-content .wrapper div.group-left:last-child, .node-type-video .region-content .ds-wrapper div.group-left:last-child {
+      margin-right: 0; } }
+
+@media screen and (min-width: 768px) {
+  .video__container, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left, .node-type-video .view-mode-full div.group-left, .page-campaign-videos .content-main li div.group-left, .view-campaign-videos div.group-top-left,
+  .node-type-video div.group-top-left, .page-campaign-videos .region-content .wrapper div.group-left, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-left,
+  .node-type-video .region-content .wrapper div.group-left, .node-type-video .region-content .ds-wrapper div.group-left {
+    float: left;
+    display: block;
+    margin-right: 2.74614%;
+    width: 48.62693%; }
+    .video__container:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left:last-child, .node-type-video .view-mode-full div.group-left:last-child, .page-campaign-videos .content-main li div.group-left:last-child, .view-campaign-videos div.group-top-left:last-child,
+    .node-type-video div.group-top-left:last-child, .page-campaign-videos .region-content .wrapper div.group-left:last-child, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-left:last-child,
+    .node-type-video .region-content .wrapper div.group-left:last-child, .node-type-video .region-content .ds-wrapper div.group-left:last-child {
+      margin-right: 0; } }
+
+@media screen and (min-width: 75em) {
+  .video__container, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left, .node-type-video .view-mode-full div.group-left, .page-campaign-videos .content-main li div.group-left, .view-campaign-videos div.group-top-left,
+  .node-type-video div.group-top-left, .page-campaign-videos .region-content .wrapper div.group-left, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-left,
+  .node-type-video .region-content .wrapper div.group-left, .node-type-video .region-content .ds-wrapper div.group-left {
+    float: left;
+    display: block;
+    margin-right: 2.04556%;
+    width: 61.73292%; }
+    .video__container:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left:last-child, .node-type-video .view-mode-full div.group-left:last-child, .page-campaign-videos .content-main li div.group-left:last-child, .view-campaign-videos div.group-top-left:last-child,
+    .node-type-video div.group-top-left:last-child, .page-campaign-videos .region-content .wrapper div.group-left:last-child, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-left:last-child,
+    .node-type-video .region-content .wrapper div.group-left:last-child, .node-type-video .region-content .ds-wrapper div.group-left:last-child {
+      margin-right: 0; } }
 
 .video__info, .video__list--related article, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .node-type-video .view-mode-full div.group-right, .page-campaign-videos .content-main li div.group-right, .view-campaign-videos div.group-top-right,
 .node-type-video div.group-top-right, .page-campaign-videos .region-content .wrapper div.group-right, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-right,

@@ -1,6 +1,9 @@
 // Video block
 .video__container {
-  @include span-columns(4 of 4);
+  @include media($mobile) {
+    @include span-columns(4 of 4);
+    float: none;
+  }
 
   @include media($tablet) {
     @include span-columns(6 of 12);
