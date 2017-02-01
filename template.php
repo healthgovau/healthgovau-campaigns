@@ -41,7 +41,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
 
   // Add font scripts.
-  drupal_add_js('ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js', 'external');
+  drupal_add_js('//ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js', 'external');
   drupal_add_js('WebFont.load({
 	  google: {
 	    families: [\'Open+Sans:400italic,700,400:latin,latin-ext\']

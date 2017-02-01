@@ -41,7 +41,7 @@ Drupal.behaviors.healthgovauCampaign = {
         var windowInnerHeight = window.innerHeight;
         var plxBackgroundTopToWindowTop = plxBackgroundTopToPageTop - windowTopToPageTop;
         var plxBackgroundTopToWindowBottom = windowInnerHeight - plxBackgroundTopToWindowTop;
-        var plxSpeed = 0.35;
+        var plxSpeed = 0.32;
 
         plxBackground.css('top', - (plxWindowTopToWindowTop * plxSpeed) + 'px');
       }
