@@ -12,6 +12,11 @@ body main {
       display: none;
     }
     @include media($mobile) {
+      .inline-tab-nav,
+      .workbench-info-block {
+        max-width: 75em;
+        margin: auto;
+      }
       @include span-columns(8 of 8);
     }
   }

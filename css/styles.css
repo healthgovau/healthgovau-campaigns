@@ -4976,6 +4976,10 @@ body main {
     display: block;
     margin-right: 4.17655%;
     width: 100%; }
+    .node-type-campaign main .content-main .inline-tab-nav,
+    .node-type-campaign main .content-main .workbench-info-block {
+      max-width: 75em;
+      margin: auto; }
     .node-type-campaign main .content-main:last-child {
       margin-right: 0; } }
 
@@ -5397,14 +5401,8 @@ header .page-header__logo img {
 .video__info, .video__list--related article, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .node-type-video .view-mode-full div.group-right, .page-campaign-videos .content-main li div.group-right, .view-campaign-videos div.group-top-right,
 .node-type-video div.group-top-right, .page-campaign-videos .region-content .wrapper div.group-right, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-right,
 .node-type-video .region-content .wrapper div.group-right, .node-type-video .region-content .ds-wrapper div.group-right {
-  float: left;
-  display: block;
-  margin-right: 8.71718%;
-  width: 100%; }
-  .video__info:last-child, .video__list--related article:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right:last-child, .node-type-video .view-mode-full div.group-right:last-child, .page-campaign-videos .content-main li div.group-right:last-child, .view-campaign-videos div.group-top-right:last-child,
-  .node-type-video div.group-top-right:last-child, .page-campaign-videos .region-content .wrapper div.group-right:last-child, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-right:last-child,
-  .node-type-video .region-content .wrapper div.group-right:last-child, .node-type-video .region-content .ds-wrapper div.group-right:last-child {
-    margin-right: 0; }
+  width: 100%;
+  margin-top: 1.2em; }
   @media screen and (min-width: 768px) {
     .video__info, .video__list--related article, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .node-type-video .view-mode-full div.group-right, .page-campaign-videos .content-main li div.group-right, .view-campaign-videos div.group-top-right,
     .node-type-video div.group-top-right, .page-campaign-videos .region-content .wrapper div.group-right, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-right,
@@ -5412,7 +5410,8 @@ header .page-header__logo img {
       float: left;
       display: block;
       margin-right: 2.74614%;
-      width: 48.62693%; }
+      width: 48.62693%;
+      margin-top: 0; }
       .video__info:last-child, .video__list--related article:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right:last-child, .node-type-video .view-mode-full div.group-right:last-child, .page-campaign-videos .content-main li div.group-right:last-child, .view-campaign-videos div.group-top-right:last-child,
       .node-type-video div.group-top-right:last-child, .page-campaign-videos .region-content .wrapper div.group-right:last-child, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-right:last-child,
       .node-type-video .region-content .wrapper div.group-right:last-child, .node-type-video .region-content .ds-wrapper div.group-right:last-child {
@@ -5670,6 +5669,7 @@ header .page-header__logo img {
   font-size: 0.5em; }
 
 .node-type-video .ds-wrapper {
+  clear: both;
   padding: 0px; }
 
 .page-campaign-videos .region-content .wrapper, .page-campaign-videos .region-content .node-type-video .ds-wrapper, .node-type-video .page-campaign-videos .region-content .ds-wrapper,
@@ -5695,7 +5695,7 @@ section.pre-nav a {
   #block-bean-quitenow-partner .list-vertical--fourths > li a:hover {
     background-color: inherit; }
   #block-bean-quitenow-partner .list-vertical--fourths > li img {
-    height: 130px; }
+    max-height: 130px; }
 
 #block-bean-quitenow-partner li.last-element {
   margin-top: 50px; }

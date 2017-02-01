@@ -75,6 +75,7 @@
 .node-type-video {
   .ds-wrapper {
     @extend .wrapper;
+    clear: both;
     padding: 0px;
   }
 }
