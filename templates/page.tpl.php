@@ -66,11 +66,9 @@ $bottom = render($page['bottom']);
   <?php if ($navigation): ?>
     <div class="sticky-nav">
       <section class="site-nav">
-        <div class="wrapper">
-          <nav class="site-nav__wrapper">
-            <?php print render($page['navigation']); ?>
-          </nav>
-        </div>
+        <nav class="site-nav__wrapper">
+          <?php print render($page['navigation']); ?>
+        </nav>
       </section>
     </div>
   <?php endif; ?>
