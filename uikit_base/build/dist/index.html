@@ -1,0 +1,221 @@
+<!-- Header -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/css/ui-kit.css"/>
+	<title>Base theme for govCMS/UI-kit</title>
+
+	<!--[if IE 8]><link href="/css/ui-kit/ui-kit-ie8.css" rel="stylesheet" type="text/css"><![endif]-->
+	<!--[if IE 7]><link href="/css/ui-kit/ui-kit-ie7.css" rel="stylesheet" type="text/css"><![endif]-->
+
+	<!--[if lt IE 9]>
+	<script type='text/javascript' src='//code.jquery.com/jquery-1.12.4.min.js'></script>
+	<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js'></script>
+	<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js'></script>
+	<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js'></script>
+	<![endif]-->
+
+	<script type="text/javascript" src="/js/ui-kit.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+	<script>
+	WebFont.load({
+	  google: {
+	    families: ['Open+Sans:400italic,700,400:latin,latin-ext']
+	  }
+	});
+	</script>
+
+</head>
+<body><nav class="skip-to">
+  <a href="#content">Skip to main content</a>
+  <a href="#nav">Skip to section navigation</a>
+</nav><!--<section class="govau--header">
+  <div class="wrapper">
+    <div class="govau--logo">
+      <a href="/" class="logo">Global navigation</a>
+      <span class="badge--default">draft</span>
+    </div>
+    <nav class="global-nav" aria-label="global navigation">
+      <ul>
+        <li><a href="#">Global nav</a></li>
+        <li><a href="#">Global nav</a></li>
+        <li><a href="#">Global nav</a></li>
+        <li><a href="#">Global nav</a></li>
+        <li><a href="#">Global nav</a></li>
+        <li><a href="#">Global nav</a></li>
+      </ul>
+    </nav>
+  </div>
+</section>-->
+<header role="banner">
+  <section class="page-header">
+    <div class="wrapper">
+      <div class="page-header__logo">
+        <a href="/" class="logo">Site title/logo/crest</a>
+      </div>
+      <div class="site-nav">
+        <nav class="site-nav__wrapper">
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="#">Site nav 1</a>
+            </li>
+            <li>
+              <a href="#">Site nav 2</a>
+            </li>
+            <li>
+              <a href="#">Site nav 3</a>
+            </li>
+            <li>
+              <a href="#">Site nav 4</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </section>
+</header>
+<!-- Hero -->
+<div class="hero">
+  <div class="wrapper">
+    <h1>Base theme for govCMS using the UI-Kit</h1>
+    <p>This is a prototype boilerplate to aid the development of a base theme for govCMS using the DTA's <a href="https://gov-au-ui-kit.apps.staging.digital.gov.au/">UI-kit</a></p>
+  </div>
+</div>
+<!-- Breadcrumbs -->
+<nav class="breadcrumbs" aria-label="breadcrumb">
+  <div class="wrapper">
+    <ul>
+      <li><a href="/" title="Home">Home</a></li>
+      <li><a href="#" title="Menu1">Breadcrumb 1</a></li>
+      <li>Breadcrumb 2</li>
+    </ul>
+  </div>
+</nav>
+<!-- Main -->
+<main role="main">
+  <!-- Local navigation -->
+  <aside class="sidebar" id="nav">
+    <!-- ========== Nav ========== -->
+    <nav class="local-nav" aria-label="main navigation">
+      <h1 class="is-visuallyhidden">Menu</h1>
+      <ul>
+        <li>
+          <a href="index.html" class="is-active">Example sidebar</a>
+          <ul>
+            <li>
+              <a href="#">Menu item</a>
+            </li>
+            <li>
+              <a href="#">Menu item</a>
+            </li>
+            <li>
+              <a href="#">Menu item</a>
+            </li>
+            <li>
+              <a href="#">Menu item</a>
+            </li>
+            <li>
+              <a href="#">Menu item</a>
+            </li>
+            <li>
+              <a href="#">Menu item</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </aside>  <!-- Content -->
+  <article class="content-main" id="content">
+    <nav class="index-links">
+      <h2>In this section</h2>
+      <ul>
+        <li><a href="#anchor1">What is this prototype?</a></li>
+        <li><a href="#anchor2">How to use it</a></li>
+        <li><a href="#anchor3">Base theme vs sub-theme</a></li>
+        <li><a href="#anchor4">Boilerplate</a></li>
+      </ul>
+    </nav>
+    <h2 id="anchor1">What is this prototype?</h2>
+    <p>This prototype is part of a govCMS theme and exists as a playground for developing pages and layouts based on the UI-kit.</p>
+    <p>The package contains:
+      <ul>
+        <li>This prototype with associated tooling; and</li>
+        <li>An associated govCMS theme with similar tooling</li>
+      </ul>
+      </p>
+
+    <h2 id="anchor2">How to use it</h2>
+    <p>The theme/prototype package can be used to suit your workflow. however, a proposed workflow is: 
+      <ol>
+        <li>Install it as a theme within govCMS</li>
+        <li>Reference the <a href="https://gov-au-ui-kit.apps.staging.digital.gov.au">DTA Design Guide &amp; UI-kit</a> to discover the building blocks for prototyping.</li>
+        <li>Build, test and deploy prototypes within /uikit_base/build</li>
+        <li>Build, test and deploy the base theme within /uikit_base/*</li>
+        <li>Create a sub-theme</li>
+      </ol>
+    </p>
+
+    <h2 id="anchor3">Base theme vs sub-theme</h2>
+    <p>The theme/prototype base theme uses only the UI-kit.</p>
+    <p>To create custom themes/prototypes you should create a sub-theme. This is seperate from the base theme and inherits the UI-kit (which supports easy updates).</p>
+    <p>More information about the sub-theme development is available in <strong>README-FIRST.txt</strong> in the theme root.</p>
+
+    <h2 id="anchor4">Boilerplate</h2>
+    <p>The UI-kit is not prescriptive with respect to boilerplating but instead provides modular components to permit easy site building.</p>
+    <p>For example, <a href="content.html">alternative content page</a> includes a larger global header and a smaller hero block.</p>
+  </article>
+</main>
+
+<!-- Content -->
+<footer role="contentinfo">
+  <div class="wrapper">
+    <section class="footer-top">
+      <nav>
+        <ul>
+          <li><h2>Title header</h2></li>
+          <li><a href="#">This is a footer link</a></li>
+          <li><a href="#">This is a footer link</a></li>
+        </ul>
+        <ul>
+          <li><h2>Title header</h2></li>
+          <li><a href="#">This is a footer link</a></li>
+          <li><a href="#">This is a footer link</a></li>
+        </ul>
+        <ul>
+          <li><h2>Title header</h2></li>
+          <li><a href="#">This is a footer link</a></li>
+          <li><a href="#">This is a footer link</a></li>
+        </ul>
+        <ul>
+          <li><h2>Title header</h2></li>
+          <li><a href="#">This is a footer link</a></li>
+          <li><a href="#">This is a footer link</a></li>
+        </ul>
+      </nav>
+    </section>
+    <section>
+      <div class="footer-logo">
+        <img alt="Australian Government Coat of Arms"
+        src="/img/coat-of-arms.png">
+      </div>
+      <div class="footer-links">
+        <nav>
+          <ul>
+            <li><a href="#">Example global link</a></li>
+            <li><a href="#">Example global link</a></li>
+          </ul>
+        </nav>
+        <p>&copy; Commonwealth of Australia <br>
+          Licensed under the MIT License.
+        </p>
+      </div>
+    </section>
+  </div>
+</footer>  </body>
+</html>
