@@ -132,7 +132,7 @@ $bottom = render($page['bottom']);
     </section>
     <section class="footer-bottom">
       <div class="footer-logo">
-        <img alt="Australian Government Coat of Arms" src="/sites/all/themes/healthgovau-theme/images/coat-of-arms.png">
+        <img alt="Australian Government Coat of Arms" src="/sites/all/themes/healthgovau-theme/healthgovau-theme/images/coat-of-arms.png">
       </div> 
       <div class="footer-links">
         <?php print render($page['footer_bottom']); ?>

@@ -13,7 +13,8 @@ body main {
     }
     @include media($mobile) {
       .inline-tab-nav,
-      .workbench-info-block {
+      .workbench-info-block,
+      .messages {
         max-width: 75em;
         margin: auto;
       }

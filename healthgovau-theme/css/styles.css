@@ -4977,7 +4977,8 @@ body main {
     margin-right: 4.17655%;
     width: 100%; }
     .node-type-campaign main .content-main .inline-tab-nav,
-    .node-type-campaign main .content-main .workbench-info-block {
+    .node-type-campaign main .content-main .workbench-info-block,
+    .node-type-campaign main .content-main .messages {
       max-width: 75em;
       margin: auto; }
     .node-type-campaign main .content-main:last-child {
