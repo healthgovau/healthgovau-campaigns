@@ -83,7 +83,7 @@ function healthgovau_preprocess_field(&$variables) {
 function healthgovau_preprocess_page(&$variables) {
   // Add images path to variable.
   $variables['images'] = drupal_get_path('theme', 'healthgovau') . '/images';
-  
+
   // Add hero indicator.
   if (arg(0) == 'node' && is_numeric(arg(1))) {
     // This is a node page.
@@ -154,7 +154,14 @@ function healthgovau_preprocess_views_view(&$vars) {
  */
 function healthgovau_preprocess_entity(&$variables) {
   if ($variables['entity_type'] == 'bean') {
+
     $bean = $variables['bean'];
+
+    // Replace absolute path with dynamic path to theme.
+    $token = '/sites/all/themes/healthgovau-theme';
+    $variables['content']['field_bean_body'][0]['#markup'] = str_replace($token, path_to_theme(), $variables['content']['field_bean_body'][0]['#markup']);
+    
+
     // For social media bean blocks.
     if ($bean->type == 'social_media') {
       // Add juicer js and css.
