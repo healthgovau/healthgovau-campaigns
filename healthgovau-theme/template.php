@@ -82,7 +82,7 @@ function healthgovau_preprocess_field(&$variables) {
  */
 function healthgovau_preprocess_page(&$variables) {
   // Add images path to variable.
-  $variables['images'] = drupal_get_path('theme', 'healthgovau') . '/images';
+  $variables['images'] = '/' . drupal_get_path('theme', 'healthgovau') . '/images';
 
   // Add hero indicator.
   if (arg(0) == 'node' && is_numeric(arg(1))) {
