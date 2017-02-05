@@ -108,6 +108,10 @@ function healthgovau_preprocess_page(&$variables) {
  */
 function healthgovau_preprocess_node(&$variables) {
 
+  // Replace absolute path with dynamic path to theme.
+  $token = '/sites/all/themes/healthgovau-theme';
+  $variables['content']['body'][0]['#markup'] = str_replace($token, '/' . path_to_theme(), $variables['content']['body'][0]['#markup']);
+  
   // Change background color and image for campaign and related content type.
   if ($variables['type'] == 'campaign') {
     $campaign_nid = $variables['nid'];
