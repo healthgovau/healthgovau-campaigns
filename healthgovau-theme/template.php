@@ -164,8 +164,10 @@ function healthgovau_preprocess_entity(&$variables) {
     $bean = $variables['bean'];
 
     // Replace absolute path with dynamic path to theme.
-    $token = '/sites/all/themes/healthgovau-theme';
-    $variables['content']['field_bean_body'][0]['#markup'] = str_replace($token, '/' . path_to_theme(), $variables['content']['field_bean_body'][0]['#markup']);
+    if (isset($variables['content']['field_bean_body'])) {
+      $token = '/sites/all/themes/healthgovau-theme';
+      $variables['content']['field_bean_body'][0]['#markup'] = str_replace($token, '/' . path_to_theme(), $variables['content']['field_bean_body'][0]['#markup']);
+    }
 
 
     // For social media bean blocks.
