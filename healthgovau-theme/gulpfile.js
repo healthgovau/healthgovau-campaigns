@@ -115,7 +115,7 @@ gulp.task("watch", ['html'], function() {
   });
 	gulp.watch(paths.proto.imagesSrc, ['images:proto']);
 	gulp.watch(paths.proto.sassSrc + '/**/*.scss', ['styles:proto']);
-  gulp.watch(paths.proto.jsSrc + '/**/*.js', ['js:proto']);
+    gulp.watch(paths.proto.jsSrc + '/**/*.js', ['js:proto']);
 	gulp.watch(paths.proto.pagesSrc + '**/*.hbs', ['html']);
 	gulp.watch(paths.proto.pagesDist + '*.html').on('change', browserSync.reload);
 });
