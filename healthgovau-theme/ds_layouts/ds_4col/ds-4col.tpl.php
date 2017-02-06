@@ -10,7 +10,7 @@
 <?php endif; ?>
 
 <div class="ds-4col group-top">
-  <div class="ds-wrapper">
+  <div class="ds-wrapper video">
     <div class="group-top-left">
       <div class="video__thumb video-wrapper">
         <?php print $top_left; ?>
