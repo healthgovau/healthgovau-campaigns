@@ -1,0 +1,44 @@
+
+// List override
+.list-vertical > li,
+.list-vertical--thirds > li,
+.list-vertical--fourths > li,
+footer[role='contentinfo'] .footer-top nav > li {
+  border-color: $white;
+}
+
+// Lists
+// .list-vertical > li,
+// .list-vertical--thirds > li,
+// .list-vertical--fourths > li {
+//   border-top: 0;
+// }
+
+.list-vertical > li article,
+.list-vertical--thirds > li article,
+.list-vertical--fourths > li article {
+  margin-top: $small-spacing;
+}
+
+// Custom content
+// Benefits list
+.list-horizontal--benefits {
+  @extend .list-horizontal;
+  h2 {
+    @include h3;
+    margin-top: $small-spacing;
+  }
+  > li {
+    @include media($tablet) {
+      display: flex;
+    }
+
+    figure {
+      display: none;
+      @include media($tablet) {
+        display: block;
+        flex: 0 0 12%;
+      }
+    }
+  }
+}

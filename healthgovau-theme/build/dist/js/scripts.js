@@ -13,26 +13,11 @@ function parallax(){
     var windowInnerHeight = window.innerHeight;
     var plxBackgroundTopToWindowTop = plxBackgroundTopToPageTop - windowTopToPageTop;
     var plxBackgroundTopToWindowBottom = windowInnerHeight - plxBackgroundTopToWindowTop;
-    var plxSpeed = 0.34;
+    var plxSpeed = 0.32;
 
     plxBackground.css('top', - (plxWindowTopToWindowTop * plxSpeed) + 'px');
   }
 }
-
-function debounce(func, wait, immediate) {
-  var timeout;
-  return function() {
-    var context = this, args = arguments;
-    var later = function() {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-    var callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
-  };
-};
 
 $(function() {
 
@@ -43,10 +28,10 @@ $(function() {
         // Create an iFrame with autoplay set to true
         var iframe_url = "https://www.youtube.com/embed/" + videoid + "?autoplay=1&autohide=2&border=0&wmode=opaque&rel=0&html5=1&fs=1";
         if ($(this).data('params')) iframe_url += '&' + $(this).data('params');
-        // The height and width of the iFrame should be the same as parent
+          // The height and width of the iFrame should be the same as parent
         var iframe = $('<iframe/>', { 'title': 'YouTube video player', 'id': 'youtube-iframe', 'allowfullscreen': 'allowfullscreen', 'frameborder': '0', 'aria-live': 'assertive', 'src': iframe_url });
-        // Replace the YouTube thumbnail with YouTube HTML5 Player
-        $(this).replaceWith(iframe);
+          // Replace the YouTube thumbnail with YouTube HTML5 Player
+          $(this).replaceWith(iframe);
       });
 
     // Sticky nav
@@ -74,5 +59,13 @@ $(function() {
       }
       stickyNav();
     });
+
+    // Share this
+    //var url = encodeURIComponent($(location).attr('href'));
+    //var title = $("h1").val();
+    //$(".social__links-item .twitter").attr("href","https://twitter.com/share?text="+title+"&url="+url);
+    //$(".social__links-item .facebook").attr("href","https://facebook.com/sharer.php?u="+url);
+    //$(".social__links-item .linkedin").attr("href","http://www.linkedin.com/shareArticle?mini=true&url="+url);
+    //$(".social__links-item .email").attr("href","mailto:?subject=Smokes&body="+url);
 
 });

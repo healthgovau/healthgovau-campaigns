@@ -21,7 +21,7 @@
 .page-header__logo {
   padding: 0;
   .logo {
-    background-image: image-url("health_crest.png");
+    background-image: image-url("health_crest.png"); //fallback
     //background-image: image-url("health_crest.svg");
     background-size: contain;
     display: inline-block;

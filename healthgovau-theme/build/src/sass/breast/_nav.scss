@@ -1,0 +1,6 @@
+.site-nav__wrapper li a {
+  &:hover,
+  &:focus {
+    border-color: $navigation-border-colour;
+  }
+}
