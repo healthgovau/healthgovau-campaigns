@@ -5681,6 +5681,96 @@ header .page-header__logo img {
 .node-type-video .region-content .wrapper, .node-type-video .region-content .ds-wrapper {
   min-width: 0px; }
 
+.band--primary, .node-type-campaign #block-views-campaign-videos-block {
+  background-color: #EEE; }
+
+.band--secondary {
+  background-color: #DDD; }
+
+.social__feature {
+  float: left;
+  display: block;
+  margin-right: 8.71718%;
+  width: 100%; }
+  .social__feature:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 768px) {
+    .social__feature {
+      float: left;
+      display: block;
+      margin-right: 2.74614%;
+      width: 22.9404%; }
+      .social__feature:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 75em) {
+    .social__feature {
+      float: left;
+      display: block;
+      margin-right: 2.04556%;
+      width: 17.08798%; }
+      .social__feature:last-child {
+        margin-right: 0; } }
+
+.partner {
+  width: 100%; }
+  @media screen and (min-width: 768px) {
+    .partner {
+      float: left;
+      display: block;
+      margin-right: 2.74614%;
+      width: 48.62693%; }
+      .partner:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 75em) {
+    .partner {
+      float: left;
+      display: block;
+      margin-right: 2.04556%;
+      width: 48.97722%; }
+      .partner:last-child {
+        margin-right: 0; } }
+  .partner h3, .partner footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .partner h2, .partner footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .partner .display {
+    font-weight: 400;
+    margin-top: 0; }
+
+.partner__image {
+  width: 100%; }
+  @media screen and (min-width: 768px) {
+    .partner__image {
+      float: left;
+      display: block;
+      margin-right: 5.64736%;
+      width: 29.56843%; }
+      .partner__image:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 75em) {
+    .partner__image {
+      float: left;
+      display: block;
+      margin-right: 4.17655%;
+      width: 34.88966%; }
+      .partner__image:last-child {
+        margin-right: 0; } }
+
+.partner__desc {
+  width: 100%; }
+  @media screen and (min-width: 768px) {
+    .partner__desc {
+      float: left;
+      display: block;
+      margin-right: 5.64736%;
+      width: 64.78421%; }
+      .partner__desc:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 75em) {
+    .partner__desc {
+      float: left;
+      display: block;
+      margin-right: 4.17655%;
+      width: 60.93379%; }
+      .partner__desc:last-child {
+        margin-right: 0; } }
+
 @media screen and (min-width: 420px) {
   .page-campaign-videos main .content-main {
     float: left;
@@ -5731,7 +5821,7 @@ footer[role='contentinfo'] .footer-top nav > li {
 .list-vertical--thirds > li,
 .list-vertical--fourths > li,
 .list-vertical--halves > li {
-  border-color: #EEE; }
+  border-color: #DDD; }
 
 .list-horizontal--benefits h2, .list-horizontal--benefits .display {
   font-size: 1.5rem;

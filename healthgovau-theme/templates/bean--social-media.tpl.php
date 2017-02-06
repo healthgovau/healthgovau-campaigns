@@ -38,7 +38,7 @@
         <ul class="juicer-feed" data-feed-id="<?php print $sm_id; ?>" data-per="<?php print $sm_col; ?>"></ul>
         <p><a href="<?php print $sm_page; ?>" class="see-more">More social media</a></p>
       </div>
-      <div class="social__links">
+      <div class="social__feature">
         <h3 class="light">Follow us</h3>
         <ul>
           <!--<li class="social__links-item"><a href="#">Instagram</a></li>-->

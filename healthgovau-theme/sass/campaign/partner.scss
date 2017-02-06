@@ -1,0 +1,38 @@
+// Partners
+.partner {
+  @include fill-parent;
+
+  @include media($tablet) {
+    @include span-columns(6 of 12);
+  }
+
+  @include media($desktop) {
+    @include span-columns(8 of 16);
+  }
+  h3 {
+    font-weight: $base-font-weight;
+    margin-top: 0;
+  }
+}
+.partner__image {
+  @include fill-parent;
+
+  @include media($tablet) {
+    @include span-columns(2 of 6);
+  }
+
+  @include media($desktop) {
+    @include span-columns(3 of 8);
+  }
+}
+.partner__desc {
+  @include fill-parent;
+
+  @include media($tablet) {
+    @include span-columns(4 of 6);
+  }
+
+  @include media($desktop) {
+    @include span-columns(5 of 8);
+  }
+}
