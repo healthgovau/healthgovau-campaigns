@@ -7,7 +7,8 @@ body main {
     max-width: 100%;
   }
 
-  main .content-main {
+  article.content-main {
+    width: 100%;
     h1.title {
       display: none;
     }
@@ -25,10 +26,9 @@ body main {
 
 .node-type-video,
 .page-search404,
-.page-node-1 {
-  main .content-main {
-    @include media($mobile) {
-      @include span-columns(8 of 8);
-    }
+.page-node-1,
+.page-campaign-videos {
+  article.content-main {
+    width: 100%;
   }
 }
