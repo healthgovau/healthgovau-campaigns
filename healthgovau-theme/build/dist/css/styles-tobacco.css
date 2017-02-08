@@ -4741,6 +4741,9 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
 .light {
   font-weight: 400; }
 
+.center {
+  text-align: center; }
+
 article::after, aside::after, details::after, figcaption::after, figure::after, footer::after, header::after, hgroup::after, main::after, menu::after, nav::after, section::after, summary::after {
   clear: both;
   content: "";

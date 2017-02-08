@@ -64,6 +64,13 @@
       @include span-columns(8 of 16);
     }
   }
+
+  .band__img {
+    text-align: center;
+    img {
+      min-width: 80%;
+    }
+  }
 }
 
 .band--img-text-halves--invert {
@@ -212,6 +219,9 @@ p.highlight {
 
 .band--colour-7 {
   background: $colour-7;
+}
+.band--transparent {
+  background: none;
 }
 
 // Video

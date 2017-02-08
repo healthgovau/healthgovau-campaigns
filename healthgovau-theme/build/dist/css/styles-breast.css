@@ -4741,6 +4741,9 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
 .light {
   font-weight: 400; }
 
+.center {
+  text-align: center; }
+
 article::after, aside::after, details::after, figcaption::after, figure::after, footer::after, header::after, hgroup::after, main::after, menu::after, nav::after, section::after, summary::after {
   clear: both;
   content: "";
@@ -5483,6 +5486,11 @@ body > main .see-more {
     .band--img-text-halves .band__text:last-child, .band--img-text-halves--invert .band__text:last-child {
       margin-right: 0; } }
 
+.band--img-text-halves .band__img, .band--img-text-halves--invert .band__img {
+  text-align: center; }
+  .band--img-text-halves .band__img img, .band--img-text-halves--invert .band__img img {
+    min-width: 80%; }
+
 .band--img-text-halves--invert .band__text {
   float: right; }
 
@@ -5625,6 +5633,9 @@ p.highlight {
 
 .band--colour-7 {
   background: #f7f7f7; }
+
+.band--transparent {
+  background: none; }
 
 .list-vertical > li,
 .list-vertical--thirds > li,
