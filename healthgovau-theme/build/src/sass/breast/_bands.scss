@@ -30,6 +30,7 @@
   @include pad($large-spacing 0);
 
   .band__img {
+    line-height: 0;
     @include fill-parent;
     @include media($tablet) {
       @include span-columns(4 of 12);
@@ -54,7 +55,10 @@
 // Halves
 .band--img-text-halves {
   @extend .band--img-text;
-
+  padding-bottom: large-spacing;
+  @include media($tablet) {
+    padding-bottom: $medium-spacing;
+  }
   .band__img,
   .band__text {
     @include media($tablet) {
@@ -68,15 +72,18 @@
   .band__img {
     text-align: center;
     img {
-      min-width: 80%;
+      width: 100%;
     }
   }
+
 }
 
 .band--img-text-halves--invert {
   @extend .band--img-text-halves;
-  .band__text {
-    float: right;
+  @include media($tablet) {
+    .band__text {
+      float: right;
+    }
   }
 }
 
@@ -88,6 +95,17 @@
     text-align: center;
     padding: 0;
     margin: 0;
+    img {
+      width: 80%;
+      float: none;
+      margin-left: 10%;
+      display: block;
+    }
+    @include media($tablet) {
+      img {
+        float: left; // Takes out of flow and aligns to bottom
+      }
+    }
   }
 }
 
@@ -220,6 +238,7 @@ p.highlight {
 .band--colour-7 {
   background: $colour-7;
 }
+
 .band--transparent {
   background: none;
 }

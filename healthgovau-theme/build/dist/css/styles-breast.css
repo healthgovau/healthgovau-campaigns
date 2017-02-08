@@ -5427,6 +5427,7 @@ body > main .see-more {
 .band--img-text, .band--img-text-halves, .band--img-text-halves--invert {
   padding: 3.2em 0; }
   .band--img-text .band__img, .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img {
+    line-height: 0;
     width: 100%; }
     @media screen and (min-width: 768px) {
       .band--img-text .band__img, .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img {
@@ -5464,35 +5465,39 @@ body > main .see-more {
         .band--img-text .band__text:last-child, .band--img-text-halves .band__text:last-child, .band--img-text-halves--invert .band__text:last-child {
           margin-right: 0; } }
 
+.band--img-text-halves, .band--img-text-halves--invert {
+  padding-bottom: large-spacing; }
+  @media screen and (min-width: 768px) {
+    .band--img-text-halves, .band--img-text-halves--invert {
+      padding-bottom: 1.2em; } }
+  @media screen and (min-width: 768px) {
+    .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img,
+    .band--img-text-halves .band__text, .band--img-text-halves--invert .band__text {
+      float: left;
+      display: block;
+      margin-right: 2.74614%;
+      width: 48.62693%; }
+      .band--img-text-halves .band__img:last-child, .band--img-text-halves--invert .band__img:last-child,
+      .band--img-text-halves .band__text:last-child, .band--img-text-halves--invert .band__text:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 75em) {
+    .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img,
+    .band--img-text-halves .band__text, .band--img-text-halves--invert .band__text {
+      float: left;
+      display: block;
+      margin-right: 2.04556%;
+      width: 48.97722%; }
+      .band--img-text-halves .band__img:last-child, .band--img-text-halves--invert .band__img:last-child,
+      .band--img-text-halves .band__text:last-child, .band--img-text-halves--invert .band__text:last-child {
+        margin-right: 0; } }
+  .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img {
+    text-align: center; }
+    .band--img-text-halves .band__img img, .band--img-text-halves--invert .band__img img {
+      width: 100%; }
+
 @media screen and (min-width: 768px) {
-  .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img,
-  .band--img-text-halves .band__text, .band--img-text-halves--invert .band__text {
-    float: left;
-    display: block;
-    margin-right: 2.74614%;
-    width: 48.62693%; }
-    .band--img-text-halves .band__img:last-child, .band--img-text-halves--invert .band__img:last-child,
-    .band--img-text-halves .band__text:last-child, .band--img-text-halves--invert .band__text:last-child {
-      margin-right: 0; } }
-
-@media screen and (min-width: 75em) {
-  .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img,
-  .band--img-text-halves .band__text, .band--img-text-halves--invert .band__text {
-    float: left;
-    display: block;
-    margin-right: 2.04556%;
-    width: 48.97722%; }
-    .band--img-text-halves .band__img:last-child, .band--img-text-halves--invert .band__img:last-child,
-    .band--img-text-halves .band__text:last-child, .band--img-text-halves--invert .band__text:last-child {
-      margin-right: 0; } }
-
-.band--img-text-halves .band__img, .band--img-text-halves--invert .band__img {
-  text-align: center; }
-  .band--img-text-halves .band__img img, .band--img-text-halves--invert .band__img img {
-    min-width: 80%; }
-
-.band--img-text-halves--invert .band__text {
-  float: right; }
+  .band--img-text-halves--invert .band__text {
+    float: right; } }
 
 .band--tight-bottom {
   padding-bottom: 0; }
@@ -5501,6 +5506,14 @@ body > main .see-more {
     text-align: center;
     padding: 0;
     margin: 0; }
+    .band--tight-bottom .band__img img {
+      width: 80%;
+      float: none;
+      margin-left: 10%;
+      display: block; }
+    @media screen and (min-width: 768px) {
+      .band--tight-bottom .band__img img {
+        float: left; } }
 
 .band-nopad {
   padding-top: 0;
