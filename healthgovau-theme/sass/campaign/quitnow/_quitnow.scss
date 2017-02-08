@@ -7,19 +7,22 @@
 }
 
 // Hotline bar
-section.pre-nav {
-  @extend .band--quitline;
-  a {
-    border: 0px;
-    &:hover {
-      background-color: inherit;
+.smokes {
+  section.pre-nav {
+    @extend .band--quitline;
+    a {
+      border: 0px;
+      &:hover {
+        background-color: inherit;
+      }
     }
   }
 }
 
 // Partner bar.
 #block-bean-quitenow-partner {
-  @extend .band--partners;
+  @extend .smokes-band--partners;
+  background: black;
   .list-vertical--fourths > li {
     border-top: 0px;
     a:hover {
@@ -40,13 +43,15 @@ section.pre-nav {
 }
 
 // Navigation menu
-section.site-nav {
-  #block-menu-menu-quitnow-menu {
-    a:hover {
-      border-color: black;
-    }
-    a.is-current {
-      border-color: black;
+.smokes {
+  section.site-nav {
+    #block-menu-menu-quitnow-menu {
+      a:hover {
+        border-color: black;
+      }
+      a.is-current {
+        border-color: black;
+      }
     }
   }
 }
@@ -181,3 +186,18 @@ footer[role='contentinfo'] .footer-top nav > li {
 .field-name-field-campaign {
   display: none;
 }
+
+.smokes.node-type-campaign {
+  #block-views-campaign-videos-block {
+    @extend .smokes-band--primary;
+    .view-mode-compact {
+      div.group-left {
+        @extend .video__container;
+      }
+      div.group-right {
+        @extend .video__info;
+      }
+    }
+  }
+}
+

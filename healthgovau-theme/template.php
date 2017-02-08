@@ -13,6 +13,11 @@ CONST SOCIAL_MEDIA = 'http://assets.juicer.io';
  * Implements THEME_preprocess_html().
  */
 function healthgovau_preprocess_html(&$variables) {
+  // Add page title to body class.
+  $title = $variables['head_title_array']['title'];
+  $title = strtolower(str_replace(' ', '-', $title));
+  $variables['classes_array'][] = $title;
+
   $env = theme_get_setting('env');
   $auth = theme_get_setting('ga_auth');
   $id = theme_get_setting('ga_id');
@@ -113,7 +118,7 @@ function healthgovau_preprocess_node(&$variables) {
     $token = '/sites/all/themes/healthgovau-theme';
     $variables['content']['body'][0]['#markup'] = str_replace($token, '/' . path_to_theme(), $variables['content']['body'][0]['#markup']);
   }
-  
+
   // Change background color and image for campaign and related content type.
   if ($variables['type'] == 'campaign') {
     $campaign_nid = $variables['nid'];

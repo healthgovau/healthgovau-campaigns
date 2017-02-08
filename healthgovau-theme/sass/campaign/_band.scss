@@ -21,7 +21,7 @@
   @extend %band;
   padding: $large-spacing 0;
 }
-.band--primary {
+.smokes-band--primary {
   @extend .band;
   background-color: $background-colour-primary;
 }
@@ -58,7 +58,7 @@
   }
 }
 
-.band--partners {
+.smokes-band--partners {
   @extend .band--small;
   padding-top: $small-spacing;
   background: $black;

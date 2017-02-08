@@ -1,6 +1,8 @@
 // Campaign specific band overrides
 // If the background colour is dark add @include invert-colours(); switch the font colour of all child elements
 
+@import "vars";
+
 // Default band types
 .band--primary {
   padding-top: $large-spacing;
@@ -14,13 +16,13 @@
   padding-top: $large-spacing;
 }
 
-.band--gradient {
+.breastscreen-band--gradient {
   @include linear-gradient(90deg, $background-colour-secondary, $white, $fallback: $background-colour-secondary);
   padding-top: $large-spacing;
 }
 
 // New
-.band--tertiary {
+.breastscreen-band--tertiary {
   background: $colour-tertiary;
 }
 
@@ -89,7 +91,7 @@
   padding-bottom: 0;
 }
 
-.band--partners {
+.breastscreen-band--partners {
   @extend .band;
   background: $colour-primary;
   color: #fff;
@@ -106,7 +108,7 @@
   }
 }
 
-.band--hotline {
+.breastscreen-band--hotline {
   @include pad($small-spacing 0 $tiny-spacing);
   background: $colour-primary;
   color: $white;

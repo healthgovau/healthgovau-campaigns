@@ -1,0 +1,66 @@
+// Hotline bar
+.breastscreen {
+  section.pre-nav {
+    @extend .breastscreen-band--hotline;
+    a {
+      color: white;
+      border: 0px;
+      &:hover {
+        background-color: $colour-primary;
+      }
+    }
+  }
+}
+
+.breastscreen {
+  #block-bean-breast-cancer-in-australia {
+    @extend .band--colour-2;
+    @extend .band--tight-bottom;
+    @extend .band--img-text-halves--invert;
+  }
+  #block-bean-breastscreen-stats {
+    @extend .breastscreen-band--tertiary;
+    @extend .band--img-text-halves;
+  }
+  #block-bean-breastscreen-expanding,
+  #block-bean-breastscreen-mammogram {
+    @extend .band--colour-1;
+    @extend .band--tight-bottom;
+    @extend .band--img-text-halves;
+  }
+  #block-bean-breastscreen-74 {
+    @extend .band--colour-7;
+    @extend .band-nopad;
+    @extend .band--img-text-halves;
+  }
+  #block-bean-breastscreen-why-0 {
+    @extend .band--colour-1;
+    @extend .band--tight-bottom;
+    @extend .band--img-text-halves--invert;
+  }
+  #block-bean-breastscreen-early-detection {
+    @extend .band--colour-4;
+    @extend .band-nopad;
+    @extend .band--img-text-halves;
+  }
+}
+
+// Navigation menu
+.breastscreen {
+  section.site-nav {
+    #block-menu-menu-breastscreen-menu {
+      a:hover {
+        border-color: $colour-primary;
+      }
+      a.is-current {
+        border-color: $colour-primary;
+      }
+    }
+  }
+}
+
+body.breastscreen > main a,
+body.breastscreen > main .see-more {
+  border-color: #d51364;
+  color: #d51364;
+}

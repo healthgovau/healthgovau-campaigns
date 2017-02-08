@@ -5494,8 +5494,7 @@ body > main .see-more {
     padding: 0;
     margin: 0; }
 
-
-band-nopad {
+.band-nopad {
   padding-top: 0;
   padding-bottom: 0; }
 
