@@ -161,6 +161,26 @@ function healthgovau_preprocess_views_view(&$vars) {
 }
 
 /**
+ * Implements THEME_preprocess_block().
+ */
+function healthgovau_preprocess_block(&$vars) {
+  $block = $vars['block'];
+  // Add title variable if the current block is video card block.
+  if ($block->bid == 'views-campaign_videos-block_1') {
+    if (arg(0) == 'node' && is_numeric(arg(1))) {
+      // This is a node page.
+      $node = node_load(arg(1));
+      if ($node->type == 'campaign') {
+        // This is a campaign landing page.
+        if (isset($node->field_campaign_vblock_3_title[LANGUAGE_NONE])) {
+          $vars['vblock_3_title'] = $node->field_campaign_vblock_3_title[LANGUAGE_NONE][0]['value'];
+        } 
+      }
+    }
+  }
+}
+
+/**
  * Implements THEME_preprocess_entity().
  */
 function healthgovau_preprocess_entity(&$variables) {
@@ -173,7 +193,6 @@ function healthgovau_preprocess_entity(&$variables) {
       $token = '/sites/all/themes/healthgovau-theme';
       $variables['content']['field_bean_body'][0]['#markup'] = str_replace($token, '/' . path_to_theme(), $variables['content']['field_bean_body'][0]['#markup']);
     }
-
 
     // For social media bean blocks.
     if ($bean->type == 'social_media') {
@@ -271,18 +290,17 @@ function healthgovau_breadcrumb($variables) {
         }
       // @todo: add other related content types in.
       case 'video':
-        //return _healthgovau_campaign_breadcrumb($node);
+        return _healthgovau_campaign_breadcrumb($node);
       case 'campaign_standard_page':
-        //return _healthgovau_campaign_breadcrumb($node);
+        return _healthgovau_campaign_breadcrumb($node);
       case 'social_media':
-        //return _healthgovau_campaign_breadcrumb($node);
+        return _healthgovau_campaign_breadcrumb($node);
     }
   }
   else {
     // This is not a node page.
     if (arg(0) == 'campaign' && is_numeric(arg(1))) {
       // This is a campaign related view page.
-      /**
       $campaign = node_load(arg(1));
 
       $breadcrumb = array(
@@ -298,7 +316,6 @@ function healthgovau_breadcrumb($variables) {
       $breadcrumb_list .= '</ul>';
       $output .= '<nav class="breadcrumbs" aria-label="breadcrumb"><div class="wrapper">' . $breadcrumb_list . '</div></nav>';
       return $output;
-       **/
     }
     else {
       // Hide breadcrumb for 404 page.
