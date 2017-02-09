@@ -5713,7 +5713,8 @@ header .page-header__logo img {
 
 .view-campaign-videos .field-name-field-video-promoted-thumbnail img,
 .node-type-video .field-name-field-video-promoted-thumbnail img {
-  height: auto; }
+  height: auto;
+  width: 100%; }
 
 .view-campaign-videos .field-name-field-video-thumbnail img,
 .node-type-video .field-name-field-video-thumbnail img {
