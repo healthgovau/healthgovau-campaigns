@@ -1,5 +1,5 @@
 // Hotline bar
-.breastscreen {
+#block-bean-breastscreen-hotline {
   section.pre-nav {
     @extend .breastscreen-band--hotline;
     a {
@@ -7,6 +7,9 @@
       border: 0px;
       &:hover {
         background-color: $colour-primary;
+      }
+      &.is-active {
+        border-color: white;
       }
     }
   }
@@ -17,6 +20,9 @@
     @extend .band--colour-2;
     @extend .band--tight-bottom;
     @extend .band--img-text-halves--invert;
+    p {
+      max-width: 100%;
+    }
   }
   #block-bean-breastscreen-stats {
     @extend .breastscreen-band--tertiary;
@@ -33,12 +39,15 @@
     @extend .band-nopad;
     @extend .band--img-text-halves;
   }
-  #block-bean-breastscreen-why-0 {
+  #block-bean-breastscreen-why {
     @extend .band--colour-1;
     @extend .band--tight-bottom;
     @extend .band--img-text-halves--invert;
   }
-  #block-bean-breastscreen-early-detection,
+  #block-bean-breastscreen-early-detection {
+    @extend .band--colour-4;
+    @extend .band--img-text-halves;
+  }
   #block-bean-breastscreen-detection {
     @extend .band--colour-4;
     @extend .band-nopad;
@@ -50,15 +59,23 @@
 }
 
 // Navigation menu
+section.site-nav {
+  #block-menu-menu-breastscreen-menu {
+    li {
+      padding-right: 0px;
+    }
+    a:hover {
+      border-color: $colour-primary;
+    }
+  }
+}
+
+// video view block
 .breastscreen {
-  section.site-nav {
-    #block-menu-menu-breastscreen-menu {
-      a:hover {
-        border-color: $colour-primary;
-      }
-      a.is-current {
-        border-color: $colour-primary;
-      }
+  #block-views-campaign-videos-block-1 {
+    background: none;
+    .see-more {
+      display: none;
     }
   }
 }

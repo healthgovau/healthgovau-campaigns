@@ -48,11 +48,7 @@ $bottom = render($page['bottom']);
   <?php endif; ?>
 
   <?php if ($prenav): ?>
-    <section class="pre-nav">
-      <div class="wrapper">
-        <?php print $prenav; ?>
-      </div>
-    </section>
+    <?php print $prenav; ?>
   <?php endif; ?>
   
   <?php if ($navigation): ?>
