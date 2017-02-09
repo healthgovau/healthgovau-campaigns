@@ -56,6 +56,9 @@
 .breastscreen {
   section.site-nav {
     #block-menu-menu-breastscreen-menu {
+      li {
+        padding-right: 0px;
+      }
       a:hover {
         border-color: $colour-primary;
       }

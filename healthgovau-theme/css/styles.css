@@ -6023,6 +6023,9 @@ p.highlight {
   .breastscreen section.pre-nav a:hover {
     background-color: #d51364; }
 
+.breastscreen section.site-nav #block-menu-menu-breastscreen-menu li {
+  padding-right: 0px; }
+
 .breastscreen section.site-nav #block-menu-menu-breastscreen-menu a:hover {
   border-color: #d51364; }
 
