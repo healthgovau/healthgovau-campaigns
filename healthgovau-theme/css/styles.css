@@ -6023,19 +6023,21 @@ p.highlight {
   border: 0px; }
   .breastscreen section.pre-nav a:hover {
     background-color: #d51364; }
+  .breastscreen section.pre-nav a.is-active {
+    border-color: white; }
 
 .breastscreen #block-bean-breast-cancer-in-australia p {
   max-width: 100%; }
 
-.breastscreen section.site-nav #block-menu-menu-breastscreen-menu li {
+section.site-nav #block-menu-menu-breastscreen-menu li {
   padding-right: 0px; }
 
-.breastscreen section.site-nav #block-menu-menu-breastscreen-menu a:hover {
+section.site-nav #block-menu-menu-breastscreen-menu a:hover {
   border-color: #d51364; }
 
 .breastscreen #block-views-campaign-videos-block-1 {
   background: none; }
-  .breastscreen #block-views-campaign-videos-block-1 .read-more {
+  .breastscreen #block-views-campaign-videos-block-1 .see-more {
     display: none; }
 
 body.breastscreen > main a,

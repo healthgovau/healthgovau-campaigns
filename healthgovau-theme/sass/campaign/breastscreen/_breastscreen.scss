@@ -8,6 +8,9 @@
       &:hover {
         background-color: $colour-primary;
       }
+      &.is-active {
+        border-color: white;
+      }
     }
   }
 }
@@ -56,15 +59,13 @@
 }
 
 // Navigation menu
-.breastscreen {
-  section.site-nav {
-    #block-menu-menu-breastscreen-menu {
-      li {
-        padding-right: 0px;
-      }
-      a:hover {
-        border-color: $colour-primary;
-      }
+section.site-nav {
+  #block-menu-menu-breastscreen-menu {
+    li {
+      padding-right: 0px;
+    }
+    a:hover {
+      border-color: $colour-primary;
     }
   }
 }
@@ -73,7 +74,7 @@
 .breastscreen {
   #block-views-campaign-videos-block-1 {
     background: none;
-    .read-more {
+    .see-more {
       display: none;
     }
   }
