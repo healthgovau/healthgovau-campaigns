@@ -5675,3 +5675,12 @@ p.highlight {
   @media screen and (min-width: 768px) {
     .hero .hero-bg, .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
       background-position-y: 10px; } }
+
+.hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+  background-position-y: -20px; }
+  @media screen and (min-width: 768px) {
+    .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+      background-position-y: -60px; } }
+  @media screen and (min-width: 75em) {
+    .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+      background-position-y: -100px; } }

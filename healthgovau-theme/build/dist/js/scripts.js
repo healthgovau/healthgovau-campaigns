@@ -42,21 +42,21 @@ $(function () {
     });
 
     // Sticky nav
-    var stickyNavTop = $('.sticky-nav').offset().top;
-    //var navHeight;
-    var stickyNav = function () {
-        var scrollTop = $(window).scrollTop();
-        if (scrollTop > stickyNavTop) {
-            $('.sticky-nav').addClass('on');
-            //if($('.sticky-nav').hasClass('on')){
-            //  navHeight = $('.sticky-nav').height();
-            //  $('html').css('margin-top', navHeight + 'px');
-            //}
-        } else {
-            $('.sticky-nav').removeClass('on');
-            //$('html').css('margin-top', '0');
-        }
-    }
+    // var stickyNavTop = $('.sticky-nav').offset().top;
+    // //var navHeight;
+    // var stickyNav = function () {
+    //     var scrollTop = $(window).scrollTop();
+    //     if (scrollTop > stickyNavTop) {
+    //         $('.sticky-nav').addClass('on');
+    //         //if($('.sticky-nav').hasClass('on')){
+    //         //  navHeight = $('.sticky-nav').height();
+    //         //  $('html').css('margin-top', navHeight + 'px');
+    //         //}
+    //     } else {
+    //         $('.sticky-nav').removeClass('on');
+    //         //$('html').css('margin-top', '0');
+    //     }
+    // }
 
     // Currently this is inefficient as it is called repeatedly
     // Consider debouncing or setting a flag
@@ -64,7 +64,7 @@ $(function () {
         if ($(".js-parallax-window").length) {
             parallax();
         }
-        stickyNav();
+        //stickyNav();
     });
 
     // Custom nav close
