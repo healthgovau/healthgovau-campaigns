@@ -1,3 +1,13 @@
 .hero-bg {
-    background-image: image-url("breastscreen-hero.jpg");
+  background-image: image-url("breastscreen-hero.jpg");
+}
+
+// Tweaks for mobile positioning
+.hero {
+  .hero-bg {
+    background-position-y: 35px;
+    @include media($tablet) {
+      background-position-y: 10px; //reset
+    }
+  }
 }

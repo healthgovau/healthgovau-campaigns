@@ -5664,3 +5664,9 @@ p.highlight {
 
 .hero-bg {
   background-image: url("../img/breastscreen-hero.jpg"); }
+
+.hero .hero-bg, .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+  background-position-y: 35px; }
+  @media screen and (min-width: 768px) {
+    .hero .hero-bg, .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+      background-position-y: 10px; } }
