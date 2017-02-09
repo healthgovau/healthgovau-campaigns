@@ -4830,8 +4830,7 @@ footer[role='contentinfo'] {
   background-color: #FFFFFF; }
 
 .page-header__logo {
-  padding: 0;
-  min-width: 400px; }
+  padding: 0; }
   .page-header__logo .logo img {
     background-size: contain;
     display: inline-block;
@@ -5607,6 +5606,9 @@ header .page-header__logo img {
   color: #FFFFFF; }
   .band--sensitivity p, #block-bean-quitnow-sensitivities p {
     margin: 0.8em 0; }
+
+.page-header__site-info {
+  display: none; }
 
 .video__thumb:hover .video__overlay, .video__thumb:active .video__overlay, .video__thumb:focus .video__overlay {
   position: absolute;

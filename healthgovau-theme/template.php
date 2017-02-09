@@ -181,6 +181,16 @@ function healthgovau_preprocess_block(&$vars) {
 }
 
 /**
+ * Implements THEME_preprocess_menu_tree().
+ */
+function healthgovau_preprocess_menu_tree(&$variables) {
+  // Filter the breastscreen menu link for anchors.
+  if ($variables['theme_hook_original'] == 'menu_tree__menu_breastscreen_menu') {
+    $variables['tree'] = str_replace('/breastscreen', '', $variables['tree']);
+  }
+}
+
+/**
  * Implements THEME_preprocess_entity().
  */
 function healthgovau_preprocess_entity(&$variables) {
