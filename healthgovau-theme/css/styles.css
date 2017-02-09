@@ -5546,13 +5546,11 @@ header .page-header__logo img {
         width: 100%; } }
 
 .band, #block-bean-share-this, .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block, .band--img-text, .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-why-0, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding,
-.breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-early-detection,
-.breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat, .breastscreen-band--partners, .band--primary, .band--small, .page-feedback, .smokes-band--partners, #block-bean-quitenow-partner, .band--pad, .band--secondary, .band--gradient, .node-type-social-media .main {
+.breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat, .breastscreen-band--partners, .band--primary, .band--small, .page-feedback, .smokes-band--partners, #block-bean-quitenow-partner, .band--pad, .band--secondary, .band--gradient, .node-type-social-media .main {
   padding: 0.8em 0 3.2em;
   width: 100%; }
   .band::after, #block-bean-share-this::after, .smokes-band--primary::after, .smokes.node-type-campaign #block-views-campaign-videos-block::after, .band--img-text::after, .band--img-text-halves::after, .band--img-text-halves--invert::after, .breastscreen #block-bean-breast-cancer-in-australia::after, .breastscreen #block-bean-breastscreen-why-0::after, .breastscreen #block-bean-breastscreen-stats::after, .breastscreen #block-bean-breastscreen-expanding::after,
-  .breastscreen #block-bean-breastscreen-mammogram::after, .breastscreen #block-bean-breastscreen-74::after, .breastscreen #block-bean-breastscreen-early-detection::after,
-  .breastscreen #block-bean-breastscreen-detection::after, .breastscreen #block-bean-breastscreen-chat::after, .breastscreen-band--partners::after, .band--primary::after, .band--small::after, .page-feedback::after, .smokes-band--partners::after, #block-bean-quitenow-partner::after, .band--pad::after, .band--secondary::after, .band--gradient::after, .node-type-social-media .main::after {
+  .breastscreen #block-bean-breastscreen-mammogram::after, .breastscreen #block-bean-breastscreen-74::after, .breastscreen #block-bean-breastscreen-early-detection::after, .breastscreen #block-bean-breastscreen-detection::after, .breastscreen #block-bean-breastscreen-chat::after, .breastscreen-band--partners::after, .band--primary::after, .band--small::after, .page-feedback::after, .smokes-band--partners::after, #block-bean-quitenow-partner::after, .band--pad::after, .band--secondary::after, .band--gradient::after, .node-type-social-media .main::after {
     clear: both;
     content: "";
     display: table; }
@@ -5759,107 +5757,102 @@ header .page-header__logo img {
   background: #f3f0ed; }
 
 .band--img-text, .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-why-0, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding,
-.breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-early-detection,
-.breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat {
+.breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat {
   padding: 3.2em 0; }
   .band--img-text .band__img, .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-why-0 .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img,
-  .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img,
-  .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img {
+  .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img, .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img {
+    line-height: 0;
     width: 100%; }
     @media screen and (min-width: 768px) {
       .band--img-text .band__img, .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-why-0 .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img,
-      .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img,
-      .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img {
+      .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img, .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img {
         float: left;
         display: block;
         margin-right: 2.74614%;
         width: 31.50258%; }
         .band--img-text .band__img:last-child, .band--img-text-halves .band__img:last-child, .band--img-text-halves--invert .band__img:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__img:last-child, .breastscreen #block-bean-breastscreen-why-0 .band__img:last-child, .breastscreen #block-bean-breastscreen-stats .band__img:last-child, .breastscreen #block-bean-breastscreen-expanding .band__img:last-child,
-        .breastscreen #block-bean-breastscreen-mammogram .band__img:last-child, .breastscreen #block-bean-breastscreen-74 .band__img:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__img:last-child,
-        .breastscreen #block-bean-breastscreen-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-chat .band__img:last-child {
+        .breastscreen #block-bean-breastscreen-mammogram .band__img:last-child, .breastscreen #block-bean-breastscreen-74 .band__img:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-chat .band__img:last-child {
           margin-right: 0; } }
     @media screen and (min-width: 75em) {
       .band--img-text .band__img, .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-why-0 .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img,
-      .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img,
-      .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img {
+      .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img, .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img {
         float: left;
         display: block;
         margin-right: 2.04556%;
         width: 36.22153%; }
         .band--img-text .band__img:last-child, .band--img-text-halves .band__img:last-child, .band--img-text-halves--invert .band__img:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__img:last-child, .breastscreen #block-bean-breastscreen-why-0 .band__img:last-child, .breastscreen #block-bean-breastscreen-stats .band__img:last-child, .breastscreen #block-bean-breastscreen-expanding .band__img:last-child,
-        .breastscreen #block-bean-breastscreen-mammogram .band__img:last-child, .breastscreen #block-bean-breastscreen-74 .band__img:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__img:last-child,
-        .breastscreen #block-bean-breastscreen-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-chat .band__img:last-child {
+        .breastscreen #block-bean-breastscreen-mammogram .band__img:last-child, .breastscreen #block-bean-breastscreen-74 .band__img:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-chat .band__img:last-child {
           margin-right: 0; } }
   .band--img-text .band__text, .band--img-text-halves .band__text, .band--img-text-halves--invert .band__text, .breastscreen #block-bean-breast-cancer-in-australia .band__text, .breastscreen #block-bean-breastscreen-why-0 .band__text, .breastscreen #block-bean-breastscreen-stats .band__text, .breastscreen #block-bean-breastscreen-expanding .band__text,
-  .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-74 .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text,
-  .breastscreen #block-bean-breastscreen-detection .band__text, .breastscreen #block-bean-breastscreen-chat .band__text {
+  .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-74 .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text, .breastscreen #block-bean-breastscreen-detection .band__text, .breastscreen #block-bean-breastscreen-chat .band__text {
     width: 100%; }
     @media screen and (min-width: 768px) {
       .band--img-text .band__text, .band--img-text-halves .band__text, .band--img-text-halves--invert .band__text, .breastscreen #block-bean-breast-cancer-in-australia .band__text, .breastscreen #block-bean-breastscreen-why-0 .band__text, .breastscreen #block-bean-breastscreen-stats .band__text, .breastscreen #block-bean-breastscreen-expanding .band__text,
-      .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-74 .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text,
-      .breastscreen #block-bean-breastscreen-detection .band__text, .breastscreen #block-bean-breastscreen-chat .band__text {
+      .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-74 .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text, .breastscreen #block-bean-breastscreen-detection .band__text, .breastscreen #block-bean-breastscreen-chat .band__text {
         float: left;
         display: block;
         margin-right: 2.74614%;
         width: 65.75129%;
         margin-bottom: 3.2em; }
         .band--img-text .band__text:last-child, .band--img-text-halves .band__text:last-child, .band--img-text-halves--invert .band__text:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__text:last-child, .breastscreen #block-bean-breastscreen-why-0 .band__text:last-child, .breastscreen #block-bean-breastscreen-stats .band__text:last-child, .breastscreen #block-bean-breastscreen-expanding .band__text:last-child,
-        .breastscreen #block-bean-breastscreen-mammogram .band__text:last-child, .breastscreen #block-bean-breastscreen-74 .band__text:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__text:last-child,
-        .breastscreen #block-bean-breastscreen-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-chat .band__text:last-child {
+        .breastscreen #block-bean-breastscreen-mammogram .band__text:last-child, .breastscreen #block-bean-breastscreen-74 .band__text:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-chat .band__text:last-child {
           margin-right: 0; } }
     @media screen and (min-width: 75em) {
       .band--img-text .band__text, .band--img-text-halves .band__text, .band--img-text-halves--invert .band__text, .breastscreen #block-bean-breast-cancer-in-australia .band__text, .breastscreen #block-bean-breastscreen-why-0 .band__text, .breastscreen #block-bean-breastscreen-stats .band__text, .breastscreen #block-bean-breastscreen-expanding .band__text,
-      .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-74 .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text,
-      .breastscreen #block-bean-breastscreen-detection .band__text, .breastscreen #block-bean-breastscreen-chat .band__text {
+      .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-74 .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text, .breastscreen #block-bean-breastscreen-detection .band__text, .breastscreen #block-bean-breastscreen-chat .band__text {
         float: left;
         display: block;
         margin-right: 2.04556%;
         width: 61.73292%; }
         .band--img-text .band__text:last-child, .band--img-text-halves .band__text:last-child, .band--img-text-halves--invert .band__text:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__text:last-child, .breastscreen #block-bean-breastscreen-why-0 .band__text:last-child, .breastscreen #block-bean-breastscreen-stats .band__text:last-child, .breastscreen #block-bean-breastscreen-expanding .band__text:last-child,
-        .breastscreen #block-bean-breastscreen-mammogram .band__text:last-child, .breastscreen #block-bean-breastscreen-74 .band__text:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__text:last-child,
-        .breastscreen #block-bean-breastscreen-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-chat .band__text:last-child {
+        .breastscreen #block-bean-breastscreen-mammogram .band__text:last-child, .breastscreen #block-bean-breastscreen-74 .band__text:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-chat .band__text:last-child {
           margin-right: 0; } }
 
+.band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-why-0, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding,
+.breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat {
+  padding-bottom: large-spacing; }
+  @media screen and (min-width: 768px) {
+    .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-why-0, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding,
+    .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat {
+      padding-bottom: 1.2em; } }
+  @media screen and (min-width: 768px) {
+    .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-why-0 .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img,
+    .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img, .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img,
+    .band--img-text-halves .band__text, .band--img-text-halves--invert .band__text, .breastscreen #block-bean-breast-cancer-in-australia .band__text, .breastscreen #block-bean-breastscreen-why-0 .band__text, .breastscreen #block-bean-breastscreen-stats .band__text, .breastscreen #block-bean-breastscreen-expanding .band__text,
+    .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-74 .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text, .breastscreen #block-bean-breastscreen-detection .band__text, .breastscreen #block-bean-breastscreen-chat .band__text {
+      float: left;
+      display: block;
+      margin-right: 2.74614%;
+      width: 48.62693%; }
+      .band--img-text-halves .band__img:last-child, .band--img-text-halves--invert .band__img:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__img:last-child, .breastscreen #block-bean-breastscreen-why-0 .band__img:last-child, .breastscreen #block-bean-breastscreen-stats .band__img:last-child, .breastscreen #block-bean-breastscreen-expanding .band__img:last-child,
+      .breastscreen #block-bean-breastscreen-mammogram .band__img:last-child, .breastscreen #block-bean-breastscreen-74 .band__img:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-chat .band__img:last-child,
+      .band--img-text-halves .band__text:last-child, .band--img-text-halves--invert .band__text:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__text:last-child, .breastscreen #block-bean-breastscreen-why-0 .band__text:last-child, .breastscreen #block-bean-breastscreen-stats .band__text:last-child, .breastscreen #block-bean-breastscreen-expanding .band__text:last-child,
+      .breastscreen #block-bean-breastscreen-mammogram .band__text:last-child, .breastscreen #block-bean-breastscreen-74 .band__text:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-chat .band__text:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 75em) {
+    .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-why-0 .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img,
+    .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img, .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img,
+    .band--img-text-halves .band__text, .band--img-text-halves--invert .band__text, .breastscreen #block-bean-breast-cancer-in-australia .band__text, .breastscreen #block-bean-breastscreen-why-0 .band__text, .breastscreen #block-bean-breastscreen-stats .band__text, .breastscreen #block-bean-breastscreen-expanding .band__text,
+    .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-74 .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text, .breastscreen #block-bean-breastscreen-detection .band__text, .breastscreen #block-bean-breastscreen-chat .band__text {
+      float: left;
+      display: block;
+      margin-right: 2.04556%;
+      width: 48.97722%; }
+      .band--img-text-halves .band__img:last-child, .band--img-text-halves--invert .band__img:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__img:last-child, .breastscreen #block-bean-breastscreen-why-0 .band__img:last-child, .breastscreen #block-bean-breastscreen-stats .band__img:last-child, .breastscreen #block-bean-breastscreen-expanding .band__img:last-child,
+      .breastscreen #block-bean-breastscreen-mammogram .band__img:last-child, .breastscreen #block-bean-breastscreen-74 .band__img:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-chat .band__img:last-child,
+      .band--img-text-halves .band__text:last-child, .band--img-text-halves--invert .band__text:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__text:last-child, .breastscreen #block-bean-breastscreen-why-0 .band__text:last-child, .breastscreen #block-bean-breastscreen-stats .band__text:last-child, .breastscreen #block-bean-breastscreen-expanding .band__text:last-child,
+      .breastscreen #block-bean-breastscreen-mammogram .band__text:last-child, .breastscreen #block-bean-breastscreen-74 .band__text:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-chat .band__text:last-child {
+        margin-right: 0; } }
+  .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-why-0 .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img,
+  .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img, .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img {
+    text-align: center; }
+    .band--img-text-halves .band__img img, .band--img-text-halves--invert .band__img img, .breastscreen #block-bean-breast-cancer-in-australia .band__img img, .breastscreen #block-bean-breastscreen-why-0 .band__img img, .breastscreen #block-bean-breastscreen-stats .band__img img, .breastscreen #block-bean-breastscreen-expanding .band__img img,
+    .breastscreen #block-bean-breastscreen-mammogram .band__img img, .breastscreen #block-bean-breastscreen-74 .band__img img, .breastscreen #block-bean-breastscreen-early-detection .band__img img, .breastscreen #block-bean-breastscreen-detection .band__img img, .breastscreen #block-bean-breastscreen-chat .band__img img {
+      width: 100%; }
+
 @media screen and (min-width: 768px) {
-  .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-why-0 .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img,
-  .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img,
-  .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img,
-  .band--img-text-halves .band__text, .band--img-text-halves--invert .band__text, .breastscreen #block-bean-breast-cancer-in-australia .band__text, .breastscreen #block-bean-breastscreen-why-0 .band__text, .breastscreen #block-bean-breastscreen-stats .band__text, .breastscreen #block-bean-breastscreen-expanding .band__text,
-  .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-74 .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text,
-  .breastscreen #block-bean-breastscreen-detection .band__text, .breastscreen #block-bean-breastscreen-chat .band__text {
-    float: left;
-    display: block;
-    margin-right: 2.74614%;
-    width: 48.62693%; }
-    .band--img-text-halves .band__img:last-child, .band--img-text-halves--invert .band__img:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__img:last-child, .breastscreen #block-bean-breastscreen-why-0 .band__img:last-child, .breastscreen #block-bean-breastscreen-stats .band__img:last-child, .breastscreen #block-bean-breastscreen-expanding .band__img:last-child,
-    .breastscreen #block-bean-breastscreen-mammogram .band__img:last-child, .breastscreen #block-bean-breastscreen-74 .band__img:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__img:last-child,
-    .breastscreen #block-bean-breastscreen-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-chat .band__img:last-child,
-    .band--img-text-halves .band__text:last-child, .band--img-text-halves--invert .band__text:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__text:last-child, .breastscreen #block-bean-breastscreen-why-0 .band__text:last-child, .breastscreen #block-bean-breastscreen-stats .band__text:last-child, .breastscreen #block-bean-breastscreen-expanding .band__text:last-child,
-    .breastscreen #block-bean-breastscreen-mammogram .band__text:last-child, .breastscreen #block-bean-breastscreen-74 .band__text:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__text:last-child,
-    .breastscreen #block-bean-breastscreen-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-chat .band__text:last-child {
-      margin-right: 0; } }
-
-@media screen and (min-width: 75em) {
-  .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-why-0 .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img,
-  .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img,
-  .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img,
-  .band--img-text-halves .band__text, .band--img-text-halves--invert .band__text, .breastscreen #block-bean-breast-cancer-in-australia .band__text, .breastscreen #block-bean-breastscreen-why-0 .band__text, .breastscreen #block-bean-breastscreen-stats .band__text, .breastscreen #block-bean-breastscreen-expanding .band__text,
-  .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-74 .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text,
-  .breastscreen #block-bean-breastscreen-detection .band__text, .breastscreen #block-bean-breastscreen-chat .band__text {
-    float: left;
-    display: block;
-    margin-right: 2.04556%;
-    width: 48.97722%; }
-    .band--img-text-halves .band__img:last-child, .band--img-text-halves--invert .band__img:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__img:last-child, .breastscreen #block-bean-breastscreen-why-0 .band__img:last-child, .breastscreen #block-bean-breastscreen-stats .band__img:last-child, .breastscreen #block-bean-breastscreen-expanding .band__img:last-child,
-    .breastscreen #block-bean-breastscreen-mammogram .band__img:last-child, .breastscreen #block-bean-breastscreen-74 .band__img:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__img:last-child,
-    .breastscreen #block-bean-breastscreen-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-chat .band__img:last-child,
-    .band--img-text-halves .band__text:last-child, .band--img-text-halves--invert .band__text:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__text:last-child, .breastscreen #block-bean-breastscreen-why-0 .band__text:last-child, .breastscreen #block-bean-breastscreen-stats .band__text:last-child, .breastscreen #block-bean-breastscreen-expanding .band__text:last-child,
-    .breastscreen #block-bean-breastscreen-mammogram .band__text:last-child, .breastscreen #block-bean-breastscreen-74 .band__text:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__text:last-child,
-    .breastscreen #block-bean-breastscreen-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-chat .band__text:last-child {
-      margin-right: 0; } }
-
-.band--img-text-halves--invert .band__text, .breastscreen #block-bean-breast-cancer-in-australia .band__text, .breastscreen #block-bean-breastscreen-why-0 .band__text {
-  float: right; }
+  .band--img-text-halves--invert .band__text, .breastscreen #block-bean-breast-cancer-in-australia .band__text, .breastscreen #block-bean-breastscreen-why-0 .band__text {
+    float: right; } }
 
 .band--tight-bottom, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-expanding,
 .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why-0 {
@@ -5870,9 +5863,18 @@ header .page-header__logo img {
     text-align: center;
     padding: 0;
     margin: 0; }
+    .band--tight-bottom .band__img img, .breastscreen #block-bean-breast-cancer-in-australia .band__img img, .breastscreen #block-bean-breastscreen-expanding .band__img img,
+    .breastscreen #block-bean-breastscreen-mammogram .band__img img, .breastscreen #block-bean-breastscreen-why-0 .band__img img {
+      width: 80%;
+      float: none;
+      margin-left: 10%;
+      display: block; }
+    @media screen and (min-width: 768px) {
+      .band--tight-bottom .band__img img, .breastscreen #block-bean-breast-cancer-in-australia .band__img img, .breastscreen #block-bean-breastscreen-expanding .band__img img,
+      .breastscreen #block-bean-breastscreen-mammogram .band__img img, .breastscreen #block-bean-breastscreen-why-0 .band__img img {
+        float: left; } }
 
-.band-nopad, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-early-detection,
-.breastscreen #block-bean-breastscreen-detection {
+.band-nopad, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection {
   padding-top: 0;
   padding-bottom: 0; }
 
@@ -5993,8 +5995,7 @@ p.highlight {
 .band--colour-3 {
   background: #e4dcd3; }
 
-.band--colour-4, .breastscreen #block-bean-breastscreen-early-detection,
-.breastscreen #block-bean-breastscreen-detection {
+.band--colour-4, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-detection {
   background: #ffe5e8; }
 
 .band--colour-5 {
@@ -6005,6 +6006,9 @@ p.highlight {
 
 .band--colour-7, .breastscreen #block-bean-breastscreen-74 {
   background: #f7f7f7; }
+
+.band--transparent {
+  background: none; }
 
 .list-vertical > li,
 .list-vertical--thirds > li,

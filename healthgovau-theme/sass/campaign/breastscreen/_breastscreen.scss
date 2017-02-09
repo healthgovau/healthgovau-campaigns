@@ -38,7 +38,10 @@
     @extend .band--tight-bottom;
     @extend .band--img-text-halves--invert;
   }
-  #block-bean-breastscreen-early-detection,
+  #block-bean-breastscreen-early-detection {
+    @extend .band--colour-4;
+    @extend .band--img-text-halves;
+  }
   #block-bean-breastscreen-detection {
     @extend .band--colour-4;
     @extend .band-nopad;
