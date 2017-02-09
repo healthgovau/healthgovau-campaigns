@@ -5582,7 +5582,7 @@ header .page-header__logo img {
   background-image: -webkit-linear-gradient(left,#DDDDDD, #FFFFFF);
   background-image: linear-gradient(90deg,#DDDDDD, #FFFFFF); }
 
-.band--quitline, .smokes section.pre-nav {
+.band--quitline, #block-bean-quitnow-hotline section.pre-nav {
   padding: 0.8em 0 0.4em;
   background: #000000;
   color: #FFFFFF;
@@ -5892,12 +5892,12 @@ header .page-header__logo img {
   .breastscreen-band--partners .list-vertical--fourths > li {
     text-align: center; }
 
-.breastscreen-band--hotline, .breastscreen section.pre-nav {
+.breastscreen-band--hotline, #block-bean-breastscreen-hotline section.pre-nav {
   padding: 0.8em 0 0.4em;
   background: #d51364;
   color: #FFFFFF;
   text-align: center; }
-  .breastscreen-band--hotline p, .breastscreen section.pre-nav p {
+  .breastscreen-band--hotline p, #block-bean-breastscreen-hotline section.pre-nav p {
     margin-bottom: 0.4em; }
 
 .band--quitline__image {
@@ -6018,12 +6018,12 @@ p.highlight {
   padding-top: 0;
   border: 0; }
 
-.breastscreen section.pre-nav a {
+#block-bean-breastscreen-hotline section.pre-nav a {
   color: white;
   border: 0px; }
-  .breastscreen section.pre-nav a:hover {
+  #block-bean-breastscreen-hotline section.pre-nav a:hover {
     background-color: #d51364; }
-  .breastscreen section.pre-nav a.is-active {
+  #block-bean-breastscreen-hotline section.pre-nav a.is-active {
     border-color: white; }
 
 .breastscreen #block-bean-breast-cancer-in-australia p {
@@ -6084,9 +6084,9 @@ body.breastscreen > main .see-more {
     .page-campaign-videos main .content-main:last-child {
       margin-right: 0; } }
 
-.smokes section.pre-nav a {
+#block-bean-quitnow-hotline section.pre-nav a {
   border: 0px; }
-  .smokes section.pre-nav a:hover {
+  #block-bean-quitnow-hotline section.pre-nav a:hover {
     background-color: inherit; }
 
 #block-bean-quitenow-partner {
