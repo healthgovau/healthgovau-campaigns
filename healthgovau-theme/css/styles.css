@@ -4830,8 +4830,7 @@ footer[role='contentinfo'] {
   background-color: #FFFFFF; }
 
 .page-header__logo {
-  padding: 0;
-  min-width: 400px; }
+  padding: 0; }
   .page-header__logo .logo img {
     background-size: contain;
     display: inline-block;
@@ -5608,6 +5607,9 @@ header .page-header__logo img {
   .band--sensitivity p, #block-bean-quitnow-sensitivities p {
     margin: 0.8em 0; }
 
+.page-header__site-info {
+  display: none; }
+
 .video__thumb:hover .video__overlay, .video__thumb:active .video__overlay, .video__thumb:focus .video__overlay {
   position: absolute;
   top: 0;
@@ -6023,8 +6025,6 @@ p.highlight {
   border: 0px; }
   #block-bean-breastscreen-hotline section.pre-nav a:hover {
     background-color: #d51364; }
-  #block-bean-breastscreen-hotline section.pre-nav a.is-active {
-    border-color: white; }
 
 .breastscreen #block-bean-breast-cancer-in-australia p {
   max-width: 100%; }
@@ -6034,6 +6034,9 @@ section.site-nav #block-menu-menu-breastscreen-menu li {
 
 section.site-nav #block-menu-menu-breastscreen-menu a:hover {
   border-color: #d51364; }
+
+section.site-nav #block-menu-menu-breastscreen-menu a.is-active {
+  border-color: white; }
 
 .breastscreen #block-views-campaign-videos-block-1 {
   background: none; }
