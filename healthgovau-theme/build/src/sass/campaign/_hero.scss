@@ -25,6 +25,7 @@ $hero-background-height-desktop: $hero-height-desktop * 1.2;
     .hero-bg {
       background-size: cover;
       background-position: center top;
+      background-repeat: no-repeat;
       height: $hero-background-height-mobile;
       top: - $hero-height-mobile / 4;
       position: absolute;

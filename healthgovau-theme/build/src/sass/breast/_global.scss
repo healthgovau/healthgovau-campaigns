@@ -58,3 +58,11 @@ body > main {
     }
   }
 }
+
+header[role='banner'] a {
+  &:hover,
+  &:focus {
+    background-color: $colour-primary;
+    color: #FFF;
+  }
+}
