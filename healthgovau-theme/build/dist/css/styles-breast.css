@@ -5123,6 +5123,7 @@ header[role='banner'] a.logo {
   .hero .hero-bg, .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
     background-size: cover;
     background-position: center top;
+    background-repeat: no-repeat;
     height: 216px;
     top: -45px;
     position: absolute;
@@ -5404,6 +5405,10 @@ body > main .see-more {
   body > main .see-more:after {
     display: none; }
 
+header[role='banner'] a:hover, header[role='banner'] a:focus {
+  background-color: #d51364;
+  color: #FFF; }
+
 .band--primary {
   padding-top: 3.2em; }
 
@@ -5664,3 +5669,18 @@ p.highlight {
 
 .hero-bg {
   background-image: url("../img/breastscreen-hero.jpg"); }
+
+.hero .hero-bg, .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+  background-position-y: 35px; }
+  @media screen and (min-width: 768px) {
+    .hero .hero-bg, .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+      background-position-y: 10px; } }
+
+.hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+  background-position-y: -20px; }
+  @media screen and (min-width: 768px) {
+    .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+      background-position-y: -60px; } }
+  @media screen and (min-width: 75em) {
+    .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+      background-position-y: -100px; } }

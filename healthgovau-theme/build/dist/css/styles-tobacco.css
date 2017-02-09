@@ -5123,6 +5123,7 @@ header[role='banner'] a.logo {
   .hero .hero-bg, .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
     background-size: cover;
     background-position: center top;
+    background-repeat: no-repeat;
     height: 216px;
     top: -45px;
     position: absolute;
