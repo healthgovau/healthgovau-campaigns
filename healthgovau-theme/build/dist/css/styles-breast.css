@@ -5684,3 +5684,15 @@ p.highlight {
   @media screen and (min-width: 75em) {
     .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
       background-position-y: -100px; } }
+
+.hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
+  max-height: 106px;
+  margin-top: -17px; }
+  @media screen and (min-width: 768px) {
+    .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
+      max-height: 165px;
+      margin-top: -23px; } }
+  @media screen and (min-width: 75em) {
+    .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
+      max-height: 215px;
+      margin-top: -25px; } }
