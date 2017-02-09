@@ -6063,6 +6063,18 @@ body.breastscreen > main .see-more {
     .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
       background-position-y: -100px; } }
 
+.breastscreen .hero--content #block-bean-campaign-hero-logo, .breastscreen .hero--content-blur #block-bean-campaign-hero-logo, .breastscreen .hero--content-colour #block-bean-campaign-hero-logo {
+  max-height: 106px;
+  margin-top: -17px; }
+  @media screen and (min-width: 768px) {
+    .breastscreen .hero--content #block-bean-campaign-hero-logo, .breastscreen .hero--content-blur #block-bean-campaign-hero-logo, .breastscreen .hero--content-colour #block-bean-campaign-hero-logo {
+      max-height: 165px;
+      margin-top: -23px; } }
+  @media screen and (min-width: 75em) {
+    .breastscreen .hero--content #block-bean-campaign-hero-logo, .breastscreen .hero--content-blur #block-bean-campaign-hero-logo, .breastscreen .hero--content-colour #block-bean-campaign-hero-logo {
+      max-height: 215px;
+      margin-top: -25px; } }
+
 .band--primary {
   background-color: #d51364; }
 

@@ -18,5 +18,17 @@
         background-position-y: -100px; //reset
       }
     }
+    #block-bean-campaign-hero-logo {
+      max-height: 106px;
+      margin-top: -17px;
+      @include media($tablet) {
+        max-height: 165px;
+        margin-top: -23px;
+      }
+      @include media($desktop) {
+        max-height: 215px;
+        margin-top: -25px;
+      }
+    }
   }
 }
