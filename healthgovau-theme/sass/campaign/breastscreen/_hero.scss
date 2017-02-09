@@ -1,0 +1,22 @@
+// Tweaks for mobile positioning
+.breastscreen {
+  .hero {
+    .hero-bg {
+      background-position-y: 35px;
+      @include media($tablet) {
+        background-position-y: 10px; //reset
+      }
+    }
+  }
+  .hero--content {
+    .hero-bg {
+      background-position-y: -20px;
+      @include media($tablet) {
+        background-position-y: -60px; //reset
+      }
+      @include media($desktop) {
+        background-position-y: -100px; //reset
+      }
+    }
+  }
+}

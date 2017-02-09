@@ -6048,6 +6048,21 @@ body.breastscreen > main .see-more {
   border-color: #d51364;
   color: #d51364; }
 
+.breastscreen .hero .hero-bg, .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
+  background-position-y: 35px; }
+  @media screen and (min-width: 768px) {
+    .breastscreen .hero .hero-bg, .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
+      background-position-y: 10px; } }
+
+.breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
+  background-position-y: -20px; }
+  @media screen and (min-width: 768px) {
+    .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
+      background-position-y: -60px; } }
+  @media screen and (min-width: 75em) {
+    .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
+      background-position-y: -100px; } }
+
 .band--primary {
   background-color: #d51364; }
 
