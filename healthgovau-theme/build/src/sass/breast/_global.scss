@@ -1,4 +1,3 @@
-
 // List override
 .list-vertical > li,
 .list-vertical--thirds > li,
@@ -40,5 +39,30 @@ footer[role='contentinfo'] .footer-top nav > li {
         flex: 0 0 12%;
       }
     }
+  }
+}
+
+// Links
+body > main {
+  a,
+  .see-more {
+    border-color: $colour-primary;
+    color: $colour-primary;
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $colour-primary;
+    }
+    &:after {
+      display: none;
+    }
+  }
+}
+
+header[role='banner'] a {
+  &:hover,
+  &:focus {
+    background-color: $colour-primary;
+    color: #FFF;
   }
 }

@@ -1,8 +1,8 @@
 // Campaign specific band overrides
 // If the background colour is dark add @include invert-colours(); switch the font colour of all child elements
 
+// Default band types
 .band--primary {
-  //@include invert-colours();
   padding-top: $large-spacing;
 }
 
@@ -11,13 +11,26 @@
 }
 
 .band--texture {
-   padding-top: $large-spacing;
+  padding-top: $large-spacing;
 }
 
+.band--gradient {
+  @include linear-gradient(90deg, $background-colour-secondary, $white, $fallback: $background-colour-secondary);
+  padding-top: $large-spacing;
+}
+
+// New
+.band--tertiary {
+  background: $colour-tertiary;
+}
+
+// Img/text bands
 .band--img-text {
   @extend .band;
   @include pad($large-spacing 0);
+
   .band__img {
+    line-height: 0;
     @include fill-parent;
     @include media($tablet) {
       @include span-columns(4 of 12);
@@ -26,10 +39,12 @@
       @include span-columns(6 of 16);
     }
   }
+
   .band__text {
     @include fill-parent;
     @include media($tablet) {
       @include span-columns(8 of 12);
+      margin-bottom: $large-spacing;
     }
     @include media($desktop) {
       @include span-columns(10 of 16);
@@ -37,13 +52,66 @@
   }
 }
 
-.band--tertiary {
-  background: $colour-tertiary;
+// Halves
+.band--img-text-halves {
+  @extend .band--img-text;
+  padding-bottom: large-spacing;
+  @include media($tablet) {
+    padding-bottom: $medium-spacing;
+  }
+  .band__img,
+  .band__text {
+    @include media($tablet) {
+      @include span-columns(6 of 12);
+    }
+    @include media($desktop) {
+      @include span-columns(8 of 16);
+    }
+  }
+
+  .band__img {
+    text-align: center;
+    img {
+      width: 100%;
+    }
+  }
+
 }
 
-.band--gradient {
-   @include linear-gradient(90deg, $background-colour-secondary, $white, $fallback: $background-colour-secondary);
-   padding-top: $large-spacing;
+.band--img-text-halves--invert {
+  @extend .band--img-text-halves;
+  @include media($tablet) {
+    .band__text {
+      float: right;
+    }
+  }
+}
+
+// Push image to bottom of band
+.band--tight-bottom {
+  padding-bottom: 0;
+  .band__img {
+    vertical-align: bottom;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    img {
+      width: 80%;
+      float: none;
+      margin-left: 10%;
+      display: block;
+    }
+    @include media($tablet) {
+      img {
+        float: left; // Takes out of flow and aligns to bottom
+      }
+    }
+  }
+}
+
+.band-nopad {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .band--partners {
@@ -56,10 +124,11 @@
     margin: 0 auto;
   }
   a {
-    color: #fff;  }
-    .list-vertical--fourths > li {
-      text-align: center;
-    }
+    color: #fff;
+  }
+  .list-vertical--fourths > li {
+    text-align: center;
+  }
 }
 
 .band--hotline {
@@ -67,7 +136,11 @@
   background: $colour-primary;
   color: $white;
   text-align: center;
+  p {
+    margin-bottom: $tiny-spacing;
+  }
 }
+
 .band--quitline__image {
   max-width: 50%;
   @include media($tablet) {
@@ -76,14 +149,14 @@
 }
 
 .band--feature {
-    @include pad($large-spacing 0);
-    h2 {
-      margin-top: 0;
-    }
-    .feature__item {
-      @include pad($medium-spacing);
-      margin-bottom: $medium-spacing;
-    }
+  @include pad($large-spacing 0);
+  h2 {
+    margin-top: 0;
+  }
+  .feature__item {
+    @include pad($medium-spacing);
+    margin-bottom: $medium-spacing;
+  }
 
   .feature__list--primary {
     background: $colour-primary;
@@ -135,4 +208,45 @@ p.highlight {
   border-bottom: 0;
   margin-bottom: $small-spacing;
   padding-bottom: 0;
+}
+
+// Campaign only band colours
+.band--colour-1 {
+  background: $colour-1;
+}
+
+.band--colour-2 {
+  background: $colour-2;
+}
+
+.band--colour-3 {
+  background: $colour-3;
+}
+
+.band--colour-4 {
+  background: $colour-4;
+}
+
+.band--colour-5 {
+  background: $colour-5;
+}
+
+.band--colour-6 {
+  background: $colour-6;
+}
+
+.band--colour-7 {
+  background: $colour-7;
+}
+
+.band--transparent {
+  background: none;
+}
+
+// Video
+.list-vertical > li,
+.list-vertical--thirds > li,
+.list-vertical--fourths > li {
+  padding-top: 0;
+  border: 0;
 }

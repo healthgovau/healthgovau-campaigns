@@ -1,0 +1,129 @@
+// Hotline bar
+#block-bean-breastscreen-hotline {
+  section.pre-nav {
+    @extend .breastscreen-band--hotline;
+    a {
+      color: white;
+      border: 0px;
+      &:hover {
+        background-color: $colour-primary;
+      }
+    }
+  }
+}
+
+.breastscreen {
+  #block-bean-breast-cancer-in-australia {
+    @extend .band--colour-2;
+    @extend .band--img-text-halves--invert;
+    @extend .band--tight-bottom;
+    padding-bottom: 0;
+    p {
+      max-width: 100%;
+    }
+  }
+  #block-bean-breastscreen-stats {
+    @extend .breastscreen-band--tertiary;
+    @extend .band--img-text-halves;
+  }
+  #block-bean-breastscreen-expanding {
+    @extend .band--colour-1;
+    @extend .band--img-text-halves;
+    @extend .band--tight-bottom;
+    padding-bottom: 0;
+  }
+  #block-bean-breastscreen-mammogram {
+    @extend .band--colour-1;
+    @extend .band--img-text-halves--invert;
+    @extend .band--tight-bottom;
+    padding-bottom: 0;
+  }
+  #block-bean-breastscreen-74 {
+    @extend .band--colour-7;
+    @extend .band-nopad;
+    @extend .band--img-text-halves;
+  }
+  #block-bean-breastscreen-why {
+    @extend .band--colour-1;
+    @extend .band--img-text-halves--invert;
+    @extend .band--tight-bottom;
+    padding-bottom: 0;
+  }
+  #block-bean-breastscreen-early-detection {
+    @extend .band--colour-4;
+    @extend .band--img-text-halves--invert;
+  }
+  #block-bean-breastscreen-detection {
+    @extend .band--colour-4;
+    @extend .band-nopad;
+    @extend .band--img-text-halves;
+  }
+  #block-bean-breastscreen-chat {
+    @extend .band--img-text-halves;
+    padding-top: $large-spacing !important;
+  }
+}
+
+// Navigation menu
+.breastscreen {
+
+  .sticky-nav {
+    display: none;
+    @include media($tablet) {
+      display: block;
+    }
+  }
+  @include media($tablet) {
+    display: block;
+
+    section.site-nav {
+      #block-menu-menu-breastscreen-menu {
+        li {
+          padding-right: 0;
+        }
+        a:hover {
+          border-color: $colour-primary;
+        }
+        a.is-active {
+          border-color: white;
+          &:hover {
+            border-color: $colour-primary !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// video view block
+.breastscreen {
+  #block-views-campaign-videos-block-1 {
+    background: none;
+    .see-more {
+      display: none;
+    }
+  }
+}
+
+body.breastscreen > main a,
+body.breastscreen > main .see-more {
+  border-color: #d51364;
+  color: #d51364;
+}
+
+// Links
+.breastscreen {
+  a,
+  .see-more {
+    border-color: $colour-primary;
+    color: $colour-primary;
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $colour-primary;
+    }
+    &:after {
+      display: none;
+    }
+  }
+}

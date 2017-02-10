@@ -1,17 +1,3 @@
-.node-type-campaign {
-  #block-views-campaign-videos-block {
-    @extend .band--primary;
-    .view-mode-compact {
-      div.group-left {
-        @extend .video__container;
-      }
-      div.group-right {
-        @extend .video__info;
-      }
-    }
-  }
-}
-
 .node-type-video {
   .view-mode-full {
     div.group-left {
