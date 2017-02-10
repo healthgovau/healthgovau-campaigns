@@ -82,4 +82,6 @@ $(function () {
     //     }
     // });
 
+    console.log(JSON.stringify(document.sitenav));
+
 });
