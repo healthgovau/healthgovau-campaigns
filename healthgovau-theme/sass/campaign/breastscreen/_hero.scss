@@ -3,6 +3,7 @@
   .hero {
     .hero-bg {
       background-position-y: 35px;
+      height: 225px;
       @include media($tablet) {
         background-position-y: 10px; //reset
       }
