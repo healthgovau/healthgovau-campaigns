@@ -48,16 +48,12 @@ $(function () {
     var stickyNav = function () {
         var scrollTop = $(window).scrollTop();
         var navHeight = $('.sticky-nav').height();
-        console.log(navHeight);
         if (scrollTop > stickyNavTop) {
             $('.sticky-nav').addClass('on');
-            //if($('.sticky-nav').hasClass('on')){
-
-            //  $('html').css('margin-top', navHeight + 'px');
-            //}
+            $('html').css('margin-top', navHeight + 'px');
         } else {
             $('.sticky-nav').removeClass('on');
-            //$('html').css('margin-top', '0');
+            $('html').css('margin-top', '0');
         }
     }
 
