@@ -15,8 +15,8 @@
 .breastscreen {
   #block-bean-breast-cancer-in-australia {
     @extend .band--colour-2;
-    @extend .band--tight-bottom;
     @extend .band--img-text-halves--invert;
+    @extend .band--tight-bottom;
     p {
       max-width: 100%;
     }
@@ -27,13 +27,13 @@
   }
   #block-bean-breastscreen-expanding {
     @extend .band--colour-1;
-    @extend .band--tight-bottom;
     @extend .band--img-text-halves;
+    @extend .band--tight-bottom;
   }
   #block-bean-breastscreen-mammogram {
     @extend .band--colour-1;
-    @extend .band--tight-bottom;
     @extend .band--img-text-halves--invert;
+    @extend .band--tight-bottom;
   }
   #block-bean-breastscreen-74 {
     @extend .band--colour-7;
@@ -42,8 +42,8 @@
   }
   #block-bean-breastscreen-why {
     @extend .band--colour-1;
-    @extend .band--tight-bottom;
     @extend .band--img-text-halves--invert;
+    @extend .band--tight-bottom;
   }
   #block-bean-breastscreen-early-detection {
     @extend .band--colour-4;
