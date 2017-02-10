@@ -61,9 +61,11 @@
 
 // Navigation menu
 .breastscreen {
-  @include media($mobile) {
-    section.site-nav {
-      display: none;
+
+  .sticky-nav {
+    display: none;
+    @include media($tablet) {
+      display: block;
     }
   }
   @include media($tablet) {
@@ -80,7 +82,7 @@
         a.is-active {
           border-color: white;
           &:hover {
-            border-color: $colour-primary!important;
+            border-color: $colour-primary !important;
           }
         }
       }
