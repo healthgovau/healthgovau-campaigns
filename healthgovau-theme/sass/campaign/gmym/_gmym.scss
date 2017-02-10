@@ -1,11 +1,11 @@
-.band--primary {
+.gmym-band--primary {
   @extend .band;
-  background-color: $background-colour-primary;
+  background-color: $grey-light;
 }
 
-.band--secondary {
+.gmym-band--secondary {
   @extend %band;
-  background-color: $background-colour-secondary;
+  background-color: $grey;
 }
 
 // Social
@@ -18,5 +18,11 @@
 
   @include media($desktop) {
     @include span-columns(3 of 16);
+  }
+}
+
+.girls-make-your-move {
+  #block-bean-gmym-involved {
+    @extend .gmym-band--primary;
   }
 }
