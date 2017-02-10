@@ -92,7 +92,7 @@
 
 // Push image to bottom of band
 .band--tight-bottom {
-  padding-bottom: 0;
+  padding-bottom: 0 !important;
   .band__img {
     vertical-align: bottom;
     text-align: center;
