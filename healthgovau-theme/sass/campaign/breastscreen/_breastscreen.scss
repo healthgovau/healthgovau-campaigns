@@ -25,11 +25,15 @@
     @extend .breastscreen-band--tertiary;
     @extend .band--img-text-halves;
   }
-  #block-bean-breastscreen-expanding,
-  #block-bean-breastscreen-mammogram {
+  #block-bean-breastscreen-expanding {
     @extend .band--colour-1;
     @extend .band--tight-bottom;
     @extend .band--img-text-halves;
+  }
+  #block-bean-breastscreen-mammogram {
+    @extend .band--colour-1;
+    @extend .band--tight-bottom;
+    @extend .band--img-text-halves--invert;
   }
   #block-bean-breastscreen-74 {
     @extend .band--colour-7;
@@ -43,7 +47,7 @@
   }
   #block-bean-breastscreen-early-detection {
     @extend .band--colour-4;
-    @extend .band--img-text-halves;
+    @extend .band--img-text-halves--invert;
   }
   #block-bean-breastscreen-detection {
     @extend .band--colour-4;
@@ -59,7 +63,7 @@
 section.site-nav {
   #block-menu-menu-breastscreen-menu {
     li {
-      padding-right: 0px;
+      padding-right: 0;
     }
     a:hover {
       border-color: $colour-primary;
