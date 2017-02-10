@@ -6037,6 +6037,8 @@ section.site-nav #block-menu-menu-breastscreen-menu a:hover {
 
 section.site-nav #block-menu-menu-breastscreen-menu a.is-active {
   border-color: white; }
+  section.site-nav #block-menu-menu-breastscreen-menu a.is-active:hover {
+    border-color: #d51364 !important; }
 
 .breastscreen #block-views-campaign-videos-block-1 {
   background: none; }
