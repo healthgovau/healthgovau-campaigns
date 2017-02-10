@@ -13,6 +13,18 @@ CONST SOCIAL_MEDIA = 'http://assets.juicer.io';
  * Implements THEME_preprocess_html().
  */
 function healthgovau_preprocess_html(&$variables) {
+  // Add campaign to body class if there is any.
+  if (arg(0) == 'node' && is_numeric(arg(1))) {
+    $node = node_load(arg(1));
+    if (isset($node->field_campaign[LANGUAGE_NONE][0])) {
+      $campaign_nid = $node->field_campaign[LANGUAGE_NONE][0]['target_id'];
+      $campaign = node_load($campaign_nid);
+      $campaign_title = $campaign->title;
+      $title = strtolower(str_replace(' ', '-', $campaign_title));
+      $variables['classes_array'][] = $title;
+    }
+  }
+
   // Add page title to body class.
   $title = $variables['head_title_array']['title'];
   $title = strtolower(str_replace(' ', '-', $title));

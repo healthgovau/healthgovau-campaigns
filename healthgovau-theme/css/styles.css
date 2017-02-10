@@ -6037,6 +6037,8 @@ section.site-nav #block-menu-menu-breastscreen-menu a:hover {
 
 section.site-nav #block-menu-menu-breastscreen-menu a.is-active {
   border-color: white; }
+  section.site-nav #block-menu-menu-breastscreen-menu a.is-active:hover {
+    border-color: #d51364 !important; }
 
 .breastscreen #block-views-campaign-videos-block-1 {
   background: none; }
@@ -6047,6 +6049,33 @@ body.breastscreen > main a,
 body.breastscreen > main .see-more {
   border-color: #d51364;
   color: #d51364; }
+
+.breastscreen .hero .hero-bg, .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
+  background-position-y: 35px; }
+  @media screen and (min-width: 768px) {
+    .breastscreen .hero .hero-bg, .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
+      background-position-y: 10px; } }
+
+.breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
+  background-position-y: -20px; }
+  @media screen and (min-width: 768px) {
+    .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
+      background-position-y: -60px; } }
+  @media screen and (min-width: 75em) {
+    .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
+      background-position-y: -100px; } }
+
+.breastscreen .hero--content #block-bean-campaign-hero-logo, .breastscreen .hero--content-blur #block-bean-campaign-hero-logo, .breastscreen .hero--content-colour #block-bean-campaign-hero-logo {
+  max-height: 106px;
+  margin-top: -17px; }
+  @media screen and (min-width: 768px) {
+    .breastscreen .hero--content #block-bean-campaign-hero-logo, .breastscreen .hero--content-blur #block-bean-campaign-hero-logo, .breastscreen .hero--content-colour #block-bean-campaign-hero-logo {
+      max-height: 165px;
+      margin-top: -23px; } }
+  @media screen and (min-width: 75em) {
+    .breastscreen .hero--content #block-bean-campaign-hero-logo, .breastscreen .hero--content-blur #block-bean-campaign-hero-logo, .breastscreen .hero--content-colour #block-bean-campaign-hero-logo {
+      max-height: 215px;
+      margin-top: -25px; } }
 
 .band--primary {
   background-color: #d51364; }
