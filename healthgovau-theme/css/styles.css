@@ -4751,6 +4751,10 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
 .light {
   font-weight: 400; }
 
+@media screen and (min-width: 768px) {
+  .visible-mobile {
+    display: none; } }
+
 @media screen and (max-width: 420px) {
   footer .page-bottom #block-menu-menu-page-bottom-menu {
     float: left;
@@ -5759,6 +5763,7 @@ header .page-header__logo img {
   background: #f3f0ed; }
 
 .band--img-text, .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat {
+  overflow: hidden;
   padding: 3.2em 0; }
   .band--img-text .band__img, .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-why .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img {
     line-height: 0;
@@ -5999,16 +6004,21 @@ p.highlight {
 .breastscreen #block-bean-breast-cancer-in-australia p {
   max-width: 100%; }
 
-section.site-nav #block-menu-menu-breastscreen-menu li {
-  padding-right: 0; }
+@media screen and (max-width: 420px) {
+  .breastscreen section.site-nav {
+    display: none; } }
 
-section.site-nav #block-menu-menu-breastscreen-menu a:hover {
-  border-color: #d51364; }
-
-section.site-nav #block-menu-menu-breastscreen-menu a.is-active {
-  border-color: white; }
-  section.site-nav #block-menu-menu-breastscreen-menu a.is-active:hover {
-    border-color: #d51364 !important; }
+@media screen and (min-width: 768px) {
+  .breastscreen {
+    display: block; }
+    .breastscreen section.site-nav #block-menu-menu-breastscreen-menu li {
+      padding-right: 0; }
+    .breastscreen section.site-nav #block-menu-menu-breastscreen-menu a:hover {
+      border-color: #d51364; }
+    .breastscreen section.site-nav #block-menu-menu-breastscreen-menu a.is-active {
+      border-color: white; }
+      .breastscreen section.site-nav #block-menu-menu-breastscreen-menu a.is-active:hover {
+        border-color: #d51364 !important; } }
 
 .breastscreen #block-views-campaign-videos-block-1 {
   background: none; }
@@ -6019,6 +6029,19 @@ body.breastscreen > main a,
 body.breastscreen > main .see-more {
   border-color: #d51364;
   color: #d51364; }
+
+.breastscreen a,
+.breastscreen .see-more {
+  border-color: #d51364;
+  color: #d51364; }
+  .breastscreen a:hover, .breastscreen a:focus,
+  .breastscreen .see-more:hover,
+  .breastscreen .see-more:focus {
+    color: #FFFFFF;
+    background-color: #d51364; }
+  .breastscreen a:after,
+  .breastscreen .see-more:after {
+    display: none; }
 
 .breastscreen .hero .hero-bg, .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
   background-position-y: 35px; }

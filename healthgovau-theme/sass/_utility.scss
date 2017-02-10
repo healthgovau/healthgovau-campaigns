@@ -1,0 +1,5 @@
+.visible-mobile {
+  @include media($tablet) {
+    display: none;
+  }
+}

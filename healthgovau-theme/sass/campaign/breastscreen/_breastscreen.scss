@@ -60,18 +60,29 @@
 }
 
 // Navigation menu
-section.site-nav {
-  #block-menu-menu-breastscreen-menu {
-    li {
-      padding-right: 0;
+.breastscreen {
+  @include media($mobile) {
+    section.site-nav {
+      display: none;
     }
-    a:hover {
-      border-color: $colour-primary;
-    }
-    a.is-active {
-      border-color: white;
-      &:hover {
-        border-color: $colour-primary!important;
+  }
+  @include media($tablet) {
+    display: block;
+
+    section.site-nav {
+      #block-menu-menu-breastscreen-menu {
+        li {
+          padding-right: 0;
+        }
+        a:hover {
+          border-color: $colour-primary;
+        }
+        a.is-active {
+          border-color: white;
+          &:hover {
+            border-color: $colour-primary!important;
+          }
+        }
       }
     }
   }
@@ -91,4 +102,21 @@ body.breastscreen > main a,
 body.breastscreen > main .see-more {
   border-color: #d51364;
   color: #d51364;
+}
+
+// Links
+.breastscreen {
+  a,
+  .see-more {
+    border-color: $colour-primary;
+    color: $colour-primary;
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $colour-primary;
+    }
+    &:after {
+      display: none;
+    }
+  }
 }

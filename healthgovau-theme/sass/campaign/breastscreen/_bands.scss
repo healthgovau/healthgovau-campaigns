@@ -29,6 +29,7 @@
 // Img/text bands
 .band--img-text {
   @extend .band;
+  overflow: hidden;
   @include pad($large-spacing 0);
 
   .band__img {
