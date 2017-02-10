@@ -4755,6 +4755,13 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
   .visible-mobile {
     display: none; } }
 
+.vertical-centre {
+  top: 50%;
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  position: relative; }
+
 @media screen and (max-width: 420px) {
   footer .page-bottom #block-menu-menu-page-bottom-menu {
     float: left;
@@ -6004,9 +6011,11 @@ p.highlight {
 .breastscreen #block-bean-breast-cancer-in-australia p {
   max-width: 100%; }
 
-@media screen and (max-width: 420px) {
-  .breastscreen section.site-nav {
-    display: none; } }
+.breastscreen .sticky-nav {
+  display: none; }
+  @media screen and (min-width: 768px) {
+    .breastscreen .sticky-nav {
+      display: block; } }
 
 @media screen and (min-width: 768px) {
   .breastscreen {
