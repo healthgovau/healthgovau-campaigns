@@ -5844,7 +5844,7 @@ header .page-header__logo img {
     float: right; } }
 
 .band--tight-bottom, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why {
-  padding-bottom: 0; }
+  padding-bottom: 0 !important; }
   .band--tight-bottom .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img, .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-why .band__img {
     vertical-align: bottom;
     text-align: center;
