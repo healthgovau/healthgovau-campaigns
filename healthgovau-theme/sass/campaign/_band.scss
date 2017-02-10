@@ -21,10 +21,6 @@
   @extend %band;
   padding: $large-spacing 0;
 }
-.smokes-band--primary {
-  @extend .band;
-  background-color: $background-colour-primary;
-}
 
 .band--secondary {
   @extend %band;

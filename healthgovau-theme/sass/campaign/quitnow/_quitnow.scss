@@ -1,3 +1,8 @@
+.smokes-band--primary {
+  @extend .band;
+  background-color: $grey-light;
+}
+
 .page-campaign-videos {
   main .content-main {
     @include media($mobile) {
