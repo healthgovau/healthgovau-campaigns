@@ -47,10 +47,12 @@ $(function () {
     }
     var stickyNav = function () {
         var scrollTop = $(window).scrollTop();
+        var navHeight = $('.sticky-nav').height();
+        console.log(navHeight);
         if (scrollTop > stickyNavTop) {
             $('.sticky-nav').addClass('on');
             //if($('.sticky-nav').hasClass('on')){
-            //  navHeight = $('.sticky-nav').height();
+
             //  $('html').css('margin-top', navHeight + 'px');
             //}
         } else {

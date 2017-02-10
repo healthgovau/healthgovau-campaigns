@@ -58,7 +58,7 @@
 // Halves
 .band--img-text-halves {
   @extend .band--img-text;
-  padding-bottom: $large-spacing;
+  //padding-bottom: $large-spacing;
   @include media($tablet) {
     padding-bottom: $medium-spacing;
   }
@@ -92,7 +92,7 @@
 
 // Push image to bottom of band
 .band--tight-bottom {
-  padding-bottom: 0 !important;
+  padding-bottom: 0;
   .band__img {
     vertical-align: bottom;
     text-align: center;
