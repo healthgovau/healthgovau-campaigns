@@ -17,6 +17,7 @@
     @extend .band--colour-2;
     @extend .band--img-text-halves--invert;
     @extend .band--tight-bottom;
+    padding-bottom: 0;
     p {
       max-width: 100%;
     }
@@ -29,11 +30,13 @@
     @extend .band--colour-1;
     @extend .band--img-text-halves;
     @extend .band--tight-bottom;
+    padding-bottom: 0;
   }
   #block-bean-breastscreen-mammogram {
     @extend .band--colour-1;
     @extend .band--img-text-halves--invert;
     @extend .band--tight-bottom;
+    padding-bottom: 0;
   }
   #block-bean-breastscreen-74 {
     @extend .band--colour-7;
@@ -44,6 +47,7 @@
     @extend .band--colour-1;
     @extend .band--img-text-halves--invert;
     @extend .band--tight-bottom;
+    padding-bottom: 0;
   }
   #block-bean-breastscreen-early-detection {
     @extend .band--colour-4;

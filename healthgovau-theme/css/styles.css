@@ -6008,8 +6008,19 @@ p.highlight {
   #block-bean-breastscreen-hotline section.pre-nav a:hover {
     background-color: #d51364; }
 
-.breastscreen #block-bean-breast-cancer-in-australia p {
-  max-width: 100%; }
+.breastscreen #block-bean-breast-cancer-in-australia {
+  padding-bottom: 0; }
+  .breastscreen #block-bean-breast-cancer-in-australia p {
+    max-width: 100%; }
+
+.breastscreen #block-bean-breastscreen-expanding {
+  padding-bottom: 0; }
+
+.breastscreen #block-bean-breastscreen-mammogram {
+  padding-bottom: 0; }
+
+.breastscreen #block-bean-breastscreen-why {
+  padding-bottom: 0; }
 
 .breastscreen .sticky-nav {
   display: none; }
