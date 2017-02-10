@@ -4876,6 +4876,7 @@ header[role='banner'] a.logo {
   .hero .hero-bg, .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
     background-size: cover;
     background-position: top center;
+    background-repeat: no-repeat;
     height: 216px;
     top: -60px;
     position: absolute;
@@ -6068,7 +6069,11 @@ body.breastscreen > main .see-more {
   height: 225px; }
   @media screen and (min-width: 768px) {
     .breastscreen .hero .hero-bg, .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
-      background-position-y: 10px; } }
+      background-position-y: 10px;
+      height: 360px; } }
+  @media screen and (min-width: 75em) {
+    .breastscreen .hero .hero-bg, .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
+      height: 480px; } }
 
 .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
   background-position-y: -20px; }

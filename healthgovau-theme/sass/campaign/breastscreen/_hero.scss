@@ -6,6 +6,10 @@
       height: 225px;
       @include media($tablet) {
         background-position-y: 10px; //reset
+        height: $hero-background-height-tablet;
+      }
+      @include media($desktop) {
+        height: $hero-background-height-desktop;
       }
     }
   }

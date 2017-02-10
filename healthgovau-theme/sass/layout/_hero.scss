@@ -29,6 +29,7 @@ $hero-content-y-shift: 0.25;
     background-size: cover;
     //background-position: center center;
     background-position: top center;
+    background-repeat: no-repeat;
     height: $hero-background-height-mobile;
     top: - $hero-height-mobile / 3;
     position: absolute;
