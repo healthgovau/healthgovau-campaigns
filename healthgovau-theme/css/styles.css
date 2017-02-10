@@ -6053,7 +6053,8 @@ body.breastscreen > main .see-more {
     display: none; }
 
 .breastscreen .hero .hero-bg, .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
-  background-position-y: 35px; }
+  background-position-y: 35px;
+  height: 225px; }
   @media screen and (min-width: 768px) {
     .breastscreen .hero .hero-bg, .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
       background-position-y: 10px; } }
