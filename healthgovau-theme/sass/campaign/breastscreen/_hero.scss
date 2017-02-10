@@ -23,7 +23,7 @@
         background-position-y: -100px; //reset
       }
     }
-    #block-bean-campaign-hero-logo {
+    .campaign-logo {
       max-height: 106px;
       margin-top: -17px;
       @include media($tablet) {

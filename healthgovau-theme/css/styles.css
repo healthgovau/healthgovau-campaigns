@@ -5810,7 +5810,7 @@ header .page-header__logo img {
           margin-right: 0; } }
 
 .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat {
-  padding-bottom: large-spacing; }
+  padding-bottom: 3.2em; }
   @media screen and (min-width: 768px) {
     .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat {
       padding-bottom: 1.2em; } }
@@ -6020,6 +6020,9 @@ p.highlight {
 .breastscreen #block-bean-breastscreen-why {
   padding-bottom: 0; }
 
+.breastscreen #block-bean-breastscreen-chat {
+  padding-top: 3.2em; }
+
 .breastscreen .sticky-nav {
   display: none; }
   @media screen and (min-width: 768px) {
@@ -6081,15 +6084,15 @@ body.breastscreen > main .see-more {
     .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
       background-position-y: -100px; } }
 
-.breastscreen .hero--content #block-bean-campaign-hero-logo, .breastscreen .hero--content-blur #block-bean-campaign-hero-logo, .breastscreen .hero--content-colour #block-bean-campaign-hero-logo {
+.breastscreen .hero--content .campaign-logo, .breastscreen .hero--content-blur .campaign-logo, .breastscreen .hero--content-colour .campaign-logo {
   max-height: 106px;
   margin-top: -17px; }
   @media screen and (min-width: 768px) {
-    .breastscreen .hero--content #block-bean-campaign-hero-logo, .breastscreen .hero--content-blur #block-bean-campaign-hero-logo, .breastscreen .hero--content-colour #block-bean-campaign-hero-logo {
+    .breastscreen .hero--content .campaign-logo, .breastscreen .hero--content-blur .campaign-logo, .breastscreen .hero--content-colour .campaign-logo {
       max-height: 165px;
       margin-top: -23px; } }
   @media screen and (min-width: 75em) {
-    .breastscreen .hero--content #block-bean-campaign-hero-logo, .breastscreen .hero--content-blur #block-bean-campaign-hero-logo, .breastscreen .hero--content-colour #block-bean-campaign-hero-logo {
+    .breastscreen .hero--content .campaign-logo, .breastscreen .hero--content-blur .campaign-logo, .breastscreen .hero--content-colour .campaign-logo {
       max-height: 215px;
       margin-top: -25px; } }
 

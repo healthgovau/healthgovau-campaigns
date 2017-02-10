@@ -30,7 +30,7 @@
 .band--img-text {
   @extend .band;
   overflow: hidden;
-  @include pad($large-spacing 0);
+  padding: $large-spacing 0;
 
   .band__img {
     line-height: 0;
@@ -58,7 +58,7 @@
 // Halves
 .band--img-text-halves {
   @extend .band--img-text;
-  padding-bottom: large-spacing;
+  padding-bottom: $large-spacing;
   @include media($tablet) {
     padding-bottom: $medium-spacing;
   }
