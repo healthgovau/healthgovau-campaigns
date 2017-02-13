@@ -1,202 +1,9 @@
 @charset "UTF-8";
 /*
 
-UI-Kit version: 1.10.3
+UI-Kit version: 1.11.0
 
 */
-/*
-Colours
-
-A basic palette of colours that are clear and accessible.
-
-We are finalising the colours &mdash; for help <a href="https://github.com/AusDTO/gov-au-ui-kit/issues" rel="external">log a GitHub issue</a>.
-
-Collection: Foundation
-
-Style guide: Colours
-*/
-/*
-Colours palette
-
-Style guide: Colours.1 Colours palette
-*/
-/*
-Contextual colours palette
-
-Style guide: Colours.2 Contextual colours palette
-*/
-/*
-Accessibility
-
-Style guide: Colours.3 Accessibility
-*/
-/*
-IE Conditionals
-
-Based on implementation by govuk_frontend_toolkit
-https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_conditionals.scss
-
-The base css you write should be for mobile. You can
-then add desktop styles on top.
-
-Usage:
-
-  div.columns {
-    border: 1px solid;
-
-    @include media($desktop){
-      width: 30%;
-      float: left;
-    }
-    @include ie-lte(8) {
-      something to fix visual bugs in old IE
-    }
-    @include ie(6) {
-      padding: 0;
-    }
-  }
-*/
-/*
- * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- */
-.visuallyhidden,
-.is-visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
-
-/*
-  Warning/notification regarding feature support
-*/
-.ua-notification {
-  display: block;
-  padding: 0.8em;
-  text-align: center;
-  background-color: #f9c642;
-  color: #313131;
-  font-size: rem(17);
-  margin-bottom: 0; }
-
-.list-small a, .primary-nav ul ul ul ul a,
-.local-nav ul ul ul ul a, [class^='breadcrumbs'] ul li:not(:last-child) {
-  background-image: url("../../uikit_base/images/icons/arrow-right.svg"); }
-
-[class^='breadcrumbs'][class$='--inverted'] ul li:not(:last-child) {
-  background-image: url("../../uikit_base/images/icons/arrow-right--white.svg"); }
-
-header[role='banner'] .see-more::after, body > main .see-more::after, footer[role='contentinfo'] .see-more::after, .list-horizontal .tags .see-more::after, .list-horizontal--benefits .tags .see-more::after, .list-vertical .tags .see-more::after, .list-vertical--thirds .tags .see-more::after, .list-vertical--fourths .tags .see-more::after, footer[role='contentinfo'] .footer-top nav .tags .see-more::after, .list-vertical--halves .tags .see-more::after, .list-small .tags .see-more::after, .list-highlighted .tags .see-more::after, .primary-nav ul .see-more::after,
-.local-nav ul .see-more::after, [class^='breadcrumbs'] .see-more::after, [class^='breadcrumbs'][class$='--inverted'] .see-more::after, .skip-to .see-more::after, [class^='controls'] .see-more::after, .govau--header .see-more::after, .prerelease-govau--header .see-more::after, .hero .see-more::after, .hero--content .see-more::after, .hero--content-blur .see-more::after, .hero--content-colour .see-more::after,
-.hero-sml .see-more::after,
-.hero-med .see-more::after {
-  background-image: url("../../uikit_base/images/icons/arrow-right--aqua.svg"); }
-
-.govau--header .nav-toggle::before {
-  background-image: url("../../uikit_base/images/icons/bars.svg"); }
-
-.govau--header .nav-toggle.active::before {
-  background-image: url("../../uikit_base/images/icons/close.svg"); }
-
-.accordion-button::before,
-summary::before, .accordion--controls summary::before, .nav-toggle::before {
-  background-image: url("../../uikit_base/images/icons/chevron-down--navy.svg"); }
-
-header[role='banner'] a[rel~='external']::after, body > main a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .list-horizontal .tags a[rel~='external']::after, .list-horizontal--benefits .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, footer[role='contentinfo'] .footer-top nav .tags a[rel~='external']::after, .list-vertical--halves .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
-.local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after, .hero--content a[rel~='external']::after, .hero--content-blur a[rel~='external']::after, .hero--content-colour a[rel~='external']::after,
-.hero-sml a[rel~='external']::after,
-.hero-med a[rel~='external']::after {
-  background-image: url("../../uikit_base/images/icons/external-link--aqua.svg"); }
-
-.icon-chevron::before {
-  border-style: solid;
-  border-width: 0.25em 0.25em 0 0;
-  content: '';
-  display: inline-block;
-  height: 0.5em;
-  left: 0.15em;
-  position: relative;
-  vertical-align: top;
-  width: 0.5em;
-  -webkit-transition: -webkit-transform 300ms linear;
-  transition: -webkit-transform 300ms linear;
-  transition: transform 300ms linear;
-  transition: transform 300ms linear, -webkit-transform 300ms linear; }
-
-.icon-chevron.top::before {
-  top: 0.75em;
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg); }
-
-.icon-chevron.right::before {
-  left: 0;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg); }
-
-.icon-chevron.bottom::before {
-  top: 0.5em;
-  -webkit-transform: rotate(135deg);
-      -ms-transform: rotate(135deg);
-          transform: rotate(135deg); }
-
-.icon-chevron.left::before {
-  left: 0.25em;
-  -webkit-transform: rotate(-135deg);
-      -ms-transform: rotate(-135deg);
-          transform: rotate(-135deg); }
-
-@media print {
-  *,
-  *::before,
-  *::after,
-  *::first-letter,
-  *::first-line {
-    background: transparent;
-    color: #000;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    text-shadow: none; }
-  a,
-  a:visited {
-    text-decoration: underline; }
-  a[href]::after {
-    content: " (" attr(href) ")"; }
-  abbr[title]::after {
-    content: " (" attr(title) ")"; }
-  a[href^='#']::after,
-  a[href^='javascript:']::after {
-    content: ''; }
-  pre,
-  blockquote {
-    border: 1px solid #bbbbbb;
-    page-break-inside: avoid; }
-  thead {
-    display: table-header-group; }
-  tr,
-  img {
-    page-break-inside: avoid; }
-  img {
-    max-width: 100%; }
-  p,
-  h2,
-  .display,
-  h3,
-  footer[role='contentinfo'] .footer-top h2,
-  footer[role='contentinfo'] .footer-top .display {
-    orphans: 3;
-    widows: 3; }
-  h2, .display,
-  h3,
-  footer[role='contentinfo'] .footer-top h2,
-  footer[role='contentinfo'] .footer-top .display {
-    page-break-after: avoid; } }
-
 /*! responsive-nav.js 1.0.39 by @viljamis */
 .nav-collapse ul {
   margin: 0;
@@ -632,6 +439,199 @@ html {
           box-sizing: inherit; }
 
 /*
+Colours
+
+A basic palette of colours that are clear and accessible.
+
+We are finalising the colours &mdash; for help <a href="https://github.com/AusDTO/gov-au-ui-kit/issues" rel="external">log a GitHub issue</a>.
+
+Collection: Foundation
+
+Style guide: Colours
+*/
+/*
+Colours palette
+
+Style guide: Colours.1 Colours palette
+*/
+/*
+Contextual colours palette
+
+Style guide: Colours.2 Contextual colours palette
+*/
+/*
+Accessibility
+
+Style guide: Colours.3 Accessibility
+*/
+/*
+IE Conditionals
+
+Based on implementation by govuk_frontend_toolkit
+https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_conditionals.scss
+
+The base css you write should be for mobile. You can
+then add desktop styles on top.
+
+Usage:
+
+  div.columns {
+    border: 1px solid;
+
+    @include media($desktop){
+      width: 30%;
+      float: left;
+    }
+    @include ie-lte(8) {
+      something to fix visual bugs in old IE
+    }
+    @include ie(6) {
+      padding: 0;
+    }
+  }
+*/
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.visuallyhidden,
+.is-visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+  Warning/notification regarding feature support
+*/
+.ua-notification {
+  display: block;
+  padding: 0.8em;
+  text-align: center;
+  background-color: #f9c642;
+  color: #313131;
+  font-size: 1.0625rem;
+  margin-bottom: 0; }
+
+.list-small a, .primary-nav ul ul ul ul a,
+.local-nav ul ul ul ul a, [class^='breadcrumbs'] ul li:not(:last-child) {
+  background-image: url("../../uikit_base/images/icons/arrow-right.svg"); }
+
+[class^='breadcrumbs'][class$='--inverted'] ul li:not(:last-child) {
+  background-image: url("../../uikit_base/images/icons/arrow-right--white.svg"); }
+
+header[role='banner'] .see-more::after, body > main .see-more::after, footer[role='contentinfo'] .see-more::after, .primary-nav ul .see-more::after,
+.local-nav ul .see-more::after, [class^='breadcrumbs'] .see-more::after, [class^='breadcrumbs'][class$='--inverted'] .see-more::after, .skip-to .see-more::after, [class^='controls'] .see-more::after, .govau--header .see-more::after, .prerelease-govau--header .see-more::after, .hero .see-more::after, .hero--content .see-more::after, .hero--content-blur .see-more::after, .hero--content-colour .see-more::after,
+.hero-sml .see-more::after,
+.hero-med .see-more::after, .tags .see-more::after {
+  background-image: url("../../uikit_base/images/icons/arrow-right--aqua.svg"); }
+
+.govau--header .nav-toggle::before {
+  background-image: url("../../uikit_base/images/icons/bars.svg"); }
+
+.govau--header .nav-toggle.active::before {
+  background-image: url("../../uikit_base/images/icons/close.svg"); }
+
+.accordion-button::before,
+summary::before, .accordion--controls summary::before, .nav-toggle::before {
+  background-image: url("../../uikit_base/images/icons/chevron-down--navy.svg"); }
+
+header[role='banner'] a[rel~='external']::after, body > main a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
+.local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after, .hero--content a[rel~='external']::after, .hero--content-blur a[rel~='external']::after, .hero--content-colour a[rel~='external']::after,
+.hero-sml a[rel~='external']::after,
+.hero-med a[rel~='external']::after, .tags a[rel~='external']::after {
+  background-image: url("../../uikit_base/images/icons/external-link--aqua.svg"); }
+
+.icon-chevron::before {
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0;
+  content: '';
+  display: inline-block;
+  height: 0.5em;
+  left: 0.15em;
+  position: relative;
+  vertical-align: top;
+  width: 0.5em;
+  -webkit-transition: -webkit-transform 300ms linear;
+  transition: -webkit-transform 300ms linear;
+  transition: transform 300ms linear;
+  transition: transform 300ms linear, -webkit-transform 300ms linear; }
+
+.icon-chevron.top::before {
+  top: 0.75em;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+
+.icon-chevron.right::before {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg); }
+
+.icon-chevron.bottom::before {
+  top: 0.5em;
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg); }
+
+.icon-chevron.left::before {
+  left: 0.25em;
+  -webkit-transform: rotate(-135deg);
+      -ms-transform: rotate(-135deg);
+          transform: rotate(-135deg); }
+
+@media print {
+  *,
+  *::before,
+  *::after,
+  *::first-letter,
+  *::first-line {
+    background: transparent;
+    color: #000;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    text-shadow: none; }
+  a,
+  a:visited {
+    text-decoration: underline; }
+  a[href]::after {
+    content: " (" attr(href) ")"; }
+  abbr[title]::after {
+    content: " (" attr(title) ")"; }
+  a[href^='#']::after,
+  a[href^='javascript:']::after {
+    content: ''; }
+  pre,
+  blockquote {
+    border: 1px solid #bbbbbb;
+    page-break-inside: avoid; }
+  thead {
+    display: table-header-group; }
+  tr,
+  img {
+    page-break-inside: avoid; }
+  img {
+    max-width: 100%; }
+  p,
+  h2,
+  .display,
+  h3,
+  footer[role='contentinfo'] .footer-top h2,
+  footer[role='contentinfo'] .footer-top .display {
+    orphans: 3;
+    widows: 3; }
+  h2, .display,
+  h3,
+  footer[role='contentinfo'] .footer-top h2,
+  footer[role='contentinfo'] .footer-top .display {
+    page-break-after: avoid; } }
+
+/*
 Accordions
 
 Collection: Components
@@ -977,10 +977,16 @@ Style guide: Forms & buttons.05 Checkbox input
     margin: 0 0 1.2em 0;
     padding: 0;
     border: none; }
+  form legend {
+    margin-bottom: 0.8em; }
   form label {
     display: block;
-    margin-bottom: 0.4em;
-    margin-top: 0.4em; }
+    margin-top: 1.2em;
+    margin-bottom: 1.2em; }
+    @media screen and (min-width: 768px) {
+      form label {
+        margin-top: 0.8em;
+        margin-bottom: 0.8em; } }
   form .hint {
     display: block;
     margin-bottom: 0.4em;
@@ -1002,20 +1008,16 @@ Style guide: Forms & buttons.05 Checkbox input
         border-color: #c00; }
     form input[type='radio'] + label, form input[type='checkbox'] + label {
       display: inline-block;
-      margin-bottom: 8px;
-      padding: 15px 0 15px 60px;
-      position: relative;
-      width: 100%; }
-      @media screen and (min-width: 768px) {
-        form input[type='radio'] + label, form input[type='checkbox'] + label {
-          padding: 12px 0 12px 60px; } }
+      float: left;
+      width: 100%;
+      margin-left: 0.8em; }
       form input[type='radio'] + label::before, form input[type='checkbox'] + label::before {
         display: inline-block;
+        float: left;
         height: 27px;
-        position: absolute;
+        width: 27px;
         text-align: center;
-        top: 13px;
-        width: 27px; }
+        margin-right: 14px; }
         @media screen and (min-width: 768px) {
           form input[type='radio'] + label::before, form input[type='checkbox'] + label::before {
             top: 9px; } }
@@ -1036,19 +1038,15 @@ Style guide: Forms & buttons.05 Checkbox input
       border: 1px solid transparent;
       border-radius: 50%;
       content: '';
-      left: 23px;
-      top: 18px;
-      position: absolute; }
+      float: left;
+      margin-left: -36px;
+      margin-top: 5px; }
       @media screen and (min-width: 768px) {
         form input[type='radio']:checked + label::after {
           top: 14px; } }
   form input[type='checkbox'] + label::before {
-    left: 20px;
     border: 2px solid #313131;
     content: ''; }
-    @media screen and (min-width: 768px) {
-      form input[type='checkbox'] + label::before {
-        top: 9px; } }
   form input[type='checkbox']:checked + label {
     font-weight: bold; }
     form input[type='checkbox']:checked + label::before {
@@ -1060,12 +1058,9 @@ Style guide: Forms & buttons.05 Checkbox input
       background-color: #313131;
       border: 1px solid transparent;
       content: '';
-      left: 25px;
-      top: 18px;
-      position: absolute; }
-      @media screen and (min-width: 768px) {
-        form input[type='checkbox']:checked + label::after {
-          top: 14px; } }
+      float: left;
+      margin-left: -36px;
+      margin-top: 5px; }
 
 /*
 Accessibility
@@ -1312,10 +1307,10 @@ Markup: templates/basic-links.html
 
 Style guide: Link styles.1 Hover links
 */
-header[role='banner'] a[rel~='external']::after, body > main a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .list-horizontal .tags a[rel~='external']::after, .list-horizontal--benefits .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, footer[role='contentinfo'] .footer-top nav .tags a[rel~='external']::after, .list-vertical--halves .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
+header[role='banner'] a[rel~='external']::after, body > main a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
 .local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after, .hero--content a[rel~='external']::after, .hero--content-blur a[rel~='external']::after, .hero--content-colour a[rel~='external']::after,
 .hero-sml a[rel~='external']::after,
-.hero-med a[rel~='external']::after {
+.hero-med a[rel~='external']::after, .tags a[rel~='external']::after {
   content: '';
   position: absolute;
   display: inline;
@@ -1733,100 +1728,6 @@ Style guide: List styles.4 Highlighted word style
     clear: both;
     content: "";
     display: table; }
-  .list-horizontal .tags, .list-horizontal--benefits .tags, .list-vertical .tags, .list-vertical--thirds .tags, .list-vertical--fourths .tags, footer[role='contentinfo'] .footer-top nav .tags, .list-vertical--halves .tags, .list-small .tags, .list-highlighted .tags {
-    color: #18788d;
-    /*
-  See more link
-
-  Markup: templates/see-more-link.html
-
-  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
-    <summary>Accessibility &amp; browser testing</summary>
-    <div class="accordion-panel">
-    <strong>Passed</strong>:
-      <ul>
-        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
-        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
-      </ul>
-    <strong>Untested</strong>:
-      <ul>
-        <li>WCAG:AA manual</li>
-        <li>Browser support &mdash; automated and manual</li>
-      </ul>
-    </div>
-  </details>
-
-  Style guide: Link styles.2 See more link
-  */
-    /*
-  Placeholder links (prototyping)
-
-  Markup: templates/placeholder-link.html
-
-  Style guide: Link styles.3 Placeholder links
-  */
-    color: #6e6e6e; }
-    .list-horizontal .tags a, .list-horizontal--benefits .tags a, .list-vertical .tags a, .list-vertical--thirds .tags a, .list-vertical--fourths .tags a, footer[role='contentinfo'] .footer-top nav .tags a, .list-vertical--halves .tags a, .list-small .tags a, .list-highlighted .tags a {
-      color: #18788d;
-      text-decoration: none;
-      outline: none;
-      border-bottom: solid 1px #5bcbe3;
-      -webkit-transition-timing-function: ease-in-out;
-              transition-timing-function: ease-in-out;
-      -webkit-transition-duration: 0.1s;
-              transition-duration: 0.1s;
-      -webkit-transition-property: background-color, border-color, color;
-      transition-property: background-color, border-color, color; }
-      .list-horizontal .tags a:hover, .list-horizontal--benefits .tags a:hover, .list-vertical .tags a:hover, .list-vertical--thirds .tags a:hover, .list-vertical--fourths .tags a:hover, footer[role='contentinfo'] .footer-top nav .tags a:hover, .list-vertical--halves .tags a:hover, .list-small .tags a:hover, .list-highlighted .tags a:hover, .list-horizontal .tags a:focus, .list-horizontal--benefits .tags a:focus, .list-vertical .tags a:focus, .list-vertical--thirds .tags a:focus, .list-vertical--fourths .tags a:focus, footer[role='contentinfo'] .footer-top nav .tags a:focus, .list-vertical--halves .tags a:focus, .list-small .tags a:focus, .list-highlighted .tags a:focus {
-        background-color: #5bcbe3;
-        color: #313131; }
-      .list-horizontal .tags a[rel~='external'], .list-horizontal--benefits .tags a[rel~='external'], .list-vertical .tags a[rel~='external'], .list-vertical--thirds .tags a[rel~='external'], .list-vertical--fourths .tags a[rel~='external'], footer[role='contentinfo'] .footer-top nav .tags a[rel~='external'], .list-vertical--halves .tags a[rel~='external'], .list-small .tags a[rel~='external'], .list-highlighted .tags a[rel~='external'] {
-        display: inline;
-        position: relative;
-        margin-right: 1.6em; }
-        .list-horizontal .tags a[rel~='external']:hover, .list-horizontal--benefits .tags a[rel~='external']:hover, .list-vertical .tags a[rel~='external']:hover, .list-vertical--thirds .tags a[rel~='external']:hover, .list-vertical--fourths .tags a[rel~='external']:hover, footer[role='contentinfo'] .footer-top nav .tags a[rel~='external']:hover, .list-vertical--halves .tags a[rel~='external']:hover, .list-small .tags a[rel~='external']:hover, .list-highlighted .tags a[rel~='external']:hover {
-          border-color: transparent; }
-        .list-horizontal .tags a[rel~='external']::after, .list-horizontal--benefits .tags a[rel~='external']::after, .list-vertical .tags a[rel~='external']::after, .list-vertical--thirds .tags a[rel~='external']::after, .list-vertical--fourths .tags a[rel~='external']::after, footer[role='contentinfo'] .footer-top nav .tags a[rel~='external']::after, .list-vertical--halves .tags a[rel~='external']::after, .list-small .tags a[rel~='external']::after, .list-highlighted .tags a[rel~='external']::after {
-          background-size: 0.9em auto; }
-    .list-horizontal .tags .see-more, .list-horizontal--benefits .tags .see-more, .list-vertical .tags .see-more, .list-vertical--thirds .tags .see-more, .list-vertical--fourths .tags .see-more, footer[role='contentinfo'] .footer-top nav .tags .see-more, .list-vertical--halves .tags .see-more, .list-small .tags .see-more, .list-highlighted .tags .see-more {
-      display: inline-block;
-      position: relative;
-      margin-right: 1.6em;
-      font-weight: 700;
-      color: #18788d; }
-      .list-horizontal .tags .see-more::after, .list-horizontal--benefits .tags .see-more::after, .list-vertical .tags .see-more::after, .list-vertical--thirds .tags .see-more::after, .list-vertical--fourths .tags .see-more::after, footer[role='contentinfo'] .footer-top nav .tags .see-more::after, .list-vertical--halves .tags .see-more::after, .list-small .tags .see-more::after, .list-highlighted .tags .see-more::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: -1.2em;
-        display: block;
-        width: 1.2em;
-        height: 1.2em;
-        background-repeat: no-repeat;
-        background-position: right 0.4em;
-        background-size: 0.64em auto; }
-      .list-horizontal .tags .see-more:hover, .list-horizontal--benefits .tags .see-more:hover, .list-vertical .tags .see-more:hover, .list-vertical--thirds .tags .see-more:hover, .list-vertical--fourths .tags .see-more:hover, footer[role='contentinfo'] .footer-top nav .tags .see-more:hover, .list-vertical--halves .tags .see-more:hover, .list-small .tags .see-more:hover, .list-highlighted .tags .see-more:hover, .list-horizontal .tags .see-more:focus, .list-horizontal--benefits .tags .see-more:focus, .list-vertical .tags .see-more:focus, .list-vertical--thirds .tags .see-more:focus, .list-vertical--fourths .tags .see-more:focus, footer[role='contentinfo'] .footer-top nav .tags .see-more:focus, .list-vertical--halves .tags .see-more:focus, .list-small .tags .see-more:focus, .list-highlighted .tags .see-more:focus {
-        color: #313131; }
-    .list-horizontal .tags span.placeholder-link, .list-horizontal--benefits .tags span.placeholder-link, .list-vertical .tags span.placeholder-link, .list-vertical--thirds .tags span.placeholder-link, .list-vertical--fourths .tags span.placeholder-link, footer[role='contentinfo'] .footer-top nav .tags span.placeholder-link, .list-vertical--halves .tags span.placeholder-link, .list-small .tags span.placeholder-link, .list-highlighted .tags span.placeholder-link {
-      color: rgba(24, 120, 141, 0.7);
-      border-bottom: none;
-      cursor: not-allowed; }
-      .list-horizontal .tags span.placeholder-link:hover, .list-horizontal--benefits .tags span.placeholder-link:hover, .list-vertical .tags span.placeholder-link:hover, .list-vertical--thirds .tags span.placeholder-link:hover, .list-vertical--fourths .tags span.placeholder-link:hover, footer[role='contentinfo'] .footer-top nav .tags span.placeholder-link:hover, .list-vertical--halves .tags span.placeholder-link:hover, .list-small .tags span.placeholder-link:hover, .list-highlighted .tags span.placeholder-link:hover {
-        cursor: not-allowed; }
-    .list-horizontal .tags dl, .list-horizontal--benefits .tags dl, .list-vertical .tags dl, .list-vertical--thirds .tags dl, .list-vertical--fourths .tags dl, footer[role='contentinfo'] .footer-top nav .tags dl, .list-vertical--halves .tags dl, .list-small .tags dl, .list-highlighted .tags dl, .list-horizontal .tags dt, .list-horizontal--benefits .tags dt, .list-vertical .tags dt, .list-vertical--thirds .tags dt, .list-vertical--fourths .tags dt, footer[role='contentinfo'] .footer-top nav .tags dt, .list-vertical--halves .tags dt, .list-small .tags dt, .list-highlighted .tags dt, .list-horizontal .tags dd, .list-horizontal--benefits .tags dd, .list-vertical .tags dd, .list-vertical--thirds .tags dd, .list-vertical--fourths .tags dd, footer[role='contentinfo'] .footer-top nav .tags dd, .list-vertical--halves .tags dd, .list-small .tags dd, .list-highlighted .tags dd {
-      display: inline-block;
-      margin: 0;
-      padding: 0;
-      line-height: 2.1; }
-    .list-horizontal .tags dt, .list-horizontal--benefits .tags dt, .list-vertical .tags dt, .list-vertical--thirds .tags dt, .list-vertical--fourths .tags dt, footer[role='contentinfo'] .footer-top nav .tags dt, .list-vertical--halves .tags dt, .list-small .tags dt, .list-highlighted .tags dt, .list-horizontal .tags dd, .list-horizontal--benefits .tags dd, .list-vertical .tags dd, .list-vertical--thirds .tags dd, .list-vertical--fourths .tags dd, footer[role='contentinfo'] .footer-top nav .tags dd, .list-vertical--halves .tags dd, .list-small .tags dd, .list-highlighted .tags dd {
-      margin-right: 0.4em;
-      font-size: 87.5%; }
-    .list-horizontal .tags a, .list-horizontal--benefits .tags a, .list-vertical .tags a, .list-vertical--thirds .tags a, .list-vertical--fourths .tags a, footer[role='contentinfo'] .footer-top nav .tags a, .list-vertical--halves .tags a, .list-small .tags a, .list-highlighted .tags a {
-      padding: 2px 0.4em;
-      border: 1px solid #18788d;
-      border-radius: 2px; }
-      .list-horizontal .tags a:hover, .list-horizontal--benefits .tags a:hover, .list-vertical .tags a:hover, .list-vertical--thirds .tags a:hover, .list-vertical--fourths .tags a:hover, footer[role='contentinfo'] .footer-top nav .tags a:hover, .list-vertical--halves .tags a:hover, .list-small .tags a:hover, .list-highlighted .tags a:hover, .list-horizontal .tags a:focus, .list-horizontal--benefits .tags a:focus, .list-vertical .tags a:focus, .list-vertical--thirds .tags a:focus, .list-vertical--fourths .tags a:focus, footer[role='contentinfo'] .footer-top nav .tags a:focus, .list-vertical--halves .tags a:focus, .list-small .tags a:focus, .list-highlighted .tags a:focus {
-        border-color: #5bcbe3; }
   .list-horizontal .meta, .list-horizontal--benefits .meta, .list-vertical .meta, .list-vertical--thirds .meta, .list-vertical--fourths .meta, footer[role='contentinfo'] .footer-top nav .meta, .list-vertical--halves .meta, .list-small .meta, .list-highlighted .meta {
     font-size: 87.5%;
     margin-bottom: 0.8em; }
@@ -1854,7 +1755,7 @@ Style guide: List styles.4 Highlighted word style
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex; } }
-  @media screen and (min-width: 420px) {
+  @media screen and (max-width: 420px) {
     .list-horizontal > li figure, .list-horizontal--benefits > li figure {
       margin-bottom: 1.2em; } }
   @media screen and (min-width: 768px) {
@@ -4000,7 +3901,7 @@ Style guide: Navigation.02 Site navigation
       .site-nav__wrapper li a:hover, .site-nav__wrapper li a.is-active {
         border-color: #18788d;
         color: #313131; }
-      @media screen and (min-width: 420px) {
+      @media screen and (max-width: 420px) {
         .site-nav__wrapper li a {
           padding-left: 1em;
           padding-right: 1em; } }
@@ -4114,7 +4015,7 @@ Style guide: Tables.2 Calendar table variant
     padding: 0.8em 1.6em;
     text-transform: uppercase;
     color: #18788d; }
-    @media screen and (min-width: 420px) {
+    @media screen and (min-width: 768px) {
       .calendar-table th {
         display: table-cell;
         width: 9.6em; } }
@@ -4131,7 +4032,7 @@ Style guide: Tables.2 Calendar table variant
     font-size: 1.1875rem;
     font-weight: 700;
     text-align: center; }
-    @media screen and (min-width: 420px) {
+    @media screen and (min-width: 768px) {
       .calendar-table td {
         display: table-cell;
         padding-top: 0.8em;
@@ -4437,33 +4338,33 @@ strong {
   strong.very-bold {
     font-weight: 700; }
 
-.abstract,
+.abstract, p.highlight,
 .lede {
   margin: 1.2em 0 2em;
   border-bottom: 1px solid #bbbbbb; }
-  .abstract p,
+  .abstract p, p.highlight p,
   .lede p {
     font-size: 1.1875rem;
     font-weight: 400; }
     @media screen and (min-width: 768px) {
-      .abstract p,
+      .abstract p, p.highlight p,
       .lede p {
         font-size: 1.3125rem; } }
     @media screen and (min-width: 75em) {
-      .abstract p,
+      .abstract p, p.highlight p,
       .lede p {
         font-size: 1.5rem; } }
 
-p.abstract {
+p.abstract, p.highlight {
   margin: 0.8em 0 1.5em;
   padding-bottom: 1.2em;
   border-bottom: 1px solid #bbbbbb;
   font-size: 1.1875rem; }
   @media screen and (min-width: 768px) {
-    p.abstract {
+    p.abstract, p.highlight {
       font-size: 1.3125rem; } }
   @media screen and (min-width: 75em) {
-    p.abstract {
+    p.abstract, p.highlight {
       font-size: 1.5rem; } }
 
 hr {
@@ -4732,6 +4633,104 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
 .hero-med article .site-title:first-of-type {
   margin-top: 0; }
 
+.tags {
+  color: #18788d;
+  /*
+  See more link
+
+  Markup: templates/see-more-link.html
+
+  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
+    <summary>Accessibility &amp; browser testing</summary>
+    <div class="accordion-panel">
+    <strong>Passed</strong>:
+      <ul>
+        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+      </ul>
+    <strong>Untested</strong>:
+      <ul>
+        <li>WCAG:AA manual</li>
+        <li>Browser support &mdash; automated and manual</li>
+      </ul>
+    </div>
+  </details>
+
+  Style guide: Link styles.2 See more link
+  */
+  /*
+  Placeholder links (prototyping)
+
+  Markup: templates/placeholder-link.html
+
+  Style guide: Link styles.3 Placeholder links
+  */
+  color: #6e6e6e; }
+  .tags a {
+    color: #18788d;
+    text-decoration: none;
+    outline: none;
+    border-bottom: solid 1px #5bcbe3;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 0.1s;
+            transition-duration: 0.1s;
+    -webkit-transition-property: background-color, border-color, color;
+    transition-property: background-color, border-color, color; }
+    .tags a:hover, .tags a:focus {
+      background-color: #5bcbe3;
+      color: #313131; }
+    .tags a[rel~='external'] {
+      display: inline;
+      position: relative;
+      margin-right: 1.6em; }
+      .tags a[rel~='external']:hover {
+        border-color: transparent; }
+      .tags a[rel~='external']::after {
+        background-size: 0.9em auto; }
+  .tags .see-more {
+    display: inline-block;
+    position: relative;
+    margin-right: 1.6em;
+    font-weight: 700;
+    color: #18788d; }
+    .tags .see-more::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -1.2em;
+      display: block;
+      width: 1.2em;
+      height: 1.2em;
+      background-repeat: no-repeat;
+      background-position: right 0.4em;
+      background-size: 0.64em auto; }
+    .tags .see-more:hover, .tags .see-more:focus {
+      color: #313131; }
+  .tags span.placeholder-link {
+    color: rgba(24, 120, 141, 0.7);
+    border-bottom: none;
+    cursor: not-allowed; }
+    .tags span.placeholder-link:hover {
+      cursor: not-allowed; }
+  .tags dl,
+  .tags dt,
+  .tags dd {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    line-height: 2.1; }
+  .tags dt,
+  .tags dd {
+    margin-right: 0.4em;
+    font-size: 87.5%; }
+  .tags a {
+    padding: 2px 0.4em;
+    border: 1px solid #18788d;
+    border-radius: 2px; }
+    .tags a:hover, .tags a:focus {
+      border-color: #5bcbe3; }
+
 .video {
   margin-bottom: 1.6em; }
   .video .video-wrapper {
@@ -4752,7 +4751,18 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
 .light {
   font-weight: 400; }
 
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 768px) {
+  .visible-mobile {
+    display: none; } }
+
+.vertical-centre {
+  top: 50%;
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  position: relative; }
+
+@media screen and (max-width: 420px) {
   footer .page-bottom #block-menu-menu-page-bottom-menu {
     float: left;
     display: block;
@@ -4782,7 +4792,7 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
     footer .page-bottom #block-menu-menu-page-bottom-menu:last-child {
       margin-right: 0; } }
 
-@media screen and (min-width: 420px) {
+@media screen and (max-width: 420px) {
   footer .page-bottom #block-menu-menu-page-bottom-menu ul > li {
     float: left;
     display: block;
@@ -4866,6 +4876,7 @@ header[role='banner'] a.logo {
   .hero .hero-bg, .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
     background-size: cover;
     background-position: top center;
+    background-repeat: no-repeat;
     height: 216px;
     top: -60px;
     position: absolute;
@@ -4963,39 +4974,33 @@ body main {
   padding: 0px;
   max-width: 100%; }
 
-.node-type-campaign main .content-main h1.title, .node-type-campaign main .content-main .hero .title.site-title, .hero .node-type-campaign main .content-main .title.site-title, .node-type-campaign main .content-main .hero--content .title.site-title, .hero--content .node-type-campaign main .content-main .title.site-title, .node-type-campaign main .content-main .hero--content-blur .title.site-title, .hero--content-blur .node-type-campaign main .content-main .title.site-title, .node-type-campaign main .content-main .hero--content-colour .title.site-title, .hero--content-colour .node-type-campaign main .content-main .title.site-title, .node-type-campaign main .content-main
-.hero-sml .title.site-title,
-.hero-sml .node-type-campaign main .content-main .title.site-title, .node-type-campaign main .content-main
-.hero-med .title.site-title,
-.hero-med .node-type-campaign main .content-main .title.site-title {
-  display: none; }
+.node-type-campaign article.content-main {
+  width: 100%; }
+  .node-type-campaign article.content-main h1.title, .node-type-campaign article.content-main .hero .title.site-title, .hero .node-type-campaign article.content-main .title.site-title, .node-type-campaign article.content-main .hero--content .title.site-title, .hero--content .node-type-campaign article.content-main .title.site-title, .node-type-campaign article.content-main .hero--content-blur .title.site-title, .hero--content-blur .node-type-campaign article.content-main .title.site-title, .node-type-campaign article.content-main .hero--content-colour .title.site-title, .hero--content-colour .node-type-campaign article.content-main .title.site-title, .node-type-campaign article.content-main
+  .hero-sml .title.site-title,
+  .hero-sml .node-type-campaign article.content-main .title.site-title, .node-type-campaign article.content-main
+  .hero-med .title.site-title,
+  .hero-med .node-type-campaign article.content-main .title.site-title {
+    display: none; }
+  @media screen and (max-width: 420px) {
+    .node-type-campaign article.content-main {
+      float: left;
+      display: block;
+      margin-right: 4.17655%;
+      width: 100%; }
+      .node-type-campaign article.content-main .inline-tab-nav,
+      .node-type-campaign article.content-main .workbench-info-block,
+      .node-type-campaign article.content-main .messages {
+        max-width: 75em;
+        margin: auto; }
+      .node-type-campaign article.content-main:last-child {
+        margin-right: 0; } }
 
-@media screen and (min-width: 420px) {
-  .node-type-campaign main .content-main {
-    float: left;
-    display: block;
-    margin-right: 4.17655%;
-    width: 100%; }
-    .node-type-campaign main .content-main .inline-tab-nav,
-    .node-type-campaign main .content-main .workbench-info-block,
-    .node-type-campaign main .content-main .messages {
-      max-width: 75em;
-      margin: auto; }
-    .node-type-campaign main .content-main:last-child {
-      margin-right: 0; } }
-
-@media screen and (min-width: 420px) {
-  .node-type-video main .content-main,
-  .page-search404 main .content-main,
-  .page-node-1 main .content-main {
-    float: left;
-    display: block;
-    margin-right: 4.17655%;
-    width: 100%; }
-    .node-type-video main .content-main:last-child,
-    .page-search404 main .content-main:last-child,
-    .page-node-1 main .content-main:last-child {
-      margin-right: 0; } }
+.node-type-video article.content-main,
+.page-search404 article.content-main,
+.page-node-1 article.content-main,
+.page-campaign-videos article.content-main {
+  width: 100%; }
 
 .site-nav {
   padding: 0 2em;
@@ -5363,75 +5368,75 @@ header .page-header__logo img {
   display: block;
   margin-right: 0; }
 
-@media screen and (min-width: 420px) {
-  .video__container, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left, .node-type-video .view-mode-full div.group-left, .page-campaign-videos .content-main li div.group-left, .view-campaign-videos div.group-top-left,
+@media screen and (max-width: 420px) {
+  .video__container, .node-type-video .view-mode-full div.group-left, .page-campaign-videos .content-main li div.group-left, .view-campaign-videos div.group-top-left,
   .node-type-video div.group-top-left, .page-campaign-videos .region-content .wrapper div.group-left, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-left,
-  .node-type-video .region-content .wrapper div.group-left, .node-type-video .region-content .ds-wrapper div.group-left {
+  .node-type-video .region-content .wrapper div.group-left, .node-type-video .region-content .ds-wrapper div.group-left, .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left {
     float: left;
     display: block;
     margin-right: 8.71718%;
     width: 100%;
     float: none; }
-    .video__container:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left:last-child, .node-type-video .view-mode-full div.group-left:last-child, .page-campaign-videos .content-main li div.group-left:last-child, .view-campaign-videos div.group-top-left:last-child,
+    .video__container:last-child, .node-type-video .view-mode-full div.group-left:last-child, .page-campaign-videos .content-main li div.group-left:last-child, .view-campaign-videos div.group-top-left:last-child,
     .node-type-video div.group-top-left:last-child, .page-campaign-videos .region-content .wrapper div.group-left:last-child, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-left:last-child,
-    .node-type-video .region-content .wrapper div.group-left:last-child, .node-type-video .region-content .ds-wrapper div.group-left:last-child {
+    .node-type-video .region-content .wrapper div.group-left:last-child, .node-type-video .region-content .ds-wrapper div.group-left:last-child, .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left:last-child {
       margin-right: 0; } }
 
 @media screen and (min-width: 768px) {
-  .video__container, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left, .node-type-video .view-mode-full div.group-left, .page-campaign-videos .content-main li div.group-left, .view-campaign-videos div.group-top-left,
+  .video__container, .node-type-video .view-mode-full div.group-left, .page-campaign-videos .content-main li div.group-left, .view-campaign-videos div.group-top-left,
   .node-type-video div.group-top-left, .page-campaign-videos .region-content .wrapper div.group-left, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-left,
-  .node-type-video .region-content .wrapper div.group-left, .node-type-video .region-content .ds-wrapper div.group-left {
+  .node-type-video .region-content .wrapper div.group-left, .node-type-video .region-content .ds-wrapper div.group-left, .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left {
     float: left;
     display: block;
     margin-right: 2.74614%;
     width: 48.62693%; }
-    .video__container:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left:last-child, .node-type-video .view-mode-full div.group-left:last-child, .page-campaign-videos .content-main li div.group-left:last-child, .view-campaign-videos div.group-top-left:last-child,
+    .video__container:last-child, .node-type-video .view-mode-full div.group-left:last-child, .page-campaign-videos .content-main li div.group-left:last-child, .view-campaign-videos div.group-top-left:last-child,
     .node-type-video div.group-top-left:last-child, .page-campaign-videos .region-content .wrapper div.group-left:last-child, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-left:last-child,
-    .node-type-video .region-content .wrapper div.group-left:last-child, .node-type-video .region-content .ds-wrapper div.group-left:last-child {
+    .node-type-video .region-content .wrapper div.group-left:last-child, .node-type-video .region-content .ds-wrapper div.group-left:last-child, .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left:last-child {
       margin-right: 0; } }
 
 @media screen and (min-width: 75em) {
-  .video__container, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left, .node-type-video .view-mode-full div.group-left, .page-campaign-videos .content-main li div.group-left, .view-campaign-videos div.group-top-left,
+  .video__container, .node-type-video .view-mode-full div.group-left, .page-campaign-videos .content-main li div.group-left, .view-campaign-videos div.group-top-left,
   .node-type-video div.group-top-left, .page-campaign-videos .region-content .wrapper div.group-left, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-left,
-  .node-type-video .region-content .wrapper div.group-left, .node-type-video .region-content .ds-wrapper div.group-left {
+  .node-type-video .region-content .wrapper div.group-left, .node-type-video .region-content .ds-wrapper div.group-left, .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left {
     float: left;
     display: block;
     margin-right: 2.04556%;
     width: 61.73292%; }
-    .video__container:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left:last-child, .node-type-video .view-mode-full div.group-left:last-child, .page-campaign-videos .content-main li div.group-left:last-child, .view-campaign-videos div.group-top-left:last-child,
+    .video__container:last-child, .node-type-video .view-mode-full div.group-left:last-child, .page-campaign-videos .content-main li div.group-left:last-child, .view-campaign-videos div.group-top-left:last-child,
     .node-type-video div.group-top-left:last-child, .page-campaign-videos .region-content .wrapper div.group-left:last-child, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-left:last-child,
-    .node-type-video .region-content .wrapper div.group-left:last-child, .node-type-video .region-content .ds-wrapper div.group-left:last-child {
+    .node-type-video .region-content .wrapper div.group-left:last-child, .node-type-video .region-content .ds-wrapper div.group-left:last-child, .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-left:last-child {
       margin-right: 0; } }
 
-.video__info, .video__list--related article, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .node-type-video .view-mode-full div.group-right, .page-campaign-videos .content-main li div.group-right, .view-campaign-videos div.group-top-right,
+.video__info, .video__list--related article, .node-type-video .view-mode-full div.group-right, .page-campaign-videos .content-main li div.group-right, .view-campaign-videos div.group-top-right,
 .node-type-video div.group-top-right, .page-campaign-videos .region-content .wrapper div.group-right, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-right,
-.node-type-video .region-content .wrapper div.group-right, .node-type-video .region-content .ds-wrapper div.group-right {
+.node-type-video .region-content .wrapper div.group-right, .node-type-video .region-content .ds-wrapper div.group-right, .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right {
   width: 100%;
   margin-top: 1.2em; }
   @media screen and (min-width: 768px) {
-    .video__info, .video__list--related article, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .node-type-video .view-mode-full div.group-right, .page-campaign-videos .content-main li div.group-right, .view-campaign-videos div.group-top-right,
+    .video__info, .video__list--related article, .node-type-video .view-mode-full div.group-right, .page-campaign-videos .content-main li div.group-right, .view-campaign-videos div.group-top-right,
     .node-type-video div.group-top-right, .page-campaign-videos .region-content .wrapper div.group-right, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-right,
-    .node-type-video .region-content .wrapper div.group-right, .node-type-video .region-content .ds-wrapper div.group-right {
+    .node-type-video .region-content .wrapper div.group-right, .node-type-video .region-content .ds-wrapper div.group-right, .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right {
       float: left;
       display: block;
       margin-right: 2.74614%;
       width: 48.62693%;
       margin-top: 0; }
-      .video__info:last-child, .video__list--related article:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right:last-child, .node-type-video .view-mode-full div.group-right:last-child, .page-campaign-videos .content-main li div.group-right:last-child, .view-campaign-videos div.group-top-right:last-child,
+      .video__info:last-child, .video__list--related article:last-child, .node-type-video .view-mode-full div.group-right:last-child, .page-campaign-videos .content-main li div.group-right:last-child, .view-campaign-videos div.group-top-right:last-child,
       .node-type-video div.group-top-right:last-child, .page-campaign-videos .region-content .wrapper div.group-right:last-child, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-right:last-child,
-      .node-type-video .region-content .wrapper div.group-right:last-child, .node-type-video .region-content .ds-wrapper div.group-right:last-child {
+      .node-type-video .region-content .wrapper div.group-right:last-child, .node-type-video .region-content .ds-wrapper div.group-right:last-child, .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 75em) {
-    .video__info, .video__list--related article, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .node-type-video .view-mode-full div.group-right, .page-campaign-videos .content-main li div.group-right, .view-campaign-videos div.group-top-right,
+    .video__info, .video__list--related article, .node-type-video .view-mode-full div.group-right, .page-campaign-videos .content-main li div.group-right, .view-campaign-videos div.group-top-right,
     .node-type-video div.group-top-right, .page-campaign-videos .region-content .wrapper div.group-right, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-right,
-    .node-type-video .region-content .wrapper div.group-right, .node-type-video .region-content .ds-wrapper div.group-right {
+    .node-type-video .region-content .wrapper div.group-right, .node-type-video .region-content .ds-wrapper div.group-right, .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right {
       float: left;
       display: block;
       margin-right: 2.04556%;
       width: 36.22153%; }
-      .video__info:last-child, .video__list--related article:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right:last-child, .node-type-video .view-mode-full div.group-right:last-child, .page-campaign-videos .content-main li div.group-right:last-child, .view-campaign-videos div.group-top-right:last-child,
+      .video__info:last-child, .video__list--related article:last-child, .node-type-video .view-mode-full div.group-right:last-child, .page-campaign-videos .content-main li div.group-right:last-child, .view-campaign-videos div.group-top-right:last-child,
       .node-type-video div.group-top-right:last-child, .page-campaign-videos .region-content .wrapper div.group-right:last-child, .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-right:last-child,
-      .node-type-video .region-content .wrapper div.group-right:last-child, .node-type-video .region-content .ds-wrapper div.group-right:last-child {
+      .node-type-video .region-content .wrapper div.group-right:last-child, .node-type-video .region-content .ds-wrapper div.group-right:last-child, .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right:last-child {
         margin-right: 0; } }
 
 .video__list li, .video__list--related li {
@@ -5529,45 +5534,42 @@ header .page-header__logo img {
     @media screen and (min-width: 768px) {
       .video__list--related .video__thumb {
         width: 100%; } }
-  .video__list--related .video__info, .video__list--related article, .video__list--related .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .video__list--related div.group-right, .video__list--related .node-type-video .view-mode-full div.group-right, .node-type-video .view-mode-full .video__list--related div.group-right, .video__list--related .page-campaign-videos .content-main li div.group-right, .page-campaign-videos .content-main li .video__list--related div.group-right, .video__list--related .view-campaign-videos div.group-top-right, .view-campaign-videos .video__list--related div.group-top-right, .video__list--related
+  .video__list--related .video__info, .video__list--related article, .video__list--related .node-type-video .view-mode-full div.group-right, .node-type-video .view-mode-full .video__list--related div.group-right, .video__list--related .page-campaign-videos .content-main li div.group-right, .page-campaign-videos .content-main li .video__list--related div.group-right, .video__list--related .view-campaign-videos div.group-top-right, .view-campaign-videos .video__list--related div.group-top-right, .video__list--related
   .node-type-video div.group-top-right,
   .node-type-video .video__list--related div.group-top-right, .video__list--related .page-campaign-videos .region-content .wrapper div.group-right, .page-campaign-videos .region-content .wrapper .video__list--related div.group-right, .video__list--related .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-right, .page-campaign-videos .region-content .node-type-video .ds-wrapper .video__list--related div.group-right, .video__list--related
   .node-type-video .region-content .wrapper div.group-right,
-  .node-type-video .region-content .wrapper .video__list--related div.group-right, .video__list--related .node-type-video .region-content .ds-wrapper div.group-right, .node-type-video .region-content .ds-wrapper .video__list--related div.group-right {
+  .node-type-video .region-content .wrapper .video__list--related div.group-right, .video__list--related .node-type-video .region-content .ds-wrapper div.group-right, .node-type-video .region-content .ds-wrapper .video__list--related div.group-right, .video__list--related .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact .video__list--related div.group-right {
     float: left;
     display: block;
     margin-right: 8.71718%;
     width: 45.64141%; }
-    .video__list--related .video__info:last-child, .video__list--related article:last-child, .video__list--related .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right:last-child, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .video__list--related div.group-right:last-child, .video__list--related .node-type-video .view-mode-full div.group-right:last-child, .node-type-video .view-mode-full .video__list--related div.group-right:last-child, .video__list--related .page-campaign-videos .content-main li div.group-right:last-child, .page-campaign-videos .content-main li .video__list--related div.group-right:last-child, .video__list--related .view-campaign-videos div.group-top-right:last-child, .view-campaign-videos .video__list--related div.group-top-right:last-child, .video__list--related
+    .video__list--related .video__info:last-child, .video__list--related article:last-child, .video__list--related .node-type-video .view-mode-full div.group-right:last-child, .node-type-video .view-mode-full .video__list--related div.group-right:last-child, .video__list--related .page-campaign-videos .content-main li div.group-right:last-child, .page-campaign-videos .content-main li .video__list--related div.group-right:last-child, .video__list--related .view-campaign-videos div.group-top-right:last-child, .view-campaign-videos .video__list--related div.group-top-right:last-child, .video__list--related
     .node-type-video div.group-top-right:last-child,
     .node-type-video .video__list--related div.group-top-right:last-child, .video__list--related .page-campaign-videos .region-content .wrapper div.group-right:last-child, .page-campaign-videos .region-content .wrapper .video__list--related div.group-right:last-child, .video__list--related .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-right:last-child, .page-campaign-videos .region-content .node-type-video .ds-wrapper .video__list--related div.group-right:last-child, .video__list--related
     .node-type-video .region-content .wrapper div.group-right:last-child,
-    .node-type-video .region-content .wrapper .video__list--related div.group-right:last-child, .video__list--related .node-type-video .region-content .ds-wrapper div.group-right:last-child, .node-type-video .region-content .ds-wrapper .video__list--related div.group-right:last-child {
+    .node-type-video .region-content .wrapper .video__list--related div.group-right:last-child, .video__list--related .node-type-video .region-content .ds-wrapper div.group-right:last-child, .node-type-video .region-content .ds-wrapper .video__list--related div.group-right:last-child, .video__list--related .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right:last-child, .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact .video__list--related div.group-right:last-child {
       margin-right: 0; }
     @media screen and (min-width: 768px) {
-      .video__list--related .video__info, .video__list--related article, .video__list--related .node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .node-type-campaign #block-views-campaign-videos-block .view-mode-compact .video__list--related div.group-right, .video__list--related .node-type-video .view-mode-full div.group-right, .node-type-video .view-mode-full .video__list--related div.group-right, .video__list--related .page-campaign-videos .content-main li div.group-right, .page-campaign-videos .content-main li .video__list--related div.group-right, .video__list--related .view-campaign-videos div.group-top-right, .view-campaign-videos .video__list--related div.group-top-right, .video__list--related
+      .video__list--related .video__info, .video__list--related article, .video__list--related .node-type-video .view-mode-full div.group-right, .node-type-video .view-mode-full .video__list--related div.group-right, .video__list--related .page-campaign-videos .content-main li div.group-right, .page-campaign-videos .content-main li .video__list--related div.group-right, .video__list--related .view-campaign-videos div.group-top-right, .view-campaign-videos .video__list--related div.group-top-right, .video__list--related
       .node-type-video div.group-top-right,
       .node-type-video .video__list--related div.group-top-right, .video__list--related .page-campaign-videos .region-content .wrapper div.group-right, .page-campaign-videos .region-content .wrapper .video__list--related div.group-right, .video__list--related .page-campaign-videos .region-content .node-type-video .ds-wrapper div.group-right, .page-campaign-videos .region-content .node-type-video .ds-wrapper .video__list--related div.group-right, .video__list--related
       .node-type-video .region-content .wrapper div.group-right,
-      .node-type-video .region-content .wrapper .video__list--related div.group-right, .video__list--related .node-type-video .region-content .ds-wrapper div.group-right, .node-type-video .region-content .ds-wrapper .video__list--related div.group-right {
+      .node-type-video .region-content .wrapper .video__list--related div.group-right, .video__list--related .node-type-video .region-content .ds-wrapper div.group-right, .node-type-video .region-content .ds-wrapper .video__list--related div.group-right, .video__list--related .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact .video__list--related div.group-right {
         width: 100%; } }
 
-.band, #block-bean-share-this, .band--primary, .node-type-campaign #block-views-campaign-videos-block, .band--small, .page-feedback, .band--partners, #block-bean-quitenow-partner, .band--pad, .band--secondary, .band--gradient, .node-type-social-media .main {
+.band, #block-bean-share-this, .band--img-text, .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat, .breastscreen-band--partners, .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block, .gmym-band--primary, .girls-make-your-move #block-bean-gmym-involved, .band--small, .page-feedback, .smokes-band--partners, #block-bean-quitenow-partner, .band--pad, .band--secondary, .band--gradient, .node-type-social-media .main, .gmym-band--secondary {
   padding: 0.8em 0 3.2em;
   width: 100%; }
-  .band::after, #block-bean-share-this::after, .band--primary::after, .node-type-campaign #block-views-campaign-videos-block::after, .band--small::after, .page-feedback::after, .band--partners::after, #block-bean-quitenow-partner::after, .band--pad::after, .band--secondary::after, .band--gradient::after, .node-type-social-media .main::after {
+  .band::after, #block-bean-share-this::after, .band--img-text::after, .band--img-text-halves::after, .band--img-text-halves--invert::after, .breastscreen #block-bean-breast-cancer-in-australia::after, .breastscreen #block-bean-breastscreen-mammogram::after, .breastscreen #block-bean-breastscreen-why::after, .breastscreen #block-bean-breastscreen-early-detection::after, .breastscreen #block-bean-breastscreen-stats::after, .breastscreen #block-bean-breastscreen-expanding::after, .breastscreen #block-bean-breastscreen-74::after, .breastscreen #block-bean-breastscreen-detection::after, .breastscreen #block-bean-breastscreen-chat::after, .breastscreen-band--partners::after, .smokes-band--primary::after, .smokes.node-type-campaign #block-views-campaign-videos-block::after, .gmym-band--primary::after, .girls-make-your-move #block-bean-gmym-involved::after, .band--small::after, .page-feedback::after, .smokes-band--partners::after, #block-bean-quitenow-partner::after, .band--pad::after, .band--secondary::after, .band--gradient::after, .node-type-social-media .main::after, .gmym-band--secondary::after {
     clear: both;
     content: "";
     display: table; }
 
-.band--small, .page-feedback, .band--partners, #block-bean-quitenow-partner {
+.band--small, .page-feedback, .smokes-band--partners, #block-bean-quitenow-partner {
   padding: 0; }
 
 .band--pad {
   padding: 3.2em 0; }
-
-.band--primary, .node-type-campaign #block-views-campaign-videos-block {
-  background-color: #EEE; }
 
 .band--secondary {
   background-color: #DDD; }
@@ -5586,7 +5588,7 @@ header .page-header__logo img {
   background-image: -webkit-linear-gradient(left,#DDDDDD, #FFFFFF);
   background-image: linear-gradient(90deg,#DDDDDD, #FFFFFF); }
 
-.band--quitline, section.pre-nav {
+.band--quitline, #block-bean-quitnow-hotline section.pre-nav {
   padding: 0.8em 0 0.4em;
   background: #000000;
   color: #FFFFFF;
@@ -5598,10 +5600,10 @@ header .page-header__logo img {
     .band--quitline__image {
       max-width: 100%; } }
 
-.band--partners, #block-bean-quitenow-partner {
+.smokes-band--partners, #block-bean-quitenow-partner {
   padding-top: 0.8em;
   background: #000000; }
-  .band--partners img, #block-bean-quitenow-partner img {
+  .smokes-band--partners img, #block-bean-quitenow-partner img {
     width: auto;
     margin: 0 auto; }
 
@@ -5611,6 +5613,9 @@ header .page-header__logo img {
   color: #FFFFFF; }
   .band--sensitivity p, #block-bean-quitnow-sensitivities p {
     margin: 0.8em 0; }
+
+.page-header__site-info {
+  display: none; }
 
 .video__thumb:hover .video__overlay, .video__thumb:active .video__overlay, .video__thumb:focus .video__overlay {
   position: absolute;
@@ -5629,87 +5634,6 @@ header .page-header__logo img {
   left: 0;
   background-color: rgba(255, 255, 255, 0.2);
   display: block; }
-
-.node-type-social-media .main article {
-  float: left;
-  display: block;
-  margin-right: 5.64736%;
-  width: 100%; }
-  .node-type-social-media .main article:last-child {
-    margin-right: 0; }
-  .node-type-social-media .main article .title {
-    display: none; }
-
-.page-campaign-videos .content-main li {
-  max-width: 100%; }
-  .page-campaign-videos .content-main li .field-name-field-video-thumbnail img {
-    height: auto; }
-
-.view-campaign-videos .list-vertical--thirds li,
-.node-type-video .list-vertical--thirds li {
-  border-top: 0px; }
-
-.view-campaign-videos .field-name-field-video-promoted-thumbnail a,
-.node-type-video .field-name-field-video-promoted-thumbnail a {
-  border: 0px; }
-  .view-campaign-videos .field-name-field-video-promoted-thumbnail a:hover,
-  .node-type-video .field-name-field-video-promoted-thumbnail a:hover {
-    background-color: inherit; }
-
-.view-campaign-videos .field-name-field-video-promoted-thumbnail img,
-.node-type-video .field-name-field-video-promoted-thumbnail img {
-  height: auto; }
-
-.view-campaign-videos .field-name-field-video-thumbnail img,
-.node-type-video .field-name-field-video-thumbnail img {
-  height: auto; }
-
-.view-campaign-videos .video__transcript summary,
-.node-type-video .video__transcript summary {
-  background-color: transparent; }
-
-.view-campaign-videos div.group-footer,
-.node-type-video div.group-footer {
-  padding-top: 20px;
-  font-size: 0.5em; }
-
-.node-type-video .ds-wrapper {
-  clear: both;
-  padding: 0px; }
-
-.page-campaign-videos .region-content .wrapper, .page-campaign-videos .region-content .node-type-video .ds-wrapper, .node-type-video .page-campaign-videos .region-content .ds-wrapper,
-.node-type-video .region-content .wrapper, .node-type-video .region-content .ds-wrapper {
-  min-width: 0px; }
-
-.band--primary, .node-type-campaign #block-views-campaign-videos-block {
-  background-color: #EEE; }
-
-.band--secondary {
-  background-color: #DDD; }
-
-.social__feature {
-  float: left;
-  display: block;
-  margin-right: 8.71718%;
-  width: 100%; }
-  .social__feature:last-child {
-    margin-right: 0; }
-  @media screen and (min-width: 768px) {
-    .social__feature {
-      float: left;
-      display: block;
-      margin-right: 2.74614%;
-      width: 22.9404%; }
-      .social__feature:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 75em) {
-    .social__feature {
-      float: left;
-      display: block;
-      margin-right: 2.04556%;
-      width: 17.08798%; }
-      .social__feature:last-child {
-        margin-right: 0; } }
 
 .partner {
   width: 100%; }
@@ -5771,7 +5695,501 @@ header .page-header__logo img {
       .partner__desc:last-child {
         margin-right: 0; } }
 
-@media screen and (min-width: 420px) {
+.node-type-social-media .main article {
+  float: left;
+  display: block;
+  margin-right: 5.64736%;
+  width: 100%; }
+  .node-type-social-media .main article:last-child {
+    margin-right: 0; }
+  .node-type-social-media .main article .title {
+    display: none; }
+
+.page-campaign-videos .content-main li {
+  max-width: 100%; }
+  .page-campaign-videos .content-main li .field-name-field-video-thumbnail img {
+    height: auto; }
+
+.view-campaign-videos .list-vertical--thirds li,
+.node-type-video .list-vertical--thirds li {
+  border-top: 0px; }
+
+.view-campaign-videos .field-name-field-video-promoted-thumbnail a,
+.node-type-video .field-name-field-video-promoted-thumbnail a {
+  border: 0px; }
+  .view-campaign-videos .field-name-field-video-promoted-thumbnail a:hover,
+  .node-type-video .field-name-field-video-promoted-thumbnail a:hover {
+    background-color: inherit; }
+
+.view-campaign-videos .field-name-field-video-promoted-thumbnail img,
+.node-type-video .field-name-field-video-promoted-thumbnail img {
+  height: auto;
+  width: 100%; }
+
+.view-campaign-videos .field-name-field-video-thumbnail img,
+.node-type-video .field-name-field-video-thumbnail img {
+  height: auto; }
+
+.view-campaign-videos .video__transcript summary,
+.node-type-video .video__transcript summary {
+  background-color: transparent; }
+
+.view-campaign-videos div.group-footer,
+.node-type-video div.group-footer {
+  padding-top: 20px;
+  font-size: 0.5em; }
+
+.node-type-video .ds-wrapper {
+  clear: both;
+  padding: 0px; }
+
+.page-campaign-videos .region-content .wrapper, .page-campaign-videos .region-content .node-type-video .ds-wrapper, .node-type-video .page-campaign-videos .region-content .ds-wrapper,
+.node-type-video .region-content .wrapper, .node-type-video .region-content .ds-wrapper {
+  min-width: 0px; }
+
+.band--primary {
+  padding-top: 3.2em; }
+
+.band--secondary {
+  padding-top: 3.2em; }
+
+.band--texture {
+  padding-top: 3.2em; }
+
+.breastscreen-band--gradient {
+  background-color: #fce5ef;
+  background-image: -webkit-linear-gradient(-360deg, #fce5ef, #FFFFFF);
+  background-image: -webkit-gradient(linear,left top, right top,from(#fce5ef), to(#FFFFFF));
+  background-image: -webkit-linear-gradient(left,#fce5ef, #FFFFFF);
+  background-image: linear-gradient(90deg,#fce5ef, #FFFFFF);
+  padding-top: 3.2em; }
+
+.breastscreen-band--tertiary, .breastscreen #block-bean-breastscreen-stats {
+  background: #f3f0ed; }
+
+.band--img-text, .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat {
+  overflow: hidden;
+  padding: 3.2em 0; }
+  .band--img-text .band__img, .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-why .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img {
+    line-height: 0;
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      .band--img-text .band__img, .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-why .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img {
+        float: left;
+        display: block;
+        margin-right: 2.74614%;
+        width: 31.50258%; }
+        .band--img-text .band__img:last-child, .band--img-text-halves .band__img:last-child, .band--img-text-halves--invert .band__img:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__img:last-child, .breastscreen #block-bean-breastscreen-mammogram .band__img:last-child, .breastscreen #block-bean-breastscreen-why .band__img:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-stats .band__img:last-child, .breastscreen #block-bean-breastscreen-expanding .band__img:last-child, .breastscreen #block-bean-breastscreen-74 .band__img:last-child, .breastscreen #block-bean-breastscreen-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-chat .band__img:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 75em) {
+      .band--img-text .band__img, .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-why .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img {
+        float: left;
+        display: block;
+        margin-right: 2.04556%;
+        width: 36.22153%; }
+        .band--img-text .band__img:last-child, .band--img-text-halves .band__img:last-child, .band--img-text-halves--invert .band__img:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__img:last-child, .breastscreen #block-bean-breastscreen-mammogram .band__img:last-child, .breastscreen #block-bean-breastscreen-why .band__img:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-stats .band__img:last-child, .breastscreen #block-bean-breastscreen-expanding .band__img:last-child, .breastscreen #block-bean-breastscreen-74 .band__img:last-child, .breastscreen #block-bean-breastscreen-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-chat .band__img:last-child {
+          margin-right: 0; } }
+  .band--img-text .band__text, .band--img-text-halves .band__text, .band--img-text-halves--invert .band__text, .breastscreen #block-bean-breast-cancer-in-australia .band__text, .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-why .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text, .breastscreen #block-bean-breastscreen-stats .band__text, .breastscreen #block-bean-breastscreen-expanding .band__text, .breastscreen #block-bean-breastscreen-74 .band__text, .breastscreen #block-bean-breastscreen-detection .band__text, .breastscreen #block-bean-breastscreen-chat .band__text {
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      .band--img-text .band__text, .band--img-text-halves .band__text, .band--img-text-halves--invert .band__text, .breastscreen #block-bean-breast-cancer-in-australia .band__text, .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-why .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text, .breastscreen #block-bean-breastscreen-stats .band__text, .breastscreen #block-bean-breastscreen-expanding .band__text, .breastscreen #block-bean-breastscreen-74 .band__text, .breastscreen #block-bean-breastscreen-detection .band__text, .breastscreen #block-bean-breastscreen-chat .band__text {
+        float: left;
+        display: block;
+        margin-right: 2.74614%;
+        width: 65.75129%;
+        margin-bottom: 3.2em; }
+        .band--img-text .band__text:last-child, .band--img-text-halves .band__text:last-child, .band--img-text-halves--invert .band__text:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__text:last-child, .breastscreen #block-bean-breastscreen-mammogram .band__text:last-child, .breastscreen #block-bean-breastscreen-why .band__text:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-stats .band__text:last-child, .breastscreen #block-bean-breastscreen-expanding .band__text:last-child, .breastscreen #block-bean-breastscreen-74 .band__text:last-child, .breastscreen #block-bean-breastscreen-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-chat .band__text:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 75em) {
+      .band--img-text .band__text, .band--img-text-halves .band__text, .band--img-text-halves--invert .band__text, .breastscreen #block-bean-breast-cancer-in-australia .band__text, .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-why .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text, .breastscreen #block-bean-breastscreen-stats .band__text, .breastscreen #block-bean-breastscreen-expanding .band__text, .breastscreen #block-bean-breastscreen-74 .band__text, .breastscreen #block-bean-breastscreen-detection .band__text, .breastscreen #block-bean-breastscreen-chat .band__text {
+        float: left;
+        display: block;
+        margin-right: 2.04556%;
+        width: 61.73292%; }
+        .band--img-text .band__text:last-child, .band--img-text-halves .band__text:last-child, .band--img-text-halves--invert .band__text:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__text:last-child, .breastscreen #block-bean-breastscreen-mammogram .band__text:last-child, .breastscreen #block-bean-breastscreen-why .band__text:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-stats .band__text:last-child, .breastscreen #block-bean-breastscreen-expanding .band__text:last-child, .breastscreen #block-bean-breastscreen-74 .band__text:last-child, .breastscreen #block-bean-breastscreen-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-chat .band__text:last-child {
+          margin-right: 0; } }
+
+.band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat {
+  padding-bottom: 3.2em; }
+  @media screen and (min-width: 768px) {
+    .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat {
+      padding-bottom: 1.2em; } }
+  @media screen and (min-width: 768px) {
+    .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-why .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img,
+    .band--img-text-halves .band__text, .band--img-text-halves--invert .band__text, .breastscreen #block-bean-breast-cancer-in-australia .band__text, .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-why .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text, .breastscreen #block-bean-breastscreen-stats .band__text, .breastscreen #block-bean-breastscreen-expanding .band__text, .breastscreen #block-bean-breastscreen-74 .band__text, .breastscreen #block-bean-breastscreen-detection .band__text, .breastscreen #block-bean-breastscreen-chat .band__text {
+      float: left;
+      display: block;
+      margin-right: 2.74614%;
+      width: 48.62693%; }
+      .band--img-text-halves .band__img:last-child, .band--img-text-halves--invert .band__img:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__img:last-child, .breastscreen #block-bean-breastscreen-mammogram .band__img:last-child, .breastscreen #block-bean-breastscreen-why .band__img:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-stats .band__img:last-child, .breastscreen #block-bean-breastscreen-expanding .band__img:last-child, .breastscreen #block-bean-breastscreen-74 .band__img:last-child, .breastscreen #block-bean-breastscreen-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-chat .band__img:last-child,
+      .band--img-text-halves .band__text:last-child, .band--img-text-halves--invert .band__text:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__text:last-child, .breastscreen #block-bean-breastscreen-mammogram .band__text:last-child, .breastscreen #block-bean-breastscreen-why .band__text:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-stats .band__text:last-child, .breastscreen #block-bean-breastscreen-expanding .band__text:last-child, .breastscreen #block-bean-breastscreen-74 .band__text:last-child, .breastscreen #block-bean-breastscreen-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-chat .band__text:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 75em) {
+    .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-why .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img,
+    .band--img-text-halves .band__text, .band--img-text-halves--invert .band__text, .breastscreen #block-bean-breast-cancer-in-australia .band__text, .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-why .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text, .breastscreen #block-bean-breastscreen-stats .band__text, .breastscreen #block-bean-breastscreen-expanding .band__text, .breastscreen #block-bean-breastscreen-74 .band__text, .breastscreen #block-bean-breastscreen-detection .band__text, .breastscreen #block-bean-breastscreen-chat .band__text {
+      float: left;
+      display: block;
+      margin-right: 2.04556%;
+      width: 48.97722%; }
+      .band--img-text-halves .band__img:last-child, .band--img-text-halves--invert .band__img:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__img:last-child, .breastscreen #block-bean-breastscreen-mammogram .band__img:last-child, .breastscreen #block-bean-breastscreen-why .band__img:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-stats .band__img:last-child, .breastscreen #block-bean-breastscreen-expanding .band__img:last-child, .breastscreen #block-bean-breastscreen-74 .band__img:last-child, .breastscreen #block-bean-breastscreen-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-chat .band__img:last-child,
+      .band--img-text-halves .band__text:last-child, .band--img-text-halves--invert .band__text:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__text:last-child, .breastscreen #block-bean-breastscreen-mammogram .band__text:last-child, .breastscreen #block-bean-breastscreen-why .band__text:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-stats .band__text:last-child, .breastscreen #block-bean-breastscreen-expanding .band__text:last-child, .breastscreen #block-bean-breastscreen-74 .band__text:last-child, .breastscreen #block-bean-breastscreen-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-chat .band__text:last-child {
+        margin-right: 0; } }
+  .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-why .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img {
+    text-align: center; }
+    .band--img-text-halves .band__img img, .band--img-text-halves--invert .band__img img, .breastscreen #block-bean-breast-cancer-in-australia .band__img img, .breastscreen #block-bean-breastscreen-mammogram .band__img img, .breastscreen #block-bean-breastscreen-why .band__img img, .breastscreen #block-bean-breastscreen-early-detection .band__img img, .breastscreen #block-bean-breastscreen-stats .band__img img, .breastscreen #block-bean-breastscreen-expanding .band__img img, .breastscreen #block-bean-breastscreen-74 .band__img img, .breastscreen #block-bean-breastscreen-detection .band__img img, .breastscreen #block-bean-breastscreen-chat .band__img img {
+      width: 100%; }
+
+@media screen and (min-width: 768px) {
+  .band--img-text-halves--invert .band__text, .breastscreen #block-bean-breast-cancer-in-australia .band__text, .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-why .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text {
+    float: right; } }
+
+.band--tight-bottom, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why {
+  padding-bottom: 0 !important; }
+  .band--tight-bottom .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img, .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-why .band__img {
+    vertical-align: bottom;
+    text-align: center;
+    padding: 0;
+    margin: 0; }
+    .band--tight-bottom .band__img img, .breastscreen #block-bean-breast-cancer-in-australia .band__img img, .breastscreen #block-bean-breastscreen-expanding .band__img img, .breastscreen #block-bean-breastscreen-mammogram .band__img img, .breastscreen #block-bean-breastscreen-why .band__img img {
+      width: 80%;
+      float: none;
+      margin-left: 10%;
+      display: block; }
+    @media screen and (min-width: 768px) {
+      .band--tight-bottom .band__img img, .breastscreen #block-bean-breast-cancer-in-australia .band__img img, .breastscreen #block-bean-breastscreen-expanding .band__img img, .breastscreen #block-bean-breastscreen-mammogram .band__img img, .breastscreen #block-bean-breastscreen-why .band__img img {
+        float: left; } }
+
+.band-nopad, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.breastscreen-band--partners {
+  background: #d51364;
+  color: #fff;
+  padding-top: 0.8em; }
+  .breastscreen-band--partners img {
+    width: auto;
+    margin: 0 auto; }
+  .breastscreen-band--partners a {
+    color: #fff; }
+  .breastscreen-band--partners .list-vertical--fourths > li {
+    text-align: center; }
+
+.breastscreen-band--hotline, #block-bean-breastscreen-hotline section.pre-nav {
+  padding: 0.8em 0 0.4em;
+  background: #d51364;
+  color: #FFFFFF;
+  text-align: center; }
+  .breastscreen-band--hotline p, #block-bean-breastscreen-hotline section.pre-nav p {
+    margin-bottom: 0.4em; }
+
+.band--quitline__image {
+  max-width: 50%; }
+  @media screen and (min-width: 768px) {
+    .band--quitline__image {
+      max-width: 100%; } }
+
+.band--feature {
+  padding: 3.2em 0; }
+  .band--feature h2, .band--feature .display {
+    margin-top: 0; }
+  .band--feature .feature__item {
+    padding: 1.2em;
+    margin-bottom: 1.2em; }
+  .band--feature .feature__list--primary {
+    background: #d51364;
+    color: #FFFFFF;
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      .band--feature .feature__list--primary {
+        float: left;
+        display: block;
+        margin-right: 2.74614%;
+        width: 31.50258%; }
+        .band--feature .feature__list--primary:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 75em) {
+      .band--feature .feature__list--primary {
+        float: left;
+        display: block;
+        margin-right: 2.04556%;
+        width: 36.22153%; }
+        .band--feature .feature__list--primary:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 75em) {
+      .band--feature .feature__list--primary .feature__item {
+        min-height: 491px; } }
+  .band--feature .feature__list--secondary {
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      .band--feature .feature__list--secondary {
+        float: left;
+        display: block;
+        margin-right: 2.74614%;
+        width: 65.75129%; }
+        .band--feature .feature__list--secondary:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 75em) {
+      .band--feature .feature__list--secondary {
+        float: left;
+        display: block;
+        margin-right: 2.04556%;
+        width: 61.73292%; }
+        .band--feature .feature__list--secondary:last-child {
+          margin-right: 0; } }
+    .band--feature .feature__list--secondary .feature__item {
+      background: #f3f0ed;
+      width: 100%; }
+      @media screen and (min-width: 768px) {
+        .band--feature .feature__list--secondary .feature__item {
+          float: left;
+          display: block;
+          margin-right: 4.17655%;
+          width: 47.91172%; }
+          .band--feature .feature__list--secondary .feature__item:last-child {
+            margin-right: 0; }
+          .band--feature .feature__list--secondary .feature__item:nth-child(2n) {
+            margin-right: 0; }
+          .band--feature .feature__list--secondary .feature__item:nth-child(2n+1) {
+            clear: left; } }
+      @media screen and (min-width: 75em) {
+        .band--feature .feature__list--secondary .feature__item {
+          float: left;
+          display: block;
+          margin-right: 3.31356%;
+          width: 48.34322%; }
+          .band--feature .feature__list--secondary .feature__item:last-child {
+            margin-right: 0; }
+          .band--feature .feature__list--secondary .feature__item:nth-child(2n) {
+            margin-right: 0; }
+          .band--feature .feature__list--secondary .feature__item:nth-child(2n+1) {
+            clear: left; } }
+
+p.highlight {
+  border-bottom: 0;
+  margin-bottom: 0.8em;
+  padding-bottom: 0; }
+
+.band--colour-1, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why {
+  background: #fff1f7; }
+
+.band--colour-2, .breastscreen #block-bean-breast-cancer-in-australia {
+  background: #f8f8f8; }
+
+.band--colour-3 {
+  background: #e4dcd3; }
+
+.band--colour-4, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-detection {
+  background: #ffe5e8; }
+
+.band--colour-5 {
+  background: #fdf2f3; }
+
+.band--colour-6 {
+  background: #ffe6e9; }
+
+.band--colour-7, .breastscreen #block-bean-breastscreen-74 {
+  background: #f7f7f7; }
+
+.band--transparent {
+  background: none; }
+
+.list-vertical > li,
+.list-vertical--thirds > li,
+.list-vertical--fourths > li {
+  padding-top: 0;
+  border: 0; }
+
+#block-bean-breastscreen-hotline section.pre-nav a {
+  color: white;
+  border: 0px; }
+  #block-bean-breastscreen-hotline section.pre-nav a:hover {
+    background-color: #d51364; }
+
+.breastscreen #block-bean-breast-cancer-in-australia {
+  padding-bottom: 0; }
+  .breastscreen #block-bean-breast-cancer-in-australia p {
+    max-width: 100%; }
+
+.breastscreen #block-bean-breastscreen-expanding {
+  padding-bottom: 0; }
+
+.breastscreen #block-bean-breastscreen-mammogram {
+  padding-bottom: 0; }
+
+.breastscreen #block-bean-breastscreen-why {
+  padding-bottom: 0; }
+
+.breastscreen #block-bean-breastscreen-chat {
+  padding-top: 3.2em; }
+
+.breastscreen .sticky-nav {
+  display: none; }
+  @media screen and (min-width: 768px) {
+    .breastscreen .sticky-nav {
+      display: block; } }
+
+@media screen and (min-width: 768px) {
+  .breastscreen {
+    display: block; }
+    .breastscreen section.site-nav #block-menu-menu-breastscreen-menu li {
+      padding-right: 0; }
+    .breastscreen section.site-nav #block-menu-menu-breastscreen-menu a:hover {
+      border-color: #d51364; }
+    .breastscreen section.site-nav #block-menu-menu-breastscreen-menu a.is-active {
+      border-color: white; }
+      .breastscreen section.site-nav #block-menu-menu-breastscreen-menu a.is-active:hover {
+        border-color: #d51364 !important; } }
+
+.breastscreen #block-views-campaign-videos-block-1 {
+  background: none; }
+  .breastscreen #block-views-campaign-videos-block-1 .see-more {
+    display: none; }
+
+body.breastscreen > main a,
+body.breastscreen > main .see-more {
+  border-color: #d51364;
+  color: #d51364; }
+
+.breastscreen a,
+.breastscreen .see-more {
+  border-color: #d51364;
+  color: #d51364; }
+  .breastscreen a:hover, .breastscreen a:focus,
+  .breastscreen .see-more:hover,
+  .breastscreen .see-more:focus {
+    color: #FFFFFF;
+    background-color: #d51364; }
+  .breastscreen a:after,
+  .breastscreen .see-more:after {
+    display: none; }
+
+.breastscreen .hero .hero-bg, .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
+  background-position-y: 35px;
+  height: 225px; }
+  @media screen and (min-width: 768px) {
+    .breastscreen .hero .hero-bg, .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
+      background-position-y: 10px;
+      height: 360px; } }
+  @media screen and (min-width: 75em) {
+    .breastscreen .hero .hero-bg, .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
+      height: 480px; } }
+
+.breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
+  background-position-y: -20px; }
+  @media screen and (min-width: 768px) {
+    .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
+      background-position-y: -60px; } }
+  @media screen and (min-width: 75em) {
+    .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
+      background-position-y: -100px; } }
+
+.breastscreen .hero--content .campaign-logo, .breastscreen .hero--content-blur .campaign-logo, .breastscreen .hero--content-colour .campaign-logo {
+  max-height: 106px;
+  margin-top: -17px; }
+  @media screen and (min-width: 768px) {
+    .breastscreen .hero--content .campaign-logo, .breastscreen .hero--content-blur .campaign-logo, .breastscreen .hero--content-colour .campaign-logo {
+      max-height: 165px;
+      margin-top: -23px; } }
+  @media screen and (min-width: 75em) {
+    .breastscreen .hero--content .campaign-logo, .breastscreen .hero--content-blur .campaign-logo, .breastscreen .hero--content-colour .campaign-logo {
+      max-height: 215px;
+      margin-top: -25px; } }
+
+.band, #block-bean-share-this, .band--img-text, .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat, .breastscreen-band--partners, .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block, .gmym-band--primary, .girls-make-your-move #block-bean-gmym-involved, .band--small, .page-feedback, .smokes-band--partners, #block-bean-quitenow-partner, .band--pad, .band--secondary, .band--gradient, .node-type-social-media .main, .gmym-band--secondary {
+  padding: 0.8em 0 3.2em;
+  width: 100%; }
+  .band::after, #block-bean-share-this::after, .band--img-text::after, .band--img-text-halves::after, .band--img-text-halves--invert::after, .breastscreen #block-bean-breast-cancer-in-australia::after, .breastscreen #block-bean-breastscreen-mammogram::after, .breastscreen #block-bean-breastscreen-why::after, .breastscreen #block-bean-breastscreen-early-detection::after, .breastscreen #block-bean-breastscreen-stats::after, .breastscreen #block-bean-breastscreen-expanding::after, .breastscreen #block-bean-breastscreen-74::after, .breastscreen #block-bean-breastscreen-detection::after, .breastscreen #block-bean-breastscreen-chat::after, .breastscreen-band--partners::after, .smokes-band--primary::after, .smokes.node-type-campaign #block-views-campaign-videos-block::after, .gmym-band--primary::after, .girls-make-your-move #block-bean-gmym-involved::after, .band--small::after, .page-feedback::after, .smokes-band--partners::after, #block-bean-quitenow-partner::after, .band--pad::after, .band--secondary::after, .band--gradient::after, .node-type-social-media .main::after, .gmym-band--secondary::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.band--small, .page-feedback, .smokes-band--partners, #block-bean-quitenow-partner {
+  padding: 0; }
+
+.band--pad {
+  padding: 3.2em 0; }
+
+.smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block {
+  background-color: #d51364; }
+
+.band--secondary {
+  background-color: #fce5ef; }
+
+.band--texture {
+  background-color: #eee;
+  background-image: url(../images/bg-textures/bg-header-test.svg);
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  padding: 0.8em 0 3.2em; }
+
+.band--gradient, .node-type-social-media .main {
+  background-color: #EEEEEE;
+  background-image: -webkit-linear-gradient(-360deg, #DDDDDD, #FFFFFF);
+  background-image: -webkit-gradient(linear,left top, right top,from(#DDDDDD), to(#FFFFFF));
+  background-image: -webkit-linear-gradient(left,#DDDDDD, #FFFFFF);
+  background-image: linear-gradient(90deg,#DDDDDD, #FFFFFF); }
+
+.band--quitline, #block-bean-quitnow-hotline section.pre-nav {
+  padding: 0.8em 0 0.4em;
+  background: #000000;
+  color: #FFFFFF;
+  text-align: center; }
+
+.band--quitline__image {
+  max-width: 50%; }
+  @media screen and (min-width: 768px) {
+    .band--quitline__image {
+      max-width: 100%; } }
+
+.smokes-band--partners, #block-bean-quitenow-partner {
+  padding-top: 0.8em;
+  background: #000000; }
+  .smokes-band--partners img, #block-bean-quitenow-partner img {
+    width: auto;
+    margin: 0 auto; }
+
+.band--sensitivity, #block-bean-quitnow-sensitivities {
+  padding: 0.8em 0;
+  background: #000000;
+  color: #FFFFFF; }
+  .band--sensitivity p, #block-bean-quitnow-sensitivities p {
+    margin: 0.8em 0; }
+
+.gmym-band--primary, .girls-make-your-move #block-bean-gmym-involved {
+  background-color: #EEE; }
+
+.gmym-band--secondary {
+  background-color: #DDD; }
+
+.social__feature {
+  float: left;
+  display: block;
+  margin-right: 8.71718%;
+  width: 100%; }
+  .social__feature:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 768px) {
+    .social__feature {
+      float: left;
+      display: block;
+      margin-right: 2.74614%;
+      width: 22.9404%; }
+      .social__feature:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 75em) {
+    .social__feature {
+      float: left;
+      display: block;
+      margin-right: 2.04556%;
+      width: 17.08798%; }
+      .social__feature:last-child {
+        margin-right: 0; } }
+
+.smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block {
+  background-color: #EEE; }
+
+@media screen and (max-width: 420px) {
   .page-campaign-videos main .content-main {
     float: left;
     display: block;
@@ -5780,25 +6198,26 @@ header .page-header__logo img {
     .page-campaign-videos main .content-main:last-child {
       margin-right: 0; } }
 
-section.pre-nav a {
+#block-bean-quitnow-hotline section.pre-nav a {
   border: 0px; }
-  section.pre-nav a:hover {
+  #block-bean-quitnow-hotline section.pre-nav a:hover {
     background-color: inherit; }
 
-#block-bean-quitenow-partner .list-vertical--fourths > li {
-  border-top: 0px; }
-  #block-bean-quitenow-partner .list-vertical--fourths > li a:hover {
-    background-color: inherit; }
-  #block-bean-quitenow-partner .list-vertical--fourths > li img {
-    max-height: 130px; }
+#block-bean-quitenow-partner {
+  background: black; }
+  #block-bean-quitenow-partner .list-vertical--fourths > li {
+    border-top: 0px; }
+    #block-bean-quitenow-partner .list-vertical--fourths > li a:hover {
+      background-color: inherit; }
+    #block-bean-quitenow-partner .list-vertical--fourths > li img {
+      max-height: 130px; }
+  #block-bean-quitenow-partner li.last-element {
+    margin-top: 50px; }
 
-#block-bean-quitenow-partner li.last-element {
-  margin-top: 50px; }
-
-section.site-nav #block-menu-menu-quitnow-menu a:hover {
+.smokes section.site-nav #block-menu-menu-quitnow-menu a:hover {
   border-color: black; }
 
-section.site-nav #block-menu-menu-quitnow-menu a.is-current {
+.smokes section.site-nav #block-menu-menu-quitnow-menu a.is-current {
   border-color: black; }
 
 .list-vertical > li,

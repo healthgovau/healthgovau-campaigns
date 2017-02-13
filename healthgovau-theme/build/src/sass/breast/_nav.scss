@@ -4,3 +4,10 @@
     border-color: $navigation-border-colour;
   }
 }
+
+// Campaign only
+.site-nav--compressed {
+  .site-nav__wrapper li {
+    padding-right: 0; // To fit on one line
+  }
+}

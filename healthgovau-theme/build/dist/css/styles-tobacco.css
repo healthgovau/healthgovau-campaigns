@@ -4741,6 +4741,9 @@ article h1:first-of-type, article .hero .site-title:first-of-type, .hero article
 .light {
   font-weight: 400; }
 
+.center {
+  text-align: center; }
+
 article::after, aside::after, details::after, figcaption::after, figure::after, footer::after, header::after, hgroup::after, main::after, menu::after, nav::after, section::after, summary::after {
   clear: both;
   content: "";
@@ -5120,6 +5123,7 @@ header[role='banner'] a.logo {
   .hero .hero-bg, .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
     background-size: cover;
     background-position: center top;
+    background-repeat: no-repeat;
     height: 216px;
     top: -45px;
     position: absolute;

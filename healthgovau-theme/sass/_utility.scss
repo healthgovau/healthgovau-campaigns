@@ -1,0 +1,12 @@
+.visible-mobile {
+  @include media($tablet) {
+    display: none;
+  }
+}
+
+// Vertical alignment
+.vertical-centre {
+  top: 50%;
+  transform: translateY(50%);
+  position: relative;
+}

@@ -13,6 +13,23 @@ CONST SOCIAL_MEDIA = 'http://assets.juicer.io';
  * Implements THEME_preprocess_html().
  */
 function healthgovau_preprocess_html(&$variables) {
+  // Add campaign to body class if there is any.
+  if (arg(0) == 'node' && is_numeric(arg(1))) {
+    $node = node_load(arg(1));
+    if (isset($node->field_campaign[LANGUAGE_NONE][0])) {
+      $campaign_nid = $node->field_campaign[LANGUAGE_NONE][0]['target_id'];
+      $campaign = node_load($campaign_nid);
+      $campaign_title = $campaign->title;
+      $title = strtolower(str_replace(' ', '-', $campaign_title));
+      $variables['classes_array'][] = $title;
+    }
+  }
+
+  // Add page title to body class.
+  $title = $variables['head_title_array']['title'];
+  $title = strtolower(str_replace(' ', '-', $title));
+  $variables['classes_array'][] = $title;
+
   $env = theme_get_setting('env');
   $auth = theme_get_setting('ga_auth');
   $id = theme_get_setting('ga_id');
@@ -113,7 +130,7 @@ function healthgovau_preprocess_node(&$variables) {
     $token = '/sites/all/themes/healthgovau-theme';
     $variables['content']['body'][0]['#markup'] = str_replace($token, '/' . path_to_theme(), $variables['content']['body'][0]['#markup']);
   }
-  
+
   // Change background color and image for campaign and related content type.
   if ($variables['type'] == 'campaign') {
     $campaign_nid = $variables['nid'];
@@ -156,6 +173,36 @@ function healthgovau_preprocess_views_view(&$vars) {
 }
 
 /**
+ * Implements THEME_preprocess_block().
+ */
+function healthgovau_preprocess_block(&$vars) {
+  $block = $vars['block'];
+  // Add title variable if the current block is video card block.
+  if ($block->bid == 'views-campaign_videos-block_1') {
+    if (arg(0) == 'node' && is_numeric(arg(1))) {
+      // This is a node page.
+      $node = node_load(arg(1));
+      if ($node->type == 'campaign') {
+        // This is a campaign landing page.
+        if (isset($node->field_campaign_vblock_3_title[LANGUAGE_NONE])) {
+          $vars['vblock_3_title'] = $node->field_campaign_vblock_3_title[LANGUAGE_NONE][0]['value'];
+        } 
+      }
+    }
+  }
+}
+
+/**
+ * Implements THEME_preprocess_menu_tree().
+ */
+function healthgovau_preprocess_menu_tree(&$variables) {
+  // Filter the breastscreen menu link for anchors.
+  if ($variables['theme_hook_original'] == 'menu_tree__menu_breastscreen_menu') {
+    $variables['tree'] = str_replace('/breastscreen', '', $variables['tree']);
+  }
+}
+
+/**
  * Implements THEME_preprocess_entity().
  */
 function healthgovau_preprocess_entity(&$variables) {
@@ -168,7 +215,6 @@ function healthgovau_preprocess_entity(&$variables) {
       $token = '/sites/all/themes/healthgovau-theme';
       $variables['content']['field_bean_body'][0]['#markup'] = str_replace($token, '/' . path_to_theme(), $variables['content']['field_bean_body'][0]['#markup']);
     }
-
 
     // For social media bean blocks.
     if ($bean->type == 'social_media') {
@@ -266,18 +312,17 @@ function healthgovau_breadcrumb($variables) {
         }
       // @todo: add other related content types in.
       case 'video':
-        //return _healthgovau_campaign_breadcrumb($node);
+        return _healthgovau_campaign_breadcrumb($node);
       case 'campaign_standard_page':
-        //return _healthgovau_campaign_breadcrumb($node);
+        return _healthgovau_campaign_breadcrumb($node);
       case 'social_media':
-        //return _healthgovau_campaign_breadcrumb($node);
+        return _healthgovau_campaign_breadcrumb($node);
     }
   }
   else {
     // This is not a node page.
     if (arg(0) == 'campaign' && is_numeric(arg(1))) {
       // This is a campaign related view page.
-      /**
       $campaign = node_load(arg(1));
 
       $breadcrumb = array(
@@ -293,7 +338,6 @@ function healthgovau_breadcrumb($variables) {
       $breadcrumb_list .= '</ul>';
       $output .= '<nav class="breadcrumbs" aria-label="breadcrumb"><div class="wrapper">' . $breadcrumb_list . '</div></nav>';
       return $output;
-       **/
     }
     else {
       // Hide breadcrumb for 404 page.
