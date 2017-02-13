@@ -7,7 +7,7 @@
  * @see https://drupal.org/node/1728096
  */
 
-CONST SOCIAL_MEDIA = 'http://assets.juicer.io';
+CONST SOCIAL_MEDIA = '//assets.juicer.io';
 
 /**
  * Implements THEME_preprocess_html().
