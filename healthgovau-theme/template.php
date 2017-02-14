@@ -166,7 +166,7 @@ function healthgovau_preprocess_node(&$variables) {
  */
 function healthgovau_preprocess_views_view(&$vars) {
   // Add hero background image to campaign videos view.
-  if ($vars['view']->name == 'campaign_videos' || $vars['view']->name == 'activities') {
+  if ($vars['view']->name == 'campaign_videos' || $vars['view']->name == 'activities' || $vars['view'] == 'events') {
     $campaign_nid = $vars['view']->args[0];
     _healthgovau_set_hero_bg($campaign_nid, FALSE);
   }
@@ -388,7 +388,7 @@ function healthgovau_form_alter(&$form, &$form_state, $form_id) {
   }
   
   // Override activities exposed AJAX form.
-  if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-activities-block') {
+  if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-activities-page') {
     // Get all activities type tids.
     $options = $form['field_activity_type_tid']['#options'];
     unset($form['field_activity_type_tid']);
@@ -408,9 +408,11 @@ function healthgovau_form_alter(&$form, &$form_state, $form_id) {
  * Implements hook_js_alter().
  */
 function healthgovau_js_alter(&$variables) {
-  // Swap out jQuery to use an updated version of the library.
-  $variables['misc/jquery.js']['data'] = drupal_get_path('theme', 'healthgovau') . '/js/jquery.js';
-  $variables['misc/jquery.js']['version'] = '3.1.1';
+  // Swap out jQuery to use an updated version of the library for node page.
+  if (arg(0) == 'node' && is_numeric(arg(1))) {
+    $variables['misc/jquery.js']['data'] = drupal_get_path('theme', 'healthgovau') . '/js/jquery.js';
+    $variables['misc/jquery.js']['version'] = '3.1.1';
+  }
 }
 
 /**
