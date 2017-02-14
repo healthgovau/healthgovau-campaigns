@@ -137,8 +137,8 @@ function healthgovau_preprocess_node(&$variables) {
     _healthgovau_set_hero_bg($campaign_nid, FALSE);
   }
   else {
-    if (isset($variables['field_campaign'][0])) {
-      $campaign_nid = $variables['field_campaign'][0]['target_id'];
+    if (isset($variables['field_campaign'][LANGUAGE_NONE])) {
+       $campaign_nid = $variables['field_campaign'][LANGUAGE_NONE][0]['target_id'];
       _healthgovau_set_hero_bg($campaign_nid, TRUE);
     }
   }
