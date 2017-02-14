@@ -166,7 +166,7 @@ function healthgovau_preprocess_node(&$variables) {
  */
 function healthgovau_preprocess_views_view(&$vars) {
   // Add hero background image to campaign videos view.
-  if ($vars['view']->name == 'campaign_videos') {
+  if ($vars['view']->name == 'campaign_videos' || $vars['view']->name == 'activities') {
     $campaign_nid = $vars['view']->args[0];
     _healthgovau_set_hero_bg($campaign_nid, FALSE);
   }
