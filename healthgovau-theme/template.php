@@ -125,6 +125,8 @@ function healthgovau_preprocess_page(&$variables) {
  */
 function healthgovau_preprocess_node(&$variables) {
 
+  $node = $variables['node'];
+
   // Replace absolute path with dynamic path to theme.
   if (isset($variables['content']['body'])) {
     $token = '/sites/all/themes/healthgovau-theme';
@@ -159,6 +161,14 @@ function healthgovau_preprocess_node(&$variables) {
     $variables['sm_perpage'] = $sm_perpage;
     $variables['sm_type'] = $sm_type;
   }
+
+  // Create variable for location map preprocess field.
+  $google_api = theme_get_setting('ga_api');
+  $lat = $node->field_location_lat[LANGUAGE_NONE][0]['value'];
+  $long = $node->field_location_long[LANGUAGE_NONE][0]['value'];
+  $src = 'https://maps.googleapis.com/maps/api/staticmap?center=' . $lat . ',' . $long . '&zoom=13&size=300x300&maptype=roadmap&key=' . $google_api;
+  $src .= '&markers=color:blue%7Clabel:S%7C' . $lat . ',' . $long;
+  $variables['location_map'] ='<img src="' . $src . '" alt="">';
 }
 
 /**
