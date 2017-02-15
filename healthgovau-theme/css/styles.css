@@ -6182,11 +6182,13 @@ body.breastscreen > main .see-more {
       .social__feature:last-child {
         margin-right: 0; } }
 
-.girlsmove .field-name-field-image {
+.girlsmove .region-content .field-name-field-image {
   margin-bottom: 3.2em; }
+  .girlsmove .region-content .field-name-field-image img {
+    height: auto;
+    width: auto; }
 
-.page-campaign-activities main .content-main,
-.girlsmove main .content-main {
+.page-campaign-activities main .content-main {
   width: 100%; }
 
 .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block {
