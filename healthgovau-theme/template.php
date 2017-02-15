@@ -404,7 +404,17 @@ function healthgovau_form_alter(&$form, &$form_state, $form_id) {
   
   // Override activities exposed AJAX form.
   if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-activities-page') {
-    $form['field_activity_type_tid']['#type'] = 'checkboxes';
+    $markup = '<div class="tags"><dl><dt class="visuallyhidden">Type</dt>';
+    $options = $form['field_activity_type_tid']['#options'];
+    foreach($options as $tid => $title) {
+      $markup .= '<dd><a href="/campaign/' . arg(1) . '/activities?field_activity_type_tid[]=' . $tid . '">' . $title . '</a></dd>';
+    }
+    $markup .= '</dl></div>';
+    $form['activity_links'] = array(
+      '#markup' => $markup,
+    );
+    $form['#action'] = '/campaign/' . arg(1) . '/activities';
+    $form['field_activity_type_tid']['#type'] = 'hidden';
   }
 }
 
