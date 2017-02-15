@@ -10,7 +10,7 @@
 
 // Social
 .social__feature {
-  @include fill-parent(4 of 4);
+  @include fill-parent();
 
   @include media($tablet) {
     @include span-columns(3 of 12);
@@ -21,11 +21,20 @@
   }
 }
 
-.girls-make-your-move {
+.girlsmove {
   #block-bean-gmym-involved {
     @extend .gmym-band--primary;
   }
-
-  // Activities
-  
+  .field-name-field-image {
+    margin-bottom: $large-spacing;
+  }
 }
+
+// Activities
+.page-campaign-activities,
+.girlsmove { //Will have to address wrt right-nav pages
+  main .content-main {
+    width: 100%;
+  }
+}
+
