@@ -8,6 +8,7 @@
  */
 
 CONST SOCIAL_MEDIA = '//assets.juicer.io';
+CONST FONT_AWESOME = '//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css';
 
 /**
  * Implements THEME_preprocess_html().
@@ -30,6 +31,7 @@ function healthgovau_preprocess_html(&$variables) {
   $title = strtolower(str_replace(' ', '-', $title));
   $variables['classes_array'][] = $title;
 
+  // Add google analytics JS.
   $env = theme_get_setting('env');
   $auth = theme_get_setting('ga_auth');
   $id = theme_get_setting('ga_id');
@@ -64,6 +66,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	    families: [\'Open+Sans:400italic,700,400:latin,latin-ext\']
 	  }
 	});', 'inline');
+
+  // Add font awesome.
+  drupal_add_css(FONT_AWESOME, 'external');
 }
 
 /**
