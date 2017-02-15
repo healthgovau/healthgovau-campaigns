@@ -10,7 +10,7 @@
 
 // Social
 .social__feature {
-  @include span-columns(4 of 4);
+  @include fill-parent(4 of 4);
 
   @include media($tablet) {
     @include span-columns(3 of 12);
@@ -25,4 +25,7 @@
   #block-bean-gmym-involved {
     @extend .gmym-band--primary;
   }
+
+  // Activities
+  
 }
