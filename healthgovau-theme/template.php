@@ -205,6 +205,14 @@ function healthgovau_preprocess_block(&$vars) {
       }
     }
   }
+  
+  // Add links to activity random block.
+  if ($block->bid == 'views-activities-block') {
+    $vars['content'] = _healthgovau_campaign_activity_filter(). $vars['content'];
+  }
+  if ($block->delta == '-exp-activities-page') {
+    $vars['content'] = _healthgovau_campaign_activity_filter();
+  }
 }
 
 /**
@@ -401,21 +409,6 @@ function healthgovau_form_alter(&$form, &$form_state, $form_id) {
     // Attach character countdown JS.
     $form['#attached']['js'][] = drupal_get_path('theme', 'healthgovau') . '/js/healthgovau.feedback.js';
   }
-  
-  // Override activities exposed AJAX form.
-  if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-activities-page') {
-    $markup = '<div class="tags"><dl><dt class="visuallyhidden">Type</dt>';
-    $options = $form['field_activity_type_tid']['#options'];
-    foreach($options as $tid => $title) {
-      $markup .= '<dd><a href="/campaign/' . arg(1) . '/activities?field_activity_type_tid[]=' . $tid . '">' . $title . '</a></dd>';
-    }
-    $markup .= '</dl></div>';
-    $form['activity_links'] = array(
-      '#markup' => $markup,
-    );
-    $form['#action'] = '/campaign/' . arg(1) . '/activities';
-    $form['field_activity_type_tid']['#type'] = 'hidden';
-  }
 }
 
 /**
@@ -494,4 +487,23 @@ function _healthgovau_campaign_hero_logo($node, &$variables) {
   $image_url = file_create_url($node->field_campaign_hero_logo[LANGUAGE_NONE][0]['uri']);
   $variables['logo_img'] = $image_url;
   $variables['logo_url'] = '/' . drupal_get_path_alias('node/' . $node->nid);
+}
+
+/**
+ * Helper function to generate filter links to activity view.
+ * 
+ * @return string
+ */
+function _healthgovau_campaign_activity_filter() {
+  $vocab = taxonomy_vocabulary_machine_name_load('activity_type');
+  $terms = taxonomy_get_tree($vocab->vid);
+
+  $markup = '<div class="activity__selector"><h3>Find your activity</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>';
+  $markup .= '<div class="tags"><dl><dt class="visuallyhidden">Type</dt>';
+  foreach($terms as $term) {
+    $markup .= '<dd><a href="/campaign/' . arg(1) . '/activities?field_activity_type_tid[]=' . $term->tid . '">' . $term->name . '</a></dd>';
+  }
+  $markup .= '</dl></div></div>';
+  
+  return $markup;
 }
