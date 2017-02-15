@@ -18,7 +18,9 @@ Drupal.behaviors.healthgovauCampaign = {
   attach: function(context, settings) {
 
     // Sticky nav
-    var stickyNavTop = $('.sticky-nav').offset().top;
+    if( $(".sticky-nav").length) {
+      var stickyNavTop = $('.sticky-nav').offset().top;
+    }
     var stickyNav = function(){
       var scrollTop = $(window).scrollTop();
       if (scrollTop > stickyNavTop) {
@@ -29,7 +31,7 @@ Drupal.behaviors.healthgovauCampaign = {
     }
     
     function parallax(){
-      if( $(".js-parallax-window").length > 0 ) {
+      if( $(".js-parallax-window").length) {
         var plxBackground = $(".js-parallax-background");
         var plxWindow = $(".js-parallax-window");
 
@@ -56,8 +58,9 @@ Drupal.behaviors.healthgovauCampaign = {
       if ($(".js-parallax-window").length) {
         parallax();
       }
-      
-      stickyNav();
+      if( $(".sticky-nav").length) {
+          stickyNav();
+      }
     });
     
   }

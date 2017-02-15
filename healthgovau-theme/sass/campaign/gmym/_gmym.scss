@@ -25,14 +25,19 @@
   #block-bean-gmym-involved {
     @extend .gmym-band--primary;
   }
-  .field-name-field-image {
-    margin-bottom: $large-spacing;
+  .region-content {
+    .field-name-field-image {
+      margin-bottom: $large-spacing;
+      img {
+        height: auto;
+        width: auto;
+      }
+    }
   }
 }
 
 // Activities
-.page-campaign-activities,
-.girlsmove { //Will have to address wrt right-nav pages
+.page-campaign-activities {
   main .content-main {
     width: 100%;
   }
