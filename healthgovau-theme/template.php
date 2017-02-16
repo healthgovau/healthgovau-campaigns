@@ -8,7 +8,6 @@
  */
 
 CONST SOCIAL_MEDIA = '//assets.juicer.io';
-CONST FONT_AWESOME = '//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css';
 
 /**
  * Implements THEME_preprocess_html().
@@ -66,9 +65,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	    families: [\'Open+Sans:400italic,700,400:latin,latin-ext\']
 	  }
 	});', 'inline');
-
-  // Add font awesome.
-  drupal_add_css(FONT_AWESOME, 'external');
 }
 
 /**

@@ -5093,6 +5093,20 @@ body main {
       .page-feedback [role='button'] {
         margin: 0 0 0 1.2em; } }
 
+.element:before {
+  content: "\f000";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  /*--adjust as necessary--*/
+  color: #000;
+  font-size: 18px;
+  padding-right: 0.5em;
+  position: absolute;
+  top: 10px;
+  left: 0; }
+
 .form-required {
   color: red; }
 
