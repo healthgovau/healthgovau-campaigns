@@ -46,6 +46,20 @@
   font-weight: normal;
 }
 
+.node-type-event {
+  .field-name-field-feature-image {
+    @include fill-parent;
+    @include media($desktop) {
+      float: right;
+      margin-top: 50px;
+      max-width: 45%;
+      height: auto;
+      margin-left: 30px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
 // Add event icons (cannot add class to govCMS directly
 // Refactor as mixin
 
@@ -86,3 +100,38 @@
 
 
 // Event listing
+// Right-align images
+.list-horizontal--events {
+  @extend .list-horizontal;
+
+  > li {
+    display: block; // override flex
+    //max-width: 100%;
+
+    // Image
+    @include direction-context(right-to-left) {
+      figure {
+        display: none;
+        //@include media($desktop) {
+        //  display: inline;
+        //  @include span-columns(5 of 16);
+        //}
+        //img {
+        //  width: 100%;
+        //  height: auto;
+        //}
+      }
+    }
+
+    // Content
+    article {
+      @include fill-parent;
+      @extend %baseicon;
+      padding-left: 5em !important;
+      &:before {
+        content: "\f133";
+        font-size: 3.5em !important;
+      }
+    }
+  }
+}

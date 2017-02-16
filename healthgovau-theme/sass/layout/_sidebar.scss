@@ -1,0 +1,7 @@
+// Target sidebar
+.page--sidebar-right .sidebar__right {
+  // Force h2 to look like h3
+  h2 {
+    @include h3();
+  }
+}
