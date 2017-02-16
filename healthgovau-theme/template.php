@@ -530,7 +530,7 @@ function _healthgovau_campaign_activity_filter() {
   $vocab = taxonomy_vocabulary_machine_name_load('activity_type');
   $terms = taxonomy_get_tree($vocab->vid);
 
-  $markup = '<div class="activity__selector"><h3>Find your activity</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>';
+  $markup = '<div class="activity__selector"><h3>Find your activity</h3><p>Do you prefer?</p>';
   $markup .= '<div class="tags"><dl><dt class="visuallyhidden">Type</dt>';
   foreach($terms as $term) {
     $markup .= '<dd><a href="/campaign/' . arg(1) . '/activities?field_activity_type_tid[]=' . $term->tid . '">' . $term->name . '</a></dd>';
