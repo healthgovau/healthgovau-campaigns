@@ -40,7 +40,7 @@
       </div>
       <div class="social__feature">
         <h3 class="light">Follow us</h3>
-        <ul>
+        <ul class="social__links--stacked">
           <!--<li class="social__links-item"><a href="#">Instagram</a></li>-->
           <li class="social__links-item"><a href="<?php print $facebook_link; ?>" class="facebook">Facebook</a></li>
           <li class="social__links-item"><a href="<?php print $youtube_link; ?>" class="youtube">YouTube</a></li>

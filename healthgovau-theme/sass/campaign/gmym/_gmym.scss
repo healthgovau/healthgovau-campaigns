@@ -34,9 +34,19 @@
       }
     }
   }
+
+  #block-views-campaign-videos-block {
+    padding-bottom: $large-spacing;
+  }
+
+  #block-bean-gmym-cards-0 {
+    @extend .gmym-band--primary;
+    padding-top: $medium-spacing;
+    padding-bottom: 0;
+  }
 }
 
-// Forvce full width for content contsiner
+// Force full width for content contsiner
 .page-campaign-activities,
 .girlsmove {
   main .content-main {
@@ -44,3 +54,20 @@
   }
 }
 
+// Juicer
+.bean-social-media {
+  .juicer-feed {
+    ul.j-filters, .j-paginate {
+      display: none;
+    }
+  }
+}
+
+.node-social-media {
+  .juicer-feed ul.j-filters {
+    padding-left: 0;
+    li {
+      width: 20%;
+    }
+  }
+}
