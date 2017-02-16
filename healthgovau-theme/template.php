@@ -440,11 +440,6 @@ function healthgovau_form_alter(&$form, &$form_state, $form_id) {
     // Attach character countdown JS.
     $form['#attached']['js'][] = drupal_get_path('theme', 'healthgovau') . '/js/healthgovau.feedback.js';
   }
-  
-  // Change event filter select list to checkboxes.
-  if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-event-page') {
-    $form['field_state_tid']['#type'] = 'checkboxes';
-  }
 }
 
 /**
