@@ -50,7 +50,8 @@ paths = {
     images: rootPath.theme + 'images',
     sass: rootPath.theme + 'sass',
     css: rootPath.theme + 'css',
-    js: rootPath.theme + 'js'
+    js: rootPath.theme + 'js',
+    font: rootPath.theme + 'fonts'
   },
   uikit: {
     imagesSrc: rootPath.uikit + 'img',
@@ -74,7 +75,9 @@ options = {
   sass: {
     importer: importOnce,
     errLogToConsole: true,
-    sourcemap: true
+    sourcemap: true,
+    outputStyle: 'compressed'
+
   },
   webpack: {
     output: {
@@ -91,6 +94,7 @@ gulp.task('default', ['build']);
 gulp.task('build', ['build:proto','build:theme']);
 gulp.task('build:proto', ['html', 'images', 'styles:proto', 'js:proto']);
 gulp.task('build:theme', ['styles:theme']);
+gulp.task('fontawesome', ['styles:fontawesome', 'fonts:fontawesome']);
 
 // #########################
 // Prototype only tasks
@@ -144,7 +148,28 @@ gulp.task('styles:theme', function() {
 });
 // Still to add compilation and copy of IE6,7,8 SCSS
 
+// #########################
+// Font Awesome
+// #########################
+gulp.task('styles:fontawesome', function() {
+    return gulp.src(paths.theme.sass + '/vendor/font-awesome/scss/font-awesome.scss')
+        .pipe(sassGlob())
+        .pipe(sass(options.sass).on('error', sass.logError))
+        .pipe($.autoprefixer(options.autoprefixer))
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(gulp.dest(paths.theme.css));
+});
 
+gulp.task('fonts:fontawesome', function() {
+    return gulp.src(paths.theme.sass + '/vendor/font-awesome/fonts/*')
+        .pipe(gulp.dest(paths.theme.font));
+});
+
+
+
+// #########################
 // JS
 gulp.task('js', ['js:proto']);
 
@@ -173,7 +198,8 @@ gulp.task('js:proto', function () {
 //    .pipe(gulp.dest(paths.theme.js));
 //});
 
-// Images
+// #########################
+// Imagesß
 gulp.task('images', ['images:proto', 'images:ui-kit']);
 
 gulp.task('images:proto', function () {
@@ -189,4 +215,4 @@ gulp.task('images:ui-kit', function () {
     .pipe(gulp.dest(paths.proto.imagesDist));
 });
 
-//ui-kit images and not copied for Drupal as they are access via the base theme and pathed within SCSS
+//ui-kit images are not copied for Drupal as they are access via the base theme and pathed within SCSS
