@@ -59,7 +59,7 @@ HTML comment.
       <div class="field-item <?php print $delta % 2 ? 'odd' : 'even'; ?>"<?php print $item_attributes[$delta]; ?>><?php print render($item); ?></div>
     <?php endforeach; ?>
   </div>
-  <div class="localtion-map">
+  <div class="location-map">
     <?php print $location_map; ?>
   </div>
 </div>
