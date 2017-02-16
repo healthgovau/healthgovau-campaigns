@@ -5111,6 +5111,24 @@ body main {
       .event_details .event_tertiary:last-child {
         margin-right: 0; } }
 
+.location-map {
+  margin-top: 3.2em; }
+
+.field-name-field-event-date:before {
+  content: "\f073"; }
+
+.field-name-field-link-to:before {
+  content: "\f0ac"; }
+
+.field-name-field-event-organiser:before {
+  content: ""; }
+
+.field-name-field-health-topic:before {
+  content: "\f02b"; }
+
+.field-name-field-address:before {
+  content: "\f073"; }
+
 .page-feedback {
   padding-top: 0.8em !important;
   background: #2A2A2A;
@@ -5150,10 +5168,10 @@ body main {
       .page-feedback [role='button'] {
         margin: 0 0 0 1.2em; } }
 
-[class*="fa-"] {
+.field-name-field-event-date, .field-name-field-link-to, .field-name-field-event-organiser, .field-name-field-health-topic, .field-name-field-address, [class*="fa-"] {
   position: relative;
   padding-left: 2em; }
-  [class*="fa-"]:before {
+  .field-name-field-event-date:before, .field-name-field-link-to:before, .field-name-field-event-organiser:before, .field-name-field-health-topic:before, .field-name-field-address:before, [class*="fa-"]:before {
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
@@ -6274,7 +6292,8 @@ body.breastscreen > main .see-more {
     height: auto;
     width: auto; }
 
-.page-campaign-activities main .content-main {
+.page-campaign-activities main .content-main,
+.girlsmove main .content-main {
   width: 100%; }
 
 .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block {
