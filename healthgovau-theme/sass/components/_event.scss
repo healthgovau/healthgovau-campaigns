@@ -1,0 +1,80 @@
+// Event page
+
+// Layout
+.event_details {
+  .event_primary {
+    @include fill-parent();
+    @include media($tablet) {
+      @include span-columns(3 of 12);
+    }
+    @include media($tablet) {
+      @include span-columns(4 of 16);
+    }
+  }
+  .event_secondary {
+    @include fill-parent();
+    @include media($tablet) {
+      @include span-columns(3 of 12);
+    }
+    @include media($tablet) {
+      @include span-columns(6 of 16);
+    }
+  }
+  .event_tertiary {
+    @include fill-parent();
+    @include media($tablet) {
+      @include span-columns(6 of 12);
+    }
+    @include media($tablet) {
+      @include span-columns(6 of 16);
+    }
+  }
+}
+
+.field-name-field-event-date {
+
+}
+
+.location-map {
+  margin-top: $medium-spacing;
+}
+
+// Add event icons (cannot add class to govCMS directly
+// Refactor as mixin
+
+.field-name-field-event-date {
+  @extend %baseicon;
+  &:before {
+    content: "\f073";
+  }
+}
+
+.field-name-field-link-to {
+  @extend %baseicon;
+  &:before {
+    content: "\f0ac";
+  }
+}
+
+.field-name-field-event-organiser {
+  @extend %baseicon;
+  &:before {
+    content: "\f007";
+  }
+}
+
+.field-name-field-health-topic {
+  @extend %baseicon;
+  &:before {
+    content: "\f02b";
+  }
+}
+
+.field-name-field-address {
+  @extend %baseicon;
+  &:before {
+    content: "\f073";
+  }
+}
+
+// Event listing
