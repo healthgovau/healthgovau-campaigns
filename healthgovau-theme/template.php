@@ -93,6 +93,18 @@ function healthgovau_preprocess_field(&$variables) {
     // Add modal JS.
     drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/healthgovau.modal.js');
   }
+
+  // Create variable for address field.
+  if ($variables['element']['#field_name'] == 'field_address') {
+    $node = $variables['element']['#object'];
+    $google_api = theme_get_setting('ga_api');
+    $lat = isset($node->field_location_lat[LANGUAGE_NONE]) ? $node->field_location_lat[LANGUAGE_NONE][0]['value'] : '0';
+    $long = isset($node->field_location_long[LANGUAGE_NONE]) ? $node->field_location_long[LANGUAGE_NONE][0]['value'] : 0;
+    $src = 'https://maps.googleapis.com/maps/api/staticmap?center=' . $lat . ',' . $long . '&zoom=13&size=300x300&maptype=roadmap&key=' . $google_api;
+    $src .= '&markers=color:blue%7Clabel:S%7C' . $lat . ',' . $long;
+    $address = $variables['items'][0]['#address'];
+    $variables['location_map'] ='<img src="' . $src . '" alt="' . $address['thoroughfare'] . ' ' . $address['locality'] .'">';
+  }
 }
 
 /**
@@ -166,14 +178,6 @@ function healthgovau_preprocess_node(&$variables) {
     $variables['sm_perpage'] = $sm_perpage;
     $variables['sm_type'] = $sm_type;
   }
-
-  // Create variable for location map preprocess field.
-  $google_api = theme_get_setting('ga_api');
-  $lat = isset($node->field_location_lat[LANGUAGE_NONE]) ? $node->field_location_lat[LANGUAGE_NONE][0]['value'] : '0';
-  $long = isset($node->field_location_long[LANGUAGE_NONE]) ? $node->field_location_long[LANGUAGE_NONE][0]['value'] : 0;
-  $src = 'https://maps.googleapis.com/maps/api/staticmap?center=' . $lat . ',' . $long . '&zoom=13&size=300x300&maptype=roadmap&key=' . $google_api;
-  $src .= '&markers=color:blue%7Clabel:S%7C' . $lat . ',' . $long;
-  $variables['location_map'] ='<img src="' . $src . '" alt="">';
 }
 
 /**
