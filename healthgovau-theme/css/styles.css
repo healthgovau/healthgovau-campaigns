@@ -5112,7 +5112,14 @@ body main {
         margin-right: 0; } }
 
 .location-map {
-  margin-top: 3.2em; }
+  margin-top: 1.2em; }
+
+.page-campaign-events .field,
+.girlsmove .field {
+  margin-bottom: 1.2em; }
+
+.event_status {
+  font-weight: normal; }
 
 .field-name-field-event-date:before {
   content: "\f073"; }
@@ -5121,13 +5128,13 @@ body main {
   content: "\f0ac"; }
 
 .field-name-field-event-organiser:before {
-  content: ""; }
+  content: "\f007"; }
 
 .field-name-field-health-topic:before {
   content: "\f02b"; }
 
 .field-name-field-address:before {
-  content: "\f073"; }
+  content: "\f041"; }
 
 .page-feedback {
   padding-top: 0.8em !important;
@@ -5179,6 +5186,7 @@ body main {
     color: #2A2A2A;
     font-size: 1.5em;
     position: absolute;
+    line-height: 1;
     left: 0; }
 
 .fa-large {

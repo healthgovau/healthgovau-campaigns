@@ -199,7 +199,7 @@ function healthgovau_preprocess_node(&$variables) {
       $indicator = 'Completed';
     }
     
-    $variables['event_status'] ='<div class="fa-info-circle"><div class="event-status">' . $indicator . '</div></div>';
+    $variables['event_status'] ='<div class="field fa-info-circle"><div class="field-label">Event status: <span class="event_status">' . $indicator . '</span></div></div>';
   }
 }
 

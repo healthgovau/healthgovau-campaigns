@@ -31,12 +31,19 @@
   }
 }
 
-.field-name-field-event-date {
-
-}
-
 .location-map {
   margin-top: $medium-spacing;
+}
+
+.page-campaign-events,
+.girlsmove {
+  .field {
+    margin-bottom: $medium-spacing;
+  }
+}
+
+.event_status {
+  font-weight: normal;
 }
 
 // Add event icons (cannot add class to govCMS directly
@@ -73,8 +80,9 @@
 .field-name-field-address {
   @extend %baseicon;
   &:before {
-    content: "\f073";
+    content: "\f041";
   }
 }
+
 
 // Event listing
