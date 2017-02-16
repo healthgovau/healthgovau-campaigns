@@ -1,7 +1,7 @@
 // Health vars
 $health-image-base-url: '../images/' !default;
-
 $shadow-color: #CCC;
+
 // Health default colour vars
 $grey-light:                      #EEE;
 $grey:                            #DDD;
@@ -26,3 +26,5 @@ $shadow-colour:                   $grey-dark;
 $hero-content-shrink-factor: 0.4; // Height proportion compared to main hero
 $hero-content-y-shift: 0.5; // How far up to move the image for the slice (range 0 - 0.9)
 
+// Font Awesome icon colour
+$icon-colour:                     $grey-darkest;
