@@ -178,6 +178,22 @@ function healthgovau_preprocess_node(&$variables) {
     $variables['sm_perpage'] = $sm_perpage;
     $variables['sm_type'] = $sm_type;
   }
+
+  // Add status indicator to event page using preprocess field.
+  if ($variables['type'] == 'event') {
+    $start_date = strtotime($node->field_event_date[LANGUAGE_NONE][0]['value']);
+    $end_date = strtotime($node->field_event_date[LANGUAGE_NONE][0]['value2']);
+
+    $indicator = 'Open';
+    if (time() < $start_date) {
+      $indicator = 'Upcoming';
+    }
+    else if (time() > $end_date) {
+      $indicator = 'Completed';
+    }
+    
+    $variables['event_status'] ='<div class="fa-info-circle"><div class="status-label">Status</div><div class="event-status">' . $indicator . '</div></div>';
+  }
 }
 
 /**
