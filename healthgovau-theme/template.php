@@ -275,9 +275,9 @@ function healthgovau_preprocess_entity(&$variables) {
       // Find the field values.
       $sm_id = $bean->field_social_media_id[LANGUAGE_NONE][0]['value'];
       $sm_col = $bean->field_social_media_column[LANGUAGE_NONE][0]['value'];
-      $facebook = !isset($bean->field_facebook_id[LANGUAGE_NONE]) ? '#' : $bean->field_facebook_id[LANGUAGE_NONE][0]['value'];
-      $youtube = !isset($bean->field_youtube_channel_id[LANGUAGE_NONE]) ? '#' : $bean->field_youtube_channel_id[LANGUAGE_NONE][0]['value'];
-      $twitter = !isset($bean->field_twitter_id[LANGUAGE_NONE]) ? '#' : $bean->field_twitter_id[LANGUAGE_NONE][0]['value'];
+      $facebook = !isset($bean->field_facebook_id[LANGUAGE_NONE]) ? '' : '<li class="social__links-item"><a href="' . $bean->field_facebook_id[LANGUAGE_NONE][0]['value'] . '" class="facebook">Facebook</a></li>';
+      $youtube = !isset($bean->field_youtube_channel_id[LANGUAGE_NONE]) ? '' : '<li class="social__links-item"><a href="' . $bean->field_youtube_channel_id[LANGUAGE_NONE][0]['value'] . '" class="youtube">YouTube</a></li>';
+      $twitter = !isset($bean->field_twitter_id[LANGUAGE_NONE]) ? '' : '<li class="social__links-item"><a href="' . $bean->field_twitter_id[LANGUAGE_NONE][0]['value'] . '" class="twitter">Twitter</a></li>';
       $sm_page = !isset($bean->field_social_media_page_link[LANGUAGE_NONE]) ? '#' : $bean->field_social_media_page_link[LANGUAGE_NONE][0]['value'];
       $variables['sm_id'] = $sm_id;
       $variables['sm_col'] = $sm_col;

@@ -42,9 +42,15 @@
         <h3 class="light">Follow us</h3>
         <ul class="social__links--stacked">
           <!--<li class="social__links-item"><a href="#">Instagram</a></li>-->
-          <li class="social__links-item"><a href="<?php print $facebook_link; ?>" class="facebook">Facebook</a></li>
-          <li class="social__links-item"><a href="<?php print $youtube_link; ?>" class="youtube">YouTube</a></li>
-          <li class="social__links-item"><a href="<?php print $twitter_link; ?>" class="twitter">Twitter</a></li>
+          <? if ($facebook_link != ''): ?>
+            <?php print $facebook_link; ?>
+          <? endif; ?>
+          <? if ($youtube_link != ''): ?>
+            <?php print $youtube_link; ?>
+          <? endif; ?>
+          <? if ($twitter_link != ''): ?>
+            <?php print $twitter_link; ?>
+          <? endif; ?>
         </ul>
       </div>
     </div>
