@@ -5129,6 +5129,17 @@ body main {
 .event_status {
   font-weight: normal; }
 
+.node-type-event .field-name-field-feature-image {
+  width: 100%; }
+  @media screen and (min-width: 75em) {
+    .node-type-event .field-name-field-feature-image {
+      float: right;
+      margin-top: 50px;
+      max-width: 45%;
+      height: auto;
+      margin-left: 30px;
+      margin-bottom: 30px; } }
+
 .field-name-field-event-date:before {
   content: "\f073"; }
 
@@ -5145,22 +5156,9 @@ body main {
   content: "\f041"; }
 
 .list-horizontal--events > li {
-  display: block;
-  max-width: 100%; }
+  display: block; }
   .list-horizontal--events > li figure {
     display: none; }
-    @media screen and (min-width: 75em) {
-      .list-horizontal--events > li figure {
-        display: inline;
-        float: right;
-        display: block;
-        margin-left: 2.04556%;
-        width: 29.84368%; }
-        .list-horizontal--events > li figure:last-child {
-          margin-left: 0; } }
-    .list-horizontal--events > li figure img {
-      width: 100%;
-      height: auto; }
   .list-horizontal--events > li article {
     width: 100%;
     padding-left: 5em !important; }
