@@ -255,7 +255,7 @@ function healthgovau_preprocess_entity(&$variables) {
       $facebook = !isset($bean->field_facebook_id[LANGUAGE_NONE]) ? '#' : $bean->field_facebook_id[LANGUAGE_NONE][0]['value'];
       $youtube = !isset($bean->field_youtube_channel_id[LANGUAGE_NONE]) ? '#' : $bean->field_youtube_channel_id[LANGUAGE_NONE][0]['value'];
       $twitter = !isset($bean->field_twitter_id[LANGUAGE_NONE]) ? '#' : $bean->field_twitter_id[LANGUAGE_NONE][0]['value'];
-      $sm_page = !isset($bean->field_social_meida_page_link[LANGUAGE_NONE]) ? '#' : $bean->field_social_media_page_link[LANGUAGE_NONE][0]['value'];
+      $sm_page = !isset($bean->field_social_media_page_link[LANGUAGE_NONE]) ? '#' : $bean->field_social_media_page_link[LANGUAGE_NONE][0]['value'];
       $variables['sm_id'] = $sm_id;
       $variables['sm_col'] = $sm_col;
       $variables['facebook_link'] = $facebook;
