@@ -22,7 +22,7 @@
 }
 
 .girlsmove {
-  #block-bean-gmym-involved {
+  #block-bean-gmym-partner {
     @extend .gmym-band--primary;
   }
   .region-content {
@@ -36,6 +36,7 @@
   }
 
   #block-views-campaign-videos-block {
+    @extend .band--gradient;
     padding-bottom: $large-spacing;
   }
 
@@ -68,6 +69,56 @@
     padding-left: 0;
     li {
       width: 20%;
+    }
+  }
+}
+
+// Activities band
+#block-views-activities-block {
+  padding-bottom: $large-spacing;
+  @include direction-context(right-to-left) {
+    .activity__selector {
+      background-color: $cyan;
+      color: #FFF;
+      padding: $large-spacing;
+      @include fill-parent();
+      @include media($tablet) {
+        @include span-columns(4 of 12);
+      }
+      @include media($desktop) {
+        @include span-columns(6 of 16);
+      }
+      h3 {
+        margin-top: 0;
+      }
+    }
+
+    .view-activities {
+      @include fill-parent();
+      @include media($tablet) {
+        @include span-columns(8 of 12);
+      }
+      @include media($desktop) {
+        @include span-columns(10 of 16);
+      }
+    }
+  }
+
+  .list-horizontal {
+    margin-top: 0;
+    > li {
+      max-width: 100%;
+    }
+  }
+
+
+  .tags a {
+    border-color: #FFF;
+    color: #FFF;
+    &:hover,
+    &:focus {
+      background-color: #FFF;
+      color: #000;
     }
   }
 }
