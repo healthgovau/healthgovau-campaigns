@@ -75,8 +75,8 @@ options = {
   sass: {
     importer: importOnce,
     errLogToConsole: true,
-    sourcemap: true,
-    outputStyle: 'compressed'
+    sourcemap: true
+    //outputStyle: 'compressed'
 
   },
   webpack: {
@@ -156,9 +156,9 @@ gulp.task('styles:fontawesome', function() {
         .pipe(sassGlob())
         .pipe(sass(options.sass).on('error', sass.logError))
         .pipe($.autoprefixer(options.autoprefixer))
-        .pipe(rename({
-            suffix: '.min'
-        }))
+        //.pipe(rename({
+        //    suffix: '.min'
+        //}))
         .pipe(gulp.dest(paths.theme.css));
 });
 
