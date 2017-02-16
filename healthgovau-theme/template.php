@@ -145,7 +145,11 @@ function healthgovau_preprocess_node(&$variables) {
   }
   else {
     if (isset($variables['field_campaign'][LANGUAGE_NONE])) {
-       $campaign_nid = $variables['field_campaign'][LANGUAGE_NONE][0]['target_id'];
+      $campaign_nid = $variables['field_campaign'][LANGUAGE_NONE][0]['target_id'];
+      _healthgovau_set_hero_bg($campaign_nid, TRUE);
+    } 
+    if (isset($variables['field_campaign'][0])) {
+      $campaign_nid = $variables['field_campaign'][0]['target_id'];
       _healthgovau_set_hero_bg($campaign_nid, TRUE);
     }
   }
@@ -169,8 +173,8 @@ function healthgovau_preprocess_node(&$variables) {
 
   // Create variable for location map preprocess field.
   $google_api = theme_get_setting('ga_api');
-  $lat = $node->field_location_lat[LANGUAGE_NONE][0]['value'];
-  $long = $node->field_location_long[LANGUAGE_NONE][0]['value'];
+  $lat = isset($node->field_location_lat[LANGUAGE_NONE]) ? $node->field_location_lat[LANGUAGE_NONE][0]['value'] : '0';
+  $long = isset($node->field_location_long[LANGUAGE_NONE]) ? $node->field_location_long[LANGUAGE_NONE][0]['value'] : 0;
   $src = 'https://maps.googleapis.com/maps/api/staticmap?center=' . $lat . ',' . $long . '&zoom=13&size=300x300&maptype=roadmap&key=' . $google_api;
   $src .= '&markers=color:blue%7Clabel:S%7C' . $lat . ',' . $long;
   $variables['location_map'] ='<img src="' . $src . '" alt="">';
@@ -251,7 +255,7 @@ function healthgovau_preprocess_entity(&$variables) {
       $facebook = !isset($bean->field_facebook_id[LANGUAGE_NONE]) ? '#' : $bean->field_facebook_id[LANGUAGE_NONE][0]['value'];
       $youtube = !isset($bean->field_youtube_channel_id[LANGUAGE_NONE]) ? '#' : $bean->field_youtube_channel_id[LANGUAGE_NONE][0]['value'];
       $twitter = !isset($bean->field_twitter_id[LANGUAGE_NONE]) ? '#' : $bean->field_twitter_id[LANGUAGE_NONE][0]['value'];
-      $sm_page = !isset($bean->field_social_meida_page_link[LANGUAGE_NONE]) ? '#' : $bean->field_social_media_page_link[LANGUAGE_NONE][0]['value'];
+      $sm_page = !isset($bean->field_social_media_page_link[LANGUAGE_NONE]) ? '#' : $bean->field_social_media_page_link[LANGUAGE_NONE][0]['value'];
       $variables['sm_id'] = $sm_id;
       $variables['sm_col'] = $sm_col;
       $variables['facebook_link'] = $facebook;
@@ -339,6 +343,10 @@ function healthgovau_breadcrumb($variables) {
       case 'campaign_standard_page':
         return _healthgovau_campaign_breadcrumb($node);
       case 'social_media':
+        return _healthgovau_campaign_breadcrumb($node);
+      case 'activity':
+        return _healthgovau_campaign_breadcrumb($node);
+      case 'event':
         return _healthgovau_campaign_breadcrumb($node);
     }
   }
@@ -458,7 +466,8 @@ function _healthgovau_set_hero_bg($campaign_nid, $random) {
  */
 function _healthgovau_campaign_breadcrumb($node) {
   // Compose breadcrumb.
-  $campaign = $node->field_campaign[LANGUAGE_NONE][0]['entity'];
+  $campaign_nid = $node->field_campaign[LANGUAGE_NONE][0]['target_id'];
+  $campaign = node_load($campaign_nid);
   $campaign_url = $campaign->path['alias'];
   $breadcrumb = array(
     '<a href="/' . $campaign_url . '">' . $campaign->title . '</a>',
