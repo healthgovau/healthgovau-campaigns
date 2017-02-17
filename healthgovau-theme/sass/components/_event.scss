@@ -127,3 +127,19 @@
     }
   }
 }
+
+
+// Event filter
+aside {
+  .block-views-exp-event-page {
+    background: #f0f3f5;
+    padding: $medium-spacing;
+    .form-item, .container-inline-date {
+      margin-bottom: 0;
+    }
+  }
+  // Force h2 to look like h3
+  h2 {
+    @include h3();
+  }
+}

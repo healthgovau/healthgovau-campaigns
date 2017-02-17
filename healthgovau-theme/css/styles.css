@@ -5037,14 +5037,6 @@ body main {
 .nav-toggle {
   margin-top: 0; }
 
-aside h2, aside .display {
-  font-size: 1.5rem;
-  margin-top: 1.46667em;
-  margin-bottom: 0.8em; }
-  @media screen and (min-width: 768px) {
-    aside h2, aside .display {
-      font-size: 1.625rem; } }
-
 .node-type-campaign nav.breadcrumbs {
   display: none; }
 
@@ -5159,6 +5151,20 @@ aside h2, aside .display {
     .list-horizontal--events > li article:before {
       content: "\f133";
       font-size: 3.5em !important; }
+
+aside .block-views-exp-event-page {
+  background: #f0f3f5;
+  padding: 1.2em; }
+  aside .block-views-exp-event-page .form-item, aside .block-views-exp-event-page .container-inline-date {
+    margin-bottom: 0; }
+
+aside h2, aside .display {
+  font-size: 1.5rem;
+  margin-top: 1.46667em;
+  margin-bottom: 0.8em; }
+  @media screen and (min-width: 768px) {
+    aside h2, aside .display {
+      font-size: 1.625rem; } }
 
 .page-feedback {
   padding-top: 0.8em !important;
