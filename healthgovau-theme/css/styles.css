@@ -5037,12 +5037,12 @@ body main {
 .nav-toggle {
   margin-top: 0; }
 
-.page--sidebar-right .sidebar__right h2, .page--sidebar-right .sidebar__right .display {
+aside h2, aside .display {
   font-size: 1.5rem;
   margin-top: 1.46667em;
   margin-bottom: 0.8em; }
   @media screen and (min-width: 768px) {
-    .page--sidebar-right .sidebar__right h2, .page--sidebar-right .sidebar__right .display {
+    aside h2, aside .display {
       font-size: 1.625rem; } }
 
 .node-type-campaign nav.breadcrumbs {
