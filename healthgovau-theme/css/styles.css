@@ -6369,7 +6369,13 @@ body.breastscreen > main .see-more {
   #block-views-activities-block .list-horizontal, #block-views-activities-block .list-horizontal--events, #block-views-activities-block .list-horizontal--narrow, #block-views-activities-block .list-horizontal--benefits {
     margin-top: 0; }
     #block-views-activities-block .list-horizontal > li, #block-views-activities-block .list-horizontal--events > li, #block-views-activities-block .list-horizontal--narrow > li, #block-views-activities-block .list-horizontal--benefits > li {
+      margin-top: 0;
       max-width: 100%; }
+      #block-views-activities-block .list-horizontal > li figure, #block-views-activities-block .list-horizontal--events > li figure, #block-views-activities-block .list-horizontal--narrow > li figure, #block-views-activities-block .list-horizontal--benefits > li figure {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 50%;
+            -ms-flex: 0 0 50%;
+                flex: 0 0 50%; }
 
 .list-horizontal--narrow > li figure {
   width: 100%;
