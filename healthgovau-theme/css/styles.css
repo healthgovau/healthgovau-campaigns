@@ -5152,16 +5152,17 @@ body main {
       content: "\f133";
       font-size: 3.5em !important; }
 
-aside .block-views-exp-event-page {
+aside #block-views-exp-event-page {
   background: #f0f3f5;
   padding: 1.2em; }
-  aside .block-views-exp-event-page .form-item, aside .block-views-exp-event-page .container-inline-date {
+  aside #block-views-exp-event-page .form-item, aside #block-views-exp-event-page .container-inline-date {
     margin-bottom: 0; }
 
 aside h2, aside .display {
   font-size: 1.5rem;
   margin-top: 1.46667em;
-  margin-bottom: 0.8em; }
+  margin-bottom: 0.8em;
+  margin-top: 0; }
   @media screen and (min-width: 768px) {
     aside h2, aside .display {
       font-size: 1.625rem; } }
