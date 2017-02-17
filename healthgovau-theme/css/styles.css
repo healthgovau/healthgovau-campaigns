@@ -5156,9 +5156,22 @@ body main {
   content: "\f041"; }
 
 .list-horizontal--events > li {
-  display: block; }
+  display: block;
+  max-width: 100%; }
   .list-horizontal--events > li figure {
-    display: none; }
+    width: 100%; }
+    @media screen and (min-width: 75em) {
+      .list-horizontal--events > li figure {
+        display: inline;
+        float: right;
+        display: block;
+        margin-left: 2.04556%;
+        width: 29.84368%; }
+        .list-horizontal--events > li figure:last-child {
+          margin-left: 0; } }
+    .list-horizontal--events > li figure img {
+      width: 100%;
+      height: auto; }
   .list-horizontal--events > li article {
     width: 100%;
     padding-left: 5em !important; }
@@ -5699,10 +5712,10 @@ header .page-header__logo img {
       .node-type-video .region-content .wrapper .video__list--related div.group-right, .video__list--related .node-type-video .region-content .ds-wrapper div.group-right, .node-type-video .region-content .ds-wrapper .video__list--related div.group-right, .video__list--related .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact .video__list--related div.group-right {
         width: 100%; } }
 
-.band, #block-bean-share-this, .band--img-text, .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat, .breastscreen-band--partners, .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block, .gmym-band--primary, .girlsmove #block-bean-gmym-involved, .band--small, .page-feedback, .smokes-band--partners, #block-bean-quitenow-partner, .band--pad, .band--secondary, .band--gradient, .node-type-social-media .main, .gmym-band--secondary {
+.band, #block-bean-share-this, .band--img-text, .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat, .breastscreen-band--partners, .gmym-band--primary, .girlsmove #block-bean-gmym-partner, .girlsmove #block-bean-gmym-cards-0, .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block, .band--small, .page-feedback, .smokes-band--partners, #block-bean-quitenow-partner, .band--pad, .band--secondary, .band--gradient, .node-type-social-media .main, .girlsmove #block-views-campaign-videos-block, .gmym-band--secondary {
   padding: 0.8em 0 3.2em;
   width: 100%; }
-  .band::after, #block-bean-share-this::after, .band--img-text::after, .band--img-text-halves::after, .band--img-text-halves--invert::after, .breastscreen #block-bean-breast-cancer-in-australia::after, .breastscreen #block-bean-breastscreen-mammogram::after, .breastscreen #block-bean-breastscreen-why::after, .breastscreen #block-bean-breastscreen-early-detection::after, .breastscreen #block-bean-breastscreen-stats::after, .breastscreen #block-bean-breastscreen-expanding::after, .breastscreen #block-bean-breastscreen-74::after, .breastscreen #block-bean-breastscreen-detection::after, .breastscreen #block-bean-breastscreen-chat::after, .breastscreen-band--partners::after, .smokes-band--primary::after, .smokes.node-type-campaign #block-views-campaign-videos-block::after, .gmym-band--primary::after, .girlsmove #block-bean-gmym-involved::after, .band--small::after, .page-feedback::after, .smokes-band--partners::after, #block-bean-quitenow-partner::after, .band--pad::after, .band--secondary::after, .band--gradient::after, .node-type-social-media .main::after, .gmym-band--secondary::after {
+  .band::after, #block-bean-share-this::after, .band--img-text::after, .band--img-text-halves::after, .band--img-text-halves--invert::after, .breastscreen #block-bean-breast-cancer-in-australia::after, .breastscreen #block-bean-breastscreen-mammogram::after, .breastscreen #block-bean-breastscreen-why::after, .breastscreen #block-bean-breastscreen-early-detection::after, .breastscreen #block-bean-breastscreen-stats::after, .breastscreen #block-bean-breastscreen-expanding::after, .breastscreen #block-bean-breastscreen-74::after, .breastscreen #block-bean-breastscreen-detection::after, .breastscreen #block-bean-breastscreen-chat::after, .breastscreen-band--partners::after, .gmym-band--primary::after, .girlsmove #block-bean-gmym-partner::after, .girlsmove #block-bean-gmym-cards-0::after, .smokes-band--primary::after, .smokes.node-type-campaign #block-views-campaign-videos-block::after, .band--small::after, .page-feedback::after, .smokes-band--partners::after, #block-bean-quitenow-partner::after, .band--pad::after, .band--secondary::after, .band--gradient::after, .node-type-social-media .main::after, .girlsmove #block-views-campaign-videos-block::after, .gmym-band--secondary::after {
     clear: both;
     content: "";
     display: table; }
@@ -5723,7 +5736,7 @@ header .page-header__logo img {
   background-repeat: no-repeat;
   padding: 0.8em 0 3.2em; }
 
-.band--gradient, .node-type-social-media .main {
+.band--gradient, .node-type-social-media .main, .girlsmove #block-views-campaign-videos-block {
   background-color: #EEEEEE;
   background-image: -webkit-linear-gradient(-360deg, #DDDDDD, #FFFFFF);
   background-image: -webkit-gradient(linear,left top, right top,from(#DDDDDD), to(#FFFFFF));
@@ -6239,10 +6252,10 @@ body.breastscreen > main .see-more {
       max-height: 215px;
       margin-top: -25px; } }
 
-.band, #block-bean-share-this, .band--img-text, .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat, .breastscreen-band--partners, .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block, .gmym-band--primary, .girlsmove #block-bean-gmym-involved, .band--small, .page-feedback, .smokes-band--partners, #block-bean-quitenow-partner, .band--pad, .band--secondary, .band--gradient, .node-type-social-media .main, .gmym-band--secondary {
+.band, #block-bean-share-this, .band--img-text, .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat, .breastscreen-band--partners, .gmym-band--primary, .girlsmove #block-bean-gmym-partner, .girlsmove #block-bean-gmym-cards-0, .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block, .band--small, .page-feedback, .smokes-band--partners, #block-bean-quitenow-partner, .band--pad, .band--secondary, .band--gradient, .node-type-social-media .main, .girlsmove #block-views-campaign-videos-block, .gmym-band--secondary {
   padding: 0.8em 0 3.2em;
   width: 100%; }
-  .band::after, #block-bean-share-this::after, .band--img-text::after, .band--img-text-halves::after, .band--img-text-halves--invert::after, .breastscreen #block-bean-breast-cancer-in-australia::after, .breastscreen #block-bean-breastscreen-mammogram::after, .breastscreen #block-bean-breastscreen-why::after, .breastscreen #block-bean-breastscreen-early-detection::after, .breastscreen #block-bean-breastscreen-stats::after, .breastscreen #block-bean-breastscreen-expanding::after, .breastscreen #block-bean-breastscreen-74::after, .breastscreen #block-bean-breastscreen-detection::after, .breastscreen #block-bean-breastscreen-chat::after, .breastscreen-band--partners::after, .smokes-band--primary::after, .smokes.node-type-campaign #block-views-campaign-videos-block::after, .gmym-band--primary::after, .girlsmove #block-bean-gmym-involved::after, .band--small::after, .page-feedback::after, .smokes-band--partners::after, #block-bean-quitenow-partner::after, .band--pad::after, .band--secondary::after, .band--gradient::after, .node-type-social-media .main::after, .gmym-band--secondary::after {
+  .band::after, #block-bean-share-this::after, .band--img-text::after, .band--img-text-halves::after, .band--img-text-halves--invert::after, .breastscreen #block-bean-breast-cancer-in-australia::after, .breastscreen #block-bean-breastscreen-mammogram::after, .breastscreen #block-bean-breastscreen-why::after, .breastscreen #block-bean-breastscreen-early-detection::after, .breastscreen #block-bean-breastscreen-stats::after, .breastscreen #block-bean-breastscreen-expanding::after, .breastscreen #block-bean-breastscreen-74::after, .breastscreen #block-bean-breastscreen-detection::after, .breastscreen #block-bean-breastscreen-chat::after, .breastscreen-band--partners::after, .gmym-band--primary::after, .girlsmove #block-bean-gmym-partner::after, .girlsmove #block-bean-gmym-cards-0::after, .smokes-band--primary::after, .smokes.node-type-campaign #block-views-campaign-videos-block::after, .band--small::after, .page-feedback::after, .smokes-band--partners::after, #block-bean-quitenow-partner::after, .band--pad::after, .band--secondary::after, .band--gradient::after, .node-type-social-media .main::after, .girlsmove #block-views-campaign-videos-block::after, .gmym-band--secondary::after {
     clear: both;
     content: "";
     display: table; }
@@ -6253,53 +6266,17 @@ body.breastscreen > main .see-more {
 .band--pad {
   padding: 3.2em 0; }
 
-.smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block {
-  background-color: #d51364; }
-
 .band--secondary {
   background-color: #fce5ef; }
 
-.band--texture {
-  background-color: #eee;
-  background-image: url(../images/bg-textures/bg-header-test.svg);
-  background-position: 100% 0;
-  background-repeat: no-repeat;
-  padding: 0.8em 0 3.2em; }
-
-.band--gradient, .node-type-social-media .main {
+.band--gradient, .node-type-social-media .main, .girlsmove #block-views-campaign-videos-block {
   background-color: #EEEEEE;
   background-image: -webkit-linear-gradient(-360deg, #DDDDDD, #FFFFFF);
   background-image: -webkit-gradient(linear,left top, right top,from(#DDDDDD), to(#FFFFFF));
   background-image: -webkit-linear-gradient(left,#DDDDDD, #FFFFFF);
   background-image: linear-gradient(90deg,#DDDDDD, #FFFFFF); }
 
-.band--quitline, #block-bean-quitnow-hotline section.pre-nav {
-  padding: 0.8em 0 0.4em;
-  background: #000000;
-  color: #FFFFFF;
-  text-align: center; }
-
-.band--quitline__image {
-  max-width: 50%; }
-  @media screen and (min-width: 768px) {
-    .band--quitline__image {
-      max-width: 100%; } }
-
-.smokes-band--partners, #block-bean-quitenow-partner {
-  padding-top: 0.8em;
-  background: #000000; }
-  .smokes-band--partners img, #block-bean-quitenow-partner img {
-    width: auto;
-    margin: 0 auto; }
-
-.band--sensitivity, #block-bean-quitnow-sensitivities {
-  padding: 0.8em 0;
-  background: #000000;
-  color: #FFFFFF; }
-  .band--sensitivity p, #block-bean-quitnow-sensitivities p {
-    margin: 0.8em 0; }
-
-.gmym-band--primary, .girlsmove #block-bean-gmym-involved {
+.gmym-band--primary, .girlsmove #block-bean-gmym-partner, .girlsmove #block-bean-gmym-cards-0 {
   background-color: #EEE; }
 
 .gmym-band--secondary {
@@ -6330,9 +6307,78 @@ body.breastscreen > main .see-more {
     height: auto;
     width: auto; }
 
+.girlsmove #block-views-campaign-videos-block {
+  padding-bottom: 3.2em; }
+
+.girlsmove #block-bean-gmym-cards-0 {
+  padding-top: 1.2em;
+  padding-bottom: 0; }
+
 .page-campaign-activities main .content-main,
 .girlsmove main .content-main {
   width: 100%; }
+
+.bean-social-media .juicer-feed ul.j-filters, .bean-social-media .juicer-feed .j-paginate {
+  display: none; }
+
+.node-social-media .juicer-feed ul.j-filters {
+  padding-left: 0; }
+  .node-social-media .juicer-feed ul.j-filters li {
+    width: 20%; }
+
+#block-views-activities-block {
+  padding-bottom: 3.2em; }
+  #block-views-activities-block .activity__selector {
+    background-color: #278288;
+    color: #FFF;
+    padding: 3.2em;
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      #block-views-activities-block .activity__selector {
+        float: right;
+        display: block;
+        margin-left: 2.74614%;
+        width: 31.50258%; }
+        #block-views-activities-block .activity__selector:last-child {
+          margin-left: 0; } }
+    @media screen and (min-width: 75em) {
+      #block-views-activities-block .activity__selector {
+        float: right;
+        display: block;
+        margin-left: 2.04556%;
+        width: 36.22153%; }
+        #block-views-activities-block .activity__selector:last-child {
+          margin-left: 0; } }
+    #block-views-activities-block .activity__selector h3, #block-views-activities-block .activity__selector footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top #block-views-activities-block .activity__selector h2, #block-views-activities-block .activity__selector footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top #block-views-activities-block .activity__selector .display {
+      margin-top: 0; }
+  #block-views-activities-block .view-activities {
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      #block-views-activities-block .view-activities {
+        float: right;
+        display: block;
+        margin-left: 2.74614%;
+        width: 65.75129%; }
+        #block-views-activities-block .view-activities:last-child {
+          margin-left: 0; } }
+    @media screen and (min-width: 75em) {
+      #block-views-activities-block .view-activities {
+        float: right;
+        display: block;
+        margin-left: 2.04556%;
+        width: 61.73292%; }
+        #block-views-activities-block .view-activities:last-child {
+          margin-left: 0; } }
+  #block-views-activities-block .list-horizontal, #block-views-activities-block .list-horizontal--events, #block-views-activities-block .list-horizontal--benefits {
+    margin-top: 0; }
+    #block-views-activities-block .list-horizontal > li, #block-views-activities-block .list-horizontal--events > li, #block-views-activities-block .list-horizontal--benefits > li {
+      max-width: 100%; }
+  #block-views-activities-block .tags a {
+    border-color: #FFF;
+    color: #FFF; }
+    #block-views-activities-block .tags a:hover, #block-views-activities-block .tags a:focus {
+      background-color: #FFF;
+      color: #000; }
 
 .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block {
   background-color: #EEE; }

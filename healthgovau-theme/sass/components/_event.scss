@@ -106,20 +106,21 @@
 
   > li {
     display: block; // override flex
-    //max-width: 100%;
+    max-width: 100%;
 
     // Image
     @include direction-context(right-to-left) {
       figure {
-        display: none;
-        //@include media($desktop) {
-        //  display: inline;
-        //  @include span-columns(5 of 16);
-        //}
-        //img {
-        //  width: 100%;
-        //  height: auto;
-        //}
+        //display: none;
+        @include fill-parent;
+        @include media($desktop) {
+          display: inline;
+          @include span-columns(5 of 16);
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
       }
     }
 

@@ -40,7 +40,7 @@
       </div>
       <div class="social__feature">
         <h3 class="light">Follow us</h3>
-        <ul>
+        <ul class="social__links--stacked">
           <!--<li class="social__links-item"><a href="#">Instagram</a></li>-->
           <? if ($facebook_link != ''): ?>
             <?php print $facebook_link; ?>

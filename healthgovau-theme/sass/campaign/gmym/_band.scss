@@ -4,7 +4,6 @@
 %band {
   @include clearfix;
   padding: $small-spacing 0 $large-spacing;
-
   @include fill-parent;
 }
 
@@ -21,60 +20,13 @@
   @extend %band;
   padding: $large-spacing 0;
 }
-.smokes-band--primary {
-  @extend .band;
-  background-color: $background-colour-primary;
-}
 
 .band--secondary {
   @extend %band;
   background-color: $background-colour-secondary;
 }
 
-.band--texture {
-  background-color: #eee;
-  background-image: url(../images/bg-textures/bg-header-test.svg);
-  background-position: 100% 0;
-  background-repeat: no-repeat;
-  padding: 0.8em 0 3.2em;
-}
-
 .band--gradient {
   @extend %band;
   @include linear-gradient(90deg, #DDDDDD, #FFFFFF, $fallback: #EEEEEE);
-}
-
-.band--quitline {
-  @include pad($small-spacing 0 $tiny-spacing);
-  background: $black;
-  color: $white;
-  text-align: center;
-}
-
-.band--quitline__image {
-  max-width: 50%;
-  @include media($tablet) {
-    max-width: 100%;
-  }
-}
-
-.smokes-band--partners {
-  @extend .band--small;
-  padding-top: $small-spacing;
-  background: $black;
-  //color: #FFF;
-  img {
-    width: auto;
-    margin: 0 auto;
-  }
-}
-
-// Senstitivity band
-.band--sensitivity {
-  @include pad($small-spacing 0);
-  background: #000000;
-  color: $white;
-  p {
-    margin: $small-spacing 0;
-  }
 }
