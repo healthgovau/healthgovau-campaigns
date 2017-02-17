@@ -1720,60 +1720,60 @@ Markup: templates/lists-highlighted.html
 
 Style guide: List styles.4 Highlighted word style
 */
-.list-horizontal, .list-horizontal--events, .list-horizontal--benefits, .list-vertical, .list-vertical--thirds, .list-vertical--fourths, footer[role='contentinfo'] .footer-top nav, .list-vertical--halves, .list-small, .list-highlighted {
+.list-horizontal, .list-horizontal--events, .list-horizontal--narrow, .list-horizontal--benefits, .list-vertical, .list-vertical--thirds, .list-vertical--fourths, footer[role='contentinfo'] .footer-top nav, .list-vertical--halves, .list-small, .list-highlighted {
   margin-top: 2.24em;
   padding: 0;
   list-style: none; }
-  .list-horizontal::after, .list-horizontal--events::after, .list-horizontal--benefits::after, .list-vertical::after, .list-vertical--thirds::after, .list-vertical--fourths::after, footer[role='contentinfo'] .footer-top nav::after, .list-vertical--halves::after, .list-small::after, .list-highlighted::after {
+  .list-horizontal::after, .list-horizontal--events::after, .list-horizontal--narrow::after, .list-horizontal--benefits::after, .list-vertical::after, .list-vertical--thirds::after, .list-vertical--fourths::after, footer[role='contentinfo'] .footer-top nav::after, .list-vertical--halves::after, .list-small::after, .list-highlighted::after {
     clear: both;
     content: "";
     display: table; }
-  .list-horizontal .meta, .list-horizontal--events .meta, .list-horizontal--benefits .meta, .list-vertical .meta, .list-vertical--thirds .meta, .list-vertical--fourths .meta, footer[role='contentinfo'] .footer-top nav .meta, .list-vertical--halves .meta, .list-small .meta, .list-highlighted .meta {
+  .list-horizontal .meta, .list-horizontal--events .meta, .list-horizontal--narrow .meta, .list-horizontal--benefits .meta, .list-vertical .meta, .list-vertical--thirds .meta, .list-vertical--fourths .meta, footer[role='contentinfo'] .footer-top nav .meta, .list-vertical--halves .meta, .list-small .meta, .list-highlighted .meta {
     font-size: 87.5%;
     margin-bottom: 0.8em; }
-    .list-horizontal .meta time, .list-horizontal--events .meta time, .list-horizontal--benefits .meta time, .list-vertical .meta time, .list-vertical--thirds .meta time, .list-vertical--fourths .meta time, footer[role='contentinfo'] .footer-top nav .meta time, .list-vertical--halves .meta time, .list-small .meta time, .list-highlighted .meta time {
+    .list-horizontal .meta time, .list-horizontal--events .meta time, .list-horizontal--narrow .meta time, .list-horizontal--benefits .meta time, .list-vertical .meta time, .list-vertical--thirds .meta time, .list-vertical--fourths .meta time, footer[role='contentinfo'] .footer-top nav .meta time, .list-vertical--halves .meta time, .list-small .meta time, .list-highlighted .meta time {
       color: #6e6e6e; }
-  .list-horizontal > li, .list-horizontal--events > li, .list-horizontal--benefits > li, .list-vertical > li, .list-vertical--thirds > li, .list-vertical--fourths > li, footer[role='contentinfo'] .footer-top nav > li, .list-vertical--halves > li, .list-small > li, .list-highlighted > li {
+  .list-horizontal > li, .list-horizontal--events > li, .list-horizontal--narrow > li, .list-horizontal--benefits > li, .list-vertical > li, .list-vertical--thirds > li, .list-vertical--fourths > li, footer[role='contentinfo'] .footer-top nav > li, .list-vertical--halves > li, .list-small > li, .list-highlighted > li {
     padding: 2.74614% 0;
     border-bottom: solid 1px #bbbbbb;
     margin-bottom: 0; }
-  .list-horizontal h2, .list-horizontal--events h2, .list-horizontal--benefits h2, .list-vertical h2, .list-vertical--thirds h2, .list-vertical--fourths h2, footer[role='contentinfo'] .footer-top nav h2, .list-vertical--halves h2, .list-small h2, .list-highlighted h2, .list-horizontal .display, .list-horizontal--events .display, .list-horizontal--benefits .display, .list-vertical .display, .list-vertical--thirds .display, .list-vertical--fourths .display, footer[role='contentinfo'] .footer-top nav .display, .list-vertical--halves .display, .list-small .display, .list-highlighted .display, .list-horizontal h3, .list-horizontal--events h3, .list-horizontal--benefits h3, .list-vertical h3, .list-vertical--thirds h3, .list-vertical--fourths h3, footer[role='contentinfo'] .footer-top nav h3, .list-vertical--halves h3, .list-small h3, .list-highlighted h3, .list-horizontal footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-horizontal h2, .list-horizontal--events footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-horizontal--events h2, .list-horizontal--benefits footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-horizontal--benefits h2, .list-vertical footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical h2, .list-vertical--thirds footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--thirds h2, .list-vertical--fourths footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--fourths h2, footer[role='contentinfo'] .footer-top nav h2, .list-vertical--halves footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--halves h2, .list-small footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-small h2, .list-highlighted footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-highlighted h2, .list-horizontal footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-horizontal .display, .list-horizontal--events footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-horizontal--events .display, .list-horizontal--benefits footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-horizontal--benefits .display, .list-vertical footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical .display, .list-vertical--thirds footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--thirds .display, .list-vertical--fourths footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--fourths .display, footer[role='contentinfo'] .footer-top nav .display, .list-vertical--halves footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--halves .display, .list-small footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-small .display, .list-highlighted footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-highlighted .display, .list-horizontal h4, .list-horizontal--events h4, .list-horizontal--benefits h4, .list-vertical h4, .list-vertical--thirds h4, .list-vertical--fourths h4, footer[role='contentinfo'] .footer-top nav h4, .list-vertical--halves h4, .list-small h4, .list-highlighted h4, .list-horizontal h5, .list-horizontal--events h5, .list-horizontal--benefits h5, .list-vertical h5, .list-vertical--thirds h5, .list-vertical--fourths h5, footer[role='contentinfo'] .footer-top nav h5, .list-vertical--halves h5, .list-small h5, .list-highlighted h5, .list-horizontal h6, .list-horizontal--events h6, .list-horizontal--benefits h6, .list-vertical h6, .list-vertical--thirds h6, .list-vertical--fourths h6, footer[role='contentinfo'] .footer-top nav h6, .list-vertical--halves h6, .list-small h6, .list-highlighted h6 {
+  .list-horizontal h2, .list-horizontal--events h2, .list-horizontal--narrow h2, .list-horizontal--benefits h2, .list-vertical h2, .list-vertical--thirds h2, .list-vertical--fourths h2, footer[role='contentinfo'] .footer-top nav h2, .list-vertical--halves h2, .list-small h2, .list-highlighted h2, .list-horizontal .display, .list-horizontal--events .display, .list-horizontal--narrow .display, .list-horizontal--benefits .display, .list-vertical .display, .list-vertical--thirds .display, .list-vertical--fourths .display, footer[role='contentinfo'] .footer-top nav .display, .list-vertical--halves .display, .list-small .display, .list-highlighted .display, .list-horizontal h3, .list-horizontal--events h3, .list-horizontal--narrow h3, .list-horizontal--benefits h3, .list-vertical h3, .list-vertical--thirds h3, .list-vertical--fourths h3, footer[role='contentinfo'] .footer-top nav h3, .list-vertical--halves h3, .list-small h3, .list-highlighted h3, .list-horizontal footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-horizontal h2, .list-horizontal--events footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-horizontal--events h2, .list-horizontal--narrow footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-horizontal--narrow h2, .list-horizontal--benefits footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-horizontal--benefits h2, .list-vertical footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical h2, .list-vertical--thirds footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--thirds h2, .list-vertical--fourths footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--fourths h2, footer[role='contentinfo'] .footer-top nav h2, .list-vertical--halves footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--halves h2, .list-small footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-small h2, .list-highlighted footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-highlighted h2, .list-horizontal footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-horizontal .display, .list-horizontal--events footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-horizontal--events .display, .list-horizontal--narrow footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-horizontal--narrow .display, .list-horizontal--benefits footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-horizontal--benefits .display, .list-vertical footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical .display, .list-vertical--thirds footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--thirds .display, .list-vertical--fourths footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--fourths .display, footer[role='contentinfo'] .footer-top nav .display, .list-vertical--halves footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--halves .display, .list-small footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-small .display, .list-highlighted footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-highlighted .display, .list-horizontal h4, .list-horizontal--events h4, .list-horizontal--narrow h4, .list-horizontal--benefits h4, .list-vertical h4, .list-vertical--thirds h4, .list-vertical--fourths h4, footer[role='contentinfo'] .footer-top nav h4, .list-vertical--halves h4, .list-small h4, .list-highlighted h4, .list-horizontal h5, .list-horizontal--events h5, .list-horizontal--narrow h5, .list-horizontal--benefits h5, .list-vertical h5, .list-vertical--thirds h5, .list-vertical--fourths h5, footer[role='contentinfo'] .footer-top nav h5, .list-vertical--halves h5, .list-small h5, .list-highlighted h5, .list-horizontal h6, .list-horizontal--events h6, .list-horizontal--narrow h6, .list-horizontal--benefits h6, .list-vertical h6, .list-vertical--thirds h6, .list-vertical--fourths h6, footer[role='contentinfo'] .footer-top nav h6, .list-vertical--halves h6, .list-small h6, .list-highlighted h6 {
     margin-top: 0;
     margin-bottom: 0.4em;
     font-size: 1.125rem;
     font-weight: 700;
     line-height: 1.4; }
-  .list-horizontal img, .list-horizontal--events img, .list-horizontal--benefits img, .list-vertical img, .list-vertical--thirds img, .list-vertical--fourths img, footer[role='contentinfo'] .footer-top nav img, .list-vertical--halves img, .list-small img, .list-highlighted img {
+  .list-horizontal img, .list-horizontal--events img, .list-horizontal--narrow img, .list-horizontal--benefits img, .list-vertical img, .list-vertical--thirds img, .list-vertical--fourths img, footer[role='contentinfo'] .footer-top nav img, .list-vertical--halves img, .list-small img, .list-highlighted img {
     display: block; }
 
-.list-horizontal > li, .list-horizontal--events > li, .list-horizontal--benefits > li {
+.list-horizontal > li, .list-horizontal--events > li, .list-horizontal--narrow > li, .list-horizontal--benefits > li {
   width: 100%;
   max-width: none; }
   @media screen and (min-width: 768px) {
-    .list-horizontal > li, .list-horizontal--events > li, .list-horizontal--benefits > li {
+    .list-horizontal > li, .list-horizontal--events > li, .list-horizontal--narrow > li, .list-horizontal--benefits > li {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex; } }
   @media screen and (max-width: 420px) {
-    .list-horizontal > li figure, .list-horizontal--events > li figure, .list-horizontal--benefits > li figure {
+    .list-horizontal > li figure, .list-horizontal--events > li figure, .list-horizontal--narrow > li figure, .list-horizontal--benefits > li figure {
       margin-bottom: 1.2em; } }
   @media screen and (min-width: 768px) {
-    .list-horizontal > li figure, .list-horizontal--events > li figure, .list-horizontal--benefits > li figure {
+    .list-horizontal > li figure, .list-horizontal--events > li figure, .list-horizontal--narrow > li figure, .list-horizontal--benefits > li figure {
       -webkit-box-flex: 0;
       -webkit-flex: 0 0 35%;
           -ms-flex: 0 0 35%;
               flex: 0 0 35%;
       margin-right: 1.6em; } }
-  .list-horizontal > li .meta time, .list-horizontal--events > li .meta time, .list-horizontal--benefits > li .meta time {
+  .list-horizontal > li .meta time, .list-horizontal--events > li .meta time, .list-horizontal--narrow > li .meta time, .list-horizontal--benefits > li .meta time {
     display: inline-block;
     margin-right: 0.8em; }
-  .list-horizontal > li:last-child, .list-horizontal--events > li:last-child, .list-horizontal--benefits > li:last-child {
+  .list-horizontal > li:last-child, .list-horizontal--events > li:last-child, .list-horizontal--narrow > li:last-child, .list-horizontal--benefits > li:last-child {
     border-bottom: none; }
-  .list-horizontal > li.hero-item, .list-horizontal--events > li.hero-item, .list-horizontal--benefits > li.hero-item {
+  .list-horizontal > li.hero-item, .list-horizontal--events > li.hero-item, .list-horizontal--narrow > li.hero-item, .list-horizontal--benefits > li.hero-item {
     border-top: solid 1px #bbbbbb; }
     @media screen and (min-width: 768px) {
-      .list-horizontal > li.hero-item figure, .list-horizontal--events > li.hero-item figure, .list-horizontal--benefits > li.hero-item figure {
+      .list-horizontal > li.hero-item figure, .list-horizontal--events > li.hero-item figure, .list-horizontal--narrow > li.hero-item figure, .list-horizontal--benefits > li.hero-item figure {
         -webkit-flex-basis: 65%;
             -ms-flex-preferred-size: 65%;
                 flex-basis: 65%; } }
@@ -6301,6 +6301,9 @@ body.breastscreen > main .see-more {
       .social__feature:last-child {
         margin-right: 0; } }
 
+.girlsmove #block-views-event-block-1 {
+  padding-bottom: 3.2em; }
+
 .girlsmove .region-content .field-name-field-image {
   margin-bottom: 3.2em; }
   .girlsmove .region-content .field-name-field-image img {
@@ -6313,6 +6316,12 @@ body.breastscreen > main .see-more {
 .girlsmove #block-bean-gmym-cards-0 {
   padding-top: 1.2em;
   padding-bottom: 0; }
+
+.girlsmove .view-event .list--cards > li article {
+  padding: 1.2em; }
+  @media screen and (min-width: 75em) {
+    .girlsmove .view-event .list--cards > li article {
+      min-height: 440px; } }
 
 .page-campaign-activities main .content-main,
 .girlsmove main .content-main {
@@ -6351,6 +6360,12 @@ body.breastscreen > main .see-more {
           margin-left: 0; } }
     #block-views-activities-block .activity__selector h3, #block-views-activities-block .activity__selector footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top #block-views-activities-block .activity__selector h2, #block-views-activities-block .activity__selector footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top #block-views-activities-block .activity__selector .display {
       margin-top: 0; }
+    #block-views-activities-block .activity__selector .tags a {
+      border-color: #FFF;
+      color: #FFF; }
+      #block-views-activities-block .activity__selector .tags a:hover, #block-views-activities-block .activity__selector .tags a:focus {
+        background-color: #FFF;
+        color: #000; }
   #block-views-activities-block .view-activities {
     width: 100%; }
     @media screen and (min-width: 768px) {
@@ -6369,16 +6384,20 @@ body.breastscreen > main .see-more {
         width: 61.73292%; }
         #block-views-activities-block .view-activities:last-child {
           margin-left: 0; } }
-  #block-views-activities-block .list-horizontal, #block-views-activities-block .list-horizontal--events, #block-views-activities-block .list-horizontal--benefits {
+  #block-views-activities-block .list-horizontal, #block-views-activities-block .list-horizontal--events, #block-views-activities-block .list-horizontal--narrow, #block-views-activities-block .list-horizontal--benefits {
     margin-top: 0; }
-    #block-views-activities-block .list-horizontal > li, #block-views-activities-block .list-horizontal--events > li, #block-views-activities-block .list-horizontal--benefits > li {
+    #block-views-activities-block .list-horizontal > li, #block-views-activities-block .list-horizontal--events > li, #block-views-activities-block .list-horizontal--narrow > li, #block-views-activities-block .list-horizontal--benefits > li {
       max-width: 100%; }
-  #block-views-activities-block .tags a {
-    border-color: #FFF;
-    color: #FFF; }
-    #block-views-activities-block .tags a:hover, #block-views-activities-block .tags a:focus {
-      background-color: #FFF;
-      color: #000; }
+
+.list-horizontal--narrow > li figure {
+  width: 100%;
+  margin-bottom: 0.8em; }
+  @media screen and (min-width: 75em) {
+    .list-horizontal--narrow > li figure {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 10%;
+          -ms-flex: 0 0 10%;
+              flex: 0 0 10%; } }
 
 .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block {
   background-color: #EEE; }

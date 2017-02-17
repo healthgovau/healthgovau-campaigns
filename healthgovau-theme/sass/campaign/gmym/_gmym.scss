@@ -105,6 +105,15 @@
       h3 {
         margin-top: 0;
       }
+      .tags a {
+        border-color: #FFF;
+        color: #FFF;
+        &:hover,
+        &:focus {
+          background-color: #FFF;
+          color: #000;
+        }
+      }
     }
 
     .view-activities {
@@ -115,6 +124,7 @@
       @include media($desktop) {
         @include span-columns(10 of 16);
       }
+
     }
   }
 
@@ -125,16 +135,6 @@
     }
   }
 
-
-  .tags a {
-    border-color: #FFF;
-    color: #FFF;
-    &:hover,
-    &:focus {
-      background-color: #FFF;
-      color: #000;
-    }
-  }
 }
 
 // Mobile apps layout
@@ -142,15 +142,13 @@
   @extend .list-horizontal;
 
   > li {
-
     // Image
-      figure {
-        //display: none;
-        @include fill-parent;
-        margin-bottom: $small-spacing;
-        @include media($desktop) {
-          flex: 0 0 10%;
-        }
+    figure {
+      //display: none;
+      @include fill-parent;
+      margin-bottom: $small-spacing;
+      @include media($desktop) {
+        flex: 0 0 10%;
       }
     }
   }
