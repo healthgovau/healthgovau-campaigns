@@ -41,7 +41,8 @@
   }
 
   #block-views-campaign-videos-block {
-    @extend .band--gradient;
+    @extend .band--primary;
+    background: #EEE;
     padding-bottom: $large-spacing;
   }
 
