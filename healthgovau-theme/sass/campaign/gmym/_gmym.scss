@@ -25,6 +25,11 @@
   #block-bean-gmym-partner {
     @extend .gmym-band--primary;
   }
+
+  #block-views-event-block-1 {
+    padding-bottom: $large-spacing;
+  }
+
   .region-content {
     .field-name-field-image {
       margin-bottom: $large-spacing;
@@ -44,6 +49,15 @@
     @extend .gmym-band--primary;
     padding-top: $medium-spacing;
     padding-bottom: 0;
+  }
+
+  .view-event {
+    .list--cards > li article {
+      padding: $medium-spacing;
+      @include media($desktop) {
+        min-height: 440px;
+      }
+    }
   }
 }
 
@@ -119,6 +133,25 @@
     &:focus {
       background-color: #FFF;
       color: #000;
+    }
+  }
+}
+
+// Mobile apps layout
+.list-horizontal--narrow {
+  @extend .list-horizontal;
+
+  > li {
+
+    // Image
+      figure {
+        //display: none;
+        @include fill-parent;
+        margin-bottom: $small-spacing;
+        @include media($desktop) {
+          flex: 0 0 10%;
+        }
+      }
     }
   }
 }
