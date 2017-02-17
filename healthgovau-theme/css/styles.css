@@ -5069,7 +5069,7 @@ body main {
       float: left;
       display: block;
       margin-right: 2.74614%;
-      width: 22.9404%; }
+      width: 48.62693%; }
       .event_details .event_primary:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 768px) {
@@ -5077,7 +5077,7 @@ body main {
       float: left;
       display: block;
       margin-right: 2.04556%;
-      width: 23.46583%; }
+      width: 48.97722%; }
       .event_details .event_primary:last-child {
         margin-right: 0; } }
 
@@ -5088,7 +5088,7 @@ body main {
       float: left;
       display: block;
       margin-right: 2.74614%;
-      width: 22.9404%; }
+      width: 48.62693%; }
       .event_details .event_secondary:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 768px) {
@@ -5096,27 +5096,8 @@ body main {
       float: left;
       display: block;
       margin-right: 2.04556%;
-      width: 36.22153%; }
+      width: 48.97722%; }
       .event_details .event_secondary:last-child {
-        margin-right: 0; } }
-
-.event_details .event_tertiary {
-  width: 100%; }
-  @media screen and (min-width: 768px) {
-    .event_details .event_tertiary {
-      float: left;
-      display: block;
-      margin-right: 2.74614%;
-      width: 48.62693%; }
-      .event_details .event_tertiary:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 768px) {
-    .event_details .event_tertiary {
-      float: left;
-      display: block;
-      margin-right: 2.04556%;
-      width: 36.22153%; }
-      .event_details .event_tertiary:last-child {
         margin-right: 0; } }
 
 .location-map {
