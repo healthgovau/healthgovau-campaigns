@@ -28,9 +28,13 @@
 
 .page-campaign-events,
 .girlsmove {
-  .field {
-    margin-bottom: $medium-spacing;
+  #block-system-main,
+  .list-horizontal--events {
+    .field {
+      margin-bottom: $medium-spacing;
+    }
   }
+
 }
 
 .event_status {
@@ -136,6 +140,9 @@ aside {
     padding: $medium-spacing;
     .form-item, .container-inline-date {
       margin-bottom: 0;
+    }
+    .views-exposed-widget {
+      clear: both;
     }
   }
   // Force h2 to look like h3

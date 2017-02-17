@@ -13,12 +13,12 @@
     //background-image: image-url("health_crest.svg");
     background-size: contain;
     display: inline-block;
-    width: 200px; //Revisit
-    height: 48px; //Revisit
+    width: 170px; //Revisit
+    height: 41px; //Revisit
 
     @include media($tablet) {
       width: 227px; //Revisit
-      height: 55px; //Revisit
+      height: 55px; //Revisitß
     }
 
     @include media($desktop) {
@@ -28,7 +28,11 @@
   }
 }
 
-header[role='banner'] a.logo {
+.page-header__logo {
+  text-align: left;
+}
+
+header[role='banner'] .page-header__logo a {
   border-bottom: none;
   &:hover,
   &:focus {

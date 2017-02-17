@@ -4845,8 +4845,8 @@ footer[role='contentinfo'] {
   .page-header__logo .logo img {
     background-size: contain;
     display: inline-block;
-    width: 200px;
-    height: 48px; }
+    width: 170px;
+    height: 41px; }
     @media screen and (min-width: 768px) {
       .page-header__logo .logo img {
         width: 227px;
@@ -4856,9 +4856,12 @@ footer[role='contentinfo'] {
         width: 300px;
         height: 72px; } }
 
-header[role='banner'] a.logo {
+.page-header__logo {
+  text-align: left; }
+
+header[role='banner'] .page-header__logo a {
   border-bottom: none; }
-  header[role='banner'] a.logo:hover, header[role='banner'] a.logo:focus {
+  header[role='banner'] .page-header__logo a:hover, header[role='banner'] .page-header__logo a:focus {
     background-color: transparent; }
 
 .hero, .hero--content, .hero--content-blur, .hero--content-colour {
@@ -5095,8 +5098,10 @@ body main {
 .location-map {
   margin-top: 1.2em; }
 
-.page-campaign-events .field,
-.girlsmove .field {
+.page-campaign-events #block-system-main .field,
+.page-campaign-events .list-horizontal--events .field,
+.girlsmove #block-system-main .field,
+.girlsmove .list-horizontal--events .field {
   margin-bottom: 1.2em; }
 
 .event_status {
@@ -5157,6 +5162,8 @@ aside #block-views-exp-event-page {
   padding: 1.2em; }
   aside #block-views-exp-event-page .form-item, aside #block-views-exp-event-page .container-inline-date {
     margin-bottom: 0; }
+  aside #block-views-exp-event-page .views-exposed-widget {
+    clear: both; }
 
 aside h2, aside .display {
   font-size: 1.5rem;
@@ -6209,7 +6216,7 @@ body.breastscreen > main .see-more {
     display: none; }
 
 .breastscreen .hero .hero-bg, .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
-  background-position-y: 35px;
+  background-position-y: 22px;
   height: 225px; }
   @media screen and (min-width: 768px) {
     .breastscreen .hero .hero-bg, .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
@@ -6400,6 +6407,12 @@ body.breastscreen > main .see-more {
 
 .partner__image {
   margin-bottom: 1.2em; }
+
+.girlsmove .hero .hero-bg, .girlsmove .hero--content .hero-bg, .girlsmove .hero--content-blur .hero-bg, .girlsmove .hero--content-colour .hero-bg {
+  background-position-y: 0; }
+
+.girlsmove .hero .campaign-logo, .girlsmove .hero--content .campaign-logo, .girlsmove .hero--content-blur .campaign-logo, .girlsmove .hero--content-colour .campaign-logo {
+  max-height: 125px; }
 
 .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block {
   background-color: #EEE; }
