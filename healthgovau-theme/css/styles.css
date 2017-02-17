@@ -6298,8 +6298,12 @@ body.breastscreen > main .see-more {
     height: auto;
     width: auto; }
 
+.girlsmove .content list--cards .field-name-field-image {
+  margin-bottom: 0; }
+
 .girlsmove #block-views-campaign-videos-block {
   background: #EEE;
+  padding-top: 1.2em;
   padding-bottom: 3.2em; }
 
 .girlsmove #block-bean-gmym-cards-0 {
@@ -6393,6 +6397,9 @@ body.breastscreen > main .see-more {
       -webkit-flex: 0 0 10%;
           -ms-flex: 0 0 10%;
               flex: 0 0 10%; } }
+
+.partner__image {
+  margin-bottom: 1.2em; }
 
 .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block {
   background-color: #EEE; }

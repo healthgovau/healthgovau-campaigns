@@ -38,11 +38,18 @@
         width: auto;
       }
     }
+    list--cards {
+      .field-name-field-image {
+        margin-bottom: 0;
+      }
+    }
+
   }
 
   #block-views-campaign-videos-block {
     @extend .band--primary;
     background: #EEE;
+    padding-top: $medium-spacing;
     padding-bottom: $large-spacing;
   }
 
@@ -158,4 +165,9 @@
       }
     }
   }
+}
+
+// Partners
+.partner__image {
+  margin-bottom: $medium-spacing;
 }
