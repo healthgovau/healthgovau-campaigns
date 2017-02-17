@@ -64,11 +64,12 @@
 
 // Force full width for content container
 .page-campaign-activities,
-.girlsmove {
+.girlsmove:not(.node-type-campaign-standard-page) {
   main .content-main {
     width: 100%;
   }
 }
+
 
 // Juicer
 .bean-social-media {

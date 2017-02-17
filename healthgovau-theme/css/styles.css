@@ -6312,7 +6312,7 @@ body.breastscreen > main .see-more {
       min-height: 440px; } }
 
 .page-campaign-activities main .content-main,
-.girlsmove main .content-main {
+.girlsmove:not(.node-type-campaign-standard-page) main .content-main {
   width: 100%; }
 
 .bean-social-media .juicer-feed ul.j-filters, .bean-social-media .juicer-feed .j-paginate {
