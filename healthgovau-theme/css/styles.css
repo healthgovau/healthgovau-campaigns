@@ -6413,6 +6413,12 @@ body.breastscreen > main .see-more {
 
 .girlsmove .hero .campaign-logo, .girlsmove .hero--content .campaign-logo, .girlsmove .hero--content-blur .campaign-logo, .girlsmove .hero--content-colour .campaign-logo {
   max-height: 125px; }
+  @media screen and (min-width: 768px) {
+    .girlsmove .hero .campaign-logo, .girlsmove .hero--content .campaign-logo, .girlsmove .hero--content-blur .campaign-logo, .girlsmove .hero--content-colour .campaign-logo {
+      max-height: 225px; } }
+  @media screen and (min-width: 75em) {
+    .girlsmove .hero .campaign-logo, .girlsmove .hero--content .campaign-logo, .girlsmove .hero--content-blur .campaign-logo, .girlsmove .hero--content-colour .campaign-logo {
+      max-height: 300px; } }
 
 .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block {
   background-color: #EEE; }
