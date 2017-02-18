@@ -4,14 +4,5 @@
     .hero-bg {
       background-position-y: 0;
     }
-    .campaign-logo {
-      max-height: 125px;
-      @include media($tablet) {
-        max-height: 225px;
-      }
-      @include media($desktop) {
-        max-height: 300px;
-      }
-    }
   }
 }

@@ -3,3 +3,4 @@ ui-kit
 build/src/ui-kit
 # node_modules folder
 node_modules
+.idea
