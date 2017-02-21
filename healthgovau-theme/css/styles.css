@@ -4836,24 +4836,34 @@ footer[role='contentinfo'] {
         margin: 0 0 0 1.2em; } }
 
 .page-header {
-  padding-bottom: 1.6em;
   -webkit-box-shadow: none;
           box-shadow: none;
-  background-color: #FFFFFF; }
+  background-color: #FFFFFF;
+  padding-bottom: 0.8em;
+  padding-top: 0.8em; }
+  @media screen and (min-width: 768px) {
+    .page-header {
+      padding-bottom: 1.6em;
+      padding-top: 1.6em; } }
+  .page-header .region-header {
+    margin-bottom: 0; }
+    @media screen and (min-width: 768px) {
+      .page-header .region-header {
+        margin-bottom: 1em; } }
 
 .page-header__logo {
   padding: 0; }
-  .page-header__logo .logo img {
+  .page-header__logo img {
     background-size: contain;
     display: inline-block;
     width: 170px;
     height: 41px; }
     @media screen and (min-width: 768px) {
-      .page-header__logo .logo img {
+      .page-header__logo img {
         width: 227px;
         height: 55px; } }
     @media screen and (min-width: 75em) {
-      .page-header__logo .logo img {
+      .page-header__logo img {
         width: 300px;
         height: 72px; } }
 
@@ -5214,10 +5224,10 @@ aside h2, aside .display {
       .page-feedback [role='button'] {
         margin: 0 0 0 1.2em; } }
 
-.field-name-field-event-date, .field-name-field-link-to, .field-name-field-event-organiser, .field-name-field-health-topic, .field-name-field-address, .list-horizontal--events > li article, [class*="fa-"] {
+.field-name-field-event-date, .field-name-field-link-to, .field-name-field-event-organiser, .field-name-field-health-topic, .field-name-field-address, .list-horizontal--events > li article, [class*="fa-"], .social__links .social__links-item a, .social__links--stacked .social__links-item a {
   position: relative;
   padding-left: 2em; }
-  .field-name-field-event-date:before, .field-name-field-link-to:before, .field-name-field-event-organiser:before, .field-name-field-health-topic:before, .field-name-field-address:before, .list-horizontal--events > li article:before, [class*="fa-"]:before {
+  .field-name-field-event-date:before, .field-name-field-link-to:before, .field-name-field-event-organiser:before, .field-name-field-health-topic:before, .field-name-field-address:before, .list-horizontal--events > li article:before, [class*="fa-"]:before, .social__links .social__links-item a:before, .social__links--stacked .social__links-item a:before {
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
@@ -5316,16 +5326,11 @@ body a {
     background-color: #5bcbe3;
     color: #313131; }
 
-header .page-header__logo a {
+.page-header__logo a {
   border-bottom: none; }
 
-header .page-header__logo a:hover {
+.page-header__logo a:hover {
   background-color: inherit; }
-
-header .page-header__logo img {
-  display: inline-block;
-  width: 227px;
-  height: 55px; }
 
 .modal label {
   cursor: pointer;
@@ -5493,25 +5498,18 @@ header .page-header__logo img {
       .social__links .social__links-item, .social__links--stacked .social__links-item {
         display: inline;
         margin-right: 1.2em; } }
-    .social__links .social__links-item a:before, .social__links--stacked .social__links-item a:before {
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: 100% auto;
-      content: ' ';
-      display: inline-block;
-      height: 1.2em;
-      margin-right: 0.4em;
-      width: 1.2em; }
     .social__links .social__links-item a.youtube:before, .social__links--stacked .social__links-item a.youtube:before {
-      background-image: url("../images/icons/youtube.svg"); }
+      content: "\f16a"; }
     .social__links .social__links-item a.twitter:before, .social__links--stacked .social__links-item a.twitter:before {
-      background-image: url("../images/icons/twitter.svg"); }
+      content: "\f099"; }
     .social__links .social__links-item a.facebook:before, .social__links--stacked .social__links-item a.facebook:before {
-      background-image: url("../images/icons/facebook.svg"); }
+      content: "\f09a"; }
     .social__links .social__links-item a.email:before, .social__links--stacked .social__links-item a.email:before {
-      background-image: url("../images/icons/email.svg"); }
+      content: "\f003"; }
     .social__links .social__links-item a.linkedin:before, .social__links--stacked .social__links-item a.linkedin:before {
-      background-image: url("../images/icons/linkedin.svg"); }
+      content: "\f0e1"; }
+    .social__links .social__links-item a.instagram:before, .social__links--stacked .social__links-item a.instagram:before {
+      content: "\f16d"; }
   .social__links h3, .social__links--stacked h3, .social__links footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .social__links h2, .social__links--stacked footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .social__links--stacked h2, .social__links footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .social__links .display, .social__links--stacked footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .social__links--stacked .display {
     margin-top: 0; }
 
@@ -5879,7 +5877,8 @@ header .page-header__logo img {
 
 .view-campaign-videos .field-name-field-video-thumbnail img,
 .node-type-video .field-name-field-video-thumbnail img {
-  height: auto; }
+  height: auto;
+  width: 100%; }
 
 .view-campaign-videos .video__transcript summary,
 .node-type-video .video__transcript summary {
@@ -6303,11 +6302,12 @@ body.breastscreen > main .see-more {
 .girlsmove .content .field-name-field-image {
   margin-bottom: 3.2em; }
   .girlsmove .content .field-name-field-image img {
-    height: auto;
-    width: auto; }
+    height: auto; }
 
-.girlsmove .content list--cards .field-name-field-image {
-  margin-bottom: 0; }
+.girlsmove .content .list--cards .field-name-field-image,
+.girlsmove .content .list--cards > li figure img {
+  margin-bottom: 0;
+  width: 100%; }
 
 .girlsmove #block-views-campaign-videos-block {
   background: #EEE;
@@ -6356,7 +6356,8 @@ body.breastscreen > main .see-more {
         float: right;
         display: block;
         margin-left: 2.04556%;
-        width: 36.22153%; }
+        width: 36.22153%;
+        min-height: 309px; }
         #block-views-activities-block .activity__selector:last-child {
           margin-left: 0; } }
     #block-views-activities-block .activity__selector h3, #block-views-activities-block .activity__selector footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top #block-views-activities-block .activity__selector h2, #block-views-activities-block .activity__selector footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top #block-views-activities-block .activity__selector .display {
@@ -6385,6 +6386,10 @@ body.breastscreen > main .see-more {
         width: 61.73292%; }
         #block-views-activities-block .view-activities:last-child {
           margin-left: 0; } }
+  #block-views-activities-block .field-name-field-image {
+    margin-bottom: 0; }
+  #block-views-activities-block .list-vertical {
+    margin-top: 0; }
   #block-views-activities-block .list-horizontal, #block-views-activities-block .list-horizontal--events, #block-views-activities-block .list-horizontal--narrow, #block-views-activities-block .list-horizontal--benefits {
     margin-top: 0; }
     #block-views-activities-block .list-horizontal > li, #block-views-activities-block .list-horizontal--events > li, #block-views-activities-block .list-horizontal--narrow > li, #block-views-activities-block .list-horizontal--benefits > li {
@@ -6408,6 +6413,35 @@ body.breastscreen > main .see-more {
 
 .partner__image {
   margin-bottom: 1.2em; }
+
+.girlsmove .band--primary, .girlsmove #block-views-campaign-videos-block {
+  background: #278288;
+  color: #FFF; }
+  .girlsmove .band--primary a, .girlsmove #block-views-campaign-videos-block a {
+    color: #FFF;
+    border-color: #fff; }
+    .girlsmove .band--primary a:hover, .girlsmove #block-views-campaign-videos-block a:hover, .girlsmove .band--primary a:focus, .girlsmove #block-views-campaign-videos-block a:focus {
+      color: #278288;
+      background: #fff; }
+  .girlsmove .band--primary .see-more, .girlsmove #block-views-campaign-videos-block .see-more {
+    color: #fff; }
+    .girlsmove .band--primary .see-more:hover, .girlsmove #block-views-campaign-videos-block .see-more:hover, .girlsmove .band--primary .see-more:focus, .girlsmove #block-views-campaign-videos-block .see-more:focus {
+      color: #278288;
+      background: #fff; }
+    .girlsmove .band--primary .see-more:after, .girlsmove #block-views-campaign-videos-block .see-more:after {
+      background-image: none; }
+  .girlsmove .band--primary .social__links .social__links-item a, .girlsmove #block-views-campaign-videos-block .social__links .social__links-item a, .girlsmove .band--primary .social__links--stacked .social__links-item a, .girlsmove #block-views-campaign-videos-block .social__links--stacked .social__links-item a,
+  .girlsmove .band--primary .social__links--stacked .social__links-item a, .girlsmove #block-views-campaign-videos-block .social__links--stacked .social__links-item a {
+    border: 0; }
+    .girlsmove .band--primary .social__links .social__links-item a:hover, .girlsmove #block-views-campaign-videos-block .social__links .social__links-item a:hover, .girlsmove .band--primary .social__links--stacked .social__links-item a:hover, .girlsmove #block-views-campaign-videos-block .social__links--stacked .social__links-item a:hover, .girlsmove .band--primary .social__links .social__links-item a:focus, .girlsmove #block-views-campaign-videos-block .social__links .social__links-item a:focus, .girlsmove .band--primary .social__links--stacked .social__links-item a:focus, .girlsmove #block-views-campaign-videos-block .social__links--stacked .social__links-item a:focus,
+    .girlsmove .band--primary .social__links--stacked .social__links-item a:hover, .girlsmove #block-views-campaign-videos-block .social__links--stacked .social__links-item a:hover,
+    .girlsmove .band--primary .social__links--stacked .social__links-item a:focus, .girlsmove #block-views-campaign-videos-block .social__links--stacked .social__links-item a:focus {
+      background: transparent;
+      border-bottom: 1px solid #fff;
+      color: #fff; }
+    .girlsmove .band--primary .social__links .social__links-item a:before, .girlsmove #block-views-campaign-videos-block .social__links .social__links-item a:before, .girlsmove .band--primary .social__links--stacked .social__links-item a:before, .girlsmove #block-views-campaign-videos-block .social__links--stacked .social__links-item a:before,
+    .girlsmove .band--primary .social__links--stacked .social__links-item a:before, .girlsmove #block-views-campaign-videos-block .social__links--stacked .social__links-item a:before {
+      color: #fff; }
 
 .girlsmove .hero .hero-bg, .girlsmove .hero--content .hero-bg, .girlsmove .hero--content-blur .hero-bg, .girlsmove .hero--content-colour .hero-bg {
   background-position-y: 0; }

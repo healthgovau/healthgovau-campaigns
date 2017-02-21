@@ -35,12 +35,13 @@
       margin-bottom: $large-spacing;
       img {
         height: auto;
-        width: auto;
       }
     }
-    list--cards {
-      .field-name-field-image {
+    .list--cards {
+      .field-name-field-image,
+      > li figure img {
         margin-bottom: 0;
+        width: 100%;
       }
     }
 
@@ -77,7 +78,6 @@
   }
 }
 
-
 // Juicer
 .bean-social-media {
   .juicer-feed {
@@ -110,6 +110,7 @@
       }
       @include media($desktop) {
         @include span-columns(6 of 16);
+        min-height: 309px;
       }
       h3 {
         margin-top: 0;
@@ -137,6 +138,13 @@
     }
   }
 
+  .field-name-field-image {
+    margin-bottom: 0;
+  }
+
+  .list-vertical {
+    margin-top: 0;
+  }
   .list-horizontal {
     margin-top: 0;
     > li {
@@ -170,4 +178,46 @@
 // Partners
 .partner__image {
   margin-bottom: $medium-spacing;
+}
+
+// Social media
+.girlsmove {
+  .band--primary {
+    background: $cyan;
+    color: #FFF;
+    // Links
+    a {
+      color: #FFF;
+      border-color: #fff;
+      &:hover,
+      &:focus {
+        color: $cyan;
+        background: #fff;
+      }
+    }
+    .see-more {
+      color: #fff;
+      &:hover,
+      &:focus {
+        color: $cyan;
+        background: #fff;
+      }
+      &:after {
+        background-image: none;
+      }
+    }
+    .social__links .social__links-item a,
+    .social__links--stacked .social__links-item a {
+      border: 0;
+      &:hover,
+      &:focus {
+        background: transparent;
+        border-bottom: 1px solid #fff;
+        color: #fff;
+      }
+      &:before {
+        color: #fff;
+      }
+    }
+  }
 }

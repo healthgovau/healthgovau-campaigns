@@ -1,16 +1,25 @@
 // Global header
 // UI-kit overrides
 .page-header {
-  padding-bottom: $base-spacing;
   box-shadow: none;
   background-color: $white;
+  padding-bottom: $base-spacing/2;
+  padding-top: $base-spacing/2;
+  @include media($tablet) {
+    padding-bottom: $base-spacing;
+    padding-top: $base-spacing;
+  }
+  .region-header {
+    margin-bottom: 0;
+    @include media($tablet) {
+      margin-bottom: 1em;
+    }
+  }
 }
 
 .page-header__logo {
   padding: 0;
-
-  .logo img {
-    //background-image: image-url("health_crest.svg");
+  img {
     background-size: contain;
     display: inline-block;
     width: 170px; //Revisit
