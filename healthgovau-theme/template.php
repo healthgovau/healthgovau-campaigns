@@ -209,8 +209,8 @@ function healthgovau_preprocess_node(&$variables) {
  * Implements THEME_preprocess_views_views().
  */
 function healthgovau_preprocess_views_view(&$vars) {
-  // Add hero background image to campaign videos view.
-  if ($vars['view']->name == 'campaign_videos' || $vars['view']->name == 'activities' || $vars['view'] == 'events') {
+  // Add hero background image to campaign videos, activity, event view.
+  if ($vars['view']->name == 'campaign_videos' || $vars['view']->name == 'activities' || $vars['view']->name == 'event') {
     $campaign_nid = $vars['view']->args[0];
     _healthgovau_set_hero_bg($campaign_nid, FALSE);
   }
