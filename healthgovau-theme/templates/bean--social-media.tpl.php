@@ -53,6 +53,9 @@
           <? if ($twitter_link != ''): ?>
             <?php print $twitter_link; ?>
           <? endif; ?>
+          <? if ($sm_tag != ''): ?>
+            <?php print $sm_tag; ?>
+          <? endif; ?>
         </ul>
       </div>
     </div>
