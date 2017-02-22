@@ -222,7 +222,7 @@ function healthgovau_preprocess_views_view(&$vars) {
 function healthgovau_preprocess_block(&$vars) {
   $block = $vars['block'];
   // Add title variable if the current block is video card block.
-  if ($block->bid == 'views-campaign_videos-block_1') {
+  if ($block->bid == 'views-campaign_videos-block_1' || $block->bid == 'views-campaign_videos-block_4') {
     if (arg(0) == 'node' && is_numeric(arg(1))) {
       // This is a node page.
       $node = node_load(arg(1));
