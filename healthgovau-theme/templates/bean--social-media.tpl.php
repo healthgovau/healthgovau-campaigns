@@ -35,7 +35,7 @@
 
     <div class="content"<?php print $content_attributes; ?>>
       <div class="social__feature">
-        <ul class="social__links--stacked">
+        <ul class="social__links">
           <? if ($instagram_link != ''): ?>
             <?php print $instagram_link; ?>
           <? endif; ?>
