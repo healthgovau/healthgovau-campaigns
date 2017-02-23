@@ -216,7 +216,9 @@
   #block-bean-gmym-socialmedia {
     background: $cyan;
     color: #FFF;
+    padding-top: $small-spacing;
     padding-bottom: $large-spacing;
+    overflow: hidden;
     // Links
     a {
       color: #FFF;

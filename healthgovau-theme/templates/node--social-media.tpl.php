@@ -81,7 +81,7 @@
  */
 ?>
 <section id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-    
+
     <ul class="juicer-feed" data-feed-id="<?php print $sm_id; ?>" data-per="<?php print $sm_perpage; ?>" feed-type="<?php print $sm_type; ?>"></ul>
 
 </section>
