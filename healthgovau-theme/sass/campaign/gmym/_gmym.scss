@@ -15,7 +15,7 @@
 
 %band--gradient {
   @extend %band;
-  @include linear-gradient(90deg, #EEEEEE, #FFFFFF, $fallback: #EEEEEE);
+  @include linear-gradient(90deg, #dcf2f7, #FFFFFF, $fallback: #dcf2f7);
 }
 
 .girlsmove {
@@ -59,7 +59,7 @@
     @extend %band--gradient;
     padding-top: $medium-spacing;
     padding-bottom: $large-spacing;
-    .list-vertical--thirds li {
+    .list-vertical--thirds li.views-row { //.views-row prevents application to Drupal menus
       @include media($desktop) {
         min-height: 460px;
       }
