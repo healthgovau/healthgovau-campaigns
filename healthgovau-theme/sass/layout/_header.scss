@@ -19,6 +19,7 @@
 
 .page-header__logo {
   padding: 0;
+  text-align: left;
   img {
     background-size: contain;
     display: inline-block;
@@ -35,17 +36,12 @@
       height: 72px;
     }
   }
-}
-
-.page-header__logo {
-  text-align: left;
-}
-
-header[role='banner'] .page-header__logo a {
-  border-bottom: none;
-  &:hover,
-  &:focus {
-    background-color: transparent;
+  a {
+    border-bottom: none;
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
   }
 }
 

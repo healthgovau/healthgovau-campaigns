@@ -1,3 +1,4 @@
+// Band variants extending defaults
 .gmym-band--primary {
   @extend .band;
   background-color: $grey-light;
@@ -8,28 +9,18 @@
   background-color: $grey;
 }
 
-// Social
-.social__feature {
-  @include fill-parent();
-
-  @include media($tablet) {
-    @include span-columns(3 of 12);
-  }
-
-  @include media($desktop) {
-    @include span-columns(3 of 16);
-  }
-}
-
 .girlsmove {
+
+  // Partner band
   #block-bean-gmym-partner {
-    @extend .gmym-band--primary;
   }
 
+  // Events band
   #block-views-event-block-1 {
     padding-bottom: $large-spacing;
   }
 
+  // Image field
   .content {
     .field-name-field-image {
       margin-bottom: $large-spacing;
@@ -47,8 +38,8 @@
 
   }
 
-  #block-views-campaign-videos-block {
-    @extend .band--primary;
+  // Activities video band
+  #block-views-campaign-videos-block-4 {
     background: #EEE;
     padding-top: $medium-spacing;
     padding-bottom: $large-spacing;
@@ -78,63 +69,31 @@
   }
 }
 
-// Juicer
-.bean-social-media {
-  .juicer-feed {
-    ul.j-filters, .j-paginate {
-      display: none;
-    }
-  }
-}
-
-.node-social-media {
-  .juicer-feed ul.j-filters {
-    padding-left: 0;
-    li {
-      width: 20%;
-    }
-  }
-}
-
-// Activities band
+// Activities/selector band
 #block-views-activities-block {
   padding-bottom: $large-spacing;
+  @extend .band--gradient;
   @include direction-context(right-to-left) {
     .activity__selector {
-      background-color: $cyan;
-      color: #FFF;
-      padding: $large-spacing;
       @include fill-parent();
-      @include media($tablet) {
-        @include span-columns(4 of 12);
-      }
-      @include media($desktop) {
-        @include span-columns(6 of 16);
-        min-height: 309px;
-      }
+      overflow: hidden;
       h3 {
-        margin-top: 0;
+        display: none;
       }
-      .tags a {
-        border-color: #FFF;
-        color: #FFF;
-        &:hover,
-        &:focus {
-          background-color: #FFF;
-          color: #000;
+      p {
+        margin-top: 5px;
+        margin-right: 15px;
+        float: left
+      }
+      .tags {
+        float: left;
+        a {
+          background-color: #fff;
         }
       }
     }
-
     .view-activities {
       @include fill-parent();
-      @include media($tablet) {
-        @include span-columns(8 of 12);
-      }
-      @include media($desktop) {
-        @include span-columns(10 of 16);
-      }
-
     }
   }
 
@@ -148,8 +107,16 @@
   .list-horizontal {
     margin-top: 0;
     > li {
+      border: 0;
       margin-top: 0;
       max-width: 100%;
+      @include media($tablet) {
+        display: flex;
+        @include span-columns(6 of 12);
+      }
+      @include media($desktop) {
+        @include span-columns(8 of 16);
+      }
       figure {
         flex: 0 0 50%
       }
@@ -181,6 +148,36 @@
 }
 
 // Social media
+.social__feature {
+  @include fill-parent();
+
+  @include media($tablet) {
+    @include span-columns(3 of 12);
+  }
+
+  @include media($desktop) {
+    @include span-columns(3 of 16);
+  }
+}
+
+// Juicer
+.bean-social-media {
+  .juicer-feed {
+    ul.j-filters, .j-paginate {
+      display: none;
+    }
+  }
+}
+
+.node-social-media {
+  .juicer-feed ul.j-filters {
+    padding-left: 0;
+    li {
+      width: 20%;
+    }
+  }
+}
+
 .girlsmove {
   .band--primary {
     background: $cyan;

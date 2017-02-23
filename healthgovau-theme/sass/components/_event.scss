@@ -93,11 +93,25 @@
   }
 }
 
+.field-name-field-state {
+  @extend %baseicon;
+  &:before {
+    content: "\f278";
+  }
+}
+
+
+
 
 // Event listing
 // Right-align images
 .list-horizontal--events {
   @extend .list-horizontal;
+
+  // Generic field margin
+  [class*="field-name-field-"] {
+    margin-top: $small-spacing;
+  }
 
   > li {
     display: block; // override flex
