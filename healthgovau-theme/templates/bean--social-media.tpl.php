@@ -34,12 +34,7 @@
     <h2>Social Media</h2>
 
     <div class="content"<?php print $content_attributes; ?>>
-      <div class="social__feed">
-        <ul class="juicer-feed" data-feed-id="<?php print $sm_id; ?>" data-per="<?php print $sm_col; ?>"></ul>
-        <p><a href="<?php print $sm_page; ?>" class="see-more">More social media</a></p>
-      </div>
       <div class="social__feature">
-        <h3 class="light">Follow us</h3>
         <ul class="social__links--stacked">
           <? if ($instagram_link != ''): ?>
             <?php print $instagram_link; ?>
@@ -58,6 +53,10 @@
           <?php print $sm_tag; ?>
         <? endif; ?>
       </div>
+        <div class="social__feed">
+            <ul class="juicer-feed" data-feed-id="<?php print $sm_id; ?>" data-per="<?php print $sm_col; ?>"></ul>
+            <p><a href="<?php print $sm_page; ?>" class="see-more">More social media</a></p>
+        </div>
     </div>
 
   </div>
