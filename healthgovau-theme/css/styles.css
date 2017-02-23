@@ -6274,8 +6274,6 @@ body.breastscreen > main .see-more {
 
 body.girlsmove > main a {
   border-color: #278288; }
-  body.girlsmove > main a:hover, body.girlsmove > main a:focus {
-    background-color: #278288; }
 
 .girlsmove [class*="field-item"] img {
   height: auto; }
