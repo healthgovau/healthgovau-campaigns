@@ -33,6 +33,7 @@
 
     <h2>Social Media</h2>
 
+    <div class="social-media-description"><?php print $sm_desc; ?></div>
     <div class="content"<?php print $content_attributes; ?>>
       <div class="social__feed">
         <ul class="juicer-feed" data-feed-id="<?php print $sm_id; ?>" data-per="<?php print $sm_col; ?>"></ul>
