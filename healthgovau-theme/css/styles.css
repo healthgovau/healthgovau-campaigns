@@ -6462,7 +6462,10 @@ body.girlsmove > main a {
       color: #fff; }
 
 .girlsmove .hero .hero-bg, .girlsmove .hero--content .hero-bg,
-.girlsmove .hero--content .hero-bg {
+.girlsmove .hero--content .hero-bg,
+.page-campaign-156 .hero .hero-bg,
+.page-campaign-156 .hero--content .hero-bg,
+.page-campaign-156 .hero--content .hero-bg {
   background-position-y: 35%; }
 
 .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block {

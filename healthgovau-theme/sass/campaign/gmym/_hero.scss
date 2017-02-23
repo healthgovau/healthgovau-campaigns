@@ -1,5 +1,8 @@
 // Tweaks for mobile positioning
-.girlsmove {
+// .girlsmove and .page-campaign-156 target just this campaign (class in <body>)
+
+.girlsmove,
+.page-campaign-156 {
   .hero,
   .hero--content {
     .hero-bg {
