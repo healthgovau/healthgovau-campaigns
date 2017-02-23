@@ -54,3 +54,17 @@ h1, h2, h3, h4, h5, h6, p {
     color: #FFF;
   }
 }
+
+// Footnote
+.references,
+.footnote {
+    display: inline-block;
+    font-family: $base-sans-serif;
+    margin-top: $medium-spacing;
+    padding-top: $tiny-spacing;
+    border-top: 1px solid $light-grey;
+    &::before {
+      content: 'Footnote: ';ß
+      color: $body-text-colour;
+    }
+}
