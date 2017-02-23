@@ -5143,7 +5143,7 @@ body main {
 .field-name-field-state:before {
   content: "\f278"; }
 
-[class*="field-name-field-"] {
+.list-horizontal--events [class*="field-name-field-"] {
   margin-top: 0.8em; }
 
 .list-horizontal--events > li {
@@ -5715,10 +5715,10 @@ body a {
       .node-type-video .region-content .wrapper .video__list--related div.group-right, .video__list--related .node-type-video .region-content .ds-wrapper div.group-right, .node-type-video .region-content .ds-wrapper .video__list--related div.group-right, .video__list--related .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact .video__list--related div.group-right {
         width: 100%; } }
 
-.band, #block-bean-share-this, .band--img-text, .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat, .breastscreen-band--partners, .gmym-band--primary, .girlsmove #block-bean-gmym-partner, .girlsmove #block-bean-gmym-cards-0, .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block, .band--small, .page-feedback, .smokes-band--partners, #block-bean-quitenow-partner, .band--pad, .band--secondary, .band--gradient, .node-type-social-media .main, .gmym-band--secondary {
+.band, #block-bean-share-this, .band--img-text, .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat, .breastscreen-band--partners, .gmym-band--primary, .girlsmove #block-bean-gmym-cards-0, .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block, .band--small, .page-feedback, .smokes-band--partners, #block-bean-quitenow-partner, .band--pad, .band--secondary, .band--gradient, .node-type-social-media .main, #block-views-activities-block, .gmym-band--secondary, .girlsmove #block-views-campaign-videos-block-4 {
   padding: 0.8em 0 3.2em;
   width: 100%; }
-  .band::after, #block-bean-share-this::after, .band--img-text::after, .band--img-text-halves::after, .band--img-text-halves--invert::after, .breastscreen #block-bean-breast-cancer-in-australia::after, .breastscreen #block-bean-breastscreen-mammogram::after, .breastscreen #block-bean-breastscreen-why::after, .breastscreen #block-bean-breastscreen-early-detection::after, .breastscreen #block-bean-breastscreen-stats::after, .breastscreen #block-bean-breastscreen-expanding::after, .breastscreen #block-bean-breastscreen-74::after, .breastscreen #block-bean-breastscreen-detection::after, .breastscreen #block-bean-breastscreen-chat::after, .breastscreen-band--partners::after, .gmym-band--primary::after, .girlsmove #block-bean-gmym-partner::after, .girlsmove #block-bean-gmym-cards-0::after, .smokes-band--primary::after, .smokes.node-type-campaign #block-views-campaign-videos-block::after, .band--small::after, .page-feedback::after, .smokes-band--partners::after, #block-bean-quitenow-partner::after, .band--pad::after, .band--secondary::after, .band--gradient::after, .node-type-social-media .main::after, .gmym-band--secondary::after {
+  .band::after, #block-bean-share-this::after, .band--img-text::after, .band--img-text-halves::after, .band--img-text-halves--invert::after, .breastscreen #block-bean-breast-cancer-in-australia::after, .breastscreen #block-bean-breastscreen-mammogram::after, .breastscreen #block-bean-breastscreen-why::after, .breastscreen #block-bean-breastscreen-early-detection::after, .breastscreen #block-bean-breastscreen-stats::after, .breastscreen #block-bean-breastscreen-expanding::after, .breastscreen #block-bean-breastscreen-74::after, .breastscreen #block-bean-breastscreen-detection::after, .breastscreen #block-bean-breastscreen-chat::after, .breastscreen-band--partners::after, .gmym-band--primary::after, .girlsmove #block-bean-gmym-cards-0::after, .smokes-band--primary::after, .smokes.node-type-campaign #block-views-campaign-videos-block::after, .band--small::after, .page-feedback::after, .smokes-band--partners::after, #block-bean-quitenow-partner::after, .band--pad::after, .band--secondary::after, .band--gradient::after, .node-type-social-media .main::after, #block-views-activities-block::after, .gmym-band--secondary::after, .girlsmove #block-views-campaign-videos-block-4::after {
     clear: both;
     content: "";
     display: table; }
@@ -5739,7 +5739,7 @@ body a {
   background-repeat: no-repeat;
   padding: 0.8em 0 3.2em; }
 
-.band--gradient, .node-type-social-media .main {
+.band--gradient, .node-type-social-media .main, #block-views-activities-block {
   background-color: #EEEEEE;
   background-image: -webkit-linear-gradient(-360deg, #DDDDDD, #FFFFFF);
   background-image: -webkit-gradient(linear,left top, right top,from(#DDDDDD), to(#FFFFFF));
@@ -6256,11 +6256,18 @@ body.breastscreen > main .see-more {
       max-height: 215px;
       margin-top: -25px; } }
 
-.gmym-band--primary, .girlsmove #block-bean-gmym-partner, .girlsmove #block-bean-gmym-cards-0 {
+.gmym-band--primary, .girlsmove #block-bean-gmym-cards-0 {
   background-color: #EEE; }
 
 .gmym-band--secondary {
   background-color: #DDD; }
+
+.girlsmove #block-views-campaign-videos-block-4 {
+  background-color: #EEEEEE;
+  background-image: -webkit-linear-gradient(-360deg, #EEEEEE, #FFFFFF);
+  background-image: -webkit-gradient(linear,left top, right top,from(#EEEEEE), to(#FFFFFF));
+  background-image: -webkit-linear-gradient(left,#EEEEEE, #FFFFFF);
+  background-image: linear-gradient(90deg,#EEEEEE, #FFFFFF); }
 
 .girlsmove #block-views-event-block-1 {
   padding-bottom: 3.2em; }
@@ -6276,7 +6283,6 @@ body.breastscreen > main .see-more {
   width: 100%; }
 
 .girlsmove #block-views-campaign-videos-block-4 {
-  background: #EEE;
   padding-top: 1.2em;
   padding-bottom: 3.2em; }
 
@@ -6307,6 +6313,8 @@ body.breastscreen > main .see-more {
       float: left; }
     #block-views-activities-block .activity__selector .tags {
       float: left; }
+      #block-views-activities-block .activity__selector .tags a {
+        background-color: #fff; }
   #block-views-activities-block .view-activities {
     width: 100%; }
   #block-views-activities-block .field-name-field-image {
@@ -6321,6 +6329,10 @@ body.breastscreen > main .see-more {
       max-width: 100%; }
       @media screen and (min-width: 768px) {
         #block-views-activities-block .list-horizontal > li, #block-views-activities-block .list-horizontal--events > li, #block-views-activities-block .list-horizontal--narrow > li, #block-views-activities-block .list-horizontal--benefits > li {
+          display: -webkit-box !important;
+          display: -webkit-flex !important;
+          display: -ms-flexbox !important;
+          display: flex !important;
           float: left;
           display: block;
           margin-right: 2.74614%;
@@ -6373,6 +6385,9 @@ body.breastscreen > main .see-more {
       .social__feature:last-child {
         margin-right: 0; } }
 
+.bean-social-media p {
+  color: #fff; }
+
 .bean-social-media .juicer-feed ul.j-filters, .bean-social-media .juicer-feed .j-paginate {
   display: none; }
 
@@ -6398,6 +6413,10 @@ body.breastscreen > main .see-more {
       background: #fff; }
     .girlsmove .band--primary .see-more:after {
       background-image: none; }
+  .girlsmove .band--primary .social__feature {
+    width: 100%; }
+  .girlsmove .band--primary .social__feed {
+    width: 100%; }
   .girlsmove .band--primary .social__links .social__links-item a, .girlsmove .band--primary .social__links--stacked .social__links-item a,
   .girlsmove .band--primary .social__links--stacked .social__links-item a {
     border: 0; }

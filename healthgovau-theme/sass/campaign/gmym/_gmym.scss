@@ -9,6 +9,11 @@
   background-color: $grey;
 }
 
+%band--gradient {
+  @extend %band;
+  @include linear-gradient(90deg, #EEEEEE, #FFFFFF, $fallback: #EEEEEE);
+}
+
 .girlsmove {
 
   // Partner band
@@ -40,7 +45,7 @@
 
   // Activities video band
   #block-views-campaign-videos-block-4 {
-    background: #EEE;
+    @extend %band--gradient;
     padding-top: $medium-spacing;
     padding-bottom: $large-spacing;
   }
@@ -111,7 +116,7 @@
       margin-top: 0;
       max-width: 100%;
       @include media($tablet) {
-        display: flex;
+        display: flex !important;
         @include span-columns(6 of 12);
       }
       @include media($desktop) {
@@ -162,6 +167,9 @@
 
 // Juicer
 .bean-social-media {
+  p {
+    color: #fff;
+  }
   .juicer-feed {
     ul.j-filters, .j-paginate {
       display: none;
@@ -203,6 +211,12 @@
       &:after {
         background-image: none;
       }
+    }
+    .social__feature {
+      @include fill-parent();
+    }
+    .social__feed {
+      @include fill-parent();
     }
     .social__links .social__links-item a,
     .social__links--stacked .social__links-item a {
