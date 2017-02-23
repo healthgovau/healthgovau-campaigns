@@ -283,7 +283,7 @@ function healthgovau_preprocess_entity(&$variables) {
       $twitter = !isset($bean->field_twitter_id[LANGUAGE_NONE]) ? '' : '<li class="social__links-item"><a href="' . $bean->field_twitter_id[LANGUAGE_NONE][0]['value'] . '" class="twitter">Twitter</a></li>';
       $sm_page = !isset($bean->field_social_media_page_link[LANGUAGE_NONE]) ? '#' : $bean->field_social_media_page_link[LANGUAGE_NONE][0]['value'];
       $sm_tag = !isset($bean->field_social_media_tag[LANGUAGE_NONE]) ? '' : '<div class="social-media-tag">' . $bean->field_social_media_tag[LANGUAGE_NONE][0]['value'] . '</div>';
-      $sm_desc = !isset($bean->fielf_social_media_description[LANGUAGE_NONE]) ? '' : $bean->field_social_media_description[LANGUAGE_NONE][0]['value'];
+      $sm_desc = !isset($bean->field_social_media_description[LANGUAGE_NONE]) ? '' : $bean->field_social_media_description[LANGUAGE_NONE][0]['value'];
       $variables['sm_desc'] = $sm_desc;
       $variables['sm_id'] = $sm_id;
       $variables['sm_col'] = $sm_col;
