@@ -27,7 +27,7 @@
  * @see template_process()
  */
 ?>
-<section class="<?php print $classes; ?> band--primary clearfix"<?php print $attributes; ?>>
+<section class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <div class="wrapper">
 

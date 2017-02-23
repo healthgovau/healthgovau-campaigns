@@ -1,12 +1,16 @@
 // Band variants extending defaults
-.gmym-band--primary {
+%gmym-band--primary {
   @extend .band;
   background-color: $grey-light;
+  padding-top: $small-spacing;
+  @include media($tablet) {
+    padding-top: $large-spacing;
+  }
 }
 
-.gmym-band--secondary {
+%gmym-band--secondary {
   @extend %band;
-  background-color: $grey;
+  background-color: $light-blue;
 }
 
 %band--gradient {
@@ -16,6 +20,11 @@
 
 .girlsmove {
 
+  // Override inline image styles inside Drupal fields
+  [class *= "field-item"] img {
+    height: auto;
+  }
+
   // Partner band
   #block-bean-gmym-partner {
   }
@@ -23,6 +32,12 @@
   // Events band
   #block-views-event-block-1 {
     padding-bottom: $large-spacing;
+    figure {
+      margin-bottom: $medium-spacing;
+    }
+    [class *= "field-name-field-" ] {
+      margin-top: $small-spacing;
+    }
   }
 
   // Image field
@@ -48,11 +63,16 @@
     @extend %band--gradient;
     padding-top: $medium-spacing;
     padding-bottom: $large-spacing;
+    .list-vertical--thirds li {
+      @include media($desktop) {
+        min-height: 460px;
+      }
+    }
   }
 
   #block-bean-gmym-cards-0 {
-    @extend .gmym-band--primary;
-    padding-top: $medium-spacing;
+    @extend %gmym-band--primary;
+    background-color: $cyan;
     padding-bottom: 0;
   }
 
@@ -77,7 +97,7 @@
 // Activities/selector band
 #block-views-activities-block {
   padding-bottom: $large-spacing;
-  @extend .band--gradient;
+  @extend %band--gradient;
   @include direction-context(right-to-left) {
     .activity__selector {
       @include fill-parent();
@@ -94,6 +114,12 @@
         float: left;
         a {
           background-color: #fff;
+          border-color: $cyan;
+          &:hover,
+          &:focus {
+            background-color: $cyan;
+            color: #FFF;
+          }
         }
       }
     }
@@ -166,11 +192,19 @@
 }
 
 // Juicer
+#block-bean-gmym-socialmedia {
+  @extend %gmym-band--primary;
+  padding-top: 0
+}
+
 .bean-social-media {
   p {
     color: #fff;
   }
   .juicer-feed {
+    p {
+      color: #000;
+    }
     ul.j-filters, .j-paginate {
       display: none;
     }
@@ -217,6 +251,7 @@
     }
     .social__feed {
       @include fill-parent();
+      margin-top: $small-spacing;
     }
     .social__links .social__links-item a,
     .social__links--stacked .social__links-item a {
@@ -232,4 +267,9 @@
       }
     }
   }
+}
+
+// Partners
+#block-bean-gmym-partner {
+
 }
