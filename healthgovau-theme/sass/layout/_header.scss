@@ -17,7 +17,7 @@
   }
 }
 
-.page-header__logo {
+header[role='banner'] .page-header__logo {
   padding: 0;
   text-align: left;
   img {
@@ -36,13 +36,11 @@
       height: 72px;
     }
   }
-  header[role='banner'] a,
   a {
-    border-bottom: none;
+    border-bottom: 0;
     &:hover,
     &:focus {
       background-color: transparent;
     }
   }
 }
-

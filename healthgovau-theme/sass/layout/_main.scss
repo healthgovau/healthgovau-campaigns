@@ -35,8 +35,8 @@ body main {
 
 // Override UIkit
 main {
-  margin-top: $medium-spacing;
+  padding-top: $medium-spacing;
   @include media($tablet) {
-    margin-top: $large-spacing;
+    padding-top: $large-spacing;
   }
 }

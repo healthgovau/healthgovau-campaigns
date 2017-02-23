@@ -4850,28 +4850,25 @@ footer[role='contentinfo'] {
       .page-header .region-header {
         margin-bottom: 1em; } }
 
-.page-header__logo {
+header[role='banner'] .page-header__logo {
   padding: 0;
   text-align: left; }
-  .page-header__logo img {
+  header[role='banner'] .page-header__logo img {
     background-size: contain;
     display: inline-block;
     width: 170px;
     height: 41px; }
     @media screen and (min-width: 768px) {
-      .page-header__logo img {
+      header[role='banner'] .page-header__logo img {
         width: 227px;
         height: 55px; } }
     @media screen and (min-width: 75em) {
-      .page-header__logo img {
+      header[role='banner'] .page-header__logo img {
         width: 300px;
         height: 72px; } }
-  .page-header__logo header[role='banner'] a,
-  .page-header__logo a {
-    border-bottom: none; }
-    .page-header__logo header[role='banner'] a:hover, .page-header__logo header[role='banner'] a:focus,
-    .page-header__logo a:hover,
-    .page-header__logo a:focus {
+  header[role='banner'] .page-header__logo a {
+    border-bottom: 0; }
+    header[role='banner'] .page-header__logo a:hover, header[role='banner'] .page-header__logo a:focus {
       background-color: transparent; }
 
 .hero, .hero--content {
@@ -5006,10 +5003,10 @@ body main {
   width: 100%; }
 
 main {
-  margin-top: 1.2em; }
+  padding-top: 1.2em; }
   @media screen and (min-width: 768px) {
     main {
-      margin-top: 3.2em; } }
+      padding-top: 3.2em; } }
 
 .site-nav {
   padding: 0 2em;
@@ -5714,10 +5711,10 @@ body a {
       .node-type-video .region-content .wrapper .video__list--related div.group-right, .video__list--related .node-type-video .region-content .ds-wrapper div.group-right, .node-type-video .region-content .ds-wrapper .video__list--related div.group-right, .video__list--related .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact .video__list--related div.group-right {
         width: 100%; } }
 
-.band, #block-bean-share-this, .band--img-text, .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat, .breastscreen-band--partners, .girlsmove #block-bean-gmym-cards-0, #block-bean-gmym-socialmedia, .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block, .band--small, .page-feedback, .smokes-band--partners, #block-bean-quitenow-partner, .band--pad, .band--secondary, .band--gradient, .node-type-social-media .main, .girlsmove #block-views-campaign-videos-block-4, #block-views-activities-block {
+.band, #block-bean-share-this, .band--img-text, .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat, .breastscreen-band--partners, .girlsmove #block-bean-gmym-cards-0, .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block, .band--small, .page-feedback, .smokes-band--partners, #block-bean-quitenow-partner, .band--pad, .band--secondary, .band--gradient, .node-type-social-media .main, .girlsmove #block-views-campaign-videos-block-4, #block-views-activities-block {
   padding: 0.8em 0 3.2em;
   width: 100%; }
-  .band::after, #block-bean-share-this::after, .band--img-text::after, .band--img-text-halves::after, .band--img-text-halves--invert::after, .breastscreen #block-bean-breast-cancer-in-australia::after, .breastscreen #block-bean-breastscreen-mammogram::after, .breastscreen #block-bean-breastscreen-why::after, .breastscreen #block-bean-breastscreen-early-detection::after, .breastscreen #block-bean-breastscreen-stats::after, .breastscreen #block-bean-breastscreen-expanding::after, .breastscreen #block-bean-breastscreen-74::after, .breastscreen #block-bean-breastscreen-detection::after, .breastscreen #block-bean-breastscreen-chat::after, .breastscreen-band--partners::after, .girlsmove #block-bean-gmym-cards-0::after, #block-bean-gmym-socialmedia::after, .smokes-band--primary::after, .smokes.node-type-campaign #block-views-campaign-videos-block::after, .band--small::after, .page-feedback::after, .smokes-band--partners::after, #block-bean-quitenow-partner::after, .band--pad::after, .band--secondary::after, .band--gradient::after, .node-type-social-media .main::after, .girlsmove #block-views-campaign-videos-block-4::after, #block-views-activities-block::after {
+  .band::after, #block-bean-share-this::after, .band--img-text::after, .band--img-text-halves::after, .band--img-text-halves--invert::after, .breastscreen #block-bean-breast-cancer-in-australia::after, .breastscreen #block-bean-breastscreen-mammogram::after, .breastscreen #block-bean-breastscreen-why::after, .breastscreen #block-bean-breastscreen-early-detection::after, .breastscreen #block-bean-breastscreen-stats::after, .breastscreen #block-bean-breastscreen-expanding::after, .breastscreen #block-bean-breastscreen-74::after, .breastscreen #block-bean-breastscreen-detection::after, .breastscreen #block-bean-breastscreen-chat::after, .breastscreen-band--partners::after, .girlsmove #block-bean-gmym-cards-0::after, .smokes-band--primary::after, .smokes.node-type-campaign #block-views-campaign-videos-block::after, .band--small::after, .page-feedback::after, .smokes-band--partners::after, #block-bean-quitenow-partner::after, .band--pad::after, .band--secondary::after, .band--gradient::after, .node-type-social-media .main::after, .girlsmove #block-views-campaign-videos-block-4::after, #block-views-activities-block::after {
     clear: both;
     content: "";
     display: table; }
@@ -6255,11 +6252,11 @@ body.breastscreen > main .see-more {
       max-height: 215px;
       margin-top: -25px; } }
 
-.girlsmove #block-bean-gmym-cards-0, #block-bean-gmym-socialmedia {
+.girlsmove #block-bean-gmym-cards-0 {
   background-color: #EEE;
   padding-top: 0.8em; }
   @media screen and (min-width: 768px) {
-    .girlsmove #block-bean-gmym-cards-0, #block-bean-gmym-socialmedia {
+    .girlsmove #block-bean-gmym-cards-0 {
       padding-top: 3.2em; } }
 
 .girlsmove #block-views-campaign-videos-block-4, #block-views-activities-block {
@@ -6399,9 +6396,6 @@ body.breastscreen > main .see-more {
       .social__feature:last-child {
         margin-right: 0; } }
 
-#block-bean-gmym-socialmedia {
-  padding-top: 0; }
-
 .bean-social-media p {
   color: #fff; }
 
@@ -6416,39 +6410,39 @@ body.breastscreen > main .see-more {
   .node-social-media .juicer-feed ul.j-filters li {
     width: 20%; }
 
-.girlsmove .band--primary {
+.girlsmove #block-bean-gmym-socialmedia {
   background: #278288;
   color: #FFF;
   padding-bottom: 3.2em; }
-  .girlsmove .band--primary a {
+  .girlsmove #block-bean-gmym-socialmedia a {
     color: #FFF;
     border-color: #fff; }
-    .girlsmove .band--primary a:hover, .girlsmove .band--primary a:focus {
+    .girlsmove #block-bean-gmym-socialmedia a:hover, .girlsmove #block-bean-gmym-socialmedia a:focus {
       color: #278288;
       background: #fff; }
-  .girlsmove .band--primary .see-more {
+  .girlsmove #block-bean-gmym-socialmedia .see-more {
     color: #fff; }
-    .girlsmove .band--primary .see-more:hover, .girlsmove .band--primary .see-more:focus {
+    .girlsmove #block-bean-gmym-socialmedia .see-more:hover, .girlsmove #block-bean-gmym-socialmedia .see-more:focus {
       color: #278288;
       background: #fff; }
-    .girlsmove .band--primary .see-more:after {
+    .girlsmove #block-bean-gmym-socialmedia .see-more:after {
       background-image: none; }
-  .girlsmove .band--primary .social__feature {
+  .girlsmove #block-bean-gmym-socialmedia .social__feature {
     width: 100%; }
-  .girlsmove .band--primary .social__feed {
+  .girlsmove #block-bean-gmym-socialmedia .social__feed {
     width: 100%;
     margin-top: 0.8em; }
-  .girlsmove .band--primary .social__links .social__links-item a, .girlsmove .band--primary .social__links--stacked .social__links-item a,
-  .girlsmove .band--primary .social__links--stacked .social__links-item a {
+  .girlsmove #block-bean-gmym-socialmedia .social__links .social__links-item a, .girlsmove #block-bean-gmym-socialmedia .social__links--stacked .social__links-item a,
+  .girlsmove #block-bean-gmym-socialmedia .social__links--stacked .social__links-item a {
     border: 0; }
-    .girlsmove .band--primary .social__links .social__links-item a:hover, .girlsmove .band--primary .social__links--stacked .social__links-item a:hover, .girlsmove .band--primary .social__links .social__links-item a:focus, .girlsmove .band--primary .social__links--stacked .social__links-item a:focus,
-    .girlsmove .band--primary .social__links--stacked .social__links-item a:hover,
-    .girlsmove .band--primary .social__links--stacked .social__links-item a:focus {
+    .girlsmove #block-bean-gmym-socialmedia .social__links .social__links-item a:hover, .girlsmove #block-bean-gmym-socialmedia .social__links--stacked .social__links-item a:hover, .girlsmove #block-bean-gmym-socialmedia .social__links .social__links-item a:focus, .girlsmove #block-bean-gmym-socialmedia .social__links--stacked .social__links-item a:focus,
+    .girlsmove #block-bean-gmym-socialmedia .social__links--stacked .social__links-item a:hover,
+    .girlsmove #block-bean-gmym-socialmedia .social__links--stacked .social__links-item a:focus {
       background: transparent;
       border-bottom: 1px solid #fff;
       color: #fff; }
-    .girlsmove .band--primary .social__links .social__links-item a:before, .girlsmove .band--primary .social__links--stacked .social__links-item a:before,
-    .girlsmove .band--primary .social__links--stacked .social__links-item a:before {
+    .girlsmove #block-bean-gmym-socialmedia .social__links .social__links-item a:before, .girlsmove #block-bean-gmym-socialmedia .social__links--stacked .social__links-item a:before,
+    .girlsmove #block-bean-gmym-socialmedia .social__links--stacked .social__links-item a:before {
       color: #fff; }
 
 .girlsmove .hero .hero-bg, .girlsmove .hero--content .hero-bg {

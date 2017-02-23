@@ -25,10 +25,6 @@
     height: auto;
   }
 
-  // Partner band
-  #block-bean-gmym-partner {
-  }
-
   // Events band
   #block-views-event-block-1 {
     padding-bottom: $large-spacing;
@@ -192,10 +188,6 @@
 }
 
 // Juicer
-#block-bean-gmym-socialmedia {
-  @extend %gmym-band--primary;
-  padding-top: 0
-}
 
 .bean-social-media {
   p {
@@ -221,7 +213,7 @@
 }
 
 .girlsmove {
-  .band--primary {
+  #block-bean-gmym-socialmedia {
     background: $cyan;
     color: #FFF;
     padding-bottom: $large-spacing;
