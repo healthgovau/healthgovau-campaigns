@@ -262,6 +262,9 @@ body.girlsmove > main a {
       @include fill-parent();
       margin-top: $small-spacing;
     }
+    .social__links {
+      float: left;
+    }
     .social__links .social__links-item a,
     .social__links--stacked .social__links-item a {
       border: 0;

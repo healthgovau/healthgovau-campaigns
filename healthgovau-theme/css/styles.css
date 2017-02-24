@@ -6444,6 +6444,8 @@ body.girlsmove > main a {
   .girlsmove #block-bean-gmym-socialmedia .social__feed {
     width: 100%;
     margin-top: 0.8em; }
+  .girlsmove #block-bean-gmym-socialmedia .social__links, .girlsmove #block-bean-gmym-socialmedia .social__links--stacked {
+    float: left; }
   .girlsmove #block-bean-gmym-socialmedia .social__links .social__links-item a, .girlsmove #block-bean-gmym-socialmedia .social__links--stacked .social__links-item a,
   .girlsmove #block-bean-gmym-socialmedia .social__links--stacked .social__links-item a {
     border: 0; }
