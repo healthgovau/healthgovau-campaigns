@@ -6274,7 +6274,7 @@ body.breastscreen > main .see-more {
   background-image: linear-gradient(90deg,#dcf2f7, #FFFFFF); }
 
 body.girlsmove > main a {
-  border-color: #278288; }
+  border-bottom: 1px solid #278288; }
 
 .girlsmove [class*="field-item"] img {
   height: auto; }
