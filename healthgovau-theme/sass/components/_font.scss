@@ -5,12 +5,8 @@
 .footnotes {
   display: inline-block;
   font-family: $base-sans-serif;
-  font-size: $smaller-font-size;
+  font-size: $small-font-size;
   margin-top: $medium-spacing;
   padding-top: $tiny-spacing;
   border-top: 1px solid $light-grey;
-  &::before {
-    content: 'Footnote: ';
-    color: $body-text-colour;
-  }
 }

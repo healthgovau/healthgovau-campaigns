@@ -5226,14 +5226,10 @@ aside h2, aside .display {
 .footnotes {
   display: inline-block;
   font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
-  font-size: 62.5%;
+  font-size: 87.5%;
   margin-top: 1.2em;
   padding-top: 0.4em;
   border-top: 1px solid #bbbbbb; }
-  .references::before,
-  .footnotes::before {
-    content: 'Footnote: ';
-    color: #313131; }
 
 .form-required {
   color: red; }
