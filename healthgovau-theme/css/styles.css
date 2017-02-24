@@ -5107,6 +5107,12 @@ main {
 .girlsmove .list-horizontal--events .field {
   margin-bottom: 1.2em; }
 
+.page-campaign-events #block-system-main .field-name-field-video-length,
+.page-campaign-events .list-horizontal--events .field-name-field-video-length,
+.girlsmove #block-system-main .field-name-field-video-length,
+.girlsmove .list-horizontal--events .field-name-field-video-length {
+  margin-bottom: 0; }
+
 .event_status {
   font-weight: normal; }
 
