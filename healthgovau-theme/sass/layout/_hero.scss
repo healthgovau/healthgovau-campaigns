@@ -51,7 +51,6 @@ $hero-content-y-shift: 0.25;
   }
 
   .campaign-logo {
-    @include pad(0 $gutter);
     min-width: 0;
     width: auto;
     position: absolute;
