@@ -6478,6 +6478,28 @@ body.girlsmove > main a {
 .page-campaign-156 aside #block-views-exp-event-page {
   background: #ebf9fb; }
 
+#block-bean-gmym-hotline section.pre-nav {
+  padding: 0.8em 0 0.4em;
+  background: #278288;
+  color: #FFFFFF;
+  text-align: center; }
+  #block-bean-gmym-hotline section.pre-nav ul {
+    margin-bottom: 0.4em; }
+  #block-bean-gmym-hotline section.pre-nav p {
+    display: inline-block;
+    margin-right: 2em;
+    margin-bottom: 0.4em; }
+  #block-bean-gmym-hotline section.pre-nav .social__links, #block-bean-gmym-hotline section.pre-nav .social__links--stacked {
+    display: inline-block; }
+  #block-bean-gmym-hotline section.pre-nav .social__links-item {
+    margin-right: 0; }
+    #block-bean-gmym-hotline section.pre-nav .social__links-item a {
+      border: 0; }
+      #block-bean-gmym-hotline section.pre-nav .social__links-item a:hover, #block-bean-gmym-hotline section.pre-nav .social__links-item a:focus {
+        background-color: transparent; }
+      #block-bean-gmym-hotline section.pre-nav .social__links-item a:before {
+        color: #FFFFFF; }
+
 .girlsmove .hero .hero-bg, .girlsmove .hero--content .hero-bg,
 .girlsmove .hero--content .hero-bg,
 .page-campaign-156 .hero .hero-bg,

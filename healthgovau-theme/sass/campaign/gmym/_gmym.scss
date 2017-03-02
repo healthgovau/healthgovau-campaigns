@@ -20,7 +20,6 @@
   @include linear-gradient(90deg, #dcf2f7, #FFFFFF, $fallback: #dcf2f7);
 }
 
-
 body.girlsmove > main a {
   border-bottom-color: $cyan;
 }
@@ -31,7 +30,6 @@ body.girlsmove > main a {
   [class *= "field-item"] img {
     height: auto;
   }
-
 
   // Events band
   #block-views-event-block-1 {
@@ -298,6 +296,40 @@ body.girlsmove > main a {
   aside {
     #block-views-exp-event-page {
       background: $light-blue;
+    }
+  }
+}
+
+// Pre-nav
+#block-bean-gmym-hotline {
+  section.pre-nav {
+    @include pad($small-spacing 0 $tiny-spacing);
+    background: $cyan;
+    color: $white;
+    text-align: center;
+    ul {
+      margin-bottom: $tiny-spacing;
+    }
+    p {
+      display: inline-block;
+      margin-right: 2em;
+      margin-bottom: $tiny-spacing;
+    }
+    .social__links {
+      display: inline-block;
+    }
+    .social__links-item {
+      margin-right: 0;
+      a {
+        border: 0;
+        &:hover,
+        &:focus {
+          background-color: transparent;
+        }
+        &:before {
+          color: $white;
+        }
+      }
     }
   }
 }
