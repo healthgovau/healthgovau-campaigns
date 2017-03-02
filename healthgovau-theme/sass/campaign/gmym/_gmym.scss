@@ -316,9 +316,10 @@ body.girlsmove > main a {
       margin-bottom: $tiny-spacing;
     }
     .social__links {
-      display: inline-block;
+      display: inline;
     }
     .social__links-item {
+      display: inline;
       margin-right: 0;
       a {
         border: 0;

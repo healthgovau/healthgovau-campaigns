@@ -6490,8 +6490,9 @@ body.girlsmove > main a {
     margin-right: 2em;
     margin-bottom: 0.4em; }
   #block-bean-gmym-hotline section.pre-nav .social__links, #block-bean-gmym-hotline section.pre-nav .social__links--stacked {
-    display: inline-block; }
+    display: inline; }
   #block-bean-gmym-hotline section.pre-nav .social__links-item {
+    display: inline;
     margin-right: 0; }
     #block-bean-gmym-hotline section.pre-nav .social__links-item a {
       border: 0; }
