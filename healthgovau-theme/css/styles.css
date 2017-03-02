@@ -6326,7 +6326,7 @@ body.girlsmove > main a {
 
 #block-views-activities-block {
   padding-bottom: 3.2em;
-  background: #ffedf1; }
+  background: #ffe2e9; }
   #block-views-activities-block .activity__selector {
     width: 100%;
     overflow: hidden; }
@@ -6383,8 +6383,8 @@ body.girlsmove > main a {
             -ms-flex: 0 0 50%;
                 flex: 0 0 50%; }
   #block-views-activities-block .list--cards > li {
-    -webkit-box-shadow: 0 3px 20px #ffbac9;
-    box-shadow: 0 3px 20px #ffbac9; }
+    -webkit-box-shadow: 0 3px 20px #ffafc2;
+    box-shadow: 0 3px 20px #ffafc2; }
 
 .list-horizontal--narrow > li figure {
   width: 100%;
