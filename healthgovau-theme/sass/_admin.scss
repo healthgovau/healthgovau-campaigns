@@ -1,0 +1,28 @@
+// Styles to fix any Drupal admin UI issues arising from UI kit integration
+
+#block-workbench-block {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.inline-tab-nav {
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body > main {
+  .inline-tab-nav a {
+    border-bottom-color: transparent;
+    color: #313131;
+    &.is-current,
+    &.is-active {
+      color: #313131;
+    }
+    &:hover,
+    &:focus {
+      background-color: #def4f9;
+      color: #313131;
+    }
+  }
+}
