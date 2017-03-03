@@ -71,7 +71,7 @@ body.girlsmove > main a {
     padding-bottom: $large-spacing;
     .list-vertical--thirds li.views-row { //.views-row prevents application to Drupal menus
       @include media($desktop) {
-        min-height: 460px;
+        min-height: 375px;
       }
     }
   }
