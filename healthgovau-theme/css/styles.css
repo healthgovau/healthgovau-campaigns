@@ -6227,6 +6227,13 @@ body.breastscreen > main .see-more {
   .breastscreen .see-more:after {
     display: none; }
 
+.breastscreen .block-link {
+  color: #fff;
+  background: #d51364;
+  display: block;
+  text-align: center;
+  margin-top: 50px; }
+
 @media screen and (max-width: 420px) {
   .breastscreen .hero .hero-bg, .breastscreen .hero--content .hero-bg {
     background-position-y: 22px; } }
@@ -6654,3 +6661,21 @@ footer[role='contentinfo'] .footer-top nav > li {
 
 .field-name-field-campaign {
   display: none; }
+
+#block-workbench-block {
+  max-width: 75em;
+  margin: 0 auto; }
+
+.inline-tab-nav {
+  max-width: 75em;
+  margin-left: auto;
+  margin-right: auto; }
+
+body > main .inline-tab-nav a {
+  border-bottom-color: transparent;
+  color: #313131; }
+  body > main .inline-tab-nav a.is-current, body > main .inline-tab-nav a.is-active {
+    color: #313131; }
+  body > main .inline-tab-nav a:hover, body > main .inline-tab-nav a:focus {
+    background-color: #def4f9;
+    color: #313131; }
