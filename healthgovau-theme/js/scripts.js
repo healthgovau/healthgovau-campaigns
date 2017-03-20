@@ -64,7 +64,8 @@ Drupal.behaviors.healthgovauCampaign = {
     });
 
     // Active links
-    $('.activity__selector .tags a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+	var path = window.location.pathname + window.location.search;
+    $('.activity__selector .tags a[href="' + path + '"]').addClass('active');
 
     
   }
