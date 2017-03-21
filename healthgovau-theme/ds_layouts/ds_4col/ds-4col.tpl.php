@@ -12,7 +12,7 @@
 <div class="ds-4col group-top">
   <div class="ds-wrapper video">
     <div class="title">
-      <?php print $title; ?>
+      <h2><?php print $title; ?></h2>
     </div>
     <div class="group-top-left">
       <div class="video__thumb video-wrapper">
