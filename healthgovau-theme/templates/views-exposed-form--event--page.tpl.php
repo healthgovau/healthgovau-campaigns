@@ -37,9 +37,7 @@
         <?php endif; ?>
         <?php if (!empty($widget->description)): ?>
           <div class="description">
-            <strong>
-              <?php print $widget->description; ?>
-            </strong>
+            <strong><?php print $widget->description; ?></strong>
           </div>
         <?php endif; ?>
         <?php if (!empty($widget->operator)): ?>
