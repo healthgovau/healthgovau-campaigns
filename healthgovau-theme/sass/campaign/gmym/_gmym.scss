@@ -161,7 +161,7 @@ body.girlsmove > main a {
   }
 
   .list--cards > li {
-    @include box-shadow($color: darken($light-red, 10%));
+    @include box-shadow($color: #91c1c5);
   }
 
 }
