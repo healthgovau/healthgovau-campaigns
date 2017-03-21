@@ -28,6 +28,22 @@ function healthgovau_preprocess_html(&$variables) {
     }
   }
 
+  // Attributes for html element.
+  $variables['html_attributes_array'] = array(
+    'lang' => $variables['language']->language,
+    'dir' => $variables['language']->dir,
+  );
+
+  // Serialize RDF Namespaces into an RDFa 1.1 prefix attribute.
+  if ($variables['rdf_namespaces']) {
+    $prefixes = array();
+    foreach (explode("\n  ", ltrim($variables['rdf_namespaces'])) as $namespace) {
+      // Remove xlmns: and ending quote and fix prefix formatting.
+      $prefixes[] = str_replace('="', ': ', substr($namespace, 6, -1));
+    }
+    $variables['rdf_namespaces'] = ' prefix="' . implode(' ', $prefixes) . '"';
+  }
+
   // Add page title to body class.
   $title = $variables['head_title_array']['title'];
   $title = strtolower(str_replace(' ', '-', $title));
@@ -69,6 +85,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	  }
 	});', 'inline');
 }
+
+/**
+ * Override or insert variables into the html templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered ("html" in this case.)
+ */
+function healthgovau_process_html(&$variables, $hook) {
+  // Flatten out html_attributes.
+  $variables['html_attributes'] = drupal_attributes($variables['html_attributes_array']);
+}
+
 
 /**
  * Implements THEME_preprocess_field().
