@@ -5,3 +5,4 @@ build/src/ui-kit
 node_modules
 .idea
 Thumbs.db
+.DS_STORE
