@@ -6333,7 +6333,11 @@ body.girlsmove > main a {
 
 #block-views-activities-block {
   padding-bottom: 3.2em;
-  background: #ffe2e9; }
+  background-image: url("../images/../images/bg-textures/Prismic.svg");
+  background-color: #fff;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: cover; }
   #block-views-activities-block .activity__selector {
     width: 100%;
     overflow: hidden; }
@@ -6345,13 +6349,6 @@ body.girlsmove > main a {
       float: left; }
     #block-views-activities-block .activity__selector .tags {
       float: left; }
-      #block-views-activities-block .activity__selector .tags a {
-        background-color: #fff;
-        border-color: #c3274e;
-        color: #c3274e; }
-        #block-views-activities-block .activity__selector .tags a:hover, #block-views-activities-block .activity__selector .tags a:focus {
-          background-color: #c3274e;
-          color: #FFF; }
   #block-views-activities-block .view-activities {
     width: 100%; }
   #block-views-activities-block .field-name-field-image {

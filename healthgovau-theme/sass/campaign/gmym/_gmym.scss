@@ -108,7 +108,11 @@ body.girlsmove > main a {
 #block-views-activities-block {
   @extend .band;
   padding-bottom: $large-spacing;
-  background: $light-red;
+  background-image: image-url("../images/bg-textures/Prismic.svg");
+  background-color: #fff;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: cover;
   @include direction-context(right-to-left) {
     .activity__selector {
       @include fill-parent();
@@ -123,16 +127,6 @@ body.girlsmove > main a {
       }
       .tags {
         float: left;
-        a {
-          background-color: #fff;
-          border-color: $red;
-          color: $red;
-          &:hover,
-          &:focus {
-            background-color: $red;
-            color: #FFF;
-          }
-        }
       }
     }
     .view-activities {
