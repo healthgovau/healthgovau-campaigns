@@ -127,6 +127,14 @@ body.girlsmove > main a {
       }
       .tags {
         float: left;
+        a {
+          background: #FFF;
+          &:hover,
+          &:focus {
+            background: $cyan;
+            color: #FFF;
+          }
+        }
       }
     }
     .view-activities {

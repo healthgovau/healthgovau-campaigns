@@ -6349,6 +6349,11 @@ body.girlsmove > main a {
       float: left; }
     #block-views-activities-block .activity__selector .tags {
       float: left; }
+      #block-views-activities-block .activity__selector .tags a {
+        background: #FFF; }
+        #block-views-activities-block .activity__selector .tags a:hover, #block-views-activities-block .activity__selector .tags a:focus {
+          background: #278288;
+          color: #FFF; }
   #block-views-activities-block .view-activities {
     width: 100%; }
   #block-views-activities-block .field-name-field-image {
