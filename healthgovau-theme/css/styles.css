@@ -6508,6 +6508,10 @@ body.girlsmove > main a {
       #block-bean-gmym-hotline section.pre-nav .social__links-item a:before {
         color: #FFFFFF; }
 
+.activity__selector .tags a.active {
+  background: #278288;
+  color: #fff; }
+
 .girlsmove .hero .hero-bg, .girlsmove .hero--content .hero-bg,
 .girlsmove .hero--content .hero-bg,
 .page-campaign-156 .hero .hero-bg,

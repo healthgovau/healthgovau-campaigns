@@ -5081,25 +5081,35 @@ footer[role='contentinfo'] {
   margin-top: 0; }
 
 .page-header {
-  padding-bottom: 1.6em;
+  padding-bottom: 0.8em;
+  padding-top: 0.8em;
   -webkit-box-shadow: none;
           box-shadow: none;
   background-color: #FFFFFF; }
+  @media screen and (min-width: 768px) {
+    .page-header {
+      padding-bottom: 1.6em;
+      padding-top: 1.6em; } }
+  .page-header .region-header {
+    margin-bottom: 0; }
+    @media screen and (min-width: 768px) {
+      .page-header .region-header {
+        margin-bottom: 1em; } }
 
 .page-header__logo {
   padding: 0; }
-  .page-header__logo .logo {
+  .page-header__logo img {
     background-image: url("../img/health_crest.png");
     background-size: contain;
     display: inline-block;
-    width: 200px;
-    height: 48px; }
+    width: 170px;
+    height: 41px; }
     @media screen and (min-width: 768px) {
-      .page-header__logo .logo {
+      .page-header__logo img {
         width: 227px;
         height: 55px; } }
     @media screen and (min-width: 75em) {
-      .page-header__logo .logo {
+      .page-header__logo img {
         width: 300px;
         height: 72px; } }
 
