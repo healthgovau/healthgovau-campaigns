@@ -20,7 +20,7 @@
 <?php endif; ?>
 
 <article>
-  <h3><?php print $title; ?></h3>
+  <?php print $title; ?>
   <?php if (!empty($meta)): ?>
   <div class="meta">
     <?php print $meta; ?>
