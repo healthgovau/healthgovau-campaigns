@@ -116,7 +116,7 @@ $bottom = render($page['bottom']);
     </section>
     <section class="footer-bottom">
       <div class="footer-logo">
-        <img alt="Australian Government Coat of Arms" src="<?php print $images; ?>/coat-of-arms.png">
+        <img alt="Australian Government Coat of Arms" src="<?php print $images; ?>/coat-of-arms.png" />
       </div> 
       <div class="footer-links">
         <?php print render($page['footer_bottom']); ?>

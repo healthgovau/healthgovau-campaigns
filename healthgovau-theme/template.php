@@ -140,7 +140,7 @@ function healthgovau_preprocess_field(&$variables) {
         $src = GOOGLE_MAP_API . '?center=' . $lat . ',' . $long . '&zoom=13&size=300x300&maptype=roadmap&key=' . $google_api;
         $src .= '&markers=color:blue%7Clabel:S%7C' . $lat . ',' . $long;
         $address = $variables['items'][0]['#address'];
-        $variables['location_map'] ='<img src="' . $src . '" alt="' . $address['thoroughfare'] . ' ' . $address['locality'] .'">';
+        $variables['location_map'] ='<img src="' . $src . '" alt="' . $address['thoroughfare'] . ' ' . $address['locality'] .'" />';
       }
     }
   }
