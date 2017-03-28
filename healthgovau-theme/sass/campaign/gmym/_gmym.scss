@@ -66,7 +66,8 @@ body.girlsmove > main a {
   // Activities video band
   #block-views-campaign-videos-block-4 {
     @extend .band;
-    background: $light-purple;
+    //background: $light-purple;
+    background: #e8f7f9;
     padding-top: $medium-spacing;
     padding-bottom: $large-spacing;
     .list-vertical--thirds li.views-row { //.views-row prevents application to Drupal menus
@@ -108,8 +109,8 @@ body.girlsmove > main a {
 #block-views-activities-block {
   @extend .band;
   padding-bottom: $large-spacing;
-  background-image: image-url("../images/bg-textures/Prismic.svg");
-  background-color: #fff;
+  // background-image: image-url("../images/bg-textures/Prismic.svg");
+  background-color: #e8f7f9;
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: cover;
