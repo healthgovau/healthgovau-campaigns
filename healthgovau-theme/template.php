@@ -517,7 +517,7 @@ function _healthgovau_campaign_activity_filter() {
   $markup = '<div class="activity__selector"><h3>Find your activity</h3><p>Do you prefer?</p>';
   $markup .= '<div class="tags"><dl><dt class="visuallyhidden">Type</dt>';
   foreach($terms as $term) {
-    $markup .= '<dd><a href="/campaign/' . arg(1) . '/activities?field_activity_type_tid[]=' . $term->tid . '">' . $term->name . '</a></dd>';
+    $markup .= '<dd><a href="/campaign/' . arg(1) . '/activities?field_activity_type_tid%5B%5D=' . $term->tid . '">' . $term->name . '</a></dd>';
   }
   $markup .= '</dl></div></div>';
   
