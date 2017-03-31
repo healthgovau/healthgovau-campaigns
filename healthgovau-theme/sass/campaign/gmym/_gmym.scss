@@ -20,6 +20,33 @@
   @include linear-gradient(90deg, #dcf2f7, #FFFFFF, $fallback: #dcf2f7);
 }
 
+// Img/text bands
+#block-bean-ymca-featured .wrapper {
+  padding-top: 30px;
+  background: #fffff1;
+  .band__img {
+    line-height: 0;
+    @include fill-parent;
+    @include media($tablet) {
+      @include span-columns(4 of 12);
+    }
+    @include media($desktop) {
+      @include span-columns(6 of 16);
+    }
+  }
+
+  .band__text {
+    @include fill-parent;
+    @include media($tablet) {
+      @include span-columns(8 of 12);
+      margin-bottom: $large-spacing;
+    }
+    @include media($desktop) {
+      @include span-columns(10 of 16);
+    }
+  }
+}
+
 body.girlsmove > main a {
   border-bottom-color: $cyan;
 }
