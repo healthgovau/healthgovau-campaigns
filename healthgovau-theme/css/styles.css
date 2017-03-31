@@ -620,16 +620,19 @@ header[role='banner'] a[rel~='external']::after, body > main a[rel~='external']:
   p,
   h2,
   .display,
+  .video-title,
   h3,
   footer[role='contentinfo'] .footer-top h2,
   footer[role='contentinfo'] .footer-top .display,
+  footer[role='contentinfo'] .footer-top .video-title,
   .view-event .field-name-title {
     orphans: 3;
     widows: 3; }
-  h2, .display,
+  h2, .display, .video-title,
   h3,
   footer[role='contentinfo'] .footer-top h2,
   footer[role='contentinfo'] .footer-top .display,
+  footer[role='contentinfo'] .footer-top .video-title,
   .view-event .field-name-title {
     page-break-after: avoid; } }
 
@@ -1739,7 +1742,7 @@ Style guide: List styles.4 Highlighted word style
     padding: 2.74614% 0;
     border-bottom: solid 1px #bbbbbb;
     margin-bottom: 0; }
-  .list-horizontal h2, .list-horizontal--events h2, .list-horizontal--narrow h2, .list-horizontal--benefits h2, .list-vertical h2, .list-vertical--thirds h2, .list-vertical--fourths h2, footer[role='contentinfo'] .footer-top nav h2, .list-vertical--halves h2, .list-small h2, .list-highlighted h2, .list-horizontal .display, .list-horizontal--events .display, .list-horizontal--narrow .display, .list-horizontal--benefits .display, .list-vertical .display, .list-vertical--thirds .display, .list-vertical--fourths .display, footer[role='contentinfo'] .footer-top nav .display, .list-vertical--halves .display, .list-small .display, .list-highlighted .display, .list-horizontal h3, .list-horizontal--events h3, .list-horizontal--narrow h3, .list-horizontal--benefits h3, .list-vertical h3, .list-vertical--thirds h3, .list-vertical--fourths h3, footer[role='contentinfo'] .footer-top nav h3, .list-vertical--halves h3, .list-small h3, .list-highlighted h3, .list-horizontal footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-horizontal h2, .list-horizontal--events footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-horizontal--events h2, .list-horizontal--narrow footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-horizontal--narrow h2, .list-horizontal--benefits footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-horizontal--benefits h2, .list-vertical footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical h2, .list-vertical--thirds footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--thirds h2, .list-vertical--fourths footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--fourths h2, footer[role='contentinfo'] .footer-top nav h2, .list-vertical--halves footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--halves h2, .list-small footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-small h2, .list-highlighted footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-highlighted h2, .list-horizontal footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-horizontal .display, .list-horizontal--events footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-horizontal--events .display, .list-horizontal--narrow footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-horizontal--narrow .display, .list-horizontal--benefits footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-horizontal--benefits .display, .list-vertical footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical .display, .list-vertical--thirds footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--thirds .display, .list-vertical--fourths footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--fourths .display, footer[role='contentinfo'] .footer-top nav .display, .list-vertical--halves footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--halves .display, .list-small footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-small .display, .list-highlighted footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-highlighted .display, .list-horizontal .view-event .field-name-title, .view-event .list-horizontal .field-name-title, .list-horizontal--events .view-event .field-name-title, .view-event .list-horizontal--events .field-name-title, .list-horizontal--narrow .view-event .field-name-title, .view-event .list-horizontal--narrow .field-name-title, .list-horizontal--benefits .view-event .field-name-title, .view-event .list-horizontal--benefits .field-name-title, .list-vertical .view-event .field-name-title, .view-event .list-vertical .field-name-title, .list-vertical--thirds .view-event .field-name-title, .view-event .list-vertical--thirds .field-name-title, .list-vertical--fourths .view-event .field-name-title, .view-event .list-vertical--fourths .field-name-title, footer[role='contentinfo'] .footer-top nav .view-event .field-name-title, .view-event footer[role='contentinfo'] .footer-top nav .field-name-title, .list-vertical--halves .view-event .field-name-title, .view-event .list-vertical--halves .field-name-title, .list-small .view-event .field-name-title, .view-event .list-small .field-name-title, .list-highlighted .view-event .field-name-title, .view-event .list-highlighted .field-name-title, .list-horizontal h4, .list-horizontal--events h4, .list-horizontal--narrow h4, .list-horizontal--benefits h4, .list-vertical h4, .list-vertical--thirds h4, .list-vertical--fourths h4, footer[role='contentinfo'] .footer-top nav h4, .list-vertical--halves h4, .list-small h4, .list-highlighted h4, .list-horizontal h5, .list-horizontal--events h5, .list-horizontal--narrow h5, .list-horizontal--benefits h5, .list-vertical h5, .list-vertical--thirds h5, .list-vertical--fourths h5, footer[role='contentinfo'] .footer-top nav h5, .list-vertical--halves h5, .list-small h5, .list-highlighted h5, .list-horizontal h6, .list-horizontal--events h6, .list-horizontal--narrow h6, .list-horizontal--benefits h6, .list-vertical h6, .list-vertical--thirds h6, .list-vertical--fourths h6, footer[role='contentinfo'] .footer-top nav h6, .list-vertical--halves h6, .list-small h6, .list-highlighted h6 {
+  .list-horizontal h2, .list-horizontal--events h2, .list-horizontal--narrow h2, .list-horizontal--benefits h2, .list-vertical h2, .list-vertical--thirds h2, .list-vertical--fourths h2, footer[role='contentinfo'] .footer-top nav h2, .list-vertical--halves h2, .list-small h2, .list-highlighted h2, .list-horizontal .display, .list-horizontal--events .display, .list-horizontal--narrow .display, .list-horizontal--benefits .display, .list-vertical .display, .list-vertical--thirds .display, .list-vertical--fourths .display, footer[role='contentinfo'] .footer-top nav .display, .list-vertical--halves .display, .list-small .display, .list-highlighted .display, .list-horizontal .video-title, .list-horizontal--events .video-title, .list-horizontal--narrow .video-title, .list-horizontal--benefits .video-title, .list-vertical .video-title, .list-vertical--thirds .video-title, .list-vertical--fourths .video-title, footer[role='contentinfo'] .footer-top nav .video-title, .list-vertical--halves .video-title, .list-small .video-title, .list-highlighted .video-title, .list-horizontal h3, .list-horizontal--events h3, .list-horizontal--narrow h3, .list-horizontal--benefits h3, .list-vertical h3, .list-vertical--thirds h3, .list-vertical--fourths h3, footer[role='contentinfo'] .footer-top nav h3, .list-vertical--halves h3, .list-small h3, .list-highlighted h3, .list-horizontal footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-horizontal h2, .list-horizontal--events footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-horizontal--events h2, .list-horizontal--narrow footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-horizontal--narrow h2, .list-horizontal--benefits footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-horizontal--benefits h2, .list-vertical footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical h2, .list-vertical--thirds footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--thirds h2, .list-vertical--fourths footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--fourths h2, footer[role='contentinfo'] .footer-top nav h2, .list-vertical--halves footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--halves h2, .list-small footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-small h2, .list-highlighted footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-highlighted h2, .list-horizontal footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-horizontal .display, .list-horizontal--events footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-horizontal--events .display, .list-horizontal--narrow footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-horizontal--narrow .display, .list-horizontal--benefits footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-horizontal--benefits .display, .list-vertical footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical .display, .list-vertical--thirds footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--thirds .display, .list-vertical--fourths footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--fourths .display, footer[role='contentinfo'] .footer-top nav .display, .list-vertical--halves footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--halves .display, .list-small footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-small .display, .list-highlighted footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-highlighted .display, .list-horizontal footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-horizontal .video-title, .list-horizontal--events footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-horizontal--events .video-title, .list-horizontal--narrow footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-horizontal--narrow .video-title, .list-horizontal--benefits footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-horizontal--benefits .video-title, .list-vertical footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-vertical .video-title, .list-vertical--thirds footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-vertical--thirds .video-title, .list-vertical--fourths footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-vertical--fourths .video-title, footer[role='contentinfo'] .footer-top nav .video-title, .list-vertical--halves footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-vertical--halves .video-title, .list-small footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-small .video-title, .list-highlighted footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-highlighted .video-title, .list-horizontal .view-event .field-name-title, .view-event .list-horizontal .field-name-title, .list-horizontal--events .view-event .field-name-title, .view-event .list-horizontal--events .field-name-title, .list-horizontal--narrow .view-event .field-name-title, .view-event .list-horizontal--narrow .field-name-title, .list-horizontal--benefits .view-event .field-name-title, .view-event .list-horizontal--benefits .field-name-title, .list-vertical .view-event .field-name-title, .view-event .list-vertical .field-name-title, .list-vertical--thirds .view-event .field-name-title, .view-event .list-vertical--thirds .field-name-title, .list-vertical--fourths .view-event .field-name-title, .view-event .list-vertical--fourths .field-name-title, footer[role='contentinfo'] .footer-top nav .view-event .field-name-title, .view-event footer[role='contentinfo'] .footer-top nav .field-name-title, .list-vertical--halves .view-event .field-name-title, .view-event .list-vertical--halves .field-name-title, .list-small .view-event .field-name-title, .view-event .list-small .field-name-title, .list-highlighted .view-event .field-name-title, .view-event .list-highlighted .field-name-title, .list-horizontal h4, .list-horizontal--events h4, .list-horizontal--narrow h4, .list-horizontal--benefits h4, .list-vertical h4, .list-vertical--thirds h4, .list-vertical--fourths h4, footer[role='contentinfo'] .footer-top nav h4, .list-vertical--halves h4, .list-small h4, .list-highlighted h4, .list-horizontal h5, .list-horizontal--events h5, .list-horizontal--narrow h5, .list-horizontal--benefits h5, .list-vertical h5, .list-vertical--thirds h5, .list-vertical--fourths h5, footer[role='contentinfo'] .footer-top nav h5, .list-vertical--halves h5, .list-small h5, .list-highlighted h5, .list-horizontal h6, .list-horizontal--events h6, .list-horizontal--narrow h6, .list-horizontal--benefits h6, .list-vertical h6, .list-vertical--thirds h6, .list-vertical--fourths h6, footer[role='contentinfo'] .footer-top nav h6, .list-vertical--halves h6, .list-small h6, .list-highlighted h6 {
     margin-top: 0;
     margin-bottom: 0.4em;
     font-size: 1.125rem;
@@ -1802,7 +1805,7 @@ Style guide: List styles.4 Highlighted word style
       -webkit-flex-wrap: wrap;
           -ms-flex-wrap: wrap;
               flex-wrap: wrap; }
-      .list-vertical > li article h3, .list-vertical--thirds > li article h3, .list-vertical--fourths > li article h3, footer[role='contentinfo'] .footer-top nav > li article h3, .list-vertical--halves > li article h3, .list-vertical > li article footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical > li article h2, .list-vertical--thirds > li article footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--thirds > li article h2, .list-vertical--fourths > li article footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--fourths > li article h2, footer[role='contentinfo'] .footer-top nav > li article h2, .list-vertical--halves > li article footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--halves > li article h2, .list-vertical > li article footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical > li article .display, .list-vertical--thirds > li article footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--thirds > li article .display, .list-vertical--fourths > li article footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--fourths > li article .display, footer[role='contentinfo'] .footer-top nav > li article .display, .list-vertical--halves > li article footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--halves > li article .display, .list-vertical > li article .view-event .field-name-title, .view-event .list-vertical > li article .field-name-title, .list-vertical--thirds > li article .view-event .field-name-title, .view-event .list-vertical--thirds > li article .field-name-title, .list-vertical--fourths > li article .view-event .field-name-title, .view-event .list-vertical--fourths > li article .field-name-title, footer[role='contentinfo'] .footer-top nav > li article .view-event .field-name-title, .view-event footer[role='contentinfo'] .footer-top nav > li article .field-name-title, .list-vertical--halves > li article .view-event .field-name-title, .view-event .list-vertical--halves > li article .field-name-title, .list-vertical > li article div, .list-vertical--thirds > li article div, .list-vertical--fourths > li article div, footer[role='contentinfo'] .footer-top nav > li article div, .list-vertical--halves > li article div, .list-vertical > li article p, .list-vertical--thirds > li article p, .list-vertical--fourths > li article p, footer[role='contentinfo'] .footer-top nav > li article p, .list-vertical--halves > li article p {
+      .list-vertical > li article h3, .list-vertical--thirds > li article h3, .list-vertical--fourths > li article h3, footer[role='contentinfo'] .footer-top nav > li article h3, .list-vertical--halves > li article h3, .list-vertical > li article footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical > li article h2, .list-vertical--thirds > li article footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--thirds > li article h2, .list-vertical--fourths > li article footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--fourths > li article h2, footer[role='contentinfo'] .footer-top nav > li article h2, .list-vertical--halves > li article footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--halves > li article h2, .list-vertical > li article footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical > li article .display, .list-vertical--thirds > li article footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--thirds > li article .display, .list-vertical--fourths > li article footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--fourths > li article .display, footer[role='contentinfo'] .footer-top nav > li article .display, .list-vertical--halves > li article footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--halves > li article .display, .list-vertical > li article footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-vertical > li article .video-title, .list-vertical--thirds > li article footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-vertical--thirds > li article .video-title, .list-vertical--fourths > li article footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-vertical--fourths > li article .video-title, footer[role='contentinfo'] .footer-top nav > li article .video-title, .list-vertical--halves > li article footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-vertical--halves > li article .video-title, .list-vertical > li article .view-event .field-name-title, .view-event .list-vertical > li article .field-name-title, .list-vertical--thirds > li article .view-event .field-name-title, .view-event .list-vertical--thirds > li article .field-name-title, .list-vertical--fourths > li article .view-event .field-name-title, .view-event .list-vertical--fourths > li article .field-name-title, footer[role='contentinfo'] .footer-top nav > li article .view-event .field-name-title, .view-event footer[role='contentinfo'] .footer-top nav > li article .field-name-title, .list-vertical--halves > li article .view-event .field-name-title, .view-event .list-vertical--halves > li article .field-name-title, .list-vertical > li article div, .list-vertical--thirds > li article div, .list-vertical--fourths > li article div, footer[role='contentinfo'] .footer-top nav > li article div, .list-vertical--halves > li article div, .list-vertical > li article p, .list-vertical--thirds > li article p, .list-vertical--fourths > li article p, footer[role='contentinfo'] .footer-top nav > li article p, .list-vertical--halves > li article p {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 100%;
             -ms-flex: 0 0 100%;
@@ -2745,12 +2748,14 @@ Style guide: Navigation.7 Skip links
   margin: 3.2em 0 1.6em 0;
   border-left: 0.4em solid #f0f3f5;
   padding: 0 0 1.2em 1.2em; }
-  .index-links h2, .index-links .display,
+  .index-links h2, .index-links .display, .index-links .video-title,
   .index-links h3,
   .index-links footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top
   .index-links h2,
   .index-links footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top
   .index-links .display,
+  .index-links footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top
+  .index-links .video-title,
   .index-links .view-event .field-name-title, .view-event
   .index-links .field-name-title,
   .index-links h4,
@@ -2871,11 +2876,14 @@ Style guide: Navigation.07 Tab navigation
   .hero-med .inline-tab-nav .site-title,
   .inline-tab-nav h2,
   .inline-tab-nav .display,
+  .inline-tab-nav .video-title,
   .inline-tab-nav h3,
   .inline-tab-nav footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top
   .inline-tab-nav h2,
   .inline-tab-nav footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top
   .inline-tab-nav .display,
+  .inline-tab-nav footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top
+  .inline-tab-nav .video-title,
   .inline-tab-nav .view-event .field-name-title, .view-event
   .inline-tab-nav .field-name-title,
   .inline-tab-nav h4,
@@ -2897,11 +2905,14 @@ Style guide: Navigation.07 Tab navigation
       .hero-med .inline-tab-nav .site-title,
       .inline-tab-nav h2,
       .inline-tab-nav .display,
+      .inline-tab-nav .video-title,
       .inline-tab-nav h3,
       .inline-tab-nav footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top
       .inline-tab-nav h2,
       .inline-tab-nav footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top
       .inline-tab-nav .display,
+      .inline-tab-nav footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top
+      .inline-tab-nav .video-title,
       .inline-tab-nav .view-event .field-name-title, .view-event
       .inline-tab-nav .field-name-title,
       .inline-tab-nav h4,
@@ -3058,7 +3069,8 @@ footer[role='contentinfo'] {
     .hero-med footer[role='contentinfo'] .footer-top nav .footer-menu .site-title,
     footer[role='contentinfo'] .footer-top nav .footer-menu h2,
     footer[role='contentinfo'] .footer-top nav .footer-menu .display,
-    footer[role='contentinfo'] .footer-top nav .footer-menu h3, footer[role='contentinfo'] .footer-top nav .footer-menu h2, footer[role='contentinfo'] .footer-top nav .footer-menu .display,
+    footer[role='contentinfo'] .footer-top nav .footer-menu .video-title,
+    footer[role='contentinfo'] .footer-top nav .footer-menu h3, footer[role='contentinfo'] .footer-top nav .footer-menu h2, footer[role='contentinfo'] .footer-top nav .footer-menu .display, footer[role='contentinfo'] .footer-top nav .footer-menu .video-title,
     footer[role='contentinfo'] .footer-top nav .footer-menu .view-event .field-name-title, .view-event
     footer[role='contentinfo'] .footer-top nav .footer-menu .field-name-title,
     footer[role='contentinfo'] .footer-top nav .footer-menu h4 {
@@ -3313,9 +3325,10 @@ Style guide: Page header.01 Header
 .govau--header .links-group,
 .prerelease-govau--header .links-group {
   margin: 2.4em 0; }
-  .govau--header .links-group h2, .govau--header .links-group .display,
+  .govau--header .links-group h2, .govau--header .links-group .display, .govau--header .links-group .video-title,
   .prerelease-govau--header .links-group h2,
-  .prerelease-govau--header .links-group .display {
+  .prerelease-govau--header .links-group .display,
+  .prerelease-govau--header .links-group .video-title {
     font-size: 1.0625rem;
     font-weight: 700;
     margin-top: 0;
@@ -4154,9 +4167,11 @@ h1, .hero .site-title, .hero--content .site-title,
 .hero-med .site-title,
 h2,
 .display,
+.video-title,
 h3,
 footer[role='contentinfo'] .footer-top h2,
 footer[role='contentinfo'] .footer-top .display,
+footer[role='contentinfo'] .footer-top .video-title,
 .view-event .field-name-title,
 h4 {
   line-height: 1.4;
@@ -4185,22 +4200,22 @@ h1, .hero .site-title, .hero--content .site-title,
   .hero-med .site-title:first-of-type {
     margin-top: 0.4em; }
 
-h2, .display {
+h2, .display, .video-title {
   font-size: 2rem;
   line-height: 1.2;
   margin-top: 1.6em;
   margin-bottom: 1em; }
   @media screen and (min-width: 768px) {
-    h2, .display {
+    h2, .display, .video-title {
       font-size: 2.5rem; } }
 
-h3, footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .display, .view-event .field-name-title {
+h3, footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .video-title, .view-event .field-name-title {
   font-size: 1.5rem;
   font-weight: 700;
   margin-top: 1.46667em;
   margin-bottom: 0.8em; }
   @media screen and (min-width: 768px) {
-    h3, footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .display, .view-event .field-name-title {
+    h3, footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .video-title, .view-event .field-name-title {
       font-size: 1.625rem; } }
 
 h4,
@@ -4216,11 +4231,14 @@ h6 {
 .hero-med .gov-speak .site-title,
 .gov-speak h2,
 .gov-speak .display,
+.gov-speak .video-title,
 .gov-speak h3,
 .gov-speak footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top
 .gov-speak h2,
 .gov-speak footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top
 .gov-speak .display,
+.gov-speak footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top
+.gov-speak .video-title,
 .gov-speak .view-event .field-name-title, .view-event
 .gov-speak .field-name-title,
 .gov-speak h4,
@@ -4259,18 +4277,18 @@ h6 {
   .hero-med .gov-speak .site-title:first-of-type {
     margin-top: 0.4em; }
 
-.gov-speak h2, .gov-speak .display {
+.gov-speak h2, .gov-speak .display, .gov-speak .video-title {
   font-size: 1.75rem;
   line-height: 1.2; }
   @media screen and (min-width: 768px) {
-    .gov-speak h2, .gov-speak .display {
+    .gov-speak h2, .gov-speak .display, .gov-speak .video-title {
       font-size: 2rem; } }
 
-.gov-speak h3, .gov-speak footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .gov-speak h2, .gov-speak footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .gov-speak .display, .gov-speak .view-event .field-name-title, .view-event .gov-speak .field-name-title {
+.gov-speak h3, .gov-speak footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .gov-speak h2, .gov-speak footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .gov-speak .display, .gov-speak footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .gov-speak .video-title, .gov-speak .view-event .field-name-title, .view-event .gov-speak .field-name-title {
   font-size: 1.5rem;
   font-weight: 700; }
   @media screen and (min-width: 768px) {
-    .gov-speak h3, .gov-speak footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .gov-speak h2, .gov-speak footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .gov-speak .display, .gov-speak .view-event .field-name-title, .view-event .gov-speak .field-name-title {
+    .gov-speak h3, .gov-speak footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .gov-speak h2, .gov-speak footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .gov-speak .display, .gov-speak footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .gov-speak .video-title, .gov-speak .view-event .field-name-title, .view-event .gov-speak .field-name-title {
       font-size: 1.625rem; } }
 
 .gov-speak h4 {
@@ -4311,11 +4329,14 @@ If you'd like to include an element that spans across the maximum available spac
   .hero-med .content-main .site-title,
   .content-main h2,
   .content-main .display,
+  .content-main .video-title,
   .content-main h3,
   .content-main footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top
   .content-main h2,
   .content-main footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top
   .content-main .display,
+  .content-main footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top
+  .content-main .video-title,
   .content-main .view-event .field-name-title, .view-event
   .content-main .field-name-title,
   .content-main h4,
@@ -5174,13 +5195,13 @@ aside #block-views-exp-event-page {
   aside #block-views-exp-event-page .views-exposed-widget {
     clear: both; }
 
-aside h2, aside .display {
+aside h2, aside .display, aside .video-title {
   font-size: 1.5rem;
   margin-top: 1.46667em;
   margin-bottom: 0.8em;
   margin-top: 0; }
   @media screen and (min-width: 768px) {
-    aside h2, aside .display {
+    aside h2, aside .display, aside .video-title {
       font-size: 1.625rem; } }
 
 .page-feedback {
@@ -5296,7 +5317,7 @@ html.video {
 
 h1[class*="fa-"]:before, .hero [class*="fa-"].site-title:before, .hero--content [class*="fa-"].site-title:before,
 .hero-sml [class*="fa-"].site-title:before,
-.hero-med [class*="fa-"].site-title:before, h2[class*="fa-"]:before, [class*="fa-"].display:before, h3[class*="fa-"]:before, footer[role='contentinfo'] .footer-top h2[class*="fa-"]:before, footer[role='contentinfo'] .footer-top [class*="fa-"].display:before, .view-event [class*="fa-"].field-name-title:before, h4[class*="fa-"]:before, h5[class*="fa-"]:before, h6[class*="fa-"]:before, p[class*="fa-"]:before {
+.hero-med [class*="fa-"].site-title:before, h2[class*="fa-"]:before, [class*="fa-"].display:before, [class*="fa-"].video-title:before, h3[class*="fa-"]:before, footer[role='contentinfo'] .footer-top h2[class*="fa-"]:before, footer[role='contentinfo'] .footer-top [class*="fa-"].display:before, footer[role='contentinfo'] .footer-top [class*="fa-"].video-title:before, .view-event [class*="fa-"].field-name-title:before, h4[class*="fa-"]:before, h5[class*="fa-"]:before, h6[class*="fa-"]:before, p[class*="fa-"]:before {
   font-size: inherit; }
 
 .fa-dark:before {
@@ -5485,7 +5506,7 @@ body a {
       width: 80.86646%; }
       .social__feed:last-child {
         margin-right: 0; } }
-  .social__feed h3, .social__feed footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .social__feed h2, .social__feed footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .social__feed .display, .social__feed .view-event .field-name-title, .view-event .social__feed .field-name-title {
+  .social__feed h3, .social__feed footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .social__feed h2, .social__feed footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .social__feed .display, .social__feed footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .social__feed .video-title, .social__feed .view-event .field-name-title, .view-event .social__feed .field-name-title {
     font-weight: 400;
     margin-top: 0; }
 
@@ -5511,7 +5532,7 @@ body a {
       content: "\f0e1"; }
     .social__links .social__links-item a.instagram:before, .social__links--stacked .social__links-item a.instagram:before {
       content: "\f16d"; }
-  .social__links h3, .social__links--stacked h3, .social__links footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .social__links h2, .social__links--stacked footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .social__links--stacked h2, .social__links footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .social__links .display, .social__links--stacked footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .social__links--stacked .display, .social__links .view-event .field-name-title, .view-event .social__links .field-name-title, .social__links--stacked .view-event .field-name-title, .view-event .social__links--stacked .field-name-title {
+  .social__links h3, .social__links--stacked h3, .social__links footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .social__links h2, .social__links--stacked footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .social__links--stacked h2, .social__links footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .social__links .display, .social__links--stacked footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .social__links--stacked .display, .social__links footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .social__links .video-title, .social__links--stacked footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .social__links--stacked .video-title, .social__links .view-event .field-name-title, .view-event .social__links .field-name-title, .social__links--stacked .view-event .field-name-title, .view-event .social__links--stacked .field-name-title {
     margin-top: 0; }
 
 .social__links--stacked .social__links-item {
@@ -5803,7 +5824,7 @@ body a {
       width: 48.97722%; }
       .partner:last-child {
         margin-right: 0; } }
-  .partner h3, .partner footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .partner h2, .partner footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .partner .display, .partner .view-event .field-name-title, .view-event .partner .field-name-title {
+  .partner h3, .partner footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .partner h2, .partner footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .partner .display, .partner footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .partner .video-title, .partner .view-event .field-name-title, .view-event .partner .field-name-title {
     font-weight: 400;
     margin-top: 0; }
 
@@ -6048,7 +6069,7 @@ body a {
 
 .band--feature {
   padding: 3.2em 0; }
-  .band--feature h2, .band--feature .display {
+  .band--feature h2, .band--feature .display, .band--feature .video-title {
     margin-top: 0; }
   .band--feature .feature__item {
     padding: 1.2em;
@@ -6376,7 +6397,7 @@ body.girlsmove > main a {
   #block-views-activities-block .activity__selector {
     width: 100%;
     overflow: hidden; }
-    #block-views-activities-block .activity__selector h3, #block-views-activities-block .activity__selector footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top #block-views-activities-block .activity__selector h2, #block-views-activities-block .activity__selector footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top #block-views-activities-block .activity__selector .display, #block-views-activities-block .activity__selector .view-event .field-name-title, .view-event #block-views-activities-block .activity__selector .field-name-title {
+    #block-views-activities-block .activity__selector h3, #block-views-activities-block .activity__selector footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top #block-views-activities-block .activity__selector h2, #block-views-activities-block .activity__selector footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top #block-views-activities-block .activity__selector .display, #block-views-activities-block .activity__selector footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top #block-views-activities-block .activity__selector .video-title, #block-views-activities-block .activity__selector .view-event .field-name-title, .view-event #block-views-activities-block .activity__selector .field-name-title {
       display: none; }
     #block-views-activities-block .activity__selector p {
       margin-top: 5px;
@@ -6612,13 +6633,13 @@ footer[role='contentinfo'] .footer-top nav > li {
 .list-vertical--halves > li {
   border-color: #DDD; }
 
-.list-horizontal--benefits h2, .list-horizontal--benefits .display {
+.list-horizontal--benefits h2, .list-horizontal--benefits .display, .list-horizontal--benefits .video-title {
   font-size: 1.5rem;
   margin-top: 1.46667em;
   margin-bottom: 0.8em;
   margin-top: 0.8em; }
   @media screen and (min-width: 768px) {
-    .list-horizontal--benefits h2, .list-horizontal--benefits .display {
+    .list-horizontal--benefits h2, .list-horizontal--benefits .display, .list-horizontal--benefits .video-title {
       font-size: 1.625rem; } }
 
 @media screen and (min-width: 768px) {

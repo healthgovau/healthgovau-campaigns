@@ -16,6 +16,10 @@
   }
 }
 
+.video-title {
+  @extend h2;
+}
+
 // Block view.
 .view-campaign-videos,
 .node-type-video {
