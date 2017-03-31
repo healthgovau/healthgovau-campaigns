@@ -21,28 +21,30 @@
 }
 
 // Img/text bands
-#block-bean-ymca-featured .wrapper {
+#block-bean-ymca-featured {
   padding-top: 30px;
   background: #fffff1;
-  .band__img {
-    line-height: 0;
-    @include fill-parent;
-    @include media($tablet) {
-      @include span-columns(4 of 12);
+  .wrapper {
+    .band__img {
+      line-height: 0;
+      @include fill-parent;
+      @include media($tablet) {
+        @include span-columns(4 of 12);
+      }
+      @include media($desktop) {
+        @include span-columns(6 of 16);
+      }
     }
-    @include media($desktop) {
-      @include span-columns(6 of 16);
-    }
-  }
 
-  .band__text {
-    @include fill-parent;
-    @include media($tablet) {
-      @include span-columns(8 of 12);
-      margin-bottom: $large-spacing;
-    }
-    @include media($desktop) {
-      @include span-columns(10 of 16);
+    .band__text {
+      @include fill-parent;
+      @include media($tablet) {
+        @include span-columns(8 of 12);
+        margin-bottom: $large-spacing;
+      }
+      @include media($desktop) {
+        @include span-columns(10 of 16);
+      }
     }
   }
 }
