@@ -46,15 +46,14 @@
 ?>
 <section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> band--gradient"<?php print $attributes; ?>>
   <div class="wrapper">
-  <?php print render($title_prefix); ?>
-  <?php if ($block->subject): ?>
-    <h2<?php print $title_attributes; ?>><?php print $vblock_3_title ?></h2>
-  <?php endif;?>
-  <?php print render($title_suffix); ?>
+    <?php print render($title_prefix); ?>
+    <?php if ($block->subject): ?>
+      <h2<?php print $title_attributes; ?>><?php print $vblock_3_title ?></h2>
+    <?php endif;?>
+    <?php print render($title_suffix); ?>
 
-  <div <?php print $content_attributes; ?>>
-    <?php print $content ?>
-  </div>
-
+    <div <?php print $content_attributes; ?>>
+      <?php print $content ?>
+    </div>
   </div>
 </section>
