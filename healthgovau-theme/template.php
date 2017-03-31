@@ -328,7 +328,7 @@ function healthgovau_preprocess_entity(&$variables) {
     // For share this block.
     if ($bean->delta == 'share-this') {
       Global $base_url;
-      $current_url = $base_url . '/' . drupal_get_path_alias(current_path());
+      $current_url = drupal_encode_path($base_url . '/' . drupal_get_path_alias(current_path()));
       $current_title = drupal_get_title();
       $variables['field_bean_body'][0]['value'] = str_replace('[current-page:title]', $current_title, $variables['field_bean_body'][0]['value']);
       $variables['field_bean_body'][0]['value'] = str_replace('[current-page:url]', $current_url, $variables['field_bean_body'][0]['value']);
