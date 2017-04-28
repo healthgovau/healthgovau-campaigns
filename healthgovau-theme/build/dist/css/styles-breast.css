@@ -4556,10 +4556,9 @@ Style guide: Typography.5 Quotations
 */
 blockquote {
   margin: 1.2em 0;
-  padding: 0.8em 2.4em;
+  padding: 1.6em 2.4em 0.4em;
   background-color: #f0f3f5;
-  font-family: "Book Antiqua", Georgia, "Bitstream Vera Serif", serif;
-  quotes: "“" "”" "‘" "’"; }
+  quotes: none; }
   blockquote.pullquote {
     padding: 0;
     background-color: #fff; }
@@ -4568,32 +4567,15 @@ blockquote {
       line-height: 1.6;
       text-align: center;
       font-weight: 400;
-      margin-top: 1.6em; }
+      margin-top: 1.2em; }
       @media screen and (min-width: 768px) {
         blockquote.pullquote p {
           font-size: 1.625rem; } }
-    blockquote.pullquote::before, blockquote.pullquote::after {
-      text-align: center;
-      margin: 0; }
-  blockquote::before, blockquote::after {
-    display: block;
-    height: 0;
-    font-family: "Book Antiqua", Georgia, "Bitstream Vera Serif", serif;
-    font-size: 2.6875rem;
-    color: #18788d; }
-  blockquote::before {
-    margin-left: -0.6em;
-    padding-bottom: 0.4em;
-    content: open-quote; }
-  blockquote::after {
-    margin-right: -0.6em;
-    margin-top: -0.8em;
-    padding-bottom: 1.2em;
-    text-align: right;
-    content: close-quote; }
   blockquote footer {
+    display: block;
     margin-top: 1.2em;
-    padding-top: 0.4em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
     border-top: 1px solid #bbbbbb; }
   blockquote cite {
     display: inline-block;
@@ -4609,9 +4591,6 @@ blockquote {
     margin-bottom: 0;
     padding-top: 0;
     padding-bottom: 0; }
-
-q {
-  quotes: '“' '”' '‘' '’' '“' '”' '‘' '’'; }
 
 cite {
   font-style: normal; }
@@ -5081,25 +5060,35 @@ footer[role='contentinfo'] {
   margin-top: 0; }
 
 .page-header {
-  padding-bottom: 1.6em;
+  padding-bottom: 0.8em;
+  padding-top: 0.8em;
   -webkit-box-shadow: none;
           box-shadow: none;
   background-color: #FFFFFF; }
+  @media screen and (min-width: 768px) {
+    .page-header {
+      padding-bottom: 1.6em;
+      padding-top: 1.6em; } }
+  .page-header .region-header {
+    margin-bottom: 0; }
+    @media screen and (min-width: 768px) {
+      .page-header .region-header {
+        margin-bottom: 1em; } }
 
 .page-header__logo {
   padding: 0; }
-  .page-header__logo .logo {
+  .page-header__logo img {
     background-image: url("../img/health_crest.png");
     background-size: contain;
     display: inline-block;
-    width: 200px;
-    height: 48px; }
+    width: 170px;
+    height: 41px; }
     @media screen and (min-width: 768px) {
-      .page-header__logo .logo {
+      .page-header__logo img {
         width: 227px;
         height: 55px; } }
     @media screen and (min-width: 75em) {
-      .page-header__logo .logo {
+      .page-header__logo img {
         width: 300px;
         height: 72px; } }
 

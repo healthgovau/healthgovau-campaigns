@@ -1,0 +1,12 @@
+
+
+// Footnote
+.references,
+.footnotes {
+  display: inline-block;
+  font-family: $base-sans-serif;
+  font-size: $small-font-size;
+  margin-top: $medium-spacing;
+  padding-top: $tiny-spacing;
+  border-top: 1px solid $light-grey;
+}

@@ -27,30 +27,27 @@
       margin-right: $medium-spacing;
     }
 
-    a:before {
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: 100% auto;
-      content: ' ';
-      display: inline-block;
-      height: 1.2em;
-      margin-right: 0.4em;
-      width: 1.2em;
-    }
-    a.youtube:before {
-      background-image: image-url("icons/youtube.svg");
-    }
-    a.twitter:before {
-      background-image: image-url("icons/twitter.svg");
-    }
-    a.facebook:before {
-      background-image: image-url("icons/facebook.svg");
-    }
-    a.email:before {
-      background-image: image-url("icons/email.svg");
-    }
-    a.linkedin:before {
-      background-image: image-url("icons/linkedin.svg");
+    // Font Awesome implementation
+    a {
+      @extend %baseicon;
+      &.youtube:before {
+        content: "\f16a";
+      }
+      &.twitter:before {
+        content: "\f099";
+      }
+      &.facebook:before {
+        content: "\f09a";
+      }
+      &.email:before {
+        content: "\f003";
+      }
+      &.linkedin:before {
+        content: "\f0e1";
+      }
+      &.instagram:before {
+        content: "\f16d";
+      }
     }
   }
   h3 {

@@ -27,26 +27,37 @@
  * @see template_process()
  */
 ?>
-<section class="<?php print $classes; ?> band--gradient clearfix"<?php print $attributes; ?>>
+<section class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <div class="wrapper">
 
     <h2>Social Media</h2>
 
-    <div class="content"<?php print $content_attributes; ?>>
-      <div class="social__feed">
-        <ul class="juicer-feed" data-feed-id="<?php print $sm_id; ?>" data-per="<?php print $sm_col; ?>"></ul>
-        <p><a href="<?php print $sm_page; ?>" class="see-more">More social media</a></p>
-      </div>
+    <div class="social-media-description"><?php print $sm_desc; ?></div>
+    <div <?php print $content_attributes; ?>>
       <div class="social__feature">
-        <h3 class="light">Follow us</h3>
-        <ul>
-          <!--<li class="social__links-item"><a href="#">Instagram</a></li>-->
-          <li class="social__links-item"><a href="<?php print $facebook_link; ?>" class="facebook">Facebook</a></li>
-          <li class="social__links-item"><a href="<?php print $youtube_link; ?>" class="youtube">YouTube</a></li>
-          <li class="social__links-item"><a href="<?php print $twitter_link; ?>" class="twitter">Twitter</a></li>
+        <ul class="social__links">
+          <? if ($instagram_link != ''): ?>
+            <?php print $instagram_link; ?>
+          <? endif; ?>
+          <? if ($facebook_link != ''): ?>
+            <?php print $facebook_link; ?>
+          <? endif; ?>
+          <? if ($youtube_link != ''): ?>
+            <?php print $youtube_link; ?>
+          <? endif; ?>
+          <? if ($twitter_link != ''): ?>
+            <?php print $twitter_link; ?>
+          <? endif; ?>
         </ul>
+        <? if ($sm_tag != ''): ?>
+          <?php print $sm_tag; ?>
+        <? endif; ?>
       </div>
+        <div class="social__feed">
+            <ul class="juicer-feed" data-feed-id="<?php print $sm_id; ?>" data-per="<?php print $sm_col; ?>"></ul>
+            <p><a href="<?php print $sm_page; ?>" class="see-more">More social media</a></p>
+        </div>
     </div>
 
   </div>

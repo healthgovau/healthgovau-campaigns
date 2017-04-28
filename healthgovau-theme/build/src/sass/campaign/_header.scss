@@ -13,20 +13,31 @@
 
 // UI-kit overrides
 .page-header {
-  padding-bottom: $base-spacing;
+  padding-bottom: $base-spacing/2;
+  padding-top: $base-spacing/2;
+  @include media($tablet) {
+    padding-bottom: $base-spacing;
+    padding-top: $base-spacing;
+  }
   box-shadow: none;
   background-color: $white;
+  .region-header {
+    margin-bottom: 0;
+    @include media($tablet) {
+      margin-bottom: 1em;
+    }
+  }
 }
 
 .page-header__logo {
   padding: 0;
-  .logo {
+  img {
     background-image: image-url("health_crest.png"); //fallback
     //background-image: image-url("health_crest.svg");
     background-size: contain;
     display: inline-block;
-    width: 200px; //Revisit
-    height: 48px; //Revisit
+    width: 170px; //Revisit
+    height: 41px; //Revisit
 
     @include media($tablet) {
       width: 227px; //Revisit

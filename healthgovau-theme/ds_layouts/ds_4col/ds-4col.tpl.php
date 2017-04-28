@@ -11,6 +11,9 @@
 
 <div class="ds-4col group-top">
   <div class="ds-wrapper video">
+    <div class="title video-title">
+      <?php print $title; ?>
+    </div>
     <div class="group-top-left">
       <div class="video__thumb video-wrapper">
         <?php print $top_left; ?>

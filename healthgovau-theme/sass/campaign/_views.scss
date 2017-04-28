@@ -12,3 +12,7 @@
     }
   }
 }
+
+.view-event .field-name-title {
+  @extend h3;
+}

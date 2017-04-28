@@ -1,19 +1,238 @@
-.gmym-band--primary {
+@import "_vars";
+
+// Band variants extending defaults
+%gmym-band--primary {
   @extend .band;
   background-color: $grey-light;
+  padding-top: $small-spacing;
+  @include media($tablet) {
+    padding-top: $large-spacing;
+  }
 }
 
-.gmym-band--secondary {
+%gmym-band--secondary {
   @extend %band;
-  background-color: $grey;
+  background-color: $light-blue;
 }
 
-// Social
+%band--gradient {
+  @extend %band;
+  @include linear-gradient(90deg, #dcf2f7, #FFFFFF, $fallback: #dcf2f7);
+}
+
+// Img/text bands
+#block-bean-ymca-featured {
+  padding-top: 30px;
+  background: #fffff1;
+  .wrapper {
+    .band__img {
+      line-height: 0;
+      @include fill-parent;
+      @include media($tablet) {
+        @include span-columns(4 of 12);
+      }
+      @include media($desktop) {
+        @include span-columns(6 of 16);
+      }
+    }
+
+    .band__text {
+      @include fill-parent;
+      @include media($tablet) {
+        @include span-columns(8 of 12);
+        margin-bottom: $large-spacing;
+      }
+      @include media($desktop) {
+        @include span-columns(10 of 16);
+      }
+    }
+  }
+}
+
+body.girlsmove > main a {
+  border-bottom-color: $cyan;
+}
+
+.girlsmove {
+
+  // Override inline image styles inside Drupal fields
+  [class *= "field-item"] img {
+    height: auto;
+  }
+
+  // Events band
+  #block-views-event-block-1 {
+    padding-bottom: $large-spacing;
+    figure {
+      margin-bottom: $medium-spacing;
+    }
+    [class *= "field-name-field-" ] {
+      margin-top: $small-spacing;
+    }
+    .field-name-field-feature-image {
+      margin-top: 0;
+    }
+  }
+
+  // Image field
+  .content {
+    .field-name-field-image {
+      margin-bottom: $large-spacing;
+      img {
+        height: auto;
+      }
+    }
+    .list--cards {
+      .field-name-field-image,
+      > li figure img {
+        margin-bottom: 0;
+        width: 100%;
+      }
+    }
+
+  }
+
+  // Activities video band
+  #block-views-campaign-videos-block-4 {
+    @extend .band;
+    //background: $light-purple;
+    background: #e8f7f9;
+    padding-top: $medium-spacing;
+    padding-bottom: $large-spacing;
+    .list-vertical--thirds li.views-row { //.views-row prevents application to Drupal menus
+      @include media($desktop) {
+        min-height: 375px;
+      }
+    }
+  }
+
+  #block-bean-gmym-cards-0 {
+    @extend %gmym-band--primary;
+    background-color: $cyan;
+    padding-bottom: 0;
+  }
+
+  .view-event {
+    .list--cards > li article {
+      padding: $medium-spacing;
+      @include media($desktop) {
+        min-height: 440px;
+      }
+    }
+  }
+
+  .list--cards > li {
+    @include box-shadow($color: darken($light-purple, 10%));
+  }
+}
+
+// Force full width for content container
+.page-campaign-activities,
+.girlsmove:not(.node-type-campaign-standard-page) {
+  main .content-main {
+    width: 100%;
+  }
+}
+
+// Activities/selector band
+#block-views-activities-block {
+  @extend .band;
+  padding-bottom: $large-spacing;
+  // background-image: image-url("../images/bg-textures/Prismic.svg");
+  background-color: #e8f7f9;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include direction-context(right-to-left) {
+    .activity__selector {
+      @include fill-parent();
+      overflow: hidden;
+      h3 {
+        display: none;
+      }
+      p {
+        margin-top: 5px;
+        margin-right: 15px;
+        float: left
+      }
+      .tags {
+        float: left;
+        a {
+          background: #FFF;
+          &:hover,
+          &:focus {
+            background: $cyan;
+            color: #FFF;
+          }
+        }
+      }
+    }
+    .view-activities {
+      @include fill-parent();
+    }
+  }
+
+  .field-name-field-image {
+    margin-bottom: 0;
+  }
+
+  .list-vertical {
+    margin-top: 0;
+  }
+  .list-horizontal {
+    margin-top: 0;
+    > li {
+      border: 0;
+      margin-top: 0;
+      max-width: 100%;
+      @include media($tablet) {
+        display: flex !important;
+        @include span-columns(6 of 12);
+      }
+      @include media($desktop) {
+        @include span-columns(8 of 16);
+      }
+      figure {
+        flex: 0 0 50%
+      }
+    }
+  }
+
+  .list--cards > li {
+    @include box-shadow($color: #91c1c5);
+  }
+
+}
+
+// Mobile apps layout
+.list-horizontal--narrow {
+  @extend .list-horizontal;
+
+  > li {
+    // Image
+    figure {
+      //display: none;
+      @include fill-parent;
+      margin-bottom: $small-spacing;
+      @include media($desktop) {
+        flex: 0 0 10%;
+      }
+    }
+  }
+}
+
+// Partners
+.partner__image {
+  margin-bottom: $medium-spacing;
+}
+
+// Social media
 .social__feature {
-  @include span-columns(4 of 4);
+  @include fill-parent();
 
   @include media($tablet) {
     @include span-columns(3 of 12);
+    float: left;
   }
 
   @include media($desktop) {
@@ -21,8 +240,134 @@
   }
 }
 
-.girls-make-your-move {
-  #block-bean-gmym-involved {
-    @extend .gmym-band--primary;
+.social-media-tag {
+  float: right;
+}
+
+// Juicer
+
+.bean-social-media {
+  overflow: hidden;
+  p {
+    color: #fff;
   }
+  .juicer-feed {
+    p {
+      color: #000;
+    }
+    ul.j-filters, .j-paginate {
+      display: none;
+    }
+  }
+}
+
+.node-social-media {
+  .juicer-feed ul.j-filters {
+    padding-left: 0;
+    li {
+      width: 20%;
+    }
+  }
+}
+
+.girlsmove {
+  #block-bean-gmym-socialmedia {
+    background: $cyan;
+    color: #FFF;
+    padding-top: $small-spacing;
+    padding-bottom: $large-spacing;
+    overflow: hidden;
+    // Links
+    a {
+      color: #FFF;
+      border-color: #fff;
+      &:hover,
+      &:focus {
+        color: $cyan;
+        background: #fff;
+      }
+    }
+    .see-more {
+      color: #fff;
+      &:hover,
+      &:focus {
+        color: $cyan;
+        background: #fff;
+      }
+      &:after {
+        background-image: none;
+      }
+    }
+    .social__feature {
+      @include fill-parent();
+    }
+    .social__feed {
+      @include fill-parent();
+      margin-top: $small-spacing;
+    }
+    .social__links {
+      float: left;
+    }
+    .social__links .social__links-item a,
+    .social__links--stacked .social__links-item a {
+      border: 0;
+      &:hover,
+      &:focus {
+        background: transparent;
+        border-bottom: 1px solid #fff;
+        color: #fff;
+      }
+      &:before {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.page-campaign-156 {
+  aside {
+    #block-views-exp-event-page {
+      background: $light-blue;
+    }
+  }
+}
+
+// Pre-nav
+#block-bean-gmym-hotline {
+  section.pre-nav {
+    @include pad($small-spacing 0 $tiny-spacing);
+    background: $cyan;
+    color: $white;
+    text-align: center;
+    ul {
+      margin-bottom: $tiny-spacing;
+    }
+    p {
+      display: inline-block;
+      margin-right: 2em;
+      margin-bottom: $tiny-spacing;
+    }
+    .social__links {
+      display: inline;
+    }
+    .social__links-item {
+      display: inline;
+      margin-right: 0;
+      a {
+        border: 0;
+        &:hover,
+        &:focus {
+          background-color: transparent;
+        }
+        &:before {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.activity__selector .tags a.active {
+  background: $cyan;
+  color: #fff;
 }

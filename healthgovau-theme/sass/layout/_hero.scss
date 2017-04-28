@@ -51,13 +51,13 @@ $hero-content-y-shift: 0.25;
   }
 
   .campaign-logo {
-    @include pad(0 $gutter);
     min-width: 0;
     width: auto;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
+    padding-left: $gutter;
     max-height: $hero-height-mobile * 0.75;
     margin-top: $hero-height-mobile * 0.125;
 
@@ -101,28 +101,16 @@ $hero-content-y-shift: 0.25;
   }
 
   .campaign-logo {
-    max-height: $hero-height-mobile * $hero-content-shrink-factor * 0.75;
-    margin-top: $hero-height-mobile * $hero-content-shrink-factor * 0.125;
+    max-height: $hero-height-mobile * $hero-content-shrink-factor * 0.8;
+    margin-top: $hero-height-mobile * $hero-content-shrink-factor * 0.1;
 
     @include media($tablet) {
-      max-height: $hero-height-tablet * $hero-content-shrink-factor * 0.75;
-      margin-top: $hero-height-tablet * $hero-content-shrink-factor * 0.125;
+      max-height: $hero-height-tablet * $hero-content-shrink-factor * 0.8;
+      margin-top: $hero-height-tablet * $hero-content-shrink-factor * 0.1;
     }
     @include media($desktop) {
-      max-height: $hero-height-desktop * $hero-content-shrink-factor * 0.75;
-      margin-top: $hero-height-desktop * $hero-content-shrink-factor * 0.125;
+      max-height: $hero-height-desktop * $hero-content-shrink-factor * 0.8;
+      margin-top: $hero-height-desktop * $hero-content-shrink-factor * 0.1;
     }
   }
-}
-
-.hero--content-blur {
-  @extend .hero--content;
-  .hero-bg {
-    @include blur(3);
-  }
-}
-
-.hero--content-colour {
-  @extend .hero--content;
-  color: $hero-font-color;
 }

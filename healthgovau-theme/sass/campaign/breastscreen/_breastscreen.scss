@@ -126,4 +126,11 @@ body.breastscreen > main .see-more {
       display: none;
     }
   }
+  .block-link {
+    color: #fff;
+    background: $colour-primary;
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+  }
 }

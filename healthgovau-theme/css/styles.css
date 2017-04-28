@@ -157,7 +157,7 @@ dfn {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari, and Chrome.
  */
-h1, .hero .site-title, .hero--content .site-title, .hero--content-blur .site-title, .hero--content-colour .site-title,
+h1, .hero .site-title, .hero--content .site-title,
 .hero-sml .site-title,
 .hero-med .site-title {
   font-size: 2em;
@@ -525,7 +525,7 @@ Usage:
   background-image: url("../../uikit_base/images/icons/arrow-right--white.svg"); }
 
 header[role='banner'] .see-more::after, body > main .see-more::after, footer[role='contentinfo'] .see-more::after, .primary-nav ul .see-more::after,
-.local-nav ul .see-more::after, [class^='breadcrumbs'] .see-more::after, [class^='breadcrumbs'][class$='--inverted'] .see-more::after, .skip-to .see-more::after, [class^='controls'] .see-more::after, .govau--header .see-more::after, .prerelease-govau--header .see-more::after, .hero .see-more::after, .hero--content .see-more::after, .hero--content-blur .see-more::after, .hero--content-colour .see-more::after,
+.local-nav ul .see-more::after, [class^='breadcrumbs'] .see-more::after, [class^='breadcrumbs'][class$='--inverted'] .see-more::after, .skip-to .see-more::after, [class^='controls'] .see-more::after, .govau--header .see-more::after, .prerelease-govau--header .see-more::after, .hero .see-more::after, .hero--content .see-more::after,
 .hero-sml .see-more::after,
 .hero-med .see-more::after, .tags .see-more::after {
   background-image: url("../../uikit_base/images/icons/arrow-right--aqua.svg"); }
@@ -541,7 +541,7 @@ summary::before, .accordion--controls summary::before, .nav-toggle::before {
   background-image: url("../../uikit_base/images/icons/chevron-down--navy.svg"); }
 
 header[role='banner'] a[rel~='external']::after, body > main a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
-.local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after, .hero--content a[rel~='external']::after, .hero--content-blur a[rel~='external']::after, .hero--content-colour a[rel~='external']::after,
+.local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after, .hero--content a[rel~='external']::after,
 .hero-sml a[rel~='external']::after,
 .hero-med a[rel~='external']::after, .tags a[rel~='external']::after {
   background-image: url("../../uikit_base/images/icons/external-link--aqua.svg"); }
@@ -620,15 +620,20 @@ header[role='banner'] a[rel~='external']::after, body > main a[rel~='external']:
   p,
   h2,
   .display,
+  .video-title,
   h3,
   footer[role='contentinfo'] .footer-top h2,
-  footer[role='contentinfo'] .footer-top .display {
+  footer[role='contentinfo'] .footer-top .display,
+  footer[role='contentinfo'] .footer-top .video-title,
+  .view-event .field-name-title {
     orphans: 3;
     widows: 3; }
-  h2, .display,
+  h2, .display, .video-title,
   h3,
   footer[role='contentinfo'] .footer-top h2,
-  footer[role='contentinfo'] .footer-top .display {
+  footer[role='contentinfo'] .footer-top .display,
+  footer[role='contentinfo'] .footer-top .video-title,
+  .view-event .field-name-title {
     page-break-after: avoid; } }
 
 /*
@@ -1308,7 +1313,7 @@ Markup: templates/basic-links.html
 Style guide: Link styles.1 Hover links
 */
 header[role='banner'] a[rel~='external']::after, body > main a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
-.local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after, .hero--content a[rel~='external']::after, .hero--content-blur a[rel~='external']::after, .hero--content-colour a[rel~='external']::after,
+.local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after, .hero--content a[rel~='external']::after,
 .hero-sml a[rel~='external']::after,
 .hero-med a[rel~='external']::after, .tags a[rel~='external']::after {
   content: '';
@@ -1720,60 +1725,60 @@ Markup: templates/lists-highlighted.html
 
 Style guide: List styles.4 Highlighted word style
 */
-.list-horizontal, .list-horizontal--benefits, .list-vertical, .list-vertical--thirds, .list-vertical--fourths, footer[role='contentinfo'] .footer-top nav, .list-vertical--halves, .list-small, .list-highlighted {
+.list-horizontal, .list-horizontal--events, .list-horizontal--narrow, .list-horizontal--benefits, .list-vertical, .list-vertical--thirds, .list-vertical--fourths, footer[role='contentinfo'] .footer-top nav, .list-vertical--halves, .list-small, .list-highlighted {
   margin-top: 2.24em;
   padding: 0;
   list-style: none; }
-  .list-horizontal::after, .list-horizontal--benefits::after, .list-vertical::after, .list-vertical--thirds::after, .list-vertical--fourths::after, footer[role='contentinfo'] .footer-top nav::after, .list-vertical--halves::after, .list-small::after, .list-highlighted::after {
+  .list-horizontal::after, .list-horizontal--events::after, .list-horizontal--narrow::after, .list-horizontal--benefits::after, .list-vertical::after, .list-vertical--thirds::after, .list-vertical--fourths::after, footer[role='contentinfo'] .footer-top nav::after, .list-vertical--halves::after, .list-small::after, .list-highlighted::after {
     clear: both;
     content: "";
     display: table; }
-  .list-horizontal .meta, .list-horizontal--benefits .meta, .list-vertical .meta, .list-vertical--thirds .meta, .list-vertical--fourths .meta, footer[role='contentinfo'] .footer-top nav .meta, .list-vertical--halves .meta, .list-small .meta, .list-highlighted .meta {
+  .list-horizontal .meta, .list-horizontal--events .meta, .list-horizontal--narrow .meta, .list-horizontal--benefits .meta, .list-vertical .meta, .list-vertical--thirds .meta, .list-vertical--fourths .meta, footer[role='contentinfo'] .footer-top nav .meta, .list-vertical--halves .meta, .list-small .meta, .list-highlighted .meta {
     font-size: 87.5%;
     margin-bottom: 0.8em; }
-    .list-horizontal .meta time, .list-horizontal--benefits .meta time, .list-vertical .meta time, .list-vertical--thirds .meta time, .list-vertical--fourths .meta time, footer[role='contentinfo'] .footer-top nav .meta time, .list-vertical--halves .meta time, .list-small .meta time, .list-highlighted .meta time {
+    .list-horizontal .meta time, .list-horizontal--events .meta time, .list-horizontal--narrow .meta time, .list-horizontal--benefits .meta time, .list-vertical .meta time, .list-vertical--thirds .meta time, .list-vertical--fourths .meta time, footer[role='contentinfo'] .footer-top nav .meta time, .list-vertical--halves .meta time, .list-small .meta time, .list-highlighted .meta time {
       color: #6e6e6e; }
-  .list-horizontal > li, .list-horizontal--benefits > li, .list-vertical > li, .list-vertical--thirds > li, .list-vertical--fourths > li, footer[role='contentinfo'] .footer-top nav > li, .list-vertical--halves > li, .list-small > li, .list-highlighted > li {
+  .list-horizontal > li, .list-horizontal--events > li, .list-horizontal--narrow > li, .list-horizontal--benefits > li, .list-vertical > li, .list-vertical--thirds > li, .list-vertical--fourths > li, footer[role='contentinfo'] .footer-top nav > li, .list-vertical--halves > li, .list-small > li, .list-highlighted > li {
     padding: 2.74614% 0;
     border-bottom: solid 1px #bbbbbb;
     margin-bottom: 0; }
-  .list-horizontal h2, .list-horizontal--benefits h2, .list-vertical h2, .list-vertical--thirds h2, .list-vertical--fourths h2, footer[role='contentinfo'] .footer-top nav h2, .list-vertical--halves h2, .list-small h2, .list-highlighted h2, .list-horizontal .display, .list-horizontal--benefits .display, .list-vertical .display, .list-vertical--thirds .display, .list-vertical--fourths .display, footer[role='contentinfo'] .footer-top nav .display, .list-vertical--halves .display, .list-small .display, .list-highlighted .display, .list-horizontal h3, .list-horizontal--benefits h3, .list-vertical h3, .list-vertical--thirds h3, .list-vertical--fourths h3, footer[role='contentinfo'] .footer-top nav h3, .list-vertical--halves h3, .list-small h3, .list-highlighted h3, .list-horizontal footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-horizontal h2, .list-horizontal--benefits footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-horizontal--benefits h2, .list-vertical footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical h2, .list-vertical--thirds footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--thirds h2, .list-vertical--fourths footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--fourths h2, footer[role='contentinfo'] .footer-top nav h2, .list-vertical--halves footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--halves h2, .list-small footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-small h2, .list-highlighted footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-highlighted h2, .list-horizontal footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-horizontal .display, .list-horizontal--benefits footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-horizontal--benefits .display, .list-vertical footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical .display, .list-vertical--thirds footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--thirds .display, .list-vertical--fourths footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--fourths .display, footer[role='contentinfo'] .footer-top nav .display, .list-vertical--halves footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--halves .display, .list-small footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-small .display, .list-highlighted footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-highlighted .display, .list-horizontal h4, .list-horizontal--benefits h4, .list-vertical h4, .list-vertical--thirds h4, .list-vertical--fourths h4, footer[role='contentinfo'] .footer-top nav h4, .list-vertical--halves h4, .list-small h4, .list-highlighted h4, .list-horizontal h5, .list-horizontal--benefits h5, .list-vertical h5, .list-vertical--thirds h5, .list-vertical--fourths h5, footer[role='contentinfo'] .footer-top nav h5, .list-vertical--halves h5, .list-small h5, .list-highlighted h5, .list-horizontal h6, .list-horizontal--benefits h6, .list-vertical h6, .list-vertical--thirds h6, .list-vertical--fourths h6, footer[role='contentinfo'] .footer-top nav h6, .list-vertical--halves h6, .list-small h6, .list-highlighted h6 {
+  .list-horizontal h2, .list-horizontal--events h2, .list-horizontal--narrow h2, .list-horizontal--benefits h2, .list-vertical h2, .list-vertical--thirds h2, .list-vertical--fourths h2, footer[role='contentinfo'] .footer-top nav h2, .list-vertical--halves h2, .list-small h2, .list-highlighted h2, .list-horizontal .display, .list-horizontal--events .display, .list-horizontal--narrow .display, .list-horizontal--benefits .display, .list-vertical .display, .list-vertical--thirds .display, .list-vertical--fourths .display, footer[role='contentinfo'] .footer-top nav .display, .list-vertical--halves .display, .list-small .display, .list-highlighted .display, .list-horizontal .video-title, .list-horizontal--events .video-title, .list-horizontal--narrow .video-title, .list-horizontal--benefits .video-title, .list-vertical .video-title, .list-vertical--thirds .video-title, .list-vertical--fourths .video-title, footer[role='contentinfo'] .footer-top nav .video-title, .list-vertical--halves .video-title, .list-small .video-title, .list-highlighted .video-title, .list-horizontal h3, .list-horizontal--events h3, .list-horizontal--narrow h3, .list-horizontal--benefits h3, .list-vertical h3, .list-vertical--thirds h3, .list-vertical--fourths h3, footer[role='contentinfo'] .footer-top nav h3, .list-vertical--halves h3, .list-small h3, .list-highlighted h3, .list-horizontal footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-horizontal h2, .list-horizontal--events footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-horizontal--events h2, .list-horizontal--narrow footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-horizontal--narrow h2, .list-horizontal--benefits footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-horizontal--benefits h2, .list-vertical footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical h2, .list-vertical--thirds footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--thirds h2, .list-vertical--fourths footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--fourths h2, footer[role='contentinfo'] .footer-top nav h2, .list-vertical--halves footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--halves h2, .list-small footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-small h2, .list-highlighted footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-highlighted h2, .list-horizontal footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-horizontal .display, .list-horizontal--events footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-horizontal--events .display, .list-horizontal--narrow footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-horizontal--narrow .display, .list-horizontal--benefits footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-horizontal--benefits .display, .list-vertical footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical .display, .list-vertical--thirds footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--thirds .display, .list-vertical--fourths footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--fourths .display, footer[role='contentinfo'] .footer-top nav .display, .list-vertical--halves footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--halves .display, .list-small footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-small .display, .list-highlighted footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-highlighted .display, .list-horizontal footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-horizontal .video-title, .list-horizontal--events footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-horizontal--events .video-title, .list-horizontal--narrow footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-horizontal--narrow .video-title, .list-horizontal--benefits footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-horizontal--benefits .video-title, .list-vertical footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-vertical .video-title, .list-vertical--thirds footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-vertical--thirds .video-title, .list-vertical--fourths footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-vertical--fourths .video-title, footer[role='contentinfo'] .footer-top nav .video-title, .list-vertical--halves footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-vertical--halves .video-title, .list-small footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-small .video-title, .list-highlighted footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-highlighted .video-title, .list-horizontal .view-event .field-name-title, .view-event .list-horizontal .field-name-title, .list-horizontal--events .view-event .field-name-title, .view-event .list-horizontal--events .field-name-title, .list-horizontal--narrow .view-event .field-name-title, .view-event .list-horizontal--narrow .field-name-title, .list-horizontal--benefits .view-event .field-name-title, .view-event .list-horizontal--benefits .field-name-title, .list-vertical .view-event .field-name-title, .view-event .list-vertical .field-name-title, .list-vertical--thirds .view-event .field-name-title, .view-event .list-vertical--thirds .field-name-title, .list-vertical--fourths .view-event .field-name-title, .view-event .list-vertical--fourths .field-name-title, footer[role='contentinfo'] .footer-top nav .view-event .field-name-title, .view-event footer[role='contentinfo'] .footer-top nav .field-name-title, .list-vertical--halves .view-event .field-name-title, .view-event .list-vertical--halves .field-name-title, .list-small .view-event .field-name-title, .view-event .list-small .field-name-title, .list-highlighted .view-event .field-name-title, .view-event .list-highlighted .field-name-title, .list-horizontal h4, .list-horizontal--events h4, .list-horizontal--narrow h4, .list-horizontal--benefits h4, .list-vertical h4, .list-vertical--thirds h4, .list-vertical--fourths h4, footer[role='contentinfo'] .footer-top nav h4, .list-vertical--halves h4, .list-small h4, .list-highlighted h4, .list-horizontal h5, .list-horizontal--events h5, .list-horizontal--narrow h5, .list-horizontal--benefits h5, .list-vertical h5, .list-vertical--thirds h5, .list-vertical--fourths h5, footer[role='contentinfo'] .footer-top nav h5, .list-vertical--halves h5, .list-small h5, .list-highlighted h5, .list-horizontal h6, .list-horizontal--events h6, .list-horizontal--narrow h6, .list-horizontal--benefits h6, .list-vertical h6, .list-vertical--thirds h6, .list-vertical--fourths h6, footer[role='contentinfo'] .footer-top nav h6, .list-vertical--halves h6, .list-small h6, .list-highlighted h6 {
     margin-top: 0;
     margin-bottom: 0.4em;
     font-size: 1.125rem;
     font-weight: 700;
     line-height: 1.4; }
-  .list-horizontal img, .list-horizontal--benefits img, .list-vertical img, .list-vertical--thirds img, .list-vertical--fourths img, footer[role='contentinfo'] .footer-top nav img, .list-vertical--halves img, .list-small img, .list-highlighted img {
+  .list-horizontal img, .list-horizontal--events img, .list-horizontal--narrow img, .list-horizontal--benefits img, .list-vertical img, .list-vertical--thirds img, .list-vertical--fourths img, footer[role='contentinfo'] .footer-top nav img, .list-vertical--halves img, .list-small img, .list-highlighted img {
     display: block; }
 
-.list-horizontal > li, .list-horizontal--benefits > li {
+.list-horizontal > li, .list-horizontal--events > li, .list-horizontal--narrow > li, .list-horizontal--benefits > li {
   width: 100%;
   max-width: none; }
   @media screen and (min-width: 768px) {
-    .list-horizontal > li, .list-horizontal--benefits > li {
+    .list-horizontal > li, .list-horizontal--events > li, .list-horizontal--narrow > li, .list-horizontal--benefits > li {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex; } }
   @media screen and (max-width: 420px) {
-    .list-horizontal > li figure, .list-horizontal--benefits > li figure {
+    .list-horizontal > li figure, .list-horizontal--events > li figure, .list-horizontal--narrow > li figure, .list-horizontal--benefits > li figure {
       margin-bottom: 1.2em; } }
   @media screen and (min-width: 768px) {
-    .list-horizontal > li figure, .list-horizontal--benefits > li figure {
+    .list-horizontal > li figure, .list-horizontal--events > li figure, .list-horizontal--narrow > li figure, .list-horizontal--benefits > li figure {
       -webkit-box-flex: 0;
       -webkit-flex: 0 0 35%;
           -ms-flex: 0 0 35%;
               flex: 0 0 35%;
       margin-right: 1.6em; } }
-  .list-horizontal > li .meta time, .list-horizontal--benefits > li .meta time {
+  .list-horizontal > li .meta time, .list-horizontal--events > li .meta time, .list-horizontal--narrow > li .meta time, .list-horizontal--benefits > li .meta time {
     display: inline-block;
     margin-right: 0.8em; }
-  .list-horizontal > li:last-child, .list-horizontal--benefits > li:last-child {
+  .list-horizontal > li:last-child, .list-horizontal--events > li:last-child, .list-horizontal--narrow > li:last-child, .list-horizontal--benefits > li:last-child {
     border-bottom: none; }
-  .list-horizontal > li.hero-item, .list-horizontal--benefits > li.hero-item {
+  .list-horizontal > li.hero-item, .list-horizontal--events > li.hero-item, .list-horizontal--narrow > li.hero-item, .list-horizontal--benefits > li.hero-item {
     border-top: solid 1px #bbbbbb; }
     @media screen and (min-width: 768px) {
-      .list-horizontal > li.hero-item figure, .list-horizontal--benefits > li.hero-item figure {
+      .list-horizontal > li.hero-item figure, .list-horizontal--events > li.hero-item figure, .list-horizontal--narrow > li.hero-item figure, .list-horizontal--benefits > li.hero-item figure {
         -webkit-flex-basis: 65%;
             -ms-flex-preferred-size: 65%;
                 flex-basis: 65%; } }
@@ -1800,7 +1805,7 @@ Style guide: List styles.4 Highlighted word style
       -webkit-flex-wrap: wrap;
           -ms-flex-wrap: wrap;
               flex-wrap: wrap; }
-      .list-vertical > li article h3, .list-vertical--thirds > li article h3, .list-vertical--fourths > li article h3, footer[role='contentinfo'] .footer-top nav > li article h3, .list-vertical--halves > li article h3, .list-vertical > li article footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical > li article h2, .list-vertical--thirds > li article footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--thirds > li article h2, .list-vertical--fourths > li article footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--fourths > li article h2, footer[role='contentinfo'] .footer-top nav > li article h2, .list-vertical--halves > li article footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--halves > li article h2, .list-vertical > li article footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical > li article .display, .list-vertical--thirds > li article footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--thirds > li article .display, .list-vertical--fourths > li article footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--fourths > li article .display, footer[role='contentinfo'] .footer-top nav > li article .display, .list-vertical--halves > li article footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--halves > li article .display, .list-vertical > li article div, .list-vertical--thirds > li article div, .list-vertical--fourths > li article div, footer[role='contentinfo'] .footer-top nav > li article div, .list-vertical--halves > li article div, .list-vertical > li article p, .list-vertical--thirds > li article p, .list-vertical--fourths > li article p, footer[role='contentinfo'] .footer-top nav > li article p, .list-vertical--halves > li article p {
+      .list-vertical > li article h3, .list-vertical--thirds > li article h3, .list-vertical--fourths > li article h3, footer[role='contentinfo'] .footer-top nav > li article h3, .list-vertical--halves > li article h3, .list-vertical > li article footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical > li article h2, .list-vertical--thirds > li article footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--thirds > li article h2, .list-vertical--fourths > li article footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--fourths > li article h2, footer[role='contentinfo'] .footer-top nav > li article h2, .list-vertical--halves > li article footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .list-vertical--halves > li article h2, .list-vertical > li article footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical > li article .display, .list-vertical--thirds > li article footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--thirds > li article .display, .list-vertical--fourths > li article footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--fourths > li article .display, footer[role='contentinfo'] .footer-top nav > li article .display, .list-vertical--halves > li article footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .list-vertical--halves > li article .display, .list-vertical > li article footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-vertical > li article .video-title, .list-vertical--thirds > li article footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-vertical--thirds > li article .video-title, .list-vertical--fourths > li article footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-vertical--fourths > li article .video-title, footer[role='contentinfo'] .footer-top nav > li article .video-title, .list-vertical--halves > li article footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .list-vertical--halves > li article .video-title, .list-vertical > li article .view-event .field-name-title, .view-event .list-vertical > li article .field-name-title, .list-vertical--thirds > li article .view-event .field-name-title, .view-event .list-vertical--thirds > li article .field-name-title, .list-vertical--fourths > li article .view-event .field-name-title, .view-event .list-vertical--fourths > li article .field-name-title, footer[role='contentinfo'] .footer-top nav > li article .view-event .field-name-title, .view-event footer[role='contentinfo'] .footer-top nav > li article .field-name-title, .list-vertical--halves > li article .view-event .field-name-title, .view-event .list-vertical--halves > li article .field-name-title, .list-vertical > li article div, .list-vertical--thirds > li article div, .list-vertical--fourths > li article div, footer[role='contentinfo'] .footer-top nav > li article div, .list-vertical--halves > li article div, .list-vertical > li article p, .list-vertical--thirds > li article p, .list-vertical--fourths > li article p, footer[role='contentinfo'] .footer-top nav > li article p, .list-vertical--halves > li article p {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 100%;
             -ms-flex: 0 0 100%;
@@ -2743,12 +2748,16 @@ Style guide: Navigation.7 Skip links
   margin: 3.2em 0 1.6em 0;
   border-left: 0.4em solid #f0f3f5;
   padding: 0 0 1.2em 1.2em; }
-  .index-links h2, .index-links .display,
+  .index-links h2, .index-links .display, .index-links .video-title,
   .index-links h3,
   .index-links footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top
   .index-links h2,
   .index-links footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top
   .index-links .display,
+  .index-links footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top
+  .index-links .video-title,
+  .index-links .view-event .field-name-title, .view-event
+  .index-links .field-name-title,
   .index-links h4,
   .index-links h5,
   .index-links h6 {
@@ -2860,18 +2869,23 @@ Style guide: Navigation.07 Tab navigation
 .inline-tab-nav {
   border-bottom: solid 1px #6e6e6e;
   margin: 3.2em 0; }
-  .inline-tab-nav h1, .inline-tab-nav .hero .site-title, .hero .inline-tab-nav .site-title, .inline-tab-nav .hero--content .site-title, .hero--content .inline-tab-nav .site-title, .inline-tab-nav .hero--content-blur .site-title, .hero--content-blur .inline-tab-nav .site-title, .inline-tab-nav .hero--content-colour .site-title, .hero--content-colour .inline-tab-nav .site-title, .inline-tab-nav
+  .inline-tab-nav h1, .inline-tab-nav .hero .site-title, .hero .inline-tab-nav .site-title, .inline-tab-nav .hero--content .site-title, .hero--content .inline-tab-nav .site-title, .inline-tab-nav
   .hero-sml .site-title,
   .hero-sml .inline-tab-nav .site-title, .inline-tab-nav
   .hero-med .site-title,
   .hero-med .inline-tab-nav .site-title,
   .inline-tab-nav h2,
   .inline-tab-nav .display,
+  .inline-tab-nav .video-title,
   .inline-tab-nav h3,
   .inline-tab-nav footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top
   .inline-tab-nav h2,
   .inline-tab-nav footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top
   .inline-tab-nav .display,
+  .inline-tab-nav footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top
+  .inline-tab-nav .video-title,
+  .inline-tab-nav .view-event .field-name-title, .view-event
+  .inline-tab-nav .field-name-title,
   .inline-tab-nav h4,
   .inline-tab-nav h5,
   .inline-tab-nav h6 {
@@ -2884,18 +2898,23 @@ Style guide: Navigation.07 Tab navigation
     white-space: nowrap;
     border-bottom: solid 4px transparent; }
     @media screen and (min-width: 768px) {
-      .inline-tab-nav h1, .inline-tab-nav .hero .site-title, .hero .inline-tab-nav .site-title, .inline-tab-nav .hero--content .site-title, .hero--content .inline-tab-nav .site-title, .inline-tab-nav .hero--content-blur .site-title, .hero--content-blur .inline-tab-nav .site-title, .inline-tab-nav .hero--content-colour .site-title, .hero--content-colour .inline-tab-nav .site-title, .inline-tab-nav
+      .inline-tab-nav h1, .inline-tab-nav .hero .site-title, .hero .inline-tab-nav .site-title, .inline-tab-nav .hero--content .site-title, .hero--content .inline-tab-nav .site-title, .inline-tab-nav
       .hero-sml .site-title,
       .hero-sml .inline-tab-nav .site-title, .inline-tab-nav
       .hero-med .site-title,
       .hero-med .inline-tab-nav .site-title,
       .inline-tab-nav h2,
       .inline-tab-nav .display,
+      .inline-tab-nav .video-title,
       .inline-tab-nav h3,
       .inline-tab-nav footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top
       .inline-tab-nav h2,
       .inline-tab-nav footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top
       .inline-tab-nav .display,
+      .inline-tab-nav footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top
+      .inline-tab-nav .video-title,
+      .inline-tab-nav .view-event .field-name-title, .view-event
+      .inline-tab-nav .field-name-title,
       .inline-tab-nav h4,
       .inline-tab-nav h5,
       .inline-tab-nav h6 {
@@ -3043,14 +3062,17 @@ footer[role='contentinfo'] {
           margin-right: 0; }
         footer[role='contentinfo'] .footer-top nav .footer-menu:nth-child(5n+1) {
           clear: left; } }
-    footer[role='contentinfo'] .footer-top nav .footer-menu h1, footer[role='contentinfo'] .footer-top nav .footer-menu .hero .site-title, .hero footer[role='contentinfo'] .footer-top nav .footer-menu .site-title, footer[role='contentinfo'] .footer-top nav .footer-menu .hero--content .site-title, .hero--content footer[role='contentinfo'] .footer-top nav .footer-menu .site-title, footer[role='contentinfo'] .footer-top nav .footer-menu .hero--content-blur .site-title, .hero--content-blur footer[role='contentinfo'] .footer-top nav .footer-menu .site-title, footer[role='contentinfo'] .footer-top nav .footer-menu .hero--content-colour .site-title, .hero--content-colour footer[role='contentinfo'] .footer-top nav .footer-menu .site-title, footer[role='contentinfo'] .footer-top nav .footer-menu
+    footer[role='contentinfo'] .footer-top nav .footer-menu h1, footer[role='contentinfo'] .footer-top nav .footer-menu .hero .site-title, .hero footer[role='contentinfo'] .footer-top nav .footer-menu .site-title, footer[role='contentinfo'] .footer-top nav .footer-menu .hero--content .site-title, .hero--content footer[role='contentinfo'] .footer-top nav .footer-menu .site-title, footer[role='contentinfo'] .footer-top nav .footer-menu
     .hero-sml .site-title,
     .hero-sml footer[role='contentinfo'] .footer-top nav .footer-menu .site-title, footer[role='contentinfo'] .footer-top nav .footer-menu
     .hero-med .site-title,
     .hero-med footer[role='contentinfo'] .footer-top nav .footer-menu .site-title,
     footer[role='contentinfo'] .footer-top nav .footer-menu h2,
     footer[role='contentinfo'] .footer-top nav .footer-menu .display,
-    footer[role='contentinfo'] .footer-top nav .footer-menu h3, footer[role='contentinfo'] .footer-top nav .footer-menu h2, footer[role='contentinfo'] .footer-top nav .footer-menu .display,
+    footer[role='contentinfo'] .footer-top nav .footer-menu .video-title,
+    footer[role='contentinfo'] .footer-top nav .footer-menu h3, footer[role='contentinfo'] .footer-top nav .footer-menu h2, footer[role='contentinfo'] .footer-top nav .footer-menu .display, footer[role='contentinfo'] .footer-top nav .footer-menu .video-title,
+    footer[role='contentinfo'] .footer-top nav .footer-menu .view-event .field-name-title, .view-event
+    footer[role='contentinfo'] .footer-top nav .footer-menu .field-name-title,
     footer[role='contentinfo'] .footer-top nav .footer-menu h4 {
       font-size: 1rem;
       font-weight: 700; }
@@ -3303,9 +3325,10 @@ Style guide: Page header.01 Header
 .govau--header .links-group,
 .prerelease-govau--header .links-group {
   margin: 2.4em 0; }
-  .govau--header .links-group h2, .govau--header .links-group .display,
+  .govau--header .links-group h2, .govau--header .links-group .display, .govau--header .links-group .video-title,
   .prerelease-govau--header .links-group h2,
-  .prerelease-govau--header .links-group .display {
+  .prerelease-govau--header .links-group .display,
+  .prerelease-govau--header .links-group .video-title {
     font-size: 1.0625rem;
     font-weight: 700;
     margin-top: 0;
@@ -3627,7 +3650,7 @@ Style guide: Page header.01 Header
       width: auto;
       text-align: initial; } }
 
-.hero, .hero--content, .hero--content-blur, .hero--content-colour,
+.hero, .hero--content,
 .hero-sml,
 .hero-med {
   color: #313131;
@@ -3665,7 +3688,7 @@ Style guide: Page header.01 Header
   margin-bottom: 0;
   background-color: #f0f3f5;
   color: #043751; }
-  .hero a, .hero--content a, .hero--content-blur a, .hero--content-colour a,
+  .hero a, .hero--content a,
   .hero-sml a,
   .hero-med a {
     color: #313131;
@@ -3678,28 +3701,28 @@ Style guide: Page header.01 Header
             transition-duration: 0.1s;
     -webkit-transition-property: background-color, border-color, color;
     transition-property: background-color, border-color, color; }
-    .hero a:hover, .hero--content a:hover, .hero--content-blur a:hover, .hero--content-colour a:hover, .hero a:focus, .hero--content a:focus, .hero--content-blur a:focus, .hero--content-colour a:focus,
+    .hero a:hover, .hero--content a:hover, .hero a:focus, .hero--content a:focus,
     .hero-sml a:hover,
     .hero-sml a:focus,
     .hero-med a:hover,
     .hero-med a:focus {
       background-color: #5bcbe3;
       color: #313131; }
-    .hero a[rel~='external'], .hero--content a[rel~='external'], .hero--content-blur a[rel~='external'], .hero--content-colour a[rel~='external'],
+    .hero a[rel~='external'], .hero--content a[rel~='external'],
     .hero-sml a[rel~='external'],
     .hero-med a[rel~='external'] {
       display: inline;
       position: relative;
       margin-right: 1.6em; }
-      .hero a[rel~='external']:hover, .hero--content a[rel~='external']:hover, .hero--content-blur a[rel~='external']:hover, .hero--content-colour a[rel~='external']:hover,
+      .hero a[rel~='external']:hover, .hero--content a[rel~='external']:hover,
       .hero-sml a[rel~='external']:hover,
       .hero-med a[rel~='external']:hover {
         border-color: transparent; }
-      .hero a[rel~='external']::after, .hero--content a[rel~='external']::after, .hero--content-blur a[rel~='external']::after, .hero--content-colour a[rel~='external']::after,
+      .hero a[rel~='external']::after, .hero--content a[rel~='external']::after,
       .hero-sml a[rel~='external']::after,
       .hero-med a[rel~='external']::after {
         background-size: 0.9em auto; }
-  .hero .see-more, .hero--content .see-more, .hero--content-blur .see-more, .hero--content-colour .see-more,
+  .hero .see-more, .hero--content .see-more,
   .hero-sml .see-more,
   .hero-med .see-more {
     display: inline-block;
@@ -3707,7 +3730,7 @@ Style guide: Page header.01 Header
     margin-right: 1.6em;
     font-weight: 700;
     color: #18788d; }
-    .hero .see-more::after, .hero--content .see-more::after, .hero--content-blur .see-more::after, .hero--content-colour .see-more::after,
+    .hero .see-more::after, .hero--content .see-more::after,
     .hero-sml .see-more::after,
     .hero-med .see-more::after {
       content: '';
@@ -3720,55 +3743,55 @@ Style guide: Page header.01 Header
       background-repeat: no-repeat;
       background-position: right 0.4em;
       background-size: 0.64em auto; }
-    .hero .see-more:hover, .hero--content .see-more:hover, .hero--content-blur .see-more:hover, .hero--content-colour .see-more:hover, .hero .see-more:focus, .hero--content .see-more:focus, .hero--content-blur .see-more:focus, .hero--content-colour .see-more:focus,
+    .hero .see-more:hover, .hero--content .see-more:hover, .hero .see-more:focus, .hero--content .see-more:focus,
     .hero-sml .see-more:hover,
     .hero-sml .see-more:focus,
     .hero-med .see-more:hover,
     .hero-med .see-more:focus {
       color: #313131; }
-  .hero span.placeholder-link, .hero--content span.placeholder-link, .hero--content-blur span.placeholder-link, .hero--content-colour span.placeholder-link,
+  .hero span.placeholder-link, .hero--content span.placeholder-link,
   .hero-sml span.placeholder-link,
   .hero-med span.placeholder-link {
     color: rgba(49, 49, 49, 0.7);
     border-bottom: none;
     cursor: not-allowed; }
-    .hero span.placeholder-link:hover, .hero--content span.placeholder-link:hover, .hero--content-blur span.placeholder-link:hover, .hero--content-colour span.placeholder-link:hover,
+    .hero span.placeholder-link:hover, .hero--content span.placeholder-link:hover,
     .hero-sml span.placeholder-link:hover,
     .hero-med span.placeholder-link:hover {
       cursor: not-allowed; }
-  .hero.corporate, .corporate.hero--content, .corporate.hero--content-blur, .corporate.hero--content-colour,
+  .hero.corporate, .corporate.hero--content,
   .hero-sml.corporate,
   .hero-med.corporate {
     background-color: #0098b0;
     color: #fff; }
-  .hero h1, .hero--content h1, .hero--content-blur h1, .hero--content-colour h1, .hero .site-title, .hero--content .site-title, .hero--content-blur .site-title, .hero--content-colour .site-title,
+  .hero h1, .hero--content h1, .hero .site-title, .hero--content .site-title,
   .hero-sml h1, .hero-sml .site-title,
   .hero-med h1, .hero-med .site-title {
     font-size: 1.75rem;
     margin-top: 0;
     max-width: 20em; }
     @media screen and (min-width: 768px) {
-      .hero h1, .hero--content h1, .hero--content-blur h1, .hero--content-colour h1, .hero .site-title, .hero--content .site-title, .hero--content-blur .site-title, .hero--content-colour .site-title,
+      .hero h1, .hero--content h1, .hero .site-title, .hero--content .site-title,
       .hero-sml h1, .hero-sml .site-title,
       .hero-med h1, .hero-med .site-title {
         font-size: 2.375rem; } }
-  .hero p, .hero--content p, .hero--content-blur p, .hero--content-colour p,
+  .hero p, .hero--content p,
   .hero-sml p,
   .hero-med p {
     font-size: 1.5rem;
     max-width: 30em;
     margin-bottom: 0.8em; }
-  .hero .site-title, .hero--content .site-title, .hero--content-blur .site-title, .hero--content-colour .site-title,
+  .hero .site-title, .hero--content .site-title,
   .hero-sml .site-title,
   .hero-med .site-title {
     display: block;
     margin-top: 0;
     margin-bottom: 0.4em; }
-  .hero .tagline, .hero--content .tagline, .hero--content-blur .tagline, .hero--content-colour .tagline,
+  .hero .tagline, .hero--content .tagline,
   .hero-sml .tagline,
   .hero-med .tagline {
     font-size: 150%; }
-  .hero .wrapper > :first-child, .hero--content .wrapper > :first-child, .hero--content-blur .wrapper > :first-child, .hero--content-colour .wrapper > :first-child, .hero .node-type-video .ds-wrapper > :first-child, .node-type-video .hero .ds-wrapper > :first-child, .hero--content .node-type-video .ds-wrapper > :first-child, .node-type-video .hero--content .ds-wrapper > :first-child, .hero--content-blur .node-type-video .ds-wrapper > :first-child, .node-type-video .hero--content-blur .ds-wrapper > :first-child, .hero--content-colour .node-type-video .ds-wrapper > :first-child, .node-type-video .hero--content-colour .ds-wrapper > :first-child,
+  .hero .wrapper > :first-child, .hero--content .wrapper > :first-child, .hero .node-type-video .ds-wrapper > :first-child, .node-type-video .hero .ds-wrapper > :first-child, .hero--content .node-type-video .ds-wrapper > :first-child, .node-type-video .hero--content .ds-wrapper > :first-child,
   .hero-sml .wrapper > :first-child,
   .hero-sml .node-type-video .ds-wrapper > :first-child, .node-type-video
   .hero-sml .ds-wrapper > :first-child,
@@ -3776,7 +3799,7 @@ Style guide: Page header.01 Header
   .hero-med .node-type-video .ds-wrapper > :first-child, .node-type-video
   .hero-med .ds-wrapper > :first-child {
     margin-top: 0; }
-  .hero .wrapper > :last-child, .hero--content .wrapper > :last-child, .hero--content-blur .wrapper > :last-child, .hero--content-colour .wrapper > :last-child, .hero .node-type-video .ds-wrapper > :last-child, .node-type-video .hero .ds-wrapper > :last-child, .hero--content .node-type-video .ds-wrapper > :last-child, .node-type-video .hero--content .ds-wrapper > :last-child, .hero--content-blur .node-type-video .ds-wrapper > :last-child, .node-type-video .hero--content-blur .ds-wrapper > :last-child, .hero--content-colour .node-type-video .ds-wrapper > :last-child, .node-type-video .hero--content-colour .ds-wrapper > :last-child,
+  .hero .wrapper > :last-child, .hero--content .wrapper > :last-child, .hero .node-type-video .ds-wrapper > :last-child, .node-type-video .hero .ds-wrapper > :last-child, .hero--content .node-type-video .ds-wrapper > :last-child, .node-type-video .hero--content .ds-wrapper > :last-child,
   .hero-sml .wrapper > :last-child,
   .hero-sml .node-type-video .ds-wrapper > :last-child, .node-type-video
   .hero-sml .ds-wrapper > :last-child,
@@ -4139,57 +4162,60 @@ Markup: templates/body-styles.html
 
 Style guide: Typography.3 Body copy
 */
-h1, .hero .site-title, .hero--content .site-title, .hero--content-blur .site-title, .hero--content-colour .site-title,
+h1, .hero .site-title, .hero--content .site-title,
 .hero-sml .site-title,
 .hero-med .site-title,
 h2,
 .display,
+.video-title,
 h3,
 footer[role='contentinfo'] .footer-top h2,
 footer[role='contentinfo'] .footer-top .display,
+footer[role='contentinfo'] .footer-top .video-title,
+.view-event .field-name-title,
 h4 {
   line-height: 1.4;
   font-weight: 400;
   margin-bottom: 0.4em;
   margin-top: 1.6em; }
 
-h1, .hero .site-title, .hero--content .site-title, .hero--content-blur .site-title, .hero--content-colour .site-title,
+h1, .hero .site-title, .hero--content .site-title,
 .hero-sml .site-title,
 .hero-med .site-title {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.8em; }
   @media screen and (min-width: 768px) {
-    h1, .hero .site-title, .hero--content .site-title, .hero--content-blur .site-title, .hero--content-colour .site-title,
+    h1, .hero .site-title, .hero--content .site-title,
     .hero-sml .site-title,
     .hero-med .site-title {
       font-size: 1.75rem; } }
   @media screen and (min-width: 75em) {
-    h1, .hero .site-title, .hero--content .site-title, .hero--content-blur .site-title, .hero--content-colour .site-title,
+    h1, .hero .site-title, .hero--content .site-title,
     .hero-sml .site-title,
     .hero-med .site-title {
       font-size: 2.5rem; } }
-  h1:first-of-type, .hero .site-title:first-of-type, .hero--content .site-title:first-of-type, .hero--content-blur .site-title:first-of-type, .hero--content-colour .site-title:first-of-type,
+  h1:first-of-type, .hero .site-title:first-of-type, .hero--content .site-title:first-of-type,
   .hero-sml .site-title:first-of-type,
   .hero-med .site-title:first-of-type {
     margin-top: 0.4em; }
 
-h2, .display {
+h2, .display, .video-title {
   font-size: 2rem;
   line-height: 1.2;
   margin-top: 1.6em;
   margin-bottom: 1em; }
   @media screen and (min-width: 768px) {
-    h2, .display {
+    h2, .display, .video-title {
       font-size: 2.5rem; } }
 
-h3, footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .display {
+h3, footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .video-title, .view-event .field-name-title {
   font-size: 1.5rem;
   font-weight: 700;
   margin-top: 1.46667em;
   margin-bottom: 0.8em; }
   @media screen and (min-width: 768px) {
-    h3, footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .display {
+    h3, footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .video-title, .view-event .field-name-title {
       font-size: 1.625rem; } }
 
 h4,
@@ -4198,18 +4224,23 @@ h6 {
   font-size: 1.125rem;
   font-weight: 700; }
 
-.gov-speak h1, .gov-speak .hero .site-title, .hero .gov-speak .site-title, .gov-speak .hero--content .site-title, .hero--content .gov-speak .site-title, .gov-speak .hero--content-blur .site-title, .hero--content-blur .gov-speak .site-title, .gov-speak .hero--content-colour .site-title, .hero--content-colour .gov-speak .site-title, .gov-speak
+.gov-speak h1, .gov-speak .hero .site-title, .hero .gov-speak .site-title, .gov-speak .hero--content .site-title, .hero--content .gov-speak .site-title, .gov-speak
 .hero-sml .site-title,
 .hero-sml .gov-speak .site-title, .gov-speak
 .hero-med .site-title,
 .hero-med .gov-speak .site-title,
 .gov-speak h2,
 .gov-speak .display,
+.gov-speak .video-title,
 .gov-speak h3,
 .gov-speak footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top
 .gov-speak h2,
 .gov-speak footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top
 .gov-speak .display,
+.gov-speak footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top
+.gov-speak .video-title,
+.gov-speak .view-event .field-name-title, .view-event
+.gov-speak .field-name-title,
 .gov-speak h4,
 .gov-speak h5,
 .gov-speak h6 {
@@ -4218,7 +4249,7 @@ h6 {
   margin-bottom: 0.4em;
   margin-top: 1.6em; }
 
-.gov-speak h1, .gov-speak .hero .site-title, .hero .gov-speak .site-title, .gov-speak .hero--content .site-title, .hero--content .gov-speak .site-title, .gov-speak .hero--content-blur .site-title, .hero--content-blur .gov-speak .site-title, .gov-speak .hero--content-colour .site-title, .hero--content-colour .gov-speak .site-title, .gov-speak
+.gov-speak h1, .gov-speak .hero .site-title, .hero .gov-speak .site-title, .gov-speak .hero--content .site-title, .hero--content .gov-speak .site-title, .gov-speak
 .hero-sml .site-title,
 .hero-sml .gov-speak .site-title, .gov-speak
 .hero-med .site-title,
@@ -4226,38 +4257,38 @@ h6 {
   font-size: 2rem;
   line-height: 1.2; }
   @media screen and (min-width: 768px) {
-    .gov-speak h1, .gov-speak .hero .site-title, .hero .gov-speak .site-title, .gov-speak .hero--content .site-title, .hero--content .gov-speak .site-title, .gov-speak .hero--content-blur .site-title, .hero--content-blur .gov-speak .site-title, .gov-speak .hero--content-colour .site-title, .hero--content-colour .gov-speak .site-title, .gov-speak
+    .gov-speak h1, .gov-speak .hero .site-title, .hero .gov-speak .site-title, .gov-speak .hero--content .site-title, .hero--content .gov-speak .site-title, .gov-speak
     .hero-sml .site-title,
     .hero-sml .gov-speak .site-title, .gov-speak
     .hero-med .site-title,
     .hero-med .gov-speak .site-title {
       font-size: 2.75rem; } }
   @media screen and (min-width: 75em) {
-    .gov-speak h1, .gov-speak .hero .site-title, .hero .gov-speak .site-title, .gov-speak .hero--content .site-title, .hero--content .gov-speak .site-title, .gov-speak .hero--content-blur .site-title, .hero--content-blur .gov-speak .site-title, .gov-speak .hero--content-colour .site-title, .hero--content-colour .gov-speak .site-title, .gov-speak
+    .gov-speak h1, .gov-speak .hero .site-title, .hero .gov-speak .site-title, .gov-speak .hero--content .site-title, .hero--content .gov-speak .site-title, .gov-speak
     .hero-sml .site-title,
     .hero-sml .gov-speak .site-title, .gov-speak
     .hero-med .site-title,
     .hero-med .gov-speak .site-title {
       font-size: 2.5rem; } }
-  .gov-speak h1:first-of-type, .gov-speak .hero .site-title:first-of-type, .hero .gov-speak .site-title:first-of-type, .gov-speak .hero--content .site-title:first-of-type, .hero--content .gov-speak .site-title:first-of-type, .gov-speak .hero--content-blur .site-title:first-of-type, .hero--content-blur .gov-speak .site-title:first-of-type, .gov-speak .hero--content-colour .site-title:first-of-type, .hero--content-colour .gov-speak .site-title:first-of-type, .gov-speak
+  .gov-speak h1:first-of-type, .gov-speak .hero .site-title:first-of-type, .hero .gov-speak .site-title:first-of-type, .gov-speak .hero--content .site-title:first-of-type, .hero--content .gov-speak .site-title:first-of-type, .gov-speak
   .hero-sml .site-title:first-of-type,
   .hero-sml .gov-speak .site-title:first-of-type, .gov-speak
   .hero-med .site-title:first-of-type,
   .hero-med .gov-speak .site-title:first-of-type {
     margin-top: 0.4em; }
 
-.gov-speak h2, .gov-speak .display {
+.gov-speak h2, .gov-speak .display, .gov-speak .video-title {
   font-size: 1.75rem;
   line-height: 1.2; }
   @media screen and (min-width: 768px) {
-    .gov-speak h2, .gov-speak .display {
+    .gov-speak h2, .gov-speak .display, .gov-speak .video-title {
       font-size: 2rem; } }
 
-.gov-speak h3, .gov-speak footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .gov-speak h2, .gov-speak footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .gov-speak .display {
+.gov-speak h3, .gov-speak footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .gov-speak h2, .gov-speak footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .gov-speak .display, .gov-speak footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .gov-speak .video-title, .gov-speak .view-event .field-name-title, .view-event .gov-speak .field-name-title {
   font-size: 1.5rem;
   font-weight: 700; }
   @media screen and (min-width: 768px) {
-    .gov-speak h3, .gov-speak footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .gov-speak h2, .gov-speak footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .gov-speak .display {
+    .gov-speak h3, .gov-speak footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .gov-speak h2, .gov-speak footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .gov-speak .display, .gov-speak footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .gov-speak .video-title, .gov-speak .view-event .field-name-title, .view-event .gov-speak .field-name-title {
       font-size: 1.625rem; } }
 
 .gov-speak h4 {
@@ -4291,18 +4322,23 @@ If you'd like to include an element that spans across the maximum available spac
 
 */
 @media screen and (min-width: 75em) {
-  .content-main h1, .content-main .hero .site-title, .hero .content-main .site-title, .content-main .hero--content .site-title, .hero--content .content-main .site-title, .content-main .hero--content-blur .site-title, .hero--content-blur .content-main .site-title, .content-main .hero--content-colour .site-title, .hero--content-colour .content-main .site-title, .content-main
+  .content-main h1, .content-main .hero .site-title, .hero .content-main .site-title, .content-main .hero--content .site-title, .hero--content .content-main .site-title, .content-main
   .hero-sml .site-title,
   .hero-sml .content-main .site-title, .content-main
   .hero-med .site-title,
   .hero-med .content-main .site-title,
   .content-main h2,
   .content-main .display,
+  .content-main .video-title,
   .content-main h3,
   .content-main footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top
   .content-main h2,
   .content-main footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top
   .content-main .display,
+  .content-main footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top
+  .content-main .video-title,
+  .content-main .view-event .field-name-title, .view-event
+  .content-main .field-name-title,
   .content-main h4,
   .content-main h5,
   .content-main p,
@@ -4566,10 +4602,9 @@ Style guide: Typography.5 Quotations
 */
 blockquote {
   margin: 1.2em 0;
-  padding: 0.8em 2.4em;
+  padding: 1.6em 2.4em 0.4em;
   background-color: #f0f3f5;
-  font-family: "Book Antiqua", Georgia, "Bitstream Vera Serif", serif;
-  quotes: "“" "”" "‘" "’"; }
+  quotes: none; }
   blockquote.pullquote {
     padding: 0;
     background-color: #fff; }
@@ -4578,32 +4613,15 @@ blockquote {
       line-height: 1.6;
       text-align: center;
       font-weight: 400;
-      margin-top: 1.6em; }
+      margin-top: 1.2em; }
       @media screen and (min-width: 768px) {
         blockquote.pullquote p {
           font-size: 1.625rem; } }
-    blockquote.pullquote::before, blockquote.pullquote::after {
-      text-align: center;
-      margin: 0; }
-  blockquote::before, blockquote::after {
-    display: block;
-    height: 0;
-    font-family: "Book Antiqua", Georgia, "Bitstream Vera Serif", serif;
-    font-size: 2.6875rem;
-    color: #18788d; }
-  blockquote::before {
-    margin-left: -0.6em;
-    padding-bottom: 0.4em;
-    content: open-quote; }
-  blockquote::after {
-    margin-right: -0.6em;
-    margin-top: -0.8em;
-    padding-bottom: 1.2em;
-    text-align: right;
-    content: close-quote; }
   blockquote footer {
+    display: block;
     margin-top: 1.2em;
-    padding-top: 0.4em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
     border-top: 1px solid #bbbbbb; }
   blockquote cite {
     display: inline-block;
@@ -4620,13 +4638,10 @@ blockquote {
     padding-top: 0;
     padding-bottom: 0; }
 
-q {
-  quotes: '“' '”' '‘' '’' '“' '”' '‘' '’'; }
-
 cite {
   font-style: normal; }
 
-article h1:first-of-type, article .hero .site-title:first-of-type, .hero article .site-title:first-of-type, article .hero--content .site-title:first-of-type, .hero--content article .site-title:first-of-type, article .hero--content-blur .site-title:first-of-type, .hero--content-blur article .site-title:first-of-type, article .hero--content-colour .site-title:first-of-type, .hero--content-colour article .site-title:first-of-type, article
+article h1:first-of-type, article .hero .site-title:first-of-type, .hero article .site-title:first-of-type, article .hero--content .site-title:first-of-type, .hero--content article .site-title:first-of-type, article
 .hero-sml .site-title:first-of-type,
 .hero-sml article .site-title:first-of-type, article
 .hero-med .site-title:first-of-type,
@@ -4835,45 +4850,55 @@ footer[role='contentinfo'] {
         margin: 0 0 0 1.2em; } }
 
 .page-header {
-  padding-bottom: 1.6em;
   -webkit-box-shadow: none;
           box-shadow: none;
-  background-color: #FFFFFF; }
+  background-color: #FFFFFF;
+  padding-bottom: 0.8em;
+  padding-top: 0.8em; }
+  @media screen and (min-width: 768px) {
+    .page-header {
+      padding-bottom: 1.6em;
+      padding-top: 1.6em; } }
+  .page-header .region-header {
+    margin-bottom: 0; }
+    @media screen and (min-width: 768px) {
+      .page-header .region-header {
+        margin-bottom: 1em; } }
 
-.page-header__logo {
-  padding: 0; }
-  .page-header__logo .logo img {
+header[role='banner'] .page-header__logo {
+  padding: 0;
+  text-align: left; }
+  header[role='banner'] .page-header__logo img {
     background-size: contain;
     display: inline-block;
-    width: 200px;
-    height: 48px; }
+    width: 170px;
+    height: 41px; }
     @media screen and (min-width: 768px) {
-      .page-header__logo .logo img {
+      header[role='banner'] .page-header__logo img {
         width: 227px;
         height: 55px; } }
     @media screen and (min-width: 75em) {
-      .page-header__logo .logo img {
+      header[role='banner'] .page-header__logo img {
         width: 300px;
         height: 72px; } }
+  header[role='banner'] .page-header__logo a {
+    border-bottom: 0; }
+    header[role='banner'] .page-header__logo a:hover, header[role='banner'] .page-header__logo a:focus {
+      background-color: transparent; }
 
-header[role='banner'] a.logo {
-  border-bottom: none; }
-  header[role='banner'] a.logo:hover, header[role='banner'] a.logo:focus {
-    background-color: transparent; }
-
-.hero, .hero--content, .hero--content-blur, .hero--content-colour {
+.hero, .hero--content {
   overflow: hidden;
   position: relative;
   padding-top: 0;
   padding-bottom: 0;
   height: 180px; }
   @media screen and (min-width: 768px) {
-    .hero, .hero--content, .hero--content-blur, .hero--content-colour {
+    .hero, .hero--content {
       height: 300px; } }
   @media screen and (min-width: 75em) {
-    .hero, .hero--content, .hero--content-blur, .hero--content-colour {
+    .hero, .hero--content {
       height: 400px; } }
-  .hero .hero-bg, .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+  .hero .hero-bg, .hero--content .hero-bg {
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
@@ -4882,75 +4907,65 @@ header[role='banner'] a.logo {
     position: absolute;
     width: 100%; }
     @media screen and (min-width: 768px) {
-      .hero .hero-bg, .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+      .hero .hero-bg, .hero--content .hero-bg {
         height: 360px;
         top: -100px; } }
     @media screen and (min-width: 75em) {
-      .hero .hero-bg, .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+      .hero .hero-bg, .hero--content .hero-bg {
         height: 480px;
         top: -133.33333px; } }
-  .hero .wrapper, .hero--content .wrapper, .hero--content-blur .wrapper, .hero--content-colour .wrapper, .hero .node-type-video .ds-wrapper, .node-type-video .hero .ds-wrapper, .hero--content .node-type-video .ds-wrapper, .node-type-video .hero--content .ds-wrapper, .hero--content-blur .node-type-video .ds-wrapper, .node-type-video .hero--content-blur .ds-wrapper, .hero--content-colour .node-type-video .ds-wrapper, .node-type-video .hero--content-colour .ds-wrapper {
+  .hero .wrapper, .hero--content .wrapper, .hero .node-type-video .ds-wrapper, .node-type-video .hero .ds-wrapper, .hero--content .node-type-video .ds-wrapper, .node-type-video .hero--content .ds-wrapper {
     position: relative; }
-  .hero .campaign-logo, .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
-    padding: 0 2em;
+  .hero .campaign-logo, .hero--content .campaign-logo {
     min-width: 0;
     width: auto;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
+    padding-left: 2em;
     max-height: 135px;
     margin-top: 22.5px; }
     @media screen and (min-width: 768px) {
-      .hero .campaign-logo, .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
+      .hero .campaign-logo, .hero--content .campaign-logo {
         max-height: 225px;
         margin-top: 37.5px; } }
     @media screen and (min-width: 75em) {
-      .hero .campaign-logo, .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
+      .hero .campaign-logo, .hero--content .campaign-logo {
         max-height: 300px;
         margin-top: 50px; } }
 
-.hero--content, .hero--content-blur, .hero--content-colour {
-  height: 72px; }
+.hero--content {
+  height: 90px; }
   @media screen and (min-width: 768px) {
-    .hero--content, .hero--content-blur, .hero--content-colour {
-      height: 120px; } }
+    .hero--content {
+      height: 150px; } }
   @media screen and (min-width: 75em) {
-    .hero--content, .hero--content-blur, .hero--content-colour {
-      height: 160px; } }
-  .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+    .hero--content {
+      height: 200px; } }
+  .hero--content .hero-bg {
     height: 180px;
     top: 0;
     background-position-y: -45px; }
     @media screen and (min-width: 768px) {
-      .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+      .hero--content .hero-bg {
         height: 300px;
         background-position-y: -75px; } }
     @media screen and (min-width: 75em) {
-      .hero--content .hero-bg, .hero--content-blur .hero-bg, .hero--content-colour .hero-bg {
+      .hero--content .hero-bg {
         height: 400px;
         background-position-y: -100px; } }
-  .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
-    max-height: 54px;
+  .hero--content .campaign-logo {
+    max-height: 72px;
     margin-top: 9px; }
     @media screen and (min-width: 768px) {
-      .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
-        max-height: 90px;
+      .hero--content .campaign-logo {
+        max-height: 120px;
         margin-top: 15px; } }
     @media screen and (min-width: 75em) {
-      .hero--content .campaign-logo, .hero--content-blur .campaign-logo, .hero--content-colour .campaign-logo {
-        max-height: 120px;
+      .hero--content .campaign-logo {
+        max-height: 160px;
         margin-top: 20px; } }
-
-.hero--content-blur .hero-bg {
-  -webkit-filter: blur(3px) !important;
-  -ms-filter: blur(3px) !important;
-  -moz-filter: blur(3px) !important;
-  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='blur'><feGaussianBlur stdDeviation='3' /></filter></svg>#blur");
-  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3'); }
-
-.hero--content-colour {
-  color: #FFFFFF; }
 
 .node-type-campaign section.highlight {
   float: left;
@@ -4976,7 +4991,7 @@ body main {
 
 .node-type-campaign article.content-main {
   width: 100%; }
-  .node-type-campaign article.content-main h1.title, .node-type-campaign article.content-main .hero .title.site-title, .hero .node-type-campaign article.content-main .title.site-title, .node-type-campaign article.content-main .hero--content .title.site-title, .hero--content .node-type-campaign article.content-main .title.site-title, .node-type-campaign article.content-main .hero--content-blur .title.site-title, .hero--content-blur .node-type-campaign article.content-main .title.site-title, .node-type-campaign article.content-main .hero--content-colour .title.site-title, .hero--content-colour .node-type-campaign article.content-main .title.site-title, .node-type-campaign article.content-main
+  .node-type-campaign article.content-main h1.title, .node-type-campaign article.content-main .hero .title.site-title, .hero .node-type-campaign article.content-main .title.site-title, .node-type-campaign article.content-main .hero--content .title.site-title, .hero--content .node-type-campaign article.content-main .title.site-title, .node-type-campaign article.content-main
   .hero-sml .title.site-title,
   .hero-sml .node-type-campaign article.content-main .title.site-title, .node-type-campaign article.content-main
   .hero-med .title.site-title,
@@ -5001,6 +5016,12 @@ body main {
 .page-node-1 article.content-main,
 .page-campaign-videos article.content-main {
   width: 100%; }
+
+main {
+  padding-top: 1.2em; }
+  @media screen and (min-width: 768px) {
+    main {
+      padding-top: 3.2em; } }
 
 .site-nav {
   padding: 0 2em;
@@ -5054,6 +5075,135 @@ body main {
   .list--cards > li figure img {
     height: auto; }
 
+.event_details .event_primary {
+  width: 100%; }
+  @media screen and (min-width: 768px) {
+    .event_details .event_primary {
+      float: left;
+      display: block;
+      margin-right: 2.74614%;
+      width: 48.62693%; }
+      .event_details .event_primary:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 768px) {
+    .event_details .event_primary {
+      float: left;
+      display: block;
+      margin-right: 2.04556%;
+      width: 48.97722%; }
+      .event_details .event_primary:last-child {
+        margin-right: 0; } }
+
+.event_details .event_secondary {
+  width: 100%; }
+  @media screen and (min-width: 768px) {
+    .event_details .event_secondary {
+      float: left;
+      display: block;
+      margin-right: 2.74614%;
+      width: 48.62693%; }
+      .event_details .event_secondary:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 768px) {
+    .event_details .event_secondary {
+      float: left;
+      display: block;
+      margin-right: 2.04556%;
+      width: 48.97722%; }
+      .event_details .event_secondary:last-child {
+        margin-right: 0; } }
+
+.location-map {
+  margin-top: 1.2em; }
+
+.page-campaign-events #block-system-main .field,
+.page-campaign-events .list-horizontal--events .field,
+.girlsmove #block-system-main .field,
+.girlsmove .list-horizontal--events .field {
+  margin-bottom: 1.2em; }
+
+.page-campaign-events #block-system-main .field-name-field-video-length,
+.page-campaign-events .list-horizontal--events .field-name-field-video-length,
+.girlsmove #block-system-main .field-name-field-video-length,
+.girlsmove .list-horizontal--events .field-name-field-video-length {
+  margin-bottom: 0; }
+
+.event_status {
+  font-weight: normal; }
+
+.node-type-event .field-name-field-feature-image {
+  width: 100%; }
+  @media screen and (min-width: 75em) {
+    .node-type-event .field-name-field-feature-image {
+      float: right;
+      margin-top: 50px;
+      max-width: 45%;
+      height: auto;
+      margin-left: 30px;
+      margin-bottom: 30px; } }
+
+.field-name-field-event-date:before {
+  content: "\f073"; }
+
+.field-name-field-link-to:before {
+  content: "\f0ac"; }
+
+.field-name-field-event-organiser:before {
+  content: "\f007"; }
+
+.field-name-field-health-topic:before {
+  content: "\f02b"; }
+
+.field-name-field-address:before {
+  content: "\f041"; }
+
+.field-name-field-state:before {
+  content: "\f278"; }
+
+.list-horizontal--events [class*="field-name-field-"] {
+  margin-top: 0.8em; }
+
+.list-horizontal--events > li {
+  display: block;
+  max-width: 100%; }
+  .list-horizontal--events > li figure {
+    width: 100%; }
+    @media screen and (min-width: 75em) {
+      .list-horizontal--events > li figure {
+        display: inline;
+        float: right;
+        display: block;
+        margin-left: 2.04556%;
+        width: 29.84368%; }
+        .list-horizontal--events > li figure:last-child {
+          margin-left: 0; } }
+    .list-horizontal--events > li figure img {
+      width: 100%;
+      height: auto; }
+  .list-horizontal--events > li article {
+    width: 100%;
+    padding-left: 5em !important; }
+    .list-horizontal--events > li article:before {
+      content: "\f133";
+      font-size: 3.5em !important; }
+
+aside #block-views-exp-event-page {
+  background: #f0f3f5;
+  padding: 1.2em; }
+  aside #block-views-exp-event-page .form-item, aside #block-views-exp-event-page .container-inline-date {
+    margin-bottom: 0; }
+  aside #block-views-exp-event-page .views-exposed-widget {
+    clear: both; }
+
+aside h2, aside .display, aside .video-title {
+  font-size: 1.5rem;
+  margin-top: 1.46667em;
+  margin-bottom: 0.8em;
+  margin-top: 0; }
+  @media screen and (min-width: 768px) {
+    aside h2, aside .display, aside .video-title {
+      font-size: 1.625rem; } }
+
 .page-feedback {
   padding-top: 0.8em !important;
   background: #2A2A2A;
@@ -5092,6 +5242,15 @@ body main {
     @media screen and (min-width: 768px) {
       .page-feedback [role='button'] {
         margin: 0 0 0 1.2em; } }
+
+.references,
+.footnotes {
+  display: inline-block;
+  font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
+  font-size: 87.5%;
+  margin-top: 1.2em;
+  padding-top: 0.4em;
+  border-top: 1px solid #bbbbbb; }
 
 .form-required {
   color: red; }
@@ -5137,6 +5296,36 @@ form button, form .modal .modal-trigger, .modal form .modal-trigger, form .butto
 html.video {
   margin-bottom: 0px; }
 
+.field-name-field-event-date, .field-name-field-link-to, .field-name-field-event-organiser, .field-name-field-health-topic, .field-name-field-address, .field-name-field-state, .list-horizontal--events > li article, [class*="fa-"], .social__links .social__links-item a, .social__links--stacked .social__links-item a {
+  position: relative;
+  padding-left: 2em; }
+  .field-name-field-event-date:before, .field-name-field-link-to:before, .field-name-field-event-organiser:before, .field-name-field-health-topic:before, .field-name-field-address:before, .field-name-field-state:before, .list-horizontal--events > li article:before, [class*="fa-"]:before, .social__links .social__links-item a:before, .social__links--stacked .social__links-item a:before {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #2A2A2A;
+    font-size: 1.5em;
+    position: absolute;
+    line-height: 1;
+    left: 0; }
+
+.fa-large {
+  padding-left: 3.5em; }
+  .fa-large:before {
+    font-size: 2.5em; }
+
+h1[class*="fa-"]:before, .hero [class*="fa-"].site-title:before, .hero--content [class*="fa-"].site-title:before,
+.hero-sml [class*="fa-"].site-title:before,
+.hero-med [class*="fa-"].site-title:before, h2[class*="fa-"]:before, [class*="fa-"].display:before, [class*="fa-"].video-title:before, h3[class*="fa-"]:before, footer[role='contentinfo'] .footer-top h2[class*="fa-"]:before, footer[role='contentinfo'] .footer-top [class*="fa-"].display:before, footer[role='contentinfo'] .footer-top [class*="fa-"].video-title:before, .view-event [class*="fa-"].field-name-title:before, h4[class*="fa-"]:before, h5[class*="fa-"]:before, h6[class*="fa-"]:before, p[class*="fa-"]:before {
+  font-size: inherit; }
+
+.fa-dark:before {
+  color: #000; }
+
+.fa-light:before {
+  color: #FFF; }
+
 iframe {
   position: absolute;
   width: 100%;
@@ -5164,17 +5353,6 @@ body a {
   body a:hover, body a:focus {
     background-color: #5bcbe3;
     color: #313131; }
-
-header .page-header__logo a {
-  border-bottom: none; }
-
-header .page-header__logo a:hover {
-  background-color: inherit; }
-
-header .page-header__logo img {
-  display: inline-block;
-  width: 227px;
-  height: 55px; }
 
 .modal label {
   cursor: pointer;
@@ -5263,7 +5441,7 @@ header .page-header__logo img {
   @media screen and (min-width: 53.75em) {
     .modal .modal-inner {
       width: 50%; } }
-  .modal .modal-inner h1, .modal .modal-inner .hero .site-title, .hero .modal .modal-inner .site-title, .modal .modal-inner .hero--content .site-title, .hero--content .modal .modal-inner .site-title, .modal .modal-inner .hero--content-blur .site-title, .hero--content-blur .modal .modal-inner .site-title, .modal .modal-inner .hero--content-colour .site-title, .hero--content-colour .modal .modal-inner .site-title, .modal .modal-inner
+  .modal .modal-inner h1, .modal .modal-inner .hero .site-title, .hero .modal .modal-inner .site-title, .modal .modal-inner .hero--content .site-title, .hero--content .modal .modal-inner .site-title, .modal .modal-inner
   .hero-sml .site-title,
   .hero-sml .modal .modal-inner .site-title, .modal .modal-inner
   .hero-med .site-title,
@@ -5328,7 +5506,7 @@ header .page-header__logo img {
       width: 80.86646%; }
       .social__feed:last-child {
         margin-right: 0; } }
-  .social__feed h3, .social__feed footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .social__feed h2, .social__feed footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .social__feed .display {
+  .social__feed h3, .social__feed footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .social__feed h2, .social__feed footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .social__feed .display, .social__feed footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .social__feed .video-title, .social__feed .view-event .field-name-title, .view-event .social__feed .field-name-title {
     font-weight: 400;
     margin-top: 0; }
 
@@ -5342,26 +5520,19 @@ header .page-header__logo img {
       .social__links .social__links-item, .social__links--stacked .social__links-item {
         display: inline;
         margin-right: 1.2em; } }
-    .social__links .social__links-item a:before, .social__links--stacked .social__links-item a:before {
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: 100% auto;
-      content: ' ';
-      display: inline-block;
-      height: 1.2em;
-      margin-right: 0.4em;
-      width: 1.2em; }
     .social__links .social__links-item a.youtube:before, .social__links--stacked .social__links-item a.youtube:before {
-      background-image: url("../images/icons/youtube.svg"); }
+      content: "\f16a"; }
     .social__links .social__links-item a.twitter:before, .social__links--stacked .social__links-item a.twitter:before {
-      background-image: url("../images/icons/twitter.svg"); }
+      content: "\f099"; }
     .social__links .social__links-item a.facebook:before, .social__links--stacked .social__links-item a.facebook:before {
-      background-image: url("../images/icons/facebook.svg"); }
+      content: "\f09a"; }
     .social__links .social__links-item a.email:before, .social__links--stacked .social__links-item a.email:before {
-      background-image: url("../images/icons/email.svg"); }
+      content: "\f003"; }
     .social__links .social__links-item a.linkedin:before, .social__links--stacked .social__links-item a.linkedin:before {
-      background-image: url("../images/icons/linkedin.svg"); }
-  .social__links h3, .social__links--stacked h3, .social__links footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .social__links h2, .social__links--stacked footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .social__links--stacked h2, .social__links footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .social__links .display, .social__links--stacked footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .social__links--stacked .display {
+      content: "\f0e1"; }
+    .social__links .social__links-item a.instagram:before, .social__links--stacked .social__links-item a.instagram:before {
+      content: "\f16d"; }
+  .social__links h3, .social__links--stacked h3, .social__links footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .social__links h2, .social__links--stacked footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .social__links--stacked h2, .social__links footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .social__links .display, .social__links--stacked footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .social__links--stacked .display, .social__links footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .social__links .video-title, .social__links--stacked footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .social__links--stacked .video-title, .social__links .view-event .field-name-title, .view-event .social__links .field-name-title, .social__links--stacked .view-event .field-name-title, .view-event .social__links--stacked .field-name-title {
     margin-top: 0; }
 
 .social__links--stacked .social__links-item {
@@ -5557,10 +5728,10 @@ header .page-header__logo img {
       .node-type-video .region-content .wrapper .video__list--related div.group-right, .video__list--related .node-type-video .region-content .ds-wrapper div.group-right, .node-type-video .region-content .ds-wrapper .video__list--related div.group-right, .video__list--related .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact .video__list--related div.group-right {
         width: 100%; } }
 
-.band, #block-bean-share-this, .band--img-text, .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat, .breastscreen-band--partners, .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block, .gmym-band--primary, .girls-make-your-move #block-bean-gmym-involved, .band--small, .page-feedback, .smokes-band--partners, #block-bean-quitenow-partner, .band--pad, .band--secondary, .band--gradient, .node-type-social-media .main, .gmym-band--secondary {
+.band, #block-bean-share-this, .band--img-text, .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat, .breastscreen-band--partners, .girlsmove #block-bean-gmym-cards-0, .girlsmove #block-views-campaign-videos-block-4, #block-views-activities-block, .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block, .band--small, .page-feedback, .smokes-band--partners, #block-bean-quitenow-partner, .band--pad, .band--secondary, .band--gradient, .node-type-social-media .main {
   padding: 0.8em 0 3.2em;
   width: 100%; }
-  .band::after, #block-bean-share-this::after, .band--img-text::after, .band--img-text-halves::after, .band--img-text-halves--invert::after, .breastscreen #block-bean-breast-cancer-in-australia::after, .breastscreen #block-bean-breastscreen-mammogram::after, .breastscreen #block-bean-breastscreen-why::after, .breastscreen #block-bean-breastscreen-early-detection::after, .breastscreen #block-bean-breastscreen-stats::after, .breastscreen #block-bean-breastscreen-expanding::after, .breastscreen #block-bean-breastscreen-74::after, .breastscreen #block-bean-breastscreen-detection::after, .breastscreen #block-bean-breastscreen-chat::after, .breastscreen-band--partners::after, .smokes-band--primary::after, .smokes.node-type-campaign #block-views-campaign-videos-block::after, .gmym-band--primary::after, .girls-make-your-move #block-bean-gmym-involved::after, .band--small::after, .page-feedback::after, .smokes-band--partners::after, #block-bean-quitenow-partner::after, .band--pad::after, .band--secondary::after, .band--gradient::after, .node-type-social-media .main::after, .gmym-band--secondary::after {
+  .band::after, #block-bean-share-this::after, .band--img-text::after, .band--img-text-halves::after, .band--img-text-halves--invert::after, .breastscreen #block-bean-breast-cancer-in-australia::after, .breastscreen #block-bean-breastscreen-mammogram::after, .breastscreen #block-bean-breastscreen-why::after, .breastscreen #block-bean-breastscreen-early-detection::after, .breastscreen #block-bean-breastscreen-stats::after, .breastscreen #block-bean-breastscreen-expanding::after, .breastscreen #block-bean-breastscreen-74::after, .breastscreen #block-bean-breastscreen-detection::after, .breastscreen #block-bean-breastscreen-chat::after, .breastscreen-band--partners::after, .girlsmove #block-bean-gmym-cards-0::after, .girlsmove #block-views-campaign-videos-block-4::after, #block-views-activities-block::after, .smokes-band--primary::after, .smokes.node-type-campaign #block-views-campaign-videos-block::after, .band--small::after, .page-feedback::after, .smokes-band--partners::after, #block-bean-quitenow-partner::after, .band--pad::after, .band--secondary::after, .band--gradient::after, .node-type-social-media .main::after {
     clear: both;
     content: "";
     display: table; }
@@ -5653,7 +5824,7 @@ header .page-header__logo img {
       width: 48.97722%; }
       .partner:last-child {
         margin-right: 0; } }
-  .partner h3, .partner footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .partner h2, .partner footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .partner .display {
+  .partner h3, .partner footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top .partner h2, .partner footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top .partner .display, .partner footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top .partner .video-title, .partner .view-event .field-name-title, .view-event .partner .field-name-title {
     font-weight: 400;
     margin-top: 0; }
 
@@ -5705,6 +5876,11 @@ header .page-header__logo img {
   .node-type-social-media .main article .title {
     display: none; }
 
+.node-type-campaign .abstract, .node-type-campaign p.highlight {
+  margin-bottom: 0;
+  margin-top: 1.2em;
+  border: 0; }
+
 .page-campaign-videos .content-main li {
   max-width: 100%; }
   .page-campaign-videos .content-main li .field-name-field-video-thumbnail img {
@@ -5728,7 +5904,8 @@ header .page-header__logo img {
 
 .view-campaign-videos .field-name-field-video-thumbnail img,
 .node-type-video .field-name-field-video-thumbnail img {
-  height: auto; }
+  height: auto;
+  width: 100%; }
 
 .view-campaign-videos .video__transcript summary,
 .node-type-video .video__transcript summary {
@@ -5809,42 +5986,43 @@ header .page-header__logo img {
         .band--img-text .band__text:last-child, .band--img-text-halves .band__text:last-child, .band--img-text-halves--invert .band__text:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__text:last-child, .breastscreen #block-bean-breastscreen-mammogram .band__text:last-child, .breastscreen #block-bean-breastscreen-why .band__text:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-stats .band__text:last-child, .breastscreen #block-bean-breastscreen-expanding .band__text:last-child, .breastscreen #block-bean-breastscreen-74 .band__text:last-child, .breastscreen #block-bean-breastscreen-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-chat .band__text:last-child {
           margin-right: 0; } }
 
-.band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat {
-  padding-bottom: 3.2em; }
-  @media screen and (min-width: 768px) {
-    .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat {
-      padding-bottom: 1.2em; } }
-  @media screen and (min-width: 768px) {
-    .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-why .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img,
-    .band--img-text-halves .band__text, .band--img-text-halves--invert .band__text, .breastscreen #block-bean-breast-cancer-in-australia .band__text, .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-why .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text, .breastscreen #block-bean-breastscreen-stats .band__text, .breastscreen #block-bean-breastscreen-expanding .band__text, .breastscreen #block-bean-breastscreen-74 .band__text, .breastscreen #block-bean-breastscreen-detection .band__text, .breastscreen #block-bean-breastscreen-chat .band__text {
-      float: left;
-      display: block;
-      margin-right: 2.74614%;
-      width: 48.62693%; }
-      .band--img-text-halves .band__img:last-child, .band--img-text-halves--invert .band__img:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__img:last-child, .breastscreen #block-bean-breastscreen-mammogram .band__img:last-child, .breastscreen #block-bean-breastscreen-why .band__img:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-stats .band__img:last-child, .breastscreen #block-bean-breastscreen-expanding .band__img:last-child, .breastscreen #block-bean-breastscreen-74 .band__img:last-child, .breastscreen #block-bean-breastscreen-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-chat .band__img:last-child,
-      .band--img-text-halves .band__text:last-child, .band--img-text-halves--invert .band__text:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__text:last-child, .breastscreen #block-bean-breastscreen-mammogram .band__text:last-child, .breastscreen #block-bean-breastscreen-why .band__text:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-stats .band__text:last-child, .breastscreen #block-bean-breastscreen-expanding .band__text:last-child, .breastscreen #block-bean-breastscreen-74 .band__text:last-child, .breastscreen #block-bean-breastscreen-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-chat .band__text:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 75em) {
-    .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-why .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img,
-    .band--img-text-halves .band__text, .band--img-text-halves--invert .band__text, .breastscreen #block-bean-breast-cancer-in-australia .band__text, .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-why .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text, .breastscreen #block-bean-breastscreen-stats .band__text, .breastscreen #block-bean-breastscreen-expanding .band__text, .breastscreen #block-bean-breastscreen-74 .band__text, .breastscreen #block-bean-breastscreen-detection .band__text, .breastscreen #block-bean-breastscreen-chat .band__text {
-      float: left;
-      display: block;
-      margin-right: 2.04556%;
-      width: 48.97722%; }
-      .band--img-text-halves .band__img:last-child, .band--img-text-halves--invert .band__img:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__img:last-child, .breastscreen #block-bean-breastscreen-mammogram .band__img:last-child, .breastscreen #block-bean-breastscreen-why .band__img:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-stats .band__img:last-child, .breastscreen #block-bean-breastscreen-expanding .band__img:last-child, .breastscreen #block-bean-breastscreen-74 .band__img:last-child, .breastscreen #block-bean-breastscreen-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-chat .band__img:last-child,
-      .band--img-text-halves .band__text:last-child, .band--img-text-halves--invert .band__text:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__text:last-child, .breastscreen #block-bean-breastscreen-mammogram .band__text:last-child, .breastscreen #block-bean-breastscreen-why .band__text:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-stats .band__text:last-child, .breastscreen #block-bean-breastscreen-expanding .band__text:last-child, .breastscreen #block-bean-breastscreen-74 .band__text:last-child, .breastscreen #block-bean-breastscreen-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-chat .band__text:last-child {
-        margin-right: 0; } }
-  .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-why .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img {
-    text-align: center; }
-    .band--img-text-halves .band__img img, .band--img-text-halves--invert .band__img img, .breastscreen #block-bean-breast-cancer-in-australia .band__img img, .breastscreen #block-bean-breastscreen-mammogram .band__img img, .breastscreen #block-bean-breastscreen-why .band__img img, .breastscreen #block-bean-breastscreen-early-detection .band__img img, .breastscreen #block-bean-breastscreen-stats .band__img img, .breastscreen #block-bean-breastscreen-expanding .band__img img, .breastscreen #block-bean-breastscreen-74 .band__img img, .breastscreen #block-bean-breastscreen-detection .band__img img, .breastscreen #block-bean-breastscreen-chat .band__img img {
-      width: 100%; }
+@media screen and (min-width: 768px) {
+  .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat {
+    padding-bottom: 1.2em; } }
+
+@media screen and (min-width: 768px) {
+  .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-why .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img,
+  .band--img-text-halves .band__text, .band--img-text-halves--invert .band__text, .breastscreen #block-bean-breast-cancer-in-australia .band__text, .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-why .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text, .breastscreen #block-bean-breastscreen-stats .band__text, .breastscreen #block-bean-breastscreen-expanding .band__text, .breastscreen #block-bean-breastscreen-74 .band__text, .breastscreen #block-bean-breastscreen-detection .band__text, .breastscreen #block-bean-breastscreen-chat .band__text {
+    float: left;
+    display: block;
+    margin-right: 2.74614%;
+    width: 48.62693%; }
+    .band--img-text-halves .band__img:last-child, .band--img-text-halves--invert .band__img:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__img:last-child, .breastscreen #block-bean-breastscreen-mammogram .band__img:last-child, .breastscreen #block-bean-breastscreen-why .band__img:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-stats .band__img:last-child, .breastscreen #block-bean-breastscreen-expanding .band__img:last-child, .breastscreen #block-bean-breastscreen-74 .band__img:last-child, .breastscreen #block-bean-breastscreen-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-chat .band__img:last-child,
+    .band--img-text-halves .band__text:last-child, .band--img-text-halves--invert .band__text:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__text:last-child, .breastscreen #block-bean-breastscreen-mammogram .band__text:last-child, .breastscreen #block-bean-breastscreen-why .band__text:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-stats .band__text:last-child, .breastscreen #block-bean-breastscreen-expanding .band__text:last-child, .breastscreen #block-bean-breastscreen-74 .band__text:last-child, .breastscreen #block-bean-breastscreen-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-chat .band__text:last-child {
+      margin-right: 0; } }
+
+@media screen and (min-width: 75em) {
+  .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-why .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img,
+  .band--img-text-halves .band__text, .band--img-text-halves--invert .band__text, .breastscreen #block-bean-breast-cancer-in-australia .band__text, .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-why .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text, .breastscreen #block-bean-breastscreen-stats .band__text, .breastscreen #block-bean-breastscreen-expanding .band__text, .breastscreen #block-bean-breastscreen-74 .band__text, .breastscreen #block-bean-breastscreen-detection .band__text, .breastscreen #block-bean-breastscreen-chat .band__text {
+    float: left;
+    display: block;
+    margin-right: 2.04556%;
+    width: 48.97722%; }
+    .band--img-text-halves .band__img:last-child, .band--img-text-halves--invert .band__img:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__img:last-child, .breastscreen #block-bean-breastscreen-mammogram .band__img:last-child, .breastscreen #block-bean-breastscreen-why .band__img:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-stats .band__img:last-child, .breastscreen #block-bean-breastscreen-expanding .band__img:last-child, .breastscreen #block-bean-breastscreen-74 .band__img:last-child, .breastscreen #block-bean-breastscreen-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-chat .band__img:last-child,
+    .band--img-text-halves .band__text:last-child, .band--img-text-halves--invert .band__text:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__text:last-child, .breastscreen #block-bean-breastscreen-mammogram .band__text:last-child, .breastscreen #block-bean-breastscreen-why .band__text:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-stats .band__text:last-child, .breastscreen #block-bean-breastscreen-expanding .band__text:last-child, .breastscreen #block-bean-breastscreen-74 .band__text:last-child, .breastscreen #block-bean-breastscreen-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-chat .band__text:last-child {
+      margin-right: 0; } }
+
+.band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-why .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img {
+  text-align: center; }
+  .band--img-text-halves .band__img img, .band--img-text-halves--invert .band__img img, .breastscreen #block-bean-breast-cancer-in-australia .band__img img, .breastscreen #block-bean-breastscreen-mammogram .band__img img, .breastscreen #block-bean-breastscreen-why .band__img img, .breastscreen #block-bean-breastscreen-early-detection .band__img img, .breastscreen #block-bean-breastscreen-stats .band__img img, .breastscreen #block-bean-breastscreen-expanding .band__img img, .breastscreen #block-bean-breastscreen-74 .band__img img, .breastscreen #block-bean-breastscreen-detection .band__img img, .breastscreen #block-bean-breastscreen-chat .band__img img {
+    width: 100%; }
 
 @media screen and (min-width: 768px) {
   .band--img-text-halves--invert .band__text, .breastscreen #block-bean-breast-cancer-in-australia .band__text, .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-why .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text {
     float: right; } }
 
 .band--tight-bottom, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why {
-  padding-bottom: 0 !important; }
+  padding-bottom: 0; }
   .band--tight-bottom .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img, .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-why .band__img {
     vertical-align: bottom;
     text-align: center;
@@ -5891,7 +6069,7 @@ header .page-header__logo img {
 
 .band--feature {
   padding: 3.2em 0; }
-  .band--feature h2, .band--feature .display {
+  .band--feature h2, .band--feature .display, .band--feature .video-title {
     margin-top: 0; }
   .band--feature .feature__item {
     padding: 1.2em;
@@ -6021,7 +6199,7 @@ p.highlight {
   padding-bottom: 0; }
 
 .breastscreen #block-bean-breastscreen-chat {
-  padding-top: 3.2em; }
+  padding-top: 3.2em !important; }
 
 .breastscreen .sticky-nav {
   display: none; }
@@ -6064,117 +6242,237 @@ body.breastscreen > main .see-more {
   .breastscreen .see-more:after {
     display: none; }
 
-.breastscreen .hero .hero-bg, .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
-  background-position-y: 35px;
-  height: 225px; }
-  @media screen and (min-width: 768px) {
-    .breastscreen .hero .hero-bg, .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
-      background-position-y: 10px;
-      height: 360px; } }
-  @media screen and (min-width: 75em) {
-    .breastscreen .hero .hero-bg, .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
-      height: 480px; } }
+.breastscreen .block-link {
+  color: #fff;
+  background: #d51364;
+  display: block;
+  text-align: center;
+  margin-top: 50px; }
 
-.breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
-  background-position-y: -20px; }
-  @media screen and (min-width: 768px) {
-    .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
-      background-position-y: -60px; } }
-  @media screen and (min-width: 75em) {
-    .breastscreen .hero--content .hero-bg, .breastscreen .hero--content-blur .hero-bg, .breastscreen .hero--content-colour .hero-bg {
-      background-position-y: -100px; } }
+@media screen and (max-width: 420px) {
+  .breastscreen .hero .hero-bg, .breastscreen .hero--content .hero-bg {
+    background-position-y: 22px; } }
 
-.breastscreen .hero--content .campaign-logo, .breastscreen .hero--content-blur .campaign-logo, .breastscreen .hero--content-colour .campaign-logo {
-  max-height: 106px;
-  margin-top: -17px; }
-  @media screen and (min-width: 768px) {
-    .breastscreen .hero--content .campaign-logo, .breastscreen .hero--content-blur .campaign-logo, .breastscreen .hero--content-colour .campaign-logo {
-      max-height: 165px;
-      margin-top: -23px; } }
-  @media screen and (min-width: 75em) {
-    .breastscreen .hero--content .campaign-logo, .breastscreen .hero--content-blur .campaign-logo, .breastscreen .hero--content-colour .campaign-logo {
-      max-height: 215px;
-      margin-top: -25px; } }
+@media screen and (min-width: 768px) {
+  .breastscreen .hero .hero-bg, .breastscreen .hero--content .hero-bg {
+    background-position-y: 10px;
+    height: 360px; } }
 
-.band, #block-bean-share-this, .band--img-text, .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat, .breastscreen-band--partners, .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block, .gmym-band--primary, .girls-make-your-move #block-bean-gmym-involved, .band--small, .page-feedback, .smokes-band--partners, #block-bean-quitenow-partner, .band--pad, .band--secondary, .band--gradient, .node-type-social-media .main, .gmym-band--secondary {
-  padding: 0.8em 0 3.2em;
+@media screen and (min-width: 75em) {
+  .breastscreen .hero .hero-bg, .breastscreen .hero--content .hero-bg {
+    height: 480px; } }
+
+@media screen and (max-width: 420px) {
+  .breastscreen .hero .campaign-logo, .breastscreen .hero--content .campaign-logo {
+    max-height: 160px;
+    margin-top: 40px; } }
+
+.breastscreen .hero--content .hero-bg {
+  background-position-y: -14px; }
+  @media screen and (min-width: 768px) {
+    .breastscreen .hero--content .hero-bg {
+      background-position-y: -30px; } }
+  @media screen and (min-width: 75em) {
+    .breastscreen .hero--content .hero-bg {
+      background-position-y: -70px; } }
+
+.breastscreen .hero--content .campaign-logo {
+  max-height: 122px;
+  margin-top: -16px; }
+  @media screen and (min-width: 768px) {
+    .breastscreen .hero--content .campaign-logo {
+      max-height: 204px;
+      margin-top: -28px; } }
+  @media screen and (min-width: 75em) {
+    .breastscreen .hero--content .campaign-logo {
+      max-height: 263px;
+      margin-top: -36px; } }
+
+.girlsmove #block-bean-gmym-cards-0 {
+  background-color: #EEE;
+  padding-top: 0.8em; }
+  @media screen and (min-width: 768px) {
+    .girlsmove #block-bean-gmym-cards-0 {
+      padding-top: 3.2em; } }
+
+#block-bean-ymca-featured {
+  padding-top: 30px;
+  background: #fffff1; }
+  #block-bean-ymca-featured .wrapper .band__img, #block-bean-ymca-featured .node-type-video .ds-wrapper .band__img, .node-type-video #block-bean-ymca-featured .ds-wrapper .band__img {
+    line-height: 0;
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      #block-bean-ymca-featured .wrapper .band__img, #block-bean-ymca-featured .node-type-video .ds-wrapper .band__img, .node-type-video #block-bean-ymca-featured .ds-wrapper .band__img {
+        float: left;
+        display: block;
+        margin-right: 2.74614%;
+        width: 31.50258%; }
+        #block-bean-ymca-featured .wrapper .band__img:last-child, #block-bean-ymca-featured .node-type-video .ds-wrapper .band__img:last-child, .node-type-video #block-bean-ymca-featured .ds-wrapper .band__img:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 75em) {
+      #block-bean-ymca-featured .wrapper .band__img, #block-bean-ymca-featured .node-type-video .ds-wrapper .band__img, .node-type-video #block-bean-ymca-featured .ds-wrapper .band__img {
+        float: left;
+        display: block;
+        margin-right: 2.04556%;
+        width: 36.22153%; }
+        #block-bean-ymca-featured .wrapper .band__img:last-child, #block-bean-ymca-featured .node-type-video .ds-wrapper .band__img:last-child, .node-type-video #block-bean-ymca-featured .ds-wrapper .band__img:last-child {
+          margin-right: 0; } }
+  #block-bean-ymca-featured .wrapper .band__text, #block-bean-ymca-featured .node-type-video .ds-wrapper .band__text, .node-type-video #block-bean-ymca-featured .ds-wrapper .band__text {
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      #block-bean-ymca-featured .wrapper .band__text, #block-bean-ymca-featured .node-type-video .ds-wrapper .band__text, .node-type-video #block-bean-ymca-featured .ds-wrapper .band__text {
+        float: left;
+        display: block;
+        margin-right: 2.74614%;
+        width: 65.75129%;
+        margin-bottom: 3.2em; }
+        #block-bean-ymca-featured .wrapper .band__text:last-child, #block-bean-ymca-featured .node-type-video .ds-wrapper .band__text:last-child, .node-type-video #block-bean-ymca-featured .ds-wrapper .band__text:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 75em) {
+      #block-bean-ymca-featured .wrapper .band__text, #block-bean-ymca-featured .node-type-video .ds-wrapper .band__text, .node-type-video #block-bean-ymca-featured .ds-wrapper .band__text {
+        float: left;
+        display: block;
+        margin-right: 2.04556%;
+        width: 61.73292%; }
+        #block-bean-ymca-featured .wrapper .band__text:last-child, #block-bean-ymca-featured .node-type-video .ds-wrapper .band__text:last-child, .node-type-video #block-bean-ymca-featured .ds-wrapper .band__text:last-child {
+          margin-right: 0; } }
+
+body.girlsmove > main a {
+  border-bottom-color: #278288; }
+
+.girlsmove [class*="field-item"] img {
+  height: auto; }
+
+.girlsmove #block-views-event-block-1 {
+  padding-bottom: 3.2em; }
+  .girlsmove #block-views-event-block-1 figure {
+    margin-bottom: 1.2em; }
+  .girlsmove #block-views-event-block-1 [class*="field-name-field-"] {
+    margin-top: 0.8em; }
+  .girlsmove #block-views-event-block-1 .field-name-field-feature-image {
+    margin-top: 0; }
+
+.girlsmove .content .field-name-field-image {
+  margin-bottom: 3.2em; }
+  .girlsmove .content .field-name-field-image img {
+    height: auto; }
+
+.girlsmove .content .list--cards .field-name-field-image,
+.girlsmove .content .list--cards > li figure img {
+  margin-bottom: 0;
   width: 100%; }
-  .band::after, #block-bean-share-this::after, .band--img-text::after, .band--img-text-halves::after, .band--img-text-halves--invert::after, .breastscreen #block-bean-breast-cancer-in-australia::after, .breastscreen #block-bean-breastscreen-mammogram::after, .breastscreen #block-bean-breastscreen-why::after, .breastscreen #block-bean-breastscreen-early-detection::after, .breastscreen #block-bean-breastscreen-stats::after, .breastscreen #block-bean-breastscreen-expanding::after, .breastscreen #block-bean-breastscreen-74::after, .breastscreen #block-bean-breastscreen-detection::after, .breastscreen #block-bean-breastscreen-chat::after, .breastscreen-band--partners::after, .smokes-band--primary::after, .smokes.node-type-campaign #block-views-campaign-videos-block::after, .gmym-band--primary::after, .girls-make-your-move #block-bean-gmym-involved::after, .band--small::after, .page-feedback::after, .smokes-band--partners::after, #block-bean-quitenow-partner::after, .band--pad::after, .band--secondary::after, .band--gradient::after, .node-type-social-media .main::after, .gmym-band--secondary::after {
-    clear: both;
-    content: "";
-    display: table; }
 
-.band--small, .page-feedback, .smokes-band--partners, #block-bean-quitenow-partner {
-  padding: 0; }
+.girlsmove #block-views-campaign-videos-block-4 {
+  background: #e8f7f9;
+  padding-top: 1.2em;
+  padding-bottom: 3.2em; }
+  @media screen and (min-width: 75em) {
+    .girlsmove #block-views-campaign-videos-block-4 .list-vertical--thirds li.views-row {
+      min-height: 375px; } }
 
-.band--pad {
-  padding: 3.2em 0; }
+.girlsmove #block-bean-gmym-cards-0 {
+  background-color: #278288;
+  padding-bottom: 0; }
 
-.smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block {
-  background-color: #d51364; }
+.girlsmove .view-event .list--cards > li article {
+  padding: 1.2em; }
+  @media screen and (min-width: 75em) {
+    .girlsmove .view-event .list--cards > li article {
+      min-height: 440px; } }
 
-.band--secondary {
-  background-color: #fce5ef; }
+.girlsmove .list--cards > li {
+  -webkit-box-shadow: 0 3px 20px #b6c0ff;
+  box-shadow: 0 3px 20px #b6c0ff; }
 
-.band--texture {
-  background-color: #eee;
-  background-image: url(../images/bg-textures/bg-header-test.svg);
-  background-position: 100% 0;
+.page-campaign-activities main .content-main,
+.girlsmove:not(.node-type-campaign-standard-page) main .content-main {
+  width: 100%; }
+
+#block-views-activities-block {
+  padding-bottom: 3.2em;
+  background-color: #e8f7f9;
+  background-position: bottom right;
   background-repeat: no-repeat;
-  padding: 0.8em 0 3.2em; }
+  background-size: cover; }
+  #block-views-activities-block .activity__selector {
+    width: 100%;
+    overflow: hidden; }
+    #block-views-activities-block .activity__selector h3, #block-views-activities-block .activity__selector footer[role='contentinfo'] .footer-top h2, footer[role='contentinfo'] .footer-top #block-views-activities-block .activity__selector h2, #block-views-activities-block .activity__selector footer[role='contentinfo'] .footer-top .display, footer[role='contentinfo'] .footer-top #block-views-activities-block .activity__selector .display, #block-views-activities-block .activity__selector footer[role='contentinfo'] .footer-top .video-title, footer[role='contentinfo'] .footer-top #block-views-activities-block .activity__selector .video-title, #block-views-activities-block .activity__selector .view-event .field-name-title, .view-event #block-views-activities-block .activity__selector .field-name-title {
+      display: none; }
+    #block-views-activities-block .activity__selector p {
+      margin-top: 5px;
+      margin-right: 15px;
+      float: left; }
+    #block-views-activities-block .activity__selector .tags {
+      float: left; }
+      #block-views-activities-block .activity__selector .tags a {
+        background: #FFF; }
+        #block-views-activities-block .activity__selector .tags a:hover, #block-views-activities-block .activity__selector .tags a:focus {
+          background: #278288;
+          color: #FFF; }
+  #block-views-activities-block .view-activities {
+    width: 100%; }
+  #block-views-activities-block .field-name-field-image {
+    margin-bottom: 0; }
+  #block-views-activities-block .list-vertical {
+    margin-top: 0; }
+  #block-views-activities-block .list-horizontal, #block-views-activities-block .list-horizontal--events, #block-views-activities-block .list-horizontal--narrow, #block-views-activities-block .list-horizontal--benefits {
+    margin-top: 0; }
+    #block-views-activities-block .list-horizontal > li, #block-views-activities-block .list-horizontal--events > li, #block-views-activities-block .list-horizontal--narrow > li, #block-views-activities-block .list-horizontal--benefits > li {
+      border: 0;
+      margin-top: 0;
+      max-width: 100%; }
+      @media screen and (min-width: 768px) {
+        #block-views-activities-block .list-horizontal > li, #block-views-activities-block .list-horizontal--events > li, #block-views-activities-block .list-horizontal--narrow > li, #block-views-activities-block .list-horizontal--benefits > li {
+          display: -webkit-box !important;
+          display: -webkit-flex !important;
+          display: -ms-flexbox !important;
+          display: flex !important;
+          float: left;
+          display: block;
+          margin-right: 2.74614%;
+          width: 48.62693%; }
+          #block-views-activities-block .list-horizontal > li:last-child, #block-views-activities-block .list-horizontal--events > li:last-child, #block-views-activities-block .list-horizontal--narrow > li:last-child, #block-views-activities-block .list-horizontal--benefits > li:last-child {
+            margin-right: 0; } }
+      @media screen and (min-width: 75em) {
+        #block-views-activities-block .list-horizontal > li, #block-views-activities-block .list-horizontal--events > li, #block-views-activities-block .list-horizontal--narrow > li, #block-views-activities-block .list-horizontal--benefits > li {
+          float: left;
+          display: block;
+          margin-right: 2.04556%;
+          width: 48.97722%; }
+          #block-views-activities-block .list-horizontal > li:last-child, #block-views-activities-block .list-horizontal--events > li:last-child, #block-views-activities-block .list-horizontal--narrow > li:last-child, #block-views-activities-block .list-horizontal--benefits > li:last-child {
+            margin-right: 0; } }
+      #block-views-activities-block .list-horizontal > li figure, #block-views-activities-block .list-horizontal--events > li figure, #block-views-activities-block .list-horizontal--narrow > li figure, #block-views-activities-block .list-horizontal--benefits > li figure {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 50%;
+            -ms-flex: 0 0 50%;
+                flex: 0 0 50%; }
+  #block-views-activities-block .list--cards > li {
+    -webkit-box-shadow: 0 3px 20px #91c1c5;
+    box-shadow: 0 3px 20px #91c1c5; }
 
-.band--gradient, .node-type-social-media .main {
-  background-color: #EEEEEE;
-  background-image: -webkit-linear-gradient(-360deg, #DDDDDD, #FFFFFF);
-  background-image: -webkit-gradient(linear,left top, right top,from(#DDDDDD), to(#FFFFFF));
-  background-image: -webkit-linear-gradient(left,#DDDDDD, #FFFFFF);
-  background-image: linear-gradient(90deg,#DDDDDD, #FFFFFF); }
+.list-horizontal--narrow > li figure {
+  width: 100%;
+  margin-bottom: 0.8em; }
+  @media screen and (min-width: 75em) {
+    .list-horizontal--narrow > li figure {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 10%;
+          -ms-flex: 0 0 10%;
+              flex: 0 0 10%; } }
 
-.band--quitline, #block-bean-quitnow-hotline section.pre-nav {
-  padding: 0.8em 0 0.4em;
-  background: #000000;
-  color: #FFFFFF;
-  text-align: center; }
-
-.band--quitline__image {
-  max-width: 50%; }
-  @media screen and (min-width: 768px) {
-    .band--quitline__image {
-      max-width: 100%; } }
-
-.smokes-band--partners, #block-bean-quitenow-partner {
-  padding-top: 0.8em;
-  background: #000000; }
-  .smokes-band--partners img, #block-bean-quitenow-partner img {
-    width: auto;
-    margin: 0 auto; }
-
-.band--sensitivity, #block-bean-quitnow-sensitivities {
-  padding: 0.8em 0;
-  background: #000000;
-  color: #FFFFFF; }
-  .band--sensitivity p, #block-bean-quitnow-sensitivities p {
-    margin: 0.8em 0; }
-
-.gmym-band--primary, .girls-make-your-move #block-bean-gmym-involved {
-  background-color: #EEE; }
-
-.gmym-band--secondary {
-  background-color: #DDD; }
+.partner__image {
+  margin-bottom: 1.2em; }
 
 .social__feature {
-  float: left;
-  display: block;
-  margin-right: 8.71718%;
   width: 100%; }
-  .social__feature:last-child {
-    margin-right: 0; }
   @media screen and (min-width: 768px) {
     .social__feature {
       float: left;
       display: block;
       margin-right: 2.74614%;
-      width: 22.9404%; }
+      width: 22.9404%;
+      float: left; }
       .social__feature:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 75em) {
@@ -6185,6 +6483,99 @@ body.breastscreen > main .see-more {
       width: 17.08798%; }
       .social__feature:last-child {
         margin-right: 0; } }
+
+.social-media-tag {
+  float: right; }
+
+.bean-social-media {
+  overflow: hidden; }
+  .bean-social-media p {
+    color: #fff; }
+  .bean-social-media .juicer-feed p {
+    color: #000; }
+  .bean-social-media .juicer-feed ul.j-filters, .bean-social-media .juicer-feed .j-paginate {
+    display: none; }
+
+.node-social-media .juicer-feed ul.j-filters {
+  padding-left: 0; }
+  .node-social-media .juicer-feed ul.j-filters li {
+    width: 20%; }
+
+.girlsmove #block-bean-gmym-socialmedia {
+  background: #278288;
+  color: #FFF;
+  padding-top: 0.8em;
+  padding-bottom: 3.2em;
+  overflow: hidden; }
+  .girlsmove #block-bean-gmym-socialmedia a {
+    color: #FFF;
+    border-color: #fff; }
+    .girlsmove #block-bean-gmym-socialmedia a:hover, .girlsmove #block-bean-gmym-socialmedia a:focus {
+      color: #278288;
+      background: #fff; }
+  .girlsmove #block-bean-gmym-socialmedia .see-more {
+    color: #fff; }
+    .girlsmove #block-bean-gmym-socialmedia .see-more:hover, .girlsmove #block-bean-gmym-socialmedia .see-more:focus {
+      color: #278288;
+      background: #fff; }
+    .girlsmove #block-bean-gmym-socialmedia .see-more:after {
+      background-image: none; }
+  .girlsmove #block-bean-gmym-socialmedia .social__feature {
+    width: 100%; }
+  .girlsmove #block-bean-gmym-socialmedia .social__feed {
+    width: 100%;
+    margin-top: 0.8em; }
+  .girlsmove #block-bean-gmym-socialmedia .social__links, .girlsmove #block-bean-gmym-socialmedia .social__links--stacked {
+    float: left; }
+  .girlsmove #block-bean-gmym-socialmedia .social__links .social__links-item a, .girlsmove #block-bean-gmym-socialmedia .social__links--stacked .social__links-item a,
+  .girlsmove #block-bean-gmym-socialmedia .social__links--stacked .social__links-item a {
+    border: 0; }
+    .girlsmove #block-bean-gmym-socialmedia .social__links .social__links-item a:hover, .girlsmove #block-bean-gmym-socialmedia .social__links--stacked .social__links-item a:hover, .girlsmove #block-bean-gmym-socialmedia .social__links .social__links-item a:focus, .girlsmove #block-bean-gmym-socialmedia .social__links--stacked .social__links-item a:focus,
+    .girlsmove #block-bean-gmym-socialmedia .social__links--stacked .social__links-item a:hover,
+    .girlsmove #block-bean-gmym-socialmedia .social__links--stacked .social__links-item a:focus {
+      background: transparent;
+      border-bottom: 1px solid #fff;
+      color: #fff; }
+    .girlsmove #block-bean-gmym-socialmedia .social__links .social__links-item a:before, .girlsmove #block-bean-gmym-socialmedia .social__links--stacked .social__links-item a:before,
+    .girlsmove #block-bean-gmym-socialmedia .social__links--stacked .social__links-item a:before {
+      color: #fff; }
+
+.page-campaign-156 aside #block-views-exp-event-page {
+  background: #ebf9fb; }
+
+#block-bean-gmym-hotline section.pre-nav {
+  padding: 0.8em 0 0.4em;
+  background: #278288;
+  color: #FFFFFF;
+  text-align: center; }
+  #block-bean-gmym-hotline section.pre-nav ul {
+    margin-bottom: 0.4em; }
+  #block-bean-gmym-hotline section.pre-nav p {
+    display: inline-block;
+    margin-right: 2em;
+    margin-bottom: 0.4em; }
+  #block-bean-gmym-hotline section.pre-nav .social__links, #block-bean-gmym-hotline section.pre-nav .social__links--stacked {
+    display: inline; }
+  #block-bean-gmym-hotline section.pre-nav .social__links-item {
+    display: inline;
+    margin-right: 0; }
+    #block-bean-gmym-hotline section.pre-nav .social__links-item a {
+      border: 0; }
+      #block-bean-gmym-hotline section.pre-nav .social__links-item a:hover, #block-bean-gmym-hotline section.pre-nav .social__links-item a:focus {
+        background-color: transparent; }
+      #block-bean-gmym-hotline section.pre-nav .social__links-item a:before {
+        color: #FFFFFF; }
+
+.activity__selector .tags a.active {
+  background: #278288;
+  color: #fff; }
+
+.girlsmove .hero .hero-bg, .girlsmove .hero--content .hero-bg,
+.girlsmove .hero--content .hero-bg,
+.page-campaign-156 .hero .hero-bg,
+.page-campaign-156 .hero--content .hero-bg,
+.page-campaign-156 .hero--content .hero-bg {
+  background-position-y: 35%; }
 
 .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block {
   background-color: #EEE; }
@@ -6242,13 +6633,13 @@ footer[role='contentinfo'] .footer-top nav > li {
 .list-vertical--halves > li {
   border-color: #DDD; }
 
-.list-horizontal--benefits h2, .list-horizontal--benefits .display {
+.list-horizontal--benefits h2, .list-horizontal--benefits .display, .list-horizontal--benefits .video-title {
   font-size: 1.5rem;
   margin-top: 1.46667em;
   margin-bottom: 0.8em;
   margin-top: 0.8em; }
   @media screen and (min-width: 768px) {
-    .list-horizontal--benefits h2, .list-horizontal--benefits .display {
+    .list-horizontal--benefits h2, .list-horizontal--benefits .display, .list-horizontal--benefits .video-title {
       font-size: 1.625rem; } }
 
 @media screen and (min-width: 768px) {
@@ -6332,3 +6723,21 @@ footer[role='contentinfo'] .footer-top nav > li {
 
 .field-name-field-campaign {
   display: none; }
+
+#block-workbench-block {
+  max-width: 75em;
+  margin: 0 auto; }
+
+.inline-tab-nav {
+  max-width: 75em;
+  margin-left: auto;
+  margin-right: auto; }
+
+body > main .inline-tab-nav a {
+  border-bottom-color: transparent;
+  color: #313131; }
+  body > main .inline-tab-nav a.is-current, body > main .inline-tab-nav a.is-active {
+    color: #313131; }
+  body > main .inline-tab-nav a:hover, body > main .inline-tab-nav a:focus {
+    background-color: #def4f9;
+    color: #313131; }

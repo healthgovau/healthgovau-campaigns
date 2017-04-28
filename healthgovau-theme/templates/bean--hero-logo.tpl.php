@@ -27,4 +27,7 @@
  * @see template_process()
  */
 ?>
-<a href="<?php print $logo_url; ?>"><img src="<?php print $logo_img; ?>" class="campaign-logo"></a>
+<a href="<?php print $logo_url; ?>">
+  <img src="<?php print $logo_img; ?>" alt="Campaign banner" class="campaign-logo" />
+  <span class="visuallyhidden"><?php print $title ?></span>
+</a>

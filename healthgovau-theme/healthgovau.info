@@ -11,6 +11,7 @@ stylesheets[all][] = system.messages.css
 stylesheets[all][] = system.theme.css
 
 stylesheets[all][] = css/styles.css
+stylesheets[all][] = css/font-awesome.css
 
 scripts[] = js/scripts.js
 
@@ -50,6 +51,9 @@ features[] = favicon
 features[] = main_menu
 features[] = secondary_menu
 
-
+breakpoints[desktop] = (min-width: 1200px)
+breakpoints[tablet] = (min-width: 768px)
+breakpoints[mobile] = (min-width: 420px)
+breakpoints[narrow] = (min-width: 0px)
 
 ; Set the default values of settings on the theme-settings.php form.

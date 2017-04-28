@@ -77,11 +77,7 @@ $bottom = render($page['bottom']);
 
     <div id="main">
 
-      <div id="content" class="column">
-
-        <a href="#skip-link" id="skip-content" class="element-invisible">Go to top of page</a>
-
-        <a id="main-content"></a>
+      <div class="column" id="main-content">
         <?php print render($title_prefix); ?>
         <?php if ($title): ?>
           <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
@@ -120,7 +116,7 @@ $bottom = render($page['bottom']);
     </section>
     <section class="footer-bottom">
       <div class="footer-logo">
-        <img alt="Australian Government Coat of Arms" src="<?php print $images; ?>/coat-of-arms.png">
+        <img alt="Australian Government Coat of Arms" src="<?php print $images; ?>/coat-of-arms.png" />
       </div> 
       <div class="footer-links">
         <?php print render($page['footer_bottom']); ?>

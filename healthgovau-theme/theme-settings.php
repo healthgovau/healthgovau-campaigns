@@ -19,6 +19,12 @@ function healthgovau_form_system_theme_settings_alter(&$form, &$form_state, $for
     '#type' => 'fieldset',
     '#title' => t('Google analytics settings'),
   );
+  $form['ga']['ga_api'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Google api KEY'),
+    '#default_value' => theme_get_setting('ga_api'),
+    '#size' => 255,
+  );
   $form['ga']['env'] = array(
     '#type' => 'select',
     '#title' => 'Environment',
