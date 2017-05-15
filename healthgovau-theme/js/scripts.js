@@ -16,7 +16,8 @@
 // To understand behaviors, see https://drupal.org/node/756722#behaviors
 Drupal.behaviors.healthgovauCampaign = {
   attach: function(context, settings) {
-
+      
+      
     // Sticky nav
     if( $(".sticky-nav").length) {
       var stickyNavTop = $('.sticky-nav').offset().top;
@@ -48,7 +49,11 @@ Drupal.behaviors.healthgovauCampaign = {
         plxBackground.css('top', - (plxWindowTopToWindowTop * plxSpeed) + 'px');
       }
     }
-    
+ 
+    $('.views-field-field-image-gallery-1').lightGallery({
+        selector: '.item-list ul > li > a'
+    }); 
+      
     // Hero parallax
     if ($(".js-parallax-window").length) {
       parallax();
@@ -66,10 +71,9 @@ Drupal.behaviors.healthgovauCampaign = {
     // Active links
 	var path = window.location.pathname + window.location.search;
     $('.activity__selector .tags a[href="' + path + '"]').addClass('active');
-
-    
   }
 };
 
-
 })(jQuery, Drupal, this, this.document);
+
+

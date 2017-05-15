@@ -126,7 +126,7 @@ function healthgovau_preprocess_field(&$variables) {
     // Add modal JS.
     drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/healthgovau.modal.js');
   }
-
+  
   // Create variable for address field.
   if ($variables['element']['#field_name'] == 'field_address') {
     // Only show the map in event node view. 
@@ -143,6 +143,15 @@ function healthgovau_preprocess_field(&$variables) {
         $variables['location_map'] ='<img src="' . $src . '" alt="' . $address['thoroughfare'] . ' ' . $address['locality'] .'" />';
       }
     }
+  }
+  // Add light gallery js to image gallery field.
+  if ($variables['element']['#field_name'] == 'field_image_gallery') {
+    $object = $variables['element']['#object'];
+    $variables['nid'] = $object->nid;
+      
+    // Add light gallery JS.
+    drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lightgallery.js');
+    drupal_add_css(drupal_get_path('theme', 'healthgovau') . '/sass/vendor/light-gallery/css/lightgallery.css');
   }
 }
 
@@ -232,6 +241,16 @@ function healthgovau_preprocess_node(&$variables) {
     }
     
     $variables['event_status'] ='<div class="field fa-info-circle"><div class="field-label">Event status: <span class="event_status">' . $indicator . '</span></div></div>';
+      
+    // Add light gallery JS / CSS and plugins.
+    drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lightgallery.min.js');
+    drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lg-pager.min.js');
+    drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lg-share.min.js');
+    drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lg-zoom.min.js');
+    drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lg-autoplay.min.js');
+    drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lg-fullscreen.min.js');
+    drupal_add_css(drupal_get_path('theme', 'healthgovau') . '/sass/vendor/light-gallery/css/lightgallery.css');  
+      
   }
 }
 
