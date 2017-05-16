@@ -50,10 +50,6 @@ Drupal.behaviors.healthgovauCampaign = {
       }
     }
  
-    $('.views-field-field-image-gallery-1').lightGallery({
-        selector: '.item-list ul > li > a'
-    }); 
-      
     // Hero parallax
     if ($(".js-parallax-window").length) {
       parallax();
@@ -66,14 +62,35 @@ Drupal.behaviors.healthgovauCampaign = {
       if( $(".sticky-nav").length) {
           stickyNav();
       }
-    });
-
+    });      
+    
+      
+    var stickyNav = function(){
+     var scrollTop = $(window).scrollTop();
+      if (scrollTop > stickyNavTop) {
+        $('.sticky-nav').addClass('on');
+      } else {
+        $('.sticky-nav').removeClass('on');
+      }
+    }
+    // event gallery
+    function eventgallery(){
+      $('.views-field-field-image-gallery-1').lightGallery({
+        selector: '.item-list ul > li > a'
+      }); 
+    }
+    if ($(".views-field-field-image-gallery-1").length) {
+         eventgallery();
+    }  
+      
     // Active links
 	var path = window.location.pathname + window.location.search;
     $('.activity__selector .tags a[href="' + path + '"]').addClass('active');
   }
 };
 
+
+    
 })(jQuery, Drupal, this, this.document);
 
 

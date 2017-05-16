@@ -242,15 +242,6 @@ function healthgovau_preprocess_node(&$variables) {
     
     $variables['event_status'] ='<div class="field fa-info-circle"><div class="field-label">Event status: <span class="event_status">' . $indicator . '</span></div></div>';
       
-    // Add light gallery JS / CSS and plugins.
-    drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lightgallery.min.js');
-    //drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lg-pager.min.js');
-    //drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lg-share.min.js');
-    drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lg-zoom.min.js');
-    //drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lg-autoplay.min.js');
-    drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lg-fullscreen.min.js');
-    drupal_add_css(drupal_get_path('theme', 'healthgovau') . '/sass/vendor/light-gallery/css/lightgallery.css');  
-      
   }
 }
 
@@ -263,6 +254,14 @@ function healthgovau_preprocess_views_view(&$vars) {
     $campaign_nid = $vars['view']->args[0];
     _healthgovau_set_hero_bg($campaign_nid, FALSE);
   }
+  if ($vars['view']->name == 'events_image_gallery') {
+    // Add light gallery JS / CSS and plugins
+    drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lightgallery.min.js');
+    drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lg-zoom.min.js');
+    drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lg-fullscreen.min.js');
+    drupal_add_css(drupal_get_path('theme', 'healthgovau') . '/sass/vendor/light-gallery/css/lightgallery.css'); 
+
+  }    
 }
 
 /**
