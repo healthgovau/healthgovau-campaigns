@@ -144,15 +144,6 @@ function healthgovau_preprocess_field(&$variables) {
       }
     }
   }
-  // Add light gallery js to image gallery field.
-  if ($variables['element']['#field_name'] == 'field_image_gallery') {
-    $object = $variables['element']['#object'];
-    $variables['nid'] = $object->nid;
-      
-    // Add light gallery JS.
-    drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lightgallery.js');
-    drupal_add_css(drupal_get_path('theme', 'healthgovau') . '/sass/vendor/light-gallery/css/lightgallery.css');
-  }
 }
 
 /**
