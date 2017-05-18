@@ -248,7 +248,6 @@ function healthgovau_preprocess_views_view(&$vars) {
     drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lightgallery.js');
     drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lg-zoom.min.js');
     drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lg-fullscreen.min.js');
-    //drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lg-accessibility.js');  
     drupal_add_css(drupal_get_path('theme', 'healthgovau') . '/sass/vendor/light-gallery/css/lightgallery.css'); 
   }    
 }
