@@ -1,9 +1,28 @@
-(function ( $ ) { 
+/*! lightgallery - v1.3.9 - 2017-02-05
+* http://sachinchoolur.github.io/lightGallery/
+* Copyright (c) 2017 Sachin N; Licensed GPLv3 */
+
+(function (root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module unless amdModuleId is set
+    define(['jquery'], function (a0) {
+      return (factory(a0));
+    });
+  } else if (typeof exports === 'object') {
+    // Node. Does not work with strict CommonJS, but
+    // only CommonJS-like environments that support module.exports,
+    // like Node.
+    module.exports = factory(require('jquery'));
+  } else {
+    factory(root["jQuery"]);
+  }
+}(this, function ($) {
+
+(function() {
     'use strict';
 
     var defaults = {
 
-        mode: 'lg-slide',
         mode: 'lg-slide',
 
         // Ex : 'ease'
@@ -274,8 +293,8 @@
         // Create controlls
         if (this.s.controls && this.$items.length > 1) {
             controls = '<div class="lg-actions">' +
-                '<div class="lg-prev lg-icon">' + this.s.prevHtml + '</div>' +
-                '<div class="lg-next lg-icon">' + this.s.nextHtml + '</div>' +
+                '<a href="#" class="lg-prev lg-icon">' + this.s.prevHtml + '</a>' +
+                '<a href="#" class="lg-next lg-icon">' + this.s.nextHtml + '</a>' +
                 '</div>';
         }
 
@@ -287,7 +306,7 @@
             '<div class="lg" style="width:' + this.s.width + '; height:' + this.s.height + '">' +
             '<div class="lg-inner">' + list + '</div>' +
             '<div class="lg-toolbar lg-group">' +
-            '<span class="lg-close lg-icon"></span>' +
+            '<a href="#" class="lg-close lg-icon"><span class="sr-only">Close Button</span></a>' +
             '</div>' +
             controls +
             subHtmlCont +
@@ -472,7 +491,7 @@
             } else {
                 subHtml = $currentEle.attr('data-sub-html');
                 if (this.s.getCaptionFromTitleOrAlt && !subHtml) {
-                    subHtml = $currentEle.attr('title') || $currentEle.find('img').first().attr('alt');
+                    subHtml = $currentEle.attr('title') || $currentEle.find('img').first().attr('alt'); 
                 }
             }
         }
@@ -596,6 +615,7 @@
             }
 
             _html = _this.s.dynamicEl[index].html;
+            _alt = _this.s.dynamicEl[index].alt;
             _src = _this.s.dynamicEl[index].src;
 
             if (_this.s.dynamicEl[index].responsive) {
@@ -614,6 +634,7 @@
             }
 
             _html = _this.$items.eq(index).attr('data-html');
+            _alt = _this.$items.eq(index).attr('alt'); 
             _src = _this.$items.eq(index).attr('href') || _this.$items.eq(index).attr('data-src');
 
             if (_this.$items.eq(index).attr('data-responsive')) {
@@ -659,7 +680,8 @@
                 _this.$slide.eq(index).prepend('<div class="lg-video-cont "><div class="lg-video"></div></div>');
                 _this.$el.trigger('hasVideo.lg', [index, _src, _html]);
             } else {
-                _this.$slide.eq(index).prepend('<div class="lg-img-wrap"><img class="lg-object lg-image" src="' + _src + '" /></div>');
+                var _alt = this.$items.eq(index).find('img').first().attr('alt');
+                _this.$slide.eq(index).prepend('<div class="lg-img-wrap"><img class="lg-object lg-image" src="' + _src + '" alt="' + _alt + '"  /></div>');
             }
 
             _this.$el.trigger('onAferAppendSlide.lg', [index]);
@@ -676,7 +698,7 @@
                         elements: [_$img[0]]
                     });
                 } catch (e) {
-                    console.warn('lightGallery :- If you want srcset to be supported for older browser please include picturefil version 2 javascript library in your document.');
+                    console.error('Make sure you have included Picturefill version 2');
                 }
             }
 
@@ -1330,4 +1352,7 @@
 
     $.fn.lightGallery.modules = {};
 
-}( jQuery ));
+})();
+
+
+}));

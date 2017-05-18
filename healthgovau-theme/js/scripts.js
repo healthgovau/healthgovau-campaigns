@@ -62,8 +62,7 @@ Drupal.behaviors.healthgovauCampaign = {
       if( $(".sticky-nav").length) {
           stickyNav();
       }
-    });      
-    
+    });    
       
     var stickyNav = function(){
      var scrollTop = $(window).scrollTop();
@@ -76,14 +75,28 @@ Drupal.behaviors.healthgovauCampaign = {
     // event gallery
     function eventgallery(){
       $('.views-field-field-image-gallery-1').lightGallery({
-        selector: '.item-list ul > li > a'
-      }); 
+        selector: '.item-list ul > li > a',
+        nextHtml: '<span class="sr-only">Next slide</span>',
+        prevHtml: '<span class="sr-only">Previous slide</span>'
+      });
+     
+      var $lg = $('.views-field-field-image-gallery-1');  
+      
+      $lg.lightGallery();
+
+      $lg.on('onAfterOpen.lg',function(event){
+          $( ".lg-outer" ).attr( "role", "dialog" );
+          $( ".lg-outer" ).attr( "aria-live", "polite" );
+      });
+      // force focus to light gallery window 
+      $( ".views-field-field-image-gallery-1 a" ).click(function() {
+        $( ".lg-outer a.lg-close" ).focus();
+      });    
     }
     if ($(".views-field-field-image-gallery-1").length) {
          eventgallery();
-    }  
-      
-    // Active links
+    }
+      // Active links
 	var path = window.location.pathname + window.location.search;
     $('.activity__selector .tags a[href="' + path + '"]').addClass('active');
   }

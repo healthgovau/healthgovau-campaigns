@@ -230,9 +230,7 @@ function healthgovau_preprocess_node(&$variables) {
     else if (time() > $end_date) {
       $indicator = 'Completed';
     }
-    
     $variables['event_status'] ='<div class="field fa-info-circle"><div class="field-label">Event status: <span class="event_status">' . $indicator . '</span></div></div>';
-      
   }
 }
 
@@ -247,11 +245,11 @@ function healthgovau_preprocess_views_view(&$vars) {
   }
   if ($vars['view']->name == 'events_image_gallery') {
     // Add light gallery JS / CSS and plugins
-    drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lightgallery.min.js');
+    drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lightgallery.js');
     drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lg-zoom.min.js');
     drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lg-fullscreen.min.js');
+    //drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lg-accessibility.js');  
     drupal_add_css(drupal_get_path('theme', 'healthgovau') . '/sass/vendor/light-gallery/css/lightgallery.css'); 
-
   }    
 }
 
