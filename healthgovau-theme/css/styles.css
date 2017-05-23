@@ -5194,6 +5194,8 @@ aside #block-views-exp-event-page {
   padding: 1.2em; }
   aside #block-views-exp-event-page .form-item, aside #block-views-exp-event-page .container-inline-date {
     margin-bottom: 0; }
+    aside #block-views-exp-event-page .form-item input, aside #block-views-exp-event-page .container-inline-date input {
+      width: 100%; }
   aside #block-views-exp-event-page .views-exposed-widget {
     clear: both; }
 

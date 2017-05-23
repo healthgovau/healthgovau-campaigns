@@ -157,6 +157,9 @@ aside {
     padding: $medium-spacing;
     .form-item, .container-inline-date {
       margin-bottom: 0;
+        input{
+            width: 100%;
+        }
     }
     .views-exposed-widget {
       clear: both;
