@@ -75,7 +75,7 @@ Drupal.behaviors.healthgovauCampaign = {
     // event gallery
     function eventgallery(){
       $('.views-field-field-image-gallery-1').lightGallery({
-        selector: '.item-list ul > li > a',
+        selector: '.views-field-field-image-gallery-1 > div > a',
         nextHtml: '<span class="sr-only">Next slide</span>',
         prevHtml: '<span class="sr-only">Previous slide</span>'
       });
