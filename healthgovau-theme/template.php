@@ -170,34 +170,6 @@ function healthgovau_preprocess_page(&$variables) {
     $variables['full_hero'] = 'hero--content';
     $variables['hero_bg'] = 'hero-bg';
   }
-    
-  if ($vars['view']->name == 'events_image_gallery') { 
-    // Add light gallery JS / CSS and plugins
-    
-    drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lightgallery.js',
-      array(
-        'group' => JS_DEFAULT,
-        'preprocess' => FALSE,
-        'weight' => '1',
-      )
-    );
-    drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lg-zoom.min.js',
-      array(
-        'group' => JS_DEFAULT,
-        'preprocess' => FALSE,
-        'weight' => '2',
-      )
-    );
-    drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/lg-fullscreen.min.js',
-      array(
-        'group' => JS_DEFAULT,
-        'preprocess' => FALSE,
-        'weight' => '3',
-      )
-    );      
-    drupal_add_css(drupal_get_path('theme', 'healthgovau') . '/sass/vendor/light-gallery/css/lightgallery.css'); 
-  }    
-  
 }
 
 /**
