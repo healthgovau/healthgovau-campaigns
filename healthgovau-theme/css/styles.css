@@ -6364,6 +6364,8 @@ body.breastscreen > main .see-more {
 #block-bean-ymca-featured {
   padding-top: 30px;
   background: #fffff1; }
+  #block-bean-ymca-featured h2:first-of-type, #block-bean-ymca-featured .display:first-of-type, #block-bean-ymca-featured .video-title:first-of-type {
+    margin-top: 0; }
   #block-bean-ymca-featured .wrapper .band__img, #block-bean-ymca-featured .node-type-video .ds-wrapper .band__img, .node-type-video #block-bean-ymca-featured .ds-wrapper .band__img {
     line-height: 0;
     width: 100%; }
@@ -6429,7 +6431,7 @@ body.girlsmove > main a {
   width: 100%; }
 
 .girlsmove #block-views-campaign-videos-block-4 {
-  background: #e8f7f9;
+  background: #fff;
   padding-top: 1.2em;
   padding-bottom: 3.2em; }
   @media screen and (min-width: 75em) {
@@ -6447,8 +6449,8 @@ body.girlsmove > main a {
       min-height: 440px; } }
 
 .girlsmove .list--cards > li {
-  -webkit-box-shadow: 0 3px 20px #b6c0ff;
-  box-shadow: 0 3px 20px #b6c0ff; }
+  -webkit-box-shadow: 0 3px 20px #e6e6e6;
+  box-shadow: 0 3px 20px #e6e6e6; }
 
 .page-campaign-activities main .content-main,
 .girlsmove:not(.node-type-campaign-standard-page) main .content-main {
