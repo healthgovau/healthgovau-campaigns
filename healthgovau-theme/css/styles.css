@@ -6362,7 +6362,7 @@ body.breastscreen > main .see-more {
       padding-top: 3.2em; } }
 
 #block-bean-ymca-featured {
-  padding-top: 30px;
+  padding: 30px 0;
   background: #fffff1; }
   #block-bean-ymca-featured h2:first-of-type, #block-bean-ymca-featured .display:first-of-type, #block-bean-ymca-featured .video-title:first-of-type {
     margin-top: 0; }
