@@ -65,7 +65,7 @@ $bottom = render($page['bottom']);
 
 <?php print $breadcrumb; ?>
 
-<main id="page" role="main" class="<?php print $main_classes; ?>">
+<main id="page" role="main" class="<?php print isset($main_classes) ? $main_classes : '' ; ?>">
 
   <?php if ($sidebar_left): ?>
     <aside class="sidebar__left" role="complementary">
