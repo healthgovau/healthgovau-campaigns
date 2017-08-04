@@ -16,15 +16,6 @@ CONST THEME_PATH_TOKEN_GENERIC = '[theme-path]';
  * Implements THEME_preprocess_html().
  */
 function healthgovau_preprocess_html(&$variables) {
-  // Add campaign to body class if there is any.
-  if (arg(0) == 'node' && is_numeric(arg(1))) {
-    $node = node_load(arg(1));
-    if (isset($node->field_campaign[LANGUAGE_NONE][0])) {
-      $campaign_nid = $node->field_campaign[LANGUAGE_NONE][0]['target_id'];
-      $campaign = node_load($campaign_nid);
-      $variables['classes_array'][] = $campaign->path['alias'];
-    }
-  }
 
   // Attributes for html element.
   $variables['html_attributes_array'] = array(
@@ -42,10 +33,12 @@ function healthgovau_preprocess_html(&$variables) {
     $variables['rdf_namespaces'] = ' prefix="' . implode(' ', $prefixes) . '"';
   }
 
-  // Add page title to body class.
-  $title = $variables['head_title_array']['title'];
-  $title = strtolower(str_replace(' ', '-', $title));
-  $variables['classes_array'][] = $title;
+  // Add current path, split up, to the body.
+  $path = drupal_get_path_alias();
+  $aliases = explode('/', $path);
+  foreach($aliases as $alias) {
+    $variables['classes_array'][] = drupal_clean_css_identifier($alias);
+  }
 
   // Add google analytics JS.
   $env = theme_get_setting('env');
