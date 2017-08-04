@@ -6645,6 +6645,35 @@ body.girlsmove > main a {
 .page-campaign-156 .hero--content .hero-bg {
   background-position-y: 35%; }
 
+.immunisationfacts .hero .hero-bg, .immunisationfacts .hero--content .hero-bg,
+.immunisationfacts .hero--content .hero-bg,
+.page-campaign-931 .hero .hero-bg,
+.page-campaign-931 .hero--content .hero-bg,
+.page-campaign-931 .hero--content .hero-bg {
+  background-position-y: 35%; }
+
+.immunisationfacts-band--gradient {
+  background-color: #EEE;
+  background-image: -webkit-linear-gradient(-360deg, #EEE, #FFFFFF);
+  background-image: -webkit-gradient(linear,left top, right top,from(#EEE), to(#FFFFFF));
+  background-image: -webkit-linear-gradient(left,#EEE, #FFFFFF);
+  background-image: linear-gradient(90deg,#EEE, #FFFFFF);
+  padding-top: 3.2em; }
+
+#block-bean-immunisation-hotline section.pre-nav {
+  padding: 0.8em 0 0.4em;
+  background: #AE27A6;
+  color: #FFFFFF;
+  text-align: center; }
+  #block-bean-immunisation-hotline section.pre-nav p {
+    margin-bottom: 0.4em; }
+
+#block-bean-immunisation-hotline section.pre-nav a {
+  color: white;
+  border: 0px; }
+  #block-bean-immunisation-hotline section.pre-nav a:hover {
+    background-color: #DDD; }
+
 .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block {
   background-color: #EEE; }
 

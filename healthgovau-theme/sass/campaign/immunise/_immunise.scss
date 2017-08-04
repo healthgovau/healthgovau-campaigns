@@ -1,0 +1,29 @@
+.immunisationfacts-band--gradient {
+  @include linear-gradient(90deg, $background-colour-secondary, $white, $fallback: $background-colour-secondary);
+  padding-top: $large-spacing;
+}
+
+
+// Hotline bar
+%hotline {
+  @include pad($small-spacing 0 $tiny-spacing);
+  background: $purple;
+  color: $white;
+  text-align: center;
+  p {
+    margin-bottom: $tiny-spacing;
+  }
+}
+
+#block-bean-immunisation-hotline{
+  section.pre-nav {
+    @extend %hotline;
+    a {
+      color: white;
+      border: 0px;
+      &:hover {
+        background-color: $colour-primary;
+      }
+    }
+  }
+}
