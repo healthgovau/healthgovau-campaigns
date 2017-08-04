@@ -1,0 +1,12 @@
+// Tweaks for mobile positioning
+// .girlsmove and .page-campaign-156 target just this campaign (class in <body>)
+
+.immunisationfacts,
+.page-campaign-931 {
+  .hero,
+  .hero--content {
+    .hero-bg {
+      background-position-y: 35%;
+    }
+  }
+}
