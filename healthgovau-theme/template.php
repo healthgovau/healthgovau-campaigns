@@ -22,9 +22,7 @@ function healthgovau_preprocess_html(&$variables) {
     if (isset($node->field_campaign[LANGUAGE_NONE][0])) {
       $campaign_nid = $node->field_campaign[LANGUAGE_NONE][0]['target_id'];
       $campaign = node_load($campaign_nid);
-      $campaign_title = $campaign->title;
-      $title = strtolower(str_replace(' ', '-', $campaign_title));
-      $variables['classes_array'][] = $title;
+      $variables['classes_array'][] = $campaign->path['alias'];
     }
   }
 
