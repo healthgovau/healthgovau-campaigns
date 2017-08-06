@@ -5764,10 +5764,10 @@ body a {
       .node-type-video .region-content .wrapper .video__list--related div.group-right, .video__list--related .node-type-video .region-content .ds-wrapper div.group-right, .node-type-video .region-content .ds-wrapper .video__list--related div.group-right, .video__list--related .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact div.group-right, .smokes.node-type-campaign #block-views-campaign-videos-block .view-mode-compact .video__list--related div.group-right {
         width: 100%; } }
 
-.band, #block-bean-share-this, .band--img-text, .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat, .breastscreen-band--partners, .band--primary, .girlsmove #block-bean-gmym-cards-0, .girlsmove #block-views-campaign-videos-block-4, #block-views-activities-block, .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block, .band--small, .page-feedback, .smokes-band--partners, #block-bean-quitenow-partner, .band--pad, .band--secondary, .band--gradient, .node-type-social-media .main {
+.band, #block-bean-share-this, .band--img-text, .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat, #block-bean-immunisation-vaccine-safety, #block-bean-immunisation-uptodate, .breastscreen-band--partners, .band--primary, .girlsmove #block-bean-gmym-cards-0, .girlsmove #block-views-campaign-videos-block-4, #block-views-activities-block, .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block, .band--small, .page-feedback, .smokes-band--partners, #block-bean-quitenow-partner, .band--pad, .band--secondary, .band--gradient, .node-type-social-media .main {
   padding: 0.8em 0 3.2em;
   width: 100%; }
-  .band::after, #block-bean-share-this::after, .band--img-text::after, .band--img-text-halves::after, .band--img-text-halves--invert::after, .breastscreen #block-bean-breast-cancer-in-australia::after, .breastscreen #block-bean-breastscreen-mammogram::after, .breastscreen #block-bean-breastscreen-why::after, .breastscreen #block-bean-breastscreen-early-detection::after, .breastscreen #block-bean-breastscreen-stats::after, .breastscreen #block-bean-breastscreen-expanding::after, .breastscreen #block-bean-breastscreen-74::after, .breastscreen #block-bean-breastscreen-detection::after, .breastscreen #block-bean-breastscreen-chat::after, .breastscreen-band--partners::after, .band--primary::after, .girlsmove #block-bean-gmym-cards-0::after, .girlsmove #block-views-campaign-videos-block-4::after, #block-views-activities-block::after, .smokes-band--primary::after, .smokes.node-type-campaign #block-views-campaign-videos-block::after, .band--small::after, .page-feedback::after, .smokes-band--partners::after, #block-bean-quitenow-partner::after, .band--pad::after, .band--secondary::after, .band--gradient::after, .node-type-social-media .main::after {
+  .band::after, #block-bean-share-this::after, .band--img-text::after, .band--img-text-halves::after, .band--img-text-halves--invert::after, .breastscreen #block-bean-breast-cancer-in-australia::after, .breastscreen #block-bean-breastscreen-mammogram::after, .breastscreen #block-bean-breastscreen-why::after, .breastscreen #block-bean-breastscreen-early-detection::after, .breastscreen #block-bean-breastscreen-stats::after, .breastscreen #block-bean-breastscreen-expanding::after, .breastscreen #block-bean-breastscreen-74::after, .breastscreen #block-bean-breastscreen-detection::after, .breastscreen #block-bean-breastscreen-chat::after, #block-bean-immunisation-vaccine-safety::after, #block-bean-immunisation-uptodate::after, .breastscreen-band--partners::after, .band--primary::after, .girlsmove #block-bean-gmym-cards-0::after, .girlsmove #block-views-campaign-videos-block-4::after, #block-views-activities-block::after, .smokes-band--primary::after, .smokes.node-type-campaign #block-views-campaign-videos-block::after, .band--small::after, .page-feedback::after, .smokes-band--partners::after, #block-bean-quitenow-partner::after, .band--pad::after, .band--secondary::after, .band--gradient::after, .node-type-social-media .main::after {
     clear: both;
     content: "";
     display: table; }
@@ -5980,46 +5980,46 @@ body a {
 .breastscreen-band--tertiary, .breastscreen #block-bean-breastscreen-stats {
   background: #f3f0ed; }
 
-.band--img-text, .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat {
+.band--img-text, .band--img-text-halves, .band--img-text-halves--invert, .breastscreen #block-bean-breast-cancer-in-australia, .breastscreen #block-bean-breastscreen-mammogram, .breastscreen #block-bean-breastscreen-why, .breastscreen #block-bean-breastscreen-early-detection, .breastscreen #block-bean-breastscreen-stats, .breastscreen #block-bean-breastscreen-expanding, .breastscreen #block-bean-breastscreen-74, .breastscreen #block-bean-breastscreen-detection, .breastscreen #block-bean-breastscreen-chat, #block-bean-immunisation-vaccine-safety, #block-bean-immunisation-uptodate {
   overflow: hidden;
   padding: 3.2em 0; }
-  .band--img-text .band__img, .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-why .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img {
+  .band--img-text .band__img, .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-why .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img, #block-bean-immunisation-vaccine-safety .band__img, #block-bean-immunisation-uptodate .band__img {
     line-height: 0;
     width: 100%; }
     @media screen and (min-width: 768px) {
-      .band--img-text .band__img, .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-why .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img {
+      .band--img-text .band__img, .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-why .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img, #block-bean-immunisation-vaccine-safety .band__img, #block-bean-immunisation-uptodate .band__img {
         float: left;
         display: block;
         margin-right: 2.74614%;
         width: 31.50258%; }
-        .band--img-text .band__img:last-child, .band--img-text-halves .band__img:last-child, .band--img-text-halves--invert .band__img:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__img:last-child, .breastscreen #block-bean-breastscreen-mammogram .band__img:last-child, .breastscreen #block-bean-breastscreen-why .band__img:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-stats .band__img:last-child, .breastscreen #block-bean-breastscreen-expanding .band__img:last-child, .breastscreen #block-bean-breastscreen-74 .band__img:last-child, .breastscreen #block-bean-breastscreen-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-chat .band__img:last-child {
+        .band--img-text .band__img:last-child, .band--img-text-halves .band__img:last-child, .band--img-text-halves--invert .band__img:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__img:last-child, .breastscreen #block-bean-breastscreen-mammogram .band__img:last-child, .breastscreen #block-bean-breastscreen-why .band__img:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-stats .band__img:last-child, .breastscreen #block-bean-breastscreen-expanding .band__img:last-child, .breastscreen #block-bean-breastscreen-74 .band__img:last-child, .breastscreen #block-bean-breastscreen-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-chat .band__img:last-child, #block-bean-immunisation-vaccine-safety .band__img:last-child, #block-bean-immunisation-uptodate .band__img:last-child {
           margin-right: 0; } }
     @media screen and (min-width: 75em) {
-      .band--img-text .band__img, .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-why .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img {
+      .band--img-text .band__img, .band--img-text-halves .band__img, .band--img-text-halves--invert .band__img, .breastscreen #block-bean-breast-cancer-in-australia .band__img, .breastscreen #block-bean-breastscreen-mammogram .band__img, .breastscreen #block-bean-breastscreen-why .band__img, .breastscreen #block-bean-breastscreen-early-detection .band__img, .breastscreen #block-bean-breastscreen-stats .band__img, .breastscreen #block-bean-breastscreen-expanding .band__img, .breastscreen #block-bean-breastscreen-74 .band__img, .breastscreen #block-bean-breastscreen-detection .band__img, .breastscreen #block-bean-breastscreen-chat .band__img, #block-bean-immunisation-vaccine-safety .band__img, #block-bean-immunisation-uptodate .band__img {
         float: left;
         display: block;
         margin-right: 2.04556%;
         width: 36.22153%; }
-        .band--img-text .band__img:last-child, .band--img-text-halves .band__img:last-child, .band--img-text-halves--invert .band__img:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__img:last-child, .breastscreen #block-bean-breastscreen-mammogram .band__img:last-child, .breastscreen #block-bean-breastscreen-why .band__img:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-stats .band__img:last-child, .breastscreen #block-bean-breastscreen-expanding .band__img:last-child, .breastscreen #block-bean-breastscreen-74 .band__img:last-child, .breastscreen #block-bean-breastscreen-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-chat .band__img:last-child {
+        .band--img-text .band__img:last-child, .band--img-text-halves .band__img:last-child, .band--img-text-halves--invert .band__img:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__img:last-child, .breastscreen #block-bean-breastscreen-mammogram .band__img:last-child, .breastscreen #block-bean-breastscreen-why .band__img:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-stats .band__img:last-child, .breastscreen #block-bean-breastscreen-expanding .band__img:last-child, .breastscreen #block-bean-breastscreen-74 .band__img:last-child, .breastscreen #block-bean-breastscreen-detection .band__img:last-child, .breastscreen #block-bean-breastscreen-chat .band__img:last-child, #block-bean-immunisation-vaccine-safety .band__img:last-child, #block-bean-immunisation-uptodate .band__img:last-child {
           margin-right: 0; } }
-  .band--img-text .band__text, .band--img-text-halves .band__text, .band--img-text-halves--invert .band__text, .breastscreen #block-bean-breast-cancer-in-australia .band__text, .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-why .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text, .breastscreen #block-bean-breastscreen-stats .band__text, .breastscreen #block-bean-breastscreen-expanding .band__text, .breastscreen #block-bean-breastscreen-74 .band__text, .breastscreen #block-bean-breastscreen-detection .band__text, .breastscreen #block-bean-breastscreen-chat .band__text {
+  .band--img-text .band__text, .band--img-text-halves .band__text, .band--img-text-halves--invert .band__text, .breastscreen #block-bean-breast-cancer-in-australia .band__text, .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-why .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text, .breastscreen #block-bean-breastscreen-stats .band__text, .breastscreen #block-bean-breastscreen-expanding .band__text, .breastscreen #block-bean-breastscreen-74 .band__text, .breastscreen #block-bean-breastscreen-detection .band__text, .breastscreen #block-bean-breastscreen-chat .band__text, #block-bean-immunisation-vaccine-safety .band__text, #block-bean-immunisation-uptodate .band__text {
     width: 100%; }
     @media screen and (min-width: 768px) {
-      .band--img-text .band__text, .band--img-text-halves .band__text, .band--img-text-halves--invert .band__text, .breastscreen #block-bean-breast-cancer-in-australia .band__text, .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-why .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text, .breastscreen #block-bean-breastscreen-stats .band__text, .breastscreen #block-bean-breastscreen-expanding .band__text, .breastscreen #block-bean-breastscreen-74 .band__text, .breastscreen #block-bean-breastscreen-detection .band__text, .breastscreen #block-bean-breastscreen-chat .band__text {
+      .band--img-text .band__text, .band--img-text-halves .band__text, .band--img-text-halves--invert .band__text, .breastscreen #block-bean-breast-cancer-in-australia .band__text, .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-why .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text, .breastscreen #block-bean-breastscreen-stats .band__text, .breastscreen #block-bean-breastscreen-expanding .band__text, .breastscreen #block-bean-breastscreen-74 .band__text, .breastscreen #block-bean-breastscreen-detection .band__text, .breastscreen #block-bean-breastscreen-chat .band__text, #block-bean-immunisation-vaccine-safety .band__text, #block-bean-immunisation-uptodate .band__text {
         float: left;
         display: block;
         margin-right: 2.74614%;
         width: 65.75129%;
         margin-bottom: 3.2em; }
-        .band--img-text .band__text:last-child, .band--img-text-halves .band__text:last-child, .band--img-text-halves--invert .band__text:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__text:last-child, .breastscreen #block-bean-breastscreen-mammogram .band__text:last-child, .breastscreen #block-bean-breastscreen-why .band__text:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-stats .band__text:last-child, .breastscreen #block-bean-breastscreen-expanding .band__text:last-child, .breastscreen #block-bean-breastscreen-74 .band__text:last-child, .breastscreen #block-bean-breastscreen-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-chat .band__text:last-child {
+        .band--img-text .band__text:last-child, .band--img-text-halves .band__text:last-child, .band--img-text-halves--invert .band__text:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__text:last-child, .breastscreen #block-bean-breastscreen-mammogram .band__text:last-child, .breastscreen #block-bean-breastscreen-why .band__text:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-stats .band__text:last-child, .breastscreen #block-bean-breastscreen-expanding .band__text:last-child, .breastscreen #block-bean-breastscreen-74 .band__text:last-child, .breastscreen #block-bean-breastscreen-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-chat .band__text:last-child, #block-bean-immunisation-vaccine-safety .band__text:last-child, #block-bean-immunisation-uptodate .band__text:last-child {
           margin-right: 0; } }
     @media screen and (min-width: 75em) {
-      .band--img-text .band__text, .band--img-text-halves .band__text, .band--img-text-halves--invert .band__text, .breastscreen #block-bean-breast-cancer-in-australia .band__text, .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-why .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text, .breastscreen #block-bean-breastscreen-stats .band__text, .breastscreen #block-bean-breastscreen-expanding .band__text, .breastscreen #block-bean-breastscreen-74 .band__text, .breastscreen #block-bean-breastscreen-detection .band__text, .breastscreen #block-bean-breastscreen-chat .band__text {
+      .band--img-text .band__text, .band--img-text-halves .band__text, .band--img-text-halves--invert .band__text, .breastscreen #block-bean-breast-cancer-in-australia .band__text, .breastscreen #block-bean-breastscreen-mammogram .band__text, .breastscreen #block-bean-breastscreen-why .band__text, .breastscreen #block-bean-breastscreen-early-detection .band__text, .breastscreen #block-bean-breastscreen-stats .band__text, .breastscreen #block-bean-breastscreen-expanding .band__text, .breastscreen #block-bean-breastscreen-74 .band__text, .breastscreen #block-bean-breastscreen-detection .band__text, .breastscreen #block-bean-breastscreen-chat .band__text, #block-bean-immunisation-vaccine-safety .band__text, #block-bean-immunisation-uptodate .band__text {
         float: left;
         display: block;
         margin-right: 2.04556%;
         width: 61.73292%; }
-        .band--img-text .band__text:last-child, .band--img-text-halves .band__text:last-child, .band--img-text-halves--invert .band__text:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__text:last-child, .breastscreen #block-bean-breastscreen-mammogram .band__text:last-child, .breastscreen #block-bean-breastscreen-why .band__text:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-stats .band__text:last-child, .breastscreen #block-bean-breastscreen-expanding .band__text:last-child, .breastscreen #block-bean-breastscreen-74 .band__text:last-child, .breastscreen #block-bean-breastscreen-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-chat .band__text:last-child {
+        .band--img-text .band__text:last-child, .band--img-text-halves .band__text:last-child, .band--img-text-halves--invert .band__text:last-child, .breastscreen #block-bean-breast-cancer-in-australia .band__text:last-child, .breastscreen #block-bean-breastscreen-mammogram .band__text:last-child, .breastscreen #block-bean-breastscreen-why .band__text:last-child, .breastscreen #block-bean-breastscreen-early-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-stats .band__text:last-child, .breastscreen #block-bean-breastscreen-expanding .band__text:last-child, .breastscreen #block-bean-breastscreen-74 .band__text:last-child, .breastscreen #block-bean-breastscreen-detection .band__text:last-child, .breastscreen #block-bean-breastscreen-chat .band__text:last-child, #block-bean-immunisation-vaccine-safety .band__text:last-child, #block-bean-immunisation-uptodate .band__text:last-child {
           margin-right: 0; } }
 
 @media screen and (min-width: 768px) {
@@ -6652,17 +6652,73 @@ body.girlsmove > main a {
 .page-campaign-931 .hero--content .hero-bg {
   background-position-y: 35%; }
 
-.immunisationfacts-band--gradient {
-  background-color: #EEE;
-  background-image: -webkit-linear-gradient(-360deg, #EEE, #FFFFFF);
-  background-image: -webkit-gradient(linear,left top, right top,from(#EEE), to(#FFFFFF));
-  background-image: -webkit-linear-gradient(left,#EEE, #FFFFFF);
-  background-image: linear-gradient(90deg,#EEE, #FFFFFF);
-  padding-top: 3.2em; }
+@media screen and (min-width: 768px) {
+  #block-bean-immunisation-vaccine-safety, #block-bean-immunisation-uptodate {
+    padding-bottom: 1.2em; } }
+
+#block-bean-immunisation-vaccine-safety .band__img, #block-bean-immunisation-uptodate .band__img {
+  float: right; }
+  #block-bean-immunisation-vaccine-safety .band__img img, #block-bean-immunisation-uptodate .band__img img {
+    max-width: 80%; }
+  @media screen and (min-width: 768px) {
+    #block-bean-immunisation-vaccine-safety .band__img, #block-bean-immunisation-uptodate .band__img {
+      float: left;
+      display: block;
+      margin-right: 2.74614%;
+      width: 31.50258%; }
+      #block-bean-immunisation-vaccine-safety .band__img:last-child, #block-bean-immunisation-uptodate .band__img:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 75em) {
+    #block-bean-immunisation-vaccine-safety .band__img, #block-bean-immunisation-uptodate .band__img {
+      float: left;
+      display: block;
+      margin-right: 2.04556%;
+      width: 36.22153%; }
+      #block-bean-immunisation-vaccine-safety .band__img:last-child, #block-bean-immunisation-uptodate .band__img:last-child {
+        margin-right: 0; } }
+
+#block-bean-immunisation-vaccine-safety .band__text, #block-bean-immunisation-uptodate .band__text {
+  float: left; }
+  @media screen and (min-width: 768px) {
+    #block-bean-immunisation-vaccine-safety .band__text, #block-bean-immunisation-uptodate .band__text {
+      float: left;
+      display: block;
+      margin-right: 2.74614%;
+      width: 65.75129%; }
+      #block-bean-immunisation-vaccine-safety .band__text:last-child, #block-bean-immunisation-uptodate .band__text:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 75em) {
+    #block-bean-immunisation-vaccine-safety .band__text, #block-bean-immunisation-uptodate .band__text {
+      float: left;
+      display: block;
+      margin-right: 2.04556%;
+      width: 61.73292%; }
+      #block-bean-immunisation-vaccine-safety .band__text:last-child, #block-bean-immunisation-uptodate .band__text:last-child {
+        margin-right: 0; } }
+
+@media screen and (min-width: 768px) {
+  #block-bean-immunisation-vaccine-safety .band__text {
+    float: right; }
+  #block-bean-immunisation-vaccine-safety .band_img {
+    float: left; } }
+
+.immunisationfacts .band--gradient, .immunisationfacts .node-type-social-media .main, .node-type-social-media .immunisationfacts .main {
+  background-color: #24093a;
+  background-image: -webkit-linear-gradient(-450deg, #24093a, #613084);
+  background-image: -webkit-gradient(linear,left top, left bottom,from(#24093a), to(#613084));
+  background-image: -webkit-linear-gradient(top,#24093a, #613084);
+  background-image: linear-gradient(180deg,#24093a, #613084); }
+  .immunisationfacts .band--gradient h2, .immunisationfacts .node-type-social-media .main h2, .node-type-social-media .immunisationfacts .main h2, .immunisationfacts .band--gradient .display, .immunisationfacts .node-type-social-media .main .display, .node-type-social-media .immunisationfacts .main .display, .immunisationfacts .band--gradient .video-title, .immunisationfacts .node-type-social-media .main .video-title, .node-type-social-media .immunisationfacts .main .video-title {
+    color: #FFFFFF; }
+  .immunisationfacts .band--gradient .see-more, .immunisationfacts .node-type-social-media .main .see-more, .node-type-social-media .immunisationfacts .main .see-more {
+    display: none; }
+  .immunisationfacts .band--gradient .list--cards > li, .immunisationfacts .node-type-social-media .main .list--cards > li, .node-type-social-media .immunisationfacts .main .list--cards > li {
+    -webkit-box-shadow: 0 3px 20px #24093a;
+    box-shadow: 0 3px 20px #24093a; }
 
 #block-bean-immunisation-hotline section.pre-nav {
   padding: 0.8em 0 0.4em;
-  background: #AE27A6;
+  background: #24093a;
   color: #FFFFFF;
   text-align: center; }
   #block-bean-immunisation-hotline section.pre-nav p {
@@ -6673,6 +6729,9 @@ body.girlsmove > main a {
   border: 0px; }
   #block-bean-immunisation-hotline section.pre-nav a:hover {
     background-color: #DDD; }
+
+#block-bean-immunisation-uptodate {
+  background: #EEE; }
 
 .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block {
   background-color: #EEE; }

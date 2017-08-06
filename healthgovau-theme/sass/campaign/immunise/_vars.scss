@@ -1,6 +1,5 @@
 // Immunise-specific vars
 // These vars will override UI-kit and Health default for this campaign
-$purple:                          #24093a;
 
 // Colour constants
 $colour-primary:                  $grey;
@@ -10,9 +9,9 @@ $background-colour-hero:          $colour-primary;
 // Uncomment to override
 $background-colour-primary:       $colour-primary;
 $background-colour-secondary:     $colour-secondary;
-$background-colour-hero:          $purple;
+$background-colour-hero:          $purple-darker;
 
 // Navigation
-$navigation-border-colour:        $purple;
+$navigation-border-colour:        $purple-darker;
 
 
