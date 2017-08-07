@@ -5058,6 +5058,18 @@ main {
 .nav-toggle {
   margin-top: 0; }
 
+@media screen and (min-width: 768px) {
+  .local-nav {
+    padding-top: 0.8em; } }
+
+@media screen and (min-width: 768px) {
+  .page--sidebar-left .sidebar__left {
+    float: right; } }
+
+@media screen and (min-width: 768px) {
+  .events .page--sidebar-left .sidebar__left {
+    float: left; } }
+
 .node-type-campaign nav.breadcrumbs {
   display: none; }
 
@@ -6723,9 +6735,12 @@ p.highlight {
   .immunisationfacts section.site-nav a:hover,
   .page-campaign-931 section.site-nav a:hover {
     border-color: #613084; }
-  .immunisationfacts section.site-nav a.is-active:hover,
-  .page-campaign-931 section.site-nav a.is-active:hover {
-    border-color: #613084 !important; } }
+  .immunisationfacts section.site-nav a.is-active,
+  .page-campaign-931 section.site-nav a.is-active {
+    border-color: #613084 !important; }
+    .immunisationfacts section.site-nav a.is-active:hover,
+    .page-campaign-931 section.site-nav a.is-active:hover {
+      border-color: #613084 !important; } }
 
 #block-bean-immunisation-hotline section.pre-nav {
   padding: 0.8em 0 0.4em;

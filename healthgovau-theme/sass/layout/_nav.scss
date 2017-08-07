@@ -20,3 +20,22 @@
 .nav-toggle {
   margin-top: 0;
 }
+
+.local-nav {
+  @include media($tablet) {
+    padding-top: $small-spacing;
+  }
+}
+
+// Move local nav to right without changing region (ie. source order)
+.page--sidebar-left .sidebar__left {
+  @include media($tablet) {
+    float: right;
+  }
+}
+// Except for events with left filter nav
+.events .page--sidebar-left .sidebar__left {
+  @include media($tablet) {
+    float: left;
+  }
+}

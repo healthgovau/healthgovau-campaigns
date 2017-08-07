@@ -65,6 +65,7 @@
         border-color: $purple-light;
       }
       a.is-active {
+        border-color: $purple-light !important;
         &:hover {
           border-color: $purple-light !important;
         }
