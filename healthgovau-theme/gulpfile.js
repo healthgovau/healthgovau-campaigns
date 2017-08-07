@@ -75,9 +75,9 @@ options = {
   sass: {
     importer: importOnce,
     errLogToConsole: true,
-    sourcemap: true
-    //outputStyle: 'compressed'
-
+    sourcemap: true,
+    outputStyle: 'compressed',
+    precision: 10
   },
   webpack: {
     output: {
@@ -144,6 +144,17 @@ gulp.task('styles:theme', function() {
     .pipe(sassGlob())
     .pipe(sass(options.sass).on('error', sass.logError))
     .pipe($.autoprefixer(options.autoprefixer))
+    .pipe(gulp.dest(paths.theme.css));
+});
+
+// Dev styles including sourcemaps
+gulp.task('styles:dev', function(){
+  return gulp.src(paths.theme.sass + '/styles.scss')
+    .pipe($.sourcemaps.init())
+    .pipe(sassGlob())
+    .pipe(sass(options.sass).on('error', sass.logError))
+    .pipe($.autoprefixer(options.autoprefixer))
+    .pipe($.sourcemaps.write('./'))
     .pipe(gulp.dest(paths.theme.css));
 });
 // Still to add compilation and copy of IE6,7,8 SCSS
