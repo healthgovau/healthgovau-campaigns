@@ -115,3 +115,24 @@
     margin-top: 0;
   }
 }
+
+.immunisationfacts.node-type-campaign {
+  #block-views-campaign-videos-block-7,
+  #block-views-campaign-videos-block-8 {
+    @include clearfix;
+    .view-mode-compact {
+      div.group-left {
+        @extend .video__container;
+      }
+      div.group-right {
+        @extend .video__info;
+      }
+    }
+  }
+
+  #block-views-campaign-videos-block-7 {
+    @extend .smokes-band--primary;
+  }
+
+}
+

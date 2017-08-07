@@ -13,14 +13,13 @@ $navigation  = render($page['navigation']);
 $page_hero  = render($page['hero']);
 $sidebar_left  = render($page['sidebar_left']);
 $sidebar_right = render($page['sidebar_right']);
+$main_classes = '';
 
 if ($sidebar_left && $sidebar_right) {
   $main_classes .= ' page--sidebar-left-right';
-}
-elseif ($sidebar_left) {
+} else if ($sidebar_left) {
   $main_classes .= ' page--sidebar-left';
-}
-elseif ($sidebar_right) {
+} else if ($sidebar_right) {
   $main_classes .= ' page--sidebar-right';
 }
 $beforefooter = render($page['beforefooter']);
@@ -65,7 +64,7 @@ $bottom = render($page['bottom']);
 
 <?php print $breadcrumb; ?>
 
-<main id="page" role="main" class="<?php print isset($main_classes) ? $main_classes : '' ; ?>">
+<main id="page" role="main" class="<?php print $main_classes ?>">
 
   <?php if ($sidebar_left): ?>
     <aside class="sidebar__left" role="complementary">
