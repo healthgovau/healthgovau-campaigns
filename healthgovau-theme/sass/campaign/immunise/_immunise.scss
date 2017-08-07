@@ -42,6 +42,11 @@
   }
 }
 
+#block-views-campaign-videos-block-8 {
+  padding-bottom: $large-spacing;
+}
+
+
 // Home page videox3 band
 .immunisationfacts .band--gradient {
   @include linear-gradient(180deg, $purple-darker, $purple-light, $fallback: $purple-darker);
@@ -102,7 +107,7 @@
 
 // Static block band
 #block-bean-immunisation-uptodate {
-  @extend %band--img-text-halves--immi;
+  @extend %band--img-text-halves--immi--invert;
   background: $grey-light;
   h2 {
     margin-top: 0;
@@ -111,7 +116,7 @@
 
 // Static block band
 #block-bean-immunisation-vaccine-safety {
-  @extend %band--img-text-halves--immi--invert;
+  @extend %band--img-text-halves--immi;
   h2 {
     margin-top: 0;
   }
