@@ -1,0 +1,67 @@
+// List count - expects UI-Kit 1 opinionated markup :(
+.list-count {
+  counter-reset: standard-counter;
+  >li {
+    vertical-align: top;
+    position: relative;
+    padding-left: rem(80);
+    min-height: rem(90);
+    &:before {
+      content: counter(standard-counter, decimal);
+      counter-increment: standard-counter;
+      display: inline-block;
+      float: left;
+      line-height: $base-heading-leading;
+      text-align: center;
+      width: rem(70);
+      font-weight: 700;
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding-top: 0;
+      font-size: rem(50);
+    }
+  }
+  @include media($tablet) {
+    >li {
+      &:before {
+        padding-top: rem(10);
+      }
+    }
+  }
+  @include media($desktop) {
+    >li {
+      &:before {
+        padding-top: rem(19);
+      }
+    }
+  }
+}
+
+// Generic large list without need for special markup
+// Expects to be applied to as <ol class="list-count--large">
+.list-count--large {
+  list-style-type: none;
+  counter-reset: standard-counter;
+  padding: 20px 0;
+  >li {
+    @include clearfix;
+    vertical-align: top;
+    position: relative;
+    margin: 25px 0 25px;
+    border-bottom: 1px dotted $border-colour;
+    padding: 0 0 35px 60px;
+    &::before {
+      content: counter(standard-counter, decimal);
+      counter-increment: standard-counter;
+      float: left;
+      text-align: center;
+      font-weight: 700;
+      position: absolute;
+      left: 0;
+      top: 5px;
+      padding-top: 0;
+      font-size: 40px;
+    }
+  }
+}
