@@ -1,17 +1,19 @@
 // Band redeclarations unfortunately becuase the Sass is an ID-ridden mess
 %band--img-text-halves--immi {
   @extend .band--img-text;
+  overflow: hidden;
   //padding-bottom: $large-spacing;
   @include media($tablet) {
     padding-bottom: $medium-spacing;
   }
   .band__img {
-    float: right;;
-    img {
-      max-width: 80%;
-    }
+    float: right;
+    padding-bottom: $medium-spacing;
     @include media($tablet) {
       @include span-columns(4 of 12);
+      img {
+        max-width: 90%;
+      }
     }
     @include media($desktop) {
       @include span-columns(6 of 16);
@@ -40,6 +42,7 @@
   }
 }
 
+// Home page videox3 band
 .immunisationfacts .band--gradient {
   @include linear-gradient(180deg, $purple-darker, $purple-light, $fallback: $purple-darker);
   h2 {
@@ -53,6 +56,23 @@
   }
 }
 
+// Primary nav colours
+.immunisationfacts,
+.page-campaign-931 {
+  @include media($tablet) {
+    section.site-nav {
+      a:hover {
+        border-color: $purple-light;
+      }
+      a.is-active {
+        &:hover {
+          border-color: $purple-light !important;
+        }
+      }
+    }
+  }
+} 
+
 
 // Hotline bar
 %hotline {
@@ -65,6 +85,7 @@
   }
 }
 
+// Hotline bar
 #block-bean-immunisation-hotline{
   section.pre-nav {
     @extend %hotline;
@@ -78,15 +99,19 @@
   }
 }
 
+// Static block band
 #block-bean-immunisation-uptodate {
-    @extend %band--img-text-halves--immi;
-    //@extend .band--tight-bottom;
-    //padding-bottom: 0;
-    background: $grey-light;
+  @extend %band--img-text-halves--immi;
+  background: $grey-light;
+  h2 {
+    margin-top: 0;
   }
+}
 
+// Static block band
 #block-bean-immunisation-vaccine-safety {
   @extend %band--img-text-halves--immi--invert;
-  //@extend .band--tight-bottom;
-  //padding-bottom: 0;]
+  h2 {
+    margin-top: 0;
+  }
 }

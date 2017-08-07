@@ -521,7 +521,7 @@ Usage:
 .local-nav ul ul ul ul a, [class^='breadcrumbs'] ul li:not(:last-child) {
   background-image: url("../../uikit_base/images/icons/arrow-right.svg"); }
 
-[class^='breadcrumbs'][class$='--inverted'] ul li:not(:last-child) {
+[class^='breadcrumbs'][class$='--inverted'] ul li:not(:last-child), .girlsmove #block-bean-gmym-socialmedia .see-more::after {
   background-image: url("../../uikit_base/images/icons/arrow-right--white.svg"); }
 
 header[role='banner'] .see-more::after, body > main .see-more::after, footer[role='contentinfo'] .see-more::after, .primary-nav ul .see-more::after,
@@ -5391,6 +5391,11 @@ body a {
     background-color: #5bcbe3;
     color: #313131; }
 
+body > main .see-more {
+  color: #313131; }
+  body > main .see-more::after {
+    background-image: url("../images/icons/arrow-right--black.svg"); }
+
 .modal label {
   cursor: pointer;
   margin-bottom: 0; }
@@ -6260,30 +6265,15 @@ p.highlight {
   .breastscreen #block-views-campaign-videos-block-1 .see-more {
     display: none; }
 
-body.breastscreen > main a,
-body.breastscreen > main .see-more {
-  border-color: #d51364;
-  color: #d51364; }
-
-.breastscreen a,
-.breastscreen .see-more {
-  border-color: #d51364;
-  color: #d51364; }
-  .breastscreen a:hover, .breastscreen a:focus,
-  .breastscreen .see-more:hover,
-  .breastscreen .see-more:focus {
-    color: #FFFFFF;
-    background-color: #d51364; }
-  .breastscreen a:after,
-  .breastscreen .see-more:after {
-    display: none; }
-
 .breastscreen .block-link {
   color: #fff;
+  border-color: #d51364;
   background: #d51364;
   display: block;
   text-align: center;
   margin-top: 50px; }
+  .breastscreen .block-link:hover, .breastscreen .block-link:focus {
+    background-color: #be1159; }
 
 @media screen and (max-width: 420px) {
   .breastscreen .hero .hero-bg, .breastscreen .hero--content .hero-bg {
@@ -6404,9 +6394,6 @@ body.breastscreen > main .see-more {
         width: 61.73292%; }
         #block-bean-ymca-featured .wrapper .band__text:last-child, #block-bean-ymca-featured .node-type-video .ds-wrapper .band__text:last-child, .node-type-video #block-bean-ymca-featured .ds-wrapper .band__text:last-child {
           margin-right: 0; } }
-
-body.girlsmove > main a {
-  border-bottom-color: #278288; }
 
 .girlsmove [class*="field-item"] img {
   height: auto; }
@@ -6586,8 +6573,6 @@ body.girlsmove > main a {
     .girlsmove #block-bean-gmym-socialmedia .see-more:hover, .girlsmove #block-bean-gmym-socialmedia .see-more:focus {
       color: #278288;
       background: #fff; }
-    .girlsmove #block-bean-gmym-socialmedia .see-more:after {
-      background-image: none; }
   .girlsmove #block-bean-gmym-socialmedia .social__feature {
     width: 100%; }
   .girlsmove #block-bean-gmym-socialmedia .social__feed {
@@ -6652,49 +6637,50 @@ body.girlsmove > main a {
 .page-campaign-931 .hero--content .hero-bg {
   background-position-y: 35%; }
 
-@media screen and (min-width: 768px) {
-  #block-bean-immunisation-vaccine-safety, #block-bean-immunisation-uptodate {
-    padding-bottom: 1.2em; } }
-
-#block-bean-immunisation-vaccine-safety .band__img, #block-bean-immunisation-uptodate .band__img {
-  float: right; }
-  #block-bean-immunisation-vaccine-safety .band__img img, #block-bean-immunisation-uptodate .band__img img {
-    max-width: 80%; }
+#block-bean-immunisation-vaccine-safety, #block-bean-immunisation-uptodate {
+  overflow: hidden; }
   @media screen and (min-width: 768px) {
-    #block-bean-immunisation-vaccine-safety .band__img, #block-bean-immunisation-uptodate .band__img {
-      float: left;
-      display: block;
-      margin-right: 2.74614%;
-      width: 31.50258%; }
-      #block-bean-immunisation-vaccine-safety .band__img:last-child, #block-bean-immunisation-uptodate .band__img:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 75em) {
-    #block-bean-immunisation-vaccine-safety .band__img, #block-bean-immunisation-uptodate .band__img {
-      float: left;
-      display: block;
-      margin-right: 2.04556%;
-      width: 36.22153%; }
-      #block-bean-immunisation-vaccine-safety .band__img:last-child, #block-bean-immunisation-uptodate .band__img:last-child {
-        margin-right: 0; } }
-
-#block-bean-immunisation-vaccine-safety .band__text, #block-bean-immunisation-uptodate .band__text {
-  float: left; }
-  @media screen and (min-width: 768px) {
-    #block-bean-immunisation-vaccine-safety .band__text, #block-bean-immunisation-uptodate .band__text {
-      float: left;
-      display: block;
-      margin-right: 2.74614%;
-      width: 65.75129%; }
-      #block-bean-immunisation-vaccine-safety .band__text:last-child, #block-bean-immunisation-uptodate .band__text:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 75em) {
-    #block-bean-immunisation-vaccine-safety .band__text, #block-bean-immunisation-uptodate .band__text {
-      float: left;
-      display: block;
-      margin-right: 2.04556%;
-      width: 61.73292%; }
-      #block-bean-immunisation-vaccine-safety .band__text:last-child, #block-bean-immunisation-uptodate .band__text:last-child {
-        margin-right: 0; } }
+    #block-bean-immunisation-vaccine-safety, #block-bean-immunisation-uptodate {
+      padding-bottom: 1.2em; } }
+  #block-bean-immunisation-vaccine-safety .band__img, #block-bean-immunisation-uptodate .band__img {
+    float: right;
+    padding-bottom: 1.2em; }
+    @media screen and (min-width: 768px) {
+      #block-bean-immunisation-vaccine-safety .band__img, #block-bean-immunisation-uptodate .band__img {
+        float: left;
+        display: block;
+        margin-right: 2.74614%;
+        width: 31.50258%; }
+        #block-bean-immunisation-vaccine-safety .band__img:last-child, #block-bean-immunisation-uptodate .band__img:last-child {
+          margin-right: 0; }
+        #block-bean-immunisation-vaccine-safety .band__img img, #block-bean-immunisation-uptodate .band__img img {
+          max-width: 90%; } }
+    @media screen and (min-width: 75em) {
+      #block-bean-immunisation-vaccine-safety .band__img, #block-bean-immunisation-uptodate .band__img {
+        float: left;
+        display: block;
+        margin-right: 2.04556%;
+        width: 36.22153%; }
+        #block-bean-immunisation-vaccine-safety .band__img:last-child, #block-bean-immunisation-uptodate .band__img:last-child {
+          margin-right: 0; } }
+  #block-bean-immunisation-vaccine-safety .band__text, #block-bean-immunisation-uptodate .band__text {
+    float: left; }
+    @media screen and (min-width: 768px) {
+      #block-bean-immunisation-vaccine-safety .band__text, #block-bean-immunisation-uptodate .band__text {
+        float: left;
+        display: block;
+        margin-right: 2.74614%;
+        width: 65.75129%; }
+        #block-bean-immunisation-vaccine-safety .band__text:last-child, #block-bean-immunisation-uptodate .band__text:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 75em) {
+      #block-bean-immunisation-vaccine-safety .band__text, #block-bean-immunisation-uptodate .band__text {
+        float: left;
+        display: block;
+        margin-right: 2.04556%;
+        width: 61.73292%; }
+        #block-bean-immunisation-vaccine-safety .band__text:last-child, #block-bean-immunisation-uptodate .band__text:last-child {
+          margin-right: 0; } }
 
 @media screen and (min-width: 768px) {
   #block-bean-immunisation-vaccine-safety .band__text {
@@ -6716,6 +6702,14 @@ body.girlsmove > main a {
     -webkit-box-shadow: 0 3px 20px #24093a;
     box-shadow: 0 3px 20px #24093a; }
 
+@media screen and (min-width: 768px) {
+  .immunisationfacts section.site-nav a:hover,
+  .page-campaign-931 section.site-nav a:hover {
+    border-color: #613084; }
+  .immunisationfacts section.site-nav a.is-active:hover,
+  .page-campaign-931 section.site-nav a.is-active:hover {
+    border-color: #613084 !important; } }
+
 #block-bean-immunisation-hotline section.pre-nav {
   padding: 0.8em 0 0.4em;
   background: #24093a;
@@ -6732,6 +6726,11 @@ body.girlsmove > main a {
 
 #block-bean-immunisation-uptodate {
   background: #EEE; }
+  #block-bean-immunisation-uptodate h2, #block-bean-immunisation-uptodate .display, #block-bean-immunisation-uptodate .video-title {
+    margin-top: 0; }
+
+#block-bean-immunisation-vaccine-safety h2, #block-bean-immunisation-vaccine-safety .display, #block-bean-immunisation-vaccine-safety .video-title {
+  margin-top: 0; }
 
 .smokes-band--primary, .smokes.node-type-campaign #block-views-campaign-videos-block {
   background-color: #EEE; }

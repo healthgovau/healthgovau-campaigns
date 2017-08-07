@@ -1,4 +1,4 @@
-@import "_vars";
+@import "vars";
 
 // Band variants extending defaults
 %gmym-band--primary {
@@ -50,10 +50,6 @@
       }
     }
   }
-}
-
-body.girlsmove > main a {
-  border-bottom-color: $cyan;
 }
 
 .girlsmove {
@@ -297,9 +293,10 @@ body.girlsmove > main a {
         color: $cyan;
         background: #fff;
       }
-      &:after {
-        background-image: none;
+      &::after {
+        @extend %icon-arrow-right--white;
       }
+      
     }
     .social__feature {
       @include fill-parent();
