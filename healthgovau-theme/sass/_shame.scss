@@ -1,0 +1,13 @@
+// Feedback override die to body class/URL output conflict
+body.feedback {
+  display: block;
+  @include media($tablet) {
+    float: none;
+    margin-left: 0;
+  }
+
+  // Add main padding
+  main {
+      padding-bottom: $large-spacing;
+  }
+}
