@@ -13,14 +13,11 @@ h2 {
     font-size: rem(26);
     margin-bottom: 1em;
   }
-  @include ie-lte(8) {
-    font-size: 28px;
+  @include media($desktop){
+    font-size: rem(32);
   }
 }
 
 h3 {
   font-size: rem(20);
-  @include ie-lte(8) {
-    font-size: 24px;
-  }
 }
