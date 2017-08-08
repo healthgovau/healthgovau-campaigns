@@ -28,6 +28,6 @@
  */
 ?>
 <a href="<?php print $logo_url; ?>">
-  <img src="<?php print $logo_img; ?>" alt="Campaign banner" class="campaign-logo" />
-  <span class="visuallyhidden"><?php print $title ?></span>
+  <img src="<?php print $logo_img; ?>" alt="<?php print $logo_alt?>" class="campaign-logo" />
+  <span class="visuallyhidden"><?php print $logo_alt?></span>
 </a>
