@@ -9,6 +9,9 @@
   .band__img {
     float: right;
     padding-bottom: $medium-spacing;
+    @include media($mobile) {
+      padding-top: $medium-spacing;
+    }
     @include media($tablet) {
       @include span-columns(4 of 12);
       img {
