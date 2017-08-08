@@ -3,6 +3,22 @@
   @include clearfix;
   @include wrapper-padding;
   @include outer-container;
+  @include media($mobile){
+    //padding: 0;
+  }
+}
+
+.site-nav__wrapper {
+  @include media($mobile){
+    margin-left: -2em;
+    margin-right: -2em;
+  }
+  li a {
+    @include media($mobile){
+      padding: 1.2em 2em;
+      border-width: 1px;
+    }
+  }
 }
 
 .sticky-nav {
@@ -38,4 +54,7 @@
   @include media($tablet) {
     float: left;
   }
+}
+.site-nav__wrapper li a.is-active {
+  border-color: $border-colour;
 }
