@@ -51,13 +51,11 @@ $bottom = render($page['bottom']);
   <?php endif; ?>
   
   <?php if ($navigation): ?>
-    <div class="sticky-nav">
-      <section class="site-nav">
-        <nav class="site-nav__wrapper">
-          <?php print render($page['navigation']); ?>
-        </nav>
-      </section>
-    </div>
+    <section class="site-nav">
+      <nav class="site-nav__wrapper">
+        <?php print render($page['navigation']); ?>
+      </nav>
+    </section>
   <?php endif; ?>
 
 </header>
