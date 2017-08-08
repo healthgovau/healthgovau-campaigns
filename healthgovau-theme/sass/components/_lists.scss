@@ -40,7 +40,7 @@
 
 // Generic large list without need for special markup
 // Expects to be applied to as <ol class="list-count--large">
-.list-count--large {
+%list--large {
   list-style-type: none;
   counter-reset: standard-counter;
   padding: 20px 0;
@@ -62,6 +62,33 @@
       top: 5px;
       padding-top: 0;
       font-size: 40px;
+    }
+  }
+}
+
+// Apply default to <ol>
+ol.list-large {
+  @extend %list--large;
+}
+
+// Variant for <ul>
+ul.list-large {
+  @extend %list--large;
+  counter-reset: none;
+  >li {
+    padding-left: 50px;
+    &::before {
+      content: '';
+      counter-increment: none;
+      background-image: image-url('icons/arrow-right--black.svg');
+      position: absolute;
+      top: 0;
+      display: block;
+      width: $medium-spacing;
+      height: $medium-spacing;
+      background-repeat: no-repeat;
+      background-position: left 0;
+      background-size: (0.8 * $small-spacing) auto;
     }
   }
 }
