@@ -516,3 +516,94 @@ function _healthgovau_campaign_activity_filter() {
   
   return $markup;
 }
+
+/**
+ * Implements theme_webform_element().
+ *
+ * @param $variables
+ *
+ * @return string
+ */
+function healthgovau_webform_element($variables) {
+  // Ensure defaults.
+  $variables['element'] += array(
+    '#title_display' => 'before',
+  );
+
+  $element = $variables['element'];
+
+  // All elements using this for display only are given the "display" type.
+  if (isset($element['#format']) && $element['#format'] == 'html') {
+    $type = 'display';
+  }
+  else {
+    $type = (isset($element['#type']) && !in_array($element['#type'], array('markup', 'textfield', 'webform_email', 'webform_number'))) ? $element['#type'] : $element['#webform_component']['type'];
+  }
+
+  // Convert the parents array into a string, excluding the "submitted" wrapper.
+  $nested_level = $element['#parents'][0] == 'submitted' ? 1 : 0;
+  $parents = str_replace('_', '-', implode('--', array_slice($element['#parents'], $nested_level)));
+
+  $wrapper_attributes = isset($element['#wrapper_attributes']) ? $element['#wrapper_attributes'] : array('class' => array());
+  $wrapper_classes = array(
+    'form-item',
+    'webform-component',
+    'webform-component-' . $type,
+  );
+  if (isset($element['#title_display']) && strcmp($element['#title_display'], 'inline') === 0) {
+    $wrapper_classes[] = 'webform-container-inline';
+  }
+  $wrapper_attributes['class'] = array_merge($wrapper_classes, $wrapper_attributes['class']);
+  $wrapper_attributes['id'] = 'webform-component-' . $parents;
+  $output = '<div ' . drupal_attributes($wrapper_attributes) . '>' . "\n";
+
+  // If #title_display is none, set it to invisible instead - none only used if
+  // we have no title at all to use.
+  if ($element['#title_display'] == 'none') {
+    $variables['element']['#title_display'] = 'invisible';
+    $element['#title_display'] = 'invisible';
+    if (empty($element['#attributes']['title']) && !empty($element['#title'])) {
+      $element['#attributes']['title'] = $element['#title'];
+    }
+  }
+  // If #title is not set, we don't display any label or required marker.
+  if (!isset($element['#title'])) {
+    $element['#title_display'] = 'none';
+  }
+  $prefix = isset($element['#field_prefix']) ? '<span class="field-prefix">' . _webform_filter_xss($element['#field_prefix']) . '</span> ' : '';
+  $suffix = isset($element['#field_suffix']) ? ' <span class="field-suffix">' . _webform_filter_xss($element['#field_suffix']) . '</span>' : '';
+
+  // Description text.
+  // Always output description text between the label and field.
+  $description = '';
+  if (!empty($element['#description'])) {
+    $description = ' <div class="description">' . $element['#description'] . "</div>\n";
+  }
+
+  switch ($element['#title_display']) {
+    case 'inline':
+    case 'before':
+    case 'invisible':
+      $output .= ' ' . theme('form_element_label', $variables);
+      $output .= $description;
+      $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
+      break;
+
+    case 'after':
+      $output .= ' ' . $prefix . $element['#children'] . $suffix;
+      $output .= $description;
+      $output .= ' ' . theme('form_element_label', $variables) . "\n";
+      break;
+
+    case 'none':
+    case 'attribute':
+      // Output no label and no required marker, only the children.
+      $output .= $description;
+      $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
+      break;
+  }
+
+  $output .= "</div>\n";
+
+  return $output;
+}
