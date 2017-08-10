@@ -25,3 +25,10 @@ body > main .see-more {
       background-image: image-url('icons/arrow-right--black.svg');
   }
 }
+
+// External link override.
+body>main a[rel~='external'] {
+  display: inline;
+  position: relative;
+  margin-right: 1.3em;
+}
