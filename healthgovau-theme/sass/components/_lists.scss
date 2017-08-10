@@ -45,7 +45,6 @@
   counter-reset: standard-counter;
   padding: 20px 0;
   >li {
-    @include clearfix;
     vertical-align: top;
     position: relative;
     margin: 25px 0 25px;
@@ -78,17 +77,9 @@ ul.list-large {
   >li {
     padding-left: 50px;
     &::before {
-      content: '';
-      counter-increment: none;
-      background-image: image-url('icons/arrow-right--black.svg');
-      position: absolute;
       top: 0;
-      display: block;
-      width: $medium-spacing;
-      height: $medium-spacing;
-      background-repeat: no-repeat;
-      background-position: left 0;
-      background-size: (0.8 * $small-spacing) auto;
+      content: '■';
+      counter-increment: none;
     }
   }
 }
