@@ -1,5 +1,3 @@
-@import "vars";
-
 // Band variants extending defaults
 %gmym-band--primary {
   @extend .band;
@@ -19,6 +17,30 @@
   @extend %band;
   @include linear-gradient(90deg, #dcf2f7, #FFFFFF, $fallback: #dcf2f7);
 }
+
+.band--primary {
+  @extend .band;
+  background-color: $background-colour-primary;
+}
+
+.band--secondary {
+  @extend %band;
+  background-color: $background-colour-secondary;
+}
+
+// Social
+.social__feature {
+  @include span-columns(4 of 4);
+
+  @include media($tablet) {
+    @include span-columns(3 of 12);
+  }
+
+  @include media($desktop) {
+    @include span-columns(3 of 16);
+  }
+}
+
 
 // Img/text bands
 #block-bean-ymca-featured {
@@ -371,3 +393,21 @@
   background: $cyan;
   color: #fff;
 }
+
+//Nav
+.girlsmove,
+.page-campaign-156 {
+  @include media($tablet) {
+    section.site-nav {
+      a:hover {
+        border-color: $cyan;
+      }
+      a.is-active {
+        border-color: $cyan !important;
+        &:hover {
+          border-color: $cyan !important;
+        }
+      }
+    }
+  }
+} 

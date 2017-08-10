@@ -87,6 +87,26 @@ div.group-footer {
   }
 }
 
+// Transcript
+.video__transcript {
+  summary {
+    font-size: rem(16);
+    padding-left: 0;
+    @include media($tablet){
+      font-size: rem(20);
+      padding-left: $small-spacing;
+    }
+  }
+  .accordion-panel {
+    padding-left: 0;
+    padding-right: 0;
+    @include media($tablet){
+      padding-left: $small-spacing;
+      padding-right: $small-spacing;
+    }
+  }
+}
+
 // Entity referenced in content
 // Extend list but remove > li attachment
 .field-type-entityreference.field-name-field-video {

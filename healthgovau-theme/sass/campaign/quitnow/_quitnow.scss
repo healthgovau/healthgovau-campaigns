@@ -48,18 +48,22 @@
 }
 
 // Navigation menu
-.smokes {
-  section.site-nav {
-    #block-menu-menu-quitnow-menu {
+.smokes,
+.page-campaign-6 {
+  @include media($tablet) {
+    section.site-nav {
       a:hover {
         border-color: black;
       }
-      a.is-current {
-        border-color: black;
+      a.is-active {
+        border-color: black !important;
+        &:hover {
+          border-color: black !important;
+        }
       }
     }
   }
-}
+} 
 
 // List override
 .list-vertical > li,

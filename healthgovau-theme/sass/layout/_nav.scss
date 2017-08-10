@@ -58,3 +58,9 @@
 .site-nav__wrapper li a.is-active {
   border-color: $border-colour;
 }
+
+// Override UI-Kit external link style for primary nav
+header[role='banner'] a[rel~='external'] {
+    display: block;
+    margin-right: 0;
+}
