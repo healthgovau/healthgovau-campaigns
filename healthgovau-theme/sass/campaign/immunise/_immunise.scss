@@ -145,3 +145,11 @@
 
 }
 
+// Stop heading wrap on home page
+.immunisationfacts {
+  .band--gradient {
+    .block__title {
+      max-width: 100%;
+    }
+  }
+}
