@@ -48,6 +48,11 @@
       &.instagram:before {
         content: "\f16d";
       }
+      display: inline;
+      margin-right: 0;
+      &:after {
+        background-image: none;
+      }
     }
   }
   h3 {
