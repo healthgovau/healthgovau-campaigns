@@ -64,3 +64,10 @@ header[role='banner'] a[rel~='external'] {
     display: block;
     margin-right: 0;
 }
+
+// Table of contents
+// remove 'back to top' from DOM
+.back-to-index-link,
+.toc-filter-back-to-top {
+  display: none;
+}
