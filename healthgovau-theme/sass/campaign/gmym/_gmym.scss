@@ -377,12 +377,16 @@
       margin-right: 0;
       a {
         border: 0;
+        display: inline;
         &:hover,
         &:focus {
           background-color: transparent;
         }
         &:before {
           color: $white;
+        }
+        &:after {
+          background-image: none;
         }
       }
     }
