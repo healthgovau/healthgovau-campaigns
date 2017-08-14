@@ -1,0 +1,155 @@
+// Band redeclarations unfortunately becuase the Sass is an ID-ridden mess
+%band--img-text-halves--immi {
+  @extend .band--img-text;
+  overflow: hidden;
+  //padding-bottom: $large-spacing;
+  @include media($tablet) {
+    padding-bottom: $medium-spacing;
+  }
+  .band__img {
+    float: right;
+    padding-bottom: $medium-spacing;
+    @include media($mobile) {
+      padding-top: $medium-spacing;
+    }
+    @include media($tablet) {
+      @include span-columns(4 of 12);
+      img {
+        max-width: 90%;
+      }
+    }
+    @include media($desktop) {
+      @include span-columns(6 of 16);
+    }
+  }
+  .band__text {
+    float: left;
+    @include media($tablet) {
+      @include span-columns(8 of 12);
+    }
+    @include media($desktop) {
+      @include span-columns(10 of 16);
+    }
+  }
+}
+
+%band--img-text-halves--immi--invert {
+  @extend %band--img-text-halves--immi;
+  @include media($tablet) {
+    .band__text {
+      float: right;
+    }
+    .band_img {
+      float: left;
+    }
+  }
+}
+
+#block-views-campaign-videos-block-8 {
+  padding-bottom: $large-spacing;
+}
+
+
+// Home page videox3 band
+.immunisationfacts .band--gradient {
+  @include linear-gradient(180deg, $purple-darker, $purple-light, $fallback: $purple-darker);
+  h2 {
+    color: $white;
+  }
+  .see-more {
+    display: none;
+  }
+  .list--cards > li {
+    @include box-shadow($color: $purple-darker);
+  }
+}
+
+// Primary nav colours
+.immunisationfacts,
+.page-campaign-931 {
+  @include media($tablet) {
+    section.site-nav {
+      a:hover {
+        border-color: $purple-light;
+      }
+      a.is-active {
+        border-color: $purple-light !important;
+        &:hover {
+          border-color: $purple-light !important;
+        }
+      }
+    }
+  }
+} 
+
+
+// Hotline bar
+%hotline {
+  @include pad($small-spacing 0 $tiny-spacing);
+  background: $purple-darker;
+  color: $white;
+  text-align: center;
+  p {
+    margin-bottom: $tiny-spacing;
+  }
+}
+
+// Hotline bar
+#block-bean-immunisation-hotline{
+  section.pre-nav {
+    @extend %hotline;
+    a {
+      color: white;
+      border: 0px;
+      &:hover {
+        background-color: $colour-primary;
+      }
+    }
+  }
+}
+
+// Static block band
+#block-bean-immunisation-uptodate {
+  @extend %band--img-text-halves--immi--invert;
+  background: $grey-light;
+  h2 {
+    margin-top: 0;
+  }
+}
+
+// Static block band
+#block-bean-immunisation-vaccine-safety {
+  @extend %band--img-text-halves--immi;
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.immunisationfacts.node-type-campaign {
+  #block-views-campaign-videos-block-7,
+  #block-views-campaign-videos-block-8 {
+    @include clearfix;
+    .view-mode-compact {
+      div.group-left {
+        @extend .video__container;
+      }
+      div.group-right {
+        @extend .video__info;
+      }
+    }
+  }
+
+  #block-views-campaign-videos-block-7 {
+    @extend .smokes-band--primary;
+  }
+
+}
+
+// Stop heading wrap on home page
+.immunisationfacts {
+  .band--gradient {
+    .block__title {
+      max-width: 100%;
+    }
+  }
+}

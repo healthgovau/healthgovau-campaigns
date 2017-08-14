@@ -30,58 +30,120 @@
       border-top: 0px;
     }
   }
+}
 
-  .field-name-field-video-promoted-thumbnail {
-    a {
-      border: 0px;
-      &:hover {
-        background-color: inherit;
-      }
-    }
-    img {
-      height: auto;
-      width: 100%;
+.field-name-field-video-promoted-thumbnail {
+  a {
+    border: 0px;
+    &:hover {
+      background-color: inherit;
     }
   }
-
-  .field-name-field-video-thumbnail {
-    img {
-      height: auto;
-      width: 100%;
-    }
-  }
-
-  .field-name-field-video-length {
-    @extend .video__time;
-  }
-
-  .video__transcript {
-    summary {
-      background-color: transparent;
-    }
-  }
-
-  .field-name-post-date {
-    @extend .video__date;
-  }
-
-  div.group-top-left {
-    @extend .video__container;
-  }
-  div.group-top-right {
-    @extend .video__info;
-  }
-
-  div.group-footer {
-    padding-top: 20px;
-    font-size: 0.5em;
+  img {
+    height: auto;
+    width: 100%;
   }
 }
+
+.field-name-field-video-thumbnail {
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.field-name-field-video-length {
+  @extend .video__time;
+}
+
+.video__transcript {
+  summary {
+    background-color: transparent;
+  }
+}
+
+.field-name-post-date {
+  @extend .video__date;
+}
+
+div.group-top-left {
+  @extend .video__container;
+}
+div.group-top-right {
+  @extend .video__info;
+}
+
+div.group-footer {
+  padding-top: 20px;
+  font-size: 0.5em;
+}
+
 
 .node-type-video {
   .ds-wrapper {
     @extend .wrapper;
     clear: both;
     padding: 0px;
+  }
+}
+
+// Transcript
+.video__transcript {
+  summary {
+    font-size: rem(16);
+    padding-left: 0;
+    @include media($tablet){
+      font-size: rem(20);
+      padding-left: $small-spacing;
+    }
+  }
+  .accordion-panel {
+    padding-left: 0;
+    padding-right: 0;
+    @include media($tablet){
+      padding-left: $small-spacing;
+      padding-right: $small-spacing;
+    }
+  }
+}
+
+// Entity referenced in content
+// Extend list but remove > li attachment
+.field-type-entityreference.field-name-field-video {
+  @extend %base-list;
+  border-top: solid 1px $border-colour;
+  border-bottom: solid 1px $border-colour;
+  padding: $large-spacing 0;
+
+  .field-name-field-video-length .field-item::before {
+    @include media($tablet) {
+      height: auto;
+    }
+  }
+
+ .field-item {
+    width: 100%;
+    max-width: none;
+
+    @include media($tablet) {
+      display: flex;
+    }
+
+    figure {
+      @include media($mobile) {
+        margin-bottom: $medium-spacing;
+      }
+      @include media($tablet) {
+        flex: 0 0 35%;
+        margin-right: $base-spacing;
+      }
+      a {
+        border: 0;
+      }
+    }
+
+    .meta {
+      display: none;
+    }
   }
 }

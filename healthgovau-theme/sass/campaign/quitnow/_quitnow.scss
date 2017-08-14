@@ -48,18 +48,22 @@
 }
 
 // Navigation menu
-.smokes {
-  section.site-nav {
-    #block-menu-menu-quitnow-menu {
+.smokes,
+.page-campaign-6 {
+  @include media($tablet) {
+    section.site-nav {
       a:hover {
         border-color: black;
       }
-      a.is-current {
-        border-color: black;
+      a.is-active {
+        border-color: black !important;
+        &:hover {
+          border-color: black !important;
+        }
       }
     }
   }
-}
+} 
 
 // List override
 .list-vertical > li,
@@ -147,45 +151,6 @@ footer[role='contentinfo'] .footer-top nav > li {
   }
 }
 
-// List count
-.list-count {
-  counter-reset: standard-counter;
-  > li {
-    vertical-align: top;
-    position: relative;
-    padding-left: rem(80);
-    min-height: rem(90);
-    &:before {
-      content: counter(standard-counter,decimal);
-      counter-increment: standard-counter;
-      display: inline-block;
-      float: left;
-      line-height: $base-heading-leading;
-      text-align: center;
-      width: rem(70);
-      font-weight: 700;
-      position: absolute;
-      left: 0;
-      top: 0;
-      padding-top: 0;
-      font-size: rem(50);
-    }
-  }
-  @include media($tablet) {
-    > li {
-      &:before {
-        padding-top: rem(10);
-      }
-    }
-  }
-  @include media($desktop) {
-    > li {
-      &:before {
-        padding-top: rem(19);
-      }
-    }
-  }
-}
 
 // Hide campaign field.
 .field-name-field-campaign {

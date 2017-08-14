@@ -16,3 +16,19 @@ body a {
     color: #313131;
   }
 }
+
+// Cloned UI-kit style for black arrow
+
+body > main .see-more {
+  color: $non-black;
+  &::after {
+      background-image: image-url('icons/arrow-right--black.svg');
+  }
+}
+
+// External link override.
+body>main a[rel~='external'] {
+  display: inline;
+  position: relative;
+  margin-right: 1.3em;
+}

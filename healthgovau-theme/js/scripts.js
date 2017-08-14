@@ -16,21 +16,7 @@
 // To understand behaviors, see https://drupal.org/node/756722#behaviors
 Drupal.behaviors.healthgovauCampaign = {
   attach: function(context, settings) {
-      
-      
-    // Sticky nav
-    if( $(".sticky-nav").length) {
-      var stickyNavTop = $('.sticky-nav').offset().top;
-    }
-    var stickyNav = function(){
-      var scrollTop = $(window).scrollTop();
-      if (scrollTop > stickyNavTop) {
-        $('.sticky-nav').addClass('on');
-      } else {
-        $('.sticky-nav').removeClass('on');
-      }
-    }
-    
+          
     function parallax(){
       if( $(".js-parallax-window").length) {
         var plxBackground = $(".js-parallax-background");

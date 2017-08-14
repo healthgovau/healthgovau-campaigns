@@ -1,0 +1,62 @@
+// Tweaks for mobile positioning
+// .girlsmove and .page-campaign-156 target just this campaign (class in <body>)
+.immunisationfacts,
+.page-campaign-931 {
+  // Home page
+  .hero {
+    .hero-bg {
+        background-position-y: 5px;
+        background-position-x: 0;
+        @include media($desktop) {
+           background-position-y: -50px;
+        }
+    }
+    .campaign-logo {
+      @include media($mobile){
+        max-height: 110px;
+        margin-top: 15px;
+        left: -20px;
+      }
+      max-height: 125px;
+      margin-top: 25px;
+      left: -20px;
+      @include media($tablet) {
+        left: 0;
+        max-height: 200px;
+        margin-top: 25px;
+      }
+      @include media($desktop) {
+        max-height: 275px;
+        margin-top: 25px;
+      }
+    }
+  }
+    
+  // Other pages
+  .hero--content {
+    .hero-bg {
+      @include media($mobile) {
+        background-position-y: -30px; //reset
+      }
+      background-position-y: -40px;
+      @include media($tablet) {
+        background-position-y: -67px; //reset
+      }
+      @include media($desktop) {
+        background-position-y: -150px; //reset
+      }
+    }
+    .campaign-logo {
+      max-height: 84px;
+      margin-top: 10px;
+      @include media($tablet) {
+        max-height: 150px;
+        margin-top: 10px;
+      }
+      @include media($desktop) {
+        max-height: 185px;
+        margin-top: 20px;
+      }
+    }
+  }
+}

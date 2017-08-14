@@ -105,32 +105,18 @@
   }
 }
 
-body.breastscreen > main a,
-body.breastscreen > main .see-more {
-  border-color: #d51364;
-  color: #d51364;
-}
-
 // Links
 .breastscreen {
-  a,
-  .see-more {
-    border-color: $colour-primary;
-    color: $colour-primary;
-    &:hover,
-    &:focus {
-      color: $white;
-      background-color: $colour-primary;
-    }
-    &:after {
-      display: none;
-    }
-  }
   .block-link {
     color: #fff;
+    border-color: $colour-primary;
     background: $colour-primary;
     display: block;
     text-align: center;
     margin-top: 50px;
+    &:hover,
+    &:focus {
+      background-color: darken($colour-primary, 5%);
+    }
   }
 }

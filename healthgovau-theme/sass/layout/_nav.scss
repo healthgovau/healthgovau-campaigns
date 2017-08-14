@@ -3,6 +3,22 @@
   @include clearfix;
   @include wrapper-padding;
   @include outer-container;
+  @include media($mobile){
+    //padding: 0;
+  }
+}
+
+.site-nav__wrapper {
+  @include media($mobile){
+    margin-left: -2em;
+    margin-right: -2em;
+  }
+  li a {
+    @include media($mobile){
+      padding: 1.2em 2em;
+      border-width: 1px;
+    }
+  }
 }
 
 .sticky-nav {
@@ -19,4 +35,39 @@
 }
 .nav-toggle {
   margin-top: 0;
+}
+
+.local-nav {
+  @include media($tablet) {
+    padding-top: $small-spacing;
+  }
+}
+
+// Move local nav to right without changing region (ie. source order)
+.page--sidebar-left .sidebar__left {
+  @include media($tablet) {
+    float: right;
+  }
+}
+// Except for events with left filter nav
+.events .page--sidebar-left .sidebar__left {
+  @include media($tablet) {
+    float: left;
+  }
+}
+.site-nav__wrapper li a.is-active {
+  border-color: $border-colour;
+}
+
+// Override UI-Kit external link style for primary nav
+header[role='banner'] a[rel~='external'] {
+    display: block;
+    margin-right: 0;
+}
+
+// Table of contents
+// remove 'back to top' from DOM
+.back-to-index-link,
+.toc-filter-back-to-top {
+  display: none;
 }

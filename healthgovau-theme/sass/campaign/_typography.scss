@@ -4,3 +4,20 @@
   margin-top: $medium-spacing;
   border: 0;
 }
+
+// Override heading sizes for mobile (default)
+h2 {
+  font-size: rem(22);
+  margin-bottom: $small-spacing;
+  @include media($tablet) {
+    font-size: rem(26);
+    margin-bottom: 1em;
+  }
+  @include media($desktop){
+    font-size: rem(32);
+  }
+}
+
+h3 {
+  font-size: rem(20);
+}

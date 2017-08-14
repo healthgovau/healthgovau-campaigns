@@ -17,6 +17,7 @@ stylesheets[all][] = sass/vendor/light-gallery/css/lightgallery.css
 scripts[] = js/lightgallery.js
 scripts[] = js/lg-zoom.min.js
 scripts[] = js/lg-fullscreen.min.js
+scripts[] = js/extlinkHealth.min.js
 scripts[] = js/scripts.js
 
 regions[header]         = Header
