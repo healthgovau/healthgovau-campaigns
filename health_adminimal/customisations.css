@@ -1,0 +1,13 @@
+/* Layout checkboxes in 3 columns for long lists */
+#edit-field-age-group-und.form-checkboxes,
+#edit-field-language-und.form-checkboxes,
+#edit-field-life-stage-und.form-checkboxes,
+#edit-field-health-topic-und.form-checkboxes,
+#edit-field-state-und.form-checkboxes,
+#edit-field-condition-or-disease-und.form-checkboxes,
+#edit-field-event-organiser-und.form-checkboxes {
+    column-count: 3;
+}
+
+
+
