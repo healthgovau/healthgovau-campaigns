@@ -140,7 +140,7 @@ gulp.task('styles:proto', function() {
 });
 
 gulp.task('styles:theme', function() {
-  return gulp.src(paths.theme.sass + '/styles.scss')
+  return gulp.src([paths.theme.sass + '/styles.scss', paths.theme.sass + '/ckeditor.scss'])
     .pipe(sassGlob())
     .pipe(sass(options.sass).on('error', sass.logError))
     .pipe($.autoprefixer(options.autoprefixer))
