@@ -151,22 +151,10 @@ function healthgovau_preprocess_page(&$variables) {
     if ($node->type == 'campaign') {
       $variables['full_hero'] = 'js-parallax-window hero';
       $variables['hero_bg'] = 'js-parallax-background hero-bg';
-
-      // Add immunisation JS to all immunisation node pages.
-      if ($node->nid == '931') {
-        drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/immunisation-survey.js');
-      }
     }
     else {
       $variables['full_hero'] = 'hero--content';
       $variables['hero_bg'] = 'hero-bg';
-
-      // Add immunisation JS to all immunisation node pages.
-      if (isset($node->field_campaign[LANGUAGE_NONE])) {
-        if ($node->field_campaign[LANGUAGE_NONE][0]['target_id'] == '931') {
-          drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/immunisation-survey.js');
-        }
-      }
     }
   }
   else {
@@ -236,6 +224,16 @@ function healthgovau_preprocess_node(&$variables) {
     $variables['event_status'] ='<div class="field fa-info-circle"><div class="field-label">Event status: <span class="event_status">' . $indicator . '</span></div></div>';
   }
 
+  // Add immunisation JS to all immunisation node pages.
+  if ($node->nid == '931') {
+    drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/immunisation-survey.js');
+    $variables['immunisation_survey'] = '<div id=\'SI_e9tKdVZvk8qGE0B\'><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>';
+  }
+  elseif (isset($node->field_campaign[LANGUAGE_NONE])) {
+    if ($node->field_campaign[LANGUAGE_NONE][0]['target_id'] == '931') {
+      $variables['immunisation_survey'] = '<div id=\'SI_e9tKdVZvk8qGE0B\'><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>';
+    }
+  }
 }
 
 /**
