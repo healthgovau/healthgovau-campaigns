@@ -22,4 +22,24 @@ body.adminimal-skin-material table.ui-datepicker-calendar thead th {
 a.button.browse:link, a.button.browse:visited, a.button.browse:hover, a.button.browse:active,
 a.button.edit:link, a.button.edit:visited, a.button.edit:hover, a.button.edit:active {
     color: white;
+    margin-right: 1em;
+    padding: 5px 18px;
+    margin-top: -2px;
+}
+
+/* Fixing padding issues on fields with Media browser button. */
+.media-widget .preview {
+    margin-right: 0px;
+}
+.media-widget input.remove {
+    margin-left: 10px;
+    margin-right: 1em;
+}
+
+/* Fixing padding on media browser tabs */
+#media-browser-tabset ul.tabs.primary li.ui-state-default a:link {
+    padding: 14px 20px;
+}
+#media-browser-tabset ul.tabs.primary li.ui-state-default {
+    padding-bottom: 0px;
 }
