@@ -9,5 +9,17 @@
     column-count: 3;
 }
 
+/* Fix calendar popup appearing outside its container. */
+body.adminimal-skin-material table.ui-datepicker-calendar tbody td a {
+    padding: .5em .6em;
+}
+/* Calendar popup days easier to read */
+body.adminimal-skin-material table.ui-datepicker-calendar thead th {
+    color: black;
+}
 
-
+/* Making all button text white instead of grey, in line with other buttons */
+a.button.browse:link, a.button.browse:visited, a.button.browse:hover, a.button.browse:active,
+a.button.edit:link, a.button.edit:visited, a.button.edit:hover, a.button.edit:active {
+    color: white;
+}
