@@ -151,10 +151,22 @@ function healthgovau_preprocess_page(&$variables) {
     if ($node->type == 'campaign') {
       $variables['full_hero'] = 'js-parallax-window hero';
       $variables['hero_bg'] = 'js-parallax-background hero-bg';
+
+      // Add immunisation JS to all immunisation node pages.
+      if ($node->nid == '931') {
+        drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/immunisation-survey.js');
+      }
     }
     else {
       $variables['full_hero'] = 'hero--content';
       $variables['hero_bg'] = 'hero-bg';
+
+      // Add immunisation JS to all immunisation node pages.
+      if (isset($node->field_campaign[LANGUAGE_NONE])) {
+        if ($node->field_campaign[LANGUAGE_NONE][0]['target_id'] == '931') {
+          drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/immunisation-survey.js');
+        }
+      }
     }
   }
   else {
