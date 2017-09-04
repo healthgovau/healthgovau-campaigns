@@ -68,10 +68,8 @@
     // available in jQuery 1.0 (Drupal 5 default).
     var external_links = new Array();
     var mailto_links = new Array();
-    console.log(settings.extlinkHealth);
     $("a:not(." + settings.extlinkHealth.extClass + ", ." + settings.extlinkHealth.mailtoClass + "), area:not(." + settings.extlinkHealth.extClass + ", ." + settings.extlinkHealth.mailtoClass + ")", context).each(function (el) {
       try {
-        console.log(this.href);
         var url = this.href.toLowerCase();
         if (url.indexOf('http') == 0
           && ((!url.match(internal_link) && !(extExclude && url.match(extExclude))) || (extInclude && url.match(extInclude)))
