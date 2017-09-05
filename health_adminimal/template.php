@@ -25,3 +25,29 @@ function health_adminimal_toc_filter($variables) {
 function health_adminimal_toc_filter_back_to_top($variables) {
   return '<span class="back-to-index-link"><a href="#index-links">' . t('Back to contents ↑') . '</a></span>';
 }
+
+
+/**
+ * Implements hook_form_alter().
+ * @param $form
+ */
+function health_adminimal_form_alter(&$form) {
+
+  $media_forms = array('file-entity-add-upload', 'media-internet-add-upload');
+
+  if (in_array($form['#id'], $media_forms)) {
+
+    // Make alt text mandatory.
+    if (key_exists('field_file_image_alt_text', $form)) {
+      $form['field_file_image_alt_text'][$form['field_file_image_alt_text']['#language']][0]['value']['#required'] = TRUE;
+      $form['field_file_image_alt_text'][$form['field_file_image_alt_text']['#language']][0]['#required'] = TRUE;
+      $form['field_file_image_alt_text'][$form['field_file_image_alt_text']['#language']]['#required'] = TRUE;
+    }
+
+    // Clear filename from title to force users to enter a sensible title.
+    if (key_exists('filename', $form)) {
+      $form['filename']['#default_value'] = '';
+    }
+
+  }
+}
