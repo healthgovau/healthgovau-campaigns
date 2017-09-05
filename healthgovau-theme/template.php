@@ -231,6 +231,7 @@ function healthgovau_preprocess_node(&$variables) {
   }
   elseif (isset($node->field_campaign[LANGUAGE_NONE])) {
     if ($node->field_campaign[LANGUAGE_NONE][0]['target_id'] == '931') {
+      drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/immunisation-survey.js');
       $variables['immunisation_survey'] = '<div id=\'SI_e9tKdVZvk8qGE0B\'><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>';
     }
   }
