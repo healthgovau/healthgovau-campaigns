@@ -382,6 +382,16 @@ function healthgovau_preprocess_entity(&$variables) {
       }
     }
   }
+  
+  // Render views in paragraph for listing paragraph bundle.
+  if ($variables['entity_type'] == 'paragraphs_item') {
+    $paragraph = $variables['elements']['#entity'];
+    $view = $paragraph->field_view_name[LANGUAGE_NONE][0]['value'];
+    $campaign_id = $paragraph->field_campaign[LANGUAGE_NONE][0]['target_id'];
+    $view_mode = $paragraph->field_view_mode[LANGUAGE_NONE][0]['value'];
+
+    $variables['para_listing_view'] = views_embed_view($view, $view_mode, $campaign_id);
+  }
 }
 
 /**
