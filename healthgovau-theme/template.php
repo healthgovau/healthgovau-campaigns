@@ -641,21 +641,18 @@ function healthgovau_webform_element($variables) {
  */
 function healthgovau_file_entity_download_link($variables) {
 
-  $file = $variables['file'];
-
-  // If there's an icon matching the exact mimetype, go for it.
-  $mimetype = explode('/', $file->filemime);
-
-  // Load the current node to grab the title.
+  // If this is not an image content type, do the normal formatting.
   $nid = arg(1);
   if (is_numeric($nid)) {
     $node = node_load($nid);
-    if ($node->type == 'image') {
-      $variables['text'] = 'Download ' . strtoupper($mimetype[1]) . ' ' . '(' . format_size($file->filesize) . ')';
-    } else {
+    if ($node->type != 'image') {
       return theme_file_entity_download_link($variables);
     }
   }
+
+  $file = $variables['file'];
+  $mimetype = explode('/', $file->filemime);
+  $variables['text'] = 'Download ' . strtoupper($mimetype[1]) . ' ' . '(' . format_size($file->filesize) . ')';
 
   $icon_directory = $variables['icon_directory'];
   $icon = theme('file_icon', array('file' => $file, 'icon_directory' => $icon_directory));
