@@ -33,7 +33,7 @@ function health_adminimal_toc_filter_back_to_top($variables) {
  */
 function health_adminimal_form_alter(&$form) {
 
-  $media_forms = array('file-entity-add-upload', 'media-internet-add-upload');
+  $media_forms = array('file-entity-add-upload', 'media-internet-add-upload', 'file_entity_edit');
 
   if (in_array($form['#id'], $media_forms)) {
 
