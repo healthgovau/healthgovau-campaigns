@@ -619,3 +619,46 @@ function healthgovau_webform_element($variables) {
 
   return $output;
 }
+
+/**
+ * Implements hook_file_entity_download_link().
+ *
+ * Output differently for Image content type.
+ *
+ * @param $variables
+ *
+ * @return string
+ */
+function healthgovau_file_entity_download_link($variables) {
+
+  $file = $variables['file'];
+
+  // If there's an icon matching the exact mimetype, go for it.
+  $mimetype = explode('/', $file->filemime);
+
+  // Load the current node to grab the title.
+  $nid = arg(1);
+  if (is_numeric($nid)) {
+    $node = node_load($nid);
+    if ($node->type == 'image') {
+      $variables['text'] = 'Download ' . strtoupper($mimetype[1]) . ' ' . '(' . format_size($file->filesize) . ')';
+    } else {
+      return theme_file_entity_download_link($variables);
+    }
+  }
+
+  $icon_directory = $variables['icon_directory'];
+  $icon = theme('file_icon', array('file' => $file, 'icon_directory' => $icon_directory));
+
+  // Set options as per anchor format described at
+  // http://microformats.org/wiki/file-format-examples
+  $uri['options']['attributes']['type'] = $file->filemime . '; length=' . $file->filesize;
+
+  $uri = file_entity_download_uri($file);
+
+  $output = '<span class="file"> ' . $icon . ' ' . l($variables['text'], $uri['path'], $uri['options']);
+  $output .= ' ' . '<span class="file-size"></span>';
+  $output .= '</span>';
+
+  return $output;
+}
