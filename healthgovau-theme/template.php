@@ -653,7 +653,7 @@ function healthgovau_file_entity_download_link($variables) {
 
   $file = $variables['file'];
   $mimetype = explode('/', $file->filemime);
-  $variables['text'] = 'Download ' . strtoupper($mimetype[1]) . ' ' . '(' . format_size($file->filesize) . ')';
+  $variables['text'] = 'Download ' . strtoupper($mimetype[1]) . ' (' . format_size($file->filesize) . ')';
 
   $icon_directory = $variables['icon_directory'];
   $icon = theme('file_icon', array('file' => $file, 'icon_directory' => $icon_directory));
@@ -665,7 +665,9 @@ function healthgovau_file_entity_download_link($variables) {
   $uri = file_entity_download_uri($file);
 
   $output = '<span class="file"> ' . $icon . ' ' . l($variables['text'], $uri['path'], $uri['options']);
-  $output .= ' ' . '<span class="file-size"></span>';
+  if (isset($file->metadata['width'])) {
+    $output .= ' ' . '<div class="file__dimensions">Dimensions: ' . $file->metadata['width'] . ' by ' . $file->metadata['height'] . ' pixels</div>';
+  }
   $output .= '</span>';
 
   return $output;
