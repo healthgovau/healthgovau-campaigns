@@ -691,8 +691,13 @@ function healthgovau_file_entity_download_link($variables) {
  */
 function healthgovau_get_friendly_mime($mimetype) {
   $descriptions = [
-    'application/pdf' => '<span title="Portable Document Format">PDF</span>',
-    'application/vnd.openxmlformats-officedocument.wordprocessingml.document' => '<span title="Microsoft Word document">DOC</span>',
+    'application/pdf' => '<abbr title="Portable Document Format">PDF</abbr>',
+    'application/vnd.openxmlformats-officedocument.wordprocessingml.document' => '<abbr title="Microsoft Word document">Word</abbr>',
+    'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' => '<abbr title="Microsoft Excel document">Excel</abbr>',
+    'text/plain' => 'plain text',
+    'image/jpeg' => '<abbr title="Joint Photographic Experts Group">JPEG</abbr>',
+    'image/png' => '<abbr title="Portable Network Graphics">PNG</abbr>',
+    'image/gif' => '<abbr title="Graphics Interchange Format">GIF</abbr>',
   ];
   if (array_key_exists($mimetype, $descriptions)) {
     return $descriptions[$mimetype];
