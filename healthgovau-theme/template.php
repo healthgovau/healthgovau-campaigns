@@ -386,11 +386,34 @@ function healthgovau_preprocess_entity(&$variables) {
   // Render views in paragraph for listing paragraph bundle.
   if ($variables['entity_type'] == 'paragraphs_item') {
     $paragraph = $variables['elements']['#entity'];
-    if ($paragraph->field_name == 'field_views_listing') {
-      $view = $paragraph->field_para_view_name[LANGUAGE_NONE][0]['value'];
+
+    if ($paragraph->bundle == 'campaign_listing_view') {
+
+      // Get the paragraph values.
+      $view_name = $paragraph->field_para_view_name[LANGUAGE_NONE][0]['value'];
       $campaign_id = $paragraph->field_campaign[LANGUAGE_NONE][0]['target_id'];
       $view_mode = $paragraph->field_para_view_mode[LANGUAGE_NONE][0]['value'];
-      $variables['para_listing_view'] = views_embed_view($view, $view_mode, $campaign_id);
+
+      // Load the view.
+      $view = views_get_view($view_name);
+      $view->get_total_rows = TRUE;
+      $view->set_display($view_mode);
+      $view->preview = TRUE;
+      $view->pre_execute(array($campaign_id));
+      $view->execute();
+
+      if ($view->total_rows > 0) {
+        // Render the view.
+        $variables['para_listing_view'] = $view->preview();
+        // If there are no more records to show, hide the more link.
+        if ($view->total_rows <= count($view->result)) {
+          $variables['content']['field_para_more_link']['#access'] = FALSE;
+        }
+      } else {
+        // If the view has no rows, hide the other fields.
+        $variables['content']['field_paragraph_title']['#access'] = FALSE;
+        $variables['content']['field_para_more_link']['#access'] = FALSE;
+      }
     }
   }
 }
