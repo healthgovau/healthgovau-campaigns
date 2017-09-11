@@ -646,29 +646,56 @@ function healthgovau_file_entity_download_link($variables) {
   $nid = arg(1);
   if (is_numeric($nid)) {
     $node = node_load($nid);
-    if ($node->type != 'image') {
+    if ($node->type != 'image' && $node->type != 'publication') {
       return theme_file_entity_download_link($variables);
     }
   }
 
+  // Grab the file.
   $file = $variables['file'];
-  $mimetype = explode('/', $file->filemime);
-  $variables['text'] = 'Download ' . strtoupper($mimetype[1]) . ' (' . format_size($file->filesize) . ')';
 
+  // Construct the link.
+  $variables['text'] = 'Download ' . healthgovau_get_friendly_mime($file->filemime) . ' - ' . format_size($file->filesize);
+
+  // Get the icon.
   $icon_directory = $variables['icon_directory'];
   $icon = theme('file_icon', array('file' => $file, 'icon_directory' => $icon_directory));
+
+  // Get the path to the file.
+  $uri = file_entity_download_uri($file);
 
   // Set options as per anchor format described at
   // http://microformats.org/wiki/file-format-examples
   $uri['options']['attributes']['type'] = $file->filemime . '; length=' . $file->filesize;
+  $uri['options']['html'] = TRUE;
 
-  $uri = file_entity_download_uri($file);
-
+  // Output the link.
   $output = '<span class="file"> ' . $icon . ' ' . l($variables['text'], $uri['path'], $uri['options']);
   if (isset($file->metadata['width'])) {
+    // Output the dimensions.
     $output .= ' ' . '<div class="file__dimensions">Dimensions: ' . $file->metadata['width'] . ' by ' . $file->metadata['height'] . ' pixels</div>';
   }
   $output .= '</span>';
 
   return $output;
+}
+
+
+/**
+ * Convert a mimetype into a human readable format.
+ * Copied from https://github.com/JCoded/friendly-mime-php
+ *
+ * @param string $mimetype
+ *
+ * @return string $human
+ */
+function healthgovau_get_friendly_mime($mimetype) {
+  $descriptions = [
+    'application/pdf' => '<span title="Portable Document Format">PDF</span>',
+    'application/vnd.openxmlformats-officedocument.wordprocessingml.document' => '<span title="Microsoft Word document">DOC</span>',
+  ];
+  if (array_key_exists($mimetype, $descriptions)) {
+    return $descriptions[$mimetype];
+  }
+  return $mimetype;
 }
