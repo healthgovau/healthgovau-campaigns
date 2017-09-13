@@ -1,0 +1,72 @@
+// Hotline bar
+#block-bean-drughelp-hotline{
+  section.pre-nav {
+    @extend %hotline;
+    background: $drugs-blue-dark;
+    a {
+      color: white;
+      border: 0px;
+      &:hover {
+        background-color: $drugs-blue-dark;
+      }
+    }
+  }
+}
+
+// Band redeclarations unfortunately because the Sass is an ID-ridden mess
+%band--img-text-halves--drughelp {
+  @extend .band--img-text;
+  overflow: hidden;
+  //padding-bottom: $large-spacing;
+  @include media($tablet) {
+    padding-bottom: $medium-spacing;
+  }
+  .band__img {
+    float: right;
+    padding-bottom: $medium-spacing;
+    @include media($mobile) {
+      padding-top: $medium-spacing;
+    }
+    @include media($tablet) {
+      @include span-columns(4 of 12);
+      img {
+        max-width: 90%;
+      }
+    }
+    @include media($desktop) {
+      @include span-columns(6 of 16);
+    }
+  }
+  .band__text {
+    float: left;
+    @include media($tablet) {
+      @include span-columns(8 of 12);
+    }
+    @include media($desktop) {
+      @include span-columns(10 of 16);
+    }
+  }
+}
+
+// Static block band
+#block-bean-drughelp-need-help {
+  @extend %band--img-text-halves--drughelp;
+  background: $grey-light;
+  h2 {
+    margin-top: 0;
+  }
+}
+
+// Home page videox3 band
+.drughelp .band--gradient {
+  @include linear-gradient(180deg, $drugs-blue-darker, $drugs-blue-dark, $fallback: $drugs-blue-darker);
+  h2 {
+    color: $white;
+  }
+  .see-more {
+    display: none;
+  }
+  .list--cards > li {
+    @include box-shadow($color: $drugs-blue-darker);
+  }
+}

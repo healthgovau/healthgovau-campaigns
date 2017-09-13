@@ -1,4 +1,4 @@
-// Band redeclarations unfortunately becuase the Sass is an ID-ridden mess
+// Band redeclarations unfortunately because the Sass is an ID-ridden mess
 %band--img-text-halves--immi {
   @extend .band--img-text;
   overflow: hidden;
@@ -81,18 +81,6 @@
     }
   }
 } 
-
-
-// Hotline bar
-%hotline {
-  @include pad($small-spacing 0 $tiny-spacing);
-  background: $purple-darker;
-  color: $white;
-  text-align: center;
-  p {
-    margin-bottom: $tiny-spacing;
-  }
-}
 
 // Hotline bar
 #block-bean-immunisation-hotline{

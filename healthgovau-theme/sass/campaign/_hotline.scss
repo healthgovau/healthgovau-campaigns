@@ -1,0 +1,10 @@
+// Hotline bar
+%hotline {
+  @include pad($small-spacing 0 $tiny-spacing);
+  background: $purple-darker;
+  color: $white;
+  text-align: center;
+  p {
+    margin-bottom: $tiny-spacing;
+  }
+}
