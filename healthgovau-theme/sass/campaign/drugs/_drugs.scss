@@ -101,11 +101,19 @@
   }
 }
 
-// Thirds
-.thirds {
-  article {
-    @include media($tablet) {
-      @include span-columns(3 of 9);
+// Primary nav colours
+.drughelp {
+  @include media($tablet) {
+    section.site-nav {
+      a:hover {
+        border-color: $drugs-blue-dark;
+      }
+      a.is-active {
+        border-color: $drugs-blue-darker !important;
+        &:hover {
+          border-color: $drugs-blue-darker !important;
+        }
+      }
     }
   }
-}
+} 
