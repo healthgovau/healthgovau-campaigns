@@ -10,3 +10,9 @@
   transform: translateY(50%);
   position: relative;
 }
+
+// Override text wrap where needed
+%fullwidth,
+.fullwidth {
+  max-width: 100% !important;
+}

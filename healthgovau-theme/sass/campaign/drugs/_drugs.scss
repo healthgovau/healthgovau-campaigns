@@ -1,5 +1,5 @@
 // Hotline bar
-#block-bean-drughelp-hotline{
+#block-bean-drughelp-hotline {
   section.pre-nav {
     @extend %hotline;
     background: $drugs-blue-dark;
@@ -16,8 +16,7 @@
 // Band redeclarations unfortunately because the Sass is an ID-ridden mess
 %band--img-text-halves--drughelp {
   @extend .band--img-text;
-  overflow: hidden;
-  //padding-bottom: $large-spacing;
+  overflow: hidden; //padding-bottom: $large-spacing;
   @include media($tablet) {
     padding-bottom: $medium-spacing;
   }
@@ -57,16 +56,56 @@
   }
 }
 
-// Home page videox3 band
-.drughelp .band--gradient {
+// Feature video
+.drughelp.node-type-campaign {
+  #block-views-campaign-videos-block {
+    @extend %band;
+  }
+}
+
+#block-bean-drughelp-emergency {  
+  @extend %band;
   @include linear-gradient(180deg, $drugs-blue-darker, $drugs-blue-dark, $fallback: $drugs-blue-darker);
+  color: #fff;
   h2 {
     color: $white;
+    @extend %fullwidth;
   }
-  .see-more {
-    display: none;
+  h3 {
+    margin-top: 0;
   }
-  .list--cards > li {
-    @include box-shadow($color: $drugs-blue-darker);
+  a {
+    color: #fff;
+    &:hover,
+    &:focus {
+      color: #000;
+    }
+  }
+}
+
+#block-bean-drughelp-information-about-drugs {
+  @extend %band;
+  background: $grey-light;
+}
+
+
+// Tiles
+.drughelp {
+  .list--tiles {
+    >li {
+      background-color: #fff;
+      border-top-color: $drugs-blue-dark;
+      @include box-shadow();
+      min-height: 120px;
+    }
+  }
+}
+
+// Thirds
+.thirds {
+  article {
+    @include media($tablet) {
+      @include span-columns(3 of 9);
+    }
   }
 }
