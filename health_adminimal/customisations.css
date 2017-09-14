@@ -7,6 +7,8 @@
 #edit-field-condition-or-disease-und.form-checkboxes,
 #edit-field-event-organiser-und.form-checkboxes {
     column-count: 3;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
 }
 
 /* Fix calendar popup appearing outside its container. */
