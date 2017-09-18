@@ -383,10 +383,11 @@ function healthgovau_preprocess_entity(&$variables) {
     }
   }
   
-  // Render views in paragraph for listing paragraph bundle.
+  // Paragraphs.
   if ($variables['entity_type'] == 'paragraphs_item') {
     $paragraph = $variables['elements']['#entity'];
 
+    // Render views in paragraph for listing paragraph bundle.
     if ($paragraph->bundle == 'campaign_listing_view') {
 
       // Get the paragraph values.
@@ -414,6 +415,10 @@ function healthgovau_preprocess_entity(&$variables) {
         $variables['content']['field_paragraph_title']['#access'] = FALSE;
         $variables['content']['field_para_more_link']['#access'] = FALSE;
       }
+
+      // Add some classes to help identify it.
+      $variables['classes_array'][] = 'paragraphs-view-' . $view->name;
+      $variables['classes_array'][] = 'paragraphs-view-display-' . $view->current_display;
     }
   }
 }
