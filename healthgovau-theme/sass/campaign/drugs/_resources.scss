@@ -1,8 +1,16 @@
 // Landing page bands
 .node-type-landing-page {
     
+    // generic paragraph-driven bands
     .entity-paragraphs-item,
-    .pagetitle {
+    .title-wrapper {
         @include wrapper;
+    }
+    
+    .field-name-field-views-listing>.field-items>.field-item {
+        @extend %band;
+        &.odd {
+            background: $grey-light;
+        }
     }
 }

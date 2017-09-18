@@ -31,9 +31,15 @@
         // layout
         .group-left {
             width: 20%;
+            @include media($tablet) {
+                width: 30%;
+            }
         }
         .group-right {
             width: 80%;
+            @include media($tablet) {
+                width: 70%;
+            }
         }
         // thumbnail
         .field-name-field-image-thumbnail img {
@@ -59,8 +65,9 @@
         }
     }
 
-    // list-vertical
-    &.view-mode-list_vertical {
+    // list-vertical and list-horizontal
+    &.view-mode-list_vertical,
+    &.view-mode-list_horizontal {
         // layout
         .group-left {
             width: 25%;
@@ -90,5 +97,20 @@
                 padding-left: 1.2em;
             }
         }        
+    }
+
+    // list-horizontal overrides
+    &.view-mode-list_horizontal {
+        // layout
+        .group-left {
+            @include media($tablet) {
+                width: 25%;
+            }
+        }
+        .group-right {
+            @include media($tablet) {
+                width: 75%;
+            }
+        }
     }
 }
