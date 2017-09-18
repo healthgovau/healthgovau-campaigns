@@ -1,0 +1,94 @@
+// Styles for view modes for a content type
+// ========================================
+
+// Content type styles (hidden as not used directly in CSS)
+
+%default {
+
+}
+
+%feature {
+
+}
+
+%list-vertical {
+
+}
+%publication-thumbnail {
+    width: 80%;
+}
+
+// Structure:
+// .content-type {
+//      .view-mode {
+//          ...
+//      }
+// }
+
+.node-publication {
+    // default
+    &.view-mode-full {
+        // layout
+        .group-left {
+            width: 20%;
+        }
+        .group-right {
+            width: 80%;
+        }
+        // thumbnail
+        .field-name-field-image-thumbnail img {
+            @extend %publication-thumbnail;
+        }
+        // fields
+        .field-items {
+            padding-bottom: $medium-spacing;
+            display: block;
+        }
+        .field-type-taxonomy-term-reference {
+            margin-bottom: 0;
+        }
+        // ext link
+        .field-name-field-link-external {
+            border-left: 10px solid #ddd;
+            padding-left: 20px;
+            padding-top: 8px;
+        }
+        // paras
+        p {
+            max-width: 100%;
+        }
+    }
+
+    // list-vertical
+    &.view-mode-list_vertical {
+        // layout
+        .group-left {
+            width: 25%;
+            @include media($tablet) {
+                width: 15%;
+            }
+        }
+        .group-right {
+            width: 75%;
+            @include media($tablet) {
+                width: 85%;
+            }
+        }
+        // thumbnail
+        .field-name-field-image-thumbnail img {
+            @extend %publication-thumbnail;
+        }
+        // date
+        .field-type-datetime {
+            font-size: $small-font-size;
+            margin-bottom: $small-spacing;
+            color: #6e6e6e;
+        }
+        // lists
+        .field-name-field-summary {
+            ol, ul {
+                padding-left: 1.2em;
+            }
+        }        
+    }
+}

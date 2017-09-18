@@ -1,0 +1,8 @@
+// Landing page bands
+.node-type-landing-page {
+    
+    .entity-paragraphs-item,
+    .title {
+        @include wrapper;
+    }
+}

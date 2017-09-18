@@ -83,3 +83,12 @@ ul.list-large {
     }
   }
 }
+
+// UIkit lists
+
+// override max-width inside lists
+.list-horizontal {
+  li, p {
+    max-width: 100%;
+  }
+}

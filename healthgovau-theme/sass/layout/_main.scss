@@ -1,7 +1,15 @@
 body main {
   -ms-flex: none;
 }
-.node-type-campaign {
+
+@mixin wrapper() {
+  @include wrapper-padding;
+  @include outer-container;
+}
+
+// Forces main content full-width to permit bands
+.node-type-campaign,
+.node-type-landing-page {
   main {
     padding: 0px;
     max-width: 100%;
@@ -9,9 +17,6 @@ body main {
 
   article.content-main {
     width: 100%;
-    h1.title {
-      display: none;
-    }
     @include media($mobile) {
       .inline-tab-nav,
       .workbench-info-block,
@@ -24,10 +29,23 @@ body main {
   }
 }
 
+// Hide title for campaign home pages
+.node-type-campaign {
+  article.content-main {
+    h1.title {
+      display: none;
+    }
+  }
+}
+
+// Force page types to full width
 .node-type-video,
 .page-search404,
 .page-node-1,
-.page-campaign-videos {
+.page-campaign-videos,
+.node-type-listing-page,
+.node-type-landing-page,
+.node-type-publication {
   article.content-main {
     width: 100%;
   }
