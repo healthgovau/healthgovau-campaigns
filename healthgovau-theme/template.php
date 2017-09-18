@@ -236,6 +236,16 @@ function healthgovau_preprocess_node(&$variables) {
       $variables['immunisation_survey'] = '<div id=\'SI_e9tKdVZvk8qGE0B\'><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>';
     }
   }
+
+  // Publications.
+  if ($variables['type'] == 'publication') {
+    // If publication date is the same as last modified, hide the last modified.
+    $changed = strtotime($variables['content']['changed_date']['#items'][0]['value']);
+    $published = strtotime($variables['field_date_published'][0]['value']);
+    if ($changed == $published) {
+      $variables['content']['changed_date']['#access'] = FALSE;
+    }
+  }
 }
 
 /**
@@ -711,7 +721,6 @@ function healthgovau_file_entity_download_link($variables) {
 
 /**
  * Convert a mimetype into a human readable format.
- * Copied from https://github.com/JCoded/friendly-mime-php
  *
  * @param string $mimetype
  *
