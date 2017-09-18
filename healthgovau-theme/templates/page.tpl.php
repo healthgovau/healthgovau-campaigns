@@ -77,7 +77,9 @@ $bottom = render($page['bottom']);
       <div class="column" id="main-content">
         <?php print render($title_prefix); ?>
         <?php if ($title): ?>
-          <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
+          <div class="title-wrapper">
+            <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
+          </div>
         <?php endif; ?>
         <?php print render($title_suffix); ?>
         <?php print $messages; ?>
