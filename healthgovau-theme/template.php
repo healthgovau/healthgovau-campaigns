@@ -692,8 +692,29 @@ function healthgovau_file_entity_download_link($variables) {
   // Grab the file.
   $file = $variables['file'];
 
+  // Get file title to use in analytics and accessibility.
+  // Default is the resource title.
+  $title = $node->title;
+
+  // Publications can have multiple parts, so find the relevant part if more than one part.
+  if ($node->type == 'publication') {
+    // Multiple document parts.
+    $docs = $node->field_resource_documents[$node->language];
+    if (count($docs) > 1) {
+      foreach ($docs as $doc) {
+        $para_documents = array_pop(entity_load('paragraphs_item', [$doc['value']]));
+        foreach ($para_documents->field_resource_document[LANGUAGE_NONE] as $resource_document) {
+          $para_document = array_pop(entity_load('paragraphs_item', [$resource_document['value']]));
+          if ($para_document->field_file[LANGUAGE_NONE][0]['fid'] == $file->fid) {
+            $title .= ': ' . $para_documents->field_resource_file_title[LANGUAGE_NONE][0]['value'];
+          }
+        }
+      }
+    }
+  }
+
   // Construct the link.
-  $variables['text'] = 'Download ' . healthgovau_get_friendly_mime($file->filemime) . ' - ' . format_size($file->filesize);
+  $variables['text'] = '<div class="file__link">Download <span>' . $title . ' as</span> ' . healthgovau_get_friendly_mime($file->filemime) . '</div><span class="file__meta"> - ' . format_size($file->filesize) . '</span>';
 
   // Get the icon.
   $icon_directory = $variables['icon_directory'];
@@ -706,6 +727,9 @@ function healthgovau_file_entity_download_link($variables) {
   // http://microformats.org/wiki/file-format-examples
   $uri['options']['attributes']['type'] = $file->filemime . '; length=' . $file->filesize;
   $uri['options']['html'] = TRUE;
+
+  // Add filename attribute for analytics.
+  $uri['options']['attributes']['data-filename'] = $title;
 
   // Output the link.
   $output = '<span class="file"> ' . $icon . ' ' . l($variables['text'], $uri['path'], $uri['options']);
