@@ -1,0 +1,41 @@
+// Global styling for all content types
+
+@mixin link-pullout($border-width: 10px, $border-color: #ddd, $pad: 20px){
+    border-left: $border-width solid $border-color;
+    padding-left: $pad;
+    padding-top: 8px;
+}
+
+%link-pullout {
+    @include link-pullout;
+}
+
+// Document link paragraph
+.field-name-field-resource-documents {
+    &>.field-items {
+        @include link-pullout;
+    }
+    h2 {
+        margin-top: 0;
+    }
+    // override link
+    a {
+        border: 0;
+        .file-link {
+            border-bottom: solid 1px #5bcbe3;
+        }
+        .file-title {
+            @extend .visuallyhidden;
+        }
+        .file-meta {
+            color: #6e6e6e;
+        }
+        &:hover,
+        &:focus {
+            background-color: none;
+            .file-link {
+                background-color: #5bcbe3;
+            }
+        }
+    }
+}

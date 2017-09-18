@@ -11,22 +11,21 @@
         }
     }
     .campaign-logo {
-      @include media($mobile){
-        max-height: 110px;
-        margin-top: 15px;
-        left: -20px;
+      max-height: 135px;
+      margin-top: 23px;
+      left: -30px;
+      @include media($mobile) {
+        max-height: 100px;
+        margin-top: 38px;
       }
-      max-height: 125px;
-      margin-top: 25px;
-      left: -20px;
       @include media($tablet) {
         left: 0;
         max-height: 200px;
-        margin-top: 25px;
+        margin-top: 50px;
       }
       @include media($desktop) {
         max-height: 275px;
-        margin-top: 25px;
+        margin-top: 62px;
       }
     }
   }
@@ -37,25 +36,39 @@
       @include media($mobile) {
         background-position-y: -30px; //reset
       }
-      background-position-y: -40px;
+      background-position-y: -50px;
       @include media($tablet) {
-        background-position-y: -67px; //reset
+        background-position-y: -75px; //reset
       }
       @include media($desktop) {
         background-position-y: -150px; //reset
       }
     }
     .campaign-logo {
-      max-height: 84px;
+      max-height: 70px;
       margin-top: 10px;
+      left: -30px;
       @include media($tablet) {
-        max-height: 150px;
+        max-height: 132px;
         margin-top: 10px;
       }
       @include media($desktop) {
-        max-height: 185px;
-        margin-top: 20px;
+        max-height: 167px;
+        margin-top: 17px;
       }
     }
   }
+}
+
+// Additional non-standard breakpoints
+@media screen and (min-width: 1800px){
+  .drughelp .hero--content .hero-bg {
+    background-position-y: -185px;
+  }
+}
+
+@media screen and (min-width: 2100px){
+.drughelp .hero--content .hero-bg {
+  background-position-y: -225px;
+}
 }
