@@ -702,11 +702,17 @@ function healthgovau_file_entity_download_link($variables) {
     $docs = $node->field_resource_documents[$node->language];
     if (count($docs) > 1) {
       foreach ($docs as $doc) {
-        $para_documents = array_pop(entity_load('paragraphs_item', [$doc['value']]));
-        foreach ($para_documents->field_resource_document[LANGUAGE_NONE] as $resource_document) {
-          $para_document = array_pop(entity_load('paragraphs_item', [$resource_document['value']]));
-          if ($para_document->field_file[LANGUAGE_NONE][0]['fid'] == $file->fid) {
-            $title .= ': ' . $para_documents->field_resource_file_title[LANGUAGE_NONE][0]['value'];
+        $entities = entity_load('paragraphs_item', [$doc['value']]);
+        if (!empty($entities)) {
+          $para_documents = array_pop($entity);
+          foreach ($para_documents->field_resource_document[LANGUAGE_NONE] as $resource_document) {
+            $entities = entity_load('paragraphs_item', [$resource_document['value']]);
+            if (!empty($entities)) {
+              $para_document = array_pop($entities);
+              if ($para_document->field_file[LANGUAGE_NONE][0]['fid'] == $file->fid) {
+                $title .= ': ' . $para_documents->field_resource_file_title[LANGUAGE_NONE][0]['value'];
+              }
+            }
           }
         }
       }
