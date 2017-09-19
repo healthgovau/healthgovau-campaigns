@@ -67,22 +67,6 @@
     &.view-mode-list_vertical,
     &.view-mode-list_horizontal {
         // layout
-        
-        // thumbnail
-        // .field-name-field-thumbnail {
-        //     width: 90%;
-        // }
-        // lists
-        .field-name-field-summary {
-            ol, ul {
-                padding-left: 1.2em;
-            }
-        }        
-    }
-
-    // list-horizontal overrides
-    &.view-mode-list_horizontal {
-        // layout
         .field-name-field-thumbnail {
             background: $grey-light;
             text-align: center;
@@ -93,17 +77,5 @@
         .field-name-title {
             margin-top: $small-spacing;
         }
-        // .group-left {
-        //     width: 20%;
-        //     @include media($tablet) {
-        //         width: 25%;
-        //     }
-        // }
-        // .group-right {
-        //     width: 80%;
-        //     @include media($tablet) {
-        //         width: 75%;
-        //     }
-        // }
     }
 }
