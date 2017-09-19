@@ -64,6 +64,12 @@
   }
 }
 
+// Homepage resources
+#block-bean-drughelp-home-resources {
+  @extend %band;
+  background: $grey-light;
+}
+
 #block-bean-drughelp-emergency {  
   @extend %band;
   @include linear-gradient(180deg, $drugs-blue-darker, $drugs-blue-dark, $fallback: $drugs-blue-darker);
