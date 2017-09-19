@@ -742,7 +742,7 @@ function healthgovau_file_entity_download_link($variables) {
   // Construct the link.
   $variables['text'] = '<div class="file__link">Download <span>' . $title . ' as</span> ' . healthgovau_get_friendly_mime($file->filemime) . '</div>';
 
-  // Add metatdata (size, pages)
+  // Add metatdata (file size, image size, no of pages)
   $variables['text'].= '<span class="file__meta"> - ' . format_size($file->filesize);
   if (isset($no_of_pages)) {
     $variables['text'].= ', ' . $no_of_pages . ' pages';
@@ -766,6 +766,7 @@ function healthgovau_file_entity_download_link($variables) {
 
   // Add filename attribute for analytics.
   $uri['options']['attributes']['data-filename'] = $title;
+  $uri['options']['attributes']['data-filetype'] = $file->filemime;
 
   // Output the link.
   $output = '<span class="file"> ' . $icon . ' ' . l($variables['text'], $uri['path'], $uri['options']) . '</span>';
