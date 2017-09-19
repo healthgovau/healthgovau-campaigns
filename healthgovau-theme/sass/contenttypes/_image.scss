@@ -69,9 +69,9 @@
         // layout
         
         // thumbnail
-        .field-name-field-thumbnail {
-            width: 90%;
-        }
+        // .field-name-field-thumbnail {
+        //     width: 90%;
+        // }
         // lists
         .field-name-field-summary {
             ol, ul {
@@ -83,6 +83,16 @@
     // list-horizontal overrides
     &.view-mode-list_horizontal {
         // layout
+        .field-name-field-thumbnail {
+            background: $grey-light;
+            text-align: center;
+            img {
+                margin: 0 auto;
+            }
+        }
+        .field-name-title {
+            margin-top: $small-spacing;
+        }
         // .group-left {
         //     width: 20%;
         //     @include media($tablet) {
