@@ -696,21 +696,24 @@ function healthgovau_file_entity_download_link($variables) {
   // Default is the resource title.
   $title = $node->title;
 
-  // Publications can have multiple parts, so find the relevant part if more than one part.
+  // Publications.
   if ($node->type == 'publication') {
-    // Multiple document parts.
     $docs = $node->field_resource_documents[$node->language];
-    if (count($docs) > 1) {
-      foreach ($docs as $doc) {
-        $entities = entity_load('paragraphs_item', [$doc['value']]);
-        if (!empty($entities)) {
-          $para_documents = array_pop($entity);
-          foreach ($para_documents->field_resource_document[LANGUAGE_NONE] as $resource_document) {
-            $entities = entity_load('paragraphs_item', [$resource_document['value']]);
-            if (!empty($entities)) {
-              $para_document = array_pop($entities);
-              if ($para_document->field_file[LANGUAGE_NONE][0]['fid'] == $file->fid) {
+    foreach ($docs as $doc) {
+      $entities = entity_load('paragraphs_item', [$doc['value']]);
+      if (!empty($entities)) {
+        $para_documents = array_pop($entities);
+        foreach ($para_documents->field_resource_document[LANGUAGE_NONE] as $resource_document) {
+          $entities = entity_load('paragraphs_item', [$resource_document['value']]);
+          if (!empty($entities)) {
+            $para_document = array_pop($entities);
+            if ($para_document->field_file[LANGUAGE_NONE][0]['fid'] == $file->fid) {
+              if (count($docs) > 1) { // Multiple document parts.
                 $title .= ': ' . $para_documents->field_resource_file_title[LANGUAGE_NONE][0]['value'];
+              }
+              // Get page count.
+              if (isset($para_document->field_resource_file_pages)) {
+                $no_of_pages = $para_document->field_resource_file_pages[LANGUAGE_NONE][0]['value'];
               }
             }
           }
@@ -719,8 +722,35 @@ function healthgovau_file_entity_download_link($variables) {
     }
   }
 
+  // Images.
+  if ($node->type == 'image') {
+    $docs = $node->field_para_images[$node->language];
+    foreach ($docs as $doc) {
+      $entities = entity_load('paragraphs_item', [$doc['value']]);
+      if (!empty($entities)) {
+        $para_documents = array_pop($entities);
+        if ($para_documents->field_file[LANGUAGE_NONE][0]['fid'] == $file->fid) {
+          // Get sizing.
+          if (isset($para_documents->field_paragraph_title)) {
+            $size = $para_documents->field_paragraph_title[LANGUAGE_NONE][0]['value'];
+          }
+        }
+      }
+    }
+  }
+
   // Construct the link.
-  $variables['text'] = '<div class="file__link">Download <span>' . $title . ' as</span> ' . healthgovau_get_friendly_mime($file->filemime) . '</div><span class="file__meta"> - ' . format_size($file->filesize) . '</span>';
+  $variables['text'] = '<div class="file__link">Download <span>' . $title . ' as</span> ' . healthgovau_get_friendly_mime($file->filemime) . '</div>';
+
+  // Add metatdata (size, pages)
+  $variables['text'].= '<span class="file__meta"> - ' . format_size($file->filesize);
+  if (isset($no_of_pages)) {
+    $variables['text'].= ', ' . $no_of_pages . ' pages';
+  }
+  if (isset($size)) {
+    $variables['text'].= ', ' . $size;
+  }
+  $variables['text'].= '</span>';
 
   // Get the icon.
   $icon_directory = $variables['icon_directory'];
@@ -738,12 +768,7 @@ function healthgovau_file_entity_download_link($variables) {
   $uri['options']['attributes']['data-filename'] = $title;
 
   // Output the link.
-  $output = '<span class="file"> ' . $icon . ' ' . l($variables['text'], $uri['path'], $uri['options']);
-  if (isset($file->metadata['width'])) {
-    // Output the dimensions.
-    $output .= ' ' . '<div class="file__dimensions">Dimensions: ' . $file->metadata['width'] . ' by ' . $file->metadata['height'] . ' pixels</div>';
-  }
-  $output .= '</span>';
+  $output = '<span class="file"> ' . $icon . ' ' . l($variables['text'], $uri['path'], $uri['options']) . '</span>';
 
   return $output;
 }
