@@ -135,6 +135,32 @@ function healthgovau_preprocess_field(&$variables) {
       }
     }
   }
+
+  // Add class and logic to hide field to paragraph views listing field.
+  if ($variables['element']['#field_name'] == 'field_views_listing') {
+    foreach ($variables['items'] as $key => $item) {
+      $para = array_values($item['entity']['paragraphs_item'])[0]['#entity'];
+      if ($para->bundle == 'campaign_listing_view') {
+        // Get the paragraph values.
+        $view_name = $para->field_para_view_name[LANGUAGE_NONE][0]['value'];
+        $campaign_id = $para->field_campaign[LANGUAGE_NONE][0]['target_id'];
+        $view_mode = $para->field_para_view_mode[LANGUAGE_NONE][0]['value'];
+
+        // Load the view.
+        $view = views_get_view($view_name);
+        $view->get_total_rows = TRUE;
+        $view->set_display($view_mode);
+        $view->preview = TRUE;
+        $view->pre_execute(array($campaign_id));
+        $view->execute();
+
+        // Remove field if views has no results.
+        if ($view->total_rows == 0) {
+          unset($variables['items'][$key]);
+        }
+      }
+    }
+  }
 }
 
 /**
@@ -240,10 +266,12 @@ function healthgovau_preprocess_node(&$variables) {
   // Publications.
   if ($variables['type'] == 'publication') {
     // If publication date is the same as last modified, hide the last modified.
-    $changed = strtotime($variables['content']['changed_date']['#items'][0]['value']);
-    $published = strtotime($variables['field_date_published'][0]['value']);
-    if ($changed == $published) {
-      $variables['content']['changed_date']['#access'] = FALSE;
+    if (isset($variables['content']['changed_date'])) {
+      $changed = strtotime($variables['content']['changed_date']['#items'][0]['value']);
+      $published = strtotime($variables['field_date_published'][0]['value']);
+      if ($changed == $published) {
+        $variables['content']['changed_date']['#access'] = FALSE;
+      }
     }
   }
 }
@@ -420,15 +448,10 @@ function healthgovau_preprocess_entity(&$variables) {
         if ($view->total_rows <= count($view->result)) {
           $variables['content']['field_para_more_link']['#access'] = FALSE;
         }
-      } else {
-        // If the view has no rows, hide the other fields.
-        $variables['content']['field_paragraph_title']['#access'] = FALSE;
-        $variables['content']['field_para_more_link']['#access'] = FALSE;
+        // Add some classes to help identify it.
+        $variables['classes_array'][] = 'paragraphs-view-' . $view->name;
+        $variables['classes_array'][] = 'paragraphs-view-display-' . $view->current_display;
       }
-
-      // Add some classes to help identify it.
-      $variables['classes_array'][] = 'paragraphs-view-' . $view->name;
-      $variables['classes_array'][] = 'paragraphs-view-display-' . $view->current_display;
     }
   }
 }
