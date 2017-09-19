@@ -28,9 +28,9 @@
     }
     @include media($tablet) {
       @include span-columns(4 of 12);
-      img {
-        max-width: 90%;
-      }
+      // img {
+      //   max-width: 90%;
+      // }
     }
     @include media($desktop) {
       @include span-columns(6 of 16);
@@ -50,6 +50,7 @@
 // Static block band
 #block-bean-drughelp-need-help {
   @extend %band--img-text-halves--drughelp;
+  padding-bottom: $medium-spacing;
   background: $grey-light;
   h2 {
     margin-top: 0;
@@ -79,6 +80,25 @@
     &:hover,
     &:focus {
       color: #000;
+    }
+  }
+}
+
+#block-bean-drughelp-intro {  
+  @extend %band--img-text-halves--drughelp;
+  padding-top: $medium-spacing;
+  padding-bottom: $large-spacing;
+  .band__text {
+    margin-bottom: 0;
+  }
+  .band__img {
+    background: #fee;
+    padding: 30px;
+    border-left: 10px solid #af1e1e;
+    margin-top: $medium-spacing;
+    h2 {
+      @include h3;
+      margin-top: 0;
     }
   }
 }
