@@ -11,6 +11,8 @@ CONST SOCIAL_MEDIA = '//assets.juicer.io';
 CONST GOOGLE_MAP_API = '//maps.googleapis.com/maps/api/staticmap';
 CONST THEME_PATH_TOKEN = '/sites/all/themes/healthgovau-theme';
 CONST THEME_PATH_TOKEN_GENERIC = '[theme-path]';
+CONST ABOUT_CURRENT_CAMPAIGN = '[about-this-campaign]';
+CONST ABOUT_CURRENT_CAMPAIGN_HTML = '<li class="first leaf"><a href="[about-this-campaign]" title="About this campaign">About</a></li>';
 
 /**
  * Implements THEME_preprocess_html().
@@ -333,10 +335,25 @@ function healthgovau_preprocess_entity(&$variables) {
 
     $bean = $variables['bean'];
 
-    // Replace absolute path with dynamic path to theme.
+    // Custom token replacement.
     if (isset($variables['content']['field_bean_body'])) {
       $variables['content']['field_bean_body'][0]['#markup'] = str_replace(THEME_PATH_TOKEN, '/' . path_to_theme(), $variables['content']['field_bean_body'][0]['#markup']);
       $variables['content']['field_bean_body'][0]['#markup'] = str_replace(THEME_PATH_TOKEN_GENERIC, '/' . path_to_theme(), $variables['content']['field_bean_body'][0]['#markup']);
+
+      // Replace token in footer about this campaign link with current campaign about page.
+      if ($campaign_id = _healthgovau_find_current_campaign()) {
+        $campaign_alias = drupal_get_path_alias('node/' . $campaign_id);
+        if ($campaign_alias !== 'node/' . $campaign_id && drupal_lookup_path('source', $campaign_alias . '/about-this-campaign')) {
+          $replaced_output = str_replace(ABOUT_CURRENT_CAMPAIGN, '/' . $campaign_alias . '/about-this-campaign', ABOUT_CURRENT_CAMPAIGN_HTML);
+          $variables['content']['field_bean_body'][0]['#markup'] = str_replace(ABOUT_CURRENT_CAMPAIGN, $replaced_output, $variables['content']['field_bean_body'][0]['#markup']);
+        }
+        else {
+          $variables['content']['field_bean_body'][0]['#markup'] = str_replace(ABOUT_CURRENT_CAMPAIGN, '', $variables['content']['field_bean_body'][0]['#markup']);
+        }
+      }
+      else {
+        $variables['content']['field_bean_body'][0]['#markup'] = str_replace(ABOUT_CURRENT_CAMPAIGN, '', $variables['content']['field_bean_body'][0]['#markup']);
+      }
     }
 
     // For social media bean blocks.
@@ -510,95 +527,6 @@ function healthgovau_js_alter(&$variables) {
     $variables['misc/jquery.js']['data'] = drupal_get_path('theme', 'healthgovau') . '/js/jquery.js';
     $variables['misc/jquery.js']['version'] = '3.1.1';
   }
-}
-
-/**
- * Helper function to set background image and color for campaign and campaign related content type.
- *
- * @param $campaign_nid
- */
-function _healthgovau_set_hero_bg($campaign_nid, $random) {
-  $campaign = node_load($campaign_nid);
-  if (isset($campaign->field_campaign_hero_bg_color[LANGUAGE_NONE]) && isset($campaign->field_campaign_hero_bg_image[LANGUAGE_NONE])) {
-    // Get the background color for hero.
-    $color = $campaign->field_campaign_hero_bg_color[LANGUAGE_NONE][0]['value'];
-    drupal_add_css('.hero-bg {background-color:' . $color . ';}', 'inline');
-
-    // Get the background image for hero.
-    if (isset($campaign->field_campaign_hero_bg_image[LANGUAGE_NONE]) && !empty($campaign->field_campaign_hero_bg_image[LANGUAGE_NONE][0])) {
-      // Use random background image.
-      $image_num = 0;
-      if ($random == TRUE) {
-        $image_num = array_rand($campaign->field_campaign_hero_bg_image[LANGUAGE_NONE]);
-      }
-      $image_url = file_create_url($campaign->field_campaign_hero_bg_image[LANGUAGE_NONE][$image_num]['uri']);
-      drupal_add_css('.hero-bg {background-image: url(' . $image_url . '); background-size: cover;}', 'inline');
-    }
-  }
-}
-
-/**
- * Helper function to generate breadcrumb for campaign related content type.
- *
- * @param $node
- *   The current node.
- *
- * @return string
- *   The breadcrumb HTML.
- */
-function _healthgovau_campaign_breadcrumb($node) {
-  // Compose breadcrumb.
-  $campaign_nid = $node->field_campaign[LANGUAGE_NONE][0]['target_id'];
-  $campaign = node_load($campaign_nid);
-  $campaign_url = $campaign->path['alias'];
-  $breadcrumb = array(
-    '<a href="/' . $campaign_url . '">' . $campaign->title . '</a>',
-    $node->title,
-  );
-  $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
-  // Process breadcrumb for UI KIT format.
-  $breadcrumb_list = '<ul>';
-  foreach($breadcrumb as $link) {
-    $breadcrumb_list .= '<li>' . $link . '</li>';
-  }
-  $breadcrumb_list .= '</ul>';
-  $output .= '<nav class="breadcrumbs" aria-label="breadcrumb"><div class="wrapper">' . $breadcrumb_list . '</div></nav>';
-  return $output;
-}
-
-/**
- * Helper function to get hero logo link and url.
- *
- * @param $node
- *   The campaign node.
- * @param $variables
- *   The bean variables.
- */
-function _healthgovau_campaign_hero_logo($node, &$variables) {
-  $image_url = file_create_url($node->field_campaign_hero_logo[LANGUAGE_NONE][0]['uri']);
-  $variables['logo_img'] = $image_url;
-  $variables['logo_url'] = '/' . drupal_get_path_alias('node/' . $node->nid);
-  $variables['logo_alt'] = $node->field_campaign_hero_logo[LANGUAGE_NONE][0]['alt'];
-
-}
-
-/**
- * Helper function to generate filter links to activity view.
- * 
- * @return string
- */
-function _healthgovau_campaign_activity_filter() {
-  $vocab = taxonomy_vocabulary_machine_name_load('activity_type');
-  $terms = taxonomy_get_tree($vocab->vid);
-
-  $markup = '<div class="activity__selector"><h3>Find your activity</h3><p>Do you prefer?</p>';
-  $markup .= '<div class="tags"><dl><dt class="visuallyhidden">Type</dt>';
-  foreach($terms as $term) {
-    $markup .= '<dd><a href="/campaign/' . arg(1) . '/activities?field_activity_type_tid%5B%5D=' . $term->tid . '">' . $term->name . '</a></dd>';
-  }
-  $markup .= '</dl></div></div>';
-  
-  return $markup;
 }
 
 /**
@@ -819,4 +747,93 @@ function healthgovau_get_friendly_mime($mimetype) {
     return $descriptions[$mimetype];
   }
   return $mimetype;
+}
+
+/**
+ * Helper function to set background image and color for campaign and campaign related content type.
+ *
+ * @param $campaign_nid
+ */
+function _healthgovau_set_hero_bg($campaign_nid, $random) {
+  $campaign = node_load($campaign_nid);
+  if (isset($campaign->field_campaign_hero_bg_color[LANGUAGE_NONE]) && isset($campaign->field_campaign_hero_bg_image[LANGUAGE_NONE])) {
+    // Get the background color for hero.
+    $color = $campaign->field_campaign_hero_bg_color[LANGUAGE_NONE][0]['value'];
+    drupal_add_css('.hero-bg {background-color:' . $color . ';}', 'inline');
+
+    // Get the background image for hero.
+    if (isset($campaign->field_campaign_hero_bg_image[LANGUAGE_NONE]) && !empty($campaign->field_campaign_hero_bg_image[LANGUAGE_NONE][0])) {
+      // Use random background image.
+      $image_num = 0;
+      if ($random == TRUE) {
+        $image_num = array_rand($campaign->field_campaign_hero_bg_image[LANGUAGE_NONE]);
+      }
+      $image_url = file_create_url($campaign->field_campaign_hero_bg_image[LANGUAGE_NONE][$image_num]['uri']);
+      drupal_add_css('.hero-bg {background-image: url(' . $image_url . '); background-size: cover;}', 'inline');
+    }
+  }
+}
+
+/**
+ * Helper function to get hero logo link and url.
+ *
+ * @param $node
+ *   The campaign node.
+ * @param $variables
+ *   The bean variables.
+ */
+function _healthgovau_campaign_hero_logo($node, &$variables) {
+  $image_url = file_create_url($node->field_campaign_hero_logo[LANGUAGE_NONE][0]['uri']);
+  $variables['logo_img'] = $image_url;
+  $variables['logo_url'] = '/' . drupal_get_path_alias('node/' . $node->nid);
+  $variables['logo_alt'] = $node->field_campaign_hero_logo[LANGUAGE_NONE][0]['alt'];
+}
+
+/**
+ * Helper function to generate filter links to activity view.
+ *
+ * @return string
+ */
+function _healthgovau_campaign_activity_filter() {
+  $vocab = taxonomy_vocabulary_machine_name_load('activity_type');
+  $terms = taxonomy_get_tree($vocab->vid);
+
+  $markup = '<div class="activity__selector"><h3>Find your activity</h3><p>Do you prefer?</p>';
+  $markup .= '<div class="tags"><dl><dt class="visuallyhidden">Type</dt>';
+  foreach($terms as $term) {
+    $markup .= '<dd><a href="/campaign/' . arg(1) . '/activities?field_activity_type_tid%5B%5D=' . $term->tid . '">' . $term->name . '</a></dd>';
+  }
+  $markup .= '</dl></div></div>';
+
+  return $markup;
+}
+
+/**
+ * Helper function to find the campaign the current page belongs to.
+ * 
+ * @return mixed Node ID or FALSE
+ */
+function _healthgovau_find_current_campaign() {
+  if (arg(0) == 'node' && is_numeric(arg(1))) {
+    // It is a node page.
+    $node = node_load(arg(1));
+    if ($node->type == 'campaign') {
+      // This is a campaign node.
+      return $node->nid;
+    }
+    else if (isset($node->field_campaign[LANGUAGE_NONE])) {
+      // This is a campaign related node.
+      return $node->field_campaign[LANGUAGE_NONE][0]['target_id'];
+    }
+    
+    return FALSE;
+  }
+  else {
+    // This is not a node page.
+    if (arg(0) == 'campaign' && is_numeric(arg(1))) {
+      // This is a campaign related view page.
+      return arg(1);
+    }
+    return FALSE;
+  }
 }
