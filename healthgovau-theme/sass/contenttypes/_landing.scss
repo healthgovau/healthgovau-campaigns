@@ -13,4 +13,11 @@
             background: $grey-light;
         }
     }
+
+    // contain summary for landing page
+    .node-landing-page {
+        .field-name-field-summary {
+            @include wrapper;
+        }
+    }
 }
