@@ -122,6 +122,7 @@ function healthgovau_preprocess_field(&$variables) {
   
   // Create variable for address field.
   if ($variables['element']['#field_name'] == 'field_address') {
+    $variables['location_map'] = '';
     // Only show the map in event node view. 
     if (arg(0) == 'node' && is_numeric(arg(1))) {
       $node = node_load(arg(1));
