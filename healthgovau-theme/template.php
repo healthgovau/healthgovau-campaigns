@@ -12,7 +12,7 @@ CONST GOOGLE_MAP_API = '//maps.googleapis.com/maps/api/staticmap';
 CONST THEME_PATH_TOKEN = '/sites/all/themes/healthgovau-theme';
 CONST THEME_PATH_TOKEN_GENERIC = '[theme-path]';
 CONST ABOUT_CURRENT_CAMPAIGN = '[about-this-campaign]';
-CONST ABOUT_CURRENT_CAMPAIGN_HTML = '<li class="first leaf"><a href="[about-this-campaign]" title="About this campaign">About</a></li>';
+CONST ABOUT_CURRENT_CAMPAIGN_HTML = '<li class="first leaf"><a href="[about-this-campaign]" title="About this campaign">About this campaign</a></li>';
 
 /**
  * Implements THEME_preprocess_html().
