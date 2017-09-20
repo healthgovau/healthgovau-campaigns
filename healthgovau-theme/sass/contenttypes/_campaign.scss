@@ -1,0 +1,19 @@
+.page-campaigns {
+    .node-campaign {
+        & > .group-left {
+            width: 40%;
+        }
+        & > .group-right {
+            width: 60%;
+        }
+        .field-name-field-social-image {
+            width: 85%;
+        }
+    }
+    .list-vertical--halves>li {
+        @include media($mobile){
+            padding-top: $medium-spacing;
+            padding-bottom: $medium-spacing;
+        }
+    }
+}
