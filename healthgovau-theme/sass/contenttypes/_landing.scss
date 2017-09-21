@@ -12,17 +12,6 @@
         &.odd {
             background: $grey-light;
         }
-
-        // videos on drugs
-        &#paragraph-171 {
-            @include linear-gradient(180deg, $drugs-blue-darker, $drugs-blue-dark, $fallback: $drugs-blue-darker);
-            color: #fff;
-            .list--cards {
-                > li {
-                    @include box-shadow($color: darken($drugs-blue-darker,10%));
-                }
-            }
-        }
     }
 
     // contain summary for landing page

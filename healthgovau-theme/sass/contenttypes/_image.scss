@@ -56,9 +56,32 @@
         }
         // ext link
         .field-name-field-link-external {
-            border-left: 10px solid #ddd;
-            padding-left: 20px;
-            padding-top: 8px;
+            @include link-pullout;
+        }
+
+        // Image download
+        .paragraphs-item-image {
+            @include link-pullout;
+            .file-icon {
+                float: left;
+                margin-right: 10px;
+                margin-top: 5px;
+            }
+            a {
+                border-bottom: 0;
+            }
+            .file__link {
+                display: inline;
+                font-weight: bold;
+                border-bottom: solid 1px #5bcbe3;
+                span {
+                    @extend .visuallyhidden;
+                }
+            }
+            .file__meta {
+                display: inline;
+                color: #6e6e6e;
+            }
         }
         // paras
         p {
