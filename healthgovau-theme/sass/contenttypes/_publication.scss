@@ -32,23 +32,26 @@
     &.view-mode-full {
         // layout
         .group-left {
-            width: 20%;
-            @include media($tablet) {
-                width: 30%;
+            @include media($mobile){
+                width: 100%;
             }
+            width: 30%;
         }
         .group-right {
-            width: 80%;
-            @include media($tablet) {
-                width: 70%;
+            @include media($mobile) {
+                width: 100%;
             }
+            width: 70%;
         }
         // thumbnail
         .field-name-field-image-thumbnail {
-            width: 80%;
             img {
                 @extend %publication-thumbnail;
-            }            
+            }    
+            @include media($mobile) {
+                width: 100%;
+            }     
+            width: 80%;
         }
         // fields
         .field-items {

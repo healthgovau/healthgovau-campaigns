@@ -28,20 +28,23 @@
     &.view-mode-full {
         // layout
         .group-left {
-            width: 50%;
+            width: 100%;
             @include media($tablet) {
-                //width: 30%;
+                width: 50%;
             }
         }
         .group-right {
-            width: 50%;
+            width: 100%;
             @include media($tablet) {
-                //width: 70%;
+                width: 70%;
             }
         }
         // thumbnail
         .field-name-field-thumbnail {
-            width: 90%;
+            width: 100%;
+            @include media($tablet) {
+                width: 90%;
+            }
         }
         // fields
         .field-items {

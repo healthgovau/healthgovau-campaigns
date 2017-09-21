@@ -3,7 +3,7 @@
   @include fill-parent;
 
   @include media($tablet) {
-    @include span-columns(6 of 12);
+    @include span-columns(8 of 12);
   }
 
   @include media($desktop) {
@@ -22,7 +22,7 @@
   margin-top: $medium-spacing;
 
   @include media($tablet) {
-    @include span-columns(6 of 12);
+    @include span-columns(4 of 12);
     margin-top: 0;
   }
 
