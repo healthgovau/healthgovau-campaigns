@@ -164,7 +164,7 @@
     &.paragraph-171 {
       @include linear-gradient(180deg, $drugs-blue-darker, $drugs-blue-dark, $fallback: $drugs-blue-darker);
       color: #fff;
-      a {
+      .field-name-field-para-more-link a {
         color: #fff;
       }
       .list--cards {
@@ -175,7 +175,7 @@
     }
 
     &.paragraph-461 {
-      padding-top: $medium-spacing;
+      padding-top: $large-spacing;
       @include media($tablet){
         .group-left {
           width: 30%;
@@ -183,10 +183,9 @@
         .group-right {
           width: 70%;
         }
-        .field-name-field-link-external {
-          border-left: 10px solid #ddd;
-          padding-left: 20px;
-          padding-top: 8px;
+        .field-name-field-link-external {          
+          @include link-pullout;
+          margin-bottom: $medium-spacing;
         }
       }
     }
