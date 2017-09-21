@@ -96,7 +96,6 @@
     @include media($tablet){
       float: right;
       margin-right: 0;
-      margin-top: -70px;
     }
   }
 }
@@ -156,33 +155,41 @@
 }
 
 // resoucres band overrides
-// videos on drugs
-#paragraph-171 {
-  @include linear-gradient(180deg, $drugs-blue-darker, $drugs-blue-dark, $fallback: $drugs-blue-darker);
-  color: #fff;
-  a {
-    color: #fff;
-  }
-  .list--cards {
-      > li {
-          @include box-shadow($color: darken($drugs-blue-darker,10%));
-      }
-  }
-}
 
-#paragraph-461 {
-  padding-top: $medium-spacing;
-  @include media($tablet){
-    .group-left {
-      width: 30%;
+// Landing page bands
+.drughelp {
+    
+  .field-name-field-views-listing>.field-items>.field-item {
+    // videos on drugs
+    &.paragraph-171 {
+      @include linear-gradient(180deg, $drugs-blue-darker, $drugs-blue-dark, $fallback: $drugs-blue-darker);
+      color: #fff;
+      a {
+        color: #fff;
+      }
+      .list--cards {
+          > li {
+              @include box-shadow($color: darken($drugs-blue-darker,10%));
+          }
+      }
     }
-    .group-right {
-      width: 70%;
+
+    &.paragraph-461 {
+      padding-top: $medium-spacing;
+      @include media($tablet){
+        .group-left {
+          width: 30%;
+        }
+        .group-right {
+          width: 70%;
+        }
+        .field-name-field-link-external {
+          border-left: 10px solid #ddd;
+          padding-left: 20px;
+          padding-top: 8px;
+        }
+      }
     }
-    .field-name-field-link-external {
-      border-left: 10px solid #ddd;
-      padding-left: 20px;
-      padding-top: 8px;
-    }
+
   }
 }
