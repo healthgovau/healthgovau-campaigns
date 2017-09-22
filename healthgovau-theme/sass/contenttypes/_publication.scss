@@ -78,7 +78,6 @@
 
         // document download
         .paragraphs-items-field-resource-document {
-            @include link-pullout;
             .file-icon {
                 float: left;
                 margin-right: 10px;
@@ -98,6 +97,9 @@
             .file__meta {
                 display: inline;
                 color: #6e6e6e;
+            }
+            .field-name-field-file {
+                @include link-pullout;
             }
         }
     }
