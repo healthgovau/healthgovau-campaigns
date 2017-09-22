@@ -92,3 +92,13 @@ ul.list-large {
     max-width: 100%;
   }
 }
+
+// override --three list for tablet
+// .list-vertical--thirds>li {
+//   @include media($tablet){
+//     @include span-columns(4 of 12);
+//     &:nth-child(2n+1){
+//       clear: none;
+//     }
+//   }
+// }

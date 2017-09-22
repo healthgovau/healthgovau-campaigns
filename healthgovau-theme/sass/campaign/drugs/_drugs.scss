@@ -176,19 +176,43 @@
 
     &.paragraph-461 {
       padding-top: $large-spacing;
+      .group-left,
+      .group-right {
+        width: 100%;
+      }
+      .group-left {
+        text-align: center;
+      }
+      .field-name-field-link-external {          
+        @include link-pullout;
+        margin-bottom: $medium-spacing;
+      }
       @include media($tablet){
         .group-left {
           width: 30%;
+          text-align: left;
         }
         .group-right {
           width: 70%;
         }
-        .field-name-field-link-external {          
-          @include link-pullout;
-          margin-bottom: $medium-spacing;
-        }
       }
     }
 
+  }
+}
+
+#block-bean-drughelp-home-resources {
+
+  .node-publication.view-mode-list_horizontal {
+    margin-top: $medium-spacing;
+    .group-left,
+    .group-right {
+      float: left;      
+    } 
+  }
+
+  .quick-link {
+    margin-top: $medium-spacing;
+    @include link-pullout;
   }
 }
