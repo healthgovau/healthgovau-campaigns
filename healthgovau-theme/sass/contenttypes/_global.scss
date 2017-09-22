@@ -1,15 +1,5 @@
 // Global styling for all content types
 
-@mixin link-pullout($border-width: 10px, $border-color: #ddd, $pad: 20px){
-    border-left: $border-width solid $border-color;
-    padding-left: $pad;
-    padding-top: 8px;
-}
-
-%link-pullout {
-    @include link-pullout;
-}
-
 // Document link paragraph
 .field-name-field-resource-documents {
     &>.field-items {

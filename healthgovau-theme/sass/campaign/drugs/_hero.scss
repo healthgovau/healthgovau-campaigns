@@ -11,9 +11,10 @@
         }
     }
     .campaign-logo {
+      padding-left: 0;
       max-height: 135px;
       margin-top: 23px;
-      left: -30px;
+      //left: -20px;
       @include media($mobile) {
         max-height: 100px;
         margin-top: 38px;
@@ -44,9 +45,10 @@
       }
     }
     .campaign-logo {
+      padding-left: 0;
       max-height: 70px;
       margin-top: 10px;
-      left: -30px;
+      //left: -20px;
       @include media($tablet) {
         max-height: 132px;
         margin-top: 10px;

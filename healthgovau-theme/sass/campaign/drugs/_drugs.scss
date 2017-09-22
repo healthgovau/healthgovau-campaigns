@@ -90,6 +90,16 @@
   }
 }
 
+// feature video
+#block-views-campaign-videos-block {
+  .group-top-left {
+    @include media($tablet){
+      float: right;
+      margin-right: 0;
+    }
+  }
+}
+
 #block-bean-drughelp-intro {  
   @extend %band--img-text-halves--drughelp;
   padding-top: $medium-spacing;
@@ -141,5 +151,44 @@
         }
       }
     }
+  }
+}
+
+// resoucres band overrides
+
+// Landing page bands
+.drughelp {
+    
+  .field-name-field-views-listing>.field-items>.field-item {
+    // videos on drugs
+    &.paragraph-171 {
+      @include linear-gradient(180deg, $drugs-blue-darker, $drugs-blue-dark, $fallback: $drugs-blue-darker);
+      color: #fff;
+      .field-name-field-para-more-link a {
+        color: #fff;
+      }
+      .list--cards {
+          > li {
+              @include box-shadow($color: darken($drugs-blue-darker,10%));
+          }
+      }
+    }
+
+    &.paragraph-461 {
+      padding-top: $large-spacing;
+      @include media($tablet){
+        .group-left {
+          width: 30%;
+        }
+        .group-right {
+          width: 70%;
+        }
+        .field-name-field-link-external {          
+          @include link-pullout;
+          margin-bottom: $medium-spacing;
+        }
+      }
+    }
+
   }
 }
