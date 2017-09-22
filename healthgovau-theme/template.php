@@ -838,3 +838,15 @@ function _healthgovau_find_current_campaign() {
     return FALSE;
   }
 }
+
+/**
+ * Implement THEME_toc_filter().
+ */
+function healthgovau_toc_filter($variables) {
+  $output = '';
+  $output .= '<nav class="index-links">';
+  $output .= '<h2 id="index-links">' . t('In this section') . '</h2>';
+  $output .= $variables['content'];
+  $output .= '</nav>';
+  return $output;
+}
