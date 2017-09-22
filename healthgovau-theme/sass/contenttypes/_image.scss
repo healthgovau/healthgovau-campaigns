@@ -36,7 +36,7 @@
         .group-right {
             width: 100%;
             @include media($tablet) {
-                width: 70%;
+                width: 50%;
             }
         }
         // thumbnail
@@ -89,7 +89,7 @@
         }
     }
 
-    // list-vertical and list-horizontal
+    // list-vertical and list-horizontal aka image gallery :)
     &.view-mode-list_vertical,
     &.view-mode-list_horizontal {
         // layout
