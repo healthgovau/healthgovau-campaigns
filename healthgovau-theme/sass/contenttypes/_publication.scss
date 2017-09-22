@@ -64,10 +64,16 @@
         // ext link
         .field-name-field-link-external {
             @include link-pullout;
+            a {
+                font-weight: bold;
+            }
         }
         // paras
         p {
             max-width: 100%;
+        }
+        h2 {
+            margin-top: 0;
         }
 
         // document download
