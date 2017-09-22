@@ -59,6 +59,10 @@
             @include link-pullout;
         }
 
+        h2 {
+            margin-top: 0;
+        }
+
         // Image download
         .paragraphs-item-image {
             @include link-pullout;
