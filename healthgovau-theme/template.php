@@ -511,13 +511,53 @@ function healthgovau_form_alter(&$form, &$form_state, $form_id) {
       'The whole website' => t('The whole website'),
       $referrer_url => t('The page you were just on'),
     );
+
     // Remove the default validate for the new option in the select list.
     // @todo Use another approach to add the option dynamically.
     $form['#validate'] = array();
     // Attach character countdown JS.
     $form['#attached']['js'][] = drupal_get_path('theme', 'healthgovau') . '/js/healthgovau.feedback.js';
+
+
+    // Add the page referrer so we know where the user was.
+    $form['submitted']['referrer']['#default_value'] = $referrer_url;
+
+    // Add a unique ID based on the time.
+    // Try to make it as short as possible whilst still being useful.
+    $date = new DateTime();
+    $form['submitted']['unique_id']['#default_value'] = $date->format('jHis');
+
+    // Add the campaign from where the user was.
+    $parts = parse_url($referrer_url);
+    $path = substr($parts['path'], 1);
+    $node_path = drupal_get_normal_path($path);
+
+    // Check if this is a resource listing page.
+    preg_match("/campaign\/(\d*)\/videos/", $node_path, $matches);
+    if (!empty($matches)) {
+      $node_path = $matches[1];
+    }
+
+    // Strip down to just the node id.
+    $node_path = str_replace('node/', '', $node_path);
+
+    // Load the node.
+    $node = node_load($node_path);
+    if ($node) {
+      // This is not a campaign page, therefore get the campaign id.
+      if (key_exists('field_campaign', $node)) {
+        $campaign = node_load($node->field_campaign[$node->language][0]['target_id']);
+        $form['submitted']['campaign']['#default_value'] = $campaign->title;
+      } else if ($node->type == 'campaign') { // This is a campaign page.
+        $form['submitted']['campaign']['#default_value'] = $node->title;
+      }
+    } else {
+      // Either the campaigns hub, or an error occurred.
+      $form['submitted']['campaign']['#default_value'] = 'Campaign not detected';
+    }
   }
 }
+
 
 /**
  * Implements hook_js_alter().
