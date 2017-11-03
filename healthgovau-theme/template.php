@@ -13,6 +13,7 @@ CONST THEME_PATH_TOKEN = '/sites/all/themes/healthgovau-theme';
 CONST THEME_PATH_TOKEN_GENERIC = '[theme-path]';
 CONST ABOUT_CURRENT_CAMPAIGN = '[about-this-campaign]';
 CONST ABOUT_CURRENT_CAMPAIGN_HTML = '<li class="first leaf"><a href="[about-this-campaign]" title="About this campaign">About this campaign</a></li>';
+CONST FEEDBACK_LINK = '[feedback-link]';
 
 /**
  * Implements THEME_preprocess_html().
@@ -355,6 +356,19 @@ function healthgovau_preprocess_entity(&$variables) {
       else {
         $variables['content']['field_bean_body'][0]['#markup'] = str_replace(ABOUT_CURRENT_CAMPAIGN, '', $variables['content']['field_bean_body'][0]['#markup']);
       }
+
+      // Feedback link token.
+      $path = '/feedback';
+      $date = new DateTime();
+      $options['query'] = array(
+        'referrer' => drupal_get_path_alias(),
+        'campaign' => _healthgovau_get_campaign_name(),
+        'id'       => $date->format('jHis')
+      );
+      $options['attributes']['class'] = array('button--feedback');
+      $options['attributes']['role'] = array('button');
+      $link = l('Provide feedback', $path, $options);
+      $variables['content']['field_bean_body'][0]['#markup'] = str_replace(FEEDBACK_LINK, $link, $variables['content']['field_bean_body'][0]['#markup']);
     }
 
     // For social media bean blocks.
@@ -517,44 +531,7 @@ function healthgovau_form_alter(&$form, &$form_state, $form_id) {
     $form['#validate'] = array();
     // Attach character countdown JS.
     $form['#attached']['js'][] = drupal_get_path('theme', 'healthgovau') . '/js/healthgovau.feedback.js';
-
-
-    // Add the page referrer so we know where the user was.
-    $form['submitted']['referrer']['#default_value'] = $referrer_url;
-
-    // Add a unique ID based on the time.
-    // Try to make it as short as possible whilst still being useful.
-    $date = new DateTime();
-    $form['submitted']['unique_id']['#default_value'] = $date->format('jHis');
-
-    // Add the campaign from where the user was.
-    $parts = parse_url($referrer_url);
-    $path = substr($parts['path'], 1);
-    $node_path = drupal_get_normal_path($path);
-
-    // Check if this is a resource listing page.
-    preg_match("/campaign\/(\d*)\/videos/", $node_path, $matches);
-    if (!empty($matches)) {
-      $node_path = $matches[1];
-    }
-
-    // Strip down to just the node id.
-    $node_path = str_replace('node/', '', $node_path);
-
-    // Load the node.
-    $node = node_load($node_path);
-    if ($node) {
-      // This is not a campaign page, therefore get the campaign id.
-      if (key_exists('field_campaign', $node)) {
-        $campaign = node_load($node->field_campaign[$node->language][0]['target_id']);
-        $form['submitted']['campaign']['#default_value'] = $campaign->title;
-      } else if ($node->type == 'campaign') { // This is a campaign page.
-        $form['submitted']['campaign']['#default_value'] = $node->title;
-      }
-    } else {
-      // Either the campaigns hub, or an error occurred.
-      $form['submitted']['campaign']['#default_value'] = 'Campaign not detected';
-    }
+    
   }
 }
 
@@ -877,6 +854,20 @@ function _healthgovau_find_current_campaign() {
     }
     return FALSE;
   }
+}
+
+/**
+ * Helper function to get the name of the current campaign.
+ * @return string The campaign title or an empty string.
+ */
+function _healthgovau_get_campaign_name() {
+  if ($nid = _healthgovau_find_current_campaign()) {
+    $node = node_load($nid);
+    if ($node) {
+      return $node->title;
+    }
+  }
+  return '';
 }
 
 /**
