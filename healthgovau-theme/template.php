@@ -359,11 +359,9 @@ function healthgovau_preprocess_entity(&$variables) {
 
       // Feedback link token.
       $path = '/feedback';
-      $date = new DateTime();
       $options['query'] = array(
         'referrer' => drupal_get_path_alias(),
         'campaign' => _healthgovau_get_campaign_name(),
-        'id'       => $date->format('jHis')
       );
       $options['attributes']['class'] = array('button--feedback');
       $options['attributes']['role'] = array('button');
@@ -531,10 +529,31 @@ function healthgovau_form_alter(&$form, &$form_state, $form_id) {
     $form['#validate'] = array();
     // Attach character countdown JS.
     $form['#attached']['js'][] = drupal_get_path('theme', 'healthgovau') . '/js/healthgovau.feedback.js';
-    
+
+    // Add a unique id so it can be referenced in an email.
+    $date = new DateTime();
+    $form['submitted']['reference']['#default_value'] = 'REF-' . $date->format('yj') . '-' . _health_gen_uid(4);
+
+    // Make sure this page isn't cache by Akamai or Drupal.
+    drupal_add_http_header('Cache-Control', 'no-cache, no-store');
+    drupal_page_is_cacheable(FALSE);
   }
 }
 
+/**
+ * Generate a random letter based ID of varing lengths.
+ *
+ * @param int $length
+ *
+ * @return string
+ */
+function _health_gen_uid($length = 10) {
+  $str = "";
+  for ($x = 0; $x < $length; $x++) {
+    $str .= substr(str_shuffle("ABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 1);
+  }
+  return $str;
+}
 
 /**
  * Implements hook_js_alter().
