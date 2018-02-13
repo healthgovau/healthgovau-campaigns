@@ -7,6 +7,12 @@ form {
     font-weight: bold;
   }
 
+  .form-type-radio {
+    label {
+      font-weight: normal;
+    }
+  }
+
   input[type='radio']:invalid + label, input[type='checkbox']:invalid + label {
     color: inherit;
   }
