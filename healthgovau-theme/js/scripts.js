@@ -13,83 +13,92 @@
 (function ($, Drupal, window, document, undefined) {
 
 
-// To understand behaviors, see https://drupal.org/node/756722#behaviors
-Drupal.behaviors.healthgovauCampaign = {
-  attach: function(context, settings) {
-          
-    function parallax(){
-      if( $(".js-parallax-window").length) {
-        var plxBackground = $(".js-parallax-background");
-        var plxWindow = $(".js-parallax-window");
+  // To understand behaviors, see https://drupal.org/node/756722#behaviors
+  Drupal.behaviors.healthgovauCampaign = {
+    attach: function (context, settings) {
 
-        var plxWindowTopToPageTop = $(plxWindow).offset().top;
-        var windowTopToPageTop = $(window).scrollTop();
-        var plxWindowTopToWindowTop = plxWindowTopToPageTop - windowTopToPageTop;
+      
 
-        var plxBackgroundTopToPageTop = $(plxBackground).offset().top;
-        var windowInnerHeight = window.innerHeight;
-        var plxBackgroundTopToWindowTop = plxBackgroundTopToPageTop - windowTopToPageTop;
-        var plxBackgroundTopToWindowBottom = windowInnerHeight - plxBackgroundTopToWindowTop;
-        var plxSpeed = 0.2;
+      // $(window).load(function () {
+       // showPopup();
 
-        plxBackground.css('top', - (plxWindowTopToWindowTop * plxSpeed) + 'px');
+        // setTimeout(function () {
+        //   showPopup()
+        // }, 30000); //For testing timeout for 30 sec , change it to 180000 for 3 mins
+
+      // });
+
+      function parallax() {
+        if ($(".js-parallax-window").length) {
+          var plxBackground = $(".js-parallax-background");
+          var plxWindow = $(".js-parallax-window");
+
+          var plxWindowTopToPageTop = $(plxWindow).offset().top;
+          var windowTopToPageTop = $(window).scrollTop();
+          var plxWindowTopToWindowTop = plxWindowTopToPageTop - windowTopToPageTop;
+
+          var plxBackgroundTopToPageTop = $(plxBackground).offset().top;
+          var windowInnerHeight = window.innerHeight;
+          var plxBackgroundTopToWindowTop = plxBackgroundTopToPageTop - windowTopToPageTop;
+          var plxBackgroundTopToWindowBottom = windowInnerHeight - plxBackgroundTopToWindowTop;
+          var plxSpeed = 0.2;
+
+          plxBackground.css('top', -(plxWindowTopToWindowTop * plxSpeed) + 'px');
+        }
       }
-    }
- 
-    // Hero parallax
-    if ($(".js-parallax-window").length) {
-      parallax();
-    }
 
-    $(window).scroll(function(e) {
+      // Hero parallax
       if ($(".js-parallax-window").length) {
         parallax();
       }
-      if( $(".sticky-nav").length) {
+
+      $(window).scroll(function (e) {
+        if ($(".js-parallax-window").length) {
+          parallax();
+        }
+        if ($(".sticky-nav").length) {
           stickyNav();
-      }
-    });    
-      
-    var stickyNav = function(){
-     var scrollTop = $(window).scrollTop();
-      if (scrollTop > stickyNavTop) {
-        $('.sticky-nav').addClass('on');
-      } else {
-        $('.sticky-nav').removeClass('on');
-      }
-    }
-    // event gallery
-    function eventgallery(){
-      $('.view-events-image-gallery').lightGallery({
-        selector: '.img-gallery > a',
-        nextHtml: '<span class="sr-only">Next slide</span>',
-        prevHtml: '<span class="sr-only">Previous slide</span>'
+        }
       });
-     
-      var $lg = $('.views-field-field-image-gallery-1');  
-      
-      $lg.lightGallery();
 
-      $lg.on('onAfterOpen.lg',function(event){
-          $( ".lg-outer" ).attr( "role", "dialog" );
-          $( ".lg-outer" ).attr( "aria-live", "polite" );
-      });
-      // force focus to light gallery window 
-      $( ".views-field-field-image-gallery-1 a" ).click(function() {
-        $( ".lg-outer a.lg-close" ).focus();
-      });    
-    }
-    if ($(".views-field-field-image-gallery-1").length) {
-         eventgallery();
-    }
+      var stickyNav = function () {
+        var scrollTop = $(window).scrollTop();
+        if (scrollTop > stickyNavTop) {
+          $('.sticky-nav').addClass('on');
+        } else {
+          $('.sticky-nav').removeClass('on');
+        }
+      }
+      // event gallery
+      function eventgallery() {
+        $('.view-events-image-gallery').lightGallery({
+          selector: '.img-gallery > a',
+          nextHtml: '<span class="sr-only">Next slide</span>',
+          prevHtml: '<span class="sr-only">Previous slide</span>'
+        });
+
+        var $lg = $('.views-field-field-image-gallery-1');
+
+        $lg.lightGallery();
+
+        $lg.on('onAfterOpen.lg', function (event) {
+          $(".lg-outer").attr("role", "dialog");
+          $(".lg-outer").attr("aria-live", "polite");
+        });
+        // force focus to light gallery window 
+        $(".views-field-field-image-gallery-1 a").click(function () {
+          $(".lg-outer a.lg-close").focus();
+        });
+      }
+      if ($(".views-field-field-image-gallery-1").length) {
+        eventgallery();
+      }
       // Active links
-	var path = window.location.pathname + window.location.search;
-    $('.activity__selector .tags a[href="' + path + '"]').addClass('active');
-  }
-};
+      var path = window.location.pathname + window.location.search;
+      $('.activity__selector .tags a[href="' + path + '"]').addClass('active');
+    }
+  };
 
 
-    
+
 })(jQuery, Drupal, this, this.document);
-
-

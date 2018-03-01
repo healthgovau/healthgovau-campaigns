@@ -93,7 +93,7 @@
     padding: $modal-padding / 2;
     position: relative;
     transition: opacity 0.25s ease;
-    width: 95%;
+    width: 70%;
 
     @include media($medium-screen) {
       max-height: 70%;
@@ -140,18 +140,19 @@
     }
   }
 
-  .modal-state:checked + .modal-fade-screen {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .modal-state:checked + .modal-fade-screen .modal-inner {
-    top: 0.5em;
-  }
 }
 
 .modal-open {
   overflow: hidden;
+
+  .modal-fade-screen {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal-fade-screen .modal-inner {
+    top: 0.5em;
+  }
 }
 
 // Based on code by Kasper Mikiewicz
