@@ -20,6 +20,7 @@ scripts[] = js/lg-fullscreen.min.js
 scripts[] = js/extlinkHealth.min.js
 scripts[] = js/healthgovau.modal.js
 scripts[] = js/scripts.js
+scripts[] = js/facebook-pixel.js
 
 regions[header]         = Header
 regions[prenav]         = Pre navigation bar

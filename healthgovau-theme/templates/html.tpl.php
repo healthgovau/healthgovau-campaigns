@@ -52,6 +52,11 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
+  <!-- Facebook Pixel Code -->
+  <noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=171969016765638&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Facebook Pixel Code -->
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <?php print $tag_manager; ?>
