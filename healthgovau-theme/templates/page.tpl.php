@@ -128,3 +128,5 @@ $bottom = render($page['bottom']);
   </div>
 </footer>
 
+<?php print $survey; ?>
+

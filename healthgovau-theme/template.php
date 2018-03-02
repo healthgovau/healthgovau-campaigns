@@ -16,6 +16,19 @@ CONST ABOUT_CURRENT_CAMPAIGN_HTML = '<li class="first leaf"><a href="[about-this
 CONST FEEDBACK_LINK = '[feedback-link]';
 
 /**
+ * Implements HOOK_theme().
+ */
+function healthgovau_theme() {
+  $theme['survey'] = [
+    'variables' => [],
+    'template' => 'survey',
+    'path' => drupal_get_path('theme', 'healthgovau') . '/templates',
+  ];
+
+  return $theme;
+}
+
+/**
  * Implements THEME_preprocess_html().
  */
 function healthgovau_preprocess_html(&$variables) {
@@ -190,6 +203,17 @@ function healthgovau_preprocess_page(&$variables) {
   else {
     $variables['full_hero'] = 'hero--content';
     $variables['hero_bg'] = 'hero-bg';
+  }
+
+  // Add survey for certain campaign pages.
+  if ($campaign_id = _healthgovau_find_current_campaign()) {
+    if ($campaign_id == 931) {
+      // Add survey for get the facts.
+      $render_survey = [
+        '#theme' => 'survey',
+      ];
+      $variables['survey'] = drupal_render($render_survey);
+    }
   }
 }
 
