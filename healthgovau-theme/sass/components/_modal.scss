@@ -117,14 +117,17 @@
     }
 
     .modal-intro {
-      margin-bottom: 1em;
+      margin-bottom: 2em;
     }
 
     .modal-content {
       color: $base-font-color;
 
-      @include media($medium-screen) {
-        columns: 2 8em;
+      // @include media($medium-screen) {
+      //   columns: 2 8em;
+      // }
+      a {
+        margin-right: 2em;
       }
     }
 

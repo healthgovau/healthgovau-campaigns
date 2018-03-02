@@ -4,7 +4,7 @@
 
       var surveyID = settings.health.campaign_id + '-2';
       
-      $(".modal-fade-screen, .modal-close", context).on("click", function() {
+      $(".modal-fade-screen, .modal-close, .modal-close-link", context).on("click", function() {
         $("body", context).removeClass("modal-open");
         Cookies.set('survey-dismiss', surveyID);
       });
