@@ -2,14 +2,14 @@
   Drupal.behaviors.modal = {
     attach: function (context, settings) {
 
-      var surveyID = 2;
+      var surveyID = settings.health.campaign_id + '-2';
       
-      $(".modal-fade-screen, .modal-close").on("click", function() {
-        $("body").removeClass("modal-open");
+      $(".modal-fade-screen, .modal-close", context).on("click", function() {
+        $("body", context).removeClass("modal-open");
         Cookies.set('survey-dismiss', surveyID);
       });
 
-      $(".modal-inner").on("click", function(e) {
+      $(".modal-inner", context).on("click", function(e) {
         e.stopPropagation();
       });
 
@@ -24,7 +24,7 @@
         }
 
         if (randomNumber == 2) {
-          $("body").addClass("modal-open");
+          $("body", context).addClass("modal-open");
         }
       }
 

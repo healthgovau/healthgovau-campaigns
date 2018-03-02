@@ -104,7 +104,7 @@
       print render($content);
       
       // Add immunisation block for immunisation campaign.
-      print $immunisation_survey;
+      // print $immunisation_survey;
     ?>
   </div>
 
