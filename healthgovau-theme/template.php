@@ -256,14 +256,14 @@ function healthgovau_preprocess_node(&$variables) {
 
   // Add immunisation JS to all immunisation node pages.
   $variables['immunisation_survey'] = '';
-  if ($node->nid == '931' && $variables['display_mode'] == 'full') {
+  if ($node->nid == '931') {
     drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/immunisation-survey.js');
-    $variables['immunisation_survey'] = '<div id=\'SI_e9tKdVZvk8qGE0B\'><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>';
+    $variables['immunisation_survey'] = '<div id=\'SI_9mpXcehBBbiUe6V\'><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>';
   }
   elseif (isset($node->field_campaign[LANGUAGE_NONE])) {
     if ($node->field_campaign[LANGUAGE_NONE][0]['target_id'] == '931') {
       drupal_add_js(drupal_get_path('theme', 'healthgovau') . '/js/immunisation-survey.js');
-      $variables['immunisation_survey'] = '<div id=\'SI_e9tKdVZvk8qGE0B\'><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>';
+      $variables['immunisation_survey'] = '<div id=\'SI_9mpXcehBBbiUe6V\'><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>';
     }
   }
 
