@@ -119,6 +119,7 @@ $bottom = render($page['bottom']);
       </div> 
       <div class="footer-links">
         <?php print render($page['footer_bottom']); ?>
+        <p>Authorised by the Australian Government, Canberra</p>
         <p>© Commonwealth of Australia</p>
       </div>
     </section>
