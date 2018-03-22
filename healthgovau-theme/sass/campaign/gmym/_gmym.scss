@@ -49,7 +49,7 @@
     //@include link-colours($link-colour, $focus-colour, $link-colour);
     a {
       &:hover {
-        border-color: $purple-light;
+        border-color: $purple;
         background-color: $light-purple;
       }
       &.is-active {
@@ -150,7 +150,7 @@
 
   #block-bean-gmym-cards-0 {
     @extend %gmym-band--primary;
-    background-color: $purple-light;
+    background-color: $purple;
     padding-bottom: 0;
   }
 
@@ -201,11 +201,11 @@
         float: left;
         a {
           background: #FFF;
-          border-color: $purple-darker;
+          border-color: $purple;
           color: $purple-darker;
           &:hover,
           &:focus {
-            background: $purple-darker;
+            background: $purple;
             color: #FFF;
           }
         }
@@ -384,7 +384,7 @@
 #block-bean-gmym-hotline {
   section.pre-nav {
     @include pad($small-spacing 0 $tiny-spacing);
-    background: $purple-light;
+    background: $purple;
     color: $white;
     text-align: center;
     ul {
@@ -430,12 +430,12 @@
   @include media($tablet) {
     section.site-nav {
       a:hover {
-        border-color: $purple-light;
+        border-color: $purple;
       }
       a.is-active {
-        border-color: $purple-light !important;
+        border-color: $purple !important;
         &:hover {
-          border-color: $purple-light !important;
+          border-color: $purple !important;
         }
       }
     }
