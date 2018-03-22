@@ -6,7 +6,39 @@
   .hero,
   .hero--content {
     .hero-bg {
-      background-position-y: 35%;
+      background-position-y: 37%;
+    }
+  }
+}
+
+.girlsmove {
+  // Home page
+  .hero {
+    .hero-bg {
+        // background-position-y: 5px;
+        // background-position-x: 0;
+        // @include media($desktop) {
+        //    background-position-y: -50px;
+        // }
+    }
+    .campaign-logo {
+      padding-left: 0;
+    }
+  }
+    
+  // Other pages
+  .hero--content {
+    .hero-bg {
+      @include media($mobile) {
+        background-position-y: -30px; //reset
+      }
+      background-position-y: -50px;
+      @include media($tablet) {
+        background-position-y: -75px; //reset
+      }
+      @include media($desktop) {
+        background-position-y: -150px; //reset
+      }
     }
   }
 }
