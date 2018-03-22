@@ -14,13 +14,6 @@
 .girlsmove {
   // Home page
   .hero {
-    .hero-bg {
-        // background-position-y: 5px;
-        // background-position-x: 0;
-        // @include media($desktop) {
-        //    background-position-y: -50px;
-        // }
-    }
     .campaign-logo {
       padding-left: 0;
     }
@@ -34,11 +27,28 @@
       }
       background-position-y: -50px;
       @include media($tablet) {
-        background-position-y: -75px; //reset
+        background-position-y: -95px; //reset
       }
       @include media($desktop) {
         background-position-y: -150px; //reset
       }
     }
+  }
+}
+
+// Additional non-standard breakpoints so that wide screens don't ruin the image!
+@media screen and (min-width: 1600px){
+  .girlsmove .hero--content .hero-bg {
+    background-position-y: -200px;
+  }
+}
+@media screen and (min-width: 1920px){
+  .girlsmove .hero--content .hero-bg {
+    background-position-y: -250px;
+  }
+}
+@media screen and (min-width: 2300px){
+  .girlsmove .hero--content .hero-bg {
+    background-position-y: -320px;
   }
 }
