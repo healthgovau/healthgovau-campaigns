@@ -14,6 +14,13 @@ CONST THEME_PATH_TOKEN_GENERIC = '[theme-path]';
 CONST ABOUT_CURRENT_CAMPAIGN = '[about-this-campaign]';
 CONST ABOUT_CURRENT_CAMPAIGN_HTML = '<li class="first leaf"><a href="[about-this-campaign]" title="About this campaign">About this campaign</a></li>';
 CONST FEEDBACK_LINK = '[feedback-link]';
+CONST CAMPAIGNS = [
+  'girlsmove' => 156,
+  'breastscreen' => 166,
+  'immunisationfacts' => 931,
+  'smokes' => 6,
+  'drughelp' => 1376,
+];
 
 /**
  * Implements THEME_preprocess_html().
@@ -445,6 +452,21 @@ function healthgovau_preprocess_entity(&$variables) {
           else {
             $variables['logo_img'] = '';
             $variables['logo_url'] = '';
+          }
+        }
+        else {
+          // This page is not following the pattern, try to find the campaign ID.
+          if (in_array(arg(0), array_keys(CAMPAIGNS))) {
+            $campaign_id = CAMPAIGNS[arg(0)];
+            $campaign_node = node_load($campaign_id);
+            if (isset($campaign_node->field_campaign_hero_logo[LANGUAGE_NONE])) {
+              // Find out the logo.
+              _healthgovau_campaign_hero_logo($campaign_node, $variables);
+            }
+            else {
+              $variables['logo_img'] = '';
+              $variables['logo_url'] = '';
+            }
           }
         }
       }
