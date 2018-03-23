@@ -1,3 +1,5 @@
+@import "_vars";
+
 // Band variants extending defaults
 %gmym-band--primary {
   @extend .band;
@@ -38,6 +40,25 @@
 
   @include media($desktop) {
     @include span-columns(3 of 16);
+  }
+}
+
+// Navigation colours
+.local-nav {
+  ul {
+    //@include link-colours($link-colour, $focus-colour, $link-colour);
+    a {
+      &:hover {
+        border-color: $purple;
+        background-color: $light-purple;
+      }
+      &.is-active {
+        background-color: $light-purple;
+      }
+      &.is-current {
+        background-color: $light-purple;
+      }
+    }
   }
 }
 
@@ -117,7 +138,7 @@
   #block-views-campaign-videos-block-4 {
     @extend .band;
     //background: $light-purple;
-    background: #fff;
+    background: $light-blue;
     padding-top: $medium-spacing;
     padding-bottom: $large-spacing;
     .list-vertical--thirds li.views-row { //.views-row prevents application to Drupal menus
@@ -125,11 +146,14 @@
         min-height: 375px;
       }
     }
+    .list--cards > li {
+      @include box-shadow($color: darken($light-blue, 10%));
+    }
   }
 
   #block-bean-gmym-cards-0 {
     @extend %gmym-band--primary;
-    background-color: $cyan;
+    background-color: $purple;
     padding-bottom: 0;
   }
 
@@ -160,7 +184,7 @@
   @extend .band;
   padding-bottom: $large-spacing;
   // background-image: image-url("../images/bg-textures/Prismic.svg");
-  background-color: #e8f7f9;
+  background-color: $light-purple;
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -180,9 +204,11 @@
         float: left;
         a {
           background: #FFF;
+          border-color: $purple;
+          color: $purple-darker;
           &:hover,
           &:focus {
-            background: $cyan;
+            background: $purple;
             color: #FFF;
           }
         }
@@ -220,7 +246,7 @@
   }
 
   .list--cards > li {
-    @include box-shadow($color: #91c1c5);
+    @include box-shadow($color: darken($light-purple, 10%));
   }
 
 }
@@ -361,7 +387,7 @@
 #block-bean-gmym-hotline {
   section.pre-nav {
     @include pad($small-spacing 0 $tiny-spacing);
-    background: $cyan;
+    background: $purple;
     color: $white;
     text-align: center;
     ul {
@@ -407,12 +433,12 @@
   @include media($tablet) {
     section.site-nav {
       a:hover {
-        border-color: $cyan;
+        border-color: $purple;
       }
       a.is-active {
-        border-color: $cyan !important;
+        border-color: $purple !important;
         &:hover {
-          border-color: $cyan !important;
+          border-color: $purple !important;
         }
       }
     }
