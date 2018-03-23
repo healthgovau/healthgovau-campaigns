@@ -138,13 +138,16 @@
   #block-views-campaign-videos-block-4 {
     @extend .band;
     //background: $light-purple;
-    background: #fff;
+    background: $light-blue;
     padding-top: $medium-spacing;
     padding-bottom: $large-spacing;
     .list-vertical--thirds li.views-row { //.views-row prevents application to Drupal menus
       @include media($desktop) {
         min-height: 375px;
       }
+    }
+    .list--cards > li {
+      @include box-shadow($color: darken($light-blue, 10%));
     }
   }
 
