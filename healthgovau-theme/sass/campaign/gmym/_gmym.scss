@@ -44,19 +44,21 @@
 }
 
 // Navigation colours
-.local-nav {
-  ul {
-    //@include link-colours($link-colour, $focus-colour, $link-colour);
-    a {
-      &:hover {
-        border-color: $purple;
-        background-color: $light-purple;
-      }
-      &.is-active {
-        background-color: $light-purple;
-      }
-      &.is-current {
-        background-color: $light-purple;
+.girlsmove {
+  .local-nav {
+    ul {
+      //@include link-colours($link-colour, $focus-colour, $link-colour);
+      a {
+        &:hover {
+          border-color: $purple;
+          background-color: $light-purple;
+        }
+        &.is-active {
+          background-color: $light-purple;
+        }
+        &.is-current {
+          background-color: $light-purple;
+        }
       }
     }
   }
