@@ -112,7 +112,8 @@ function healthgovau_preprocess_field(&$variables) {
   }
   else if ($variables['element']['#field_name'] == 'field_video_promoted_thumbnail') {
     $nid = $variables['element']['#object']->nid;
-    $video_node = node_load($nid);
+    $vid = $variables['element']['#object']->vid;
+    $video_node = node_load($nid, $vid);
     $youtube_code = $video_node->field_youtube_video_id[LANGUAGE_NONE][0]['value'];
     $variables['youtube_code'] = $youtube_code;
     // Add JS to embed video.
@@ -846,6 +847,18 @@ function _healthgovau_campaign_hero_logo($node, &$variables) {
   $variables['logo_img'] = $image_url;
   $variables['logo_url'] = '/' . drupal_get_path_alias('node/' . $node->nid);
   $variables['logo_alt'] = $node->field_campaign_hero_logo[LANGUAGE_NONE][0]['alt'];
+
+  // Add hero logo to current metatag OG:image.
+  $meta_og_image = [
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => [
+      'property' => 'og:image',
+      'content' => $image_url,
+    ]
+  ];
+
+  drupal_add_html_head($meta_og_image, 'meta_og_image');
 }
 
 /**
