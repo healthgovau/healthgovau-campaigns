@@ -95,8 +95,3 @@ body.adminimal-skin-material tr.draggable {
 body.adminimal-skin-material .fieldset-wrapper .fieldset-description {
     padding: 0 0 15px 0;
 }
-
-/* Hide the toggle to swap between dragging and weight selection */
-.tabledrag-toggle-weight-wrapper {
-    display: none;
-}
