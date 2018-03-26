@@ -60,13 +60,13 @@ Drupal.behaviors.healthgovauCampaign = {
     }
     // event gallery
     function eventgallery(){
-      $('.view-events-image-gallery').lightGallery({
+      $('.image-gallery').lightGallery({
         selector: '.img-gallery > a',
         nextHtml: '<span class="sr-only">Next slide</span>',
         prevHtml: '<span class="sr-only">Previous slide</span>'
       });
      
-      var $lg = $('.views-field-field-image-gallery-1');  
+      var $lg = $('.image-gallery');
       
       $lg.lightGallery();
 
@@ -75,11 +75,11 @@ Drupal.behaviors.healthgovauCampaign = {
           $( ".lg-outer" ).attr( "aria-live", "polite" );
       });
       // force focus to light gallery window 
-      $( ".views-field-field-image-gallery-1 a" ).click(function() {
+      $( ".image-gallery a" ).click(function() {
         $( ".lg-outer a.lg-close" ).focus();
       });    
     }
-    if ($(".views-field-field-image-gallery-1").length) {
+    if ($(".image-gallery").length) {
          eventgallery();
     }
       // Active links
