@@ -849,16 +849,18 @@ function _healthgovau_campaign_hero_logo($node, &$variables) {
   $variables['logo_alt'] = $node->field_campaign_hero_logo[LANGUAGE_NONE][0]['alt'];
 
   // Add hero logo to current metatag OG:image.
-  $meta_og_image = [
-    '#type' => 'html_tag',
-    '#tag' => 'meta',
-    '#attributes' => [
-      'property' => 'og:image',
-      'content' => $image_url,
-    ]
-  ];
-
-  drupal_add_html_head($meta_og_image, 'meta_og_image');
+  if (isset($node->field_social_image[LANGUAGE_NONE])) {
+    $social_image_url = file_create_url($node->field_social_image[LANGUAGE_NONE][0]['uri']);
+    $meta_og_image = [
+      '#type' => 'html_tag',
+      '#tag' => 'meta',
+      '#attributes' => [
+        'property' => 'og:image',
+        'content' => $social_image_url,
+      ]
+    ];
+    drupal_add_html_head($meta_og_image, 'meta_og_image');
+  }
 }
 
 /**
