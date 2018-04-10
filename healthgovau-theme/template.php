@@ -286,6 +286,17 @@ function healthgovau_preprocess_node(&$variables) {
       }
     }
   }
+
+  // Check to see if this role has access to view this content type.
+  global $user;
+  if (key_exists('node', $variables)) {
+    // Deny access to anonymous users for Help pages.
+    if ($variables['node']->type == 'help') {
+      if (key_exists(1, $user->roles)) {
+        drupal_access_denied();
+      }
+    }
+  }
 }
 
 /**
