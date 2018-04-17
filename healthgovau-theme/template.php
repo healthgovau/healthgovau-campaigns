@@ -517,6 +517,20 @@ function healthgovau_preprocess_entity(&$variables) {
         $variables['classes_array'][] = 'paragraphs-view-display-' . $view->current_display;
       }
     }
+
+    // Render bean blocks in paragraph.
+    if ($paragraph->bundle == 'para_block') {
+      $output = '';
+      if (isset($paragraph->field_para_block_id[LANGUAGE_NONE])) {
+        foreach ($paragraph->field_para_block_id[LANGUAGE_NONE] as $block_delta) {
+          $block = block_load('bean', $block_delta['value']);
+          $block_render = _block_render_blocks(array($block));
+          $block_renderable_array = _block_get_renderable_array($block_render);
+          $output .= drupal_render($block_renderable_array);
+        }
+      }
+      $variables['rendered_blocks'] = $output;
+    }
   }
 }
 

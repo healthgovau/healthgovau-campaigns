@@ -254,10 +254,18 @@
 }
 
 // Mobile apps layout
-.list-horizontal--narrow {
+.bean-list-horizontal--narrow {
   @extend .list-horizontal;
+  .row-wrapper {
+    @include media($desktop) {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+    }
 
-  > li {
+    border-bottom: solid 1px #bbbaba;
+
     // Image
     figure {
       //display: none;
@@ -265,6 +273,10 @@
       margin-bottom: $small-spacing;
       @include media($desktop) {
         flex: 0 0 10%;
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 10%;
+        -ms-flex: 0 0 10%;
+        margin-right: 1.6em;
       }
     }
   }
