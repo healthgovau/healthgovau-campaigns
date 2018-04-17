@@ -95,3 +95,16 @@ body.adminimal-skin-material tr.draggable {
 body.adminimal-skin-material .fieldset-wrapper .fieldset-description {
     padding: 0 0 15px 0;
 }
+
+/* Workbench changes */
+.page-admin-workbench .admin.my-workbench > div:first-child {
+    display: none;
+}
+.page-admin-workbench .admin.my-workbench > div {
+    width: 100%;
+}
+
+/* Fixing strange padding around links in table cells */
+body.adminimal-skin-material table tbody td a {
+    padding: 0 !important;
+}
