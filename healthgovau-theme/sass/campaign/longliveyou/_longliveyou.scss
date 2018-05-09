@@ -4,4 +4,24 @@
       float: right;
     }
   }
+
+  // Video band.
+  &.node-type-campaign {
+    #block-views-campaign-videos-block {
+      @include clearfix;
+      .view-mode-compact {
+        div.group-left {
+          @extend .video__container;
+        }
+        div.group-right {
+          @extend .video__info;
+        }
+      }
+    }
+
+    #block-views-campaign-videos-block {
+      @extend .smokes-band--primary;
+    }
+
+  }
 }
