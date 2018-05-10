@@ -1,10 +1,52 @@
+@import "vars";
+
 .longliveyou {
   .block-bean {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: $small-spacing;
     .group-left {
-      float: right;
+      @include fill-parent;
+      @include media($tablet) {
+        width: 50%;
+        float: right;
+        img {
+          clip-path: polygon(0 0, 9% 100%, 100% 100%, 100% 0);
+          margin-bottom: -7px;// To close phantom gap!
+        }
+      }
     }
+    .group-right {
+      @include fill-parent;
+      @include media($tablet) {
+        width: 50%;
+      }
+    }
+  }
 
-    margin: 0.5em 0 0.5em 0;
+  // Band colours
+  %band--primary {
+    background: $background-colour-primary;
+    color: #fff;
+    h2 {
+      color: #fff;
+    }
+    a {
+      color: #fff;
+      border-bottom-color: #fff;
+    }
+  }
+
+  %band--secondary {
+    background: $background-colour-secondary;
+  }
+
+  #block-bean-longliveyou-intro,
+  #block-bean-longliveyou-work-and-income {
+    @extend %band--primary;
+  }
+  #block-bean-longliveyou-finance {
+    @extend %band--secondary;
   }
 
   // Video band.
