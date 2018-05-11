@@ -6,13 +6,13 @@
     padding-bottom: 0;
     margin-bottom: $small-spacing;
 
-    .wrapper {
-      &.bean-image-and-text {
+  //  .wrapper {
+      .bean-image-and-text {
         padding: 0;
         @include media($tablet) {
           padding: 0 2em;
         }
-        .group-left {
+        .band__img {
           img {
             clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
             -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
@@ -28,15 +28,16 @@
             }
           }
         }
-        .group-right {
-          padding: 0 2em;
+        .band__text {
           @include fill-parent;
           @include media($tablet) {
             width: 50%;
+            padding-right: $large-spacing;
+            padding-bottom: $large-spacing;
           }
         }
       }
-    }
+  //  }
   }
 
   // Band colours
@@ -49,18 +50,48 @@
     a {
       color: #fff;
       border-bottom-color: #fff;
+      &[rel~='external']::after {
+        background-image: image-url("../images/icons/external-link--white.svg");
+      }
     }
   }
 
   %band--secondary {
     background: $background-colour-secondary;
+    a[rel~='external']::after {
+      background-image: image-url("../images/icons/external-link--black.svg");
+    }
   }
 
-  #block-bean-longliveyou-intro,
-  #block-bean-longliveyou-work-and-income {
+  %band--tertiary {
+    background: $background-colour-tertiary;
+    a {
+      border-bottom-color: #000;
+    }
+  }
+
+  // Intro blocks - not sure about content of style
+  #block-bean-longliveyou-intro {}
+  #block-bean-longliveyou-intro-2 {}
+  #block-bean-longliveyou-what-are-you-looki {}
+
+  #block-bean-longliveyou-finance {
     @extend %band--primary;
   }
-  #block-bean-longliveyou-finance {
+
+  #block-bean-longliveyou-work-and-income {
+    @extend %band--secondary;
+  }
+  
+  #block-bean-longliveyou-healthy {
+    @extend %band--tertiary;
+  }
+
+  #block-bean-longliveyou-agedcare {
+    @extend %band--primary;
+
+  }
+  #block-bean-longliveyou-connected-0 {
     @extend %band--secondary;
   }
 
