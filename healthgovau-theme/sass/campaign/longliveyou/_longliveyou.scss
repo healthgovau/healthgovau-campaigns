@@ -15,6 +15,7 @@
         .group-left {
           img {
             clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+            -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
           }
           @include fill-parent;
           @include media($tablet) {
@@ -22,6 +23,7 @@
             float: right;
             img {
               clip-path: polygon(0 0, 9% 100%, 100% 100%, 100% 0);
+              -webkit-clip-path: polygon(0 0, 9% 100%, 100% 100%, 100% 0);
               margin-bottom: -7px;// To close phantom gap!
             }
           }
