@@ -1,26 +1,39 @@
 @import "vars";
 
 .longliveyou {
-  .region-content {
-    .block-bean {
-      padding-top: 0;
-      padding-bottom: 0;
-      margin-bottom: $small-spacing;
-      .group-left {
-        @include fill-parent;
+  .block-bean {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: $small-spacing;
+
+    .wrapper {
+      &.bean-image-and-text {
+        padding: 0;
         @include media($tablet) {
-          width: 50%;
-          float: right;
+          padding: 0 2em;
+        }
+        .group-left {
           img {
-            clip-path: polygon(0 0, 9% 100%, 100% 100%, 100% 0);
-            margin-bottom: -7px;// To close phantom gap!
+            clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+            -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+          }
+          @include fill-parent;
+          @include media($tablet) {
+            width: 50%;
+            float: right;
+            img {
+              clip-path: polygon(0 0, 9% 100%, 100% 100%, 100% 0);
+              -webkit-clip-path: polygon(0 0, 9% 100%, 100% 100%, 100% 0);
+              margin-bottom: -7px;// To close phantom gap!
+            }
           }
         }
-      }
-      .group-right {
-        @include fill-parent;
-        @include media($tablet) {
-          width: 50%;
+        .group-right {
+          padding: 0 2em;
+          @include fill-parent;
+          @include media($tablet) {
+            width: 50%;
+          }
         }
       }
     }
@@ -36,9 +49,6 @@
     a {
       color: #fff;
       border-bottom-color: #fff;
-      &.see-more::after {
-        @extend %icon-arrow-right--white;
-      }
     }
   }
 

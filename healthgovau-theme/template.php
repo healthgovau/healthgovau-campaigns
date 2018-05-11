@@ -20,6 +20,7 @@ CONST CAMPAIGNS = [
   'immunisationfacts' => 931,
   'smokes' => 6,
   'drughelp' => 1376,
+  'longliveyou' => 2331,
 ];
 
 /**
@@ -482,6 +483,11 @@ function healthgovau_preprocess_entity(&$variables) {
           }
         }
       }
+    }
+
+    // Add class to longliveyou global logo block.
+    if ($bean->delta == 'longliveyou---global-logo') {
+      $variables['classes_array'][] = 'page-header__logo';
     }
   }
   
