@@ -1,25 +1,27 @@
 @import "vars";
 
 .longliveyou {
-  .block-bean {
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-bottom: $small-spacing;
-    .group-left {
-      @include fill-parent;
-      @include media($tablet) {
-        width: 50%;
-        float: right;
-        img {
-          clip-path: polygon(0 0, 9% 100%, 100% 100%, 100% 0);
-          margin-bottom: -7px;// To close phantom gap!
+  .region-content {
+    .block-bean {
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-bottom: $small-spacing;
+      .group-left {
+        @include fill-parent;
+        @include media($tablet) {
+          width: 50%;
+          float: right;
+          img {
+            clip-path: polygon(0 0, 9% 100%, 100% 100%, 100% 0);
+            margin-bottom: -7px;// To close phantom gap!
+          }
         }
       }
-    }
-    .group-right {
-      @include fill-parent;
-      @include media($tablet) {
-        width: 50%;
+      .group-right {
+        @include fill-parent;
+        @include media($tablet) {
+          width: 50%;
+        }
       }
     }
   }
@@ -34,6 +36,9 @@
     a {
       color: #fff;
       border-bottom-color: #fff;
+      &.see-more::after {
+        @extend %icon-arrow-right--white;
+      }
     }
   }
 
