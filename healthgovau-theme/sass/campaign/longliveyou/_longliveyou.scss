@@ -5,21 +5,34 @@
     padding-top: 0;
     padding-bottom: 0;
     margin-bottom: $small-spacing;
-    .group-left {
-      @include fill-parent;
-      @include media($tablet) {
-        width: 50%;
-        float: right;
-        img {
-          clip-path: polygon(0 0, 9% 100%, 100% 100%, 100% 0);
-          margin-bottom: -7px;// To close phantom gap!
+
+    .wrapper {
+      &.bean-image-and-text {
+        padding: 0;
+        @include media($tablet) {
+          padding: 0 2em;
         }
-      }
-    }
-    .group-right {
-      @include fill-parent;
-      @include media($tablet) {
-        width: 50%;
+        .group-left {
+          img {
+            clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+          }
+          @include fill-parent;
+          @include media($tablet) {
+            width: 50%;
+            float: right;
+            img {
+              clip-path: polygon(0 0, 9% 100%, 100% 100%, 100% 0);
+              margin-bottom: -7px;// To close phantom gap!
+            }
+          }
+        }
+        .group-right {
+          padding: 0 2em;
+          @include fill-parent;
+          @include media($tablet) {
+            width: 50%;
+          }
+        }
       }
     }
   }
