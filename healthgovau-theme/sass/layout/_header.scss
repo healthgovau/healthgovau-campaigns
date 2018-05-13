@@ -44,3 +44,20 @@ header[role='banner'] .page-header__logo {
     }
   }
 }
+
+// Australian government crest
+header[role='banner'] #block-bean-longliveyou-global-logo {
+  margin-bottom: 0;
+  .page-header__logo {
+    padding: 0;
+    img {
+      width: auto;
+      @include media($tablet) {
+        width: auto;
+      }
+      @include media($desktop) {
+        width: auto;
+      }
+    }
+  }
+}
