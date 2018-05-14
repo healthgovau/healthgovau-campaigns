@@ -1,0 +1,57 @@
+// Tweaks for mobile positioning
+.longliveyou {
+  // Home page
+  .hero {
+    .hero-bg {
+        background-position-y: 5px;
+        background-position-x: 0;
+        @include media($desktop) {
+           background-position-y: -100px;
+        }
+    }
+    .campaign-logo {
+      max-height: 135px;
+      margin-top: 23px;
+      //left: -20px;
+      @include media($mobile) {
+        max-height: 100px;
+        margin-top: 38px;
+      }
+      @include media($tablet) {
+        max-height: 200px;
+        margin-top: 50px;
+      }
+      @include media($desktop) {
+        max-height: 275px;
+        margin-top: 62px;
+      }
+    }
+  }
+    
+  // Other pages
+  .hero--content {
+    .hero-bg {
+      @include media($mobile) {
+        background-position-y: -30px; //reset
+      }
+      background-position-y: -50px;
+      @include media($tablet) {
+        background-position-y: -125px; //reset
+      }
+      @include media($desktop) {
+        background-position-y: -250px; //reset
+      }
+    }
+    .campaign-logo {
+      max-height: 70px;
+      margin-top: 0px;
+      //left: -20px;
+      @include media($tablet) {
+        max-height: 132px;
+      }
+      @include media($desktop) {
+        max-height: 167px;
+      }
+    }
+  }
+}
