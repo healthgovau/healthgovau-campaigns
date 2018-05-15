@@ -347,6 +347,9 @@ function healthgovau_preprocess_menu_tree(&$variables) {
   if ($variables['theme_hook_original'] == 'menu_tree__menu_breastscreen_menu') {
     $variables['tree'] = str_replace('/breastscreen', '', $variables['tree']);
   }
+  if ($variables['theme_hook_original'] == 'menu_tree__menu_long_live_you_menu') {
+    $variables['tree'] = str_replace('/longliveyou', '', $variables['tree']);
+  }
 }
 
 /**
