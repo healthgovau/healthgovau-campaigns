@@ -110,6 +110,10 @@
     @extend %band--secondary;
   }
 
+  #block-bean-longliveyou-supporting-info {
+    @extend %band;
+  }
+
   // Video band.
   &.node-type-campaign {
     #block-views-campaign-videos-block {
