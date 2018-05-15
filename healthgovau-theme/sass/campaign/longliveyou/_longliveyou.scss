@@ -1,6 +1,14 @@
 @import "vars";
 
 .longliveyou {
+
+  main {
+    padding-top: $medium-spacing;
+    @include media($tablet) {
+      padding-top: $large-spacing;
+    }
+  }
+
   section.site-nav {
     #block-menu-menu-long-live-you-menu {
       li {
@@ -19,7 +27,10 @@
   }
   .block-bean {
     padding-top: 0;
-    padding-bottom: 0;
+    padding-bottom: $large-spacing;
+    @include media($tablet) {
+      padding-bottom: 0;
+    }
     margin-bottom: $small-spacing;
 
   //  .wrapper {
@@ -29,6 +40,10 @@
           img {
             clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
             -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+            width: 100%;
+            @include media($tablet) {
+              width: auto;
+            }
           }
           @include fill-parent;
           @include media($tablet) {
@@ -111,7 +126,7 @@
   }
 
   #block-bean-longliveyou-supporting-info {
-    @extend %band;
+    margin-top: $large-spacing;
   }
 
   // Video band.
