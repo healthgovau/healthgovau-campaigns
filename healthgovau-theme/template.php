@@ -553,7 +553,13 @@ function healthgovau_breadcrumb($variables) {
   if (empty($breadcrumb)) {
     return NULL;
   }
-  
+
+  // For longliveyou or any anchor links.
+  // @todo Refactor this part to find a pattern for anchor links.
+  if ($breadcrumb[0] == '<a href="/longliveyou">Healthy and active</a>') {
+    $breadcrumb[0] = '<a href="/longliveyou">Home</a>';
+  }
+
   // Process breadcrumb for UI KIT format.
   $breadcrumb_list = '<ul>';
   foreach($breadcrumb as $link) {
