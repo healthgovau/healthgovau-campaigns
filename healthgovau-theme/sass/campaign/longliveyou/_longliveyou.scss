@@ -22,12 +22,6 @@
     padding-bottom: 0;
     margin-bottom: $small-spacing;
 
-    .bean-basic-content {
-      .wrapper {
-        padding-left: $small-spacing;
-        padding-right: $small-spacing;
-      }
-    }
   //  .wrapper {
       .bean-image-and-text {
         padding: 0;
@@ -49,8 +43,8 @@
         }
         .band__text {
           @include fill-parent;
-          padding-left: $small-spacing;
-          padding-right: $small-spacing;
+          padding-left: 2em;
+          padding-right: 2em;
           @include media($tablet) {
             width: 50%;
             padding-right: $large-spacing;
