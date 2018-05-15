@@ -1,6 +1,22 @@
 @import "vars";
 
 .longliveyou {
+  section.site-nav {
+    #block-menu-menu-long-live-you-menu {
+      li {
+        padding-right: 0;
+      }
+      a:hover {
+        border-color: $colour-primary;
+      }
+      a.is-active {
+        border-color: white;
+        &:hover {
+          border-color: $colour-primary !important;
+        }
+      }
+    }
+  }
   .block-bean {
     padding-top: 0;
     padding-bottom: 0;
