@@ -22,12 +22,15 @@
     padding-bottom: 0;
     margin-bottom: $small-spacing;
 
+    .bean-basic-content {
+      .wrapper {
+        padding-left: $small-spacing;
+        padding-right: $small-spacing;
+      }
+    }
   //  .wrapper {
       .bean-image-and-text {
         padding: 0;
-        @include media($tablet) {
-          padding: 0 2em;
-        }
         .band__img {
           img {
             clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
@@ -46,6 +49,8 @@
         }
         .band__text {
           @include fill-parent;
+          padding-left: $small-spacing;
+          padding-right: $small-spacing;
           @include media($tablet) {
             width: 50%;
             padding-right: $large-spacing;
