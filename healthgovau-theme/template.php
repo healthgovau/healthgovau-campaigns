@@ -843,6 +843,7 @@ function healthgovau_get_friendly_mime($mimetype) {
     'image/png' => '<abbr title="Portable Network Graphics">PNG</abbr>',
     'image/gif' => '<abbr title="Graphics Interchange Format">GIF</abbr>',
     'video/mp4' => '<abbr title="MPEG-4 Part 14">MP4</abbr>',
+    'audio/mpeg' => '<abbr title="MPEG-1 Audio Layer III">MP3</abbr>',
   ];
   if (array_key_exists($mimetype, $descriptions)) {
     return $descriptions[$mimetype];
