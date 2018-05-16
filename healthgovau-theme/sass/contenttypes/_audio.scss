@@ -1,0 +1,82 @@
+.node-audio {
+  // default
+  &.view-mode-full {
+    // layout
+    .group-left {
+      @include media($mobile) {
+        width: 100%;
+      }
+      width: 30%;
+    }
+    .group-right {
+      @include media($mobile) {
+        width: 100%;
+      }
+      width: 70%;
+    }
+    // thumbnail
+    .field-name-field-feature-image {
+      img {
+        @extend %publication-thumbnail;
+      }
+      @include media($mobile) {
+        width: 100%;
+      }
+      width: 80%;
+    }
+    // fields
+    .field-items {
+      padding-bottom: $medium-spacing;
+      display: block;
+    }
+    .field-type-taxonomy-term-reference {
+      margin-bottom: 0;
+    }
+    // ext link
+    .field-name-field-link-external {
+      @include link-pullout;
+      a {
+        font-weight: bold;
+      }
+      .external-link-url {
+        color: $aqua;
+        font-size: 14px;
+        word-break: break-all;
+      }
+    }
+    // paras
+    p {
+      max-width: 100%;
+    }
+    h2 {
+      margin-top: 0;
+    }
+
+    // document download
+    .paragraphs-items-field-resource-documents {
+      .file-icon {
+        float: left;
+        margin-right: 10px;
+        margin-top: 5px;
+      }
+      a {
+        border-bottom: 0;
+      }
+      .file__link {
+        display: inline;
+        font-weight: bold;
+        border-bottom: solid 1px #5bcbe3;
+        span {
+          @extend .visuallyhidden;
+        }
+      }
+      .file__meta {
+        display: inline;
+        color: #6e6e6e;
+      }
+      .field-name-field-file {
+        @include link-pullout;
+      }
+    }
+  }
+}

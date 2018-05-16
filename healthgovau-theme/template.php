@@ -20,6 +20,7 @@ CONST CAMPAIGNS = [
   'immunisationfacts' => 931,
   'smokes' => 6,
   'drughelp' => 1376,
+  'longliveyou' => 2331,
 ];
 
 /**
@@ -346,6 +347,9 @@ function healthgovau_preprocess_menu_tree(&$variables) {
   if ($variables['theme_hook_original'] == 'menu_tree__menu_breastscreen_menu') {
     $variables['tree'] = str_replace('/breastscreen', '', $variables['tree']);
   }
+  if ($variables['theme_hook_original'] == 'menu_tree__menu_long_live_you_menu') {
+    $variables['tree'] = str_replace('/longliveyou', '', $variables['tree']);
+  }
 }
 
 /**
@@ -483,6 +487,11 @@ function healthgovau_preprocess_entity(&$variables) {
         }
       }
     }
+
+    // Add class to longliveyou global logo block.
+    if ($bean->delta == 'longliveyou---global-logo') {
+      $variables['classes_array'][] = 'page-header__logo';
+    }
   }
   
   // Paragraphs.
@@ -544,7 +553,13 @@ function healthgovau_breadcrumb($variables) {
   if (empty($breadcrumb)) {
     return NULL;
   }
-  
+
+  // For longliveyou or any anchor links.
+  // @todo Refactor this part to find a pattern for anchor links.
+  if ($breadcrumb[0] == '<a href="/longliveyou">Healthy and active</a>') {
+    $breadcrumb[0] = '<a href="/longliveyou">Home</a>';
+  }
+
   // Process breadcrumb for UI KIT format.
   $breadcrumb_list = '<ul>';
   foreach($breadcrumb as $link) {
@@ -720,7 +735,7 @@ function healthgovau_file_entity_download_link($variables) {
   $nid = arg(1);
   if (is_numeric($nid)) {
     $node = node_load($nid);
-    if ($node->type != 'image' && $node->type != 'publication') {
+    if ($node->type != 'image' && $node->type != 'publication' && $node->type != 'audio') {
       return theme_file_entity_download_link($variables);
     }
   }
@@ -733,7 +748,7 @@ function healthgovau_file_entity_download_link($variables) {
   $title = $node->title;
 
   // Publications.
-  if ($node->type == 'publication') {
+  if ($node->type == 'publication' || $node->type == 'audio') {
     $docs = $node->field_resource_documents[$node->language];
     foreach ($docs as $doc) {
       $entities = entity_load('paragraphs_item', [$doc['value']]);
@@ -827,6 +842,8 @@ function healthgovau_get_friendly_mime($mimetype) {
     'image/jpeg' => '<abbr title="Joint Photographic Experts Group">JPEG</abbr>',
     'image/png' => '<abbr title="Portable Network Graphics">PNG</abbr>',
     'image/gif' => '<abbr title="Graphics Interchange Format">GIF</abbr>',
+    'video/mp4' => '<abbr title="MPEG-4 Part 14">MP4</abbr>',
+    'audio/mpeg' => '<abbr title="MPEG-1 Audio Layer III">MP3</abbr>',
   ];
   if (array_key_exists($mimetype, $descriptions)) {
     return $descriptions[$mimetype];

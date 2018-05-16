@@ -1,0 +1,157 @@
+@import "vars";
+
+.longliveyou {
+
+  main {
+    padding-top: $medium-spacing;
+    @include media($tablet) {
+      padding-top: $large-spacing;
+    }
+  }
+
+  section.site-nav {
+    #block-menu-menu-long-live-you-menu {
+      li {
+        padding-right: 0;
+      }
+      a:hover {
+        border-color: $colour-primary;
+      }
+      a.is-active {
+        border-color: white;
+        &:hover {
+          border-color: $colour-primary !important;
+        }
+      }
+    }
+  }
+  .block-bean {
+    padding-top: 0;
+    padding-bottom: $large-spacing;
+    @include media($tablet) {
+      padding-bottom: 0;
+    }
+    margin-bottom: $small-spacing;
+
+  //  .wrapper {
+      .bean-image-and-text {
+        padding: 0;
+        .band__img {
+          img {
+            clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+            -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+            width: 100%;
+            @include media($tablet) {
+              width: auto;
+            }
+          }
+          @include fill-parent;
+          @include media($tablet) {
+            width: 50%;
+            float: right;
+            img {
+              clip-path: polygon(0 0, 9% 100%, 100% 100%, 100% 0);
+              -webkit-clip-path: polygon(0 0, 9% 100%, 100% 100%, 100% 0);
+              margin-bottom: -7px;// To close phantom gap!
+            }
+          }
+        }
+        .band__text {
+          @include fill-parent;
+          padding-left: 2em;
+          padding-right: 2em;
+          @include media($tablet) {
+            width: 50%;
+            padding-right: $large-spacing;
+            padding-bottom: $large-spacing;
+          }
+        }
+      }
+  //  }
+  }
+
+  // Band colours
+  %band--primary {
+    background: $background-colour-primary;
+    color: #fff;
+    h2 {
+      color: #fff;
+    }
+    a {
+      color: #fff;
+      border-bottom-color: #fff;
+      &[rel~='external']::after {
+        background-image: image-url("../images/icons/external-link--white.svg");
+      }
+    }
+  }
+
+  %band--secondary {
+    background: $background-colour-secondary;
+    a[rel~='external']::after {
+      background-image: image-url("../images/icons/external-link--black.svg");
+    }
+  }
+
+  %band--tertiary {
+    background: $background-colour-tertiary;
+    a {
+      border-bottom-color: #000;
+    }
+  }
+
+  // Intro blocks - not sure about content of style
+  #block-bean-longliveyou-intro {}
+  #block-bean-longliveyou-intro-2 {}
+  #block-bean-longliveyou-what-are-you-looki {}
+
+  #block-bean-longliveyou-finance {
+    @extend %band--primary;
+  }
+
+  #block-bean-longliveyou-work-and-income {
+    @extend %band--secondary;
+  }
+  
+  #block-bean-longliveyou-healthy {
+    @extend %band--tertiary;
+  }
+
+  #block-bean-longliveyou-agedcare {
+    @extend %band--primary;
+
+  }
+  #block-bean-longliveyou-connected-0 {
+    @extend %band--secondary;
+  }
+
+  #block-bean-longliveyou-supporting-info {
+    margin-top: $large-spacing;
+  }
+
+  // Video band.
+  &.node-type-campaign {
+    #block-views-campaign-videos-block {
+      @include clearfix;
+      .view-mode-compact {
+        div.group-left {
+          @extend .video__container;
+        }
+        div.group-right {
+          @extend .video__info;
+        }
+      }
+    }
+
+    #block-views-campaign-videos-block {
+      @extend .smokes-band--primary;
+    }
+
+  }
+
+  &.node-type-video {
+    #block-views-campaign-videos-block-3 {
+      display: none;
+    }
+  }
+}

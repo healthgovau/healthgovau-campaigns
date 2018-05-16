@@ -1,0 +1,22 @@
+// Standard colour constants
+$colour-primary:                  #008198;
+$colour-secondary:                #D0F0F5;
+$colour-tertiary:                 #acf2ff;//#50C6DB;
+
+// Uncomment to override
+$background-colour-primary:       $colour-primary;
+$background-colour-secondary:     $colour-secondary;
+$background-colour-tertiary:      $colour-tertiary;
+
+
+// Inverted colours for dark backgrounds
+// $text-colour--inverted:           $light-blue;
+// $hover-bg-colour--inverted:       $light-blue;
+// $hover-text-colour--inverted:     $black;
+// $shadow-colour--inverted:         $black;
+
+// Navigation
+$navigation-border-colour:        $colour-primary;
+
+// Override hero default
+//$hero-content-y-shift:            0.25;
