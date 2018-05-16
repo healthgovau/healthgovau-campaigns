@@ -148,4 +148,10 @@
     }
 
   }
+
+  &.node-type-video {
+    #block-views-campaign-videos-block-3 {
+      display: none;
+    }
+  }
 }
