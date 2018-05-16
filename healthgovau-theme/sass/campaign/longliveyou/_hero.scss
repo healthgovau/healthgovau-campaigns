@@ -6,11 +6,11 @@
       //background-position-x: -50px;
 
       @include media($mobile) {
-        background-position-y: 22px;
+        background-position-y: 5px;
       }
       //height: 225px;
       @include media($tablet) {
-        background-position-y: 10px; //reset
+        background-position-y: -35px; //reset
         background-position-x: 0px;
       }
       @include media($desktop) {
@@ -23,8 +23,8 @@
       margin-top: 28px;
 
       @include media($mobile) {
-        max-height: 85px;
-        margin-top: 35px;
+        max-height: 70px;
+        margin-top: 50px;
       }
       @include media($tablet) {
         max-height: 180px;
