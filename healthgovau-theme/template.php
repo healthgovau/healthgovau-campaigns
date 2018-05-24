@@ -24,6 +24,21 @@ CONST CAMPAIGNS = [
 ];
 
 /**
+ * Implements hook_theme.
+ */
+function healthgovau_theme() {
+  $theme['document_accessibility_link'] = [
+    'variables' => [
+      'current_page' => NULL,
+    ],
+    'template' => 'document_accessibility_link',
+    'path' => drupal_get_path('theme', 'healthgovau') . '/templates',
+  ];
+
+  return $theme;
+}
+
+/**
  * Implements THEME_preprocess_html().
  */
 function healthgovau_preprocess_html(&$variables) {
@@ -277,9 +292,20 @@ function healthgovau_preprocess_node(&$variables) {
   }
 
   // Publications.
-  if ($variables['type'] == 'publication') {
+  if ($variables['type'] == 'publication' || $variables['type'] == 'image') {
+    // Display document accessibility link.
+    Global $base_url;
+    $current_url = drupal_encode_path($base_url . '/' . drupal_get_path_alias(current_path()));
+
+    $render_array = [
+      '#theme' => 'document_accessibility_link',
+      '#current_page' => $current_url,
+    ];
+
+    $variables['document_accessibility_form_link'] = drupal_render($render_array);
+
     // If publication date is the same as last modified, hide the last modified.
-    if (isset($variables['content']['changed_date'])) {
+    if (isset($variables['content']['changed_date']) && $variables['type'] == 'publication') {
       $changed = strtotime($variables['content']['changed_date']['#items'][0]['value']);
       $published = strtotime($variables['field_date_published'][0]['value']);
       if ($changed == $published) {
