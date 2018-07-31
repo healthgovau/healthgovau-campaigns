@@ -66,35 +66,9 @@
 
 
 // Img/text bands
-#block-bean-ymca-featured {
+#block-views-special-offers-block-1 {
   padding: 30px 0;
   background: #fffff1;
-	h2:first-of-type {
-		margin-top: 0;
-	}
-  .wrapper {
-    .band__img {
-      line-height: 0;
-      @include fill-parent;
-      @include media($tablet) {
-        @include span-columns(4 of 12);
-      }
-      @include media($desktop) {
-        @include span-columns(6 of 16);
-      }
-    }
-
-    .band__text {
-      @include fill-parent;
-      @include media($tablet) {
-        @include span-columns(8 of 12);
-        margin-bottom: $large-spacing;
-      }
-      @include media($desktop) {
-        @include span-columns(10 of 16);
-      }
-    }
-  }
 }
 
 .girlsmove {
@@ -175,7 +149,7 @@
 
 // Force full width for content container
 .page-campaign-activities,
-.girlsmove:not(.node-type-campaign-standard-page) {
+.girlsmove:not(.node-type-campaign-standard-page):not(.node-type-special-offer) {
   main .content-main {
     width: 100%;
   }
