@@ -161,3 +161,49 @@ function health_adminimal_form_element($variables) {
 
   return $output;
 }
+
+/**
+ * Implements hook_js_alter().
+ *
+ * Perform necessary alterations to the JavaScript before it is presented on the page.
+ *
+ * @param array $javascript
+ *   An array of all JavaScript being presented on the page.
+ */
+function health_adminimal_js_alter(&$javascript) {
+  // Add/replace chosen js.
+  $javascript['profiles/govcms/libraries/chosen/chosen.jquery.min.js'] = [
+    'data' => drupal_get_path('theme', 'health_adminimal') . '/js/libraries/chosen/chosen.jquery.min.js',
+    'version' => '1',
+    'group' => -100,
+    'type' => 'file',
+    'weight' => 1,
+    'every_page' => FALSE,
+    'preprocess' => TRUE,
+    'requires_jquery' => TRUE,
+    'scope' => 'header',
+    'cache' => TRUE,
+    'defer' => FALSE,
+  ];
+  // Remove standard chosen config as we will use our own.
+  if (key_exists('profiles/govcms/modules/contrib/chosen/chosen.js', $javascript)) {
+    unset($javascript['profiles/govcms/modules/contrib/chosen/chosen.js']);
+  }
+}
+
+/**
+ * Implements hook_css_alter().
+ */
+function health_adminimal_css_alter(&$css) {
+  // Add/replace chosen css.
+  $css['profiles/govcms/libraries/chosen/chosen.css'] = [
+    'data' => drupal_get_path('theme', 'health_adminimal') . '/js/libraries/chosen/chosen.min.css',
+    'group' => -100,
+    'type' => 'file',
+    'weight' => 1,
+    'every_page' => FALSE,
+    'media' => 'all',
+    'preprocess' => TRUE,
+    'browsers' => ['IE'=> TRUE, '!IE' => TRUE],
+  ];
+}
